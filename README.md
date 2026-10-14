@@ -14,15 +14,15 @@ GitHub Manager brings owned, collaborated-on, contributed-to, starred, and watch
 
 ## GitHub Manager - Detailed Features Demo
 
-<a href="https://nkaul.github.io/github-manager-demo" target="_blank" rel="noopener noreferrer">▶️ Watch the video</a>
+▶️ [Watch the video]\([https://nkaul.github.io/github-manager-demo](https://nkaul.github.io/github-manager-demo))
 
 ## GitHub Manager - System Design Overview
 
-<a href="https://nkaul.github.io/github-manager-demo/deep-dive/#overview" target="_blank" rel="noopener noreferrer">▶️ Watch the video</a>
+▶️ [Watch the video]\([https://nkaul.github.io/github-manager-demo/deep-dive/#overview](https://nkaul.github.io/github-manager-demo/deep-dive/#overview))
 
 ## GitHub Manager Architecture Deep Dive - Podcast Style Audio
 
-<a href="https://nkaul.github.io/github-manager-demo/deep-dive/#podcast" target="_blank" rel="noopener noreferrer">🎧 Listen to the podcast</a>
+🎧 [Listen to the podcast]\([https://nkaul.github.io/github-manager-demo/deep-dive/#podcast](https://nkaul.github.io/github-manager-demo/deep-dive/#podcast))
 
 ---
 
