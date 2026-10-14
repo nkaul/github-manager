@@ -2,7 +2,7 @@
 
 **An AI-powered workspace for discovering, understanding, and organizing the GitHub repositories that matter to you.**
 
-![GitHub Manager](docs/assets/images/zen-loop-orbit-256.gif){: width="100" height="100"}
+<img src="docs/assets/images/zen-loop-orbit-256.gif" alt="GitHub Manager" width="100" height="100">
 
 
 GitHub Manager brings owned, collaborated-on, contributed-to, starred, and watched repositories into one personalized workspace. Rather than asking developers to manually maintain endless folders and lists, it uses **background AI organization** to propose a useful structure of domains, projects, topics, and tags—while keeping the user in control.
@@ -11,6 +11,16 @@ GitHub Manager brings owned, collaborated-on, contributed-to, starred, and watch
 
 - The authoritative technical specification is [docs/system-design.md](docs/system-design.md)
 - The Codex review and execution guide is [docs/system-design-execution.md](docs/system-design-execution.md).
+
+
+## GitHub Manager - System Design Overview
+
+▶️ [Watch the video](https://drive.google.com/file/d/1lFRi4GLv16iaH3W0ZwsYQBa_Xz60ZSHu/view)
+
+## GitHub Manager Architecture Deep Dive - Podcast Style Audio
+
+🎧 [Listen to the podcast](https://drive.google.com/file/d/12OINEhz3RTbcWQVZ9e-lW98J10fQWo-w/view)
+
 
 ---
 
