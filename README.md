@@ -2,7 +2,7 @@
 
 **An AI-powered workspace for discovering, understanding, and organizing the GitHub repositories that matter to you.**
 
-![GitHub Manager](docs/assets/images/zen-loop-orbit-256.gif){: width="100" height="100"}
+<img src="docs/assets/images/zen-loop-orbit-256.gif" alt="GitHub Manager" width="100" height="100">
 
 
 GitHub Manager brings owned, collaborated-on, contributed-to, starred, and watched repositories into one personalized workspace. Rather than asking developers to manually maintain endless folders and lists, it uses **background AI organization** to propose a useful structure of domains, projects, topics, and tags—while keeping the user in control.
