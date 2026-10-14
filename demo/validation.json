@@ -1,0 +1,287 @@
+{
+  "date": "2026-10-12T07:40:59.703Z",
+  "status": "PASS",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "checks": [
+    {
+      "name": "Authenticated real product UI opened at 1920x1080",
+      "status": "PASS"
+    },
+    {
+      "name": "Real GitHub sync completed",
+      "status": "PASS",
+      "repositories": 310
+    },
+    {
+      "name": "Live accessible private repository remains AI-blocked",
+      "status": "PASS"
+    },
+    {
+      "name": "Real inventory pagination load-more",
+      "status": "PASS"
+    },
+    {
+      "name": "Real explorer navigation and filters",
+      "status": "PASS"
+    },
+    {
+      "name": "Real Latest Work window controls and disclosed coverage",
+      "status": "PASS"
+    },
+    {
+      "name": "Isolated fixture sign-in, sync and private evidence exclusion",
+      "status": "PASS"
+    },
+    {
+      "name": "Three samples isolated from ownership and Favorites",
+      "status": "PASS"
+    },
+    {
+      "name": "Extract evidence",
+      "status": "PASS",
+      "kind": "EXTRACT",
+      "processed": 3,
+      "failures": 0,
+      "provenance": []
+    },
+    {
+      "name": "Versioned evidence profile and source sections visible",
+      "status": "PASS"
+    },
+    {
+      "name": "Discover taxonomy",
+      "status": "PASS",
+      "kind": "DISCOVER",
+      "processed": 3,
+      "failures": 0,
+      "provenance": []
+    },
+    {
+      "name": "Draft edits saved without publication",
+      "status": "PASS"
+    },
+    {
+      "name": "Reviewed taxonomy atomically published",
+      "status": "PASS"
+    },
+    {
+      "name": "Full classification",
+      "status": "PASS",
+      "kind": "FULL_CLASSIFICATION",
+      "processed": 3,
+      "failures": 0,
+      "provenance": [
+        "LIVE_PROVIDER"
+      ]
+    },
+    {
+      "name": "Fresh real three-repository classification",
+      "status": "PASS"
+    },
+    {
+      "name": "Accept creates USER mapping; reject records protection",
+      "status": "PASS"
+    },
+    {
+      "name": "Bulk and native drag/drop add memberships; removing one preserves another",
+      "status": "PASS"
+    },
+    {
+      "name": "Domain and parented project creation",
+      "status": "PASS"
+    },
+    {
+      "name": "Rename preserves ID; domain edit works; duplicate alias rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "Merge retains target; domain archive reparents surviving project",
+      "status": "PASS"
+    },
+    {
+      "name": "Rule preview and explicit approval",
+      "status": "PASS"
+    },
+    {
+      "name": "Reorganize incremental",
+      "status": "PASS",
+      "kind": "INCREMENTAL",
+      "processed": 3,
+      "failures": 0,
+      "provenance": [
+        "LOCAL_RULES"
+      ]
+    },
+    {
+      "name": "Full classification",
+      "status": "PASS",
+      "kind": "FULL_CLASSIFICATION",
+      "processed": 3,
+      "failures": 0,
+      "provenance": [
+        "LOCAL_RULES"
+      ]
+    },
+    {
+      "name": "Rules-only incremental and full runs preserve manual organization",
+      "status": "PASS"
+    },
+    {
+      "name": "Rediscover taxonomy",
+      "status": "PASS",
+      "kind": "REDISCOVER",
+      "processed": 3,
+      "failures": 0,
+      "provenance": []
+    },
+    {
+      "name": "Rediscovery is proposal-only; rejected draft leaves active taxonomy unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "Real 90-second automatic scheduler completed with labeled fixture AI",
+      "status": "PASS",
+      "elapsed_wait_seconds": 89.14,
+      "processed": 3,
+      "provenance": "FIXTURE"
+    },
+    {
+      "name": "Reload, logout/relogin and backend restart preserve application state",
+      "status": "PASS"
+    },
+    {
+      "name": "Synthetic activity remains visibly labeled with window controls",
+      "status": "PASS"
+    },
+    {
+      "name": "Reset requires exact DELETE",
+      "status": "PASS"
+    },
+    {
+      "name": "AI-only verified reset preserves USER/rejections/Core; cached restart creates draft",
+      "status": "PASS"
+    },
+    {
+      "name": "Domain-only reset reparents surviving projects to Unassigned",
+      "status": "PASS"
+    },
+    {
+      "name": "Discover taxonomy",
+      "status": "PASS",
+      "kind": "DISCOVER",
+      "processed": 3,
+      "failures": 0,
+      "provenance": []
+    },
+    {
+      "name": "Full reset advances epoch, retains Core and rebuilds with new IDs",
+      "status": "PASS"
+    },
+    {
+      "name": "Recording completed within unchanged request and spending caps",
+      "status": "PASS"
+    }
+  ],
+  "notes": [
+    "Capture resumed at chapter 18 after correcting a recording-only selector. Earlier paid inference was not repeated.",
+    "Completed chapters 1\u201317 and resumed chapters 18\u201326 are bound to their actual source clips. The failed selector take is excluded from the final edit."
+  ],
+  "budget": {
+    "before": {
+      "cap_usd": 5,
+      "estimated_usd": 0.060248,
+      "reserved_usd": 0,
+      "calls": 41,
+      "remaining_usd": 4.939752,
+      "http": {
+        "limit": 20,
+        "used": 14,
+        "remaining": 6,
+        "generation_attempts": 7,
+        "count_attempts": 7
+      }
+    },
+    "after": {
+      "cap_usd": 5,
+      "estimated_usd": 0.060911,
+      "reserved_usd": 0,
+      "calls": 44,
+      "remaining_usd": 4.939089,
+      "http": {
+        "limit": 20,
+        "used": 20,
+        "remaining": 0,
+        "generation_attempts": 10,
+        "count_attempts": 10
+      }
+    }
+  },
+  "live_github": {
+    "repositories": 310,
+    "expected_name_matches": {
+      "avimla": 0,
+      "workshops": 0
+    },
+    "expected_name_matches_scope": "Original counts describe the first 100 inventory rows; named_fixture_verification uses separate globally filtered exact-name lookups.",
+    "named_fixture_verification": {
+      "avimla": {
+        "exact_name_matches": 1,
+        "private_matches": 1,
+        "query_complete": true
+      },
+      "workshops": {
+        "exact_name_matches": 1,
+        "private_matches": 1,
+        "query_complete": true
+      }
+    },
+    "private_count_on_first_100": 0,
+    "source_statuses": [
+      {
+        "source": "CONTRIBUTOR",
+        "status": "OBSERVED"
+      },
+      {
+        "source": "DIRECT",
+        "status": "OBSERVED"
+      },
+      {
+        "source": "ORG_GENERAL",
+        "status": "OBSERVED"
+      },
+      {
+        "source": "ORG_MEMBERSHIP",
+        "status": "OBSERVED"
+      },
+      {
+        "source": "OWNER",
+        "status": "OBSERVED"
+      },
+      {
+        "source": "STAR",
+        "status": "OBSERVED"
+      },
+      {
+        "source": "TEAM",
+        "status": "OBSERVED"
+      },
+      {
+        "source": "TEAM_MEMBERSHIP",
+        "status": "OBSERVED"
+      },
+      {
+        "source": "WATCH",
+        "status": "OBSERVED"
+      }
+    ],
+    "activity_statuses": [
+      {
+        "source": "GITHUB_CONTRIBUTIONS",
+        "status": "OBSERVED"
+      }
+    ]
+  }
+}

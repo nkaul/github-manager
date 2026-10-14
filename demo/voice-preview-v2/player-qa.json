@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "variant": "A",
+      "width": 1920,
+      "height": 1080,
+      "duration": 60,
+      "chapterSeeks": 8,
+      "captionCues": 15,
+      "rangeStatus": 206,
+      "playbackAdvances": true
+    },
+    {
+      "variant": "B",
+      "width": 1920,
+      "height": 1080,
+      "duration": 60,
+      "chapterSeeks": 8,
+      "captionCues": 15,
+      "rangeStatus": 206,
+      "playbackAdvances": true
+    },
+    {
+      "variant": "C",
+      "width": 1920,
+      "height": 1080,
+      "duration": 60,
+      "chapterSeeks": 8,
+      "captionCues": 15,
+      "rangeStatus": 206,
+      "playbackAdvances": true
+    },
+    {
+      "variant": "D",
+      "width": 1920,
+      "height": 1080,
+      "duration": 60,
+      "chapterSeeks": 8,
+      "captionCues": 15,
+      "rangeStatus": 206,
+      "playbackAdvances": true
+    }
+  ],
+  "errors": [],
+  "responsiveWidths": [
+    1440,
+    1280,
+    390
+  ],
+  "auditoryQuality": "Awaiting user audition; muted playback checks validate technical playback only"
+}

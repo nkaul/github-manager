@@ -1,0 +1,25 @@
+let tables = Resources.*[ Type == 'AWS::DynamoDB::Table' ]
+let queues = Resources.*[ Type == 'AWS::SQS::Queue' ]
+let secrets = Resources.*[ Type == 'AWS::SecretsManager::Secret' ]
+let logs = Resources.*[ Type == 'AWS::Logs::LogGroup' ]
+
+rule phase0_resource_scope {
+    Resources.*.Type IN ['AWS::DynamoDB::Table', 'AWS::SQS::Queue', 'AWS::SecretsManager::Secret', 'AWS::Events::EventBus', 'AWS::Logs::LogGroup']
+    Resources.*.DeletionPolicy == 'Delete'
+    Resources.*.UpdateReplacePolicy == 'Delete'
+}
+rule phase0_tables {
+    %tables.Properties.BillingMode == 'PAY_PER_REQUEST'
+    %tables.Properties.SSESpecification.SSEEnabled == true
+}
+rule phase0_queues {
+    %queues.Properties.SqsManagedSseEnabled == true
+    %queues.Properties.MessageRetentionPeriod <= 86400
+}
+rule phase0_synthetic_secret {
+    %secrets.Properties.GenerateSecretString exists
+    %secrets.Properties.SecretString !exists
+}
+rule phase0_short_log_retention {
+    %logs.Properties.RetentionInDays == 1
+}

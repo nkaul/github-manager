@@ -1,0 +1,335 @@
+{
+  "cap_usd": 2.5,
+  "maximum_api_calls": 16,
+  "requests": [
+    {
+      "id": "tts-01",
+      "endpoint": "audio/speech",
+      "model": "gpt-4o-mini-tts",
+      "reserved_usd": 0.12,
+      "state": "SUCCEEDED",
+      "public_input_sha256": "eea6943580815832d2db5083260300b1840155135aca01caff1946bc848c6e2f",
+      "at": "2026-10-13T23:29:50.045476+00:00",
+      "product_before": {
+        "cap_usd": 5.0,
+        "accounted_usd": 0.6330290000000001,
+        "prior_voice_preview_usd": 0.5,
+        "real_demo_model_delta_usd": 0.00541,
+        "holds_usd": 0.0,
+        "generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_07d94b383b054bce931608373b4b779c",
+      "response_sha256": "21d16b8c490ddf9e7d9952cb15b32f124cfaf252da78239332e8e484a3026d45",
+      "bytes": 5738812
+    },
+    {
+      "id": "tts-02",
+      "endpoint": "audio/speech",
+      "model": "gpt-4o-mini-tts",
+      "reserved_usd": 0.12,
+      "state": "SUCCEEDED",
+      "public_input_sha256": "60fc2bc96387900d2dd92f7c134a6363ea690a6079e8ef4cb3a24ed5ac99fe4a",
+      "at": "2026-10-13T23:30:08.909700+00:00",
+      "product_before": {
+        "cap_usd": 5.0,
+        "accounted_usd": 0.6330290000000001,
+        "prior_voice_preview_usd": 0.5,
+        "real_demo_model_delta_usd": 0.00541,
+        "holds_usd": 0.0,
+        "generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_340d35e07ca349839d4042549f9dfa98",
+      "response_sha256": "68473f7b75c275e77f941a4109c0f7629e973bb9f92d8e5042f6fe186da99f65",
+      "bytes": 5893866
+    },
+    {
+      "id": "tts-03",
+      "endpoint": "audio/speech",
+      "model": "gpt-4o-mini-tts",
+      "reserved_usd": 0.12,
+      "state": "SUCCEEDED",
+      "public_input_sha256": "2fb7e2baba3330902a6fdf921018847716b70b1d674f9d91385d8ee378669c42",
+      "at": "2026-10-13T23:30:27.256161+00:00",
+      "product_before": {
+        "cap_usd": 5.0,
+        "accounted_usd": 0.6330290000000001,
+        "prior_voice_preview_usd": 0.5,
+        "real_demo_model_delta_usd": 0.00541,
+        "holds_usd": 0.0,
+        "generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_f26f7186a526446fbabef7878ede20fa",
+      "response_sha256": "d5eb5efe0038ff9dbe32d2046d151cb603eb9192b3ec22418117dc5f813bab3e",
+      "bytes": 5983978
+    },
+    {
+      "id": "tts-04",
+      "endpoint": "audio/speech",
+      "model": "gpt-4o-mini-tts",
+      "reserved_usd": 0.12,
+      "state": "SUCCEEDED",
+      "public_input_sha256": "ab8156101208b1bdda09500f411f4f250febe30910f681212d31d4b1d31f6c51",
+      "at": "2026-10-13T23:30:44.153590+00:00",
+      "product_before": {
+        "cap_usd": 5.0,
+        "accounted_usd": 0.6330290000000001,
+        "prior_voice_preview_usd": 0.5,
+        "real_demo_model_delta_usd": 0.00541,
+        "holds_usd": 0.0,
+        "generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_445827b7ddba42d392fca827feab7e5f",
+      "response_sha256": "06639c9d5aa6f611d5a7bb5474844a9b6cbc123b301f94bc7ca5956c487d222a",
+      "bytes": 6045930
+    },
+    {
+      "id": "tts-05",
+      "endpoint": "audio/speech",
+      "model": "gpt-4o-mini-tts",
+      "reserved_usd": 0.12,
+      "state": "SUCCEEDED",
+      "public_input_sha256": "5264b0aa0a04fd8cc097ece33fe81a9381a5ee57552c5b84b0a7d7aee0481512",
+      "at": "2026-10-13T23:31:03.214647+00:00",
+      "product_before": {
+        "cap_usd": 5.0,
+        "accounted_usd": 0.6330290000000001,
+        "prior_voice_preview_usd": 0.5,
+        "real_demo_model_delta_usd": 0.00541,
+        "holds_usd": 0.0,
+        "generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_0fbe3600c4e1455791f2f6fe99b39720",
+      "response_sha256": "2d44f249acf04eb7872b676b0d570eff8180bf1f8336c876a64f9744d2de0347",
+      "bytes": 6195866
+    },
+    {
+      "id": "tts-06",
+      "endpoint": "audio/speech",
+      "model": "gpt-4o-mini-tts",
+      "reserved_usd": 0.12,
+      "state": "SUCCEEDED",
+      "public_input_sha256": "78c4e3e28983f8c3d291e53af0c816670223a7bb86e132afc943802d2af6c68d",
+      "at": "2026-10-13T23:31:21.025312+00:00",
+      "product_before": {
+        "cap_usd": 5.0,
+        "accounted_usd": 0.6330290000000001,
+        "prior_voice_preview_usd": 0.5,
+        "real_demo_model_delta_usd": 0.00541,
+        "holds_usd": 0.0,
+        "generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_63ccf6b2901f4e8d91de4973be266998",
+      "response_sha256": "0bfe9c2242a7564de674f931a914222a872d321fbb3771a9fdd310e6f20457cf",
+      "bytes": 5630826
+    },
+    {
+      "id": "tts-07",
+      "endpoint": "audio/speech",
+      "model": "gpt-4o-mini-tts",
+      "reserved_usd": 0.12,
+      "state": "SUCCEEDED",
+      "public_input_sha256": "f65bf1d98f9678fc51eccc02578770cf6be9ca95613f116a0c7833cd9eb71866",
+      "at": "2026-10-13T23:31:36.670991+00:00",
+      "product_before": {
+        "cap_usd": 5.0,
+        "accounted_usd": 0.6330290000000001,
+        "prior_voice_preview_usd": 0.5,
+        "real_demo_model_delta_usd": 0.00541,
+        "holds_usd": 0.0,
+        "generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_7fd706577fd14c08bc042c5f0d680115",
+      "response_sha256": "4cf3620653ef8f8480b70f33795b0268028c31d8fe308d7a59bf7ca01e005100",
+      "bytes": 5756732
+    },
+    {
+      "id": "tts-08",
+      "endpoint": "audio/speech",
+      "model": "gpt-4o-mini-tts",
+      "reserved_usd": 0.12,
+      "state": "SUCCEEDED",
+      "public_input_sha256": "f1cbbf7f59d45f5d124b82ffc65edc2af7804871fb6f6af793b4909ce65b7824",
+      "at": "2026-10-13T23:31:51.885138+00:00",
+      "product_before": {
+        "cap_usd": 5.0,
+        "accounted_usd": 0.6330290000000001,
+        "prior_voice_preview_usd": 0.5,
+        "real_demo_model_delta_usd": 0.00541,
+        "holds_usd": 0.0,
+        "generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_244d14198a8f471c93f438740d4635cc",
+      "response_sha256": "fa5d4c1706a7d7c34d6f08aba315af84ed289fdfc89852d7cccfcc03c7175f49",
+      "bytes": 5924586
+    },
+    {
+      "id": "tts-09",
+      "endpoint": "audio/speech",
+      "model": "gpt-4o-mini-tts",
+      "reserved_usd": 0.12,
+      "state": "SUCCEEDED",
+      "public_input_sha256": "b21d86f3c2485f3cda906ea4508e8bba4ead2df60f80ec19c45f15c30e7e6fa0",
+      "at": "2026-10-13T23:32:11.059605+00:00",
+      "product_before": {
+        "cap_usd": 5.0,
+        "accounted_usd": 0.6330290000000001,
+        "prior_voice_preview_usd": 0.5,
+        "real_demo_model_delta_usd": 0.00541,
+        "holds_usd": 0.0,
+        "generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_9121163fb21e4a5d9570ac40b1d2498f",
+      "response_sha256": "b318d3822f0a4f06cb8c50aaf3f81c37dd0f44a956551a73132e2266059193e0",
+      "bytes": 6363250
+    },
+    {
+      "id": "tts-10",
+      "endpoint": "audio/speech",
+      "model": "gpt-4o-mini-tts",
+      "reserved_usd": 0.12,
+      "state": "SUCCEEDED",
+      "public_input_sha256": "fc4b57f7cd6e1a034161e37a5e421ecd5927a4cd048d0346487e4f1b6838bcdc",
+      "at": "2026-10-13T23:32:29.551077+00:00",
+      "product_before": {
+        "cap_usd": 5.0,
+        "accounted_usd": 0.6330290000000001,
+        "prior_voice_preview_usd": 0.5,
+        "real_demo_model_delta_usd": 0.00541,
+        "holds_usd": 0.0,
+        "generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_0577a48c71fd4654a58b20025626a5f1",
+      "response_sha256": "ea95005c3285a209e75300453140ee256d6e423776e8609fdbe0f9db34834055",
+      "bytes": 6012650
+    },
+    {
+      "id": "tts-11",
+      "endpoint": "audio/speech",
+      "model": "gpt-4o-mini-tts",
+      "reserved_usd": 0.12,
+      "state": "SUCCEEDED",
+      "public_input_sha256": "f11f41304eb8f2ddb8cf35ca1a7356d9ef8e154815c3cafd505ec16e1a08b305",
+      "at": "2026-10-13T23:32:46.685360+00:00",
+      "product_before": {
+        "cap_usd": 5.0,
+        "accounted_usd": 0.6330290000000001,
+        "prior_voice_preview_usd": 0.5,
+        "real_demo_model_delta_usd": 0.00541,
+        "holds_usd": 0.0,
+        "generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_6cb44be12f7943b8aa197e9cd0feac90",
+      "response_sha256": "06bbb68426358be09704d6bbf8015dec6b48aeb51d38f8441f8a448be7d11dfe",
+      "bytes": 4082032
+    },
+    {
+      "id": "asr-1",
+      "endpoint": "audio/transcriptions",
+      "model": "whisper-1",
+      "reserved_usd": 0.1,
+      "state": "SUCCEEDED",
+      "public_input_sha256": "383975e9268527ee28c4ceea778a1f0121641b62b598a8a87a5c3845ab78c993",
+      "at": "2026-10-13T23:33:40.026596+00:00",
+      "product_before": {
+        "cap_usd": 5.0,
+        "accounted_usd": 0.6330290000000001,
+        "prior_voice_preview_usd": 0.5,
+        "real_demo_model_delta_usd": 0.00541,
+        "holds_usd": 0.0,
+        "generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_835089ba432c4e7fbcbf07eccda54b54",
+      "response_sha256": "435ddc57a7db6bfa955cc1a1e5c45aa3648992168aa19c0995ce50e9dac3e254",
+      "bytes": 121768
+    },
+    {
+      "id": "asr-2",
+      "endpoint": "audio/transcriptions",
+      "model": "whisper-1",
+      "reserved_usd": 0.1,
+      "state": "SUCCEEDED",
+      "public_input_sha256": "d76fae5d203d652d1626b9ec82b8c8e1bb3f48bee71dde15f09975da5ca17dd2",
+      "at": "2026-10-13T23:34:17.115472+00:00",
+      "product_before": {
+        "cap_usd": 5.0,
+        "accounted_usd": 0.6330290000000001,
+        "prior_voice_preview_usd": 0.5,
+        "real_demo_model_delta_usd": 0.00541,
+        "holds_usd": 0.0,
+        "generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_78a37bc492e94abd8b0c66e273b00b02",
+      "response_sha256": "c43f7d645fac179baac8570a19e26f46f2d9e24837b573846e37e0d1156eb0f5",
+      "bytes": 95235
+    },
+    {
+      "id": "tts-repair-weighted",
+      "endpoint": "audio/speech",
+      "model": "gpt-4o-mini-tts",
+      "reserved_usd": 0.04,
+      "state": "SUCCEEDED",
+      "public_input_sha256": "aa3f16a9c71fbca6d4539c7568cee496411f1ec44815fb6fbd9e2812d6ef7a90",
+      "at": "2026-10-13T23:48:58.273156+00:00",
+      "product_before": {
+        "cap_usd": 5.0,
+        "accounted_usd": 0.6330290000000001,
+        "prior_voice_preview_usd": 0.5,
+        "real_demo_model_delta_usd": 0.00541,
+        "holds_usd": 0.0,
+        "generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_438e05d70d9a46d6a92c0ed102a8e41d",
+      "response_sha256": "b6d6ffa443eec950d538bf7b664226b73fe5ef65c2e29031a4d1b30987482494",
+      "bytes": 463916
+    },
+    {
+      "id": "asr-repair-weighted",
+      "endpoint": "audio/transcriptions",
+      "model": "whisper-1",
+      "reserved_usd": 0.02,
+      "state": "SUCCEEDED",
+      "public_input_sha256": "37c74f608cbeb4dae27dfae401a44b84fd868e8230353246f0c0ac972755adec",
+      "at": "2026-10-13T23:49:01.063232+00:00",
+      "product_before": {
+        "cap_usd": 5.0,
+        "accounted_usd": 0.6330290000000001,
+        "prior_voice_preview_usd": 0.5,
+        "real_demo_model_delta_usd": 0.00541,
+        "holds_usd": 0.0,
+        "generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_8ea22e91c53e49da920087022f5dd606",
+      "response_sha256": "a187803c4c3503b992fc9d5547bb2f17827698eab702daea5183b109fa67f136",
+      "bytes": 2041
+    }
+  ],
+  "accounted_media_usd": 1.58,
+  "product_after": {
+    "cap_usd": 5.0,
+    "accounted_usd": 0.6330290000000001,
+    "prior_voice_preview_usd": 0.5,
+    "real_demo_model_delta_usd": 0.00541,
+    "holds_usd": 0.0,
+    "generation_rows": 91
+  },
+  "new_intelligence_http": 4,
+  "voice": "cedar",
+  "option": "D \u00b7 calmer delivery",
+  "cost_note": "Conservative media reservations; binary TTS responses do not include invoiced token usage.",
+  "combined_accounted_usd": 2.213029
+}

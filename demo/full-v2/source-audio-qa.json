@@ -1,0 +1,66 @@
+{
+  "takes": [
+    {
+      "take": "tts-01",
+      "integrated_lufs": -22.83,
+      "true_peak_dbtp": -3.06
+    },
+    {
+      "take": "tts-02",
+      "integrated_lufs": -22.76,
+      "true_peak_dbtp": -3.7
+    },
+    {
+      "take": "tts-03",
+      "integrated_lufs": -23.31,
+      "true_peak_dbtp": -3.88
+    },
+    {
+      "take": "tts-04",
+      "integrated_lufs": -23.52,
+      "true_peak_dbtp": -3.45
+    },
+    {
+      "take": "tts-05",
+      "integrated_lufs": -22.94,
+      "true_peak_dbtp": -3.75
+    },
+    {
+      "take": "tts-06",
+      "integrated_lufs": -23.03,
+      "true_peak_dbtp": -4.41
+    },
+    {
+      "take": "tts-07",
+      "integrated_lufs": -23.18,
+      "true_peak_dbtp": -3.96
+    },
+    {
+      "take": "tts-08",
+      "integrated_lufs": -23.53,
+      "true_peak_dbtp": -3.82
+    },
+    {
+      "take": "tts-09",
+      "integrated_lufs": -23.36,
+      "true_peak_dbtp": -2.61
+    },
+    {
+      "take": "tts-10",
+      "integrated_lufs": -23.51,
+      "true_peak_dbtp": -4.7
+    },
+    {
+      "take": "tts-11",
+      "integrated_lufs": -22.46,
+      "true_peak_dbtp": -4.23
+    },
+    {
+      "take": "weighted-repair",
+      "integrated_lufs": -24.63,
+      "true_peak_dbtp": -3.45
+    }
+  ],
+  "loudness_spread_lu": 2.17,
+  "status": "PASS"
+}

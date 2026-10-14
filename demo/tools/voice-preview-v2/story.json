@@ -1,0 +1,22 @@
+{
+  "model": "gpt-4o-mini-tts",
+  "budget_usd": 0.5,
+  "maximum_api_calls": 8,
+  "duration": 60,
+  "segments": [
+    {"id":"intro","text":"GitHub Manager brings your repositories into one clear workspace, with a calmer interface and a little zen."},
+    {"id":"browse","text":"Use the sidebar to browse projects, topics, and tags."},
+    {"id":"search","text":"Search and filters help you narrow the list."},
+    {"id":"metrics","text":"The compact cards show what is labeled, what still needs a project, and which repositories you've selected."},
+    {"id":"ai","text":"AI Organization lets you preview a repository batch and its budget, then review taxonomy and classification suggestions. Approve suggestions to apply them."},
+    {"id":"protected","text":"Already analyzed repositories stay protected from repeated AI calls. You can explicitly re-analyze when something important changes."},
+    {"id":"manual","text":"Keep control with manual assignments, drag and drop, and local rules."},
+    {"id":"appearance","text":"In Appearance, choose your favorite zen cat."}
+  ],
+  "variants": [
+    {"id":"A","voice":"marin","pace":"conversational","target_wpm":148,"speed":1.0},
+    {"id":"B","voice":"cedar","pace":"conversational","target_wpm":148,"speed":1.0},
+    {"id":"C","voice":"marin","pace":"calm","target_wpm":132,"speed":0.93},
+    {"id":"D","voice":"cedar","pace":"calm","target_wpm":132,"speed":0.93}
+  ]
+}

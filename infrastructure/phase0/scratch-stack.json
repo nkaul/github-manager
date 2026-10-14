@@ -1,0 +1,494 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "GitHub Manager Phase 0 access tests using isolated disposable targets and synthetic data only.",
+  "Metadata": {
+    "AWSToolsMetrics": {
+      "AWSAgentToolkit": "aws-cloudformation@3"
+    },
+    "com.aws.cloudformation.Context": {
+      "must": [
+        "only eight owned test resources; no IAM changes or application deployment",
+        "stack deletion requires explicit approval; expiry tag is not automatic cleanup"
+      ],
+      "ref": [
+        {
+          "at": "docs/planning/phase-0-aws-scratch-proposal.md",
+          "has": "authorization, operation scope, cost and teardown boundary"
+        }
+      ]
+    }
+  },
+  "Parameters": {
+    "Expires": {
+      "Type": "String",
+      "AllowedPattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}",
+      "Description": "Review/teardown date; this tag does not automatically delete resources"
+    }
+  },
+  "Resources": {
+    "CoreTable": {
+      "Type": "AWS::DynamoDB::Table",
+      "DeletionPolicy": "Delete",
+      "UpdateReplacePolicy": "Delete",
+      "Metadata": {
+        "com.aws.cloudformation.Context": {
+          "why": "independent table-role access and transactions; disposable synthetic data only",
+          "must": [
+            "run-owned synthetic records only",
+            "no application data; disposable on approved stack teardown"
+          ],
+          "mutable": "change-with-constraints"
+        }
+      },
+      "Properties": {
+        "TableName": {
+          "Fn::Sub": "${AWS::StackName}-core"
+        },
+        "BillingMode": "PAY_PER_REQUEST",
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "PK",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "SK",
+            "AttributeType": "S"
+          }
+        ],
+        "KeySchema": [
+          {
+            "AttributeName": "PK",
+            "KeyType": "HASH"
+          },
+          {
+            "AttributeName": "SK",
+            "KeyType": "RANGE"
+          }
+        ],
+        "SSESpecification": {
+          "SSEEnabled": true
+        },
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "github-manager"
+          },
+          {
+            "Key": "Purpose",
+            "Value": "phase0"
+          },
+          {
+            "Key": "Owner",
+            "Value": "phase0-local-pretest"
+          },
+          {
+            "Key": "Expires",
+            "Value": {
+              "Ref": "Expires"
+            }
+          }
+        ]
+      }
+    },
+    "OrganizationTable": {
+      "Type": "AWS::DynamoDB::Table",
+      "DeletionPolicy": "Delete",
+      "UpdateReplacePolicy": "Delete",
+      "Metadata": {
+        "com.aws.cloudformation.Context": {
+          "why": "independent table-role access and transactions; disposable synthetic data only",
+          "must": [
+            "run-owned synthetic records only",
+            "no application data; disposable on approved stack teardown"
+          ],
+          "mutable": "change-with-constraints"
+        }
+      },
+      "Properties": {
+        "TableName": {
+          "Fn::Sub": "${AWS::StackName}-organization"
+        },
+        "BillingMode": "PAY_PER_REQUEST",
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "PK",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "SK",
+            "AttributeType": "S"
+          }
+        ],
+        "KeySchema": [
+          {
+            "AttributeName": "PK",
+            "KeyType": "HASH"
+          },
+          {
+            "AttributeName": "SK",
+            "KeyType": "RANGE"
+          }
+        ],
+        "SSESpecification": {
+          "SSEEnabled": true
+        },
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "github-manager"
+          },
+          {
+            "Key": "Purpose",
+            "Value": "phase0"
+          },
+          {
+            "Key": "Owner",
+            "Value": "phase0-local-pretest"
+          },
+          {
+            "Key": "Expires",
+            "Value": {
+              "Ref": "Expires"
+            }
+          }
+        ]
+      }
+    },
+    "IntelligenceTable": {
+      "Type": "AWS::DynamoDB::Table",
+      "DeletionPolicy": "Delete",
+      "UpdateReplacePolicy": "Delete",
+      "Metadata": {
+        "com.aws.cloudformation.Context": {
+          "why": "independent table-role access and transactions; disposable synthetic data only",
+          "must": [
+            "run-owned synthetic records only",
+            "no application data; disposable on approved stack teardown"
+          ],
+          "mutable": "change-with-constraints"
+        }
+      },
+      "Properties": {
+        "TableName": {
+          "Fn::Sub": "${AWS::StackName}-intelligence"
+        },
+        "BillingMode": "PAY_PER_REQUEST",
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "PK",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "SK",
+            "AttributeType": "S"
+          }
+        ],
+        "KeySchema": [
+          {
+            "AttributeName": "PK",
+            "KeyType": "HASH"
+          },
+          {
+            "AttributeName": "SK",
+            "KeyType": "RANGE"
+          }
+        ],
+        "SSESpecification": {
+          "SSEEnabled": true
+        },
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "github-manager"
+          },
+          {
+            "Key": "Purpose",
+            "Value": "phase0"
+          },
+          {
+            "Key": "Owner",
+            "Value": "phase0-local-pretest"
+          },
+          {
+            "Key": "Expires",
+            "Value": {
+              "Ref": "Expires"
+            }
+          }
+        ]
+      }
+    },
+    "JobsDlq": {
+      "Type": "AWS::SQS::Queue",
+      "DeletionPolicy": "Delete",
+      "UpdateReplacePolicy": "Delete",
+      "Metadata": {
+        "com.aws.cloudformation.Context": {
+          "why": "exclusive dead-letter scratch target; no application consumers",
+          "must": [
+            "never purge; receive only correlated test messages"
+          ],
+          "mutable": "change-with-constraints"
+        }
+      },
+      "Properties": {
+        "QueueName": {
+          "Fn::Sub": "${AWS::StackName}-jobs-dlq"
+        },
+        "SqsManagedSseEnabled": true,
+        "MessageRetentionPeriod": 86400,
+        "VisibilityTimeout": 5,
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "github-manager"
+          },
+          {
+            "Key": "Purpose",
+            "Value": "phase0"
+          },
+          {
+            "Key": "Owner",
+            "Value": "phase0-local-pretest"
+          },
+          {
+            "Key": "Expires",
+            "Value": {
+              "Ref": "Expires"
+            }
+          }
+        ]
+      }
+    },
+    "JobsQueue": {
+      "Type": "AWS::SQS::Queue",
+      "DeletionPolicy": "Delete",
+      "UpdateReplacePolicy": "Delete",
+      "Metadata": {
+        "com.aws.cloudformation.Context": {
+          "why": "exclusive round-trip scratch queue with configured dead-letter relationship",
+          "must": [
+            "no real producers or consumers",
+            "never purge or delete foreign messages"
+          ],
+          "mutable": "change-with-constraints"
+        }
+      },
+      "Properties": {
+        "QueueName": {
+          "Fn::Sub": "${AWS::StackName}-jobs"
+        },
+        "SqsManagedSseEnabled": true,
+        "MessageRetentionPeriod": 86400,
+        "VisibilityTimeout": 5,
+        "RedrivePolicy": {
+          "deadLetterTargetArn": {
+            "Fn::GetAtt": [
+              "JobsDlq",
+              "Arn"
+            ]
+          },
+          "maxReceiveCount": 3
+        },
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "github-manager"
+          },
+          {
+            "Key": "Purpose",
+            "Value": "phase0"
+          },
+          {
+            "Key": "Owner",
+            "Value": "phase0-local-pretest"
+          },
+          {
+            "Key": "Expires",
+            "Value": {
+              "Ref": "Expires"
+            }
+          }
+        ]
+      }
+    },
+    "DummySecret": {
+      "Type": "AWS::SecretsManager::Secret",
+      "DeletionPolicy": "Delete",
+      "UpdateReplacePolicy": "Delete",
+      "Metadata": {
+        "com.aws.cloudformation.Context": {
+          "why": "generated synthetic value for access checks; actual OAuth credentials stay local",
+          "must": [
+            "never store real credentials",
+            "read value only in memory; reports contain boolean/hash match"
+          ],
+          "mutable": "change-with-constraints"
+        }
+      },
+      "Properties": {
+        "Name": {
+          "Fn::Sub": "github-manager/phase0/${AWS::StackName}/dummy"
+        },
+        "Description": "Synthetic Phase 0 canary; contains no application credentials",
+        "GenerateSecretString": {
+          "SecretStringTemplate": "{\"purpose\":\"github-manager.phase0\"}",
+          "GenerateStringKey": "canary",
+          "PasswordLength": 32,
+          "ExcludePunctuation": true
+        },
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "github-manager"
+          },
+          {
+            "Key": "Purpose",
+            "Value": "phase0"
+          },
+          {
+            "Key": "Owner",
+            "Value": "phase0-local-pretest"
+          },
+          {
+            "Key": "Expires",
+            "Value": {
+              "Ref": "Expires"
+            }
+          }
+        ]
+      }
+    },
+    "ProbeBus": {
+      "Type": "AWS::Events::EventBus",
+      "DeletionPolicy": "Delete",
+      "UpdateReplacePolicy": "Delete",
+      "Metadata": {
+        "com.aws.cloudformation.Context": {
+          "why": "isolated ingestion permission check; no rules or downstream targets",
+          "must": [
+            "no real consumers or external delivery",
+            "PutEvents acceptance does not prove scheduling"
+          ],
+          "mutable": "change-with-constraints"
+        }
+      },
+      "Properties": {
+        "Name": {
+          "Fn::Sub": "${AWS::StackName}-probe"
+        },
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "github-manager"
+          },
+          {
+            "Key": "Purpose",
+            "Value": "phase0"
+          },
+          {
+            "Key": "Owner",
+            "Value": "phase0-local-pretest"
+          },
+          {
+            "Key": "Expires",
+            "Value": {
+              "Ref": "Expires"
+            }
+          }
+        ]
+      }
+    },
+    "ProbeLogs": {
+      "Type": "AWS::Logs::LogGroup",
+      "DeletionPolicy": "Delete",
+      "UpdateReplacePolicy": "Delete",
+      "Metadata": {
+        "com.aws.cloudformation.Context": {
+          "why": "bounded log write/readback using run-owned streams",
+          "must": [
+            "synthetic messages only",
+            "remove only streams created by this run"
+          ],
+          "mutable": "change-with-constraints"
+        }
+      },
+      "Properties": {
+        "LogGroupName": {
+          "Fn::Sub": "/github-manager/phase0/${AWS::StackName}"
+        },
+        "RetentionInDays": 1,
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "github-manager"
+          },
+          {
+            "Key": "Purpose",
+            "Value": "phase0"
+          },
+          {
+            "Key": "Owner",
+            "Value": "phase0-local-pretest"
+          },
+          {
+            "Key": "Expires",
+            "Value": {
+              "Ref": "Expires"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "Outputs": {
+    "Core": {
+      "Description": "Exact isolated Phase 0 CoreTable identifier",
+      "Value": {
+        "Ref": "CoreTable"
+      }
+    },
+    "Organization": {
+      "Description": "Exact isolated Phase 0 OrganizationTable identifier",
+      "Value": {
+        "Ref": "OrganizationTable"
+      }
+    },
+    "Intelligence": {
+      "Description": "Exact isolated Phase 0 IntelligenceTable identifier",
+      "Value": {
+        "Ref": "IntelligenceTable"
+      }
+    },
+    "Jobs": {
+      "Description": "Exact isolated Phase 0 JobsQueue identifier",
+      "Value": {
+        "Ref": "JobsQueue"
+      }
+    },
+    "JobsDlq": {
+      "Description": "Exact isolated Phase 0 JobsDlq identifier",
+      "Value": {
+        "Ref": "JobsDlq"
+      }
+    },
+    "Dummy": {
+      "Description": "Exact isolated Phase 0 DummySecret identifier",
+      "Value": {
+        "Ref": "DummySecret"
+      }
+    },
+    "Bus": {
+      "Description": "Exact isolated Phase 0 ProbeBus identifier",
+      "Value": {
+        "Ref": "ProbeBus"
+      }
+    },
+    "Logs": {
+      "Description": "Exact isolated Phase 0 ProbeLogs identifier",
+      "Value": {
+        "Ref": "ProbeLogs"
+      }
+    }
+  }
+}

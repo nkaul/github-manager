@@ -1,0 +1,59 @@
+1
+00:00:00,570 --> 00:00:03,530
+GitHub Manager brings your repositories into one clear
+
+2
+00:00:03,530 --> 00:00:06,110
+workspace with a calmer interface and a little zen
+
+3
+00:00:08,178 --> 00:00:10,958
+Use the sidebar to browse projects topics and tags
+
+4
+00:00:14,565 --> 00:00:16,125
+Search and filters help you narrow the list
+
+5
+00:00:19,233 --> 00:00:22,313
+The compact cards show what is labeled what still
+
+6
+00:00:22,313 --> 00:00:24,913
+needs a project and which repositories you've selected
+
+7
+00:00:27,390 --> 00:00:30,310
+AI Organization lets you preview a repository batch and
+
+8
+00:00:30,310 --> 00:00:33,590
+its budget then review taxonomy and classification suggestions
+
+9
+00:00:34,330 --> 00:00:35,650
+Approve suggestions to apply them
+
+10
+00:00:38,707 --> 00:00:41,307
+Already analyzed repositories stay protected from repeated
+
+11
+00:00:41,307 --> 00:00:44,947
+AI calls You can explicitly reanalyze when something important
+
+12
+00:00:44,947 --> 00:00:45,327
+changes
+
+13
+00:00:48,024 --> 00:00:50,924
+Keep control with manual assignments drag and drop and
+
+14
+00:00:50,924 --> 00:00:51,424
+local rules
+
+15
+00:00:54,777 --> 00:00:57,828
+In Appearance, choose your favorite zen cat.

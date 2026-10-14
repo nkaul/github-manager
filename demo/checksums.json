@@ -1,0 +1,34 @@
+{
+  "github-manager-walkthrough-1080p.mp4": {
+    "bytes": 28468702,
+    "sha256": "74ae9aead57f849890b50656b3bc432cc833991a107415f121a68a2dd3f1bb34"
+  },
+  "github-manager-narration.m4a": {
+    "bytes": 14348139,
+    "sha256": "9c7272da6fb087f5d091fc31abca80f1f9ef7b8531bbc25067031ddb23b65b80"
+  },
+  "github-manager-walkthrough.vtt": {
+    "bytes": 17826,
+    "sha256": "e31e4ab01173461516745538058732095af7f768d54e88ca74948c77a0ce1ab2"
+  },
+  "chapters.json": {
+    "bytes": 19119,
+    "sha256": "dacd5863a6d773ca1a063cfbde08597e04c75d5af7442ce309f1965850f63f5f"
+  },
+  "validation.json": {
+    "bytes": 6934,
+    "sha256": "87a32ed42a2959470e653fad03581b3ac75153fb6550badf43d29f555805188f"
+  },
+  "media-qa.json": {
+    "bytes": 900,
+    "sha256": "291ca5bf5af6216302bffc9ad93f167c4b3fc2a7e9d3bcf4a7bcf4b6a4f54287"
+  },
+  "index.html": {
+    "bytes": 22749,
+    "sha256": "4300255f1e05bebf72802098f1520a173958f2d5d33d59eefdc8f588aeeec569"
+  },
+  "poster.png": {
+    "bytes": 294875,
+    "sha256": "ba383438d59089de7ee761ad3fc4c409eece96921c003ac052dc9438e5b14184"
+  }
+}

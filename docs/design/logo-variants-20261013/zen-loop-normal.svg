@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Zen Loop — normal state">
+<title>Zen Loop — normal state</title><g stroke-linecap="round" stroke-linejoin="round"><path d="M78 101C110 107 121 74 106 56" fill="none" stroke="var(--accent,#039be5)" stroke-width="6.5"/>
+<path d="M53 75Q47 85 47 101Q64 110 81 101Q81 85 75 75M56 90V103M72 90V103" fill="none" stroke="var(--ink,#3f51b5)" stroke-width="5"/>
+<path d="M43 52V34L54 40Q64 36 74 40L85 34V52Q91 59 84 67Q77 75 64 75Q51 75 44 67Q37 59 43 52Z" fill="white" stroke="var(--ink,#3f51b5)" stroke-width="5"/>
+<path d="M53 54V58M75 54V58" fill="none" stroke="var(--ink,#3f51b5)" stroke-width="3.2"/>
+<path d="m62 65 2 1 2-1" fill="none" stroke="var(--ink,#3f51b5)" stroke-width="2.4"/></g></svg>

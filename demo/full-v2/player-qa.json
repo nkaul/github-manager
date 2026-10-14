@@ -1,0 +1,226 @@
+{
+  "status": "PASS",
+  "properties": {
+    "width": 1920,
+    "height": 1080,
+    "duration": 1451.64,
+    "readyState": 4,
+    "captions": 1
+  },
+  "audioProperties": {
+    "duration": 1451.64,
+    "readyState": 4
+  },
+  "chapter_seeks": [
+    {
+      "id": "01",
+      "target": 0,
+      "actual": 0.040947,
+      "status": "PASS"
+    },
+    {
+      "id": "02",
+      "target": 43.96,
+      "actual": 43.970323,
+      "status": "PASS"
+    },
+    {
+      "id": "03",
+      "target": 91.24,
+      "actual": 91.25984,
+      "status": "PASS"
+    },
+    {
+      "id": "04",
+      "target": 134.16,
+      "actual": 134.175365,
+      "status": "PASS"
+    },
+    {
+      "id": "05",
+      "target": 177.08,
+      "actual": 177.091104,
+      "status": "PASS"
+    },
+    {
+      "id": "06",
+      "target": 224.2,
+      "actual": 224.212273,
+      "status": "PASS"
+    },
+    {
+      "id": "07",
+      "target": 268.44,
+      "actual": 268.454435,
+      "status": "PASS"
+    },
+    {
+      "id": "08",
+      "target": 314.64,
+      "actual": 314.646981,
+      "status": "PASS"
+    },
+    {
+      "id": "09",
+      "target": 359.12,
+      "actual": 359.136876,
+      "status": "PASS"
+    },
+    {
+      "id": "10",
+      "target": 404.16,
+      "actual": 404.166815,
+      "status": "PASS"
+    },
+    {
+      "id": "11",
+      "target": 450.72,
+      "actual": 450.730557,
+      "status": "PASS"
+    },
+    {
+      "id": "12",
+      "target": 496,
+      "actual": 496.018604,
+      "status": "PASS"
+    },
+    {
+      "id": "13",
+      "target": 540.32,
+      "actual": 540.333774,
+      "status": "PASS"
+    },
+    {
+      "id": "14",
+      "target": 588.92,
+      "actual": 588.936609,
+      "status": "PASS"
+    },
+    {
+      "id": "15",
+      "target": 634.04,
+      "actual": 634.052466,
+      "status": "PASS"
+    },
+    {
+      "id": "16",
+      "target": 679.96,
+      "actual": 679.975741,
+      "status": "PASS"
+    },
+    {
+      "id": "17",
+      "target": 719.44,
+      "actual": 719.446876,
+      "status": "PASS"
+    },
+    {
+      "id": "18",
+      "target": 767.48,
+      "actual": 767.498369,
+      "status": "PASS"
+    },
+    {
+      "id": "19",
+      "target": 809.36,
+      "actual": 809.376698,
+      "status": "PASS"
+    },
+    {
+      "id": "20",
+      "target": 855,
+      "actual": 855.01789,
+      "status": "PASS"
+    },
+    {
+      "id": "21",
+      "target": 898.44,
+      "actual": 898.452538,
+      "status": "PASS"
+    },
+    {
+      "id": "22",
+      "target": 942.68,
+      "actual": 942.693291,
+      "status": "PASS"
+    },
+    {
+      "id": "23",
+      "target": 989.84,
+      "actual": 989.859487,
+      "status": "PASS"
+    },
+    {
+      "id": "24",
+      "target": 1030.88,
+      "actual": 1030.887072,
+      "status": "PASS"
+    },
+    {
+      "id": "25",
+      "target": 1078.96,
+      "actual": 1078.971603,
+      "status": "PASS"
+    },
+    {
+      "id": "26",
+      "target": 1130.56,
+      "actual": 1130.579008,
+      "status": "PASS"
+    },
+    {
+      "id": "27",
+      "target": 1175.2,
+      "actual": 1175.214746,
+      "status": "PASS"
+    },
+    {
+      "id": "28",
+      "target": 1221.88,
+      "actual": 1221.897119,
+      "status": "PASS"
+    },
+    {
+      "id": "29",
+      "target": 1264.56,
+      "actual": 1264.573541,
+      "status": "PASS"
+    },
+    {
+      "id": "30",
+      "target": 1314.16,
+      "actual": 1314.173075,
+      "status": "PASS"
+    },
+    {
+      "id": "31",
+      "target": 1359.04,
+      "actual": 1359.054642,
+      "status": "PASS"
+    },
+    {
+      "id": "32",
+      "target": 1406.72,
+      "actual": 1406.734697,
+      "status": "PASS"
+    }
+  ],
+  "range_status": 206,
+  "desktop_viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "phone_viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "phone_overflow": false,
+  "fullscreen": "PASS",
+  "errors": [],
+  "note": "Playback is muted during automation. Subjective naturalness remains based on the user-selected Cedar pilot and final listening review.",
+  "caption_loading": {
+    "readyState": 2,
+    "cues": 390
+  },
+  "visual_review": "Updated cue sizing and top-of-page phone snapshot; media and all 32 earlier seek checks unchanged"
+}

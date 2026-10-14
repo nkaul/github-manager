@@ -1,0 +1,20 @@
+{
+  "profile": "default",
+  "region": "us-east-1",
+  "expected_account": "",
+  "targets": [
+    {"alias": "core", "kind": "dynamodb", "identifier": "", "approved_canary": false},
+    {"alias": "organization", "kind": "dynamodb", "identifier": "", "approved_canary": false},
+    {"alias": "intelligence", "kind": "dynamodb", "identifier": "", "approved_canary": false},
+    {"alias": "jobs", "kind": "sqs", "identifier": "", "approved_canary": false, "exclusive_scratch": false},
+    {"alias": "jobs-dlq", "kind": "sqs", "identifier": "", "approved_canary": false, "exclusive_scratch": false},
+    {"alias": "oauth-dummy", "kind": "secretsmanager", "identifier": "", "approved_canary": false, "dummy_sha256": ""},
+    {"alias": "sync-schedule", "kind": "events", "identifier": "", "approved_canary": false, "exclusive_scratch": false},
+    {"alias": "app-logs", "kind": "logs", "identifier": "", "approved_canary": false},
+    {"alias": "encryption", "kind": "kms", "identifier": "", "required": false},
+    {"alias": "artifacts", "kind": "s3", "identifier": "", "required": false},
+    {"alias": "model", "kind": "bedrock", "identifier": "", "required": false},
+    {"alias": "api-function", "kind": "lambda", "identifier": "", "required": false},
+    {"alias": "worker-cluster", "kind": "ecs", "identifier": "", "required": false}
+  ]
+}

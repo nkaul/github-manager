@@ -1,0 +1,22 @@
+{
+  "resolution": "1920x1080",
+  "fps": 25,
+  "video_codec": "H.264",
+  "audio_codec": "AAC",
+  "caption_track": "English mov_text + WebVTT",
+  "chapters": 26,
+  "duration_seconds": 881.6,
+  "size_bytes": 28468702,
+  "pacing": "Visible UI actions slowed to fit narration; long scheduler wait removed. Test execution used normal scheduler intervals.",
+  "browser_playback_pass": true,
+  "chapter_seek_checks": 8,
+  "caption_cues": 167,
+  "audio_duration_seconds": 881.621333,
+  "fullscreen_pass": true,
+  "decode_pass": true,
+  "visual_inspection_pass": true,
+  "visual_inspection_scope": "Representative full-resolution UI/modal frames and Chrome player/fullscreen screenshots; scrolling reveals longer pages.",
+  "audio_mean_db": -15.7,
+  "audio_peak_db": -1.4,
+  "preservation_audit": "PASS: 163 protected files; 34 historical API rows; 29 historical cache rows; original preflight UI identical"
+}

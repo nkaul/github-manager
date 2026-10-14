@@ -1,0 +1,222 @@
+{
+  "A": {
+    "status": "PASS",
+    "maximum_delta_seconds": 0.1375,
+    "checked_cues": [
+      {
+        "action": "Topics tab",
+        "actual_seconds": 10.816889298999998,
+        "spoken_cue_seconds": 10.8566,
+        "delta_seconds": -0.0397
+      },
+      {
+        "action": "Tags tab",
+        "actual_seconds": 11.621415263,
+        "spoken_cue_seconds": 11.6366,
+        "delta_seconds": -0.0152
+      },
+      {
+        "action": "Search repositories",
+        "actual_seconds": 14.899602718,
+        "spoken_cue_seconds": 14.9123,
+        "delta_seconds": -0.0127
+      },
+      {
+        "action": "Select repository",
+        "actual_seconds": 23.572484321,
+        "spoken_cue_seconds": 23.5443,
+        "delta_seconds": 0.0282
+      },
+      {
+        "action": "Adaptive budget",
+        "actual_seconds": 30.732557101,
+        "spoken_cue_seconds": 30.7346,
+        "delta_seconds": -0.002
+      },
+      {
+        "action": "Review suggestions before acceptance",
+        "actual_seconds": 31.813122405,
+        "spoken_cue_seconds": 31.8346,
+        "delta_seconds": -0.0215
+      },
+      {
+        "action": "Explicit re-analysis control",
+        "actual_seconds": 43.313333834000005,
+        "spoken_cue_seconds": 43.3103,
+        "delta_seconds": 0.003
+      },
+      {
+        "action": "Drag repository onto project",
+        "actual_seconds": 50.443539387,
+        "spoken_cue_seconds": 50.306,
+        "delta_seconds": 0.1375
+      }
+    ],
+    "scope": "Eight pointer/highlight action anchors; sentence-envelope closing captions and capture-frame quantization are separate."
+  },
+  "B": {
+    "status": "PASS",
+    "maximum_delta_seconds": 0.1114,
+    "checked_cues": [
+      {
+        "action": "Topics tab",
+        "actual_seconds": 10.324096363,
+        "spoken_cue_seconds": 10.3577,
+        "delta_seconds": -0.0336
+      },
+      {
+        "action": "Tags tab",
+        "actual_seconds": 10.945218891,
+        "spoken_cue_seconds": 10.9577,
+        "delta_seconds": -0.0125
+      },
+      {
+        "action": "Search repositories",
+        "actual_seconds": 14.522378987999998,
+        "spoken_cue_seconds": 14.5649,
+        "delta_seconds": -0.0425
+      },
+      {
+        "action": "Select repository",
+        "actual_seconds": 23.554597901,
+        "spoken_cue_seconds": 23.5729,
+        "delta_seconds": -0.0183
+      },
+      {
+        "action": "Adaptive budget",
+        "actual_seconds": 30.52956882,
+        "spoken_cue_seconds": 30.5297,
+        "delta_seconds": -0.0001
+      },
+      {
+        "action": "Review suggestions before acceptance",
+        "actual_seconds": 31.345814883,
+        "spoken_cue_seconds": 31.3697,
+        "delta_seconds": -0.0239
+      },
+      {
+        "action": "Explicit re-analysis control",
+        "actual_seconds": 43.072036365,
+        "spoken_cue_seconds": 43.0469,
+        "delta_seconds": 0.0251
+      },
+      {
+        "action": "Drag repository onto project",
+        "actual_seconds": 50.055401493999994,
+        "spoken_cue_seconds": 49.944,
+        "delta_seconds": 0.1114
+      }
+    ],
+    "scope": "Eight pointer/highlight action anchors; sentence-envelope closing captions and capture-frame quantization are separate."
+  },
+  "C": {
+    "status": "PASS",
+    "maximum_delta_seconds": 0.1064,
+    "checked_cues": [
+      {
+        "action": "Topics tab",
+        "actual_seconds": 12.095491937999999,
+        "spoken_cue_seconds": 12.0199,
+        "delta_seconds": 0.0756
+      },
+      {
+        "action": "Tags tab",
+        "actual_seconds": 12.961506917,
+        "spoken_cue_seconds": 12.9399,
+        "delta_seconds": 0.0216
+      },
+      {
+        "action": "Search repositories",
+        "actual_seconds": 15.428451045000001,
+        "spoken_cue_seconds": 15.4957,
+        "delta_seconds": -0.0672
+      },
+      {
+        "action": "Select repository",
+        "actual_seconds": 23.685393712,
+        "spoken_cue_seconds": 23.579,
+        "delta_seconds": 0.1064
+      },
+      {
+        "action": "Adaptive budget",
+        "actual_seconds": 30.495039615000003,
+        "spoken_cue_seconds": 30.5164,
+        "delta_seconds": -0.0214
+      },
+      {
+        "action": "Review suggestions before acceptance",
+        "actual_seconds": 31.869875800000003,
+        "spoken_cue_seconds": 31.7764,
+        "delta_seconds": 0.0935
+      },
+      {
+        "action": "Explicit re-analysis control",
+        "actual_seconds": 43.923268444,
+        "spoken_cue_seconds": 43.9707,
+        "delta_seconds": -0.0474
+      },
+      {
+        "action": "Drag repository onto project",
+        "actual_seconds": 51.244003778,
+        "spoken_cue_seconds": 51.26,
+        "delta_seconds": -0.016
+      }
+    ],
+    "scope": "Eight pointer/highlight action anchors; sentence-envelope closing captions and capture-frame quantization are separate."
+  },
+  "D": {
+    "status": "PASS",
+    "maximum_delta_seconds": 0.2052,
+    "checked_cues": [
+      {
+        "action": "Topics tab",
+        "actual_seconds": 11.007793479,
+        "spoken_cue_seconds": 10.8026,
+        "delta_seconds": 0.2052
+      },
+      {
+        "action": "Tags tab",
+        "actual_seconds": 11.619268982,
+        "spoken_cue_seconds": 11.5826,
+        "delta_seconds": 0.0367
+      },
+      {
+        "action": "Search repositories",
+        "actual_seconds": 14.904390436999998,
+        "spoken_cue_seconds": 14.8489,
+        "delta_seconds": 0.0555
+      },
+      {
+        "action": "Select repository",
+        "actual_seconds": 23.688786157,
+        "spoken_cue_seconds": 23.6864,
+        "delta_seconds": 0.0024
+      },
+      {
+        "action": "Adaptive budget",
+        "actual_seconds": 30.616897854,
+        "spoken_cue_seconds": 30.5724,
+        "delta_seconds": 0.0445
+      },
+      {
+        "action": "Review suggestions before acceptance",
+        "actual_seconds": 31.656650283,
+        "spoken_cue_seconds": 31.6124,
+        "delta_seconds": 0.0443
+      },
+      {
+        "action": "Explicit re-analysis control",
+        "actual_seconds": 43.156107780999996,
+        "spoken_cue_seconds": 43.0987,
+        "delta_seconds": 0.0574
+      },
+      {
+        "action": "Drag repository onto project",
+        "actual_seconds": 50.323539017,
+        "spoken_cue_seconds": 50.2251,
+        "delta_seconds": 0.0984
+      }
+    ],
+    "scope": "Eight pointer/highlight action anchors; sentence-envelope closing captions and capture-frame quantization are separate."
+  }
+}

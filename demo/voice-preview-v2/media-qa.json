@@ -1,0 +1,465 @@
+{
+  "status": "PASS",
+  "variants": [
+    {
+      "variant": "A",
+      "voice": "marin",
+      "pace": "conversational",
+      "video": "A-marin-conversational-1080p.mp4",
+      "audio": "A-marin-conversational.m4a",
+      "measured_original_wpm": 147.8,
+      "source_audio_seconds": 43.85,
+      "duration_seconds": 60,
+      "resolution": "1920x1080",
+      "fps": 25,
+      "caption_cues": 15,
+      "transcript_match": 0.9814814814814815,
+      "recording_trim_offset": 1.12,
+      "decode_pass": true,
+      "audio_time_stretch": false,
+      "video_time_stretch": false,
+      "integrated_lufs": -16.09,
+      "true_peak_dbtp": -1.75,
+      "workflow_checks": [
+        "Production UI served at 1920x1080; all API calls isolated to port 8100",
+        "Fixture taxonomy and analysis outcomes prepared with zero external AI calls",
+        "Five KPI icons present",
+        "Topics and Tags browsed",
+        "Search narrows three samples to two Orion repositories",
+        "Selection and scoped KPI counts updated",
+        "Three-repository adaptive preview uses zero provider HTTP attempts",
+        "Prior analyses reconcile offline; explicit re-analysis remains available",
+        "Native drag/drop adds Orion Operations membership",
+        "Appearance switches header logo to continuous aura"
+      ],
+      "actions": [
+        {
+          "name": "Workspace and zen logo",
+          "at": 0.24687974999999984,
+          "scene": "intro"
+        },
+        {
+          "name": "Topics tab",
+          "at": 10.816889298999998,
+          "scene": "browse"
+        },
+        {
+          "name": "Tags tab",
+          "at": 11.621415263,
+          "scene": "browse"
+        },
+        {
+          "name": "Search repositories",
+          "at": 14.899602718,
+          "scene": "search"
+        },
+        {
+          "name": "Scoped KPI icons and selected counts",
+          "at": 19.020978172000003,
+          "scene": "metrics"
+        },
+        {
+          "name": "Select repository",
+          "at": 23.572484321,
+          "scene": "metrics"
+        },
+        {
+          "name": "AI Organization",
+          "at": 26.522572087,
+          "scene": "ai"
+        },
+        {
+          "name": "Preview classification batch",
+          "at": 28.96195016,
+          "scene": "ai"
+        },
+        {
+          "name": "Adaptive budget",
+          "at": 30.732557101,
+          "scene": "ai"
+        },
+        {
+          "name": "Review suggestions before acceptance",
+          "at": 31.813122405,
+          "scene": "ai"
+        },
+        {
+          "name": "Protected analysis and offline reconciliation",
+          "at": 37.892608678,
+          "scene": "protected"
+        },
+        {
+          "name": "Explicit re-analysis control",
+          "at": 43.313333834000005,
+          "scene": "protected"
+        },
+        {
+          "name": "Drag repository onto project",
+          "at": 50.443539387,
+          "scene": "manual"
+        },
+        {
+          "name": "Saved project membership",
+          "at": 51.606026877000005,
+          "scene": "manual"
+        },
+        {
+          "name": "Content settings",
+          "at": 54.492454463,
+          "scene": "appearance"
+        },
+        {
+          "name": "Choose continuous aura",
+          "at": 56.462193104,
+          "scene": "appearance"
+        }
+      ],
+      "subjective_voice_review": "Awaiting user audition"
+    },
+    {
+      "variant": "B",
+      "voice": "cedar",
+      "pace": "conversational",
+      "video": "B-cedar-conversational-1080p.mp4",
+      "audio": "B-cedar-conversational.m4a",
+      "measured_original_wpm": 155.5,
+      "source_audio_seconds": 41.67066666666667,
+      "duration_seconds": 60,
+      "resolution": "1920x1080",
+      "fps": 25,
+      "caption_cues": 15,
+      "transcript_match": 1.0,
+      "recording_trim_offset": 1.48,
+      "decode_pass": true,
+      "audio_time_stretch": false,
+      "video_time_stretch": false,
+      "integrated_lufs": -16.46,
+      "true_peak_dbtp": -1.9,
+      "workflow_checks": [
+        "Production UI served at 1920x1080; all API calls isolated to port 8100",
+        "Fixture taxonomy and analysis outcomes prepared with zero external AI calls",
+        "Five KPI icons present",
+        "Topics and Tags browsed",
+        "Search narrows three samples to two Orion repositories",
+        "Selection and scoped KPI counts updated",
+        "Three-repository adaptive preview uses zero provider HTTP attempts",
+        "Prior analyses reconcile offline; explicit re-analysis remains available",
+        "Native drag/drop adds Orion Operations membership",
+        "Appearance switches header logo to continuous aura"
+      ],
+      "actions": [
+        {
+          "name": "Workspace and zen logo",
+          "at": 0.2964649170000002,
+          "scene": "intro"
+        },
+        {
+          "name": "Topics tab",
+          "at": 10.324096363,
+          "scene": "browse"
+        },
+        {
+          "name": "Tags tab",
+          "at": 10.945218891,
+          "scene": "browse"
+        },
+        {
+          "name": "Search repositories",
+          "at": 14.522378987999998,
+          "scene": "search"
+        },
+        {
+          "name": "Scoped KPI icons and selected counts",
+          "at": 18.855050621000004,
+          "scene": "metrics"
+        },
+        {
+          "name": "Select repository",
+          "at": 23.554597901,
+          "scene": "metrics"
+        },
+        {
+          "name": "AI Organization",
+          "at": 26.804295961000005,
+          "scene": "ai"
+        },
+        {
+          "name": "Preview classification batch",
+          "at": 28.623994659999997,
+          "scene": "ai"
+        },
+        {
+          "name": "Adaptive budget",
+          "at": 30.52956882,
+          "scene": "ai"
+        },
+        {
+          "name": "Review suggestions before acceptance",
+          "at": 31.345814883,
+          "scene": "ai"
+        },
+        {
+          "name": "Protected analysis and offline reconciliation",
+          "at": 38.146171105,
+          "scene": "protected"
+        },
+        {
+          "name": "Explicit re-analysis control",
+          "at": 43.072036365,
+          "scene": "protected"
+        },
+        {
+          "name": "Drag repository onto project",
+          "at": 50.055401493999994,
+          "scene": "manual"
+        },
+        {
+          "name": "Saved project membership",
+          "at": 51.253575893000004,
+          "scene": "manual"
+        },
+        {
+          "name": "Content settings",
+          "at": 54.411402482999996,
+          "scene": "appearance"
+        },
+        {
+          "name": "Choose continuous aura",
+          "at": 55.800155206999996,
+          "scene": "appearance"
+        }
+      ],
+      "subjective_voice_review": "Awaiting user audition"
+    },
+    {
+      "variant": "C",
+      "voice": "marin",
+      "pace": "calm",
+      "video": "C-marin-calm-1080p.mp4",
+      "audio": "C-marin-calm.m4a",
+      "measured_original_wpm": 130.8,
+      "source_audio_seconds": 49.5545,
+      "duration_seconds": 60,
+      "resolution": "1920x1080",
+      "fps": 25,
+      "caption_cues": 15,
+      "transcript_match": 0.9722222222222222,
+      "recording_trim_offset": 1.92,
+      "decode_pass": true,
+      "audio_time_stretch": false,
+      "video_time_stretch": false,
+      "integrated_lufs": -16.14,
+      "true_peak_dbtp": -1.98,
+      "workflow_checks": [
+        "Production UI served at 1920x1080; all API calls isolated to port 8100",
+        "Fixture taxonomy and analysis outcomes prepared with zero external AI calls",
+        "Five KPI icons present",
+        "Topics and Tags browsed",
+        "Search narrows three samples to two Orion repositories",
+        "Selection and scoped KPI counts updated",
+        "Three-repository adaptive preview uses zero provider HTTP attempts",
+        "Prior analyses reconcile offline; explicit re-analysis remains available",
+        "Native drag/drop adds Orion Operations membership",
+        "Appearance switches header logo to continuous aura"
+      ],
+      "actions": [
+        {
+          "name": "Workspace and zen logo",
+          "at": 0.5628146059999999,
+          "scene": "intro"
+        },
+        {
+          "name": "Topics tab",
+          "at": 12.095491937999999,
+          "scene": "browse"
+        },
+        {
+          "name": "Tags tab",
+          "at": 12.961506917,
+          "scene": "browse"
+        },
+        {
+          "name": "Search repositories",
+          "at": 15.428451045000001,
+          "scene": "search"
+        },
+        {
+          "name": "Scoped KPI icons and selected counts",
+          "at": 19.028607387,
+          "scene": "metrics"
+        },
+        {
+          "name": "Select repository",
+          "at": 23.685393712,
+          "scene": "metrics"
+        },
+        {
+          "name": "AI Organization",
+          "at": 26.594258903,
+          "scene": "ai"
+        },
+        {
+          "name": "Preview classification batch",
+          "at": 28.876706653,
+          "scene": "ai"
+        },
+        {
+          "name": "Adaptive budget",
+          "at": 30.495039615000003,
+          "scene": "ai"
+        },
+        {
+          "name": "Review suggestions before acceptance",
+          "at": 31.869875800000003,
+          "scene": "ai"
+        },
+        {
+          "name": "Protected analysis and offline reconciliation",
+          "at": 38.874883851,
+          "scene": "protected"
+        },
+        {
+          "name": "Explicit re-analysis control",
+          "at": 43.923268444,
+          "scene": "protected"
+        },
+        {
+          "name": "Drag repository onto project",
+          "at": 51.244003778,
+          "scene": "manual"
+        },
+        {
+          "name": "Saved project membership",
+          "at": 52.381008771,
+          "scene": "manual"
+        },
+        {
+          "name": "Content settings",
+          "at": 54.821282661,
+          "scene": "appearance"
+        },
+        {
+          "name": "Choose continuous aura",
+          "at": 56.938888453,
+          "scene": "appearance"
+        }
+      ],
+      "subjective_voice_review": "Awaiting user audition"
+    },
+    {
+      "variant": "D",
+      "voice": "cedar",
+      "pace": "calm",
+      "video": "D-cedar-calm-1080p.mp4",
+      "audio": "D-cedar-calm.m4a",
+      "measured_original_wpm": 146.7,
+      "source_audio_seconds": 44.17783333333333,
+      "duration_seconds": 60,
+      "resolution": "1920x1080",
+      "fps": 25,
+      "caption_cues": 15,
+      "transcript_match": 0.9900990099009901,
+      "recording_trim_offset": 1.4,
+      "decode_pass": true,
+      "audio_time_stretch": false,
+      "video_time_stretch": false,
+      "integrated_lufs": -16.34,
+      "true_peak_dbtp": -1.96,
+      "workflow_checks": [
+        "Production UI served at 1920x1080; all API calls isolated to port 8100",
+        "Fixture taxonomy and analysis outcomes prepared with zero external AI calls",
+        "Five KPI icons present",
+        "Topics and Tags browsed",
+        "Search narrows three samples to two Orion repositories",
+        "Selection and scoped KPI counts updated",
+        "Three-repository adaptive preview uses zero provider HTTP attempts",
+        "Prior analyses reconcile offline; explicit re-analysis remains available",
+        "Native drag/drop adds Orion Operations membership",
+        "Appearance switches header logo to continuous aura"
+      ],
+      "actions": [
+        {
+          "name": "Workspace and zen logo",
+          "at": 0.4143995289999998,
+          "scene": "intro"
+        },
+        {
+          "name": "Topics tab",
+          "at": 11.007793479,
+          "scene": "browse"
+        },
+        {
+          "name": "Tags tab",
+          "at": 11.619268982,
+          "scene": "browse"
+        },
+        {
+          "name": "Search repositories",
+          "at": 14.904390436999998,
+          "scene": "search"
+        },
+        {
+          "name": "Scoped KPI icons and selected counts",
+          "at": 19.317151507,
+          "scene": "metrics"
+        },
+        {
+          "name": "Select repository",
+          "at": 23.688786157,
+          "scene": "metrics"
+        },
+        {
+          "name": "AI Organization",
+          "at": 26.987461315,
+          "scene": "ai"
+        },
+        {
+          "name": "Preview classification batch",
+          "at": 28.86424397,
+          "scene": "ai"
+        },
+        {
+          "name": "Adaptive budget",
+          "at": 30.616897854,
+          "scene": "ai"
+        },
+        {
+          "name": "Review suggestions before acceptance",
+          "at": 31.656650283,
+          "scene": "ai"
+        },
+        {
+          "name": "Protected analysis and offline reconciliation",
+          "at": 38.436723221,
+          "scene": "protected"
+        },
+        {
+          "name": "Explicit re-analysis control",
+          "at": 43.156107780999996,
+          "scene": "protected"
+        },
+        {
+          "name": "Drag repository onto project",
+          "at": 50.323539017,
+          "scene": "manual"
+        },
+        {
+          "name": "Saved project membership",
+          "at": 51.482866390000005,
+          "scene": "manual"
+        },
+        {
+          "name": "Content settings",
+          "at": 54.600917199,
+          "scene": "appearance"
+        },
+        {
+          "name": "Choose continuous aura",
+          "at": 55.921481811999996,
+          "scene": "appearance"
+        }
+      ],
+      "subjective_voice_review": "Awaiting user audition"
+    }
+  ]
+}

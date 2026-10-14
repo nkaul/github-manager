@@ -1,0 +1,103 @@
+{
+  "fps": 25,
+  "infiniteLoop": true,
+  "background": "transparent",
+  "variants": [
+    {
+      "kind": "orbit",
+      "file": "zen-loop-orbit-96.gif",
+      "dimensions": [
+        96,
+        96
+      ],
+      "frames": 100,
+      "seconds": 4,
+      "loop": 0,
+      "transparent": true,
+      "disposals": [
+        2
+      ],
+      "bytes": 218022
+    },
+    {
+      "kind": "orbit",
+      "file": "zen-loop-orbit-256.gif",
+      "dimensions": [
+        256,
+        256
+      ],
+      "frames": 100,
+      "seconds": 4,
+      "loop": 0,
+      "transparent": true,
+      "disposals": [
+        2
+      ],
+      "bytes": 701892
+    },
+    {
+      "kind": "orbit",
+      "file": "zen-loop-orbit-512.gif",
+      "dimensions": [
+        512,
+        512
+      ],
+      "frames": 100,
+      "seconds": 4,
+      "loop": 0,
+      "transparent": true,
+      "disposals": [
+        2
+      ],
+      "bytes": 825153
+    },
+    {
+      "kind": "rays",
+      "file": "zen-loop-rays-96.gif",
+      "dimensions": [
+        96,
+        96
+      ],
+      "frames": 150,
+      "seconds": 6,
+      "loop": 0,
+      "transparent": true,
+      "disposals": [
+        2
+      ],
+      "bytes": 200898
+    },
+    {
+      "kind": "rays",
+      "file": "zen-loop-rays-256.gif",
+      "dimensions": [
+        256,
+        256
+      ],
+      "frames": 150,
+      "seconds": 6,
+      "loop": 0,
+      "transparent": true,
+      "disposals": [
+        2
+      ],
+      "bytes": 616437
+    },
+    {
+      "kind": "rays",
+      "file": "zen-loop-rays-512.gif",
+      "dimensions": [
+        512,
+        512
+      ],
+      "frames": 150,
+      "seconds": 6,
+      "loop": 0,
+      "transparent": true,
+      "disposals": [
+        2
+      ],
+      "bytes": 684594
+    }
+  ]
+}

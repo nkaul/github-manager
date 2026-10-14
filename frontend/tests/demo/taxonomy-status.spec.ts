@@ -1,0 +1,121 @@
+import { test, expect, type Page } from "@playwright/test";
+
+test.use({ viewport: { width: 1920, height: 1080 } });
+
+async function seed(page: Page, id: number) {
+  await page.request.post("/api/v1/test/login", { data: { id } });
+  await page.goto("/");
+  await page.getByLabel("Workspace collection").selectOption("samples");
+  await page.getByRole("button", { name: "Load demo samples", exact: true }).first().click();
+  await expect(page.getByRole("button", { name: "Details for orion-api", exact: true })).toBeVisible();
+}
+async function create(page: Page, body: unknown) {
+  return page.evaluate(async body => {
+    const me = await (await fetch("/api/v1/me")).json();
+    const response = await fetch("/api/v1/taxonomy/concepts?collection=samples", { method: "POST", headers: { "Content-Type": "application/json", "X-CSRF-Token": me.csrf_token }, body: JSON.stringify(body) });
+    if (!response.ok) throw new Error(`Fixture concept failed: ${response.status}`);
+    return response.json();
+  }, body);
+}
+
+test("browse all facets, alias search, selected-set drops and derived-domain picker", async ({ page }) => {
+  await seed(page, 9106);
+  const domain = await create(page, { kind: "DOMAIN", name: "Demo Products", aliases: [], description: "Fixture domain" });
+  await create(page, { kind: "PROJECT", name: "Orion Suite", domain: domain.id, aliases: [], description: "Fixture product" });
+  await create(page, { kind: "TOPIC", name: "Web APIs", aliases: ["HTTP services"], description: "Fixture topic" });
+  await create(page, { kind: "TAG", name: "Python", aliases: [], description: "Fixture language" });
+  const sidebar = page.locator(".wm-sidebar");
+  await expect(sidebar.getByRole("button", { name: "Orion Suite", exact: true })).toBeVisible();
+  await page.getByLabel("Select orion-api", { exact: true }).check();
+  await page.getByLabel("Select orion-ui", { exact: true }).check();
+  await sidebar.getByRole("tab", { name: "Topics", exact: true }).click();
+  await sidebar.getByLabel("Search taxonomy names or aliases").fill("HTTP");
+  const topic = sidebar.getByRole("button", { name: "Web APIs", exact: true });
+  await expect(topic).toBeVisible();
+  await page.locator("tr", { has: page.getByLabel("Select orion-api", { exact: true }) }).dragTo(topic);
+  const confirm = page.getByRole("dialog", { name: "Confirm repository assignment" });
+  await expect(confirm).toContainText("Add 2 repositories to Web APIs");
+  await expect(confirm.locator("li")).toHaveCount(2);
+  await confirm.getByRole("button", { name: "Confirm membership addition" }).click();
+  await expect(confirm).toHaveCount(0);
+  await expect(topic.locator(".wm-taxonomy-counts")).toHaveText("2");
+  await expect(page.locator(".wm-stat").filter({ has: page.locator("span", { hasText: /^Labeled$/ }) }).locator("strong")).toHaveText("2");
+  await expect(page.locator(".wm-stat").filter({ has: page.locator("span", { hasText: /^No project$/ }) }).locator("strong")).toHaveText("3");
+  await page.getByRole("button", { name: "Clear", exact: true }).click();
+  await sidebar.getByRole("tab", { name: "Projects", exact: true }).click();
+  await page.locator("tr", { has: page.getByLabel("Select orion-api", { exact: true }) }).dragTo(sidebar.getByRole("button", { name: "Demo Products", exact: true }));
+  await expect(confirm).toBeVisible();
+  await confirm.getByLabel("Project for domain drop").selectOption({ label: "Orion Suite" });
+  await confirm.getByRole("button", { name: "Confirm membership addition" }).click();
+  await expect(page.locator("tr", { has: page.getByLabel("Select orion-api", { exact: true }) })).toContainText("Orion Suite");
+  await page.locator(".wm-tree-menu > summary").click();
+  await page.locator(".wm-tree-menu").getByRole("tab", { name: "Tags", exact: true }).click();
+  await page.locator("tr", { has: page.getByLabel("Select orion-api", { exact: true }) }).dragTo(page.locator(".wm-tree-menu").getByRole("button", { name: "Python", exact: true }));
+  await expect(page.locator("tr", { has: page.getByLabel("Select orion-api", { exact: true }) })).toContainText("Python");
+  await page.keyboard.press("Escape");
+  await sidebar.getByRole("tab", { name: "Topics", exact: true }).click();
+  await sidebar.getByRole("button", { name: "Web APIs", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "Web APIs", exact: true })).toBeVisible();
+  await expect(page.getByLabel("Organization status view")).toHaveValue("all");
+  await expect(page.locator("tbody tr")).toHaveCount(2);
+  await page.screenshot({ path: "test-results/taxonomy-topics-1080p.png" });
+  await page.getByRole("button", { name: "Content settings", exact: true }).click();
+  await page.locator(".wm-tabs").getByRole("button", { name: /^Topics/ }).click();
+  await page.locator(".wm-concept-card").filter({ has: page.getByRole("heading", { name: "Web APIs", exact: true }) }).getByRole("button", { name: "View repositories" }).click();
+  await expect(page.locator("tbody tr")).toHaveCount(2);
+});
+
+test("no-repeat preview, explicit fresh re-analysis, grouped bulk review and configurable thresholds", async ({ page }) => {
+  await seed(page, 9107);
+  await page.getByRole("button", { name: "AI Organization", exact: false }).click();
+  await page.getByLabel("Inference mode").selectOption("LIVE");
+  await page.getByRole("button", { name: "Discover taxonomy", exact: true }).click();
+  await page.getByRole("button", { name: "Start reviewed run", exact: true }).click();
+  await page.getByRole("button", { name: "Review draft", exact: true }).click();
+  await page.getByRole("button", { name: "Approve & publish taxonomy", exact: true }).click();
+  await page.getByRole("button", { name: "Full classification", exact: true }).click();
+  await page.getByRole("button", { name: "Start reviewed run", exact: true }).click();
+  const review = page.getByRole("region", { name: "Assignment review", exact: true });
+  await expect(review.getByRole("button", { name: "Accept", exact: true })).toHaveCount(3);
+  await page.getByLabel("Group suggestions by").selectOption("concept");
+  await page.getByLabel("Review taxonomy type").selectOption("PROJECT");
+  await page.getByLabel("Select visible suggestions").check();
+  await page.getByRole("button", { name: "Review selected acceptance" }).click();
+  await expect(page.getByLabel("Selected review summary")).toContainText("Accept 2 selected proposals?");
+  await page.getByRole("button", { name: "Confirm selected acceptance" }).click();
+  await page.getByLabel("Review taxonomy type").selectOption("");
+  await expect(review.getByRole("button", { name: "Accept", exact: true })).toHaveCount(1);
+  await page.getByLabel("Select visible suggestions").check();
+  await page.getByRole("button", { name: "Review selected acceptance" }).click();
+  await expect(page.getByLabel("Selected review summary")).toContainText("Accept 1 selected proposals?");
+  await page.getByRole("button", { name: "Confirm selected acceptance" }).click();
+  await expect(review).toContainText("No pending suggestions.");
+  await page.getByRole("button", { name: "Full classification", exact: true }).click();
+  const preview = page.getByRole("region", { name: "Run preview", exact: true });
+  await expect(preview).toContainText("0 generations / 0 HTTP attempts");
+  await expect(preview).toContainText("3 for offline reconciliation");
+  await page.getByLabel("Re-analyze with AI", { exact: true }).check();
+  await expect(preview).toHaveCount(0);
+  await page.getByLabel("Reason for re-analysis").fill("Review meaningful README changes");
+  await page.getByRole("button", { name: "Full classification", exact: true }).click();
+  await expect(preview).toContainText("3 generations / 6 HTTP attempts");
+  await expect(preview).toContainText("Explicit re-analysis: Review meaningful README changes");
+  await page.getByRole("button", { name: "Cancel preview", exact: true }).click();
+  await page.locator(".wm-automation > summary").click();
+  await page.getByLabel("Weighted changes", { exact: true }).fill("8");
+  await page.getByLabel("Distinct entities", { exact: true }).fill("4");
+  await page.getByLabel("New projects (0 disables)", { exact: true }).fill("0");
+  await page.getByLabel("Quiet period (seconds)", { exact: true }).fill("120");
+  await page.getByLabel("Cooldown (seconds)", { exact: true }).fill("3600");
+  await page.getByRole("button", { name: "Save automatic settings" }).click();
+  await expect(page.getByText("Automatic organization settings saved.", { exact: true })).toBeVisible();
+  await page.screenshot({ path: "test-results/analysis-controls-1920-fullpage.png", fullPage: true });
+  await page.locator(".wm-automation").evaluate(el => window.scrollTo(0, el.getBoundingClientRect().top + scrollY - 100));
+  await page.screenshot({ path: "test-results/analysis-controls-1080p.png" });
+  await page.reload();
+  await page.getByLabel("Workspace collection").selectOption("samples");
+  await page.getByRole("button", { name: "AI Organization", exact: false }).click();
+  await page.locator(".wm-automation > summary").click();
+  await expect(page.getByLabel("Weighted changes", { exact: true })).toHaveValue("8");
+  await expect(page.getByLabel("Quiet period (seconds)", { exact: true })).toHaveValue("120");
+});

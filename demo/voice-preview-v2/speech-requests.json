@@ -1,0 +1,169 @@
+{
+  "cap_usd": 0.5,
+  "maximum_api_calls": 8,
+  "requests": [
+    {
+      "id": "A-tts",
+      "endpoint": "audio/speech",
+      "model": "gpt-4o-mini-tts",
+      "reserved_usd": 0.1,
+      "state": "SUCCEEDED",
+      "at": "2026-10-13T21:36:29.895499+00:00",
+      "product_before": {
+        "cap_usd": 5.0,
+        "accounted_usd": 0.127619,
+        "holds_usd": 0.0,
+        "generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_ea369782ec7d4a1c8982657e82641973",
+      "response_sha256": "ea8b1fdfd1704a389f764fa6305cafd65c9602e034f0aefebc13dc8d02f160de",
+      "bytes": 2104844
+    },
+    {
+      "id": "A-timing",
+      "endpoint": "audio/transcriptions",
+      "model": "whisper-1",
+      "reserved_usd": 0.02,
+      "state": "FAILED_REVIEW_REQUIRED",
+      "at": "2026-10-13T21:38:53.155675+00:00",
+      "product_before": {
+        "cap_usd": 5.0,
+        "accounted_usd": 0.127619,
+        "holds_usd": 0.0,
+        "generation_rows": 91
+      },
+      "http_status": 400,
+      "request_id": "req_41b8bfc1c4a3413cbb72be344cee3f73",
+      "error_code": null,
+      "review_resolution": "HTTP 400 followed a local WAV-header normalization bug. Input repaired and validated; failed call was not retried. Two batched timing calls succeeded and remain audited."
+    },
+    {
+      "id": "B-tts",
+      "endpoint": "audio/speech",
+      "model": "gpt-4o-mini-tts",
+      "reserved_usd": 0.1,
+      "state": "SUCCEEDED",
+      "at": "2026-10-13T21:40:03.636919+00:00",
+      "product_before": {
+        "cap_usd": 5.0,
+        "accounted_usd": 0.127619,
+        "holds_usd": 0.0,
+        "generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_316a1630233148b3a1a0724bf05019b8",
+      "response_sha256": "1f7d6c106b4817d383019f44675d90d48a13d647a6f31a89306e522273a43793",
+      "bytes": 1843244
+    },
+    {
+      "id": "C-tts",
+      "endpoint": "audio/speech",
+      "model": "gpt-4o-mini-tts",
+      "reserved_usd": 0.1,
+      "state": "SUCCEEDED",
+      "at": "2026-10-13T21:40:10.409455+00:00",
+      "product_before": {
+        "cap_usd": 5.0,
+        "accounted_usd": 0.127619,
+        "holds_usd": 0.0,
+        "generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_a87f1bd60adb4940aa7634d7d0eb2d9d",
+      "response_sha256": "da96b1cf0fb04f5b1ad8d7ade99b676108794e0e7df1e92c7a826e692e85bf61",
+      "bytes": 2378660
+    },
+    {
+      "id": "D-tts",
+      "endpoint": "audio/speech",
+      "model": "gpt-4o-mini-tts",
+      "reserved_usd": 0.1,
+      "state": "SUCCEEDED",
+      "at": "2026-10-13T21:40:18.932313+00:00",
+      "product_before": {
+        "cap_usd": 5.0,
+        "accounted_usd": 0.127619,
+        "holds_usd": 0.0,
+        "generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_7268da3dcf7549aab544b1ebaadcd225",
+      "response_sha256": "da8e6e5c41a3c8fdfd6578e584473072fb5604502e653f88e0722fef68fd6e81",
+      "bytes": 1963588
+    },
+    {
+      "id": "AB-timing",
+      "endpoint": "audio/transcriptions",
+      "model": "whisper-1",
+      "reserved_usd": 0.02,
+      "state": "SUCCEEDED",
+      "at": "2026-10-13T21:43:54.096382+00:00",
+      "product_before": {
+        "cap_usd": 5.0,
+        "accounted_usd": 0.127619,
+        "holds_usd": 0.0,
+        "generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_3c92bc6fc0bc474e9c3fcfe2c30664e5",
+      "response_sha256": "291dea86e0cca8b822c55705ffc3dc79e9837c2bb08bcca3a98950eb5dd8bc77",
+      "bytes": 15390
+    },
+    {
+      "id": "CD-timing",
+      "endpoint": "audio/transcriptions",
+      "model": "whisper-1",
+      "reserved_usd": 0.02,
+      "state": "SUCCEEDED",
+      "at": "2026-10-13T21:44:00.659984+00:00",
+      "product_before": {
+        "cap_usd": 5.0,
+        "accounted_usd": 0.127619,
+        "holds_usd": 0.0,
+        "generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_5814e95f600844158ca828b5a02b9be1",
+      "response_sha256": "f13630ec687ff528e4c7fc213ecd4fec55b067ababc7d5e90a2e3a8c94831766",
+      "bytes": 15462
+    },
+    {
+      "id": "cedar-closing-repair",
+      "endpoint": "audio/speech",
+      "model": "gpt-4o-mini-tts",
+      "reserved_usd": 0.04,
+      "state": "SUCCEEDED",
+      "at": "2026-10-13T21:47:05.660787+00:00",
+      "product_before": {
+        "cap_usd": 5.0,
+        "accounted_usd": 0.127619,
+        "holds_usd": 0.0,
+        "generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_40c920a766fb48bb9b074dc2422ae729",
+      "response_sha256": "34fe09428450bec11a1bc4a29b36a78b7d73da6f1d5f66df3ba2ce9b28fc69c1",
+      "bytes": 146476
+    }
+  ],
+  "accounted_media_usd": 0.5,
+  "product_after": {
+    "cap_usd": 5.0,
+    "accounted_usd": 0.127619,
+    "holds_usd": 0.0,
+    "generation_rows": 91
+  },
+  "combined_accounted_usd": 0.627619,
+  "cost_note": "Conservative holds retained: $0.10/original TTS, $0.04/short closing repair, $0.02/timing attempt including one failed request. Binary speech responses have no token usage. These are not invoiced charges.",
+  "price_reference": {
+    "tts_text_per_million": 0.6,
+    "tts_audio_per_million": 12,
+    "whisper_per_minute": 0.006,
+    "checked": "2026-10-13",
+    "sources": [
+      "https://developers.openai.com/api/docs/models/gpt-4o-mini-tts",
+      "https://developers.openai.com/api/docs/models/whisper-1"
+    ]
+  }
+}

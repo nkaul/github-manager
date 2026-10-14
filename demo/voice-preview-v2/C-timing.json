@@ -1,0 +1,759 @@
+{
+  "id": "C",
+  "voice": "marin",
+  "pace": "calm",
+  "target_wpm": 132,
+  "speed": 0.93,
+  "segments": [
+    {
+      "id": "intro",
+      "text": "GitHub Manager brings your repositories into one clear workspace, with a calmer interface and a little zen.",
+      "first_word": 0,
+      "last_word": 16,
+      "spoken_start": 0,
+      "spoken_end": 7.260000228881836,
+      "start": 0.0,
+      "end": 8.6614,
+      "audio_start": 0.3085,
+      "raw_start": 0,
+      "audio_seconds": 7.78
+    },
+    {
+      "id": "browse",
+      "text": "Use the sidebar to browse projects, topics, and tags.",
+      "first_word": 17,
+      "last_word": 25,
+      "spoken_start": 8.300000190734863,
+      "spoken_end": 11.699999809265137,
+      "start": 8.6614,
+      "end": 14.3257,
+      "audio_start": 9.0199,
+      "raw_start": 7.78000020980835,
+      "audio_seconds": 4.64
+    },
+    {
+      "id": "search",
+      "text": "Search and filters help you narrow the list.",
+      "first_word": 26,
+      "last_word": 33,
+      "spoken_start": 13.140000343322754,
+      "spoken_end": 15.0600004196167,
+      "start": 14.3257,
+      "end": 18.7907,
+      "audio_start": 14.7757,
+      "raw_start": 12.420000076293945,
+      "audio_seconds": 2.99
+    },
+    {
+      "id": "metrics",
+      "text": "The compact cards show what is labeled, what still needs a project, and which repositories you've selected.",
+      "first_word": 34,
+      "last_word": 50,
+      "spoken_start": 15.760000228881836,
+      "spoken_end": 21.399999618530273,
+      "start": 18.7907,
+      "end": 26.3714,
+      "audio_start": 19.169,
+      "raw_start": 15.410000324249268,
+      "audio_seconds": 6.5
+    },
+    {
+      "id": "ai",
+      "text": "AI Organization lets you preview a repository batch and its budget, then review taxonomy and classification suggestions. Approve suggestions to apply them.",
+      "first_word": 51,
+      "last_word": 72,
+      "spoken_start": 22.420000076293945,
+      "spoken_end": 32.279998779296875,
+      "start": 26.3714,
+      "end": 38.3057,
+      "audio_start": 26.7264,
+      "raw_start": 21.90999984741211,
+      "audio_seconds": 10.92
+    },
+    {
+      "id": "protected",
+      "text": "Already analyzed repositories stay protected from repeated AI calls. You can explicitly re-analyze when something important changes.",
+      "first_word": 73,
+      "last_word": 89,
+      "spoken_start": 33.380001068115234,
+      "spoken_end": 41.0,
+      "start": 38.3057,
+      "end": 48.07,
+      "audio_start": 38.6607,
+      "raw_start": 32.829999923706055,
+      "audio_seconds": 8.75
+    },
+    {
+      "id": "manual",
+      "text": "Keep control with manual assignments, drag and drop, and local rules.",
+      "first_word": 90,
+      "last_word": 100,
+      "spoken_start": 42.15999984741211,
+      "spoken_end": 46.060001373291016,
+      "start": 48.07,
+      "end": 54.535,
+      "audio_start": 48.52,
+      "raw_start": 41.579999923706055,
+      "audio_seconds": 4.83
+    },
+    {
+      "id": "appearance",
+      "text": "In Appearance, choose your favorite zen cat.",
+      "first_word": 101,
+      "last_word": 105,
+      "spoken_start": 46.7599983215332,
+      "spoken_end": 48.65999984741211,
+      "start": 54.535,
+      "end": 60.0,
+      "audio_start": 54.985,
+      "raw_start": 46.40999984741211,
+      "audio_seconds": 2.4
+    }
+  ],
+  "words": [
+    {
+      "word": "GitHub",
+      "start": 0.3085,
+      "end": 1.6085,
+      "scene": "intro"
+    },
+    {
+      "word": "Manager",
+      "start": 1.6085,
+      "end": 2.0085,
+      "scene": "intro"
+    },
+    {
+      "word": "brings",
+      "start": 2.0085,
+      "end": 2.3485,
+      "scene": "intro"
+    },
+    {
+      "word": "your",
+      "start": 2.3485,
+      "end": 2.6685,
+      "scene": "intro"
+    },
+    {
+      "word": "repositories",
+      "start": 2.6685,
+      "end": 3.1685,
+      "scene": "intro"
+    },
+    {
+      "word": "into",
+      "start": 3.1685,
+      "end": 3.4885,
+      "scene": "intro"
+    },
+    {
+      "word": "one",
+      "start": 3.4885,
+      "end": 3.9485,
+      "scene": "intro"
+    },
+    {
+      "word": "clear",
+      "start": 3.9485,
+      "end": 4.3085,
+      "scene": "intro"
+    },
+    {
+      "word": "workspace",
+      "start": 4.3085,
+      "end": 4.8485,
+      "scene": "intro"
+    },
+    {
+      "word": "with",
+      "start": 5.2885,
+      "end": 5.3685,
+      "scene": "intro"
+    },
+    {
+      "word": "a",
+      "start": 5.3685,
+      "end": 5.8285,
+      "scene": "intro"
+    },
+    {
+      "word": "calmer",
+      "start": 5.8285,
+      "end": 5.8285,
+      "scene": "intro"
+    },
+    {
+      "word": "interface",
+      "start": 5.8285,
+      "end": 6.3685,
+      "scene": "intro"
+    },
+    {
+      "word": "and",
+      "start": 6.3685,
+      "end": 6.8685,
+      "scene": "intro"
+    },
+    {
+      "word": "a",
+      "start": 6.8685,
+      "end": 7.2885,
+      "scene": "intro"
+    },
+    {
+      "word": "little",
+      "start": 7.2885,
+      "end": 7.2885,
+      "scene": "intro"
+    },
+    {
+      "word": "zen",
+      "start": 7.2885,
+      "end": 7.5685,
+      "scene": "intro"
+    },
+    {
+      "word": "Use",
+      "start": 9.5399,
+      "end": 9.5399,
+      "scene": "browse"
+    },
+    {
+      "word": "the",
+      "start": 9.5399,
+      "end": 9.7599,
+      "scene": "browse"
+    },
+    {
+      "word": "sidebar",
+      "start": 9.7599,
+      "end": 10.0999,
+      "scene": "browse"
+    },
+    {
+      "word": "to",
+      "start": 10.0999,
+      "end": 10.6599,
+      "scene": "browse"
+    },
+    {
+      "word": "browse",
+      "start": 10.6599,
+      "end": 10.6599,
+      "scene": "browse"
+    },
+    {
+      "word": "projects",
+      "start": 10.6599,
+      "end": 11.2399,
+      "scene": "browse"
+    },
+    {
+      "word": "topics",
+      "start": 12.0199,
+      "end": 12.0199,
+      "scene": "browse"
+    },
+    {
+      "word": "and",
+      "start": 12.3399,
+      "end": 12.9399,
+      "scene": "browse"
+    },
+    {
+      "word": "tags",
+      "start": 12.9399,
+      "end": 12.9399,
+      "scene": "browse"
+    },
+    {
+      "word": "Search",
+      "start": 15.4957,
+      "end": 15.4957,
+      "scene": "search"
+    },
+    {
+      "word": "and",
+      "start": 15.4957,
+      "end": 15.7957,
+      "scene": "search"
+    },
+    {
+      "word": "filters",
+      "start": 15.7957,
+      "end": 16.0557,
+      "scene": "search"
+    },
+    {
+      "word": "help",
+      "start": 16.0557,
+      "end": 16.3957,
+      "scene": "search"
+    },
+    {
+      "word": "you",
+      "start": 16.3957,
+      "end": 16.8757,
+      "scene": "search"
+    },
+    {
+      "word": "narrow",
+      "start": 16.8757,
+      "end": 16.8757,
+      "scene": "search"
+    },
+    {
+      "word": "the",
+      "start": 16.8757,
+      "end": 17.4157,
+      "scene": "search"
+    },
+    {
+      "word": "list",
+      "start": 17.4157,
+      "end": 17.4157,
+      "scene": "search"
+    },
+    {
+      "word": "The",
+      "start": 19.519,
+      "end": 19.679,
+      "scene": "metrics"
+    },
+    {
+      "word": "compact",
+      "start": 19.679,
+      "end": 20.079,
+      "scene": "metrics"
+    },
+    {
+      "word": "cards",
+      "start": 20.079,
+      "end": 20.399,
+      "scene": "metrics"
+    },
+    {
+      "word": "show",
+      "start": 20.399,
+      "end": 20.639,
+      "scene": "metrics"
+    },
+    {
+      "word": "what",
+      "start": 20.639,
+      "end": 20.819,
+      "scene": "metrics"
+    },
+    {
+      "word": "is",
+      "start": 20.819,
+      "end": 21.139,
+      "scene": "metrics"
+    },
+    {
+      "word": "labeled",
+      "start": 21.139,
+      "end": 21.259,
+      "scene": "metrics"
+    },
+    {
+      "word": "what",
+      "start": 21.839,
+      "end": 21.939,
+      "scene": "metrics"
+    },
+    {
+      "word": "still",
+      "start": 21.939,
+      "end": 22.239,
+      "scene": "metrics"
+    },
+    {
+      "word": "needs",
+      "start": 22.239,
+      "end": 22.339,
+      "scene": "metrics"
+    },
+    {
+      "word": "a",
+      "start": 22.339,
+      "end": 22.939,
+      "scene": "metrics"
+    },
+    {
+      "word": "project",
+      "start": 22.939,
+      "end": 22.939,
+      "scene": "metrics"
+    },
+    {
+      "word": "and",
+      "start": 23.359,
+      "end": 23.579,
+      "scene": "metrics"
+    },
+    {
+      "word": "which",
+      "start": 23.579,
+      "end": 23.759,
+      "scene": "metrics"
+    },
+    {
+      "word": "repositories",
+      "start": 23.759,
+      "end": 24.359,
+      "scene": "metrics"
+    },
+    {
+      "word": "you've",
+      "start": 24.439,
+      "end": 25.159,
+      "scene": "metrics"
+    },
+    {
+      "word": "selected",
+      "start": 25.159,
+      "end": 25.159,
+      "scene": "metrics"
+    },
+    {
+      "word": "AI",
+      "start": 27.2364,
+      "end": 27.5964,
+      "scene": "ai"
+    },
+    {
+      "word": "Organization",
+      "start": 27.5964,
+      "end": 28.1964,
+      "scene": "ai"
+    },
+    {
+      "word": "lets",
+      "start": 28.1964,
+      "end": 28.4964,
+      "scene": "ai"
+    },
+    {
+      "word": "you",
+      "start": 28.4964,
+      "end": 28.7764,
+      "scene": "ai"
+    },
+    {
+      "word": "preview",
+      "start": 28.7764,
+      "end": 29.0164,
+      "scene": "ai"
+    },
+    {
+      "word": "a",
+      "start": 29.0164,
+      "end": 29.4964,
+      "scene": "ai"
+    },
+    {
+      "word": "repository",
+      "start": 29.4964,
+      "end": 29.7364,
+      "scene": "ai"
+    },
+    {
+      "word": "batch",
+      "start": 29.7364,
+      "end": 30.1764,
+      "scene": "ai"
+    },
+    {
+      "word": "in",
+      "start": 30.1764,
+      "end": 30.3564,
+      "scene": "ai"
+    },
+    {
+      "word": "its",
+      "start": 30.3564,
+      "end": 30.5164,
+      "scene": "ai"
+    },
+    {
+      "word": "budget",
+      "start": 30.5164,
+      "end": 30.8364,
+      "scene": "ai"
+    },
+    {
+      "word": "Then",
+      "start": 30.8364,
+      "end": 31.6364,
+      "scene": "ai"
+    },
+    {
+      "word": "review",
+      "start": 31.7764,
+      "end": 31.9764,
+      "scene": "ai"
+    },
+    {
+      "word": "taxonomy",
+      "start": 31.9764,
+      "end": 32.5564,
+      "scene": "ai"
+    },
+    {
+      "word": "and",
+      "start": 32.5564,
+      "end": 32.9564,
+      "scene": "ai"
+    },
+    {
+      "word": "classification",
+      "start": 32.9564,
+      "end": 33.6564,
+      "scene": "ai"
+    },
+    {
+      "word": "suggestions",
+      "start": 33.6564,
+      "end": 34.3764,
+      "scene": "ai"
+    },
+    {
+      "word": "Approve",
+      "start": 35.2764,
+      "end": 35.5964,
+      "scene": "ai"
+    },
+    {
+      "word": "suggestions",
+      "start": 35.5964,
+      "end": 36.0964,
+      "scene": "ai"
+    },
+    {
+      "word": "to",
+      "start": 36.0964,
+      "end": 36.4764,
+      "scene": "ai"
+    },
+    {
+      "word": "apply",
+      "start": 36.4764,
+      "end": 36.7164,
+      "scene": "ai"
+    },
+    {
+      "word": "them",
+      "start": 36.7164,
+      "end": 37.0964,
+      "scene": "ai"
+    },
+    {
+      "word": "Already",
+      "start": 39.2107,
+      "end": 39.4107,
+      "scene": "protected"
+    },
+    {
+      "word": "analyzed",
+      "start": 39.4107,
+      "end": 39.9107,
+      "scene": "protected"
+    },
+    {
+      "word": "repositories",
+      "start": 39.9107,
+      "end": 40.5707,
+      "scene": "protected"
+    },
+    {
+      "word": "stay",
+      "start": 40.5707,
+      "end": 40.9307,
+      "scene": "protected"
+    },
+    {
+      "word": "protected",
+      "start": 40.9307,
+      "end": 41.3107,
+      "scene": "protected"
+    },
+    {
+      "word": "from",
+      "start": 41.3107,
+      "end": 41.6507,
+      "scene": "protected"
+    },
+    {
+      "word": "repeated",
+      "start": 41.6507,
+      "end": 42.1107,
+      "scene": "protected"
+    },
+    {
+      "word": "AI",
+      "start": 42.1107,
+      "end": 42.5107,
+      "scene": "protected"
+    },
+    {
+      "word": "calls",
+      "start": 42.5107,
+      "end": 42.8507,
+      "scene": "protected"
+    },
+    {
+      "word": "You",
+      "start": 43.7107,
+      "end": 43.7307,
+      "scene": "protected"
+    },
+    {
+      "word": "can",
+      "start": 43.7307,
+      "end": 43.9707,
+      "scene": "protected"
+    },
+    {
+      "word": "explicitly",
+      "start": 43.9707,
+      "end": 44.5707,
+      "scene": "protected"
+    },
+    {
+      "word": "reanalyze",
+      "start": 44.5707,
+      "end": 45.2907,
+      "scene": "protected"
+    },
+    {
+      "word": "when",
+      "start": 45.2907,
+      "end": 45.5307,
+      "scene": "protected"
+    },
+    {
+      "word": "something",
+      "start": 45.5307,
+      "end": 45.9107,
+      "scene": "protected"
+    },
+    {
+      "word": "important",
+      "start": 45.9107,
+      "end": 46.3507,
+      "scene": "protected"
+    },
+    {
+      "word": "changes",
+      "start": 46.3507,
+      "end": 46.8307,
+      "scene": "protected"
+    },
+    {
+      "word": "Keep",
+      "start": 49.1,
+      "end": 49.14,
+      "scene": "manual"
+    },
+    {
+      "word": "control",
+      "start": 49.14,
+      "end": 49.54,
+      "scene": "manual"
+    },
+    {
+      "word": "with",
+      "start": 49.54,
+      "end": 49.88,
+      "scene": "manual"
+    },
+    {
+      "word": "manual",
+      "start": 49.88,
+      "end": 50.2,
+      "scene": "manual"
+    },
+    {
+      "word": "assignments",
+      "start": 50.2,
+      "end": 50.78,
+      "scene": "manual"
+    },
+    {
+      "word": "drag",
+      "start": 51.26,
+      "end": 51.44,
+      "scene": "manual"
+    },
+    {
+      "word": "and",
+      "start": 51.44,
+      "end": 51.62,
+      "scene": "manual"
+    },
+    {
+      "word": "drop",
+      "start": 51.62,
+      "end": 51.82,
+      "scene": "manual"
+    },
+    {
+      "word": "and",
+      "start": 51.96,
+      "end": 52.4,
+      "scene": "manual"
+    },
+    {
+      "word": "local",
+      "start": 52.4,
+      "end": 52.6,
+      "scene": "manual"
+    },
+    {
+      "word": "rules",
+      "start": 52.6,
+      "end": 53.0,
+      "scene": "manual"
+    },
+    {
+      "word": "In",
+      "start": 55.335,
+      "end": 55.635,
+      "scene": "appearance"
+    },
+    {
+      "word": "Appearance",
+      "start": 55.635,
+      "end": 56.075,
+      "scene": "appearance"
+    },
+    {
+      "word": "choose",
+      "start": 56.555,
+      "end": 56.635,
+      "scene": "appearance"
+    },
+    {
+      "word": "your",
+      "start": 56.635,
+      "end": 56.875,
+      "scene": "appearance"
+    },
+    {
+      "word": "favorite",
+      "start": 56.875,
+      "end": 57.235,
+      "scene": "appearance"
+    }
+  ],
+  "duration": 60,
+  "cedar_closing_repair": false,
+  "original_take_seconds": 49.5545,
+  "original_audio_seconds": 49.5545,
+  "measured_original_wpm": 130.8,
+  "transcript_match": 0.9722222222222222,
+  "timing_source": "whisper-1 word timestamps; Cedar closing repair uses its measured sentence envelope",
+  "speech_time_stretch": false
+}

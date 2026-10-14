@@ -1,0 +1,1173 @@
+{
+  "status": "PASS",
+  "paragraphs": 128,
+  "duration_seconds": 1451.64,
+  "decoded_playback_duration": 1451.64,
+  "caption_cues_loaded": 390,
+  "speech_time_stretch": false,
+  "normal_speed_actions": true,
+  "method": "Actual Whisper word timestamps, numeric/compound normalization, per-paragraph UI action/result clips and explicit reading holds. This is paragraph synchronization, not a claim that every control click lands on an exact word.",
+  "narration_repairs": {
+    "21-thresholds": {
+      "text": "Automatic organization is configurable. Weighted changes across distinct entities can trigger it. A configured number of new Projects can also trigger it, within the change window.",
+      "trim_start": 0,
+      "trim_end": 9.490000152587891,
+      "match": 1.0,
+      "reason": "Original ASR read \u201con weighted\u201d as \u201cunweighted\u201d; a new sentence beginning removes that ambiguity. No speech stretching."
+    }
+  },
+  "paragraph_checks": [
+    {
+      "beat": "01-welcome",
+      "scene_start": 0.0,
+      "scene_end": 10.44,
+      "first_spoken_word": 0.4,
+      "last_spoken_word": 9.38,
+      "words": 23,
+      "status": "PASS"
+    },
+    {
+      "beat": "01-signin",
+      "scene_start": 10.44,
+      "scene_end": 21.96,
+      "first_spoken_word": 11.34,
+      "last_spoken_word": 20.94,
+      "words": 21,
+      "status": "PASS"
+    },
+    {
+      "beat": "01-workspace",
+      "scene_start": 21.96,
+      "scene_end": 33.44,
+      "first_spoken_word": 22.83,
+      "last_spoken_word": 32.35,
+      "words": 23,
+      "status": "PASS"
+    },
+    {
+      "beat": "01-tour",
+      "scene_start": 33.44,
+      "scene_end": 43.96,
+      "first_spoken_word": 34.35,
+      "last_spoken_word": 42.91,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "02-sync",
+      "scene_start": 43.96,
+      "scene_end": 56.36,
+      "first_spoken_word": 44.85,
+      "last_spoken_word": 52.07,
+      "words": 19,
+      "status": "PASS"
+    },
+    {
+      "beat": "02-sources",
+      "scene_start": 56.36,
+      "scene_end": 68.84,
+      "first_spoken_word": 57.34,
+      "last_spoken_word": 67.84,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "02-candidates",
+      "scene_start": 68.84,
+      "scene_end": 79.84,
+      "first_spoken_word": 69.66,
+      "last_spoken_word": 78.7,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "02-coverage",
+      "scene_start": 79.84,
+      "scene_end": 91.24,
+      "first_spoken_word": 80.82,
+      "last_spoken_word": 89.94,
+      "words": 23,
+      "status": "PASS"
+    },
+    {
+      "beat": "03-filters",
+      "scene_start": 91.24,
+      "scene_end": 102.0,
+      "first_spoken_word": 92.37,
+      "last_spoken_word": 101.35,
+      "words": 24,
+      "status": "PASS"
+    },
+    {
+      "beat": "03-metrics",
+      "scene_start": 102.0,
+      "scene_end": 112.92,
+      "first_spoken_word": 102.49,
+      "last_spoken_word": 111.69,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "03-selected",
+      "scene_start": 112.92,
+      "scene_end": 123.76,
+      "first_spoken_word": 113.99,
+      "last_spoken_word": 122.77,
+      "words": 24,
+      "status": "PASS"
+    },
+    {
+      "beat": "03-pagination",
+      "scene_start": 123.76,
+      "scene_end": 134.16,
+      "first_spoken_word": 124.59,
+      "last_spoken_word": 133.43,
+      "words": 23,
+      "status": "PASS"
+    },
+    {
+      "beat": "04-activity",
+      "scene_start": 134.16,
+      "scene_end": 144.48,
+      "first_spoken_word": 134.56,
+      "last_spoken_word": 143.6223,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "04-bounded",
+      "scene_start": 144.48,
+      "scene_end": 154.28,
+      "first_spoken_word": 145.18,
+      "last_spoken_word": 153.34,
+      "words": 21,
+      "status": "PASS"
+    },
+    {
+      "beat": "04-private",
+      "scene_start": 154.28,
+      "scene_end": 164.6,
+      "first_spoken_word": 155.06,
+      "last_spoken_word": 163.86,
+      "words": 23,
+      "status": "PASS"
+    },
+    {
+      "beat": "04-transition",
+      "scene_start": 164.6,
+      "scene_end": 177.08,
+      "first_spoken_word": 165.16,
+      "last_spoken_word": 175.96,
+      "words": 27,
+      "status": "PASS"
+    },
+    {
+      "beat": "05-load",
+      "scene_start": 177.08,
+      "scene_end": 189.36,
+      "first_spoken_word": 178.02,
+      "last_spoken_word": 188.22,
+      "words": 24,
+      "status": "PASS"
+    },
+    {
+      "beat": "05-extract",
+      "scene_start": 189.36,
+      "scene_end": 201.32,
+      "first_spoken_word": 190.32,
+      "last_spoken_word": 200.2,
+      "words": 25,
+      "status": "PASS"
+    },
+    {
+      "beat": "05-details",
+      "scene_start": 201.32,
+      "scene_end": 212.92,
+      "first_spoken_word": 202.26,
+      "last_spoken_word": 211.82,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "05-privacy",
+      "scene_start": 212.92,
+      "scene_end": 224.2,
+      "first_spoken_word": 213.84,
+      "last_spoken_word": 223.14,
+      "words": 23,
+      "status": "PASS"
+    },
+    {
+      "beat": "06-counts",
+      "scene_start": 224.2,
+      "scene_end": 234.64,
+      "first_spoken_word": 225.11,
+      "last_spoken_word": 233.57,
+      "words": 23,
+      "status": "PASS"
+    },
+    {
+      "beat": "06-scope",
+      "scene_start": 234.64,
+      "scene_end": 245.88,
+      "first_spoken_word": 235.56,
+      "last_spoken_word": 245.04,
+      "words": 23,
+      "status": "PASS"
+    },
+    {
+      "beat": "06-mode",
+      "scene_start": 245.88,
+      "scene_end": 257.76,
+      "first_spoken_word": 246.55,
+      "last_spoken_word": 256.59,
+      "words": 27,
+      "status": "PASS"
+    },
+    {
+      "beat": "06-discover",
+      "scene_start": 257.76,
+      "scene_end": 268.44,
+      "first_spoken_word": 258.78,
+      "last_spoken_word": 267.72,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "07-review",
+      "scene_start": 268.44,
+      "scene_end": 281.6,
+      "first_spoken_word": 268.9344,
+      "last_spoken_word": 280.5144,
+      "words": 23,
+      "status": "PASS"
+    },
+    {
+      "beat": "07-save",
+      "scene_start": 281.6,
+      "scene_end": 293.56,
+      "first_spoken_word": 282.53,
+      "last_spoken_word": 292.59,
+      "words": 24,
+      "status": "PASS"
+    },
+    {
+      "beat": "07-publish",
+      "scene_start": 293.56,
+      "scene_end": 304.28,
+      "first_spoken_word": 294.37,
+      "last_spoken_word": 303.29,
+      "words": 21,
+      "status": "PASS"
+    },
+    {
+      "beat": "07-relationships",
+      "scene_start": 304.28,
+      "scene_end": 314.64,
+      "first_spoken_word": 305.12,
+      "last_spoken_word": 313.46,
+      "words": 21,
+      "status": "PASS"
+    },
+    {
+      "beat": "08-classify",
+      "scene_start": 314.64,
+      "scene_end": 326.92,
+      "first_spoken_word": 315.65,
+      "last_spoken_word": 325.71,
+      "words": 25,
+      "status": "PASS"
+    },
+    {
+      "beat": "08-run",
+      "scene_start": 326.92,
+      "scene_end": 337.4,
+      "first_spoken_word": 327.96,
+      "last_spoken_word": 336.42,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "08-accept",
+      "scene_start": 337.4,
+      "scene_end": 347.16,
+      "first_spoken_word": 338.21,
+      "last_spoken_word": 346.07,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "08-reject",
+      "scene_start": 347.16,
+      "scene_end": 359.12,
+      "first_spoken_word": 348.07,
+      "last_spoken_word": 358.09,
+      "words": 24,
+      "status": "PASS"
+    },
+    {
+      "beat": "09-group",
+      "scene_start": 359.12,
+      "scene_end": 371.52,
+      "first_spoken_word": 359.99,
+      "last_spoken_word": 370.29,
+      "words": 29,
+      "status": "PASS"
+    },
+    {
+      "beat": "09-select",
+      "scene_start": 371.52,
+      "scene_end": 382.2,
+      "first_spoken_word": 372.59,
+      "last_spoken_word": 380.87,
+      "words": 23,
+      "status": "PASS"
+    },
+    {
+      "beat": "09-bulk",
+      "scene_start": 382.2,
+      "scene_end": 393.52,
+      "first_spoken_word": 383.37,
+      "last_spoken_word": 392.55,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "09-coverage",
+      "scene_start": 393.52,
+      "scene_end": 404.16,
+      "first_spoken_word": 394.33,
+      "last_spoken_word": 403.45,
+      "words": 27,
+      "status": "PASS"
+    },
+    {
+      "beat": "10-receipt",
+      "scene_start": 404.16,
+      "scene_end": 414.4,
+      "first_spoken_word": 404.71,
+      "last_spoken_word": 413.33,
+      "words": 19,
+      "status": "PASS"
+    },
+    {
+      "beat": "10-repeat",
+      "scene_start": 414.4,
+      "scene_end": 427.6,
+      "first_spoken_word": 415.29,
+      "last_spoken_word": 426.63,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "10-status",
+      "scene_start": 427.6,
+      "scene_end": 438.36,
+      "first_spoken_word": 428.42,
+      "last_spoken_word": 437.14,
+      "words": 20,
+      "status": "PASS"
+    },
+    {
+      "beat": "10-freshness",
+      "scene_start": 438.36,
+      "scene_end": 450.72,
+      "first_spoken_word": 439.43,
+      "last_spoken_word": 449.59,
+      "words": 26,
+      "status": "PASS"
+    },
+    {
+      "beat": "11-switch",
+      "scene_start": 450.72,
+      "scene_end": 462.2,
+      "first_spoken_word": 451.67,
+      "last_spoken_word": 461.03,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "11-reason",
+      "scene_start": 462.2,
+      "scene_end": 472.8,
+      "first_spoken_word": 463.22,
+      "last_spoken_word": 471.72,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "11-taxonomy",
+      "scene_start": 472.8,
+      "scene_end": 485.0,
+      "first_spoken_word": 473.73,
+      "last_spoken_word": 484.13,
+      "words": 18,
+      "status": "PASS"
+    },
+    {
+      "beat": "11-cancel",
+      "scene_start": 485.0,
+      "scene_end": 496.0,
+      "first_spoken_word": 485.7,
+      "last_spoken_word": 494.96,
+      "words": 24,
+      "status": "PASS"
+    },
+    {
+      "beat": "12-projects",
+      "scene_start": 496.0,
+      "scene_end": 506.96,
+      "first_spoken_word": 496.86,
+      "last_spoken_word": 505.76,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "12-aliases",
+      "scene_start": 506.96,
+      "scene_end": 518.84,
+      "first_spoken_word": 508.01,
+      "last_spoken_word": 517.77,
+      "words": 26,
+      "status": "PASS"
+    },
+    {
+      "beat": "12-header",
+      "scene_start": 518.84,
+      "scene_end": 529.32,
+      "first_spoken_word": 519.74,
+      "last_spoken_word": 528.52,
+      "words": 24,
+      "status": "PASS"
+    },
+    {
+      "beat": "12-concept",
+      "scene_start": 529.32,
+      "scene_end": 540.32,
+      "first_spoken_word": 529.96,
+      "last_spoken_word": 539.62,
+      "words": 23,
+      "status": "PASS"
+    },
+    {
+      "beat": "13-single",
+      "scene_start": 540.32,
+      "scene_end": 552.48,
+      "first_spoken_word": 540.87,
+      "last_spoken_word": 551.31,
+      "words": 23,
+      "status": "PASS"
+    },
+    {
+      "beat": "13-multi",
+      "scene_start": 552.48,
+      "scene_end": 564.92,
+      "first_spoken_word": 553.48,
+      "last_spoken_word": 563.86,
+      "words": 25,
+      "status": "PASS"
+    },
+    {
+      "beat": "13-domain",
+      "scene_start": 564.92,
+      "scene_end": 576.44,
+      "first_spoken_word": 565.8,
+      "last_spoken_word": 575.5,
+      "words": 27,
+      "status": "PASS"
+    },
+    {
+      "beat": "13-headerdrop",
+      "scene_start": 576.44,
+      "scene_end": 588.92,
+      "first_spoken_word": 577.22,
+      "last_spoken_word": 588.02,
+      "words": 25,
+      "status": "PASS"
+    },
+    {
+      "beat": "14-bulkadd",
+      "scene_start": 588.92,
+      "scene_end": 599.68,
+      "first_spoken_word": 589.65,
+      "last_spoken_word": 598.45,
+      "words": 23,
+      "status": "PASS"
+    },
+    {
+      "beat": "14-details",
+      "scene_start": 599.68,
+      "scene_end": 611.32,
+      "first_spoken_word": 600.75,
+      "last_spoken_word": 610.23,
+      "words": 25,
+      "status": "PASS"
+    },
+    {
+      "beat": "14-remove",
+      "scene_start": 611.32,
+      "scene_end": 622.84,
+      "first_spoken_word": 612.24,
+      "last_spoken_word": 621.64,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "14-selection",
+      "scene_start": 622.84,
+      "scene_end": 634.04,
+      "first_spoken_word": 623.88,
+      "last_spoken_word": 632.82,
+      "words": 24,
+      "status": "PASS"
+    },
+    {
+      "beat": "15-create",
+      "scene_start": 634.04,
+      "scene_end": 646.28,
+      "first_spoken_word": 635.1,
+      "last_spoken_word": 645.22,
+      "words": 24,
+      "status": "PASS"
+    },
+    {
+      "beat": "15-edit",
+      "scene_start": 646.28,
+      "scene_end": 657.76,
+      "first_spoken_word": 647.19,
+      "last_spoken_word": 656.63,
+      "words": 23,
+      "status": "PASS"
+    },
+    {
+      "beat": "15-duplicate",
+      "scene_start": 657.76,
+      "scene_end": 667.84,
+      "first_spoken_word": 658.71,
+      "last_spoken_word": 666.71,
+      "words": 23,
+      "status": "PASS"
+    },
+    {
+      "beat": "15-reserved",
+      "scene_start": 667.84,
+      "scene_end": 679.96,
+      "first_spoken_word": 668.81,
+      "last_spoken_word": 679.25,
+      "words": 21,
+      "status": "PASS"
+    },
+    {
+      "beat": "16-merge",
+      "scene_start": 679.96,
+      "scene_end": 689.8,
+      "first_spoken_word": 680.51,
+      "last_spoken_word": 687.7699,
+      "words": 19,
+      "status": "PASS"
+    },
+    {
+      "beat": "16-distinct",
+      "scene_start": 689.8,
+      "scene_end": 698.64,
+      "first_spoken_word": 690.57,
+      "last_spoken_word": 697.37,
+      "words": 20,
+      "status": "PASS"
+    },
+    {
+      "beat": "16-archive",
+      "scene_start": 698.64,
+      "scene_end": 707.8,
+      "first_spoken_word": 699.73,
+      "last_spoken_word": 706.71,
+      "words": 17,
+      "status": "PASS"
+    },
+    {
+      "beat": "16-verify",
+      "scene_start": 707.8,
+      "scene_end": 719.44,
+      "first_spoken_word": 708.72,
+      "last_spoken_word": 718.54,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "17-conflicts",
+      "scene_start": 719.44,
+      "scene_end": 734.4,
+      "first_spoken_word": 720.16,
+      "last_spoken_word": 733.34,
+      "words": 35,
+      "status": "PASS"
+    },
+    {
+      "beat": "17-reuse",
+      "scene_start": 734.4,
+      "scene_end": 744.72,
+      "first_spoken_word": 735.29,
+      "last_spoken_word": 743.65,
+      "words": 21,
+      "status": "PASS"
+    },
+    {
+      "beat": "17-undo",
+      "scene_start": 744.72,
+      "scene_end": 756.16,
+      "first_spoken_word": 745.63,
+      "last_spoken_word": 755.11,
+      "words": 26,
+      "status": "PASS"
+    },
+    {
+      "beat": "17-repair",
+      "scene_start": 756.16,
+      "scene_end": 767.48,
+      "first_spoken_word": 757.06,
+      "last_spoken_word": 766.38,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "18-rule",
+      "scene_start": 767.48,
+      "scene_end": 776.84,
+      "first_spoken_word": 768.41,
+      "last_spoken_word": 775.83,
+      "words": 19,
+      "status": "PASS"
+    },
+    {
+      "beat": "18-approve",
+      "scene_start": 776.84,
+      "scene_end": 787.64,
+      "first_spoken_word": 777.7,
+      "last_spoken_word": 786.72,
+      "words": 23,
+      "status": "PASS"
+    },
+    {
+      "beat": "18-incremental",
+      "scene_start": 787.64,
+      "scene_end": 798.08,
+      "first_spoken_word": 788.38,
+      "last_spoken_word": 796.92,
+      "words": 19,
+      "status": "PASS"
+    },
+    {
+      "beat": "18-full",
+      "scene_start": 798.08,
+      "scene_end": 809.36,
+      "first_spoken_word": 799.06,
+      "last_spoken_word": 808.64,
+      "words": 24,
+      "status": "PASS"
+    },
+    {
+      "beat": "19-usage",
+      "scene_start": 809.36,
+      "scene_end": 821.88,
+      "first_spoken_word": 809.76,
+      "last_spoken_word": 820.8,
+      "words": 25,
+      "status": "PASS"
+    },
+    {
+      "beat": "19-renew",
+      "scene_start": 821.88,
+      "scene_end": 831.84,
+      "first_spoken_word": 822.8,
+      "last_spoken_word": 830.86,
+      "words": 24,
+      "status": "PASS"
+    },
+    {
+      "beat": "19-override",
+      "scene_start": 831.84,
+      "scene_end": 843.28,
+      "first_spoken_word": 832.67,
+      "last_spoken_word": 842.27,
+      "words": 24,
+      "status": "PASS"
+    },
+    {
+      "beat": "19-money",
+      "scene_start": 843.28,
+      "scene_end": 855.0,
+      "first_spoken_word": 844.11,
+      "last_spoken_word": 853.97,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "20-adaptive",
+      "scene_start": 855.0,
+      "scene_end": 865.4,
+      "first_spoken_word": 855.86,
+      "last_spoken_word": 864.34,
+      "words": 26,
+      "status": "PASS"
+    },
+    {
+      "beat": "20-bound",
+      "scene_start": 865.4,
+      "scene_end": 877.24,
+      "first_spoken_word": 866.29,
+      "last_spoken_word": 876.13,
+      "words": 25,
+      "status": "PASS"
+    },
+    {
+      "beat": "20-defaults",
+      "scene_start": 877.24,
+      "scene_end": 886.12,
+      "first_spoken_word": 878.17,
+      "last_spoken_word": 885.05,
+      "words": 18,
+      "status": "PASS"
+    },
+    {
+      "beat": "20-local",
+      "scene_start": 886.12,
+      "scene_end": 898.44,
+      "first_spoken_word": 887.02,
+      "last_spoken_word": 897.44,
+      "words": 24,
+      "status": "PASS"
+    },
+    {
+      "beat": "21-thresholds",
+      "scene_start": 898.44,
+      "scene_end": 908.88,
+      "first_spoken_word": 898.84,
+      "last_spoken_word": 908.18,
+      "words": 26,
+      "status": "PASS"
+    },
+    {
+      "beat": "21-types",
+      "scene_start": 908.88,
+      "scene_end": 918.64,
+      "first_spoken_word": 909.66,
+      "last_spoken_word": 917.72,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "21-scheduler",
+      "scene_start": 918.64,
+      "scene_end": 931.24,
+      "first_spoken_word": 919.38,
+      "last_spoken_word": 928.4,
+      "words": 26,
+      "status": "PASS"
+    },
+    {
+      "beat": "21-automatic",
+      "scene_start": 931.24,
+      "scene_end": 942.68,
+      "first_spoken_word": 932.05,
+      "last_spoken_word": 941.95,
+      "words": 24,
+      "status": "PASS"
+    },
+    {
+      "beat": "22-appearance",
+      "scene_start": 942.68,
+      "scene_end": 955.32,
+      "first_spoken_word": 943.23,
+      "last_spoken_word": 953.53,
+      "words": 27,
+      "status": "PASS"
+    },
+    {
+      "beat": "22-aura",
+      "scene_start": 955.32,
+      "scene_end": 967.96,
+      "first_spoken_word": 956.43,
+      "last_spoken_word": 965.39,
+      "words": 26,
+      "status": "PASS"
+    },
+    {
+      "beat": "22-pause",
+      "scene_start": 967.96,
+      "scene_end": 977.72,
+      "first_spoken_word": 969.02,
+      "last_spoken_word": 976.46,
+      "words": 20,
+      "status": "PASS"
+    },
+    {
+      "beat": "22-restore",
+      "scene_start": 977.72,
+      "scene_end": 989.84,
+      "first_spoken_word": 978.8,
+      "last_spoken_word": 988.8,
+      "words": 23,
+      "status": "PASS"
+    },
+    {
+      "beat": "23-phone",
+      "scene_start": 989.84,
+      "scene_end": 999.36,
+      "first_spoken_word": 990.705,
+      "last_spoken_word": 998.355,
+      "words": 21,
+      "status": "PASS"
+    },
+    {
+      "beat": "23-drawer",
+      "scene_start": 999.36,
+      "scene_end": 1009.4,
+      "first_spoken_word": 1000.21,
+      "last_spoken_word": 1008.41,
+      "words": 25,
+      "status": "PASS"
+    },
+    {
+      "beat": "23-keyboard",
+      "scene_start": 1009.4,
+      "scene_end": 1020.88,
+      "first_spoken_word": 1010.21,
+      "last_spoken_word": 1019.91,
+      "words": 23,
+      "status": "PASS"
+    },
+    {
+      "beat": "23-responsive",
+      "scene_start": 1020.88,
+      "scene_end": 1030.88,
+      "first_spoken_word": 1021.67,
+      "last_spoken_word": 1029.71,
+      "words": 19,
+      "status": "PASS"
+    },
+    {
+      "beat": "24-reload",
+      "scene_start": 1030.88,
+      "scene_end": 1042.8,
+      "first_spoken_word": 1031.87,
+      "last_spoken_word": 1041.65,
+      "words": 23,
+      "status": "PASS"
+    },
+    {
+      "beat": "24-signout",
+      "scene_start": 1042.8,
+      "scene_end": 1056.68,
+      "first_spoken_word": 1043.77,
+      "last_spoken_word": 1055.53,
+      "words": 27,
+      "status": "PASS"
+    },
+    {
+      "beat": "24-restart",
+      "scene_start": 1056.68,
+      "scene_end": 1068.4,
+      "first_spoken_word": 1057.68,
+      "last_spoken_word": 1067.2,
+      "words": 24,
+      "status": "PASS"
+    },
+    {
+      "beat": "24-recover",
+      "scene_start": 1068.4,
+      "scene_end": 1078.96,
+      "first_spoken_word": 1069.45,
+      "last_spoken_word": 1078.23,
+      "words": 25,
+      "status": "PASS"
+    },
+    {
+      "beat": "25-rediscover",
+      "scene_start": 1078.96,
+      "scene_end": 1091.6,
+      "first_spoken_word": 1079.36,
+      "last_spoken_word": 1090.4811,
+      "words": 23,
+      "status": "PASS"
+    },
+    {
+      "beat": "25-draft",
+      "scene_start": 1091.6,
+      "scene_end": 1104.88,
+      "first_spoken_word": 1092.55,
+      "last_spoken_word": 1104.05,
+      "words": 25,
+      "status": "PASS"
+    },
+    {
+      "beat": "25-rejectdraft",
+      "scene_start": 1104.88,
+      "scene_end": 1116.4,
+      "first_spoken_word": 1105.56,
+      "last_spoken_word": 1115.3,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "25-separate",
+      "scene_start": 1116.4,
+      "scene_end": 1130.56,
+      "first_spoken_word": 1117.35,
+      "last_spoken_word": 1129.73,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "26-scope",
+      "scene_start": 1130.56,
+      "scene_end": 1142.32,
+      "first_spoken_word": 1131.24,
+      "last_spoken_word": 1141.4,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "26-impact",
+      "scene_start": 1142.32,
+      "scene_end": 1153.64,
+      "first_spoken_word": 1143.07,
+      "last_spoken_word": 1152.55,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "26-confirm",
+      "scene_start": 1153.64,
+      "scene_end": 1163.36,
+      "first_spoken_word": 1154.56,
+      "last_spoken_word": 1162.28,
+      "words": 19,
+      "status": "PASS"
+    },
+    {
+      "beat": "26-safe",
+      "scene_start": 1163.36,
+      "scene_end": 1175.2,
+      "first_spoken_word": 1164.28,
+      "last_spoken_word": 1174.2,
+      "words": 24,
+      "status": "PASS"
+    },
+    {
+      "beat": "27-witness",
+      "scene_start": 1175.2,
+      "scene_end": 1187.44,
+      "first_spoken_word": 1176.03,
+      "last_spoken_word": 1186.61,
+      "words": 25,
+      "status": "PASS"
+    },
+    {
+      "beat": "27-execute",
+      "scene_start": 1187.44,
+      "scene_end": 1197.4,
+      "first_spoken_word": 1188.12,
+      "last_spoken_word": 1196.3,
+      "words": 18,
+      "status": "PASS"
+    },
+    {
+      "beat": "27-preserve",
+      "scene_start": 1197.4,
+      "scene_end": 1209.36,
+      "first_spoken_word": 1198.32,
+      "last_spoken_word": 1208.2,
+      "words": 19,
+      "status": "PASS"
+    },
+    {
+      "beat": "27-restartdraft",
+      "scene_start": 1209.36,
+      "scene_end": 1221.88,
+      "first_spoken_word": 1210.36,
+      "last_spoken_word": 1221.18,
+      "words": 26,
+      "status": "PASS"
+    },
+    {
+      "beat": "28-domainreset",
+      "scene_start": 1221.88,
+      "scene_end": 1233.44,
+      "first_spoken_word": 1222.3142,
+      "last_spoken_word": 1232.2542,
+      "words": 24,
+      "status": "PASS"
+    },
+    {
+      "beat": "28-depend",
+      "scene_start": 1233.44,
+      "scene_end": 1244.0,
+      "first_spoken_word": 1234.44,
+      "last_spoken_word": 1243.14,
+      "words": 21,
+      "status": "PASS"
+    },
+    {
+      "beat": "28-projects",
+      "scene_start": 1244.0,
+      "scene_end": 1254.68,
+      "first_spoken_word": 1244.68,
+      "last_spoken_word": 1253.46,
+      "words": 19,
+      "status": "PASS"
+    },
+    {
+      "beat": "28-scoped",
+      "scene_start": 1254.68,
+      "scene_end": 1264.56,
+      "first_spoken_word": 1255.74,
+      "last_spoken_word": 1263.54,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "29-fullreset",
+      "scene_start": 1264.56,
+      "scene_end": 1276.72,
+      "first_spoken_word": 1265.43,
+      "last_spoken_word": 1275.57,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "29-verifyreset",
+      "scene_start": 1276.72,
+      "scene_end": 1289.28,
+      "first_spoken_word": 1277.72,
+      "last_spoken_word": 1288.1,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "29-rebuild",
+      "scene_start": 1289.28,
+      "scene_end": 1300.6,
+      "first_spoken_word": 1290.31,
+      "last_spoken_word": 1298.93,
+      "words": 21,
+      "status": "PASS"
+    },
+    {
+      "beat": "29-norepeat",
+      "scene_start": 1300.6,
+      "scene_end": 1314.16,
+      "first_spoken_word": 1301.38,
+      "last_spoken_word": 1312.9,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "30-history",
+      "scene_start": 1314.16,
+      "scene_end": 1325.76,
+      "first_spoken_word": 1315.24,
+      "last_spoken_word": 1324.72,
+      "words": 26,
+      "status": "PASS"
+    },
+    {
+      "beat": "30-nomatch",
+      "scene_start": 1325.76,
+      "scene_end": 1337.32,
+      "first_spoken_word": 1326.64,
+      "last_spoken_word": 1336.3,
+      "words": 25,
+      "status": "PASS"
+    },
+    {
+      "beat": "30-cachemiss",
+      "scene_start": 1337.32,
+      "scene_end": 1348.08,
+      "first_spoken_word": 1338.16,
+      "last_spoken_word": 1346.98,
+      "words": 24,
+      "status": "PASS"
+    },
+    {
+      "beat": "30-provenance",
+      "scene_start": 1348.08,
+      "scene_end": 1359.04,
+      "first_spoken_word": 1349.01,
+      "last_spoken_word": 1358.33,
+      "words": 23,
+      "status": "PASS"
+    },
+    {
+      "beat": "31-evidence",
+      "scene_start": 1359.04,
+      "scene_end": 1372.4,
+      "first_spoken_word": 1359.44,
+      "last_spoken_word": 1371.3916,
+      "words": 24,
+      "status": "PASS"
+    },
+    {
+      "beat": "31-preservation",
+      "scene_start": 1372.4,
+      "scene_end": 1383.08,
+      "first_spoken_word": 1373.24,
+      "last_spoken_word": 1382.22,
+      "words": 23,
+      "status": "PASS"
+    },
+    {
+      "beat": "31-cloud",
+      "scene_start": 1383.08,
+      "scene_end": 1394.84,
+      "first_spoken_word": 1383.76,
+      "last_spoken_word": 1393.78,
+      "words": 20,
+      "status": "PASS"
+    },
+    {
+      "beat": "31-limits",
+      "scene_start": 1394.84,
+      "scene_end": 1406.72,
+      "first_spoken_word": 1395.72,
+      "last_spoken_word": 1405.68,
+      "words": 24,
+      "status": "PASS"
+    },
+    {
+      "beat": "32-sequence",
+      "scene_start": 1406.72,
+      "scene_end": 1418.44,
+      "first_spoken_word": 1407.59,
+      "last_spoken_word": 1417.59,
+      "words": 22,
+      "status": "PASS"
+    },
+    {
+      "beat": "32-reviewagain",
+      "scene_start": 1418.44,
+      "scene_end": 1430.6,
+      "first_spoken_word": 1419.12,
+      "last_spoken_word": 1429.62,
+      "words": 25,
+      "status": "PASS"
+    },
+    {
+      "beat": "32-advanced",
+      "scene_start": 1430.6,
+      "scene_end": 1440.16,
+      "first_spoken_word": 1431.4,
+      "last_spoken_word": 1439.3,
+      "words": 19,
+      "status": "PASS"
+    },
+    {
+      "beat": "32-close",
+      "scene_start": 1440.16,
+      "scene_end": 1451.64,
+      "first_spoken_word": 1440.85,
+      "last_spoken_word": 1450.93,
+      "words": 24,
+      "status": "PASS"
+    }
+  ]
+}

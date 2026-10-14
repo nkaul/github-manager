@@ -1,0 +1,36 @@
+[project]
+name = "github-manager-backend"
+version = "0.0.1"
+description = "GitHub Manager Phase 0 localhost access preflight"
+requires-python = ">=3.12,<3.15"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "httpx>=0.28,<1",
+  "pydantic-settings>=2.8,<3",
+  "uvicorn>=0.34,<1",
+  "boto3>=1.40,<2",
+  "botocore[crt]>=1.40,<2",
+]
+
+[dependency-groups]
+ai-pretest = [
+    "langchain-core>=1.6.9",
+    "langchain-openai>=1.7.0",
+    "markdown-it-py>=4.2.0",
+    "rake-nltk>=1.0.6",
+    "rank-bm25>=0.2.2",
+]
+dev = ["pytest>=8.3,<10", "ruff>=0.11,<1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = ["live: uses explicitly configured live services"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
