@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "historical_media_changed": [],
+  "database_tables": {
+    "app:workspace": {
+      "rows": 2,
+      "identical": true
+    },
+    "app:jobs": {
+      "rows": 37,
+      "identical": true
+    },
+    "app:previews": {
+      "rows": 1,
+      "identical": true
+    },
+    "app:run_previews": {
+      "rows": 12,
+      "identical": true
+    },
+    "ledger:experiment": {
+      "rows": 1,
+      "identical": true
+    },
+    "ledger:calls": {
+      "rows": 91,
+      "identical": true
+    },
+    "ledger:cache": {
+      "rows": 86,
+      "identical": true
+    },
+    "ledger:phase09_authorization": {
+      "rows": 1,
+      "identical": true
+    },
+    "ledger:phase09_http": {
+      "rows": 114,
+      "identical": true
+    },
+    "ledger:sqlite_sequence": {
+      "rows": 1,
+      "identical": true
+    },
+    "ledger:phase09_allowance_control": {
+      "rows": 1,
+      "identical": true
+    },
+    "ledger:phase09_allowance_audit": {
+      "rows": 7,
+      "identical": true
+    },
+    "ledger:app_run_budgets": {
+      "rows": 2,
+      "identical": true
+    },
+    "ledger:app_call_prices": {
+      "rows": 27,
+      "identical": true
+    },
+    "ledger:app_http_scope": {
+      "rows": 54,
+      "identical": true
+    }
+  },
+  "historical_guide_body_identical": true,
+  "guide_addition": "October 13 new Marin/Cedar previews section only"
+}

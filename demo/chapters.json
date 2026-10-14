@@ -1,0 +1,262 @@
+[
+  {
+    "id": "01",
+    "title": "Start here: the workflow",
+    "source": "REAL APP \u00b7 authenticated GitHub session",
+    "narration": "Welcome to GitHub Manager. This walkthrough shows the complete local workflow, one step at a time. First, connect and sync your GitHub account. Then inspect repositories, build and approve a taxonomy, review AI suggestions, and organize your work manually or with rules. We finish with persistence and safe reset tests. The screen is recorded at full HD. You signed in before recording, so no password or authorization screen is included.",
+    "start": 0.0,
+    "end": 31.64,
+    "duration": 31.64,
+    "wait_removed_seconds": 0.0
+  },
+  {
+    "id": "02",
+    "title": "Sync your real GitHub inventory",
+    "source": "LIVE GITHUB \u00b7 read-only inventory",
+    "narration": "Start in My GitHub workspace. Click Sync GitHub and wait for the run to finish. Synchronization imports repository relationships and metadata independently of AI organization. It does not send repository content to a language model. The source coverage section explains what GitHub returned and whether a source is partial or unavailable. Private repository names are masked in this recording. Their presence can still be checked locally without disclosing their names in the video.",
+    "start": 31.64,
+    "end": 63.2,
+    "duration": 31.56,
+    "wait_removed_seconds": 0.0
+  },
+  {
+    "id": "03",
+    "title": "Explore, search and filter",
+    "source": "LIVE GITHUB \u00b7 private names masked",
+    "narration": "My Repos, Favorites and Access candidates answer different questions. My Repos contains your eligible or explicitly included work. Favorites reflects observed star and watch relationships. Access candidates shows repositories the account can access. Use search and the language or visibility filters to narrow the list. Open details for metadata and memberships. Private details show that AI evidence is blocked. A repository does not become your project just because it is publicly readable.",
+    "start": 63.2,
+    "end": 97.24,
+    "duration": 34.04,
+    "wait_removed_seconds": 0.0
+  },
+  {
+    "id": "04",
+    "title": "Latest Work and honest coverage",
+    "source": "LIVE GITHUB \u00b7 bounded contribution observation",
+    "narration": "Latest Work shows your own dated contributions. Change the window between seven, fourteen, thirty and ninety days. This view uses the signed-in numeric GitHub identity and contribution timestamps, rather than another person's push date. Empty results are valid when no supported activity was observed. Check the activity coverage message as well. This is a bounded contribution view, so partial or unavailable GitHub coverage must not be mistaken for a complete history.",
+    "start": 97.24,
+    "end": 129.52,
+    "duration": 32.28,
+    "wait_removed_seconds": 0.0
+  },
+  {
+    "id": "05",
+    "title": "Switch to an isolated test workspace",
+    "source": "ISOLATED APP \u00b7 explicit test identity",
+    "narration": "For the remaining feature and reset tests, we switch to a disposable local application database and an explicitly labeled test identity. The user interface, authentication controls, persistence, organization services and reset logic are the actual application. The GitHub account and inventory in this isolated segment are fixtures. New AI classification uses the real configured OpenAI provider; cached taxonomy is labeled reused. This separation protects the working GitHub workspace while we exercise destructive controls.",
+    "start": 129.52,
+    "end": 167.24,
+    "duration": 37.72,
+    "wait_removed_seconds": 0.0
+  },
+  {
+    "id": "06",
+    "title": "Load public and synthetic samples",
+    "source": "APP SAMPLES \u00b7 public FastAPI + synthetic Orion",
+    "narration": "Choose Public plus synthetic demo in the workspace selector, then Load demo samples. The collection has one approved public FastAPI sample and two clearly labeled synthetic Orion repositories. It is separate from My Repos and Favorites. Opening those relationship views does not pretend the samples belong to the signed-in account. Return to Demo samples for the tutorial. These three examples are small enough to understand and keep model use within the approved request limit.",
+    "start": 167.24,
+    "end": 198.76,
+    "duration": 31.52,
+    "wait_removed_seconds": 0.0
+  },
+  {
+    "id": "07",
+    "title": "Inspect reusable evidence",
+    "source": "LOCAL EXTRACTION \u00b7 zero model calls",
+    "narration": "Open AI Organizer and run Extract evidence. Extraction builds a versioned local evidence profile without a language model call. Back in repository details, inspect the phrases and supporting sections. These are the compact inputs used by taxonomy discovery and classification. The application default uses RAKE and TF IDF. Earlier BM25 and YAKE benchmarking remains available separately. Missing source content is reported; private README content is excluded from the model path.",
+    "start": 198.76,
+    "end": 233.44,
+    "duration": 34.68,
+    "wait_removed_seconds": 0.0
+  },
+  {
+    "id": "08",
+    "title": "Discover taxonomy using validated cache",
+    "source": "CACHED REAL AI \u00b7 REPLAY provenance",
+    "narration": "In AI Organizer, keep Reuse validated cached AI selected and click Discover taxonomy. A successful matching cache returns the earlier validated real model result without new OpenAI requests. The draft is clearly labeled reused. A cache miss produces an explicit error and does not silently spend money. Discovery proposes vocabulary; it does not publish concepts or assign repositories. The review step is where you decide which concepts belong in your workspace.",
+    "start": 233.44,
+    "end": 266.96,
+    "duration": 33.52,
+    "wait_removed_seconds": 0.0
+  },
+  {
+    "id": "09",
+    "title": "Review and save the draft",
+    "source": "HUMAN REVIEW \u00b7 unpublished proposal",
+    "narration": "Open Review draft. A domain is a broad area, a project groups related repositories, a topic describes purpose, and a tag captures a useful technology or attribute. Edit a description or alias and save the draft. You can exclude unwanted proposals with their checkboxes. Projects need a parent domain. Equivalent names should become aliases of one canonical concept. Saving a draft preserves your edits while leaving the published registry unchanged.",
+    "start": 266.96,
+    "end": 298.96,
+    "duration": 32.0,
+    "wait_removed_seconds": 0.0
+  },
+  {
+    "id": "10",
+    "title": "Approve and publish taxonomy",
+    "source": "HUMAN APPROVAL \u00b7 atomic taxonomy revision",
+    "narration": "Reopen the saved draft and click Approve and publish taxonomy. Publication is an explicit human decision and changes the canonical taxonomy in one revision. The sidebar now exposes the accepted project structure. Stable concept identifiers let names change later without breaking memberships. Publication alone does not classify repositories or accept AI assignments. You can inspect the four concept types in Content settings before starting classification.",
+    "start": 298.96,
+    "end": 331.36,
+    "duration": 32.4,
+    "wait_removed_seconds": 0.0
+  },
+  {
+    "id": "11",
+    "title": "Run real AI classification once",
+    "source": "LIVE OPENAI \u00b7 approved public/synthetic inputs",
+    "narration": "Select the three sample repositories and open AI Organizer. Choose Live AI, then Full classification. This is fresh model inference through the application's LangChain layer, not fixture output or cached replay. Watch the persisted progress and final run outcomes. Three classifications normally require six HTTP requests because each generation has a token count request. The existing global request and five dollar spending caps remain enforced. No private repository content is included.",
+    "start": 331.36,
+    "end": 366.72,
+    "duration": 35.36,
+    "wait_removed_seconds": 0.0
+  },
+  {
+    "id": "12",
+    "title": "Accept and reject suggestions",
+    "source": "HUMAN DECISIONS \u00b7 protected USER mappings",
+    "narration": "Review each suggestion's concept, reason and supporting evidence. Accept a useful project suggestion and reject another suggestion. Acceptance turns the mapping into a protected USER decision. Rejection records a protected decision against automatic recreation. Pending suggestions do not count as accepted project organization, and a topic or tag alone does not remove a repository from Uncategorized. Model confidence is not calibrated, so evidence and your judgment remain essential.",
+    "start": 366.72,
+    "end": 400.56,
+    "duration": 33.84,
+    "wait_removed_seconds": 0.0
+  },
+  {
+    "id": "13",
+    "title": "Bulk assignment and multiple memberships",
+    "source": "MANUAL ORGANIZATION \u00b7 zero model calls",
+    "narration": "Now organize without AI. Create a second project, select the Orion repositories, choose that project in the bulk toolbar and add membership. Drag one repository onto another project to add an additional membership. Open its details and remove only one project. The other membership must remain. Manual controls support multiple projects, topics and tags. This test also shows that organization remains usable when model access is unavailable or the request allowance is exhausted.",
+    "start": 400.56,
+    "end": 434.8,
+    "duration": 34.24,
+    "wait_removed_seconds": 0.0
+  },
+  {
+    "id": "14",
+    "title": "Create domains and projects",
+    "source": "CONTENT MANAGEMENT \u00b7 canonical registry",
+    "narration": "Content settings is where you maintain the vocabulary. Create a temporary domain, then create a project and select that domain as its parent. Add a clear description and optional aliases. The domain appears in project navigation, while the project can receive repository memberships. Domains are derived through project membership in this local demo. Create only concepts that have a distinct purpose; excessive duplicates make classification less useful.",
+    "start": 434.8,
+    "end": 466.16,
+    "duration": 31.36,
+    "wait_removed_seconds": 0.0
+  },
+  {
+    "id": "15",
+    "title": "Rename, aliases and duplicate validation",
+    "source": "CONTENT MANAGEMENT \u00b7 stable IDs and validation",
+    "narration": "Edit the temporary project, rename it, and add an alias. Its identifier stays the same, so existing relationships can survive a rename. Move it to another parent domain if needed. Next, try creating another project with a conflicting normalized name or alias. The server rejects the conflict clearly and atomically. Close the invalid form without saving. This demonstrates that canonical naming is enforced by the backend rather than only by browser controls.",
+    "start": 466.16,
+    "end": 498.84,
+    "duration": 32.68,
+    "wait_removed_seconds": 0.0
+  },
+  {
+    "id": "16",
+    "title": "Merge and archive safely",
+    "source": "CONTENT MANAGEMENT \u00b7 dependency handling",
+    "narration": "Create a temporary equivalent project and merge it into the retained project. The target keeps its identity; memberships and aliases are reconciled. Next archive the temporary domain. The confirmation explains that surviving projects move to protected Unassigned rather than disappearing. Archiving a concept removes its dependent active memberships while retaining name reservations against accidental recreation. Inspect the result after each operation instead of assuming an archive and a merge have identical effects.",
+    "start": 498.84,
+    "end": 533.64,
+    "duration": 34.8,
+    "wait_removed_seconds": 0.0
+  },
+  {
+    "id": "17",
+    "title": "Preview and approve a rule",
+    "source": "LOCAL RULES \u00b7 zero model calls",
+    "narration": "Create an organization rule with a simple supported metadata condition. Here we match the Python language and assign a temporary tag. Click Preview matches first and inspect the repository count. Only then approve the rule. Preview does not apply assignments by itself. Rules can use local accessible private metadata without sending it to a model. They remain subordinate to protected USER mappings and rejection decisions.",
+    "start": 533.64,
+    "end": 562.32,
+    "duration": 28.68,
+    "wait_removed_seconds": 0.0
+  },
+  {
+    "id": "18",
+    "title": "Incremental and full reorganization",
+    "source": "RULES ONLY \u00b7 persisted runs, no paid inference",
+    "narration": "Choose Rules only in AI Organizer. Run Reorganize incremental, then Full classification. Both controls operate against the current taxonomy and record processed, failed and per-repository outcomes. In this local adapter, incremental reconciliation currently visits the selected cohort; production delta indexing is deferred. Inspect Run history for the actual result. The rule-created tag is visible in details, while existing manual mappings remain intact. These runs make no OpenAI calls.",
+    "start": 562.32,
+    "end": 598.04,
+    "duration": 35.72,
+    "wait_removed_seconds": 0.0
+  },
+  {
+    "id": "19",
+    "title": "Rediscovery remains a proposal",
+    "source": "CACHED REAL AI \u00b7 no automatic publication",
+    "narration": "Switch back to Reuse validated cached AI and choose Rediscover taxonomy. It creates another reviewable draft. It does not silently replace your published names, projects or manual memberships. Open the proposal, inspect its reused provenance, then reject the draft for this test. The active taxonomy must remain unchanged. Use rediscovery when the vocabulary itself needs reconsideration; use classification when you want assignments against the current vocabulary.",
+    "start": 598.04,
+    "end": 631.0,
+    "duration": 32.96,
+    "wait_removed_seconds": 0.0
+  },
+  {
+    "id": "20",
+    "title": "Automatic organization and real debounce",
+    "source": "REAL SCHEDULER \u00b7 explicitly labeled fixture AI",
+    "narration": "Automatic organization is optional and off by default. Enable it, then create two distinct projects to meet the significant-change threshold. The real scheduler waits for ninety seconds without further edits and respects a thirty minute cooldown. Most of that wait is cut from this recording; the test uses the real interval. This scheduler test uses explicitly labeled fixture AI to conserve the remaining request allowance. Inspect the AUTO run, confirm protected decisions remain, then disable automatic organization before further editing or resets.",
+    "start": 631.0,
+    "end": 668.0,
+    "duration": 37.0,
+    "wait_removed_seconds": 81.14
+  },
+  {
+    "id": "21",
+    "title": "Reload, logout and backend restart",
+    "source": "PERSISTENCE TEST \u00b7 isolated database retained",
+    "narration": "Reload the browser and verify the sample inventory and organization remain. Sign out, sign back into the isolated test account, and select the sample collection again. Next restart only the isolated recording backend. The database remains, but the in-memory login session does not. Sign in again and verify the same taxonomy and manual memberships are still present. Interrupted inference must be disclosed rather than silently repeated. Your normal application backend is not restarted by this test.",
+    "start": 668.0,
+    "end": 702.36,
+    "duration": 34.36,
+    "wait_removed_seconds": 0.0
+  },
+  {
+    "id": "22",
+    "title": "Labeled sample activity",
+    "source": "SYNTHETIC ACTIVITY \u00b7 fixture, not live evidence",
+    "narration": "Open Latest Work in the sample collection. Synthetic Orion activity is explicitly labeled as a fixture. Change the date window and inspect the results. This is a repeatable test of the activity interface and filtering, not evidence of a real GitHub contribution. The earlier live GitHub segment showed the actual account observation. Keeping those sources separate makes the walkthrough useful without inventing real activity when the upstream account has none.",
+    "start": 702.36,
+    "end": 732.44,
+    "duration": 30.08,
+    "wait_removed_seconds": 0.0
+  },
+  {
+    "id": "23",
+    "title": "AI-only reset and cached restart",
+    "source": "SAFE RESET \u00b7 isolated samples only",
+    "narration": "Open Preview reset and leave user taxonomy and rules unselected. Select the desired AI state and cached rediscovery after cleanup. Inspect the server-verified impact counts. A trailing space after DELETE is not accepted; enter the exact word to enable confirmation. After reset, wait for Cleanup verified. The accepted manual project mapping and protected rejection must survive, along with repository metadata and published taxonomy. Cached restart creates a new proposal only. The historical readiness reports and API ledger are outside reset.",
+    "start": 732.44,
+    "end": 771.48,
+    "duration": 39.04,
+    "wait_removed_seconds": 0.0
+  },
+  {
+    "id": "24",
+    "title": "Partial taxonomy reset",
+    "source": "SAFE RESET \u00b7 domain dependencies",
+    "narration": "For a partial reset, clear the AI checkboxes and select only Domains under user taxonomy. Preview the exact impact and confirm in the isolated collection. Surviving projects move to protected Unassigned. The selected domain content is removed, while unrelated topics, tags, repository metadata and surviving project identities remain. This illustrates why you should preview each reset scope rather than treating every reset as a complete workspace deletion.",
+    "start": 771.48,
+    "end": 804.12,
+    "duration": 32.64,
+    "wait_removed_seconds": 0.0
+  },
+  {
+    "id": "25",
+    "title": "Full taxonomy reset and rebuild",
+    "source": "SAFE RESET \u00b7 new epoch, cached draft",
+    "narration": "Finally select all user taxonomy kinds, organization rules and the desired AI state. Review a fresh impact preview, type DELETE and wait for verified cleanup. Full taxonomy reset starts at revision zero in a new epoch; repository metadata remains. Request cached discovery to rebuild a reviewable draft, then publish it. New concepts have new identifiers, so old classification results cannot be blindly replayed. Use manual assignments or rules to restore a rehearsal state without additional model calls.",
+    "start": 804.12,
+    "end": 840.72,
+    "duration": 36.6,
+    "wait_removed_seconds": 0.0
+  },
+  {
+    "id": "26",
+    "title": "What passed and what comes next",
+    "source": "VALIDATION SUMMARY \u00b7 local MVP scope",
+    "narration": "The walkthrough has exercised the local application's main controls with assertions and saved outcomes. The accompanying Markdown guide lists chapter times, exact test coverage, provider provenance and any limitations. Earlier backend and browser regression results, real AI readiness evidence and preservation reports remain intact. This is the local MVP: cloud deployment, distributed workers and production scale validation remain deferred. To repeat the workflow, start with sync, use the sample collection for organization, review every AI decision, and leave reset tests until last.",
+    "start": 840.72,
+    "end": 881.6,
+    "duration": 40.88,
+    "wait_removed_seconds": 0.0
+  }
+]

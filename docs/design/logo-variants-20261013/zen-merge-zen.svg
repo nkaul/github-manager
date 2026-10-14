@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Zen Merge — zen state">
+<title>Zen Merge — zen state</title><g stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="110" height="110" rx="32" fill="var(--ink,#512da8)"/>
+<path d="M88 91Q102 88 102 74V65" fill="none" stroke="var(--accent,#81d4fa)" stroke-width="4.5"/>
+<g fill="var(--accent,#81d4fa)"><circle cx="102" cy="61" r="4"/></g><path d="M53 74Q48 83 41 85M75 74Q80 83 87 85" fill="none" stroke="white" stroke-width="6"/>
+<path d="M51 86C36 78 29 91 39 98Q50 108 64 95Q78 108 89 98C99 91 92 78 77 86L64 94Z" fill="white"/>
+<path d="M46 96Q54 101 64 94Q74 101 82 96" fill="none" stroke="var(--ink,#512da8)" stroke-width="2.8"/>
+<path d="M36 37V20L51 29Q64 24 77 29L92 20V37Q101 46 97 59Q91 73 64 74Q37 73 31 59Q27 46 36 37Z" transform="translate(0 3) scale(1 .94)" fill="white"/><g transform="translate(0 -1)"><path d="M44 49Q50 55 56 49M72 49Q78 55 84 49" fill="none" stroke="var(--ink,#512da8)" stroke-width="3.8"/><path d="m61 60 3 2 3-2" fill="none" stroke="var(--ink,#512da8)" stroke-width="2.8"/></g></g></svg>

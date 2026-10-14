@@ -1,0 +1,558 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:02.692
+Welcome to GitHub Manager.
+
+00:00:02.692 --> 00:00:07.770
+This walkthrough shows the complete local workflow, one step at a time.
+
+00:00:07.770 --> 00:00:10.731
+First, connect and sync your GitHub account.
+
+00:00:10.731 --> 00:00:18.770
+Then inspect repositories, build and approve a taxonomy, review AI suggestions, and
+organize your work manually or with rules.
+
+00:00:18.770 --> 00:00:22.155
+We finish with persistence and safe reset tests.
+
+00:00:22.155 --> 00:00:25.117
+The screen is recorded at full HD.
+
+00:00:25.117 --> 00:00:30.617
+You signed in before recording, so no password or authorization screen is included.
+
+00:00:32.640 --> 00:00:34.662
+Start in My GitHub workspace.
+
+00:00:34.662 --> 00:00:38.707
+Click Sync GitHub and wait for the run to finish.
+
+00:00:38.707 --> 00:00:42.751
+Synchronization imports repository relationships and metadata independently of AI
+organization.
+
+00:00:42.751 --> 00:00:46.796
+It does not send repository content to a language model.
+
+00:00:46.796 --> 00:00:53.267
+The source coverage section explains what GitHub returned and whether a source is
+partial or unavailable.
+
+00:00:53.267 --> 00:00:56.502
+Private repository names are masked in this recording.
+
+00:00:56.502 --> 00:01:02.165
+Their presence can still be checked locally without disclosing their names in the
+video.
+
+00:01:04.200 --> 00:01:08.203
+My Repos, Favorites and Access candidates answer different questions.
+
+00:01:08.203 --> 00:01:12.206
+My Repos contains your eligible or explicitly included work.
+
+00:01:12.206 --> 00:01:15.319
+Favorites reflects observed star and watch relationships.
+
+00:01:15.319 --> 00:01:18.877
+Access candidates shows repositories the account can access.
+
+00:01:18.877 --> 00:01:24.214
+Use search and the language or visibility filters to narrow the list.
+
+00:01:24.214 --> 00:01:26.882
+Open details for metadata and memberships.
+
+00:01:26.882 --> 00:01:30.440
+Private details show that AI evidence is blocked.
+
+00:01:30.440 --> 00:01:36.222
+A repository does not become your project just because it is publicly readable.
+
+00:01:38.240 --> 00:01:41.224
+Latest Work shows your own dated contributions.
+
+00:01:41.224 --> 00:01:45.488
+Change the window between seven, fourteen, thirty and ninety days.
+
+00:01:45.488 --> 00:01:52.735
+This view uses the signed-in numeric GitHub identity and contribution timestamps,
+rather than another person's push date.
+
+00:01:52.735 --> 00:01:56.999
+Empty results are valid when no supported activity was observed.
+
+00:01:56.999 --> 00:01:59.983
+Check the activity coverage message as well.
+
+00:01:59.983 --> 00:02:08.510
+This is a bounded contribution view, so partial or unavailable GitHub coverage must
+not be mistaken for a complete history.
+
+00:02:10.520 --> 00:02:20.793
+For the remaining feature and reset tests, we switch to a disposable local
+application database and an explicitly labeled test identity.
+
+00:02:20.793 --> 00:02:28.131
+The user interface, authentication controls, persistence, organization services and
+reset logic are the actual application.
+
+00:02:28.131 --> 00:02:33.512
+The GitHub account and inventory in this isolated segment are fixtures.
+
+00:02:33.512 --> 00:02:40.361
+New AI classification uses the real configured OpenAI provider; cached taxonomy is
+labeled reused.
+
+00:02:40.361 --> 00:02:46.231
+This separation protects the working GitHub workspace while we exercise destructive
+controls.
+
+00:02:48.240 --> 00:02:53.422
+Choose Public plus synthetic demo in the workspace selector, then Load demo samples.
+
+00:02:53.422 --> 00:02:59.401
+The collection has one approved public FastAPI sample and two clearly labeled
+synthetic Orion repositories.
+
+00:02:59.401 --> 00:03:02.590
+It is separate from My Repos and Favorites.
+
+00:03:02.590 --> 00:03:08.170
+Opening those relationship views does not pretend the samples belong to the signed-
+in account.
+
+00:03:08.170 --> 00:03:10.960
+Return to Demo samples for the tutorial.
+
+00:03:10.960 --> 00:03:17.736
+These three examples are small enough to understand and keep model use within the
+approved request limit.
+
+00:03:19.760 --> 00:03:23.026
+Open AI Organizer and run Extract evidence.
+
+00:03:23.026 --> 00:03:28.625
+Extraction builds a versioned local evidence profile without a language model call.
+
+00:03:28.625 --> 00:03:33.291
+Back in repository details, inspect the phrases and supporting sections.
+
+00:03:33.291 --> 00:03:38.424
+These are the compact inputs used by taxonomy discovery and classification.
+
+00:03:38.424 --> 00:03:42.157
+The application default uses RAKE and TF IDF.
+
+00:03:42.157 --> 00:03:45.889
+Earlier BM25 and YAKE benchmarking remains available separately.
+
+00:03:45.889 --> 00:03:52.422
+Missing source content is reported; private README content is excluded from the
+model path.
+
+00:03:54.440 --> 00:04:00.209
+In AI Organizer, keep Reuse validated cached AI selected and click Discover
+taxonomy.
+
+00:04:00.209 --> 00:04:06.865
+A successful matching cache returns the earlier validated real model result without
+new OpenAI requests.
+
+00:04:06.865 --> 00:04:09.527
+The draft is clearly labeled reused.
+
+00:04:09.527 --> 00:04:15.296
+A cache miss produces an explicit error and does not silently spend money.
+
+00:04:15.296 --> 00:04:20.177
+Discovery proposes vocabulary; it does not publish concepts or assign repositories.
+
+00:04:20.177 --> 00:04:25.945
+The review step is where you decide which concepts belong in your workspace.
+
+00:04:27.960 --> 00:04:29.245
+Open Review draft.
+
+00:04:29.245 --> 00:04:39.524
+A domain is a broad area, a project groups related repositories, a topic describes
+purpose, and a tag captures a useful technology or attribute.
+
+00:04:39.524 --> 00:04:43.378
+Edit a description or alias and save the draft.
+
+00:04:43.378 --> 00:04:46.804
+You can exclude unwanted proposals with their checkboxes.
+
+00:04:46.804 --> 00:04:48.946
+Projects need a parent domain.
+
+00:04:48.946 --> 00:04:52.800
+Equivalent names should become aliases of one canonical concept.
+
+00:04:52.800 --> 00:04:57.940
+Saving a draft preserves your edits while leaving the published registry unchanged.
+
+00:04:59.960 --> 00:05:04.635
+Reopen the saved draft and click Approve and publish taxonomy.
+
+00:05:04.635 --> 00:05:11.181
+Publication is an explicit human decision and changes the canonical taxonomy in one
+revision.
+
+00:05:11.181 --> 00:05:14.921
+The sidebar now exposes the accepted project structure.
+
+00:05:14.921 --> 00:05:19.597
+Stable concept identifiers let names change later without breaking memberships.
+
+00:05:19.597 --> 00:05:24.272
+Publication alone does not classify repositories or accept AI assignments.
+
+00:05:24.272 --> 00:05:30.350
+You can inspect the four concept types in Content settings before starting
+classification.
+
+00:05:32.360 --> 00:05:36.587
+Select the three sample repositories and open AI Organizer.
+
+00:05:36.587 --> 00:05:39.405
+Choose Live AI, then Full classification.
+
+00:05:39.405 --> 00:05:46.919
+This is fresh model inference through the application's LangChain layer, not fixture
+output or cached replay.
+
+00:05:46.919 --> 00:05:50.676
+Watch the persisted progress and final run outcomes.
+
+00:05:50.676 --> 00:05:57.720
+Three classifications normally require six HTTP requests because each generation has
+a token count request.
+
+00:05:57.720 --> 00:06:02.887
+The existing global request and five dollar spending caps remain enforced.
+
+00:06:02.887 --> 00:06:05.704
+No private repository content is included.
+
+00:06:07.720 --> 00:06:11.465
+Review each suggestion's concept, reason and supporting evidence.
+
+00:06:11.465 --> 00:06:15.677
+Accept a useful project suggestion and reject another suggestion.
+
+00:06:15.677 --> 00:06:19.890
+Acceptance turns the mapping into a protected USER decision.
+
+00:06:19.890 --> 00:06:23.634
+Rejection records a protected decision against automatic recreation.
+
+00:06:23.634 --> 00:06:33.932
+Pending suggestions do not count as accepted project organization, and a topic or
+tag alone does not remove a repository from Uncategorized.
+
+00:06:33.932 --> 00:06:39.548
+Model confidence is not calibrated, so evidence and your judgment remain essential.
+
+00:06:41.560 --> 00:06:43.326
+Now organize without AI.
+
+00:06:43.326 --> 00:06:51.274
+Create a second project, select the Orion repositories, choose that project in the
+bulk toolbar and add membership.
+
+00:06:51.274 --> 00:06:56.132
+Drag one repository onto another project to add an additional membership.
+
+00:06:56.132 --> 00:06:59.664
+Open its details and remove only one project.
+
+00:06:59.664 --> 00:07:01.872
+The other membership must remain.
+
+00:07:01.872 --> 00:07:05.404
+Manual controls support multiple projects, topics and tags.
+
+00:07:05.404 --> 00:07:13.794
+This test also shows that organization remains usable when model access is
+unavailable or the request allowance is exhausted.
+
+00:07:15.800 --> 00:07:19.301
+Content settings is where you maintain the vocabulary.
+
+00:07:19.301 --> 00:07:25.866
+Create a temporary domain, then create a project and select that domain as its
+parent.
+
+00:07:25.866 --> 00:07:28.930
+Add a clear description and optional aliases.
+
+00:07:28.930 --> 00:07:34.619
+The domain appears in project navigation, while the project can receive repository
+memberships.
+
+00:07:34.619 --> 00:07:38.996
+Domains are derived through project membership in this local demo.
+
+00:07:38.996 --> 00:07:45.123
+Create only concepts that have a distinct purpose; excessive duplicates make
+classification less useful.
+
+00:07:47.160 --> 00:07:51.418
+Edit the temporary project, rename it, and add an alias.
+
+00:07:51.418 --> 00:07:56.527
+Its identifier stays the same, so existing relationships can survive a rename.
+
+00:07:56.527 --> 00:07:59.934
+Move it to another parent domain if needed.
+
+00:07:59.934 --> 00:08:05.043
+Next, try creating another project with a conflicting normalized name or alias.
+
+00:08:05.043 --> 00:08:08.449
+The server rejects the conflict clearly and atomically.
+
+00:08:08.449 --> 00:08:11.004
+Close the invalid form without saving.
+
+00:08:11.004 --> 00:08:17.817
+This demonstrates that canonical naming is enforced by the backend rather than only
+by browser controls.
+
+00:08:19.840 --> 00:08:25.304
+Create a temporary equivalent project and merge it into the retained project.
+
+00:08:25.304 --> 00:08:29.857
+The target keeps its identity; memberships and aliases are reconciled.
+
+00:08:29.857 --> 00:08:32.133
+Next archive the temporary domain.
+
+00:08:32.133 --> 00:08:38.052
+The confirmation explains that surviving projects move to protected Unassigned
+rather than disappearing.
+
+00:08:38.052 --> 00:08:44.882
+Archiving a concept removes its dependent active memberships while retaining name
+reservations against accidental recreation.
+
+00:08:44.882 --> 00:08:52.622
+Inspect the result after each operation instead of assuming an archive and a merge
+have identical effects.
+
+00:08:54.640 --> 00:08:58.740
+Create an organization rule with a simple supported metadata condition.
+
+00:08:58.740 --> 00:09:03.251
+Here we match the Python language and assign a temporary tag.
+
+00:09:03.251 --> 00:09:06.941
+Click Preview matches first and inspect the repository count.
+
+00:09:06.941 --> 00:09:08.991
+Only then approve the rule.
+
+00:09:08.991 --> 00:09:11.861
+Preview does not apply assignments by itself.
+
+00:09:11.861 --> 00:09:17.191
+Rules can use local accessible private metadata without sending it to a model.
+
+00:09:17.191 --> 00:09:21.292
+They remain subordinate to protected USER mappings and rejection decisions.
+
+00:09:23.320 --> 00:09:26.292
+Choose Rules only in AI Organizer.
+
+00:09:26.292 --> 00:09:29.265
+Run Reorganize incremental, then Full classification.
+
+00:09:29.265 --> 00:09:36.200
+Both controls operate against the current taxonomy and record processed, failed and
+per-repository outcomes.
+
+00:09:36.200 --> 00:09:44.127
+In this local adapter, incremental reconciliation currently visits the selected
+cohort; production delta indexing is deferred.
+
+00:09:44.127 --> 00:09:47.595
+Inspect Run history for the actual result.
+
+00:09:47.595 --> 00:09:54.035
+The rule-created tag is visible in details, while existing manual mappings remain
+intact.
+
+00:09:54.035 --> 00:09:57.007
+These runs make no OpenAI calls.
+
+00:09:59.040 --> 00:10:04.199
+Switch back to Reuse validated cached AI and choose Rediscover taxonomy.
+
+00:10:04.199 --> 00:10:06.544
+It creates another reviewable draft.
+
+00:10:06.544 --> 00:10:12.171
+It does not silently replace your published names, projects or manual memberships.
+
+00:10:12.171 --> 00:10:18.737
+Open the proposal, inspect its reused provenance, then reject the draft for this
+test.
+
+00:10:18.737 --> 00:10:21.551
+The active taxonomy must remain unchanged.
+
+00:10:21.551 --> 00:10:29.993
+Use rediscovery when the vocabulary itself needs reconsideration; use classification
+when you want assignments against the current vocabulary.
+
+00:10:32.000 --> 00:10:35.413
+Automatic organization is optional and off by default.
+
+00:10:35.413 --> 00:10:40.532
+Enable it, then create two distinct projects to meet the significant-change
+threshold.
+
+00:10:40.532 --> 00:10:47.358
+The real scheduler waits for ninety seconds without further edits and respects a
+thirty minute cooldown.
+
+00:10:47.358 --> 00:10:53.757
+Most of that wait is cut from this recording; the test uses the real interval.
+
+00:10:53.757 --> 00:10:59.730
+This scheduler test uses explicitly labeled fixture AI to conserve the remaining
+request allowance.
+
+00:10:59.730 --> 00:11:06.982
+Inspect the AUTO run, confirm protected decisions remain, then disable automatic
+organization before further editing or resets.
+
+00:11:09.000 --> 00:11:13.683
+Reload the browser and verify the sample inventory and organization remain.
+
+00:11:13.683 --> 00:11:20.068
+Sign out, sign back into the isolated test account, and select the sample collection
+again.
+
+00:11:20.068 --> 00:11:23.048
+Next restart only the isolated recording backend.
+
+00:11:23.048 --> 00:11:27.304
+The database remains, but the in-memory login session does not.
+
+00:11:27.304 --> 00:11:33.264
+Sign in again and verify the same taxonomy and manual memberships are still present.
+
+00:11:33.264 --> 00:11:37.095
+Interrupted inference must be disclosed rather than silently repeated.
+
+00:11:37.095 --> 00:11:41.352
+Your normal application backend is not restarted by this test.
+
+00:11:43.360 --> 00:11:46.164
+Open Latest Work in the sample collection.
+
+00:11:46.164 --> 00:11:49.769
+Synthetic Orion activity is explicitly labeled as a fixture.
+
+00:11:49.769 --> 00:11:52.974
+Change the date window and inspect the results.
+
+00:11:52.974 --> 00:12:00.185
+This is a repeatable test of the activity interface and filtering, not evidence of a
+real GitHub contribution.
+
+00:12:00.185 --> 00:12:04.190
+The earlier live GitHub segment showed the actual account observation.
+
+00:12:04.190 --> 00:12:11.401
+Keeping those sources separate makes the walkthrough useful without inventing real
+activity when the upstream account has none.
+
+00:12:13.440 --> 00:12:18.065
+Open Preview reset and leave user taxonomy and rules unselected.
+
+00:12:18.065 --> 00:12:22.691
+Select the desired AI state and cached rediscovery after cleanup.
+
+00:12:22.691 --> 00:12:25.004
+Inspect the server-verified impact counts.
+
+00:12:25.004 --> 00:12:31.942
+A trailing space after DELETE is not accepted; enter the exact word to enable
+confirmation.
+
+00:12:31.942 --> 00:12:34.717
+After reset, wait for Cleanup verified.
+
+00:12:34.717 --> 00:12:42.581
+The accepted manual project mapping and protected rejection must survive, along with
+repository metadata and published taxonomy.
+
+00:12:42.581 --> 00:12:45.818
+Cached restart creates a new proposal only.
+
+00:12:45.818 --> 00:12:50.444
+The historical readiness reports and API ledger are outside reset.
+
+00:12:52.480 --> 00:12:59.334
+For a partial reset, clear the AI checkboxes and select only Domains under user
+taxonomy.
+
+00:12:59.334 --> 00:13:03.903
+Preview the exact impact and confirm in the isolated collection.
+
+00:13:03.903 --> 00:13:06.645
+Surviving projects move to protected Unassigned.
+
+00:13:06.645 --> 00:13:14.413
+The selected domain content is removed, while unrelated topics, tags, repository
+metadata and surviving project identities remain.
+
+00:13:14.413 --> 00:13:23.094
+This illustrates why you should preview each reset scope rather than treating every
+reset as a complete workspace deletion.
+
+00:13:25.120 --> 00:13:30.961
+Finally select all user taxonomy kinds, organization rules and the desired AI state.
+
+00:13:30.961 --> 00:13:36.353
+Review a fresh impact preview, type DELETE and wait for verified cleanup.
+
+00:13:36.353 --> 00:13:42.643
+Full taxonomy reset starts at revision zero in a new epoch; repository metadata
+remains.
+
+00:13:42.643 --> 00:13:47.585
+Request cached discovery to rebuild a reviewable draft, then publish it.
+
+00:13:47.585 --> 00:13:53.426
+New concepts have new identifiers, so old classification results cannot be blindly
+replayed.
+
+00:13:53.426 --> 00:13:59.717
+Use manual assignments or rules to restore a rehearsal state without additional
+model calls.
+
+00:14:01.720 --> 00:14:08.358
+The walkthrough has exercised the local application's main controls with assertions
+and saved outcomes.
+
+00:14:08.358 --> 00:14:15.470
+The accompanying Markdown guide lists chapter times, exact test coverage, provider
+provenance and any limitations.
+
+00:14:15.470 --> 00:14:22.582
+Earlier backend and browser regression results, real AI readiness evidence and
+preservation reports remain intact.
+
+00:14:22.582 --> 00:14:29.694
+This is the local MVP: cloud deployment, distributed workers and production scale
+validation remain deferred.
+
+00:14:29.694 --> 00:14:40.599
+To repeat the workflow, start with sync, use the sample collection for organization,
+review every AI decision, and leave reset tests until last.

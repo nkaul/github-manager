@@ -1,0 +1,80 @@
+{
+  "repositories": [
+    {
+      "alias": "owned-public",
+      "repo_id": 1,
+      "expected_sources": [
+        "OWNER"
+      ],
+      "eligible": true,
+      "readme_present": true,
+      "recent_commit_by_user": false,
+      "private": false,
+      "contents_access": true
+    },
+    {
+      "alias": "owned-private",
+      "repo_id": 2,
+      "expected_sources": [
+        "OWNER"
+      ],
+      "eligible": true,
+      "readme_present": true,
+      "private": true,
+      "contents_access": true
+    },
+    {
+      "alias": "direct-grant",
+      "repo_id": 3,
+      "expected_sources": [
+        "DIRECT"
+      ],
+      "eligible": true
+    },
+    {
+      "alias": "team-grant",
+      "repo_id": 4,
+      "expected_sources": [
+        "TEAM"
+      ],
+      "eligible": true
+    },
+    {
+      "alias": "org-general-only",
+      "repo_id": 5,
+      "expected_sources": [
+        "ORG_GENERAL"
+      ],
+      "eligible": false
+    },
+    {
+      "alias": "recent-contribution",
+      "repo_id": 6,
+      "expected_sources": [
+        "CONTRIBUTOR"
+      ],
+      "eligible": true
+    },
+    {
+      "alias": "star-outside-my-repos",
+      "repo_id": 7,
+      "expected_sources": [
+        "STAR"
+      ],
+      "eligible": false,
+      "favorite": true
+    },
+    {
+      "alias": "known-watch",
+      "repo_id": 8,
+      "expected_sources": [
+        "WATCH"
+      ],
+      "eligible": false,
+      "favorite": true
+    }
+  ],
+  "organizations": [],
+  "sample_private_repositories": 0,
+  "sample_member_organizations": 0
+}

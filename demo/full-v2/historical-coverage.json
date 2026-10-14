@@ -1,0 +1,325 @@
+[
+  {
+    "historical_check": 1,
+    "name": "Authenticated real product UI opened at 1920x1080",
+    "current_chapters": [
+      "01"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 2,
+    "name": "Real GitHub sync completed",
+    "current_chapters": [
+      "02"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 3,
+    "name": "Live accessible private repository remains AI-blocked",
+    "current_chapters": [
+      "04"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 4,
+    "name": "Real inventory pagination load-more",
+    "current_chapters": [
+      "03"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 5,
+    "name": "Real explorer navigation and filters",
+    "current_chapters": [
+      "02",
+      "03"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 6,
+    "name": "Real Latest Work window controls and disclosed coverage",
+    "current_chapters": [
+      "04"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 7,
+    "name": "Isolated fixture sign-in, sync and private evidence exclusion",
+    "current_chapters": [
+      "01",
+      "24"
+    ],
+    "status": "CURRENT_SCOPED",
+    "note": "Fixture sign-in replaced by real OAuth outside capture; copy-session restoration is explicitly identified."
+  },
+  {
+    "historical_check": 8,
+    "name": "Three samples isolated from ownership and Favorites",
+    "current_chapters": [],
+    "status": "OMITTED_BY_REQUEST",
+    "note": "Synthetic/sample collection loading omitted at the user\u2019s request to use the connected real account."
+  },
+  {
+    "historical_check": 9,
+    "name": "Extract evidence",
+    "current_chapters": [
+      "05"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 10,
+    "name": "Versioned evidence profile and source sections visible",
+    "current_chapters": [
+      "05"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 11,
+    "name": "Discover taxonomy",
+    "current_chapters": [
+      "06"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 12,
+    "name": "Draft edits saved without publication",
+    "current_chapters": [
+      "07"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 13,
+    "name": "Reviewed taxonomy atomically published",
+    "current_chapters": [
+      "07"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 14,
+    "name": "Full classification",
+    "current_chapters": [
+      "08",
+      "09"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 15,
+    "name": "Fresh real three-repository classification",
+    "current_chapters": [
+      "08"
+    ],
+    "status": "CURRENT_SCOPED",
+    "note": "One new public classification instead of the earlier three-repository live batch; multi-repository local review is also exercised."
+  },
+  {
+    "historical_check": 16,
+    "name": "Accept creates USER mapping; reject records protection",
+    "current_chapters": [
+      "08",
+      "09"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 17,
+    "name": "Bulk and native drag/drop add memberships; removing one preserves another",
+    "current_chapters": [
+      "13",
+      "14"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 18,
+    "name": "Domain and parented project creation",
+    "current_chapters": [
+      "13",
+      "15"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 19,
+    "name": "Rename preserves ID; domain edit works; duplicate alias rejected",
+    "current_chapters": [
+      "15",
+      "16"
+    ],
+    "status": "CURRENT_SCOPED",
+    "note": "Rename/alias validation and dependency reparenting recorded; a separate direct parent-edit regression is historical evidence."
+  },
+  {
+    "historical_check": 20,
+    "name": "Merge retains target; domain archive reparents surviving project",
+    "current_chapters": [
+      "16"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 21,
+    "name": "Rule preview and explicit approval",
+    "current_chapters": [
+      "18"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 22,
+    "name": "Reorganize incremental",
+    "current_chapters": [
+      "18"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 23,
+    "name": "Full classification",
+    "current_chapters": [
+      "18"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 24,
+    "name": "Rules-only incremental and full runs preserve manual organization",
+    "current_chapters": [
+      "18"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 25,
+    "name": "Rediscover taxonomy",
+    "current_chapters": [
+      "06",
+      "25"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 26,
+    "name": "Rediscovery is proposal-only; rejected draft leaves active taxonomy unchanged",
+    "current_chapters": [
+      "25"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 27,
+    "name": "Real 90-second automatic scheduler completed with labeled fixture AI",
+    "current_chapters": [
+      "21"
+    ],
+    "status": "CURRENT_SCOPED",
+    "note": "Real scheduler interval; real analyzed repositories reconcile offline instead of fixture AI."
+  },
+  {
+    "historical_check": 28,
+    "name": "Reload, logout/relogin and backend restart preserve application state",
+    "current_chapters": [
+      "24"
+    ],
+    "status": "CURRENT_SCOPED",
+    "note": "Real initial OAuth plus copy-session restoration and actual copied-backend restart; no second OAuth roundtrip claimed."
+  },
+  {
+    "historical_check": 29,
+    "name": "Synthetic activity remains visibly labeled with window controls",
+    "current_chapters": [
+      "04"
+    ],
+    "status": "CURRENT_SCOPED",
+    "note": "Actual contribution windows replace synthetic activity."
+  },
+  {
+    "historical_check": 30,
+    "name": "Reset requires exact DELETE",
+    "current_chapters": [
+      "26"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 31,
+    "name": "AI-only verified reset preserves USER/rejections/Core; cached restart creates draft",
+    "current_chapters": [
+      "27"
+    ],
+    "status": "CURRENT_SCOPED",
+    "note": "AI-only reset verified; protected cached-restart preview shown, not a new post-reset cached generation."
+  },
+  {
+    "historical_check": 32,
+    "name": "Domain-only reset reparents surviving projects to Unassigned",
+    "current_chapters": [
+      "28"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 33,
+    "name": "Discover taxonomy",
+    "current_chapters": [
+      "06",
+      "29"
+    ],
+    "status": "CURRENT_SCOPED",
+    "note": "Fresh taxonomy discovery occurs before resets. The post-reset rebuild is manual, with new IDs and no repeat inference."
+  },
+  {
+    "historical_check": 34,
+    "name": "Full reset advances epoch, retains Core and rebuilds with new IDs",
+    "current_chapters": [
+      "29"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  },
+  {
+    "historical_check": 35,
+    "name": "Recording completed within unchanged request and spending caps",
+    "current_chapters": [
+      "19",
+      "20"
+    ],
+    "status": "CURRENT",
+    "note": "Actual current-run evidence is in feature-checks.json; the old PASS is retained as historical evidence."
+  }
+]

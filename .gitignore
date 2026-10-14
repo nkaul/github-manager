@@ -1,0 +1,31 @@
+.tools/
+**/node_modules/
+**/.next/
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.ruff_cache/
+**/test-results/
+**/playwright-report/
+**/.env
+**/.env.local
+**/*.local.json
+**/*.tsbuildinfo
+docs/validation/private/
+.DS_Store
+
+# Generated local walkthrough media; guides and recording sources remain reviewable.
+demo/work/
+demo/raw/
+demo/*.mp4
+demo/*.m4a
+demo/*.wav
+demo/voice-preview-v2/*.mp4
+demo/voice-preview-v2/*.m4a
+demo/voice-preview-v2/*.wav
+
+
+# Full Cedar walkthrough media (local deliverables)
+demo/full-v2/*.mp4
+demo/full-v2/*.m4a
+demo/full-v2/*.wav

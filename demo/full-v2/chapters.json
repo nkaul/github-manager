@@ -1,0 +1,933 @@
+[
+  {
+    "id": "01",
+    "title": "Welcome and GitHub sign-in",
+    "start": 0.0,
+    "end": 43.96,
+    "source": "REAL ACCOUNT \u00b7 LIVE APP",
+    "checks": [
+      {
+        "chapter": "01",
+        "name": "Authenticated real account opened at 1920\u00d71080",
+        "status": "PASS",
+        "login": "nkaul"
+      },
+      {
+        "chapter": "01",
+        "name": "OAuth completed outside recording; no masking requested",
+        "status": "PASS"
+      },
+      {
+        "chapter": "01",
+        "name": "Current header, palette and five KPI icons",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "02",
+    "title": "Sync inventory and understand access",
+    "start": 43.96,
+    "end": 91.24,
+    "source": "LIVE GITHUB \u00b7 INCLUSION DEMONSTRATED IN REAL ACCOUNT COPY",
+    "checks": [
+      {
+        "chapter": "02",
+        "name": "Live GitHub inventory sync",
+        "status": "PASS",
+        "repositories": 310
+      },
+      {
+        "chapter": "02",
+        "name": "My Repos and Favorites opened",
+        "status": "PASS"
+      },
+      {
+        "chapter": "02",
+        "name": "Source coverage visible with real observations",
+        "status": "PASS"
+      },
+      {
+        "chapter": "02",
+        "name": "Explicit inclusion adds a real access candidate to My Repos in the workspace copy",
+        "status": "PASS"
+      },
+      {
+        "chapter": "02",
+        "name": "Demo inclusion reversed in the copy after the recorded action",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "03",
+    "title": "Search, filters, pagination and KPIs",
+    "start": 91.24,
+    "end": 134.16,
+    "source": "REAL ACCOUNT \u00b7 LIVE APP",
+    "checks": [
+      {
+        "chapter": "03",
+        "name": "Search and visibility filter chips cleared",
+        "status": "PASS"
+      },
+      {
+        "chapter": "03",
+        "name": "Five scope-aware compact KPI cards",
+        "status": "PASS"
+      },
+      {
+        "chapter": "03",
+        "name": "Selected count and scoped subtotals",
+        "status": "PASS"
+      },
+      {
+        "chapter": "03",
+        "name": "Real repository pagination",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "04",
+    "title": "Latest Work and private evidence",
+    "start": 134.16,
+    "end": 177.08,
+    "source": "REAL ACCOUNT \u00b7 LIVE APP",
+    "checks": [
+      {
+        "chapter": "04",
+        "name": "All four contribution activity windows",
+        "status": "PASS"
+      },
+      {
+        "chapter": "04",
+        "name": "Live activity coverage limitations visible",
+        "status": "PASS"
+      },
+      {
+        "chapter": "04",
+        "name": "Real private repository metadata; model input excluded",
+        "status": "PASS",
+        "repository": "nkaul/avimla"
+      },
+      {
+        "chapter": "04",
+        "name": "Real-account snapshot prepared for reversible demo edits",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "05",
+    "title": "Inspect real repository evidence",
+    "start": 177.08,
+    "end": 224.2,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "05",
+        "name": "Real public repository in copied workspace",
+        "status": "PASS"
+      },
+      {
+        "chapter": "05",
+        "name": "Reviewed EXTRACT finished",
+        "status": "COMPLETED",
+        "processed": 1,
+        "failed": 0,
+        "provenance": []
+      },
+      {
+        "chapter": "05",
+        "name": "Actual local evidence extraction revalidates a real public README with no model request",
+        "status": "PASS"
+      },
+      {
+        "chapter": "05",
+        "name": "Public evidence policy and extractor version visible",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "06",
+    "title": "Choose a taxonomy cohort and preview",
+    "start": 224.2,
+    "end": 268.44,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "06",
+        "name": "Independent taxonomy/classification counts and automatic scope",
+        "status": "PASS"
+      },
+      {
+        "chapter": "06",
+        "name": "Exact public allowlisted taxonomy cohort previewed",
+        "status": "PASS"
+      },
+      {
+        "chapter": "06",
+        "name": "Reviewed REDISCOVER finished",
+        "status": "COMPLETED",
+        "processed": 2,
+        "failed": 0,
+        "provenance": []
+      }
+    ]
+  },
+  {
+    "id": "07",
+    "title": "Review, save and publish taxonomy",
+    "start": 268.44,
+    "end": 314.64,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "07",
+        "name": "Fresh real-model draft opened for human review",
+        "status": "PASS"
+      },
+      {
+        "chapter": "07",
+        "name": "Draft saved without publishing",
+        "status": "PASS"
+      },
+      {
+        "chapter": "07",
+        "name": "Reviewed taxonomy atomically published",
+        "status": "PASS"
+      },
+      {
+        "chapter": "07",
+        "name": "Domain, Project, Topic and Tag canonical registry visible",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "08",
+    "title": "Classify and review individual suggestions",
+    "start": 314.64,
+    "end": 359.12,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "08",
+        "name": "One-repository live classification preview",
+        "status": "PASS"
+      },
+      {
+        "chapter": "08",
+        "name": "Reviewed FULL_CLASSIFICATION finished",
+        "status": "COMPLETED",
+        "processed": 1,
+        "failed": 0,
+        "provenance": [
+          "LIVE_PROVIDER"
+        ]
+      },
+      {
+        "chapter": "08",
+        "name": "Fresh real public classification result",
+        "status": "PASS",
+        "outcomes": {
+          "github.com#4359038": {
+            "status": "CLASSIFIED",
+            "evidence": "LIVE_PROVIDER",
+            "error": null,
+            "model": "gpt-6-luna",
+            "usage": {
+              "input_tokens": 1064,
+              "input_tokens_details": {
+                "cache_write_tokens": 1061,
+                "cached_tokens": 0
+              },
+              "output_tokens": 161,
+              "output_tokens_details": {
+                "reasoning_tokens": 62
+              },
+              "total_tokens": 1225
+            },
+            "seconds": 3.012,
+            "reason": null
+          }
+        }
+      },
+      {
+        "chapter": "08",
+        "name": "Individual real-model suggestion accepted",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "09",
+    "title": "Grouped and selected review",
+    "start": 359.12,
+    "end": 404.16,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "09",
+        "name": "Reviewed FULL_CLASSIFICATION finished",
+        "status": "COMPLETED",
+        "processed": 1,
+        "failed": 0,
+        "provenance": [
+          "LOCAL_MATCH"
+        ]
+      },
+      {
+        "chapter": "09",
+        "name": "Individual locally supported proposal rejected with protection",
+        "status": "PASS"
+      },
+      {
+        "chapter": "09",
+        "name": "Filtered real-repository proposals selected",
+        "status": "PASS"
+      },
+      {
+        "chapter": "09",
+        "name": "Selected offline proposals validated and accepted",
+        "status": "PASS"
+      },
+      {
+        "chapter": "09",
+        "name": "Topic labels and Project coverage remain distinct",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Durable analysis and offline reconciliation",
+    "start": 404.16,
+    "end": 450.72,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "10",
+        "name": "Durable real analysis receipt visible",
+        "status": "PASS"
+      },
+      {
+        "chapter": "10",
+        "name": "Routine preview protects analyzed repositories from paid repetition",
+        "status": "PASS"
+      },
+      {
+        "chapter": "10",
+        "name": "No AI match distinct from no labels and no project",
+        "status": "PASS"
+      },
+      {
+        "chapter": "10",
+        "name": "Stale evidence/taxonomy view",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "title": "Explicit taxonomy and classification re-analysis",
+    "start": 450.72,
+    "end": 496.0,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "11",
+        "name": "Explicit reasoned classification re-analysis preview; not executed",
+        "status": "PASS"
+      },
+      {
+        "chapter": "11",
+        "name": "Explicit taxonomy re-analysis preview; not executed",
+        "status": "PASS"
+      },
+      {
+        "chapter": "11",
+        "name": "Previews cancelled without new inference",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "title": "Browse all taxonomy facets",
+    "start": 496.0,
+    "end": 540.32,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "12",
+        "name": "Taxonomy search and independent Topic browsing",
+        "status": "PASS"
+      },
+      {
+        "chapter": "12",
+        "name": "Header taxonomy opens without automatic repository fetch",
+        "status": "PASS"
+      },
+      {
+        "chapter": "12",
+        "name": "Header concept click loads membership; Tags independently browsable",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "title": "Drag one or several repositories",
+    "start": 540.32,
+    "end": 588.92,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "13",
+        "name": "Single native drop onto Topic adds membership",
+        "status": "PASS"
+      },
+      {
+        "chapter": "13",
+        "name": "Two-repository selected set native drop confirmed",
+        "status": "PASS"
+      },
+      {
+        "chapter": "13",
+        "name": "Domain drop requires child Project selection",
+        "status": "PASS"
+      },
+      {
+        "chapter": "13",
+        "name": "Header taxonomy drop adds another membership",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "title": "Bulk edits and accessible alternatives",
+    "start": 588.92,
+    "end": 634.04,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "14",
+        "name": "Bulk selector adds reviewed membership",
+        "status": "PASS"
+      },
+      {
+        "chapter": "14",
+        "name": "Removing one membership preserves others and rejection protection",
+        "status": "PASS"
+      },
+      {
+        "chapter": "14",
+        "name": "Filter changes clear selection",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "title": "Create and edit canonical content",
+    "start": 634.04,
+    "end": 679.96,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "15",
+        "name": "Manual canonical concept creation",
+        "status": "PASS"
+      },
+      {
+        "chapter": "15",
+        "name": "Rename and aliases preserve canonical identity",
+        "status": "PASS"
+      },
+      {
+        "chapter": "15",
+        "name": "Reserved alias error identifies existing owner",
+        "status": "PASS"
+      },
+      {
+        "chapter": "15",
+        "name": "Opt-in alias remediation saves distinct concept",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "title": "Merge and archive with dependencies",
+    "start": 679.96,
+    "end": 719.44,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "16",
+        "name": "Merge preserves chosen target identity",
+        "status": "PASS"
+      },
+      {
+        "chapter": "16",
+        "name": "Domain archive explains dependent Projects",
+        "status": "PASS"
+      },
+      {
+        "chapter": "16",
+        "name": "Surviving Project reparented to Unassigned",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "title": "Repair taxonomy conflicts before publication",
+    "start": 719.44,
+    "end": 767.48,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "17",
+        "name": "Manually edited saved real draft exposes actual archived AI and active Domain reservations",
+        "status": "PASS"
+      },
+      {
+        "chapter": "17",
+        "name": "Reuse retains actual active canonical term",
+        "status": "PASS"
+      },
+      {
+        "chapter": "17",
+        "name": "Undo restores previous form",
+        "status": "PASS"
+      },
+      {
+        "chapter": "17",
+        "name": "Alias repair saved without publication",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "title": "Rules and both reorganization modes",
+    "start": 767.48,
+    "end": 809.36,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "18",
+        "name": "Rule preview checks real metadata",
+        "status": "PASS"
+      },
+      {
+        "chapter": "18",
+        "name": "Deterministic rule explicitly approved",
+        "status": "PASS"
+      },
+      {
+        "chapter": "18",
+        "name": "Reviewed INCREMENTAL finished",
+        "status": "COMPLETED",
+        "processed": 3,
+        "failed": 0,
+        "provenance": [
+          "LOCAL_RULES"
+        ]
+      },
+      {
+        "chapter": "18",
+        "name": "Rules-only incremental run uses no model calls",
+        "status": "PASS"
+      },
+      {
+        "chapter": "18",
+        "name": "Reviewed FULL_CLASSIFICATION finished",
+        "status": "COMPLETED",
+        "processed": 1,
+        "failed": 0,
+        "provenance": [
+          "LOCAL_RULES"
+        ]
+      },
+      {
+        "chapter": "18",
+        "name": "Rules-only full cohort preserves USER memberships",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "title": "Fixed allowance and selective overrides",
+    "start": 809.36,
+    "end": 855.0,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "19",
+        "name": "Window limits and cumulative money distinguished",
+        "status": "PASS"
+      },
+      {
+        "chapter": "19",
+        "name": "Copied allowance renewed; original ledger untouched",
+        "status": "PASS"
+      },
+      {
+        "chapter": "19",
+        "name": "Selective HTTP override preserves generation limit",
+        "status": "PASS"
+      },
+      {
+        "chapter": "19",
+        "name": "Five-dollar cumulative cap retained",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "title": "Adaptive budgets and saved run defaults",
+    "start": 855.0,
+    "end": 898.44,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "20",
+        "name": "Adaptive preview has finite cohort and cost bound",
+        "status": "PASS"
+      },
+      {
+        "chapter": "20",
+        "name": "Run defaults saved without starting work",
+        "status": "PASS"
+      },
+      {
+        "chapter": "20",
+        "name": "Adaptive mode retains offline protection",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "21",
+    "title": "Configure and verify automatic organization",
+    "start": 898.44,
+    "end": 942.68,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "21",
+        "name": "Weighted, distinct and Project thresholds configurable",
+        "status": "PASS"
+      },
+      {
+        "chapter": "21",
+        "name": "Automatic policy saved with actual 90-second quiet interval",
+        "status": "PASS"
+      },
+      {
+        "chapter": "21",
+        "name": "Actual automatic scheduler reconciles real repositories locally",
+        "status": "PASS",
+        "wait_seconds": 91.29379711914062,
+        "processed": 3,
+        "provenance": [
+          "LOCAL_MATCH",
+          "LOCAL_MATCH",
+          "LOCAL_MATCH"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "22",
+    "title": "Choose your zen logo and motion",
+    "start": 942.68,
+    "end": 989.84,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "22",
+        "name": "Tail-free rays logo selected",
+        "status": "PASS"
+      },
+      {
+        "chapter": "22",
+        "name": "Aura preference updates header",
+        "status": "PASS"
+      },
+      {
+        "chapter": "22",
+        "name": "Animation-off and reduced-motion static presentation",
+        "status": "PASS"
+      },
+      {
+        "chapter": "22",
+        "name": "Restore default clears browser override",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "23",
+    "title": "Phone navigation and keyboard use",
+    "start": 989.84,
+    "end": 1030.88,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "23",
+        "name": "Actual 390\u00d7844 phone viewport",
+        "status": "PASS"
+      },
+      {
+        "chapter": "23",
+        "name": "Phone drawer opens and closes on selection",
+        "status": "PASS"
+      },
+      {
+        "chapter": "23",
+        "name": "Phone details assignment is keyboard focusable",
+        "status": "PASS"
+      },
+      {
+        "chapter": "23",
+        "name": "No page-level phone overflow",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "24",
+    "title": "Reload, sign-out and backend restart",
+    "start": 1030.88,
+    "end": 1078.96,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "24",
+        "name": "Reload preserves organization and defaults",
+        "status": "PASS"
+      },
+      {
+        "chapter": "24",
+        "name": "Sign-out and recording-copy session restoration preserve records",
+        "status": "PASS"
+      },
+      {
+        "chapter": "24",
+        "name": "Actual copied backend process restart preserves data and requires new session",
+        "status": "PASS"
+      },
+      {
+        "chapter": "24",
+        "name": "Completed history and money preserved after restart",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "25",
+    "title": "Rediscovery remains a reviewed proposal",
+    "start": 1078.96,
+    "end": 1130.56,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "25",
+        "name": "Intentional taxonomy refresh preview only",
+        "status": "PASS"
+      },
+      {
+        "chapter": "25",
+        "name": "Saved draft review leaves registry untouched",
+        "status": "PASS"
+      },
+      {
+        "chapter": "25",
+        "name": "Draft rejection preserves published revision",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "26",
+    "title": "Reset preview and exact confirmation",
+    "start": 1130.56,
+    "end": 1175.2,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "26",
+        "name": "Independent scopes and server reset impact",
+        "status": "PASS"
+      },
+      {
+        "chapter": "26",
+        "name": "Exact DELETE required; trailing space rejected",
+        "status": "PASS"
+      },
+      {
+        "chapter": "26",
+        "name": "First reset preview cancelled without removal",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "27",
+    "title": "AI-only reset and preserved decisions",
+    "start": 1175.2,
+    "end": 1221.88,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "27",
+        "name": "USER memberships and rejection witnesses recorded",
+        "status": "PASS"
+      },
+      {
+        "chapter": "27",
+        "name": "Scoped reset cleanup verified",
+        "status": "PASS"
+      },
+      {
+        "chapter": "27",
+        "name": "AI reset preserves inventory, USER decisions, rejections and receipts",
+        "status": "PASS"
+      },
+      {
+        "chapter": "27",
+        "name": "Cached restart preview retains taxonomy analysis protection",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "28",
+    "title": "Partial Domain reset",
+    "start": 1221.88,
+    "end": 1264.56,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "28",
+        "name": "Scoped reset cleanup verified",
+        "status": "PASS"
+      },
+      {
+        "chapter": "28",
+        "name": "Domain reset reparents surviving Projects to Unassigned",
+        "status": "PASS"
+      },
+      {
+        "chapter": "28",
+        "name": "Independent Topics retained after Domain-only reset",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "29",
+    "title": "Full taxonomy reset and rebuild",
+    "start": 1264.56,
+    "end": 1314.16,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "29",
+        "name": "Scoped reset cleanup verified",
+        "status": "PASS"
+      },
+      {
+        "chapter": "29",
+        "name": "Full taxonomy reset advances epoch while retaining real inventory",
+        "status": "PASS"
+      },
+      {
+        "chapter": "29",
+        "name": "Manual rebuild uses new canonical identifiers",
+        "status": "PASS"
+      },
+      {
+        "chapter": "29",
+        "name": "Full reset still protects compact prior-analysis receipts",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "30",
+    "title": "Run history, exclusions and honest outcomes",
+    "start": 1314.16,
+    "end": 1359.04,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "30",
+        "name": "Persisted real run history and provenance inspected",
+        "status": "PASS"
+      },
+      {
+        "chapter": "30",
+        "name": "No match, failed and stale status views browsed",
+        "status": "PASS"
+      },
+      {
+        "chapter": "30",
+        "name": "Cached preview starts no paid fallback",
+        "status": "PASS"
+      },
+      {
+        "chapter": "30",
+        "name": "Actual history distinguished from fresh live and local operations",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "31",
+    "title": "Readiness evidence and boundaries",
+    "start": 1359.04,
+    "end": 1406.72,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "31",
+        "name": "Earlier readiness evidence retained separately",
+        "status": "PASS"
+      },
+      {
+        "chapter": "31",
+        "name": "Local runtime accurately identified",
+        "status": "PASS"
+      },
+      {
+        "chapter": "31",
+        "name": "Bounded GitHub coverage disclosed",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "id": "32",
+    "title": "The everyday workflow",
+    "start": 1406.72,
+    "end": 1451.64,
+    "source": "REAL ACCOUNT \u00b7 LOCAL WORKSPACE COPY",
+    "checks": [
+      {
+        "chapter": "32",
+        "name": "Complete chaptered real-account walkthrough finished",
+        "status": "PASS"
+      }
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+# Isolated Phase 0.5 local evaluation only; not production dependencies.
+# YAKE artifact licensing must be reviewed before any production adoption.
+click==8.5.0
+jellyfish==1.2.1
+networkx==3.7
+numpy==2.5.4
+regex==2026.9.29
+segtok==1.5.11
+tabulate==0.10.0
+yake==0.7.3

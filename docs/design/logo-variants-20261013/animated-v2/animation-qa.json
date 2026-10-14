@@ -1,0 +1,36 @@
+{
+  "actualGifChecks": [
+    {
+      "kind": "orbit",
+      "decodedFrames": 100,
+      "distinctFrames": 100,
+      "transparentUnclippedBorders": true,
+      "seamChangedPixels": 1056,
+      "smallestFrameChange": 977,
+      "largestFrameChange": 1210
+    },
+    {
+      "kind": "rays",
+      "decodedFrames": 150,
+      "distinctFrames": 29,
+      "transparentUnclippedBorders": true,
+      "seamChangedPixels": 968,
+      "smallestFrameChange": 0,
+      "largestFrameChange": 1847
+    }
+  ],
+  "preview": {
+    "status": 200,
+    "desktop": {
+      "width": 1600,
+      "scrollWidth": 1600,
+      "brokenImages": 0
+    },
+    "mobile": {
+      "width": 390,
+      "scrollWidth": 390
+    },
+    "errors": [],
+    "pauseResumeControls": 2
+  }
+}

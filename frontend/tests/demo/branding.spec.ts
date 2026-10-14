@@ -1,0 +1,52 @@
+import { test, expect } from "@playwright/test";
+
+test("logo choice persists, pauses, respects reduced motion and appears on sign-in; KPI icons stay compact", async ({ page }) => {
+  await page.setViewportSize({ width: 1920, height: 1080 });
+  await page.request.post("/api/v1/test/login", { data: { id: 9108 } });
+  await page.goto("/");
+  await page.getByLabel("Workspace collection").selectOption("samples");
+  await page.getByRole("button", { name: "Load demo samples", exact: true }).first().click();
+  await expect(page.getByRole("button", { name: "Details for orion-api", exact: true })).toBeVisible();
+  const logo = page.locator(".wm-header .wm-logo");
+  await expect(logo).toHaveAttribute("data-logo", "rays");
+  await expect(logo.locator("img")).toHaveAttribute("src", /rays-96\.gif$/);
+  await expect.poll(() => logo.locator("img").evaluate(el => (el as HTMLImageElement).naturalWidth)).toBe(96);
+  await expect(page.locator(".wm-stat-label > svg")).toHaveCount(5);
+  await page.screenshot({ path: "test-results/branding-kpis-rays-1080p.png" });
+
+  await page.getByRole("button", { name: "Content settings", exact: true }).click();
+  const settings = page.getByRole("region", { name: "Appearance settings", exact: true });
+  await settings.getByRole("radio", { name: /Continuous blue aura/ }).check();
+  const radioSize = await settings.getByRole("radio", { name: /Continuous blue aura/ }).evaluate(el => ({ width: el.getBoundingClientRect().width, height: el.getBoundingClientRect().height }));
+  expect(radioSize.width).toBeLessThanOrEqual(20);
+  expect(radioSize.height).toBeLessThanOrEqual(20);
+  await expect(logo).toHaveAttribute("data-logo", "orbit");
+  await expect(page.locator('link[rel="icon"]')).toHaveAttribute("href", /orbit-poster\.svg$/);
+  await expect(logo.locator("img")).toHaveAttribute("src", /orbit-96\.gif$/);
+  await page.screenshot({ path: "test-results/branding-appearance-1080p.png" });
+  await page.setViewportSize({ width: 390, height: 844 });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBeTruthy();
+  await settings.scrollIntoViewIfNeeded();
+  await page.screenshot({ path: "test-results/branding-appearance-phone.png", fullPage: true });
+  await page.setViewportSize({ width: 1920, height: 1080 });
+  await page.reload();
+  await expect(logo).toHaveAttribute("data-logo", "orbit");
+  await page.getByRole("button", { name: "Content settings", exact: true }).click();
+  await settings.getByLabel("Animate logo", { exact: true }).uncheck();
+  await expect(logo.locator("img")).toHaveAttribute("src", /orbit-poster\.svg$/);
+  await settings.getByLabel("Animate logo", { exact: true }).check();
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await expect.poll(() => logo.locator("img").evaluate(el => (el as HTMLImageElement).currentSrc)).toContain("orbit-poster.svg");
+  await page.emulateMedia({ reducedMotion: "no-preference" });
+  await expect.poll(() => logo.locator("img").evaluate(el => (el as HTMLImageElement).currentSrc)).toContain("orbit-96.gif");
+
+  await settings.getByRole("button", { name: "Restore default logo", exact: true }).click();
+  await expect(logo).toHaveAttribute("data-logo", "rays");
+  await expect(settings.getByLabel("Animate logo", { exact: true })).toBeChecked();
+  await expect.poll(() => page.evaluate(() => localStorage.getItem("ghm:logo-preferences:v1"))).toBeNull();
+  await settings.getByRole("radio", { name: /Continuous blue aura/ }).check();
+  await page.getByLabel("Account menu", { exact: true }).click();
+  await page.getByLabel("Sign out", { exact: true }).click();
+  await expect(page.locator(".wm-login-brand .wm-logo")).toHaveAttribute("data-logo", "orbit");
+  await expect(page.locator(".wm-login-brand img")).toHaveAttribute("src", /orbit-96\.gif$/);
+});

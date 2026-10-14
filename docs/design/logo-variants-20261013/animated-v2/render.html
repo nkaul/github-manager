@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Zen Loop frame renderer</title></head>
+<body style="margin:0;background:transparent"><canvas id="frame" width="512" height="512"></canvas>
+<script src="renderer.js"></script><script>
+  window.renderLogo = async function (kind, seconds) {
+    const source = ZenLoop.frame(kind, seconds);
+    const url = URL.createObjectURL(new Blob([source], { type: "image/svg+xml" }));
+    try {
+      const image = new Image();
+      image.src = url;
+      await image.decode();
+      const canvas = document.getElementById("frame");
+      const context = canvas.getContext("2d");
+      context.clearRect(0, 0, 512, 512);
+      context.drawImage(image, 0, 0, 512, 512);
+      return { png: canvas.toDataURL("image/png").split(",")[1], svg: source };
+    } finally { URL.revokeObjectURL(url); }
+  };
+</script></body></html>

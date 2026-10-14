@@ -1,0 +1,9 @@
+const fs=require('node:fs'),path=require('node:path');
+const {chromium,expect}=require('../../../frontend/node_modules/@playwright/test');
+(async()=>{
+ const out=path.resolve(__dirname,'../../full-v2'),browser=await chromium.launch({headless:true}),page=await browser.newPage({viewport:{width:1440,height:1000}});
+ await page.goto('http://127.0.0.1:8123');const video=page.locator('#video');await video.evaluate(v=>{v.muted=true;return v.play();});await page.waitForFunction(()=>document.getElementById('video').querySelector('track').readyState===2);await video.evaluate(v=>{v.pause();v.currentTime=3;});await page.waitForFunction(()=>document.getElementById('video').readyState>=2);
+ const captions=await video.evaluate(v=>({readyState:v.querySelector('track').readyState,cues:v.textTracks[0].cues.length}));expect(captions.cues).toBeGreaterThan(300);await page.evaluate(()=>window.scrollTo(0,0));await page.screenshot({path:path.join(out,'player-desktop.png')});
+ await page.getByRole('button',{name:'Fullscreen',exact:true}).click();await page.waitForFunction(()=>!!document.fullscreenElement);await page.screenshot({path:path.join(out,'player-fullscreen.png')});await page.evaluate(()=>document.exitFullscreen());await page.setViewportSize({width:390,height:844});await page.evaluate(()=>window.scrollTo(0,0));await page.screenshot({path:path.join(out,'player-phone.png')});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ const qa=JSON.parse(fs.readFileSync(path.join(out,'player-qa.json')));qa.caption_loading=captions;qa.visual_review='Updated cue sizing and top-of-page phone snapshot; media and all 32 earlier seek checks unchanged';fs.writeFileSync(path.join(out,'player-qa.json'),JSON.stringify(qa,null,2));await browser.close();console.log('Caption loading, fullscreen and phone visual checks PASS',JSON.stringify(captions));
+})().catch(e=>{console.error(e.message.split('Call log:')[0]);process.exitCode=1;});

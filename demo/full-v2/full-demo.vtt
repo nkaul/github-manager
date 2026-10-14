@@ -1,0 +1,1171 @@
+WEBVTT
+
+00:00:00.400 --> 00:00:04.360
+Welcome to GitHub Manager We will connect your inventory
+
+00:00:05.220 --> 00:00:08.040
+organize it with reviewable intelligence and test the controls
+
+00:00:08.040 --> 00:00:09.380
+that keep you in charge
+
+00:00:11.340 --> 00:00:16.060
+Continue with GitHub opens your OAuth app authorization Complete
+
+00:00:16.060 --> 00:00:19.700
+that step privately Passwords and authorization screens are
+
+00:00:19.700 --> 00:00:20.940
+excluded from this recording
+
+00:00:22.830 --> 00:00:27.230
+After sign in your workspace opens immediately Repository
+
+00:00:27.230 --> 00:00:30.590
+discovery and organization are separate so useful browsing
+
+00:00:30.590 --> 00:00:32.350
+does not wait for an AI run
+
+00:00:34.350 --> 00:00:38.090
+The header holds GitHub Sync AI organization content settings
+
+00:00:38.430 --> 00:00:41.790
+and taxonomy browsing The sidebar leaves most of its
+
+00:00:41.790 --> 00:00:42.910
+space for your structure
+
+00:00:44.850 --> 00:00:48.330
+Use Sync GitHub to refresh the accessible inventory The
+
+00:00:48.330 --> 00:00:51.470
+application reads GitHub data It does not modify your
+
+00:00:51.470 --> 00:00:52.070
+repositories
+
+00:00:57.340 --> 00:01:01.120
+My Repos follows ownership collaboration contribution and
+
+00:01:01.120 --> 00:01:04.880
+confirmed relationships Favorites follows stars or watches
+
+00:01:04.880 --> 00:01:07.840
+with the coverage actually available to this account
+
+00:01:09.660 --> 00:01:12.460
+Access candidates can include broadly accessible repositories
+
+00:01:13.780 --> 00:01:16.920
+Open details to inspect the relationship and explicitly include
+
+00:01:16.920 --> 00:01:18.700
+a relevant candidate in My Repos
+
+00:01:20.820 --> 00:01:24.420
+Check source coverage after a run Observed partial or
+
+00:01:24.420 --> 00:01:27.600
+unavailable sources describe what was verified rather than
+
+00:01:27.600 --> 00:01:29.940
+promising complete access to every organization
+
+00:01:32.370 --> 00:01:35.330
+Search names and concepts then refine by language and
+
+00:01:35.330 --> 00:01:38.710
+visibility Active filter chips make it easy to remove
+
+00:01:38.710 --> 00:01:41.350
+one restriction or clear them all
+
+00:01:42.490 --> 00:01:45.190
+The compact cards count repositories in the current scope
+
+00:01:46.350 --> 00:01:49.990
+Labeled no project needs review and selected answer different
+
+00:01:49.990 --> 00:01:51.690
+questions with matching icons
+
+00:01:53.990 --> 00:01:57.710
+Select a repository to see selected subtotals Selection can
+
+00:01:57.710 --> 00:02:00.550
+span pages Changing the filter clears it with feedback
+
+00:02:00.550 --> 00:02:02.770
+instead of silently using another cohort
+
+00:02:04.590 --> 00:02:08.210
+Load more when the inventory spans pages Open repository
+
+00:02:08.210 --> 00:02:11.970
+details to inspect trusted metadata current memberships and
+
+00:02:11.970 --> 00:02:13.430
+a durable link back to GitHub
+
+00:02:14.560 --> 00:02:18.182
+Latest work uses your qualifying contribution dates not a
+
+00:02:18.182 --> 00:02:22.482
+repository's last push time Compare the 7 14 30
+
+00:02:22.482 --> 00:02:23.622
+and 90 day windows
+
+00:02:25.180 --> 00:02:28.620
+An empty or partial result is shown honestly The
+
+00:02:28.620 --> 00:02:31.500
+contribution observation is bounded and cannot establish
+
+00:02:31.500 --> 00:02:33.340
+a complete lifetime activity history
+
+00:02:35.060 --> 00:02:39.240
+Private repository metadata can remain useful locally Private
+
+00:02:39.240 --> 00:02:42.100
+readme text and phrases derived from it are excluded
+
+00:02:42.100 --> 00:02:43.860
+from the approved model input path
+
+00:02:45.160 --> 00:02:47.640
+We now use a separate copy of this real
+
+00:02:47.640 --> 00:02:51.500
+account workspace with the same repositories and saved organization
+
+00:02:52.560 --> 00:02:55.520
+Reset and recovery demonstrations leave your working workspace
+
+00:02:55.520 --> 00:02:55.960
+intact
+
+00:02:58.020 --> 00:03:00.400
+Open a real public repository from the connected account
+
+00:03:01.100 --> 00:03:04.080
+Its metadata and extracted evidence support organization
+
+00:03:04.080 --> 00:03:08.220
+while the original repository remains unchanged on GitHub
+
+00:03:10.320 --> 00:03:14.060
+Evidence extraction runs locally It uses repository metadata
+
+00:03:14.060 --> 00:03:17.260
+and a verified public readme to produce ranked phrases
+
+00:03:17.260 --> 00:03:20.200
+and source sections with a recorded extractor version
+
+00:03:22.260 --> 00:03:25.640
+Open a sample's details to inspect phrases section references
+
+00:03:25.900 --> 00:03:29.760
+and extractor version The profile supplies short evidence
+
+00:03:29.760 --> 00:03:31.820
+that later organization can reuse
+
+00:03:33.840 --> 00:03:37.220
+Missing branches remain unknown until verified A missing
+
+00:03:37.220 --> 00:03:41.100
+readme can use approved public metadata Neither situation
+
+00:03:41.100 --> 00:03:43.140
+is a reason to invent repository facts
+
+00:03:45.110 --> 00:03:47.830
+AI organization lets you choose a taxonomy sample size
+
+00:03:47.830 --> 00:03:51.490
+and a separate classification batch size Manual selection
+
+00:03:51.490 --> 00:03:53.570
+remains available for a precise cohort
+
+00:03:55.560 --> 00:03:58.000
+Choose the current filtered view or the entire collection
+
+00:03:58.380 --> 00:04:02.340
+The preview shows the actual chosen repositories exclusions
+
+00:04:03.120 --> 00:04:05.040
+processing method and conservative cost bound
+
+00:04:06.550 --> 00:04:09.730
+For this walkthrough one small public cohort can produce
+
+00:04:09.730 --> 00:04:13.410
+a new draft Paid requests remain bounded The rest
+
+00:04:13.410 --> 00:04:16.590
+of the demonstrations use saved results and local reconciliation
+
+00:04:18.780 --> 00:04:22.580
+Discover Taxonomy proposes domains projects topics and tags
+
+00:04:23.480 --> 00:04:25.480
+Start the reviewed run only after checking its scope
+
+00:04:26.320 --> 00:04:27.720
+Publication is a separate decision
+
+00:04:28.934 --> 00:04:32.954
+Open review draft to inspect the proposed concepts and
+
+00:04:32.954 --> 00:04:38.114
+their supporting samples Edit names definitions aliases or
+
+00:04:38.114 --> 00:04:40.514
+a project's parent domain before publication
+
+00:04:42.530 --> 00:04:45.530
+Save draft preserves your work without changing the active
+
+00:04:45.530 --> 00:04:49.990
+vocabulary Reopen it to continue reviewing rather than treating
+
+00:04:49.990 --> 00:04:52.590
+an unfinished proposal as published content
+
+00:04:54.370 --> 00:04:57.130
+Approve and publish makes one reviewed taxonomy revision
+
+00:04:57.130 --> 00:05:01.030
+visible The app validates names and parent relationships
+
+00:05:01.030 --> 00:05:03.290
+together before committing that revision
+
+00:05:05.120 --> 00:05:08.680
+Domains group projects Repositories can belong to several
+
+00:05:08.680 --> 00:05:12.160
+projects Topics and tags are independent facets that can
+
+00:05:12.160 --> 00:05:13.460
+cross those project boundaries
+
+00:05:15.650 --> 00:05:18.670
+Classification compares repository evidence with the published
+
+00:05:18.670 --> 00:05:22.370
+vocabulary We will use one public repository for a
+
+00:05:22.370 --> 00:05:25.710
+bounded live check Then inspect the resulting review suggestions
+
+00:05:27.960 --> 00:05:30.480
+Start the reviewed run and watch its progress and
+
+00:05:30.480 --> 00:05:34.240
+persisted outcomes Completion describes that bounded cohort
+
+00:05:34.860 --> 00:05:36.420
+not every repository in the account
+
+00:05:38.210 --> 00:05:41.070
+Accept a useful suggestion to make it a user
+
+00:05:41.070 --> 00:05:44.630
+decision A pending suggestion alone does not count as
+
+00:05:44.630 --> 00:05:46.070
+an accepted repository label
+
+00:05:48.070 --> 00:05:50.650
+This live result offered an addition which we accepted
+
+00:05:51.790 --> 00:05:55.210
+Next a local reconciliation example will demonstrate rejecting
+
+00:05:55.210 --> 00:05:58.090
+one proposal and reviewing several others together
+
+00:05:59.990 --> 00:06:03.790
+Group suggestions by concept or repository These proposals
+
+00:06:03.790 --> 00:06:07.030
+come from local matches against the real repository evidence
+
+00:06:07.750 --> 00:06:09.430
+Reject one when you prefer to keep it out
+
+00:06:09.430 --> 00:06:10.290
+of your organization
+
+00:06:12.590 --> 00:06:14.930
+Select only the proposals you intend to decide together
+
+00:06:16.110 --> 00:06:19.110
+The review summary identifies the exact acceptance or rejection
+
+00:06:19.110 --> 00:06:20.870
+batch before you confirm it
+
+00:06:23.370 --> 00:06:27.050
+Confirm the reviewed selection to apply those decisions Stale
+
+00:06:27.510 --> 00:06:30.210
+inaccessible or conflicting items are checked individually
+
+00:06:30.210 --> 00:06:32.550
+and reported instead of partially disappearing
+
+00:06:34.330 --> 00:06:36.810
+A repository can be labeled by a topic or
+
+00:06:36.810 --> 00:06:40.330
+tag and still have no project Those coverage counts
+
+00:06:40.330 --> 00:06:43.450
+must not be mistaken for a failed AI analysis
+
+00:06:44.710 --> 00:06:48.530
+Successful classification has a durable per repository receipt
+
+00:06:49.270 --> 00:06:52.370
+independent of detailed run history and the number of
+
+00:06:52.370 --> 00:06:53.330
+accepted memberships
+
+00:06:55.290 --> 00:06:59.390
+Preview classification again Already analyzed repositories
+
+00:06:59.390 --> 00:07:03.710
+reconcile locally by default including valid no match results
+
+00:07:04.350 --> 00:07:06.630
+The preview shows zero fresh provider calls
+
+00:07:08.420 --> 00:07:12.180
+Use organization view to distinguish no labels no project
+
+00:07:12.680 --> 00:07:16.480
+needs review no AI match failed or blocked and
+
+00:07:16.480 --> 00:07:17.140
+stale analysis
+
+00:07:19.430 --> 00:07:22.130
+Taxonomy or evidence changes can make an earlier result
+
+00:07:22.130 --> 00:07:25.910
+stale without clearing its history Extracting evidence is
+
+00:07:25.910 --> 00:07:29.270
+local preparation not automatic permission for another paid
+
+00:07:29.270 --> 00:07:29.590
+send
+
+00:07:31.670 --> 00:07:35.770
+Choose live AI to expose explicit reanalysis This is
+
+00:07:35.770 --> 00:07:38.850
+a separate choice for meaningful evidence changes expanded
+
+00:07:38.850 --> 00:07:41.030
+taxonomy or a reviewed retry
+
+00:07:43.220 --> 00:07:46.640
+Enable reanalyze with AI and give a reason The
+
+00:07:46.640 --> 00:07:50.040
+resulting preview discloses previously analyzed inputs and
+
+00:07:50.040 --> 00:07:51.720
+the finite call and dollar bound
+
+00:07:53.730 --> 00:07:57.550
+Rediscover taxonomy produces another draft Reclassifying
+
+00:07:57.550 --> 00:08:01.450
+repositories proposes assignments Neither operation automatically
+
+00:08:01.450 --> 00:08:04.130
+publishes concepts or accepts model output
+
+00:08:05.700 --> 00:08:10.040
+We cancel these previews after inspecting them Routine edits
+
+00:08:10.040 --> 00:08:13.120
+in a missing project do not authorize repeatedly sending
+
+00:08:13.120 --> 00:08:14.960
+the same repository to a model
+
+00:08:16.860 --> 00:08:20.600
+Projects keeps the domain to project tree Switch to
+
+00:08:20.600 --> 00:08:23.840
+topics or tags to browse searchable lists with aliases
+
+00:08:23.840 --> 00:08:25.760
+and distinct repository counts
+
+00:08:28.010 --> 00:08:31.690
+Search a canonical name or an alias Accepted repository
+
+00:08:31.690 --> 00:08:35.690
+counts and pending review badges remain separate So a
+
+00:08:35.690 --> 00:08:37.770
+proposal is not mistaken for an existing membership
+
+00:08:39.740 --> 00:08:42.820
+Browse taxonomy in the header exposes the same modes
+
+00:08:44.000 --> 00:08:47.080
+Opening the menu loads structure Repository lists are fetched
+
+00:08:47.080 --> 00:08:48.520
+only after you choose a concept
+
+00:08:49.960 --> 00:08:53.300
+Selecting a topic or tag opens its matching repositories
+
+00:08:54.640 --> 00:08:57.760
+Content settings also offers view repositories while retaining
+
+00:08:57.760 --> 00:08:59.620
+the editing controls for that concept
+
+00:09:00.870 --> 00:09:05.210
+Drag a repository onto a project topic or tag
+
+00:09:05.210 --> 00:09:09.750
+to add membership Existing memberships are retained A drop
+
+00:09:09.750 --> 00:09:11.310
+is not an exclusive move
+
+00:09:13.480 --> 00:09:16.460
+Dragging a selected row carries the explicitly selected set
+
+00:09:17.680 --> 00:09:20.580
+Review the repository count and target in the confirmation
+
+00:09:20.580 --> 00:09:23.860
+dialog before applying a multi repository drop
+
+00:09:25.800 --> 00:09:28.080
+Drop onto a domain to choose one of its
+
+00:09:28.080 --> 00:09:31.780
+existing projects Domain coverage derives through projects
+
+00:09:32.420 --> 00:09:34.920
+The app does not create a direct repository to
+
+00:09:34.920 --> 00:09:35.500
+domain edge
+
+00:09:37.220 --> 00:09:42.020
+The open header taxonomy menu also accepts drops These
+
+00:09:42.020 --> 00:09:45.480
+actions save user assignments locally and do not reset
+
+00:09:45.480 --> 00:09:48.020
+prior analysis or call an AI model
+
+00:09:49.650 --> 00:09:52.590
+Use the bulk toolbar when a menu is easier
+
+00:09:52.590 --> 00:09:56.450
+than dragging Select the target concept and add memberships
+
+00:09:56.450 --> 00:09:58.450
+to the explicit repository selection
+
+00:10:00.750 --> 00:10:03.910
+Repository details provides the same manual membership control
+
+00:10:03.910 --> 00:10:07.910
+for keyboard and touch users Native desktop drag and
+
+00:10:07.910 --> 00:10:10.230
+drop is never the only way to organize
+
+00:10:12.240 --> 00:10:15.660
+Remove just one membership and inspect the others Multiple
+
+00:10:15.660 --> 00:10:19.700
+projects topics and tags are preserved independently with
+
+00:10:19.700 --> 00:10:21.640
+your user decisions taking precedence
+
+00:10:23.880 --> 00:10:27.240
+Clear the selection when finished Repository actions use
+
+00:10:27.240 --> 00:10:30.300
+the current scope selection and the selected card makes
+
+00:10:30.300 --> 00:10:32.820
+that scope visible before the next operation
+
+00:10:35.100 --> 00:10:39.420
+Content settings creates domains projects topics and tags
+
+00:10:40.000 --> 00:10:43.000
+Give each concept a clear name and definition Choose
+
+00:10:43.000 --> 00:10:45.220
+a parent domain when creating a project
+
+00:10:47.190 --> 00:10:50.270
+Rename a project add aliases or change its domain
+
+00:10:50.870 --> 00:10:54.850
+The canonical identifier stays stable so a spelling improvement
+
+00:10:54.850 --> 00:10:56.630
+does not break existing memberships
+
+00:10:58.710 --> 00:11:01.190
+Try an alias already reserved by another concept of
+
+00:11:01.190 --> 00:11:05.010
+the same type The error identifies the exact conflicting
+
+00:11:05.010 --> 00:11:06.710
+field and the existing owner
+
+00:11:08.810 --> 00:11:13.550
+Normalization includes case unicode and punctuation Archived
+
+00:11:13.550 --> 00:11:16.870
+concepts retain their reservations and an alias repeating
+
+00:11:16.870 --> 00:11:19.250
+its own canonical name also conflicts
+
+00:11:20.510 --> 00:11:23.130
+Merge equivalent concepts only after choosing the target
+
+00:11:23.670 --> 00:11:26.650
+The target retains its identity while memberships and aliases
+
+00:11:26.650 --> 00:11:27.770
+are reconciled
+
+00:11:30.570 --> 00:11:33.410
+Separate meanings should remain separate concepts A similar
+
+00:11:33.410 --> 00:11:36.250
+name is evidence to review not permission for an
+
+00:11:36.250 --> 00:11:37.370
+automatic semantic merge
+
+00:11:39.730 --> 00:11:42.950
+Archive a temporary domain and review its dependency explanation
+
+00:11:44.190 --> 00:11:46.710
+Surviving projects move to the protected unassigned domain
+
+00:11:48.720 --> 00:11:51.800
+Inspect a surviving project afterward to confirm its parent
+
+00:11:51.800 --> 00:11:56.440
+and memberships Archived reservations remain visible to validation
+
+00:11:56.440 --> 00:11:58.540
+rather than being silently reused
+
+00:12:00.160 --> 00:12:04.100
+In this manually edited saved draft the alias AI
+
+00:12:04.100 --> 00:12:07.840
+conflicts with an archived domain named AI That explains
+
+00:12:07.840 --> 00:12:10.060
+why the owning term was absent from the active
+
+00:12:10.060 --> 00:12:13.340
+tree Another alias points to an active domain
+
+00:12:15.290 --> 00:12:18.270
+Choose reuse existing only when the meanings are equivalent
+
+00:12:19.130 --> 00:12:22.490
+The form retains the existing identity and rewrites dependent
+
+00:12:22.490 --> 00:12:23.650
+draft project parents
+
+00:12:25.630 --> 00:12:28.810
+Undo last repair restores the previous form You can
+
+00:12:28.810 --> 00:12:32.030
+instead remove a conflicting alias apply a distinct name
+
+00:12:32.650 --> 00:12:35.110
+exclude a proposal or edit the field manually
+
+00:12:37.060 --> 00:12:41.740
+Remove conflicting aliases and save the repaired draft Publication
+
+00:12:41.740 --> 00:12:44.900
+still needs explicit approval Checking and repairing the
+
+00:12:44.900 --> 00:12:46.380
+form uses no model requests
+
+00:12:48.410 --> 00:12:51.170
+Create a deterministic organization rule using a metadata
+
+00:12:51.170 --> 00:12:54.910
+field and condition Preview the matching repositories before
+
+00:12:54.910 --> 00:12:55.830
+approving the rule
+
+00:12:57.700 --> 00:13:00.220
+Approve the rule only when it's matches and assigned
+
+00:13:00.220 --> 00:13:04.580
+concept makes sense Rules apply locally and preserve existing
+
+00:13:04.580 --> 00:13:06.720
+user decisions and rejection protection
+
+00:13:08.380 --> 00:13:12.460
+Run reorganize incremental in rules only mode then inspect
+
+00:13:12.460 --> 00:13:16.400
+its stored outcomes This is useful organization without provider
+
+00:13:16.400 --> 00:13:16.920
+requests
+
+00:13:19.060 --> 00:13:22.360
+Full classification in rules only mode processes the reviewed
+
+00:13:22.360 --> 00:13:26.560
+cohort through the same local precedence rules Neither control
+
+00:13:26.560 --> 00:13:28.640
+implies fresh inference for every repository
+
+00:13:29.760 --> 00:13:33.060
+The budget panel distinguishes window limits from cumulative
+
+00:13:33.060 --> 00:13:37.020
+money Exhausting a fixed HTTP window does not prevent
+
+00:13:37.020 --> 00:13:40.800
+manual edits extraction rules or valid cached work
+
+00:13:42.800 --> 00:13:45.460
+Manage API allowance can explicitly renew a window with
+
+00:13:45.460 --> 00:13:48.680
+a reason Here that control affects only an isolated
+
+00:13:48.680 --> 00:13:50.860
+test ledger not your real allowance
+
+00:13:52.670 --> 00:13:55.830
+Choose selective limit updates to change just HTTP requests
+
+00:13:55.830 --> 00:14:00.430
+or just generations Historical usage remains recorded Changing
+
+00:14:00.430 --> 00:14:02.270
+a limit does not erase past calls
+
+00:14:04.110 --> 00:14:07.650
+The original spending ceiling persists through restarts resets
+
+00:14:07.730 --> 00:14:11.890
+and new workspaces Unknown remote outcomes retain conservative
+
+00:14:11.890 --> 00:14:13.970
+reservations until they can be reviewed
+
+00:14:15.860 --> 00:14:18.660
+Adaptive cost budget bounds are run by dollars and
+
+00:14:18.660 --> 00:14:21.920
+derives finite call slots It can admit reviewed work
+
+00:14:21.920 --> 00:14:24.340
+even when a fixed request window is exhausted
+
+00:14:26.290 --> 00:14:29.630
+Choose a repository count and per run maximum Then
+
+00:14:29.630 --> 00:14:33.790
+inspect the exact cohort and conservative bound The preview
+
+00:14:33.790 --> 00:14:36.130
+may admit fewer repositories than you requested
+
+00:14:38.170 --> 00:14:42.090
+Save taxonomy and classification counts with the budget defaults
+
+00:14:42.310 --> 00:14:45.050
+Saving preferences starts no work and survives a reload
+
+00:14:47.020 --> 00:14:50.060
+Already analyzed repositories still reconcile offline in
+
+00:14:50.060 --> 00:14:53.820
+adaptive mode Selecting a larger dollar maximum does not
+
+00:14:53.820 --> 00:14:57.440
+bypass privacy analysis protection or the cumulative ceiling
+
+00:14:58.840 --> 00:15:02.620
+Automatic organization is configurable Weighted changes across
+
+00:15:02.620 --> 00:15:05.540
+distinct entities can trigger it A configured number of
+
+00:15:05.540 --> 00:15:07.980
+new projects can also trigger it within the change
+
+00:15:07.980 --> 00:15:08.180
+window
+
+00:15:09.660 --> 00:15:13.940
+Choose eligible change types quiet period and cooldown Cosmetic
+
+00:15:13.940 --> 00:15:16.700
+edits are excluded and a current window explains whether
+
+00:15:16.700 --> 00:15:17.720
+the threshold is met
+
+00:15:19.380 --> 00:15:22.100
+We create two temporary projects and wait for the
+
+00:15:22.100 --> 00:15:25.460
+real 90 second quiet period The idle middle is
+
+00:15:25.460 --> 00:15:28.400
+removed in editing The scheduler is not accelerated
+
+00:15:32.050 --> 00:15:34.950
+The actual scheduler waits for the configured quiet interval
+
+00:15:35.590 --> 00:15:39.310
+then reconciles already analyzed repositories locally Any
+
+00:15:39.310 --> 00:15:41.950
+idle wait removed from the recording is disclosed
+
+00:15:43.230 --> 00:15:46.690
+Open Appearance in Content Settings to choose Blue Zen
+
+00:15:46.690 --> 00:15:50.970
+Rays or Continuous Blue Aura The Rays cat is
+
+00:15:50.970 --> 00:15:53.530
+tail free in both its normal and meditating poses
+
+00:15:56.430 --> 00:15:58.770
+Select the aura style to update the header and
+
+00:15:58.770 --> 00:16:02.510
+static browser tab icon The preference is saved in
+
+00:16:02.510 --> 00:16:05.390
+this browser across workspace changes and sign out
+
+00:16:09.020 --> 00:16:11.840
+Turn Animate Logo off for a still image Your
+
+00:16:11.840 --> 00:16:15.020
+operating system's reduced motion preference also selects
+
+00:16:15.020 --> 00:16:16.460
+the static poster automatically
+
+00:16:18.800 --> 00:16:22.640
+Restore Default Logo clears the browser override Appearance
+
+00:16:22.640 --> 00:16:25.620
+is a personal presentation preference and does not change
+
+00:16:25.620 --> 00:16:28.800
+taxonomy repository data or AI budgets
+
+00:16:30.705 --> 00:16:33.595
+The same application adapts to a phone width viewport
+
+00:16:34.815 --> 00:16:37.135
+This chapter centers the actual phone view within the
+
+00:16:37.135 --> 00:16:38.355
+full HD recording
+
+00:16:40.210 --> 00:16:42.830
+Open the navigation drawer to reach collections and taxonomy
+
+00:16:43.790 --> 00:16:46.150
+Close it to recover table space rather than keeping
+
+00:16:46.150 --> 00:16:48.410
+a large tree over the repository list
+
+00:16:50.210 --> 00:16:53.270
+Use repository details and the membership selector as touch
+
+00:16:53.270 --> 00:16:57.210
+friendly alternatives to dragging Focusable controls preserve
+
+00:16:57.210 --> 00:16:59.910
+the same organization workflow on smaller screens
+
+00:17:01.670 --> 00:17:05.670
+Desktop navigation resumes in the next chapter The saved
+
+00:17:05.670 --> 00:17:09.210
+data is shared across layouts only the navigation presentation
+
+00:17:09.210 --> 00:17:09.710
+changes
+
+00:17:11.870 --> 00:17:15.750
+Reload the page and verify that Concepts Memberships Analysis
+
+00:17:15.750 --> 00:17:20.150
+Receipts and Saved Defaults remain Persistent workspace data
+
+00:17:20.150 --> 00:17:21.650
+is separate from the browser session
+
+00:17:23.770 --> 00:17:26.470
+Sign out and restore the recording copy's local session
+
+00:17:27.490 --> 00:17:30.770
+Your original GitHub OAuth sign in was verified earlier
+
+00:17:31.530 --> 00:17:34.770
+Durable records return without reconstructing the organization
+
+00:17:34.770 --> 00:17:35.530
+from scratch
+
+00:17:37.680 --> 00:17:40.120
+Restart only the isolated back end used for these
+
+00:17:40.120 --> 00:17:44.480
+tests In memory sessions require sign in again Stored
+
+00:17:44.480 --> 00:17:47.200
+organization and completed run history survive
+
+00:17:49.450 --> 00:17:52.310
+Interrupted provider work must be reviewed rather than silently
+
+00:17:52.310 --> 00:17:56.210
+retried Persistence is useful only when it also preserves
+
+00:17:56.210 --> 00:17:58.230
+the reasons not to repeat uncertain calls
+
+00:17:59.360 --> 00:18:02.921
+Rediscover taxonomy is separate from routine classification
+
+00:18:03.861 --> 00:18:07.281
+For an intentional refresh select the Explicit Reanalysis
+
+00:18:07.281 --> 00:18:10.481
+option and record why the vocabulary should change
+
+00:18:12.550 --> 00:18:16.710
+Inspect a saved alternative draft without publishing it This
+
+00:18:16.710 --> 00:18:20.490
+reuses a previous real model result The active registry
+
+00:18:20.490 --> 00:18:24.050
+and accepted mappings remain unchanged during review
+
+00:18:25.560 --> 00:18:29.240
+Reject the draft when the existing vocabulary is preferable
+
+00:18:30.140 --> 00:18:33.520
+That decision does not delete the published taxonomy or
+
+00:18:33.520 --> 00:18:35.300
+trigger another classification run
+
+00:18:37.350 --> 00:18:40.930
+Discovery proposes concepts publication approves vocabulary
+
+00:18:42.150 --> 00:18:45.110
+Classification proposes memberships and acceptance makes
+
+00:18:45.110 --> 00:18:49.230
+your decisions Keeping these steps distinct makes the workflow
+
+00:18:49.230 --> 00:18:49.730
+predictable
+
+00:18:51.240 --> 00:18:55.100
+Reset has independent selections for AI organization data
+
+00:18:55.100 --> 00:18:59.760
+and user taxonomy content Preview the exact dependency counts
+
+00:18:59.760 --> 00:19:01.400
+before choosing what to remove
+
+00:19:03.070 --> 00:19:06.450
+The server verifies the impact and limits the preview's
+
+00:19:06.450 --> 00:19:10.770
+lifetime A changed workspace requires a new preview preventing
+
+00:19:10.770 --> 00:19:12.550
+confirmation against outdated counts
+
+00:19:14.560 --> 00:19:18.540
+The confirmation requires exactly delete Extra spaces do
+
+00:19:18.540 --> 00:19:21.640
+not pass Change the scope and the old confirmation
+
+00:19:21.640 --> 00:19:22.280
+is cleared
+
+00:19:24.280 --> 00:19:27.060
+We cancel this first preview and perform the destructive
+
+00:19:27.060 --> 00:19:31.540
+checks only in the isolated collection No GitHub repository
+
+00:19:31.540 --> 00:19:34.200
+or original readiness report is deleted
+
+00:19:36.030 --> 00:19:39.430
+Before AI only reset retain a manual membership and
+
+00:19:39.430 --> 00:19:43.430
+a rejected proposal as witnesses Their protection is independent
+
+00:19:43.430 --> 00:19:46.610
+from removable AI suggestions and detailed history
+
+00:19:48.120 --> 00:19:52.340
+Select AI state cleanup inspect the preview type the
+
+00:19:52.340 --> 00:19:56.300
+exact confirmation and wait for cleanup verified before continuing
+
+00:19:58.320 --> 00:20:02.780
+Core repository data published taxonomy user mappings rejection
+
+00:20:02.780 --> 00:20:06.980
+protection compact analysis receipts and budget history remain
+
+00:20:06.980 --> 00:20:08.200
+after verified cleanup
+
+00:20:10.360 --> 00:20:13.840
+Optional cached restart is still a reviewable proposal and
+
+00:20:13.840 --> 00:20:16.800
+honors compatible evidence and prior analysis protection
+
+00:20:17.360 --> 00:20:20.740
+A missing replay is disclosed instead of starting paid
+
+00:20:20.740 --> 00:20:21.180
+inference
+
+00:20:22.314 --> 00:20:26.214
+Select only domains in the user content checklist and
+
+00:20:26.214 --> 00:20:30.494
+inspect the dependency counts Keep AI state cleanup unselected
+
+00:20:30.494 --> 00:20:32.254
+to make this a focused test
+
+00:20:34.440 --> 00:20:37.480
+Confirm the reviewed reset and wait for verified cleanup
+
+00:20:38.520 --> 00:20:42.100
+Surviving projects are reparented to unassigned rather than
+
+00:20:42.100 --> 00:20:43.140
+left with missing parents
+
+00:20:44.680 --> 00:20:47.940
+Browse the projects afterward to check that dependency handling
+
+00:20:49.300 --> 00:20:52.600
+Repository metadata and independent topic or tag memberships
+
+00:20:52.600 --> 00:20:53.460
+remain available
+
+00:20:55.740 --> 00:20:59.080
+Selective reset is an organizational operation It does not
+
+00:20:59.080 --> 00:21:02.200
+replenish a budget or remove the historical record that
+
+00:21:02.200 --> 00:21:03.540
+a repository was analyzed
+
+00:21:05.430 --> 00:21:09.010
+Now preview all user taxonomy kinds and the intended
+
+00:21:09.010 --> 00:21:13.790
+AI state Full reset removes dependent memberships and begins
+
+00:21:13.790 --> 00:21:15.570
+a new taxonomy epoch
+
+00:21:17.720 --> 00:21:22.420
+Confirm exactly and wait for cleanup verification Repository
+
+00:21:22.420 --> 00:21:26.160
+inventory and budget history remain Old concept identifiers
+
+00:21:26.160 --> 00:21:28.100
+are no longer valid assignment targets
+
+00:21:30.310 --> 00:21:32.730
+Rebuild the domain and project manually in the copied
+
+00:21:32.730 --> 00:21:36.890
+workspace These reviewed concepts receive new identifiers
+
+00:21:36.890 --> 00:21:38.930
+instead of reviving deleted ones
+
+00:21:41.380 --> 00:21:46.000
+Analysis receipts still preserve historical processing Another
+
+00:21:46.000 --> 00:21:50.080
+paid analysis requires the explicit reanalysis choice even
+
+00:21:50.080 --> 00:21:52.900
+when newly created concepts need more organization
+
+00:21:55.240 --> 00:21:58.340
+Expand a persisted run to inspect its method repository
+
+00:21:58.340 --> 00:22:02.580
+outcomes failures and any budget result A completed batch
+
+00:22:02.580 --> 00:22:04.720
+can still cover only part of the inventory
+
+00:22:06.640 --> 00:22:09.800
+No AI match failed or blocked and stale are
+
+00:22:09.800 --> 00:22:13.620
+different states Existing accepted labels can remain useful
+
+00:22:13.620 --> 00:22:16.300
+even when there is no additional model match
+
+00:22:18.160 --> 00:22:21.200
+Cached AI never falls back to paid inference When
+
+00:22:21.200 --> 00:22:24.380
+a compatible result is unavailable inspect that limitation
+
+00:22:24.380 --> 00:22:26.980
+or choose an explicitly reviewed live run
+
+00:22:29.010 --> 00:22:32.290
+Read provenance before interpreting a result Fresh live model
+
+00:22:32.290 --> 00:22:36.070
+results saved real model evidence and local rules are
+
+00:22:36.070 --> 00:22:38.330
+identified separately throughout this walkthrough
+
+00:22:39.440 --> 00:22:42.952
+The earlier pretesting and benchmark reports remain available
+
+00:22:43.832 --> 00:22:47.612
+They record GitHub access checks named AWS resource tests
+
+00:22:48.552 --> 00:22:51.392
+extraction comparisons and real model readiness evidence
+
+00:22:53.240 --> 00:22:56.060
+This recording preserves the original walkthrough the voice
+
+00:22:56.060 --> 00:23:00.060
+audition and the earlier testing history Its new validation
+
+00:23:00.060 --> 00:23:02.220
+report maps features to recorded checks
+
+00:23:03.760 --> 00:23:07.500
+The working demo uses the approved local application adapter
+
+00:23:08.060 --> 00:23:11.540
+Cloud runtime deployment distributed workers and production
+
+00:23:11.540 --> 00:23:13.780
+scale operation remain deferred
+
+00:23:15.720 --> 00:23:18.400
+Bounded GitHub coverage and small model samples do not
+
+00:23:18.400 --> 00:23:21.640
+prove exhaustive access or universal classification quality
+
+00:23:22.580 --> 00:23:25.680
+The product keeps evidence provenance and review visible
+
+00:23:27.590 --> 00:23:31.710
+For everyday use sync GitHub browse the inventory extract
+
+00:23:31.710 --> 00:23:36.210
+reusable evidence review taxonomy and classify only the repositories
+
+00:23:36.210 --> 00:23:37.590
+that need new analysis
+
+00:23:39.120 --> 00:23:43.020
+Review suggestions then use manual memberships drag and drop
+
+00:23:43.200 --> 00:23:47.220
+or local rules to finish organization Missing project coverage
+
+00:23:47.220 --> 00:23:49.620
+alone does not require another model call
+
+00:23:51.400 --> 00:23:54.760
+Use explicit reanalysis for meaningful changes Configure
+
+00:23:54.760 --> 00:23:58.200
+automation deliberately and leave reset until you have reviewed
+
+00:23:58.200 --> 00:23:59.300
+its precise impact
+
+00:24:00.850 --> 00:24:05.350
+That is the complete local workflow The chapters captions
+
+00:24:06.110 --> 00:24:09.050
+transcript and validation report are saved beside the Cedar
+
+00:24:09.050 --> 00:24:10.930
+narrated demo for your next rehearsal
