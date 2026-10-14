@@ -12,15 +12,17 @@ GitHub Manager brings owned, collaborated-on, contributed-to, starred, and watch
 - The authoritative technical specification is [docs/system-design.md](docs/system-design.md)
 - The Codex review and execution guide is [docs/system-design-execution.md](docs/system-design-execution.md).
 
+## GitHub Manager - Detailed Features Demo
+
+▶️ [https://nkaul.github.io/github-manager-demo](https://nkaul.github.io/github-manager-demo)
 
 ## GitHub Manager - System Design Overview
 
-▶️ [Watch the video](https://drive.google.com/file/d/1lFRi4GLv16iaH3W0ZwsYQBa_Xz60ZSHu/view)
+▶️ [https://nkaul.github.io/github-manager-demo/deep-dive/#overview](https://nkaul.github.io/github-manager-demo/deep-dive/#overview)
 
 ## GitHub Manager Architecture Deep Dive - Podcast Style Audio
 
-🎧 [Listen to the podcast](https://drive.google.com/file/d/12OINEhz3RTbcWQVZ9e-lW98J10fQWo-w/view)
-
+🎧 [https://nkaul.github.io/github-manager-demo/deep-dive/#podcast](https://nkaul.github.io/github-manager-demo/deep-dive/#podcast)
 
 ---
 
