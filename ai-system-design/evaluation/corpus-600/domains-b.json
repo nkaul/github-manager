@@ -1,0 +1,1939 @@
+{
+  "schema_version": "corpus_domain_catalog/1.0",
+  "catalog_revision": 18,
+  "created_date": "2026-10-16",
+  "agent": "B",
+  "status": "APPROVED_COLLECTION_SCOPE_CATALOG_LABELS_PROVISIONAL",
+  "collection_target": 180,
+  "network_policy": "No direct network calls or credential reads; use parent-owned authenticated local broker and common collector only.",
+  "global_budget_reference": {
+    "github_http_attempts": 12000,
+    "search_requests": 200,
+    "source_bytes": 1073741824,
+    "staged_candidates": 1800,
+    "accepted_repositories": 600
+  },
+  "membership_policy": {
+    "project_definition": "A named initiative/product family with explicit primary implementation, official/dedicated integration, or documented direct initiative membership.",
+    "valid_evidence": [
+      "Canonical implementation under project-maintainer ownership, corroborated by README purpose.",
+      "A dedicated SDK/provider/plugin/adapter explicitly built for the named initiative, corroborated by purpose and linkage.",
+      "A documented direct project-family component with explicit scope and relationship."
+    ],
+    "invalid_evidence": [
+      "Import/dependency manifest mention alone.",
+      "Generic tutorial or sample that happens to use a library.",
+      "Shared language, framework or storage technology.",
+      "Search topic membership, organization ownership or repository name without corroborating purpose."
+    ],
+    "ground_truth_policy": "All collected labels are PROPOSED and require independent human review/adjudication. Record evidence quotes, line ranges, pinned file URLs, contrary evidence, uncertainty and excluded plausible alternatives.",
+    "unassigned_project_allowed": true,
+    "multiple_project_labels_allowed_only_with_independent_evidence": true,
+    "monorepo_policy": "A repository ID counts once, regardless of package, integration, directory or language count."
+  },
+  "domains": [
+    {
+      "id": "science",
+      "name": "Science, Geospatial & Climate",
+      "description": "Scientific computing and Earth/space/environment analysis software. Exclude generic AI tooling and data plumbing unless scientific analysis is the documented primary purpose.",
+      "target": 60,
+      "staged_candidate_cap": 180,
+      "subdomain_targets": {
+        "scientific_computing_and_astronomy": 20,
+        "geospatial_and_earth_observation": 20,
+        "climate_weather_hydrology": 20
+      },
+      "seed_hypotheses": [
+        {
+          "repo": "QGIS/QGIS",
+          "owner": "QGIS",
+          "project": "QGIS",
+          "rationale": "Approved-plan hypothesis: canonical desktop geospatial platform; verify source purpose.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "APPROVED_PLAN_PRIMARY",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "project_description": "Desktop geographic information system and its dedicated extensions/components.",
+          "project_scope": "Desktop geographic information system and its dedicated extensions/components. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": [
+            "Quantum GIS"
+          ]
+        },
+        {
+          "repo": "astropy/astropy",
+          "owner": "astropy",
+          "project": "Astropy",
+          "rationale": "Canonical astronomy ecosystem core.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "APPROVED_PLAN_PRIMARY",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "project_description": "Astronomy-focused Python core and explicitly affiliated/dedicated astronomy packages.",
+          "project_scope": "Astronomy-focused Python core and explicitly affiliated/dedicated astronomy packages. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "opendatacube/datacube-core",
+          "owner": "opendatacube",
+          "project": "Open Data Cube",
+          "rationale": "Approved-plan hypothesis: core Earth-observation data-cube initiative; verify source purpose.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "APPROVED_PLAN_PRIMARY",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "project_description": "Earth-observation data-cube software for indexing, managing and analyzing satellite observations.",
+          "project_scope": "Earth-observation data-cube software for indexing, managing and analyzing satellite observations. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": [
+            "ODC",
+            "datacube"
+          ]
+        },
+        {
+          "repo": "openmm/openmm",
+          "owner": "openmm",
+          "project": "OpenMM",
+          "rationale": "Approved-plan hypothesis: molecular simulation toolkit; verify source purpose.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "APPROVED_PLAN_PRIMARY",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "project_description": "Molecular simulation toolkit and directly dedicated components or integrations.",
+          "project_scope": "Molecular simulation toolkit and directly dedicated components or integrations. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "OSGeo/gdal",
+          "owner": "OSGeo",
+          "project": "GDAL",
+          "rationale": "Canonical geospatial data-abstraction project.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Geospatial raster/vector data abstraction and format conversion.",
+          "project_scope": "Geospatial raster/vector data abstraction and format conversion. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": [
+            "Geospatial Data Abstraction Library"
+          ]
+        },
+        {
+          "repo": "Ouranosinc/xclim",
+          "owner": "Ouranosinc",
+          "project": "xclim",
+          "rationale": "Canonical climate indices package.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Climate indices, indicators and climate-analysis utilities.",
+          "project_scope": "Climate indices, indicators and climate-analysis utilities. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "geopandas/geopandas",
+          "owner": "geopandas",
+          "project": "GeoPandas",
+          "rationale": "Canonical geospatial dataframe project.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Geospatial dataframe processing and geometry-aware tabular analysis.",
+          "project_scope": "Geospatial dataframe processing and geometry-aware tabular analysis. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "numpy/numpy",
+          "owner": "numpy",
+          "project": "NumPy",
+          "rationale": "Canonical array-computing implementation.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Foundational n-dimensional array and numerical computing implementation.",
+          "project_scope": "Foundational n-dimensional array and numerical computing implementation. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "pangeo-data/pangeo",
+          "owner": "pangeo-data",
+          "project": "Pangeo",
+          "rationale": "Community ecosystem repository; project applicability must be checked against content.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Open scientific community ecosystem for scalable Earth-science analysis; distinguish community coordination from library implementation.",
+          "project_scope": "Open scientific community ecosystem for scalable Earth-science analysis; distinguish community coordination from library implementation. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "pydata/xarray",
+          "owner": "pydata",
+          "project": "xarray",
+          "rationale": "Canonical labeled multidimensional-array project.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Labeled multidimensional array and dataset computation tools.",
+          "project_scope": "Labeled multidimensional array and dataset computation tools. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "rasterio/rasterio",
+          "owner": "rasterio",
+          "project": "Rasterio",
+          "rationale": "Canonical raster I/O project.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Reading, writing and processing geospatial raster datasets.",
+          "project_scope": "Reading, writing and processing geospatial raster datasets. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "scipy/scipy",
+          "owner": "scipy",
+          "project": "SciPy",
+          "rationale": "Canonical numerical/scientific algorithms implementation.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Scientific and numerical algorithm library built around array computation.",
+          "project_scope": "Scientific and numerical algorithm library built around array computation. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        }
+      ],
+      "topics": [
+        {
+          "id": "scientific-computing",
+          "name": "Scientific Computing",
+          "description": "Numerical methods, arrays, mathematical software and reproducible scientific workflows.",
+          "aliases": [
+            "numerical computing",
+            "scientific Python"
+          ]
+        },
+        {
+          "id": "numerical-linear-algebra",
+          "name": "Numerical Linear Algebra",
+          "description": "Matrix/vector operations, sparse arrays and numerical linear algebra algorithms.",
+          "aliases": [
+            "linear algebra",
+            "matrix computation"
+          ]
+        },
+        {
+          "id": "statistical-analysis",
+          "name": "Statistical Analysis",
+          "description": "Statistical inference, fitting and computational data analysis.",
+          "aliases": [
+            "statistical computing",
+            "inference"
+          ]
+        },
+        {
+          "id": "astronomy",
+          "name": "Astronomy",
+          "description": "Astronomical observation data, coordinates, instrumentation or simulation.",
+          "aliases": [
+            "astrophysics",
+            "astronomical computing"
+          ]
+        },
+        {
+          "id": "earth-observation",
+          "name": "Earth Observation",
+          "description": "Remote-sensing/satellite acquisition, preprocessing and analysis.",
+          "aliases": [
+            "remote sensing",
+            "satellite imagery"
+          ]
+        },
+        {
+          "id": "geospatial-analysis",
+          "name": "Geospatial Analysis",
+          "description": "Spatial data manipulation, geometries, coordinate systems and spatial computation.",
+          "aliases": [
+            "GIS",
+            "geographic information systems"
+          ]
+        },
+        {
+          "id": "geospatial-visualization",
+          "name": "Geospatial Visualization",
+          "description": "Interactive or static maps and visual exploration of spatial data.",
+          "aliases": [
+            "cartography",
+            "mapping"
+          ]
+        },
+        {
+          "id": "raster-processing",
+          "name": "Raster Processing",
+          "description": "Read, transform and analyze gridded/georeferenced raster datasets.",
+          "aliases": [
+            "raster analysis",
+            "raster data"
+          ]
+        },
+        {
+          "id": "climate-analysis",
+          "name": "Climate Analysis",
+          "description": "Climate observations, climate model outputs, indices and projections.",
+          "aliases": [
+            "climate data",
+            "climate science"
+          ]
+        },
+        {
+          "id": "weather-modeling",
+          "name": "Weather Modeling",
+          "description": "Weather forecasting, meteorological data and atmospheric modeling.",
+          "aliases": [
+            "meteorology",
+            "weather forecasting"
+          ]
+        },
+        {
+          "id": "hydrology",
+          "name": "Hydrology",
+          "description": "Water cycle, watershed, river and hydrological modeling/data analysis.",
+          "aliases": [
+            "water resources",
+            "hydrological modeling"
+          ]
+        },
+        {
+          "id": "scientific-data-formats",
+          "name": "Scientific Data Formats",
+          "description": "Scientific multidimensional datasets, storage conventions and array-format interoperability.",
+          "aliases": [
+            "netCDF",
+            "multidimensional data"
+          ]
+        },
+        {
+          "id": "molecular-simulation",
+          "name": "Molecular Simulation",
+          "description": "Model molecular interactions and dynamics using physical force fields and simulation engines.",
+          "aliases": [
+            "molecular dynamics",
+            "molecular modeling"
+          ]
+        },
+        {
+          "id": "technical-documentation",
+          "name": "Technical Documentation",
+          "description": "Author, build or translate technical documentation for software or scientific systems. A documentation repository is not the implementation of every documented algorithm.",
+          "aliases": [
+            "software documentation",
+            "reference manuals"
+          ]
+        },
+        {
+          "id": "seismic-hazard-analysis",
+          "name": "Seismic Hazard Analysis",
+          "description": "Compute or assess earthquake/seismic hazard and associated risk.",
+          "aliases": [
+            "earthquake risk",
+            "seismic risk"
+          ]
+        },
+        {
+          "id": "geospatial-datasets",
+          "name": "Geospatial Datasets",
+          "description": "Maintain or distribute spatial/geographic data assets and dataset collections.",
+          "aliases": [
+            "spatial datasets",
+            "geographic data"
+          ]
+        },
+        {
+          "id": "ocean-modeling",
+          "name": "Ocean Modeling",
+          "description": "Simulate ocean circulation and ocean physical processes using numerical ocean models.",
+          "aliases": [
+            "ocean simulation",
+            "ocean circulation modeling"
+          ]
+        },
+        {
+          "id": "geofencing",
+          "name": "Geofencing",
+          "description": "Detect spatial containment/proximity boundary events for tracked geographic entities.",
+          "aliases": [
+            "spatial boundary events",
+            "geofence monitoring"
+          ]
+        },
+        {
+          "id": "education-topic-5",
+          "name": "Learning Content",
+          "aliases": [
+            "course content",
+            "educational resources"
+          ],
+          "description": "Authoring, packaging or management of educational materials; distinguish content-only repositories from platforms.",
+          "status": "PROPOSED_REGISTRY_DEFINITION",
+          "shared_definition_source": "domains-a.json:education-topic-5"
+        },
+        {
+          "id": "technical-resource-discovery",
+          "name": "Technical Resource Discovery",
+          "description": "Curated indexes that help discover software, research, libraries or reference resources; do not infer implementation of linked projects.",
+          "aliases": [
+            "technical resource catalogs"
+          ],
+          "status": "PROPOSED_REGISTRY_DEFINITION",
+          "shared_definition_reference": "Agent A current Technical Resource Discovery annotations; canonical registry reconciliation pending"
+        }
+      ],
+      "queries": [
+        {
+          "query": "org:QGIS is:public fork:false archived:false",
+          "stratum": "approved-family-qgis",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "org:opendatacube is:public fork:false archived:false",
+          "stratum": "approved-family-opendatacube",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "org:astropy is:public fork:false archived:false",
+          "stratum": "approved-family-astropy",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "org:openmm is:public fork:false archived:false",
+          "stratum": "approved-family-openmm",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:scientific-computing is:public fork:false archived:false",
+          "stratum": "scientific-core",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:geospatial is:public fork:false archived:false",
+          "stratum": "geospatial-core",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:climate is:public fork:false archived:false",
+          "stratum": "climate",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "\"earth observation\" in:readme is:public fork:false archived:false",
+          "stratum": "purpose-earth-observation",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "\"molecular simulation\" in:readme is:public fork:false archived:false",
+          "stratum": "purpose-simulation",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:scientific-computing stars:5..500 language:Python is:public fork:false archived:false",
+          "stratum": "low-star-python",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:geospatial stars:5..500 is:public fork:false archived:false",
+          "stratum": "low-star-geospatial",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:climate stars:5..500 is:public fork:false archived:false",
+          "stratum": "low-star-climate",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:geospatial language:JavaScript is:public fork:false archived:false",
+          "stratum": "language-javascript",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:scientific-computing language:Julia is:public fork:false archived:false",
+          "stratum": "language-julia",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:climate language:R is:public fork:false archived:false",
+          "stratum": "language-r",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "地理 in:readme stars:5..500 is:public fork:false archived:false",
+          "stratum": "non-english-chinese",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "climat in:readme language:R stars:5..500 is:public fork:false archived:false",
+          "stratum": "non-english-french-candidate",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "geoespacial in:readme stars:5..500 is:public fork:false archived:false",
+          "stratum": "non-english-spanish-candidate",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        }
+      ],
+      "selection_policy": {
+        "count_unique_numeric_repository_id": true,
+        "prefer_primary_purpose_evidence": true,
+        "non_english_minimum_target": 6,
+        "low_star_5_to_500_minimum_target": 15,
+        "non_python_or_javascript_minimum_target": 8,
+        "per_owner_soft_cap": 6,
+        "per_project_family_soft_cap": 8,
+        "caveat": "All balance values are goals, not permission to fabricate. Sampling bucket does not establish a Domain label. Query language does not establish README language. Unknown membership is not a negative label.",
+        "composition_targets": {
+          "initiative_relationships": 30,
+          "independent_or_near_neighbor": 24,
+          "natural_challenge": 6
+        }
+      },
+      "projects": [
+        {
+          "id": "qgis",
+          "name": "QGIS",
+          "description": "Desktop geographic information system and its dedicated extensions/components.",
+          "scope": "Desktop geographic information system and its dedicated extensions/components. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [
+            "Quantum GIS"
+          ],
+          "canonical_repo_hypothesis": "QGIS/QGIS",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "astropy",
+          "name": "Astropy",
+          "description": "Astronomy-focused Python core and explicitly affiliated/dedicated astronomy packages.",
+          "scope": "Astronomy-focused Python core and explicitly affiliated/dedicated astronomy packages. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "astropy/astropy",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "open-data-cube",
+          "name": "Open Data Cube",
+          "description": "Earth-observation data-cube software for indexing, managing and analyzing satellite observations.",
+          "scope": "Earth-observation data-cube software for indexing, managing and analyzing satellite observations. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [
+            "ODC",
+            "datacube"
+          ],
+          "canonical_repo_hypothesis": "opendatacube/datacube-core",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "openmm",
+          "name": "OpenMM",
+          "description": "Molecular simulation toolkit and directly dedicated components or integrations.",
+          "scope": "Molecular simulation toolkit and directly dedicated components or integrations. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "openmm/openmm",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "gdal",
+          "name": "GDAL",
+          "description": "Geospatial raster/vector data abstraction and format conversion.",
+          "scope": "Geospatial raster/vector data abstraction and format conversion. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [
+            "Geospatial Data Abstraction Library"
+          ],
+          "canonical_repo_hypothesis": "OSGeo/gdal",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "xclim",
+          "name": "xclim",
+          "description": "Climate indices, indicators and climate-analysis utilities.",
+          "scope": "Climate indices, indicators and climate-analysis utilities. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "Ouranosinc/xclim",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "geopandas",
+          "name": "GeoPandas",
+          "description": "Geospatial dataframe processing and geometry-aware tabular analysis.",
+          "scope": "Geospatial dataframe processing and geometry-aware tabular analysis. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "geopandas/geopandas",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "numpy",
+          "name": "NumPy",
+          "description": "Foundational n-dimensional array and numerical computing implementation.",
+          "scope": "Foundational n-dimensional array and numerical computing implementation. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "numpy/numpy",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "pangeo",
+          "name": "Pangeo",
+          "description": "Open scientific community ecosystem for scalable Earth-science analysis; distinguish community coordination from library implementation.",
+          "scope": "Open scientific community ecosystem for scalable Earth-science analysis; distinguish community coordination from library implementation. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "pangeo-data/pangeo",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "xarray",
+          "name": "xarray",
+          "description": "Labeled multidimensional array and dataset computation tools.",
+          "scope": "Labeled multidimensional array and dataset computation tools. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "pydata/xarray",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "rasterio",
+          "name": "Rasterio",
+          "description": "Reading, writing and processing geospatial raster datasets.",
+          "scope": "Reading, writing and processing geospatial raster datasets. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "rasterio/rasterio",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "scipy",
+          "name": "SciPy",
+          "description": "Scientific and numerical algorithm library built around array computation.",
+          "scope": "Scientific and numerical algorithm library built around array computation. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "scipy/scipy",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        }
+      ],
+      "staging_allocation_recommendation": {
+        "approved_family": 70,
+        "broad_topic_or_purpose": 60,
+        "low_star": 25,
+        "language_diversity": 25,
+        "policy": "Round-robin among query strata; deduplicate by numeric ID; redistribute empty strata instead of exhausting cap on first family query."
+      }
+    },
+    {
+      "id": "data",
+      "name": "Data Engineering",
+      "description": "Ingestion, orchestration, transformation, analytical storage/querying, metadata and data quality systems. Separate this primary purpose from applications that merely consume data.",
+      "target": 60,
+      "staged_candidate_cap": 180,
+      "subdomain_targets": {
+        "orchestration_and_transformation": 15,
+        "ingestion_and_streaming": 15,
+        "metadata_lineage_quality": 15,
+        "analytical_storage_and_querying": 15
+      },
+      "seed_hypotheses": [
+        {
+          "repo": "airbytehq/airbyte",
+          "owner": "airbytehq",
+          "project": "Airbyte",
+          "rationale": "Canonical data integration platform.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "APPROVED_PLAN_PRIMARY",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "project_description": "Data replication/integration platform and explicitly dedicated connectors.",
+          "project_scope": "Data replication/integration platform and explicitly dedicated connectors. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "apache/airflow",
+          "owner": "apache",
+          "project": "Apache Airflow",
+          "rationale": "Canonical Apache Airflow implementation.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "APPROVED_PLAN_PRIMARY",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "project_description": "Workflow scheduling/orchestration platform and explicitly dedicated providers.",
+          "project_scope": "Workflow scheduling/orchestration platform and explicitly dedicated providers. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": [
+            "Airflow"
+          ]
+        },
+        {
+          "repo": "dagster-io/dagster",
+          "owner": "dagster-io",
+          "project": "Dagster",
+          "rationale": "Canonical data orchestration platform.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "APPROVED_PLAN_PRIMARY",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "project_description": "Data-asset orchestration, execution and observability platform.",
+          "project_scope": "Data-asset orchestration, execution and observability platform. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "dbt-labs/dbt-core",
+          "owner": "dbt-labs",
+          "project": "dbt",
+          "rationale": "Canonical dbt core; dedicated adapters may share project when explicitly documented.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "APPROVED_PLAN_PRIMARY",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "project_description": "SQL-first analytical transformation tooling and explicitly dedicated adapters.",
+          "project_scope": "SQL-first analytical transformation tooling and explicitly dedicated adapters. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": [
+            "data build tool"
+          ]
+        },
+        {
+          "repo": "OpenLineage/OpenLineage",
+          "owner": "OpenLineage",
+          "project": "OpenLineage",
+          "rationale": "Canonical lineage standard/integrations.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Open dataset/job/run lineage standard and dedicated integrations.",
+          "project_scope": "Open dataset/job/run lineage standard and dedicated integrations. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "PrefectHQ/prefect",
+          "owner": "PrefectHQ",
+          "project": "Prefect",
+          "rationale": "Canonical orchestration framework.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Python workflow orchestration and operational execution platform.",
+          "project_scope": "Python workflow orchestration and operational execution platform. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "apache/iceberg",
+          "owner": "apache",
+          "project": "Apache Iceberg",
+          "rationale": "Canonical analytical table format.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Open analytical table format and dedicated implementation libraries.",
+          "project_scope": "Open analytical table format and dedicated implementation libraries. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": [
+            "Iceberg"
+          ]
+        },
+        {
+          "repo": "datahub-project/datahub",
+          "owner": "datahub-project",
+          "project": "DataHub",
+          "rationale": "Canonical metadata platform.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Metadata catalog and data discovery/governance platform.",
+          "project_scope": "Metadata catalog and data discovery/governance platform. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "dlt-hub/dlt",
+          "owner": "dlt-hub",
+          "project": "dlt",
+          "rationale": "Canonical ingestion/loading toolkit.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Python data extraction/loading pipelines and schema-aware ingestion tooling.",
+          "project_scope": "Python data extraction/loading pipelines and schema-aware ingestion tooling. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "duckdb/duckdb",
+          "owner": "duckdb",
+          "project": "DuckDB",
+          "rationale": "Canonical embedded analytical database.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Embedded analytical SQL database and directly dedicated bindings/extensions.",
+          "project_scope": "Embedded analytical SQL database and directly dedicated bindings/extensions. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "great-expectations/great_expectations",
+          "owner": "great-expectations",
+          "project": "Great Expectations",
+          "rationale": "Canonical data quality project.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Dataset expectation-based validation and data quality tooling.",
+          "project_scope": "Dataset expectation-based validation and data quality tooling. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": [
+            "GX"
+          ]
+        },
+        {
+          "repo": "open-metadata/OpenMetadata",
+          "owner": "open-metadata",
+          "project": "OpenMetadata",
+          "rationale": "Canonical data catalog/governance platform.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Data asset cataloging, discovery, governance and metadata management platform.",
+          "project_scope": "Data asset cataloging, discovery, governance and metadata management platform. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        }
+      ],
+      "topics": [
+        {
+          "id": "data-orchestration",
+          "name": "Data Orchestration",
+          "description": "Schedule, coordinate and observe dependencies between data workflows.",
+          "aliases": [
+            "workflow orchestration",
+            "data workflows"
+          ]
+        },
+        {
+          "id": "data-transformation",
+          "name": "Data Transformation",
+          "description": "Transform analytical data using batch SQL/Python or declarative transformations.",
+          "aliases": [
+            "ETL",
+            "ELT"
+          ]
+        },
+        {
+          "id": "stream-processing",
+          "name": "Stream Processing",
+          "description": "Continuous transformations, routing or computation on event streams.",
+          "aliases": [
+            "event streaming",
+            "streaming data"
+          ]
+        },
+        {
+          "id": "data-ingestion",
+          "name": "Data Ingestion",
+          "description": "Extract, load, replicate or capture changes from source systems.",
+          "aliases": [
+            "data integration",
+            "CDC",
+            "change data capture"
+          ]
+        },
+        {
+          "id": "data-quality",
+          "name": "Data Quality",
+          "description": "Validate datasets, enforce contracts and monitor data defects.",
+          "aliases": [
+            "data validation",
+            "data contracts"
+          ]
+        },
+        {
+          "id": "data-lineage",
+          "name": "Data Lineage",
+          "description": "Represent provenance and dependencies of datasets and transformations.",
+          "aliases": [
+            "data provenance",
+            "lineage tracking"
+          ]
+        },
+        {
+          "id": "data-cataloging",
+          "name": "Data Cataloging",
+          "description": "Discover, describe, govern and search datasets and data assets.",
+          "aliases": [
+            "metadata management",
+            "data discovery"
+          ]
+        },
+        {
+          "id": "analytical-querying",
+          "name": "Analytical Querying",
+          "description": "Query analytical/OLAP datasets and execute SQL or dataframe analytics.",
+          "aliases": [
+            "OLAP",
+            "analytical SQL"
+          ]
+        },
+        {
+          "id": "distributed-data-processing",
+          "name": "Distributed Data Processing",
+          "description": "Parallel processing of large tabular, batch or analytical datasets.",
+          "aliases": [
+            "distributed analytics",
+            "big data processing"
+          ]
+        },
+        {
+          "id": "lakehouse-storage",
+          "name": "Lakehouse Storage",
+          "description": "Table formats and storage layers for transactional analytical datasets.",
+          "aliases": [
+            "data lakes",
+            "table formats"
+          ]
+        },
+        {
+          "id": "pipeline-observability",
+          "name": "Pipeline Observability",
+          "description": "Monitor execution, freshness and reliability of data pipelines.",
+          "aliases": [
+            "data observability",
+            "pipeline monitoring"
+          ]
+        },
+        {
+          "id": "schema-management",
+          "name": "Schema Management",
+          "description": "Manage, validate and evolve schemas for data exchange or persistence.",
+          "aliases": [
+            "schema evolution",
+            "schema registry"
+          ]
+        },
+        {
+          "id": "data-caching",
+          "name": "Data Caching",
+          "description": "Cache or accelerate access to data between storage and analytics engines.",
+          "aliases": [
+            "distributed caching",
+            "analytics acceleration"
+          ]
+        },
+        {
+          "id": "database-administration",
+          "name": "Database Administration",
+          "description": "Inspect, query, edit and manage database schemas and data through administrative/client tools.",
+          "aliases": [
+            "database management",
+            "database clients"
+          ]
+        },
+        {
+          "id": "repository-analytics",
+          "name": "Repository Analytics",
+          "description": "Analyze repository activity, adoption and ecosystem signals, including suspicious engagement.",
+          "aliases": [
+            "GitHub analytics",
+            "repository activity analysis"
+          ]
+        },
+        {
+          "id": "api-clients",
+          "name": "API Clients",
+          "description": "Provide dedicated SDK/client access to an external or platform API.",
+          "aliases": [
+            "API client libraries",
+            "SDK clients"
+          ]
+        },
+        {
+          "id": "distributed-storage",
+          "name": "Distributed Storage",
+          "description": "Distributed file/object data storage and storage/compute separation.",
+          "aliases": [
+            "distributed file systems",
+            "distributed object storage"
+          ]
+        },
+        {
+          "id": "web-apis",
+          "name": "Web APIs",
+          "description": "Serve application/data operations through HTTP or REST API endpoints.",
+          "aliases": [
+            "HTTP APIs",
+            "REST APIs"
+          ]
+        },
+        {
+          "id": "data-versioning",
+          "name": "Data Versioning",
+          "description": "Version, branch and reproduce data snapshots or atomic data-lake operations.",
+          "aliases": [
+            "data version control",
+            "versioned data lakes"
+          ]
+        },
+        {
+          "id": "education-topic-5",
+          "name": "Learning Content",
+          "aliases": [
+            "course content",
+            "educational resources"
+          ],
+          "description": "Authoring, packaging or management of educational materials; distinguish content-only repositories from platforms.",
+          "status": "PROPOSED_REGISTRY_DEFINITION",
+          "shared_definition_source": "domains-a.json:education-topic-5"
+        },
+        {
+          "id": "cloud-topic-21",
+          "name": "Continuous Integration",
+          "description": "Preparing and running automated build/test workflows.",
+          "aliases": [],
+          "status": "PROPOSED_REGISTRY_DEFINITION",
+          "shared_definition_source": "domains-c.json:cloud-topic-21"
+        }
+      ],
+      "queries": [
+        {
+          "query": "org:dagster-io is:public fork:false archived:false",
+          "stratum": "approved-family-dagster",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "org:airbytehq is:public fork:false archived:false",
+          "stratum": "approved-family-airbyte",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "org:apache airflow in:name,description is:public fork:false archived:false",
+          "stratum": "approved-family-airflow",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "org:dbt-labs is:public fork:false archived:false",
+          "stratum": "approved-family-dbt",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:data-orchestration is:public fork:false archived:false",
+          "stratum": "orchestration",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:data-quality is:public fork:false archived:false",
+          "stratum": "quality",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:data-lineage is:public fork:false archived:false",
+          "stratum": "lineage",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:stream-processing is:public fork:false archived:false",
+          "stratum": "stream",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "\"data ingestion\" in:readme is:public fork:false archived:false",
+          "stratum": "purpose-ingestion",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:data-engineering stars:5..500 language:Python is:public fork:false archived:false",
+          "stratum": "low-star-python",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:etl stars:5..500 is:public fork:false archived:false",
+          "stratum": "low-star-etl",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:data-quality stars:5..500 is:public fork:false archived:false",
+          "stratum": "low-star-quality",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:stream-processing language:Java is:public fork:false archived:false",
+          "stratum": "language-java",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:data-engineering language:Go is:public fork:false archived:false",
+          "stratum": "language-go",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:data-engineering language:Rust is:public fork:false archived:false",
+          "stratum": "language-rust",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "数据管道 in:readme stars:5..500 is:public fork:false archived:false",
+          "stratum": "non-english-chinese",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "engenharia dados in:readme stars:5..500 is:public fork:false archived:false",
+          "stratum": "non-english-portuguese-candidate",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "pipeline datos in:readme stars:5..500 is:public fork:false archived:false",
+          "stratum": "non-english-spanish-candidate",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        }
+      ],
+      "selection_policy": {
+        "count_unique_numeric_repository_id": true,
+        "prefer_primary_purpose_evidence": true,
+        "non_english_minimum_target": 6,
+        "low_star_5_to_500_minimum_target": 15,
+        "non_python_or_javascript_minimum_target": 8,
+        "per_owner_soft_cap": 6,
+        "per_project_family_soft_cap": 8,
+        "caveat": "All balance values are goals, not permission to fabricate. Sampling bucket does not establish a Domain label. Query language does not establish README language. Unknown membership is not a negative label.",
+        "composition_targets": {
+          "initiative_relationships": 30,
+          "independent_or_near_neighbor": 24,
+          "natural_challenge": 6
+        }
+      },
+      "projects": [
+        {
+          "id": "airbyte",
+          "name": "Airbyte",
+          "description": "Data replication/integration platform and explicitly dedicated connectors.",
+          "scope": "Data replication/integration platform and explicitly dedicated connectors. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "airbytehq/airbyte",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "apache-airflow",
+          "name": "Apache Airflow",
+          "description": "Workflow scheduling/orchestration platform and explicitly dedicated providers.",
+          "scope": "Workflow scheduling/orchestration platform and explicitly dedicated providers. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [
+            "Airflow"
+          ],
+          "canonical_repo_hypothesis": "apache/airflow",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "dagster",
+          "name": "Dagster",
+          "description": "Data-asset orchestration, execution and observability platform.",
+          "scope": "Data-asset orchestration, execution and observability platform. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "dagster-io/dagster",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "dbt",
+          "name": "dbt",
+          "description": "SQL-first analytical transformation tooling and explicitly dedicated adapters.",
+          "scope": "SQL-first analytical transformation tooling and explicitly dedicated adapters. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [
+            "data build tool"
+          ],
+          "canonical_repo_hypothesis": "dbt-labs/dbt-core",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "openlineage",
+          "name": "OpenLineage",
+          "description": "Open dataset/job/run lineage standard and dedicated integrations.",
+          "scope": "Open dataset/job/run lineage standard and dedicated integrations. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "OpenLineage/OpenLineage",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "prefect",
+          "name": "Prefect",
+          "description": "Python workflow orchestration and operational execution platform.",
+          "scope": "Python workflow orchestration and operational execution platform. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "PrefectHQ/prefect",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "apache-iceberg",
+          "name": "Apache Iceberg",
+          "description": "Open analytical table format and dedicated implementation libraries.",
+          "scope": "Open analytical table format and dedicated implementation libraries. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [
+            "Iceberg"
+          ],
+          "canonical_repo_hypothesis": "apache/iceberg",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "datahub",
+          "name": "DataHub",
+          "description": "Metadata catalog and data discovery/governance platform.",
+          "scope": "Metadata catalog and data discovery/governance platform. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "datahub-project/datahub",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "dlt",
+          "name": "dlt",
+          "description": "Python data extraction/loading pipelines and schema-aware ingestion tooling.",
+          "scope": "Python data extraction/loading pipelines and schema-aware ingestion tooling. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "dlt-hub/dlt",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "duckdb",
+          "name": "DuckDB",
+          "description": "Embedded analytical SQL database and directly dedicated bindings/extensions.",
+          "scope": "Embedded analytical SQL database and directly dedicated bindings/extensions. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "duckdb/duckdb",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "great-expectations",
+          "name": "Great Expectations",
+          "description": "Dataset expectation-based validation and data quality tooling.",
+          "scope": "Dataset expectation-based validation and data quality tooling. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [
+            "GX"
+          ],
+          "canonical_repo_hypothesis": "great-expectations/great_expectations",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "openmetadata",
+          "name": "OpenMetadata",
+          "description": "Data asset cataloging, discovery, governance and metadata management platform.",
+          "scope": "Data asset cataloging, discovery, governance and metadata management platform. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "open-metadata/OpenMetadata",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        }
+      ],
+      "staging_allocation_recommendation": {
+        "approved_family": 70,
+        "broad_topic_or_purpose": 60,
+        "low_star": 25,
+        "language_diversity": 25,
+        "policy": "Round-robin among query strata; deduplicate by numeric ID; redistribute empty strata instead of exhausting cap on first family query."
+      }
+    },
+    {
+      "id": "ai",
+      "name": "AI & Machine Learning",
+      "description": "Model development, inference, retrieval-augmented applications and model evaluation. Distinguish model/application infrastructure from generic web apps with an incidental API call.",
+      "target": 60,
+      "staged_candidate_cap": 180,
+      "subdomain_targets": {
+        "classical_ml_and_training": 15,
+        "nlp_and_vision": 15,
+        "retrieval_llm_applications": 15,
+        "inference_evaluation_experiments": 15
+      },
+      "seed_hypotheses": [
+        {
+          "repo": "huggingface/transformers",
+          "owner": "huggingface",
+          "project": "Transformers",
+          "rationale": "Canonical model architectures and inference/training toolkit.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "APPROVED_PLAN_PRIMARY",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "project_description": "Hugging Face model-architecture, training and inference library.",
+          "project_scope": "Hugging Face model-architecture, training and inference library. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": [
+            "Hugging Face Transformers"
+          ]
+        },
+        {
+          "repo": "langchain-ai/langchain",
+          "owner": "langchain-ai",
+          "project": "LangChain",
+          "rationale": "Canonical LLM application framework.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "APPROVED_PLAN_PRIMARY",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "project_description": "Language-model application orchestration framework and dedicated framework components.",
+          "project_scope": "Language-model application orchestration framework and dedicated framework components. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "mlflow/mlflow",
+          "owner": "mlflow",
+          "project": "MLflow",
+          "rationale": "Canonical experiment/model lifecycle platform.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "APPROVED_PLAN_PRIMARY",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "project_description": "Machine-learning experiment tracking and model/application lifecycle platform.",
+          "project_scope": "Machine-learning experiment tracking and model/application lifecycle platform. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "pytorch/pytorch",
+          "owner": "pytorch",
+          "project": "PyTorch",
+          "rationale": "Canonical deep-learning framework.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "APPROVED_PLAN_PRIMARY",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "project_description": "Tensor computation, automatic differentiation and neural-network framework.",
+          "project_scope": "Tensor computation, automatic differentiation and neural-network framework. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "confident-ai/deepeval",
+          "owner": "confident-ai",
+          "project": "DeepEval",
+          "rationale": "Canonical model/application evaluation framework.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Evaluation and testing framework for language-model applications.",
+          "project_scope": "Evaluation and testing framework for language-model applications. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "explodinggradients/ragas",
+          "owner": "explodinggradients",
+          "project": "Ragas",
+          "rationale": "Canonical evaluation framework.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Evaluation tooling for retrieval-augmented and language-model applications.",
+          "project_scope": "Evaluation tooling for retrieval-augmented and language-model applications. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "huggingface/datasets",
+          "owner": "huggingface",
+          "project": "Datasets",
+          "rationale": "Canonical dataset tooling project.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Hugging Face dataset loading, transformation and interoperability library.",
+          "project_scope": "Hugging Face dataset loading, transformation and interoperability library. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": [
+            "Hugging Face Datasets"
+          ]
+        },
+        {
+          "repo": "qdrant/qdrant",
+          "owner": "qdrant",
+          "project": "Qdrant",
+          "rationale": "Canonical vector search engine.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Vector similarity retrieval engine and directly dedicated clients/integrations.",
+          "project_scope": "Vector similarity retrieval engine and directly dedicated clients/integrations. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "run-llama/llama_index",
+          "owner": "run-llama",
+          "project": "LlamaIndex",
+          "rationale": "Canonical retrieval/context framework.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Retrieval/context ingestion and orchestration framework for language-model applications.",
+          "project_scope": "Retrieval/context ingestion and orchestration framework for language-model applications. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": [
+            "llama_index"
+          ]
+        },
+        {
+          "repo": "scikit-learn/scikit-learn",
+          "owner": "scikit-learn",
+          "project": "scikit-learn",
+          "rationale": "Canonical classical machine-learning library.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Classical machine-learning estimators, preprocessing and model-selection library.",
+          "project_scope": "Classical machine-learning estimators, preprocessing and model-selection library. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": [
+            "sklearn"
+          ]
+        },
+        {
+          "repo": "ultralytics/ultralytics",
+          "owner": "ultralytics",
+          "project": "Ultralytics",
+          "rationale": "Canonical computer-vision model toolkit.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Computer-vision model training, prediction and deployment toolkit.",
+          "project_scope": "Computer-vision model training, prediction and deployment toolkit. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "vllm-project/vllm",
+          "owner": "vllm-project",
+          "project": "vLLM",
+          "rationale": "Canonical language-model inference engine.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "High-throughput language-model inference and serving engine.",
+          "project_scope": "High-throughput language-model inference and serving engine. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        }
+      ],
+      "topics": [
+        {
+          "id": "machine-learning",
+          "name": "Machine Learning",
+          "description": "Learn predictive patterns from examples; conventional supervised/unsupervised model workflows.",
+          "aliases": [
+            "ML",
+            "predictive modeling"
+          ]
+        },
+        {
+          "id": "deep-learning",
+          "name": "Deep Learning",
+          "description": "Neural-network model training, architectures and optimization.",
+          "aliases": [
+            "neural networks",
+            "DL"
+          ]
+        },
+        {
+          "id": "natural-language-processing",
+          "name": "Natural Language Processing",
+          "description": "Process, represent, generate or analyze human language.",
+          "aliases": [
+            "NLP",
+            "language processing"
+          ]
+        },
+        {
+          "id": "computer-vision",
+          "name": "Computer Vision",
+          "description": "Interpret images/video, detect objects and learn visual representations.",
+          "aliases": [
+            "CV",
+            "image understanding"
+          ]
+        },
+        {
+          "id": "retrieval-augmented-generation",
+          "name": "Retrieval-Augmented Generation",
+          "description": "Retrieve external evidence and supply it to a generative model.",
+          "aliases": [
+            "RAG",
+            "retrieval augmented generation"
+          ]
+        },
+        {
+          "id": "llm-application-orchestration",
+          "name": "LLM Application Orchestration",
+          "description": "Compose language-model calls, tools, context and multi-step application logic.",
+          "aliases": [
+            "LLM workflows",
+            "model orchestration"
+          ]
+        },
+        {
+          "id": "model-serving",
+          "name": "Model Serving",
+          "description": "Expose trained models for inference and optimize runtime delivery.",
+          "aliases": [
+            "inference serving",
+            "inference engine"
+          ]
+        },
+        {
+          "id": "model-evaluation",
+          "name": "Model Evaluation",
+          "description": "Measure model/application quality, robustness and behavioral performance.",
+          "aliases": [
+            "AI evaluation",
+            "LLM evaluation",
+            "evals"
+          ]
+        },
+        {
+          "id": "vector-retrieval",
+          "name": "Vector Retrieval",
+          "description": "Similarity search over embeddings and dense representations.",
+          "aliases": [
+            "semantic search",
+            "embedding search"
+          ]
+        },
+        {
+          "id": "model-training",
+          "name": "Model Training",
+          "description": "Training loops, tuning, datasets and optimization infrastructure.",
+          "aliases": [
+            "fine-tuning",
+            "training infrastructure"
+          ]
+        },
+        {
+          "id": "ml-experiment-management",
+          "name": "ML Experiment Management",
+          "description": "Track, compare and reproduce machine-learning experiments and artifacts.",
+          "aliases": [
+            "experiment tracking",
+            "MLOps experiments"
+          ]
+        },
+        {
+          "id": "dataset-curation",
+          "name": "Dataset Curation",
+          "description": "Prepare, annotate, inspect and maintain datasets for AI/ML.",
+          "aliases": [
+            "data labeling",
+            "ML datasets"
+          ]
+        },
+        {
+          "id": "model-observability",
+          "name": "Model Observability",
+          "description": "Trace, monitor and debug AI model/application execution and behavior.",
+          "aliases": [
+            "LLM observability",
+            "AI tracing"
+          ]
+        },
+        {
+          "id": "conversational-ai",
+          "name": "Conversational AI",
+          "description": "Interactive chat, voice or multimodal conversation interfaces powered by language models.",
+          "aliases": [
+            "AI chat interfaces",
+            "language-model chat"
+          ]
+        },
+        {
+          "id": "reranking",
+          "name": "Reranking",
+          "description": "Rescore candidate results with dedicated relevance/similarity models, including cross-encoders.",
+          "aliases": [
+            "cross-encoder ranking",
+            "candidate rescoring"
+          ]
+        },
+        {
+          "id": "education-topic-5",
+          "name": "Learning Content",
+          "aliases": [
+            "course content",
+            "educational resources"
+          ],
+          "description": "Authoring, packaging or management of educational materials; distinguish content-only repositories from platforms.",
+          "shared_definition_source": "domains-a.json:education-topic-5",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "ai-governance",
+          "name": "AI Governance",
+          "aliases": [
+            "responsible AI management"
+          ],
+          "description": "Manage AI system accountability, risk, compliance and governance policies.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "prompt-engineering",
+          "name": "Prompt Engineering",
+          "aliases": [
+            "prompt libraries"
+          ],
+          "description": "Create, organize, test or reuse instructions and prompt templates for AI systems.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "agent-context-management",
+          "name": "Agent Context Management",
+          "aliases": [
+            "agent memory"
+          ],
+          "description": "Capture, curate, store and supply contextual history or memory for AI agents.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "model-visualization",
+          "name": "Model Visualization",
+          "description": "Inspect or visualize model graphs, layers, architectures and tensor structures; distinct from measured quality evaluation.",
+          "aliases": [
+            "model graph inspection"
+          ],
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        }
+      ],
+      "queries": [
+        {
+          "query": "org:pytorch is:public fork:false archived:false",
+          "stratum": "approved-family-pytorch",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "org:huggingface transformers in:name,description is:public fork:false archived:false",
+          "stratum": "approved-family-transformers",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "org:langchain-ai is:public fork:false archived:false",
+          "stratum": "approved-family-langchain",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "org:mlflow is:public fork:false archived:false",
+          "stratum": "approved-family-mlflow",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:machine-learning is:public fork:false archived:false",
+          "stratum": "classical-ml",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:computer-vision is:public fork:false archived:false",
+          "stratum": "vision",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:rag is:public fork:false archived:false",
+          "stratum": "rag",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:llm-evaluation is:public fork:false archived:false",
+          "stratum": "evaluation",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "\"model serving\" in:readme is:public fork:false archived:false",
+          "stratum": "purpose-model-serving",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:machine-learning stars:5..500 language:Python is:public fork:false archived:false",
+          "stratum": "low-star-python",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:rag stars:5..500 is:public fork:false archived:false",
+          "stratum": "low-star-rag",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:llm-evaluation stars:5..500 is:public fork:false archived:false",
+          "stratum": "low-star-eval",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:machine-learning language:Rust is:public fork:false archived:false",
+          "stratum": "language-rust",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:machine-learning language:JavaScript is:public fork:false archived:false",
+          "stratum": "language-javascript",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:machine-learning language:Julia is:public fork:false archived:false",
+          "stratum": "language-julia",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "机器学习 in:readme stars:5..500 is:public fork:false archived:false",
+          "stratum": "non-english-chinese",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "aprendizaje automatico in:readme stars:5..500 is:public fork:false archived:false",
+          "stratum": "non-english-spanish-candidate",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "aprendizado maquina in:readme stars:5..500 is:public fork:false archived:false",
+          "stratum": "non-english-portuguese-candidate",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        }
+      ],
+      "selection_policy": {
+        "count_unique_numeric_repository_id": true,
+        "prefer_primary_purpose_evidence": true,
+        "non_english_minimum_target": 6,
+        "low_star_5_to_500_minimum_target": 15,
+        "non_python_or_javascript_minimum_target": 8,
+        "per_owner_soft_cap": 6,
+        "per_project_family_soft_cap": 8,
+        "caveat": "All balance values are goals, not permission to fabricate. Sampling bucket does not establish a Domain label. Query language does not establish README language. Unknown membership is not a negative label.",
+        "composition_targets": {
+          "initiative_relationships": 30,
+          "independent_or_near_neighbor": 24,
+          "natural_challenge": 6
+        }
+      },
+      "projects": [
+        {
+          "id": "transformers",
+          "name": "Transformers",
+          "description": "Hugging Face model-architecture, training and inference library.",
+          "scope": "Hugging Face model-architecture, training and inference library. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [
+            "Hugging Face Transformers"
+          ],
+          "canonical_repo_hypothesis": "huggingface/transformers",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "langchain",
+          "name": "LangChain",
+          "description": "Language-model application orchestration framework and dedicated framework components.",
+          "scope": "Language-model application orchestration framework and dedicated framework components. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "langchain-ai/langchain",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "mlflow",
+          "name": "MLflow",
+          "description": "Machine-learning experiment tracking and model/application lifecycle platform.",
+          "scope": "Machine-learning experiment tracking and model/application lifecycle platform. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "mlflow/mlflow",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "pytorch",
+          "name": "PyTorch",
+          "description": "Tensor computation, automatic differentiation and neural-network framework.",
+          "scope": "Tensor computation, automatic differentiation and neural-network framework. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "pytorch/pytorch",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "deepeval",
+          "name": "DeepEval",
+          "description": "Evaluation and testing framework for language-model applications.",
+          "scope": "Evaluation and testing framework for language-model applications. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "confident-ai/deepeval",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "ragas",
+          "name": "Ragas",
+          "description": "Evaluation tooling for retrieval-augmented and language-model applications.",
+          "scope": "Evaluation tooling for retrieval-augmented and language-model applications. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "explodinggradients/ragas",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "datasets",
+          "name": "Datasets",
+          "description": "Hugging Face dataset loading, transformation and interoperability library.",
+          "scope": "Hugging Face dataset loading, transformation and interoperability library. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [
+            "Hugging Face Datasets"
+          ],
+          "canonical_repo_hypothesis": "huggingface/datasets",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "qdrant",
+          "name": "Qdrant",
+          "description": "Vector similarity retrieval engine and directly dedicated clients/integrations.",
+          "scope": "Vector similarity retrieval engine and directly dedicated clients/integrations. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "qdrant/qdrant",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "llamaindex",
+          "name": "LlamaIndex",
+          "description": "Retrieval/context ingestion and orchestration framework for language-model applications.",
+          "scope": "Retrieval/context ingestion and orchestration framework for language-model applications. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [
+            "llama_index"
+          ],
+          "canonical_repo_hypothesis": "run-llama/llama_index",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "scikit-learn",
+          "name": "scikit-learn",
+          "description": "Classical machine-learning estimators, preprocessing and model-selection library.",
+          "scope": "Classical machine-learning estimators, preprocessing and model-selection library. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [
+            "sklearn"
+          ],
+          "canonical_repo_hypothesis": "scikit-learn/scikit-learn",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "ultralytics",
+          "name": "Ultralytics",
+          "description": "Computer-vision model training, prediction and deployment toolkit.",
+          "scope": "Computer-vision model training, prediction and deployment toolkit. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "ultralytics/ultralytics",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "vllm",
+          "name": "vLLM",
+          "description": "High-throughput language-model inference and serving engine.",
+          "scope": "High-throughput language-model inference and serving engine. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "vllm-project/vllm",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        }
+      ],
+      "staging_allocation_recommendation": {
+        "approved_family": 70,
+        "broad_topic_or_purpose": 60,
+        "low_star": 25,
+        "language_diversity": 25,
+        "policy": "Round-robin among query strata; deduplicate by numeric ID; redistribute empty strata instead of exhausting cap on first family query."
+      }
+    }
+  ],
+  "approved_plan": "docs/planning/public-repository-corpus-600.md; user approval delivered by parent agent on 2026-10-16.",
+  "domain_assignment_policy": "Domain names here are sampling buckets only. Current-app Domain assignments derive through approved Project parents. Repositories without justified Project membership must not receive a Domain merely because of their search bucket; record that assignment UNKNOWN/unassigned as appropriate."
+}

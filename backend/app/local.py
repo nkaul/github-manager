@@ -17,6 +17,8 @@ from app.config import REPO_ROOT, Settings
 from app.demo import analysis, domain, explorer, taxonomy_review
 from app.demo.ai import budget_summary
 from app.demo.allowance import AllowanceUpdate, RequestAllowance
+from app.demo.corpus import Corpus, CorpusConflict, CorpusDraft, CorpusReview
+from app.demo.corpus_registry import RegistryConceptInput, RegistryConflict
 from app.demo.models import (
     ConceptInput,
     ConceptPatch,
@@ -77,11 +79,17 @@ def create_local_app(
     db_path=None,
     provider_factory=None,
     allowance_ledger=None,
+    corpus_release=None,
 ):
     settings = settings or LocalSettings()
     adapter = adapter or OAuthAppAdapter(settings)
     sessions = sessions or SessionStore()
     database = Store(db_path or settings.demo_database)
+    corpus = Corpus(
+        REPO_ROOT,
+        corpus_release or REPO_ROOT / "docs/validation/private/corpus-600-v2/release",
+        database,
+    )
     options = {"provider_factory": provider_factory} if provider_factory else {}
     service = Service(
         database,
@@ -92,11 +100,13 @@ def create_local_app(
         budget_operators={
             v.strip() for v in settings.demo_budget_operator_ids.split(",") if v.strip()
         },
+        sync_timeout_seconds=settings.github_sync_timeout_seconds,
         **options,
     )
     app = create_app(settings, adapter, sessions)
     app.title = "GitHub Manager Local Workspace"
     app.state.database, app.state.service, app.state.sessions = database, service, sessions
+    app.state.corpus = corpus
     old_lifespan = app.router.lifespan_context
 
     @asynccontextmanager
@@ -118,6 +128,14 @@ def create_local_app(
         payload = {"detail": str(error)[:1000]}
         if isinstance(error, domain.TaxonomyConflict):
             payload.update(code="TAXONOMY_CONFLICT", conflicts=error.conflicts)
+        if isinstance(error, CorpusConflict):
+            payload.update(
+                code=error.code,
+                current_review=error.current_review,
+                current_draft=error.current_draft,
+            )
+        if isinstance(error, RegistryConflict):
+            payload.update(code=error.code, registry=error.registry, conflicts=error.conflicts)
         return JSONResponse(payload, status_code=409)
 
     def auth(request: Request):
@@ -155,6 +173,151 @@ def create_local_app(
 
     def mut_ws(collection: Literal["github", "samples"] = "github", session=Depends(mutation)):
         return str(session.user["id"]) + ":" + collection
+
+    def corpus_ws(collection: Literal["ground-truth"] = "ground-truth", session=Depends(auth)):
+        return str(session.user["id"]) + ":" + collection
+
+    @app.get("/api/v1/corpus")
+    def corpus_summary(workspace=Depends(corpus_ws)):
+        return corpus.summary(workspace)
+
+    @app.get("/api/v1/corpus/registry")
+    def corpus_registry(workspace=Depends(corpus_ws)):
+        return corpus.registry_view(workspace)
+
+    @app.post("/api/v1/corpus/registry/concepts")
+    def corpus_registry_create(
+        value: RegistryConceptInput, workspace=Depends(corpus_ws), session=Depends(mutation)
+    ):
+        return corpus.create_registry_concept(workspace, value.model_dump(), session.user["id"])
+
+    @app.post("/api/v1/corpus/open")
+    def corpus_open(workspace=Depends(corpus_ws), session=Depends(mutation)):
+        return corpus.open(workspace)
+
+    @app.get("/api/v1/corpus/repos")
+    def corpus_repos(
+        q: str = Query("", max_length=500),
+        domain: str = "",
+        assigned_domain: str = "",
+        concept: str = "",
+        concept_ids: list[str] = Query(default=[], max_length=100),
+        label_basis: Literal["proposals", "reviewed"] = "proposals",
+        annotation_scope: Literal["all", "pilot", "initial_queue"] = "all",
+        status: str = "",
+        offset: int = Query(0, ge=0),
+        limit: int = Query(25, ge=1, le=100),
+        workspace=Depends(corpus_ws),
+    ):
+        return corpus.search(
+            workspace,
+            q,
+            domain,
+            concept,
+            status,
+            offset,
+            limit,
+            assigned_domain,
+            concept_ids,
+            label_basis,
+            annotation_scope,
+        )
+
+    @app.get("/api/v1/corpus/repos/{repository_id}")
+    def corpus_detail(repository_id: int, workspace=Depends(corpus_ws)):
+        try:
+            return corpus.detail(workspace, repository_id)
+        except KeyError:
+            raise HTTPException(404, "Repository not in this corpus")
+
+    @app.get("/api/v1/corpus/repos/{repository_id}/source")
+    def corpus_source(
+        repository_id: int, path: str = Query(..., max_length=500), workspace=Depends(corpus_ws)
+    ):
+        try:
+            return corpus.source(repository_id, path)
+        except KeyError:
+            raise HTTPException(404, "Source not in this corpus dossier")
+
+    @app.get("/api/v1/corpus/repos/{repository_id}/neighbors")
+    def corpus_neighbors(
+        repository_id: int,
+        q: str = Query("", max_length=500),
+        domain: str = "",
+        assigned_domain: str = "",
+        concept: str = "",
+        concept_ids: list[str] = Query(default=[], max_length=100),
+        label_basis: Literal["proposals", "reviewed"] = "proposals",
+        annotation_scope: Literal["all", "pilot", "initial_queue"] = "all",
+        status: str = "",
+        workspace=Depends(corpus_ws),
+    ):
+        try:
+            return corpus.neighbors(
+                workspace,
+                repository_id,
+                q=q,
+                domain=domain,
+                assigned_domain=assigned_domain,
+                concept=concept,
+                concept_ids=concept_ids,
+                label_basis=label_basis,
+                annotation_scope=annotation_scope,
+                status=status,
+            )
+        except KeyError:
+            raise HTTPException(404, "Repository not in this corpus")
+
+    @app.put("/api/v1/corpus/repos/{repository_id}/review")
+    def corpus_review(
+        repository_id: int,
+        value: CorpusReview,
+        workspace=Depends(corpus_ws),
+        session=Depends(mutation),
+    ):
+        try:
+            return corpus.save_review(
+                workspace, repository_id, value.model_dump(), session.user["id"]
+            )
+        except KeyError:
+            raise HTTPException(404, "Repository not in this corpus")
+
+    @app.get("/api/v1/corpus/repos/{repository_id}/draft")
+    def corpus_draft(repository_id: int, workspace=Depends(corpus_ws)):
+        try:
+            return corpus.draft(workspace, repository_id)
+        except KeyError:
+            raise HTTPException(404, "Repository not in this corpus")
+
+    @app.put("/api/v1/corpus/repos/{repository_id}/draft")
+    def corpus_save_draft(
+        repository_id: int,
+        value: CorpusDraft,
+        workspace=Depends(corpus_ws),
+        session=Depends(mutation),
+    ):
+        try:
+            return corpus.save_draft(
+                workspace, repository_id, value.model_dump(), session.user["id"]
+            )
+        except KeyError:
+            raise HTTPException(404, "Repository not in this corpus")
+
+    @app.get("/api/v1/corpus/reviews/export")
+    def corpus_export(workspace=Depends(corpus_ws)):
+        records = corpus.records(workspace)
+        return JSONResponse(
+            {
+                "release_id": corpus.manifest["release_id"],
+                "manifest_sha256": corpus._manifest_hash,
+                "reviews": list(records.values()),
+                "reference_registry": corpus.export_registry(workspace),
+                "unlisted_labels": "UNKNOWN_NOT_NEGATIVE",
+            },
+            headers={
+                "Content-Disposition": 'attachment; filename="public-ground-truth-reviews.json"'
+            },
+        )
 
     # Keep Phase 0's route in app.main. This local entrypoint supplies the product explorer.
     app.router.routes = [

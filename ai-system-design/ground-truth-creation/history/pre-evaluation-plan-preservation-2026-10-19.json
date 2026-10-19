@@ -1,0 +1,63 @@
+{
+  "archive": "ground-truth-creation-2026-10-19-pre-evaluation-plan.zip",
+  "sha256": "e63a37774e15a50eec72de5700735001404a1069808d9689d784ece1fc4c547c",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "a1f5ca4cedc85624811ffc42eec247ad7cf759a53002c7fd991c5cefaca46c5e"
+    },
+    {
+      "path": "article.md",
+      "sha256": "33ed99c1f0725c8b89ffed6e0878e8daf5ed2ce32a4af6df2d25eb21f5094c17"
+    },
+    {
+      "path": "editorial-and-claim-review.md",
+      "sha256": "553c1f90dd48b5cc533502cd0f7316e3da5f3074757f5e31e6fe8ecbaed87c71"
+    },
+    {
+      "path": "figures/01-evidence-to-human-truth.png",
+      "sha256": "6d61bb917f769cc760c29d9fa48d8eb99f80060c8d8c758472b5eebc5e961b6f"
+    },
+    {
+      "path": "figures/02-two-readings-one-repository.png",
+      "sha256": "4272d3740a7e436d0cb17296c434801ddb3b0e18e375958457fb77b3b854f96b"
+    },
+    {
+      "path": "figures/03-human-review-and-audit-v2.png",
+      "sha256": "c451e85cc6490144f022bbf2b70acb61bb1d6b0acc268f0a4f09d3f640ce1a95"
+    },
+    {
+      "path": "figures/03-human-review-and-audit.png",
+      "sha256": "d479caaa6d509ad585a0b95970d52ca2f06015df9c20b2e13df5d95c1ac77e3f"
+    },
+    {
+      "path": "figures/prompts.json",
+      "sha256": "aaeb3193e62775164b3f60b5b7d445fc131c613b35c343848cef2eb360fe9b05"
+    },
+    {
+      "path": "scripts/refresh_statistics.py",
+      "sha256": "d824f1ebbafd59f64c5e532e32c15ac7984d37ca304b471c68c7103c3865cf1e"
+    },
+    {
+      "path": "scripts/verify_package.py",
+      "sha256": "2546e7e45c920d9b0a0a6f1f06c336927a4cc3f18dc5acbe5235d4f20d2ac700"
+    },
+    {
+      "path": "statistics.json",
+      "sha256": "41b87b9ca50ddd863de158d271e60767767052f18f8714fb5ee29e9533602266"
+    },
+    {
+      "path": "validation-evidence.md",
+      "sha256": "861432b00542a2415d9203e06468053cd938f7cbc795cb56353f06aa52193076"
+    },
+    {
+      "path": "verification.json",
+      "sha256": "58eade191eceaa8660975b5ffa7f7cf4ace970d0482e760759262c17dfbfbcc6"
+    },
+    {
+      "path": "worked-example.json",
+      "sha256": "fafe63d95eb10004414d987d1dfae673ef6c5dd7feabfae8158fd3cf59187581"
+    }
+  ],
+  "scope": "Active publication package before October 19 plan checkpoint; older history retained in place."
+}

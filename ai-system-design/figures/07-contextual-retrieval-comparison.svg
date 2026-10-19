@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1080" viewBox="0 0 1800 1080" role="img" aria-labelledby="title desc">
+<title id="title">Context preservation is not Contextual Retrieval</title><desc id="desc">Anthropic&#x27;s 2024 technique is a research reference; GitHub Manager has not implemented or evaluated it.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#3949ab" stroke-width="1.5"/></marker></defs>
+<style>text {font-family: "Chalkboard SE", "Comic Sans MS", "Trebuchet MS", sans-serif; fill:#20213f} .title {font-size:43px;font-weight:700;fill:#3949ab} .subtitle {font-size:23px} .card-title {font-size:28px;font-weight:700;fill:#673ab7} .body {font-size:23px} .small {font-size:21px} .label {font-size:22px;fill:#3949ab} .metric {font-family:"Trebuchet MS",sans-serif;font-size:28px;font-weight:700}</style>
+<rect width="1800" height="1080" fill="#fff"/>
+<path d="M60 34 Q850 5 1730 34 L1734 112 Q840 98 58 116Z" fill="#e3f2fd" opacity=".55"/>
+<text x="75" y="80" class="title">Context preservation is not Contextual Retrieval</text>
+<path d="M76 99 Q700 106 1718 99" fill="none" stroke="#673ab7" stroke-width="4" opacity=".7"/>
+<text x="78" y="142" class="subtitle">Anthropic&#x27;s 2024 technique is a research reference; GitHub Manager has not implemented or evaluated it.</text>
+<g data-card="Implemented · deterministic repository context"><rect x="75" y="190" width="795" height="320" rx="18" fill="#e3f2fd" stroke="#20213f" stroke-width="2.5"/>
+<path d="M89 194 Q472.5 189 855 194" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="99" y="234" class="card-title" text-anchor="start">Implemented · deterministic repository context</text>
+<text x="100" y="274" class="body" text-anchor="start">Repository metadata + section heading</text>
+<text x="100" y="306" class="body" text-anchor="start">Locally selected README text and phrase spans</text>
+<text x="100" y="338" class="body" text-anchor="start">Sparse search over canonical taxonomy records</text>
+<text x="100" y="370" class="body" text-anchor="start">Bounded evidence prompt → structured decisions</text>
+<text x="100" y="402" class="body" text-anchor="start">No document-conditioned LLM chunk prefix</text>
+<text x="100" y="434" class="body" text-anchor="start">No dense index or neural reranker</text>
+</g>
+<g data-card="Reference · Anthropic Contextual Retrieval"><rect x="930" y="190" width="795" height="320" rx="18" fill="#f3e5f5" stroke="#20213f" stroke-width="2.5"/>
+<path d="M944 194 Q1327.5 189 1710 194" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="954" y="234" class="card-title" text-anchor="start">Reference · Anthropic Contextual Retrieval</text>
+<text x="955" y="274" class="body" text-anchor="start">Whole document + chunk → explanatory context</text>
+<text x="955" y="306" class="body" text-anchor="start">Prefix each chunk before embedding and BM25</text>
+<text x="955" y="338" class="body" text-anchor="start">Retrieve with both contextual representations</text>
+<text x="955" y="370" class="body" text-anchor="start">Optional reranking before final generation</text>
+<text x="955" y="402" class="body" text-anchor="start">Published retrieval-failure results are vendor data</text>
+<text x="955" y="434" class="body" text-anchor="start">Not comparable to our classification micro F1</text>
+</g>
+<g data-card="Cheap first experiment · proposed"><rect x="75" y="620" width="795" height="195" rx="18" fill="#f3e5f5" stroke="#20213f" stroke-width="2.5"/>
+<path d="M89 624 Q472.5 619 855 624" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="99" y="664" class="card-title" text-anchor="start">Cheap first experiment · proposed</text>
+<text x="100" y="704" class="body" text-anchor="start">Add trusted repo + heading metadata to passages</text>
+<text x="100" y="736" class="body" text-anchor="start">Preserve full sentences and negation</text>
+<text x="100" y="768" class="body" text-anchor="start">Measure relevant-passage recall per input token</text>
+</g>
+<g data-card="Higher-cost experiment · proposed"><rect x="930" y="620" width="795" height="195" rx="18" fill="#e3f2fd" stroke="#20213f" stroke-width="2.5"/>
+<path d="M944 624 Q1327.5 619 1710 624" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="954" y="664" class="card-title" text-anchor="start">Higher-cost experiment · proposed</text>
+<text x="955" y="704" class="body" text-anchor="start">Generate bounded, source-checked chunk context</text>
+<text x="955" y="736" class="body" text-anchor="start">Evaluate sparse / dense / fusion / reranker arms</text>
+<text x="955" y="768" class="body" text-anchor="start">Include indexing cost and privacy authorization</text>
+</g>
+<path d="M470,510 L470,620" fill="none" stroke="#3949ab" stroke-width="3" marker-end="url(#arrow)" stroke-dasharray="9 7"/>
+<path d="M1325,510 L1325,620" fill="none" stroke="#3949ab" stroke-width="3" marker-end="url(#arrow)" stroke-dasharray="9 7"/>
+<rect x="75" y="875" width="1650" height="104" rx="18" fill="#e3f2fd"/>
+<text x="100" y="912" class="card-title" text-anchor="start">Test the causal mechanism before adopting a larger stack</text>
+<text x="100" y="952" class="small" text-anchor="start">Can added context recover missed supporting evidence without increasing false project membership or reviewer effort?</text>
+<text x="75" y="1048" class="small" text-anchor="start">GitHub Manager · AI system design · October 14, 2026</text>
+<text x="1725" y="1048" class="small" text-anchor="end">07</text>
+</svg>

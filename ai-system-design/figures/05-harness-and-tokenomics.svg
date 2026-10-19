@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1080" viewBox="0 0 1800 1080" role="img" aria-labelledby="title desc">
+<title id="title">Harness engineering: reserve before generation</title><desc id="desc">Original experiment ceiling $5; fixed request limits and adaptive run dollars are distinct controls.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#3949ab" stroke-width="1.5"/></marker></defs>
+<style>text {font-family: "Chalkboard SE", "Comic Sans MS", "Trebuchet MS", sans-serif; fill:#20213f} .title {font-size:43px;font-weight:700;fill:#3949ab} .subtitle {font-size:23px} .card-title {font-size:28px;font-weight:700;fill:#673ab7} .body {font-size:23px} .small {font-size:21px} .label {font-size:22px;fill:#3949ab} .metric {font-family:"Trebuchet MS",sans-serif;font-size:28px;font-weight:700}</style>
+<rect width="1800" height="1080" fill="#fff"/>
+<path d="M60 34 Q850 5 1730 34 L1734 112 Q840 98 58 116Z" fill="#e3f2fd" opacity=".55"/>
+<text x="75" y="80" class="title">Harness engineering: reserve before generation</text>
+<path d="M76 99 Q700 106 1718 99" fill="none" stroke="#673ab7" stroke-width="4" opacity=".7"/>
+<text x="78" y="142" class="subtitle">Original experiment ceiling $5; fixed request limits and adaptive run dollars are distinct controls.</text>
+<g data-card="Before any generation"><rect x="75" y="190" width="510" height="260" rx="18" fill="#e3f2fd" stroke="#20213f" stroke-width="2.5"/>
+<path d="M89 194 Q330.0 189 570 194" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="99" y="234" class="card-title" text-anchor="start">Before any generation</text>
+<text x="100" y="274" class="body" text-anchor="start">Check public/synthetic policy</text>
+<text x="100" y="306" class="body" text-anchor="start">Check auth, workspace and access</text>
+<text x="100" y="338" class="body" text-anchor="start">Validate actual LangChain payload</text>
+<text x="100" y="370" class="body" text-anchor="start">Count input incl. JSON Schema</text>
+<text x="100" y="402" class="body" text-anchor="start">max_retries=0; no model tools</text>
+</g>
+<g data-card="Atomic monetary admission"><rect x="645" y="190" width="510" height="260" rx="18" fill="#f3e5f5" stroke="#20213f" stroke-width="2.5"/>
+<path d="M659 194 Q900.0 189 1140 194" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="669" y="234" class="card-title" text-anchor="start">Atomic monetary admission</text>
+<text x="670" y="274" class="body" text-anchor="start">Reserve worst-case input + output</text>
+<text x="670" y="306" class="body" text-anchor="start">Include cache-write allowance</text>
+<text x="670" y="338" class="body" text-anchor="start">5% headroom; integer microdollars</text>
+<text x="670" y="370" class="body" text-anchor="start">Account for all outstanding holds</text>
+<text x="670" y="402" class="body" text-anchor="start">Pin application price snapshot</text>
+</g>
+<g data-card="Outcome and recovery"><rect x="1215" y="190" width="510" height="260" rx="18" fill="#e3f2fd" stroke="#20213f" stroke-width="2.5"/>
+<path d="M1229 194 Q1470.0 189 1710 194" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="1239" y="234" class="card-title" text-anchor="start">Outcome and recovery</text>
+<text x="1240" y="274" class="body" text-anchor="start">Usage known → settle estimate</text>
+<text x="1240" y="306" class="body" text-anchor="start">Usage uncertain → retain reservation</text>
+<text x="1240" y="338" class="body" text-anchor="start">Bound violation → stop paid work</text>
+<text x="1240" y="370" class="body" text-anchor="start">Finish run → release unused hold</text>
+<text x="1240" y="402" class="body" text-anchor="start">Reset does not replenish money</text>
+</g>
+<path d="M585,320 L645,320" fill="none" stroke="#3949ab" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M1155,320 L1215,320" fill="none" stroke="#3949ab" stroke-width="3" marker-end="url(#arrow)"/>
+<g data-card="Fixed mode"><rect x="75" y="565" width="795" height="220" rx="18" fill="#e3f2fd" stroke="#20213f" stroke-width="2.5"/>
+<path d="M89 569 Q472.5 564 855 569" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="99" y="609" class="card-title" text-anchor="start">Fixed mode</text>
+<text x="100" y="649" class="body" text-anchor="start">Audited HTTP window + generation allowance</text>
+<text x="100" y="681" class="body" text-anchor="start">Count request is a separate HTTP attempt</text>
+<text x="100" y="713" class="body" text-anchor="start">Renew selected counters explicitly; preserve history</text>
+<text x="100" y="745" class="body" text-anchor="start">Lifetime accounting and cumulative dollars remain</text>
+</g>
+<g data-card="Adaptive budget mode"><rect x="930" y="565" width="795" height="220" rx="18" fill="#f3e5f5" stroke="#20213f" stroke-width="2.5"/>
+<path d="M944 569 Q1327.5 564 1710 569" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="954" y="609" class="card-title" text-anchor="start">Adaptive budget mode</text>
+<text x="955" y="649" class="body" text-anchor="start">Reviewed run hold under an operator&#x27;s dollar ceiling</text>
+<text x="955" y="681" class="body" text-anchor="start">Finite grant: at most 2 HTTP attempts / generation</text>
+<text x="955" y="713" class="body" text-anchor="start">Transfer held money into a call reservation</text>
+<text x="955" y="745" class="body" text-anchor="start">No infinite calls; no automatic paid re-analysis</text>
+</g>
+<rect x="75" y="875" width="1650" height="104" rx="18" fill="#e3f2fd"/>
+<text x="100" y="912" class="card-title" text-anchor="start">Measured 20-case round · historical Luna pricing</text>
+<text x="100" y="952" class="small" text-anchor="start">16,041 input + 3,414 output tokens (702 reasoning included) → $0.003319 ledger estimate; 40 HTTP requests.</text>
+<text x="75" y="1048" class="small" text-anchor="start">GitHub Manager · AI system design · October 14, 2026</text>
+<text x="1725" y="1048" class="small" text-anchor="end">05</text>
+</svg>

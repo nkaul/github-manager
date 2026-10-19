@@ -23,6 +23,7 @@ const paths: Record<string, ReactNode> = {
   settings: <><path d="m9 3-1 3-3 1-2 4 2 2v4l4 2 3-1 3 1 4-2v-4l2-2-2-4-3-1-1-3Z" /><circle cx="12" cy="12" r="3" /></>,
   plus: <path d="M12 5v14M5 12h14" />,
   external: <><path d="M14 3h7v7M21 3 10 14M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5" /></>,
+  download: <><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5" /></>,
   close: <path d="m6 6 12 12M6 18 18 6" />,
   logout: <><path d="M10 3H4v18h6M14 7l5 5-5 5M8 12h11" /></>,
   menu: <path d="M4 6h16M4 12h16M4 18h16" />,
@@ -30,6 +31,7 @@ const paths: Record<string, ReactNode> = {
   review: <><path d="M4 4h16v12H9l-5 4Z" /><path d="M8 8h8M8 12h5" /></>,
   selected: <><rect x="3" y="3" width="18" height="18" rx="5" /><path d="m7 12 3 3 7-7" /></>,
   check: <path d="m5 12 4 4L19 6" />,
+  info: <><circle cx="12" cy="12" r="9" /><path d="M12 11v6M12 7h.01" /></>,
   lock: <><rect x="5" y="10" width="14" height="11" rx="3" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></>,
 };
 

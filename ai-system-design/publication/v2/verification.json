@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-15",
+  "status": "PASS",
+  "scope": "Offline documentation/data verification; editorial scores are self-review judgments",
+  "prior_files_byte_identical": 56,
+  "navigation_files_with_original_prefix_preserved": [
+    "ai-system-design/README.md",
+    "ai-system-design/publication/README.md"
+  ],
+  "prior_validation_records_unchanged": 302,
+  "source_manifest_files_unchanged": 40,
+  "markdown_files_checked": 13,
+  "local_links_checked": 130,
+  "external_https_links_syntax_checked": 17,
+  "link_failures": [],
+  "text_json_files_scanned": 32,
+  "credential_pattern_check": "PASS",
+  "classification_traces": [
+    "synthetic/orion-api",
+    "fastapi/fastapi",
+    "synthetic/negated-api",
+    "synthetic/orion-audit",
+    "synthetic/unknown-empty"
+  ],
+  "taxonomy_repository_count": 30,
+  "historical_logical_request_matches": 6,
+  "mock_serializations": 6,
+  "real_provider_calls": 0,
+  "reconstructed_request_payload_identity": "PASS",
+  "installed_versions_match_historical": true,
+  "lifecycle_invariants": "PASS",
+  "new_figures_checked": 2,
+  "skill_static_validation": "Skill is valid!",
+  "article_words_whitespace": 5014,
+  "v1_words_whitespace": 1932,
+  "estimated_read_minutes_at_225_wpm": 22.3,
+  "linkedin_characters": 1911,
+  "linkedin_words": 260,
+  "engagement_or_independent_reader_evidence": "Not measured",
+  "wire_capture_limit": "Current mock captures, not original historical HTTP bodies",
+  "provider_experiments": "No new OpenAI or Jev generations; historical results preserved",
+  "rendering": {
+    "date": "2026-10-15",
+    "status": "PASS_LAYOUT",
+    "method": "Offline Markdown rendered with local Chromium; external requests blocked",
+    "viewports": [
+      {
+        "viewport": [
+          1100,
+          1000
+        ],
+        "documentWidth": 1100,
+        "images": [
+          {
+            "loaded": true,
+            "alt": true,
+            "width": 712
+          },
+          {
+            "loaded": true,
+            "alt": true,
+            "width": 712
+          },
+          {
+            "loaded": true,
+            "alt": true,
+            "width": 712
+          },
+          {
+            "loaded": true,
+            "alt": true,
+            "width": 712
+          },
+          {
+            "loaded": true,
+            "alt": true,
+            "width": 712
+          }
+        ],
+        "escapedBlocks": [],
+        "screenshot": "/private/tmp/github-manager-v2-desktop.png"
+      },
+      {
+        "viewport": [
+          430,
+          1000
+        ],
+        "documentWidth": 430,
+        "images": [
+          {
+            "loaded": true,
+            "alt": true,
+            "width": 394
+          },
+          {
+            "loaded": true,
+            "alt": true,
+            "width": 394
+          },
+          {
+            "loaded": true,
+            "alt": true,
+            "width": 394
+          },
+          {
+            "loaded": true,
+            "alt": true,
+            "width": 394
+          },
+          {
+            "loaded": true,
+            "alt": true,
+            "width": 394
+          }
+        ],
+        "escapedBlocks": [],
+        "screenshot": "/private/tmp/github-manager-v2-mobile.png"
+      }
+    ],
+    "limitations": "Phone-sized figures require enlargement for small labels; prose/captions/alt text retain the explanation. This local QA template is not a test of a publishing platform.",
+    "visual_inspection": {
+      "status": "PASS",
+      "inspected": [
+        "desktop opening",
+        "mobile opening",
+        "two-phase figure at article width",
+        "classification data figure at article width"
+      ],
+      "finding": "Text and images fit the local layout. Captions and prose preserve the meaning of small figure labels, which need enlargement on narrow screens."
+    }
+  }
+}

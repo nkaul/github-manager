@@ -1,0 +1,947 @@
+{
+  "client_date": "2026-10-19",
+  "source_run_capture_utc": "2026-10-19T05:27:15.207694+00:00",
+  "generation_calls_for_this_walkthrough": 0,
+  "source_evidence_sha256": {
+    "manifest.json": "f5deb27ad3368b716af78e04480adeb1ebe4001d7c29eea227730b57619aef96",
+    "test-freeze.json": "63a3849ee0a9ea26e250f6310b06e8c1554325de843c21d3cdee0f97bd104d6c",
+    "config.json": "1809161758fe6e0a8a347f1bc8af4106b039f0a69c6f237384ca50c0f8dc1005",
+    "classification-inputs.json": "38b1116894779651516992e8dc1216ce1291e4e90f4ad92db1953d2d2724e886",
+    "evaluation-summary.json": "1e530018de9b2a0ca24bbedf538c6f411168a4bd85bc6af9cc77448b782ba126",
+    "predictions.json": "841b50849e23ffca4372a9e6df258363a3b730f10ded2b9d45154e92630c4323",
+    "taxonomy.json": "38bae08edf48c5108139efcfff9231d9e3653cc0acd826e236f7d150e1e9484a",
+    "ragas-results.json": "80036e034fc4f89c8231a671a6be1d15b2f32fadebbc71c42a6d65cde86c07aa",
+    "promptfoo-results.json": "778a2e9b299cb747d6a2edbfe60dfd5954609fbf0efe7ceb4f0e571e59d75680",
+    "final-checks.json": "26d07ea69e123f9ac0b5a7a85f1b7db0e3b88d9c007fbe03bda2e3ac9c84798e",
+    "preservation-check.json": "584fdf118130c6023a2e704adbe39fdcc5406e94956c3e15648c298a3057e6f9"
+  },
+  "full_corpus_splits": {
+    "test_reserved": 300,
+    "development": 180,
+    "validation": 120
+  },
+  "reference_splits": {
+    "development": 15,
+    "test_reserved": 15
+  },
+  "reference_groups_by_split": {
+    "development": 10,
+    "test_reserved": 8
+  },
+  "primary_replay_results": [
+    {
+      "repository": "acgeospatial/awesome-earthobservation-code",
+      "repository_id": "255615540",
+      "split": "development",
+      "reviewed_positive_labels": 2,
+      "positive_labels_retrieved": 2,
+      "positive_labels_selected": 2,
+      "unjudged_predictions": 1,
+      "reviewed_positive_recall": 1,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "actualbudget/actual",
+      "repository_id": "486815039",
+      "split": "development",
+      "reviewed_positive_labels": 3,
+      "positive_labels_retrieved": 2,
+      "positive_labels_selected": 2,
+      "unjudged_predictions": 0,
+      "reviewed_positive_recall": 0.6666666666666666,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "airbytehq/abctl",
+      "repository_id": "772768484",
+      "split": "development",
+      "reviewed_positive_labels": 3,
+      "positive_labels_retrieved": 2,
+      "positive_labels_selected": 2,
+      "unjudged_predictions": 1,
+      "reviewed_positive_recall": 0.6666666666666666,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "airbytehq/airbyte",
+      "repository_id": "283046497",
+      "split": "development",
+      "reviewed_positive_labels": 3,
+      "positive_labels_retrieved": 2,
+      "positive_labels_selected": 1,
+      "unjudged_predictions": 0,
+      "reviewed_positive_recall": 0.3333333333333333,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "airbytehq/airbyte-agent-sdk",
+      "repository_id": "1104847170",
+      "split": "development",
+      "reviewed_positive_labels": 3,
+      "positive_labels_retrieved": 3,
+      "positive_labels_selected": 3,
+      "unjudged_predictions": 0,
+      "reviewed_positive_recall": 1,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "airbytehq/airbyte-platform",
+      "repository_id": "592970656",
+      "split": "development",
+      "reviewed_positive_labels": 3,
+      "positive_labels_retrieved": 1,
+      "positive_labels_selected": 1,
+      "unjudged_predictions": 2,
+      "reviewed_positive_recall": 0.3333333333333333,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "airbytehq/airbyte-python-cdk",
+      "repository_id": "886018089",
+      "split": "development",
+      "reviewed_positive_labels": 3,
+      "positive_labels_retrieved": 2,
+      "positive_labels_selected": 2,
+      "unjudged_predictions": 2,
+      "reviewed_positive_recall": 0.6666666666666666,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "airbytehq/PyAirbyte",
+      "repository_id": "752526884",
+      "split": "development",
+      "reviewed_positive_labels": 3,
+      "positive_labels_retrieved": 2,
+      "positive_labels_selected": 2,
+      "unjudged_predictions": 1,
+      "reviewed_positive_recall": 0.6666666666666666,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "Alluxio/alluxio",
+      "repository_id": "7276954",
+      "split": "development",
+      "reviewed_positive_labels": 2,
+      "positive_labels_retrieved": 2,
+      "positive_labels_selected": 2,
+      "unjudged_predictions": 0,
+      "reviewed_positive_recall": 1,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "astropy/astroquery",
+      "repository_id": "4787269",
+      "split": "development",
+      "reviewed_positive_labels": 3,
+      "positive_labels_retrieved": 3,
+      "positive_labels_selected": 3,
+      "unjudged_predictions": 0,
+      "reviewed_positive_recall": 1,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "Project-MONAI/MONAI",
+      "repository_id": "214485001",
+      "split": "development",
+      "reviewed_positive_labels": 4,
+      "positive_labels_retrieved": 4,
+      "positive_labels_selected": 4,
+      "unjudged_predictions": 0,
+      "reviewed_positive_recall": 1,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "Prozac777/PartnerResources",
+      "repository_id": "294451375",
+      "split": "development",
+      "reviewed_positive_labels": 1,
+      "positive_labels_retrieved": 1,
+      "positive_labels_selected": 1,
+      "unjudged_predictions": 0,
+      "reviewed_positive_recall": 1,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "rasbt/LLMs-from-scratch",
+      "repository_id": "669879380",
+      "split": "development",
+      "reviewed_positive_labels": 3,
+      "positive_labels_retrieved": 2,
+      "positive_labels_selected": 2,
+      "unjudged_predictions": 1,
+      "reviewed_positive_recall": 0.6666666666666666,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "SeldonIO/seldon-core",
+      "repository_id": "114898943",
+      "split": "development",
+      "reviewed_positive_labels": 3,
+      "positive_labels_retrieved": 3,
+      "positive_labels_selected": 3,
+      "unjudged_predictions": 1,
+      "reviewed_positive_recall": 1,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "Sylius/Sylius",
+      "repository_id": "2717549",
+      "split": "development",
+      "reviewed_positive_labels": 3,
+      "positive_labels_retrieved": 2,
+      "positive_labels_selected": 2,
+      "unjudged_predictions": 1,
+      "reviewed_positive_recall": 0.6666666666666666,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "a-h/templ",
+      "repository_id": "356677177",
+      "split": "test_reserved",
+      "reviewed_positive_labels": 2,
+      "positive_labels_retrieved": 2,
+      "positive_labels_selected": 2,
+      "unjudged_predictions": 1,
+      "reviewed_positive_recall": 1,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "aimeos/aimeos-laravel",
+      "repository_id": "31541210",
+      "split": "test_reserved",
+      "reviewed_positive_labels": 3,
+      "positive_labels_retrieved": 3,
+      "positive_labels_selected": 3,
+      "unjudged_predictions": 0,
+      "reviewed_positive_recall": 1,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "AJorge95/OpenLearning",
+      "repository_id": "1411417964",
+      "split": "test_reserved",
+      "reviewed_positive_labels": 2,
+      "positive_labels_retrieved": 2,
+      "positive_labels_selected": 2,
+      "unjudged_predictions": 0,
+      "reviewed_positive_recall": 1,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "alexar76/ai-service-mesh",
+      "repository_id": "1247996276",
+      "split": "test_reserved",
+      "reviewed_positive_labels": 3,
+      "positive_labels_retrieved": 2,
+      "positive_labels_selected": 2,
+      "unjudged_predictions": 1,
+      "reviewed_positive_recall": 0.6666666666666666,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "alihalabyah/traider.io",
+      "repository_id": "19271467",
+      "split": "test_reserved",
+      "reviewed_positive_labels": 2,
+      "positive_labels_retrieved": 1,
+      "positive_labels_selected": 1,
+      "unjudged_predictions": 0,
+      "reviewed_positive_recall": 0.5,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "alphadl/AdaRubrics",
+      "repository_id": "1164205568",
+      "split": "test_reserved",
+      "reviewed_positive_labels": 2,
+      "positive_labels_retrieved": 1,
+      "positive_labels_selected": 1,
+      "unjudged_predictions": 0,
+      "reviewed_positive_recall": 0.5,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "anchore/grype",
+      "repository_id": "267054247",
+      "split": "test_reserved",
+      "reviewed_positive_labels": 3,
+      "positive_labels_retrieved": 3,
+      "positive_labels_selected": 2,
+      "unjudged_predictions": 0,
+      "reviewed_positive_recall": 0.6666666666666666,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "apache/airflow",
+      "repository_id": "33884891",
+      "split": "test_reserved",
+      "reviewed_positive_labels": 3,
+      "positive_labels_retrieved": 3,
+      "positive_labels_selected": 3,
+      "unjudged_predictions": 0,
+      "reviewed_positive_recall": 1,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "apache/airflow-client-go",
+      "repository_id": "275569071",
+      "split": "test_reserved",
+      "reviewed_positive_labels": 3,
+      "positive_labels_retrieved": 3,
+      "positive_labels_selected": 3,
+      "unjudged_predictions": 1,
+      "reviewed_positive_recall": 1,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "apache/airflow-client-python",
+      "repository_id": "275569232",
+      "split": "test_reserved",
+      "reviewed_positive_labels": 3,
+      "positive_labels_retrieved": 3,
+      "positive_labels_selected": 3,
+      "unjudged_predictions": 0,
+      "reviewed_positive_recall": 1,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "apache/casbin",
+      "repository_id": "87617508",
+      "split": "test_reserved",
+      "reviewed_positive_labels": 2,
+      "positive_labels_retrieved": 2,
+      "positive_labels_selected": 2,
+      "unjudged_predictions": 1,
+      "reviewed_positive_recall": 1,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "apache/fineract",
+      "repository_id": "48418599",
+      "split": "test_reserved",
+      "reviewed_positive_labels": 3,
+      "positive_labels_retrieved": 3,
+      "positive_labels_selected": 3,
+      "unjudged_predictions": 0,
+      "reviewed_positive_recall": 1,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "apache/fineract-backoffice-ui",
+      "repository_id": "1166711651",
+      "split": "test_reserved",
+      "reviewed_positive_labels": 3,
+      "positive_labels_retrieved": 3,
+      "positive_labels_selected": 3,
+      "unjudged_predictions": 2,
+      "reviewed_positive_recall": 1,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "apache/fineract-business-intelligence",
+      "repository_id": "1244227378",
+      "split": "test_reserved",
+      "reviewed_positive_labels": 4,
+      "positive_labels_retrieved": 3,
+      "positive_labels_selected": 3,
+      "unjudged_predictions": 0,
+      "reviewed_positive_recall": 0.75,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    },
+    {
+      "repository": "apache/fineract-chat-archive",
+      "repository_id": "1142711937",
+      "split": "test_reserved",
+      "reviewed_positive_labels": 3,
+      "positive_labels_retrieved": 2,
+      "positive_labels_selected": 1,
+      "unjudged_predictions": 0,
+      "reviewed_positive_recall": 0.3333333333333333,
+      "contract_pass": true,
+      "replay_model_tokens": 0,
+      "replay_cost_usd": 0
+    }
+  ],
+  "grounding_judge_results": [
+    {
+      "repository": "airbytehq/airbyte",
+      "claims_judged": 1,
+      "claims_supported": 1,
+      "score": 1.0,
+      "statements": [
+        {
+          "statement": "The repository's primary initiative relationship is Airbyte.",
+          "reason": "The context identifies the repository as airbytehq/airbyte and describes the Airbyte data movement platform and its connector catalog, directly associating the repository with Airbyte.",
+          "verdict": 1
+        }
+      ]
+    },
+    {
+      "repository": "SeldonIO/seldon-core",
+      "claims_judged": 4,
+      "claims_supported": 4,
+      "score": 1.0,
+      "statements": [
+        {
+          "statement": "The repository's primary capability is Application Deployment.",
+          "reason": "E1 emphasizes deploying AI applications at scale, and E2 describes deploying AI systems and applications as a central purpose of the framework.",
+          "verdict": 1
+        },
+        {
+          "statement": "The repository's primary capability is Model Serving.",
+          "reason": "E0 describes deploying and managing production machine learning models and includes the serving topic; E2 also identifies deployment of individual models as a core function.",
+          "verdict": 1
+        },
+        {
+          "statement": "The repository's primary technology is Go.",
+          "reason": "E0 explicitly identifies Go as the repository language.",
+          "verdict": 1
+        },
+        {
+          "statement": "The repository's primary technology is Kubernetes.",
+          "reason": "E2 explicitly describes Seldon Core 2 as a framework for deploying, managing and scaling AI systems in Kubernetes, establishing Kubernetes as its central deployment technology.",
+          "verdict": 1
+        }
+      ]
+    },
+    {
+      "repository": "airbytehq/airbyte-python-cdk",
+      "claims_judged": 4,
+      "claims_supported": 3,
+      "score": 0.75,
+      "statements": [
+        {
+          "statement": "The repository's primary initiative relationship is Airbyte.",
+          "reason": "The repository belongs to airbytehq and is described as the Airbyte Python CDK for building Airbyte connectors.",
+          "verdict": 1
+        },
+        {
+          "statement": "The repository's primary capability is API Development Tools.",
+          "reason": "The context describes a framework with classes and helpers for building API source connectors against HTTP APIs, supporting its classification as API development tools.",
+          "verdict": 1
+        },
+        {
+          "statement": "The repository's primary technology is Python.",
+          "reason": "The context explicitly lists Python as the repository language and describes it as the Python CDK.",
+          "verdict": 1
+        },
+        {
+          "statement": "The repository's primary technology is Graphql.",
+          "reason": "GraphQL is mentioned only as an API type supported by connectors, not as the primary repository technology.",
+          "verdict": 0
+        }
+      ]
+    }
+  ],
+  "worked_example": {
+    "repository": "airbytehq/airbyte-python-cdk",
+    "repository_id": "886018089",
+    "commit": "73ccaa90aec2beddcf632f51701471430d59dfba",
+    "split": "development",
+    "candidates_in_actual_order": [
+      {
+        "id": "project:airbyte-f003833e",
+        "kind": "PROJECT",
+        "name": "Airbyte",
+        "description": "Data replication/integration platform and explicitly dedicated connectors."
+      },
+      {
+        "id": "project:rasterio-95655494",
+        "kind": "PROJECT",
+        "name": "Rasterio",
+        "description": "Reading, writing and processing geospatial raster datasets."
+      },
+      {
+        "id": "project:prefect-c2381a41",
+        "kind": "PROJECT",
+        "name": "Prefect",
+        "description": "Python workflow orchestration and operational execution platform."
+      },
+      {
+        "id": "project:visual-studio-code-64f878b1",
+        "kind": "PROJECT",
+        "name": "Visual Studio Code",
+        "description": "VS Code implementation, dedicated extension or platform-specific component with explicit scope; generic editor support or dependency alone is insufficient."
+      },
+      {
+        "id": "project:qdrant-5bf4c858",
+        "kind": "PROJECT",
+        "name": "Qdrant",
+        "description": "Vector similarity retrieval engine and directly dedicated clients/integrations."
+      },
+      {
+        "id": "project:openbb-eef28267",
+        "kind": "PROJECT",
+        "name": "OpenBB",
+        "description": "A financial-data and investment-analysis platform and dedicated connectors or interfaces."
+      },
+      {
+        "id": "project:dagster-9e49dd43",
+        "kind": "PROJECT",
+        "name": "Dagster",
+        "description": "Data-asset orchestration, execution and observability platform."
+      },
+      {
+        "id": "project:openlineage-fd842dfc",
+        "kind": "PROJECT",
+        "name": "OpenLineage",
+        "description": "Open dataset/job/run lineage standard and dedicated integrations."
+      },
+      {
+        "id": "topic:web-apis-ec489d8f",
+        "kind": "TOPIC",
+        "name": "Web APIs",
+        "description": "Serve application/data operations through HTTP or REST API endpoints."
+      },
+      {
+        "id": "topic:api-development-tools-73d5087f",
+        "kind": "TOPIC",
+        "name": "API Development Tools",
+        "description": "Building, inspecting or testing APIs"
+      },
+      {
+        "id": "topic:static-code-analysis-7f07f68d",
+        "kind": "TOPIC",
+        "name": "Static Code Analysis",
+        "description": "Inspecting source code without executing it to find quality or correctness issues."
+      },
+      {
+        "id": "topic:infrastructure-as-code-8dfb9c8d",
+        "kind": "TOPIC",
+        "name": "Infrastructure as Code",
+        "description": "Declarative provisioning and lifecycle management of infrastructure"
+      },
+      {
+        "id": "topic:language-tooling-867d6f03",
+        "kind": "TOPIC",
+        "name": "Language Tooling",
+        "description": "Language servers, parsers and editor language support."
+      },
+      {
+        "id": "topic:documentation-validation-47619cc5",
+        "kind": "TOPIC",
+        "name": "Documentation Validation",
+        "description": "Checking documentation and developer instructions against implementation evidence."
+      },
+      {
+        "id": "topic:data-transformation-9f3c3ba9",
+        "kind": "TOPIC",
+        "name": "Data Transformation",
+        "description": "Transform analytical data using batch SQL/Python or declarative transformations."
+      },
+      {
+        "id": "topic:code-review-0dd7f7d3",
+        "kind": "TOPIC",
+        "name": "Code Review",
+        "description": "Reviewing and discussing changes to source code"
+      },
+      {
+        "id": "topic:synthetic-health-data-b3c88f4b",
+        "kind": "TOPIC",
+        "name": "Synthetic Health Data",
+        "description": "Generation of simulated patient histories or healthcare datasets; this is a repository capability, not a claim that its corpus sources are real patient records."
+      },
+      {
+        "id": "topic:code-generation-06d706a0",
+        "kind": "TOPIC",
+        "name": "Code Generation",
+        "description": "Generate reusable source code, schema declarations or implementation templates programmatically. Excludes executing existing data transformations or a static collection of finished applications."
+      },
+      {
+        "id": "tag:graphql-2e389773",
+        "kind": "TAG",
+        "name": "Graphql",
+        "description": "Graphql"
+      },
+      {
+        "id": "tag:python-33479fe5",
+        "kind": "TAG",
+        "name": "Python",
+        "description": "Python"
+      },
+      {
+        "id": "tag:gemini-cli-49f91340",
+        "kind": "TAG",
+        "name": "Gemini Cli",
+        "description": "Gemini Cli"
+      },
+      {
+        "id": "tag:azure-openai-a0c57905",
+        "kind": "TAG",
+        "name": "Azure OpenAI",
+        "description": "Azure OpenAI"
+      },
+      {
+        "id": "tag:azure-ai-search-f99933c7",
+        "kind": "TAG",
+        "name": "Azure AI Search",
+        "description": "Azure AI Search"
+      }
+    ],
+    "human_retained_label_names": [
+      "Airbyte",
+      "Data Ingestion",
+      "Python"
+    ],
+    "saved_model_output": {
+      "status": "CLASSIFIED",
+      "assignments": [
+        {
+          "kind": "PROJECT",
+          "concept_id": "project:airbyte-f003833e",
+          "confidence": 0.99,
+          "evidence_ids": [
+            "E0",
+            "E1",
+            "E2"
+          ],
+          "reason": "The repository is Airbyte's Python CDK, explicitly described as a framework for building Airbyte source connectors."
+        },
+        {
+          "kind": "TOPIC",
+          "concept_id": "topic:api-development-tools-73d5087f",
+          "confidence": 0.91,
+          "evidence_ids": [
+            "E2"
+          ],
+          "reason": "The CDK provides classes and helpers to build connectors against HTTP APIs."
+        },
+        {
+          "kind": "TAG",
+          "concept_id": "tag:python-33479fe5",
+          "confidence": 0.99,
+          "evidence_ids": [
+            "E0",
+            "E2"
+          ],
+          "reason": "The CDK is explicitly identified as Python."
+        },
+        {
+          "kind": "TAG",
+          "concept_id": "tag:graphql-2e389773",
+          "confidence": 0.84,
+          "evidence_ids": [
+            "E2"
+          ],
+          "reason": "GraphQL is explicitly listed as an API type supported for connector development."
+        }
+      ],
+      "summary": "Evidence supports Airbyte project membership, API development tooling, and Python and GraphQL tags."
+    },
+    "note": "One observed public-repository example. Full README text and owner identity are not exported. Evidence text in the Markdown is explicitly paraphrased."
+  },
+  "aggregate_results": {
+    "overall": {
+      "PROJECT": {
+        "repositories": 30,
+        "reviewed_positives": 15,
+        "retrieved_positives": 14,
+        "selected_positives": 13,
+        "predicted_pairs": 13,
+        "explicitly_unsupported_predictions": 0,
+        "unjudged_predictions": 0,
+        "completed_predictions": 30,
+        "exact_positive_set_matches": 28,
+        "candidate_recall_of_reviewed_positives": 0.9333333333333333,
+        "prediction_recall_of_reviewed_positives": 0.8666666666666667,
+        "candidate_conditional_positive_recall": 0.9285714285714286,
+        "judged_precision": 1.0,
+        "predicted_judgement_coverage": 1.0,
+        "exhaustive_precision": null,
+        "exhaustive_f1": null
+      },
+      "TOPIC": {
+        "repositories": 30,
+        "reviewed_positives": 35,
+        "retrieved_positives": 23,
+        "selected_positives": 23,
+        "predicted_pairs": 29,
+        "explicitly_unsupported_predictions": 0,
+        "unjudged_predictions": 6,
+        "completed_predictions": 30,
+        "exact_positive_set_matches": 16,
+        "candidate_recall_of_reviewed_positives": 0.6571428571428571,
+        "prediction_recall_of_reviewed_positives": 0.6571428571428571,
+        "candidate_conditional_positive_recall": 1.0,
+        "judged_precision": 1.0,
+        "predicted_judgement_coverage": 0.7931034482758621,
+        "exhaustive_precision": null,
+        "exhaustive_f1": null
+      },
+      "TAG": {
+        "repositories": 30,
+        "reviewed_positives": 33,
+        "retrieved_positives": 32,
+        "selected_positives": 30,
+        "predicted_pairs": 40,
+        "explicitly_unsupported_predictions": 0,
+        "unjudged_predictions": 10,
+        "completed_predictions": 30,
+        "exact_positive_set_matches": 18,
+        "candidate_recall_of_reviewed_positives": 0.9696969696969697,
+        "prediction_recall_of_reviewed_positives": 0.9090909090909091,
+        "candidate_conditional_positive_recall": 0.9375,
+        "judged_precision": 1.0,
+        "predicted_judgement_coverage": 0.75,
+        "exhaustive_precision": null,
+        "exhaustive_f1": null
+      },
+      "ALL": {
+        "repositories": 30,
+        "reviewed_positives": 83,
+        "retrieved_positives": 69,
+        "selected_positives": 66,
+        "predicted_pairs": 82,
+        "explicitly_unsupported_predictions": 0,
+        "unjudged_predictions": 16,
+        "completed_predictions": 30,
+        "exact_positive_set_matches": 10,
+        "candidate_recall_of_reviewed_positives": 0.8313253012048193,
+        "prediction_recall_of_reviewed_positives": 0.7951807228915663,
+        "candidate_conditional_positive_recall": 0.9565217391304348,
+        "judged_precision": 1.0,
+        "predicted_judgement_coverage": 0.8048780487804879,
+        "exhaustive_precision": null,
+        "exhaustive_f1": null
+      }
+    },
+    "splits": {
+      "development": {
+        "PROJECT": {
+          "repositories": 15,
+          "reviewed_positives": 7,
+          "retrieved_positives": 7,
+          "selected_positives": 7,
+          "predicted_pairs": 7,
+          "explicitly_unsupported_predictions": 0,
+          "unjudged_predictions": 0,
+          "completed_predictions": 15,
+          "exact_positive_set_matches": 15,
+          "candidate_recall_of_reviewed_positives": 1.0,
+          "prediction_recall_of_reviewed_positives": 1.0,
+          "candidate_conditional_positive_recall": 1.0,
+          "judged_precision": 1.0,
+          "predicted_judgement_coverage": 1.0,
+          "exhaustive_precision": null,
+          "exhaustive_f1": null
+        },
+        "TOPIC": {
+          "repositories": 15,
+          "reviewed_positives": 19,
+          "retrieved_positives": 11,
+          "selected_positives": 11,
+          "predicted_pairs": 15,
+          "explicitly_unsupported_predictions": 0,
+          "unjudged_predictions": 4,
+          "completed_predictions": 15,
+          "exact_positive_set_matches": 7,
+          "candidate_recall_of_reviewed_positives": 0.5789473684210527,
+          "prediction_recall_of_reviewed_positives": 0.5789473684210527,
+          "candidate_conditional_positive_recall": 1.0,
+          "judged_precision": 1.0,
+          "predicted_judgement_coverage": 0.7333333333333333,
+          "exhaustive_precision": null,
+          "exhaustive_f1": null
+        },
+        "TAG": {
+          "repositories": 15,
+          "reviewed_positives": 16,
+          "retrieved_positives": 15,
+          "selected_positives": 14,
+          "predicted_pairs": 20,
+          "explicitly_unsupported_predictions": 0,
+          "unjudged_predictions": 6,
+          "completed_predictions": 15,
+          "exact_positive_set_matches": 8,
+          "candidate_recall_of_reviewed_positives": 0.9375,
+          "prediction_recall_of_reviewed_positives": 0.875,
+          "candidate_conditional_positive_recall": 0.9333333333333333,
+          "judged_precision": 1.0,
+          "predicted_judgement_coverage": 0.7,
+          "exhaustive_precision": null,
+          "exhaustive_f1": null
+        },
+        "ALL": {
+          "repositories": 15,
+          "reviewed_positives": 42,
+          "retrieved_positives": 33,
+          "selected_positives": 32,
+          "predicted_pairs": 42,
+          "explicitly_unsupported_predictions": 0,
+          "unjudged_predictions": 10,
+          "completed_predictions": 15,
+          "exact_positive_set_matches": 5,
+          "candidate_recall_of_reviewed_positives": 0.7857142857142857,
+          "prediction_recall_of_reviewed_positives": 0.7619047619047619,
+          "candidate_conditional_positive_recall": 0.9696969696969697,
+          "judged_precision": 1.0,
+          "predicted_judgement_coverage": 0.7619047619047619,
+          "exhaustive_precision": null,
+          "exhaustive_f1": null
+        }
+      },
+      "test_reserved": {
+        "PROJECT": {
+          "repositories": 15,
+          "reviewed_positives": 8,
+          "retrieved_positives": 7,
+          "selected_positives": 6,
+          "predicted_pairs": 6,
+          "explicitly_unsupported_predictions": 0,
+          "unjudged_predictions": 0,
+          "completed_predictions": 15,
+          "exact_positive_set_matches": 13,
+          "candidate_recall_of_reviewed_positives": 0.875,
+          "prediction_recall_of_reviewed_positives": 0.75,
+          "candidate_conditional_positive_recall": 0.8571428571428571,
+          "judged_precision": 1.0,
+          "predicted_judgement_coverage": 1.0,
+          "exhaustive_precision": null,
+          "exhaustive_f1": null
+        },
+        "TOPIC": {
+          "repositories": 15,
+          "reviewed_positives": 16,
+          "retrieved_positives": 12,
+          "selected_positives": 12,
+          "predicted_pairs": 14,
+          "explicitly_unsupported_predictions": 0,
+          "unjudged_predictions": 2,
+          "completed_predictions": 15,
+          "exact_positive_set_matches": 9,
+          "candidate_recall_of_reviewed_positives": 0.75,
+          "prediction_recall_of_reviewed_positives": 0.75,
+          "candidate_conditional_positive_recall": 1.0,
+          "judged_precision": 1.0,
+          "predicted_judgement_coverage": 0.8571428571428571,
+          "exhaustive_precision": null,
+          "exhaustive_f1": null
+        },
+        "TAG": {
+          "repositories": 15,
+          "reviewed_positives": 17,
+          "retrieved_positives": 17,
+          "selected_positives": 16,
+          "predicted_pairs": 20,
+          "explicitly_unsupported_predictions": 0,
+          "unjudged_predictions": 4,
+          "completed_predictions": 15,
+          "exact_positive_set_matches": 10,
+          "candidate_recall_of_reviewed_positives": 1.0,
+          "prediction_recall_of_reviewed_positives": 0.9411764705882353,
+          "candidate_conditional_positive_recall": 0.9411764705882353,
+          "judged_precision": 1.0,
+          "predicted_judgement_coverage": 0.8,
+          "exhaustive_precision": null,
+          "exhaustive_f1": null
+        },
+        "ALL": {
+          "repositories": 15,
+          "reviewed_positives": 41,
+          "retrieved_positives": 36,
+          "selected_positives": 34,
+          "predicted_pairs": 40,
+          "explicitly_unsupported_predictions": 0,
+          "unjudged_predictions": 6,
+          "completed_predictions": 15,
+          "exact_positive_set_matches": 5,
+          "candidate_recall_of_reviewed_positives": 0.8780487804878049,
+          "prediction_recall_of_reviewed_positives": 0.8292682926829268,
+          "candidate_conditional_positive_recall": 0.9444444444444444,
+          "judged_precision": 1.0,
+          "predicted_judgement_coverage": 0.85,
+          "exhaustive_precision": null,
+          "exhaustive_f1": null
+        }
+      }
+    },
+    "budgets": {
+      "new_ledger_calls": 50,
+      "new_estimated_charge_usd": 0.133941,
+      "tokens_including_adapter_failures": {
+        "input_tokens": 76617,
+        "output_tokens": 16081,
+        "total_tokens": 92698
+      },
+      "original_non_eval_call_rows": 91,
+      "original_non_eval_accounted_usd": 0.127619,
+      "combined_accounted_usd": 4.31697,
+      "run_grant": {
+        "ceiling_usd": 0.816971,
+        "remaining_conservative_hold_usd": 0.0,
+        "state": "FINISHED",
+        "http_used": 100,
+        "generation_used": 50
+      },
+      "http_attempt_admissions": 100,
+      "generation_attempt_admissions": 50,
+      "batches": {
+        "1": 20,
+        "2": 20,
+        "3": 18,
+        "4": 12,
+        "5": 16,
+        "6": 14
+      }
+    }
+  },
+  "limits": "Selected single-reviewer positive references; extra predictions remain unknown. Software PASS is not a semantic quality gate."
+}

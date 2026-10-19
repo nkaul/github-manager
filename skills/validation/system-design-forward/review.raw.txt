@@ -1,0 +1,90 @@
+# Research Shelf: architecture review and local implementation plan
+
+Review date: October 16, 2026. Status: planning only. The supplied prototype does not yet demonstrate the approved behavior of a usable local organizer with reviewed categories. The immediate work is to protect researcher decisions, enforce the public/private model boundary, and make analysis and budget state durable before adding more automation. Cloud workers and a vector database remain deferred.
+
+## Evidence and authority
+
+The review inspected all four supplied files and the relevant system-design skill references. The [approved direction](approved-design.md:3) governs the plan. The [historical proposal](historical-proposal.md:3) is superseded where it calls for immediate managed infrastructure, automatic acceptance or counter erasure. It supplies context, not authorization to revive those choices.
+
+| Status | Evidence | Consequence |
+| --- | --- | --- |
+| Implemented in the reduced fixture | [service.py](service.py:5) uses missing folder membership to trigger classification. | Folder coverage is currently a proxy for analysis eligibility. |
+| Implemented in the reduced fixture | [service.py](service.py:7) forwards the abstract without a visible privacy check, then saves labels with `accepted=True`. | This path can bypass the approved private-content restriction and review requirement when given a private paper. |
+| Implemented in the reduced fixture | [service.py](service.py:2) keeps a process-global counter. | Counter persistence, multiple-process coordination and actual HTTP accounting are not demonstrated. |
+| Implemented in the reduced fixture | [service.py](service.py:12) calls unscoped label deletion. | This operation does not visibly preserve manual or rejected decisions. It does **not** explicitly reset the counter; the historical counter-reset proposal is not implemented here. |
+| Described, not exercised | [README](README.md:3) describes SQLite, an authenticated connector, private/public abstracts and a folder-editing UI. | No full schema, connector, UI or operational tests were supplied. Their correctness cannot be inferred from the description. |
+| Approved target | [approved-design.md](approved-design.md:3) requires local-first delivery, reviewed suggestions, distinct ownership, a cumulative $3 ceiling and 20 HTTP attempts per allowance window. | These are acceptance constraints, not measured results. |
+
+## Representative workflow and required invariants
+
+A researcher imports a public paper, sees its abstract, requests organization against approved categories, reviews a suggestion and accepts or rejects it. The accepted decision becomes browseable and searchable locally. Running organization again should recognize the completed analysis even when the researcher leaves the paper without a folder or rejects all suggested categories.
+
+Proposed path:
+
+```mermaid
+flowchart LR
+    A[Connector facts and visibility] --> B[Local paper record and source version]
+    B --> C{Access, privacy, freshness and budget admission}
+    C -->|eligible public content| D[Bounded classification request]
+    C -->|private or otherwise excluded| E[Explain skip; allow manual organization]
+    D --> F[Validate IDs, evidence and result schema]
+    F --> G[Pending suggestion and durable analysis receipt]
+    G --> H[Researcher accepts or rejects]
+    H --> I[Local categories, folders and search]
+```
+
+The diagram is a proposal. No component was created or exercised during this review.
+
+The design must retain these invariants:
+
+- Connector refresh changes source facts, not researcher-owned accepted memberships or rejection decisions. Record paper identity in the connector namespace and a source version/content hash; whether the supplied `id` already has this stability is unknown.
+- Private or unknown-visibility abstracts are excluded at the final outbound model boundary. An authenticated connector is permission to read within its scope, not permission to export every abstract to a model.
+- Model output creates a proposal, not an accepted decision. Unknown/retired category IDs, malformed output and invalid evidence do not become memberships. Source text is untrusted data even when it resembles instructions.
+- Successful, validated `NO_MATCH` is a completed analysis. Analysis completion, accepted category coverage, folder membership, freshness and pending review are separate states.
+- Repeated requests reuse the durable receipt when the relevant inputs and approved category version are unchanged. Explicit re-analysis records the reason, exact cohort and fresh allowance checks; deleting organization history does not implicitly authorize it.
+- A category edit, manual correction, rejection, access change or reset during a running request prevents stale results from overwriting the newer state. Retain the attempt and cost evidence even if its suggestion is discarded.
+- Every actual external HTTP attempt consumes an allowance unit, including retries and provider count requests. A window renewal never erases cumulative cost, receipts or previous decisions. Ambiguous provider outcomes retain a conservative cost hold until resolved.
+
+## Material gaps and proposed changes
+
+| Gap | Required behavior | Dependency | Acceptance evidence to collect |
+| --- | --- | --- | --- |
+| No visible outbound visibility guard | Public-only model payloads; private/unknown items skipped with a reason | Connector visibility contract and final payload admission | A private fixture containing a sentinel never appears in the fake provider's captured requests |
+| Automatic acceptance | Pending proposals require explicit researcher acceptance/rejection | Reviewed category identities and decision persistence | Classification changes the review queue but no accepted memberships |
+| Folder-based eligibility | Durable successful-analysis state, independent of folder/category coverage | Source/category version and per-paper receipt | Repeat/no-folder/rejected-all/NO_MATCH scenarios make zero new provider calls |
+| Process-local allowance only | Durable atomic admission and actual-attempt accounting | Shared SQLite transaction policy and controlled retry adapter | Restart and two competing organizers cannot exceed the granted window |
+| No visible dollar ceiling | Reserve the worst permitted next-call cost within cumulative $3 before dispatch; settle actual usage | Selected model, current price snapshot and bounded output | An over-budget request is blocked before outbound work; unresolved timeout remains reserved |
+| Unscoped deletion | Explicit reset scopes with impact preview and preserved protected decisions/ledgers | Distinct proposal, decision and receipt records | Reset pending suggestions leaves manual memberships, rejections, receipts and cumulative spend intact |
+| Misleading “Unclassified” | Show “No folder” separately from category coverage and analysis status | UI/backend status contract | A categorized, analyzed paper without a folder has accurate status and remains findable |
+| Search and review completeness unproven | Import, inspect, categorize, correct, filter and search in one local workflow | Full connector/UI/schema inspection during implementation | A saved scenario demonstrates accepted decisions survive refresh and restart and appear in category browsing/search |
+
+## Proposed local design and choices
+
+Keep one local Python service and SQLite. Separate logical records rather than introducing independent services: source papers/visibility, approved category definitions, pending suggestions, researcher decisions, analysis receipts, runs, allowance windows, HTTP attempts and cost reservations/settlements. The supplied fixture does not establish their schema; migrations and preservation checks are proposed work.
+
+Keep folder semantics intact until their actual cardinality is inspected. Proposed categories are independent reviewed concepts with stable IDs and paper memberships; do not import GitHub Manager's Domain/Project hierarchy into Research Shelf. For the initial slice, allow existing-folder navigation plus approved-category filtering. Whether categories should be mutually exclusive, hierarchical or many-to-many is a material product choice to confirm with the implementation plan; a conservative default is independent many-to-many categories with no new hierarchy. Explicit manual decisions take precedence over automatic proposals.
+
+Use a single local execution path initially. A transaction admits a run, captures source/category revisions and reserves its finite budget; the network request occurs outside the database transaction; a second transaction settles usage, stores the receipt and conditionally applies a pending suggestion only if its revisions remain valid. Do not hold a database write lock across a remote call. Record abandoned/uncertain attempts after a process interruption; avoid automatic paid retries when the prior outcome is unknown. A database admission guard is still needed even with one worker because repeated starts and restarts exist.
+
+Use local text search as the first retrieval baseline. A full abstract plus a small reviewed category registry may fit a bounded classification request without a separate retrieval service. If the registry or text volume outgrows the request budget, first compare deterministic lexical category selection and section/passage packing against the full-registry baseline. Evaluate synonym/no-match failures before proposing embeddings or hybrid retrieval. A vector database is neither present nor required by the supplied evidence. No deployed RAG, reranker, agentic loop or memory system is demonstrated.
+
+Two assumptions need to be made explicit at approval: what “20 HTTP attempts” covers, and category cardinality. Until clarified, budget design should conservatively count all external connector/provider attempts under the granted window, identify the channel in each ledger entry, and keep model dollars separately capped at $3. Twenty model function invocations are not proof of twenty actual HTTP requests. A window limit change means a total allowance unless the UI explicitly says additional attempts; renewing a window is separate from spending authorization. The chosen model, pricing, output bound and whether provider token-count calls are used remain unresolved; no old project defaults should be copied.
+
+## Dependency-ordered implementation phases
+
+| Phase | Work and dependencies | Exit evidence and failure behavior |
+| --- | --- | --- |
+| 0 — Establish contracts offline | Inspect the full local service/schema/UI when available. Define connector identities, visibility, pagination and access-loss behavior; category semantics; exact allowance denominator; provider output/usage contract. Build public/private/unknown-visibility and reviewed/rejected/NO_MATCH fixtures. Preserve a copy of existing user data before migration work. | A dated contract report and deterministic fixture tests. Unknown visibility blocks model dispatch. No account/model calls are needed for this preparation. Missing full implementation is reported, not filled in by assumption. |
+| 1 — Durable safe organization | Add logical state separation, revisions, review-only suggestions, manual/rejection precedence, successful-analysis receipts and atomic attempt/dollar admission. Migrate existing data without discarding researcher decisions. Use a fake provider first. | Demonstrate repeat/no-folder/NO_MATCH skip behavior; restart and competing-start admission; private sentinel exclusion; schema/ID rejection; timeout cost holds; stale-response rejection. Failure preserves evidence and leaves accepted organization unchanged. |
+| 2 — Complete local user workflow | Connect import/content inspection, approved-category creation/review, bounded cohort preview, suggestion acceptance/rejection, manual correction, category/folder browsing, search, explicit re-analysis and scoped reset. Expose accurate state and remaining allowance/cumulative spend. | End-to-end local walkthrough with preserved data across refresh/restart. A researcher can find accepted papers, resolve conflicts, understand skips and reset pending work without losing protected decisions. Demo with mocks is labeled as such. |
+| 3 — Bounded external proof and readiness review | Only after plan approval and within explicit execution authorization, verify the actual connector/authentication and a minimal public-only model call set. Use known public/private fixtures, pagination and captured sanitized payload/usage evidence. Resolve current pricing before paid admission. | Dated Markdown report with actual attempts, observed costs/usage, outcomes, failures and untested paths. Enforce the cumulative $3 ceiling and per-window 20-attempt grant. Stop on denied access, unknown visibility, exhausted allowance or unresolved cost; do not silently expand caps. |
+
+Cloud deployment, a managed vector store, autonomous background organization and automatic acceptance are outside the local completion gate. Revisit a queue only when measured local run duration/concurrency or recoverability requires it. Revisit dense/hybrid retrieval only after a realistic, independently reviewed evaluation shows material failures of the lexical/full-registry baseline. Neither revisit authorizes implementing a superseded historical proposal.
+
+## Evaluation and readiness gate
+
+For category quality, use a small researcher-reviewed paper set with allowed labels, explicit no-match/ambiguous cases and immutable abstract versions. Keep study/development examples separate from a locked evaluation subset and group duplicate paper versions together. Measure per-category precision/recall and review acceptance/rejection on the actual evaluated subset; validate category ID correctness and evidence support separately. For candidate retrieval, if introduced, measure whether the approved reference categories survive its cutoff before grading final generation. There is no basis here for a numerical accuracy claim, a model recommendation or a named RAG-framework integration.
+
+For harness correctness, verify the exact boundaries in the phase table with controlled scenarios and captured outbound calls rather than implementation-mirroring assertions. For usability, record a researcher completing the import → review → correct → find → restart → repeat workflow. Connector authentication success, a successful model probe and passing mock tests are distinct evidence; none alone proves full readiness.
+
+This review did not execute the prototype, install packages, authenticate, invoke models, inspect a real SQLite database or mutate the application. Only this planning artifact was written. The four fixtures are deliberately reduced, so absent behavior is described as not demonstrated except for the directly visible unsafe paths. Implementation remains gated on approval of the concrete plan; factual readiness and cost/quality results must be collected later.

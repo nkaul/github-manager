@@ -1,0 +1,4 @@
+interface:
+  display_name: "Illustrated Explainers"
+  short_description: "Readable paper-and-marker technical illustrations"
+  default_prompt: "Use $illustrated-explainers to explain this mechanism with readable evidence, semantic illustrations and a clear visual story."

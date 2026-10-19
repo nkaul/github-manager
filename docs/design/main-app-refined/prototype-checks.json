@@ -1,0 +1,126 @@
+{
+  "preview": "Main app refinement",
+  "scope": "Local HTML; illustrative public names and in-memory behavior only",
+  "checks": [
+    {
+      "name": "12 public example rows load",
+      "status": "passed"
+    },
+    {
+      "name": "No horizontal overflow;56px header;36px capped desktop search;first desktop row within360px",
+      "status": "passed"
+    },
+    {
+      "name": "Slash shortcut focuses repository search",
+      "status": "passed"
+    },
+    {
+      "name": "Search matches repository names and descriptions",
+      "status": "passed"
+    },
+    {
+      "name": "Language and topic filters combine with AND",
+      "status": "passed"
+    },
+    {
+      "name": "Filter Escape closes and returns focus",
+      "status": "passed"
+    },
+    {
+      "name": "Selection count and scoped action bar update",
+      "status": "passed"
+    },
+    {
+      "name": "Manual assignment updates example display only",
+      "status": "passed"
+    },
+    {
+      "name": "List and card view toggles",
+      "status": "passed"
+    },
+    {
+      "name": "640px AI setup dialog and visible pinned footer",
+      "status": "passed"
+    },
+    {
+      "name": "AI tabs;explicit simulation;no invented history;Escape focus restoration",
+      "status": "passed"
+    },
+    {
+      "name": "Duplicate alias blocks publication until explicit local repair",
+      "status": "passed"
+    },
+    {
+      "name": "Latest Work shows truthful unconnected state",
+      "status": "passed"
+    },
+    {
+      "name": "Empty search gives recovery action",
+      "status": "passed"
+    },
+    {
+      "name": "Mobile navigation opens;selection closes and makes hidden rail inert",
+      "status": "passed"
+    },
+    {
+      "name": "Mobile AI dialog body scrolls and footer remains reachable",
+      "status": "passed"
+    },
+    {
+      "name": "Narrow viewport retains document reflow",
+      "status": "passed"
+    },
+    {
+      "name": "Zero page/console errors and zero HTTP/API/model requests",
+      "status": "passed"
+    }
+  ],
+  "viewports": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "documentWidth": 1920,
+      "viewportWidth": 1920,
+      "headerHeight": 56,
+      "firstRowTop": 359,
+      "searchWidth": 360,
+      "searchHeight": 36,
+      "screenshot": "desktop-1920.png"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "documentWidth": 1440,
+      "viewportWidth": 1440,
+      "headerHeight": 56,
+      "firstRowTop": 359,
+      "searchWidth": 360,
+      "searchHeight": 36,
+      "screenshot": "desktop-1440.png"
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "documentWidth": 1280,
+      "viewportWidth": 1280,
+      "headerHeight": 56,
+      "firstRowTop": 359,
+      "searchWidth": 360,
+      "searchHeight": 36,
+      "screenshot": "desktop-1280.png"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "viewportWidth": 390,
+      "headerHeight": 56,
+      "firstRowTop": 508,
+      "searchWidth": 332,
+      "searchHeight": 44,
+      "screenshot": "mobile-390.png"
+    }
+  ],
+  "errors": [],
+  "networkRequests": []
+}

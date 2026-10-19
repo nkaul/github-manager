@@ -1,0 +1,155 @@
+1
+00:00:01,160 --> 00:00:02,120
+Section eight.
+
+2
+00:00:02,740 --> 00:00:03,040
+Augmentation.
+
+3
+00:00:04,000 --> 00:00:07,420
+The purpose is to assemble a decision-ready request from
+
+4
+00:00:07,420 --> 00:00:10,040
+the evidence and retrieved possibilities.
+
+5
+00:00:11,260 --> 00:00:12,640
+Retrieval supplies options.
+
+6
+00:00:13,880 --> 00:00:17,000
+Augmentation explains those options and the rules for selecting
+
+7
+00:00:17,000 --> 00:00:17,440
+them.
+
+8
+00:00:26,327 --> 00:00:30,007
+For Orion, the payload includes repository identity,
+
+9
+00:00:30,907 --> 00:00:32,367
+public or synthetic source status,
+
+10
+00:00:33,087 --> 00:00:33,307
+revision,
+
+11
+00:00:34,207 --> 00:00:34,587
+evidence hash,
+
+12
+00:00:35,407 --> 00:00:38,467
+selected evidence, phrase strings, and candidate records.
+
+13
+00:00:39,867 --> 00:00:42,687
+Evidence one preserves the patient-intake sentence.
+
+14
+00:00:43,587 --> 00:00:47,707
+Candidate records contain canonical ID, kind, name, and
+
+15
+00:00:47,707 --> 00:00:48,087
+description.
+
+16
+00:00:49,167 --> 00:00:52,447
+Aliases helped retrieval but are not serialized into those
+
+17
+00:00:52,447 --> 00:00:53,287
+candidate objects.
+
+18
+00:00:54,367 --> 00:00:56,827
+Expected evaluation labels are never supplied.
+
+19
+00:01:01,693 --> 00:01:04,793
+The system instructions require supported approved IDs,
+
+20
+00:01:05,773 --> 00:01:06,673
+primary-purpose Topics,
+
+21
+00:01:07,293 --> 00:01:09,013
+and primary implementation Tags.
+
+22
+00:01:10,001 --> 00:01:13,101
+Shared frameworks do not prove initiative membership.
+
+23
+00:01:14,648 --> 00:01:15,468
+Negation matters;
+
+24
+00:01:16,608 --> 00:01:17,688
+multiple Projects are allowed.
+
+25
+00:01:18,855 --> 00:01:21,875
+Unsupported input can produce no match or a request
+
+26
+00:01:21,875 --> 00:01:22,955
+for more context.
+
+27
+00:01:24,543 --> 00:01:28,223
+User decisions remain application constraints rather than an
+
+28
+00:01:28,223 --> 00:01:30,243
+invitation for the model to overrule them.
+
+29
+00:01:35,127 --> 00:01:37,947
+A strict response schema describes assignments,
+
+30
+00:01:38,767 --> 00:01:39,287
+evidence references,
+
+31
+00:01:40,047 --> 00:01:40,347
+reasons,
+
+32
+00:01:40,967 --> 00:01:42,126
+status, and summary.
+
+33
+00:01:42,126 --> 00:01:45,646
+LangChain binds that schema to the hosted request.
+
+34
+00:01:47,065 --> 00:01:50,465
+The harness inspects the assembled messages and schema before
+
+35
+00:01:50,465 --> 00:01:51,645
+counting input tokens.
+
+36
+00:01:52,864 --> 00:01:56,684
+This is retrieval-augmented structured classification, with
+
+37
+00:01:56,684 --> 00:01:58,144
+durable application memory.
+
+38
+00:01:59,003 --> 00:02:03,523
+It is not a conversational document-question-answering agent, and
+
+39
+00:02:03,523 --> 00:02:06,403
+adaptive budgets do not turn it into Adaptive RAG.

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1080" viewBox="0 0 1800 1080" role="img" aria-labelledby="title desc">
+<title id="title">From GitHub evidence to user-owned organization</title><desc id="desc">Implemented local app: three logical data areas in SQLite; AWS runtime remains a separate design.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#3949ab" stroke-width="1.5"/></marker></defs>
+<style>text {font-family: "Chalkboard SE", "Comic Sans MS", "Trebuchet MS", sans-serif; fill:#20213f} .title {font-size:43px;font-weight:700;fill:#3949ab} .subtitle {font-size:23px} .card-title {font-size:28px;font-weight:700;fill:#673ab7} .body {font-size:23px} .small {font-size:21px} .label {font-size:22px;fill:#3949ab} .metric {font-family:"Trebuchet MS",sans-serif;font-size:28px;font-weight:700}</style>
+<rect width="1800" height="1080" fill="#fff"/>
+<path d="M60 34 Q850 5 1730 34 L1734 112 Q840 98 58 116Z" fill="#e3f2fd" opacity=".55"/>
+<text x="75" y="80" class="title">From GitHub evidence to user-owned organization</text>
+<path d="M76 99 Q700 106 1718 99" fill="none" stroke="#673ab7" stroke-width="4" opacity=".7"/>
+<text x="78" y="142" class="subtitle">Implemented local app: three logical data areas in SQLite; AWS runtime remains a separate design.</text>
+<g data-card="GitHub + OAuth App"><rect x="75" y="190" width="510" height="205" rx="18" fill="#e3f2fd" stroke="#20213f" stroke-width="2.5"/>
+<path d="M89 194 Q330.0 189 570 194" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="99" y="234" class="card-title" text-anchor="start">GitHub + OAuth App</text>
+<text x="100" y="274" class="body" text-anchor="start">Trusted identity and repository data</text>
+<text x="100" y="306" class="body" text-anchor="start">Public-source verification</text>
+<text x="100" y="338" class="body" text-anchor="start">Credentials stay on the server</text>
+</g>
+<g data-card="FastAPI + durable local jobs"><rect x="645" y="190" width="510" height="205" rx="18" fill="#f3e5f5" stroke="#20213f" stroke-width="2.5"/>
+<path d="M659 194 Q900.0 189 1140 194" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="669" y="234" class="card-title" text-anchor="start">FastAPI + durable local jobs</text>
+<text x="670" y="274" class="body" text-anchor="start">Owner-scoped session and CSRF</text>
+<text x="670" y="306" class="body" text-anchor="start">Reviewed cohort → exact run plan</text>
+<text x="670" y="338" class="body" text-anchor="start">One active organization run</text>
+</g>
+<g data-card="Next.js workspace"><rect x="1215" y="190" width="510" height="205" rx="18" fill="#e3f2fd" stroke="#20213f" stroke-width="2.5"/>
+<path d="M1229 194 Q1470.0 189 1710 194" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="1239" y="234" class="card-title" text-anchor="start">Next.js workspace</text>
+<text x="1240" y="274" class="body" text-anchor="start">Browse Projects, Topics and Tags</text>
+<text x="1240" y="306" class="body" text-anchor="start">Review drafts and suggestions</text>
+<text x="1240" y="338" class="body" text-anchor="start">Manual mappings + explicit resets</text>
+</g>
+<path d="M585,290 L645,290" fill="none" stroke="#3949ab" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M1155,290 L1215,290" fill="none" stroke="#3949ab" stroke-width="3" marker-end="url(#arrow)"/>
+<g data-card="Core · authoritative metadata"><rect x="75" y="500" width="510" height="230" rx="18" fill="#e3f2fd" stroke="#20213f" stroke-width="2.5"/>
+<path d="M89 504 Q330.0 499 570 504" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="99" y="544" class="card-title" text-anchor="start">Core · authoritative metadata</text>
+<text x="100" y="584" class="body" text-anchor="start">Stable GitHub IDs and URLs</text>
+<text x="100" y="616" class="body" text-anchor="start">Inventory, access and activity</text>
+<text x="100" y="648" class="body" text-anchor="start">Model cannot rewrite these fields</text>
+</g>
+<g data-card="Intelligence · local evidence"><rect x="645" y="500" width="510" height="230" rx="18" fill="#f3e5f5" stroke="#20213f" stroke-width="2.5"/>
+<path d="M659 504 Q900.0 499 1140 504" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="669" y="544" class="card-title" text-anchor="start">Intelligence · local evidence</text>
+<text x="670" y="584" class="body" text-anchor="start">Heading-aware README selection</text>
+<text x="670" y="616" class="body" text-anchor="start">RAKE phrases + source spans</text>
+<text x="670" y="648" class="body" text-anchor="start">Versioned profiles and hashes</text>
+</g>
+<g data-card="Organization · durable memory"><rect x="1215" y="500" width="510" height="230" rx="18" fill="#e3f2fd" stroke="#20213f" stroke-width="2.5"/>
+<path d="M1229 504 Q1470.0 499 1710 504" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="1239" y="544" class="card-title" text-anchor="start">Organization · durable memory</text>
+<text x="1240" y="584" class="body" text-anchor="start">Canonical IDs, aliases and rules</text>
+<text x="1240" y="616" class="body" text-anchor="start">USER decisions and rejections</text>
+<text x="1240" y="648" class="body" text-anchor="start">Receipts, proposals and fences</text>
+</g>
+<path d="M900,395 L900,445 L330,445 L330,500" fill="none" stroke="#3949ab" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M900,395 L900,500" fill="none" stroke="#3949ab" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M900,445 L1470,445 L1470,500" fill="none" stroke="#3949ab" stroke-width="3" marker-end="url(#arrow)"/>
+<g data-card="LangChain → hosted OpenAI model"><rect x="370" y="805" width="1060" height="160" rx="18" fill="#f3e5f5" stroke="#20213f" stroke-width="2.5"/>
+<path d="M384 809 Q900.0 804 1415 809" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="394" y="849" class="card-title" text-anchor="start">LangChain → hosted OpenAI model</text>
+<text x="395" y="889" class="body" text-anchor="start">Bounded evidence + retrieved canonical candidates → strict JSON</text>
+<text x="395" y="921" class="body" text-anchor="start">Tools disabled · review-first results · separate durable spending ledger</text>
+</g>
+<path d="M900,730 L900,805" fill="none" stroke="#3949ab" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="75" y="985" class="small" text-anchor="start">Deferred cloud: DynamoDB Core / Intelligence / Organization + SQS workers + EventBridge.</text>
+<text x="75" y="1048" class="small" text-anchor="start">GitHub Manager · AI system design · October 14, 2026</text>
+<text x="1725" y="1048" class="small" text-anchor="end">01</text>
+</svg>

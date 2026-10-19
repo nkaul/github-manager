@@ -1,0 +1,100 @@
+WEBVTT
+
+00:00:01.550 --> 00:00:02.050
+Section eleven.
+
+00:00:03.316 --> 00:00:04.476
+Memory and user authority.
+
+00:00:05.723 --> 00:00:08.623
+The purpose is to preserve useful state across changes.
+
+00:00:10.169 --> 00:00:12.129
+Here, memory means application records,
+
+00:00:12.789 --> 00:00:15.789
+not a model remembering a conversation or a LangChain
+
+00:00:15.789 --> 00:00:17.369
+conversation-memory component.
+
+00:00:26.973 --> 00:00:27.413
+Relationships,
+
+00:00:28.213 --> 00:00:28.853
+completed analysis,
+
+00:00:29.573 --> 00:00:32.793
+freshness, and review status answer different questions.
+
+00:00:33.537 --> 00:00:36.957
+A successful no-match is completed analysis.
+
+00:00:37.981 --> 00:00:41.441
+Removing Orion's Project can leave its Topic and Tags
+
+00:00:41.441 --> 00:00:43.421
+useful, while the receipt remains.
+
+00:00:44.985 --> 00:00:48.445
+Provider replay cache and optional run history are different
+
+00:00:48.445 --> 00:00:48.905
+records.
+
+00:00:50.409 --> 00:00:53.409
+Deleting one display or membership does not silently make
+
+00:00:53.409 --> 00:00:56.469
+the repository eligible for another paid decision.
+
+00:01:02.010 --> 00:01:04.590
+Accepting a proposal creates a user decision.
+
+00:01:06.306 --> 00:01:09.646
+Rejecting or removing a relationship leaves a protected tombstone.
+
+00:01:10.982 --> 00:01:14.762
+Approved rules can supply deterministic mappings, subject to those
+
+00:01:14.762 --> 00:01:15.322
+rejections.
+
+00:01:16.818 --> 00:01:20.718
+Ordinary organization cannot recreate a rejected edge behind the
+
+00:01:20.718 --> 00:01:21.378
+user's back.
+
+00:01:22.114 --> 00:01:24.334
+These protections preserve authority;
+
+00:01:24.954 --> 00:01:28.374
+they do not prove every accepted relationship was independently
+
+00:01:28.374 --> 00:01:29.394
+verified truth.
+
+00:01:34.837 --> 00:01:38.357
+Local reconciliation applies approved rules, compatible stored
+
+00:01:38.357 --> 00:01:42.777
+assignments, or contiguous name and alias matches for review.
+
+00:01:44.226 --> 00:01:47.846
+This match is stricter than retrieval's unordered alias tokens.
+
+00:01:49.595 --> 00:01:53.335
+Local suggestions have visible provenance and zero model
+
+00:01:53.335 --> 00:01:53.835
+confidence.
+
+00:01:55.404 --> 00:01:57.484
+They do not manufacture AI completion.
+
+00:01:59.293 --> 00:02:02.853
+Fresh analysis remains available with an explicit reason and
+
+00:02:02.853 --> 00:02:05.533
+reviewed budget when the user wants a new judgment.

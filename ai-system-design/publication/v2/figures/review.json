@@ -1,0 +1,44 @@
+{
+  "review_date": "2026-10-15",
+  "status": "PASS_CONTENT",
+  "method": "Visual inspection against source behavior and exported traces; not OCR-only verification",
+  "generation_mode": "Built-in image generation",
+  "generation_calls": 3,
+  "new_delivered_assets": 2,
+  "application_model_calls": 0,
+  "figures": [
+    {
+      "file": "01-two-ai-phases.png",
+      "dimensions": [1536, 1024],
+      "sha256": "d3d57ddb799a3e8a415f19096c73f0f9384fa1702ed620fe35db636abad28cec",
+      "checks": [
+        "Collection discovery and one-repository classification are distinct paths",
+        "Human review intervenes before approved vocabulary",
+        "Vocabulary types are Domains, Projects, Topics and Tags",
+        "Classification candidate cards contain no Domain",
+        "Approved vocabulary supplies classification retrieval",
+        "Domains derive through Projects",
+        "Caption labels the image conceptual, not a continuous historical experiment"
+      ],
+      "refinement": "One targeted edit corrected invented type names and a Domain candidate and removed unsupported slogans. Initial discarded image is not used by the article."
+    },
+    {
+      "file": "02-data-through-classification.png",
+      "dimensions": [1536, 1024],
+      "sha256": "ba81591ed7ed9dbe8ef916bee8cfa48bc287980aba4edcb655f7a6b809aa9fe3",
+      "checks": [
+        "Ordered route is evidence -> candidate retrieval -> assembled request -> reviewed result",
+        "Six candidates match Orion's actual reconstructed shortlist",
+        "Four selected labels match the saved provider result",
+        "Forge and Package Management remain unselected",
+        "Instructions/schema and count/reserve appear before generation",
+        "E1 citation matches the saved assignments",
+        "Caption distinguishes abbreviated drawing text from verbatim evidence",
+        "Footer identifies the authored synthetic fixture and saved real classification"
+      ],
+      "refinement": "Accepted after first generation and visual inspection."
+    }
+  ],
+  "accessibility": "Full-size labels inspected. Article prose, captions and alt text carry the meaning at narrow widths; small in-image labels need enlargement rather than being represented as thumbnail-legible.",
+  "style": "White-paper hand-drawn semantic illustrations with black ink and indigo/blue/lavender accents, matching the established project diagrams."
+}

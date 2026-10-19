@@ -1,0 +1,219 @@
+1
+00:00:01,510 --> 00:00:02,470
+Section fifteen.
+
+2
+00:00:03,690 --> 00:00:04,430
+Evaluation and evidence.
+
+3
+00:00:05,110 --> 00:00:07,570
+The purpose is to learn which stage succeeds,
+
+4
+00:00:08,370 --> 00:00:11,750
+which stage fails, and how far the measurements generalize.
+
+5
+00:00:12,300 --> 00:00:17,115
+A single attractive score cannot answer all three
+
+6
+00:00:17,115 --> 00:00:17,555
+questions.
+
+7
+00:00:27,047 --> 00:00:29,667
+The frozen corpus has thirty repositories.
+
+8
+00:00:30,807 --> 00:00:32,167
+Ten were development cases;
+
+9
+00:00:33,207 --> 00:00:37,087
+twenty formed the evaluation partition, with eight public
+
+10
+00:00:37,087 --> 00:00:39,667
+libraries and twelve synthetic cases.
+
+11
+00:00:40,407 --> 00:00:42,867
+The registry has forty-two concepts,
+
+12
+00:00:43,527 --> 00:00:45,867
+including four non-searchable Domains.
+
+13
+00:00:46,707 --> 00:00:50,027
+Public labels were proposed and user-approved.
+
+14
+00:00:51,127 --> 00:00:55,107
+Related initiatives were grouped, but policy clarification reused
+
+15
+00:00:55,107 --> 00:00:56,287
+evaluation cases.
+
+16
+00:00:57,327 --> 00:00:59,247
+The final round is regression validation,
+
+17
+00:01:00,047 --> 00:01:02,307
+not untouched generalization evidence.
+
+18
+00:01:03,507 --> 00:01:05,747
+Project-positive evidence is synthetic;
+
+19
+00:01:06,987 --> 00:01:09,567
+private enterprise performance remains unestablished.
+
+20
+00:01:15,247 --> 00:01:19,227
+Candidate recall asks whether expected IDs reached the shortlist.
+
+21
+00:01:20,107 --> 00:01:24,847
+Both lexical methods covered all expected evaluation labels under
+
+22
+00:01:24,847 --> 00:01:25,787
+generous caps.
+
+23
+00:01:27,348 --> 00:01:29,788
+Classification then produced fifty true positives,
+
+24
+00:01:30,568 --> 00:01:32,948
+zero false positives, and two misses:
+
+25
+00:01:33,988 --> 00:01:37,168
+micro F one of ninety-eight percent.
+
+26
+00:01:37,168 --> 00:01:39,549
+Both missing labels had been retrieved,
+
+27
+00:01:40,589 --> 00:01:43,949
+locating those errors after candidate inclusion, without proving
+
+28
+00:01:43,949 --> 00:01:46,369
+whether packing or model selection caused them.
+
+29
+00:01:51,847 --> 00:01:55,867
+Taxonomy drafts passed structural checks and received qualitative
+
+30
+00:01:55,867 --> 00:01:59,567
+acceptance, but no numeric human rubric was recorded.
+
+31
+00:02:00,747 --> 00:02:02,507
+One repeated classification agreed;
+
+32
+00:02:03,187 --> 00:02:04,987
+that is not long-run stability.
+
+33
+00:02:06,387 --> 00:02:06,807
+Limited timing,
+
+34
+00:02:07,527 --> 00:02:08,647
+contract, race,
+
+35
+00:02:09,567 --> 00:02:13,107
+privacy, and recovery checks establish specific behaviors.
+
+36
+00:02:13,987 --> 00:02:17,827
+They do not measure citation entailment or calibrated confidence.
+
+37
+00:02:18,607 --> 00:02:22,687
+No complete RAGAS-style question-answering evaluation or
+
+38
+00:02:22,687 --> 00:02:25,427
+independent production accuracy study was performed.
+
+39
+00:02:26,987 --> 00:02:29,767
+Historical timings use nearest-rank percentiles from twenty
+
+40
+00:02:29,767 --> 00:02:30,307
+observations,
+
+41
+00:02:31,307 --> 00:02:32,467
+not a production guarantee.
+
+42
+00:02:33,867 --> 00:02:36,827
+Subscription-based Codex checks were supplementary, not
+
+43
+00:02:36,827 --> 00:02:39,227
+replacements for real API validation.
+
+44
+00:02:44,387 --> 00:02:47,547
+A stronger study needs independent annotations,
+
+45
+00:02:48,407 --> 00:02:52,647
+unseen initiatives, harder neighbors, no-match cases, and broader
+
+46
+00:02:52,647 --> 00:02:53,187
+languages.
+
+47
+00:02:54,487 --> 00:02:57,367
+Freeze policy and source snapshots before comparing methods.
+
+48
+00:02:58,607 --> 00:03:02,167
+Group related repositories when splitting, and report per-kind
+
+49
+00:03:02,167 --> 00:03:02,647
+errors,
+
+50
+00:03:03,467 --> 00:03:03,587
+abstention,
+
+51
+00:03:04,327 --> 00:03:04,807
+source support,
+
+52
+00:03:05,607 --> 00:03:07,627
+correction effort, and total cost.
+
+53
+00:03:08,587 --> 00:03:11,347
+Confidence intervals and model-winner claims should follow
+
+54
+00:03:11,347 --> 00:03:15,587
+adequate data rather than being manufactured from this small
+
+55
+00:03:15,587 --> 00:03:16,447
+reused set.

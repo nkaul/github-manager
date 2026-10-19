@@ -1,0 +1,88 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:02.140
+Section one.
+
+00:00:02.902 --> 00:00:04.442
+The problem and the product.
+
+00:00:05.584 --> 00:00:07.644
+GitHub Manager helps you discover,
+
+00:00:08.784 --> 00:00:10.624
+understand, and organize repositories.
+
+00:00:11.865 --> 00:00:14.825
+The purpose is to turn a scattered collection into
+
+00:00:14.825 --> 00:00:18.806
+a workspace whose relationships you can inspect and change.
+
+00:00:28.807 --> 00:00:30.367
+Imagine starting an API project.
+
+00:00:31.759 --> 00:00:32.959
+You have your own services,
+
+00:00:33.719 --> 00:00:36.619
+shared repositories, and libraries starred for later.
+
+00:00:38.511 --> 00:00:40.511
+Names and programming languages help you search.
+
+00:00:41.424 --> 00:00:44.464
+They do not explain which pieces support the same
+
+00:00:44.464 --> 00:00:44.924
+initiative.
+
+00:00:46.756 --> 00:00:50.456
+Two Python repositories may serve entirely different purposes.
+
+00:00:56.020 --> 00:00:58.620
+GitHub remains the source of repository facts:
+
+00:00:59.660 --> 00:00:59.780
+identity,
+
+00:01:00.460 --> 00:01:00.580
+links,
+
+00:01:01.540 --> 00:01:03.100
+visibility, and available metadata.
+
+00:01:04.369 --> 00:01:07.009
+The application builds selected evidence locally.
+
+00:01:08.157 --> 00:01:11.637
+AI proposes an organization, and the user reviews it.
+
+00:01:12.466 --> 00:01:16.825
+This separation matters because a convenient suggestion must not
+
+00:01:16.825 --> 00:01:19.726
+quietly replace a fact or a deliberate decision.
+
+00:01:24.887 --> 00:01:28.867
+We will follow Orion, an authored synthetic patient-intake
+
+00:01:28.867 --> 00:01:29.467
+application.
+
+00:01:31.097 --> 00:01:35.457
+Its displayed classification comes from a saved real API
+
+00:01:35.457 --> 00:01:35.977
+test.
+
+00:01:37.287 --> 00:01:40.807
+We will also use a public FastAPI library as
+
+00:01:40.807 --> 00:01:41.467
+a contrast.
+
+00:01:42.877 --> 00:01:46.537
+These examples explain the mechanics; they are not a
+
+00:01:46.537 --> 00:01:48.877
+new account recording or a new benchmark.

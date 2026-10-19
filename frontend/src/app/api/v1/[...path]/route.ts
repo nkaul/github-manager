@@ -8,7 +8,9 @@ async function proxy(request: Request, context: Context) {
     if (value) headers.set(name, value);
   }
   // Keep the upstream fixed. Catch transport errors so callback codes never enter proxy error logs.
-  const url = new URL("http://127.0.0.1:8000/api/v1/" + path.map(encodeURIComponent).join("/"));
+  // Tests use a distinct fixed loopback target; request content cannot choose a host/port.
+  const backendPort = process.env.GHM_BROWSER_TEST === "main" ? 8016 : process.env.GHM_CORPUS_UI_TEST === "1" ? 8015 : 8000;
+  const url = new URL(`http://127.0.0.1:${backendPort}/api/v1/` + path.map(encodeURIComponent).join("/"));
   url.search = new URL(request.url).search;
   try {
     const body = ["GET", "HEAD"].includes(request.method) ? undefined : await request.arrayBuffer();

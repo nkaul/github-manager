@@ -1,0 +1,56 @@
+{
+  "client_date": "2026-10-18",
+  "reason": "Preserve complete first publication revision before requested validation/progress update.",
+  "archive": "ground-truth-creation-2026-10-18-revision-01.zip",
+  "archive_sha256": "f0604bee0b0f5e78a5cd02ca7c81af85760c18678ddbde1a63791580a708aea9",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "b6c5bfeee27e2a6a0f48870842d5c8195f0f63c2c61f135bdf7b6d7e06f6794f"
+    },
+    {
+      "path": "article.md",
+      "sha256": "75b5947cda95c2c75b4e2ceb2b9ed2b5f3acac0a3c6c6fa53803202ad0b32ed7"
+    },
+    {
+      "path": "editorial-and-claim-review.md",
+      "sha256": "83e01f4f52f3eb8e9f6bc6b47d67a109b4602d622888d7e72f62a9485d69b4fd"
+    },
+    {
+      "path": "figures/01-evidence-to-human-truth.png",
+      "sha256": "6d61bb917f769cc760c29d9fa48d8eb99f80060c8d8c758472b5eebc5e961b6f"
+    },
+    {
+      "path": "figures/02-two-readings-one-repository.png",
+      "sha256": "4272d3740a7e436d0cb17296c434801ddb3b0e18e375958457fb77b3b854f96b"
+    },
+    {
+      "path": "figures/03-human-review-and-audit-v2.png",
+      "sha256": "c451e85cc6490144f022bbf2b70acb61bb1d6b0acc268f0a4f09d3f640ce1a95"
+    },
+    {
+      "path": "figures/03-human-review-and-audit.png",
+      "sha256": "d479caaa6d509ad585a0b95970d52ca2f06015df9c20b2e13df5d95c1ac77e3f"
+    },
+    {
+      "path": "figures/prompts.json",
+      "sha256": "aaeb3193e62775164b3f60b5b7d445fc131c613b35c343848cef2eb360fe9b05"
+    },
+    {
+      "path": "scripts/refresh_statistics.py",
+      "sha256": "9ddc47791b59277e73fd6badb1b702967629e8e2031f582844e20b2ed9b14c74"
+    },
+    {
+      "path": "statistics.json",
+      "sha256": "14007f26ee05c427a785b6646fbfaa70807191a574dd1ea855d234805bf0f6d3"
+    },
+    {
+      "path": "verification.json",
+      "sha256": "a380cf87a14277d2c9081dc38ffd404434e9fafdeaa64efd3c8bea4d7b2cb8e7"
+    },
+    {
+      "path": "worked-example.json",
+      "sha256": "fafe63d95eb10004414d987d1dfae673ef6c5dd7feabfae8158fd3cf59187581"
+    }
+  ]
+}

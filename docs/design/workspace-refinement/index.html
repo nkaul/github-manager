@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GitHub Manager · Live workspace design review</title>
+<link rel="stylesheet" href="tokens.css">
+<style>
+*{box-sizing:border-box}body{margin:0;background:var(--ui-bg);color:var(--ui-text);font:14px/1.5 var(--ui-font)}header{height:56px;background:white;border-bottom:1px solid var(--ui-border);display:flex;align-items:center;gap:12px;padding:0 28px}header strong{font-size:16px}header span{font-size:12px;color:var(--ui-text-secondary);border-left:1px solid var(--ui-border);padding-left:12px}main{max-width:1320px;margin:auto;padding:32px 28px}h1{font-size:28px;line-height:1.25;letter-spacing:-.8px;margin:0 0 10px}p{margin:0 0 20px;color:var(--ui-text-secondary);max-width:850px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.card{border:1px solid var(--ui-border);background:white;border-radius:10px;overflow:hidden}.card img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;border-bottom:1px solid var(--ui-border)}.card-body{padding:20px}.card h2{font-size:18px;margin:0 0 8px}.card p{min-height:42px;margin-bottom:16px}.actions{display:flex;gap:16px;align-items:center;flex-wrap:wrap}a{color:var(--ui-blue);font-weight:600;text-decoration:none}a:hover{text-decoration:underline}.primary{display:inline-flex;align-items:center;min-height:36px;padding:0 14px;background:var(--ui-primary);color:white;border-radius:999px;font-size:13px}.primary:hover{background:var(--ui-primary-hover);text-decoration:none}a:focus-visible{outline:3px solid var(--ui-focus);outline-offset:3px}.note{margin-top:24px;font-size:13px;border-left:3px solid var(--ui-indigo);padding-left:14px}.note a{font-weight:500}.comparison{margin-top:24px;display:flex;gap:20px;flex-wrap:wrap;font-size:13px}@media(max-width:750px){main{padding:24px 16px}.grid{grid-template-columns:1fr}header{padding:0 16px}header span{font-size:11px}h1{font-size:24px}.primary{min-height:44px}.card p{min-height:0}}
+</style>
+</head>
+<body>
+<header><strong>GitHub Manager</strong><span>Live workspace design review · October 18, 2026</span></header>
+<main>
+<h1>Two live workflows. One compact design system.</h1>
+<p>The compact repository list and adjacent Ground Truth review are now implemented in the app. These actual-screen captures use isolated test identities; the running app uses your connected account and saved reviews.</p>
+<div class="grid">
+<article class="card">
+<a href="tag-colors/ground-truth-1440.png" aria-label="Inspect actual Ground Truth review"><img src="tag-colors/ground-truth-1440.png" alt="Ground Truth review workspace with distinct readable label chips, repository queue and source evidence"></a>
+<div class="card-body"><h2>Ground Truth review</h2><p>A live queue, grouped review and adjacent evidence with stable label colors. Separate saved drafts and explicit Confirm &amp; next keep review moving. Select Public - Ground Truth after opening the app.</p><div class="actions"><a class="primary" href="http://127.0.0.1:3000">Open live app</a><a href="live-redesign/evidence-sheet-1280.png">Inspect evidence sheet</a></div></div>
+</article>
+<article class="card">
+<a href="tag-colors/main-1440.png" aria-label="Inspect actual main application"><img src="tag-colors/main-1440.png" alt="GitHub Manager repository list with distinct colored tag chips and compact summary"></a>
+<div class="card-body"><h2>Main application</h2><p>A compact KPI strip, crisp repository rows, smaller controls, readable colored labels and consistent white-on-Indigo selection states.</p><div class="actions"><a class="primary" href="http://127.0.0.1:3000">Open live app</a><a href="live-redesign/app-mobile.png">Inspect mobile</a></div></div>
+</article>
+</div>
+<p class="note">Implemented app captures, not mock outcomes. Corpus, annotations, saved reviews and readiness benchmarks are preserved. <a href="live-redesign/README.md">Screenshots and verification</a>.</p>
+<nav class="comparison" aria-label="Design comparison"><a href="../ground-truth-review-v2/preview.html">Previous Ground Truth design</a><a href="live-redesign/ground-truth-390.png">Ground Truth mobile</a><a href="live-redesign/app-mobile.png">Main app mobile</a><a href="../ground-truth-review-v3/preview.html">Ground Truth structural preview</a><a href="../main-app-refined/preview.html">Main structural preview</a></nav>
+</main>
+</body>
+</html>

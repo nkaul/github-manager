@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "script_words": 239,
+  "caption_words": 239,
+  "script_word_order": "EXACT",
+  "final_sentence_recognized": true,
+  "neighbor_envelope_words": 1,
+  "note": "ASR save/script saved word uses adjacent timing envelope; final words are recognized",
+  "moving_request_cards": {
+    "encoded_sample_seconds": [
+      78.8500016784668,
+      79.4000016784668
+    ],
+    "changed_region_pixels": 8332
+  },
+  "historical_example_ids_and_evidence": "PASS",
+  "speech_time_stretch": false
+}

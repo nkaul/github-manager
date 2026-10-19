@@ -1,0 +1,111 @@
+1
+00:00:01,500 --> 00:00:02,520
+Section two.
+
+2
+00:00:03,733 --> 00:00:04,873
+Organization vocabulary.
+
+3
+00:00:06,267 --> 00:00:09,587
+Before classification, we need to define what a relationship
+
+4
+00:00:09,587 --> 00:00:10,107
+means.
+
+5
+00:00:11,400 --> 00:00:14,160
+The purpose is to keep an initiative, a capability,
+
+6
+00:00:14,160 --> 00:00:18,460
+and a technology from becoming one confusing pile of
+
+7
+00:00:18,460 --> 00:00:18,580
+labels.
+
+8
+00:00:28,040 --> 00:00:31,640
+A Project answers which product or initiative a repository
+
+9
+00:00:31,640 --> 00:00:32,140
+supports.
+
+10
+00:00:32,968 --> 00:00:36,388
+A Domain groups those Projects into a broader area.
+
+11
+00:00:37,416 --> 00:00:41,096
+A Topic describes a primary capability or subject.
+
+12
+00:00:42,224 --> 00:00:45,944
+A Tag describes technology or another useful characteristic.
+
+13
+00:00:47,412 --> 00:00:50,212
+For Orion, the examples are the clinical platform,
+
+14
+00:00:50,932 --> 00:00:53,192
+Healthcare, Web APIs, and Python.
+
+15
+00:00:58,690 --> 00:01:01,210
+A repository may support more than one Project.
+
+16
+00:01:02,860 --> 00:01:05,540
+Its Domains derive through those Project memberships;
+
+17
+00:01:06,240 --> 00:01:08,840
+the classifier does not assign Domains independently.
+
+18
+00:01:11,110 --> 00:01:13,950
+Topics and Tags remain useful when no Project applies.
+
+19
+00:01:15,860 --> 00:01:18,660
+The application's Topics are separate from the native topics
+
+20
+00:01:18,660 --> 00:01:19,600
+supplied by GitHub.
+
+21
+00:01:25,070 --> 00:01:28,630
+The Orion application uses FastAPI and Python.
+
+22
+00:01:30,309 --> 00:01:33,609
+The FastAPI library is itself a reusable framework.
+
+23
+00:01:35,807 --> 00:01:37,927
+Sharing those words does not make the library part
+
+24
+00:01:37,927 --> 00:01:38,467
+of Orion.
+
+25
+00:01:39,746 --> 00:01:43,346
+Under the primary-label policy, incidental capabilities are
+
+26
+00:01:43,346 --> 00:01:47,006
+omitted, and a library's own name is not automatically
+
+27
+00:01:47,006 --> 00:01:48,246
+its dependency Tag.
+
+28
+00:01:49,745 --> 00:01:53,525
+Next, we decide what evidence can support that distinction.

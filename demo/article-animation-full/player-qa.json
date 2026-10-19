@@ -1,0 +1,215 @@
+{
+  "status": "PASS",
+  "checks": [
+    "1080p master playback advances and pauses; 18 chapters and 8 reference summaries load",
+    "Full-screen video opens and native captions follow the caption toggle",
+    "Caption toggle and optional 0.9×/1.0× pace controls work",
+    "All 18 standalone chapters load, decode, expose the correct purpose/transcript and begin with section-announcement captions",
+    "All 8 silent reference summaries decode, loop and link to complete original figures",
+    "Master seeking updates the current chapter, purpose, transcript and captions",
+    "Slower overview and desktop/phone player layouts fit their viewports",
+    "Byte-range seeking works; private and out-of-package paths return 404"
+  ],
+  "metadata": {
+    "duration": 2492.233344,
+    "width": 1920,
+    "height": 1080,
+    "tracks": 1
+  },
+  "master_caption_cues": 682,
+  "assets": [
+    {
+      "file": "chapters/01-purpose.mp4",
+      "status": "PASS",
+      "duration": 112.9,
+      "caption_cues": 29,
+      "first_frame_decode": "PASS"
+    },
+    {
+      "file": "chapters/02-vocabulary.mp4",
+      "status": "PASS",
+      "duration": 117.566667,
+      "caption_cues": 28,
+      "first_frame_decode": "PASS"
+    },
+    {
+      "file": "chapters/03-context.mp4",
+      "status": "PASS",
+      "duration": 132,
+      "caption_cues": 37,
+      "first_frame_decode": "PASS"
+    },
+    {
+      "file": "chapters/04-evidence.mp4",
+      "status": "PASS",
+      "duration": 134.233333,
+      "caption_cues": 32,
+      "first_frame_decode": "PASS"
+    },
+    {
+      "file": "chapters/05-keywords.mp4",
+      "status": "PASS",
+      "duration": 138.333333,
+      "caption_cues": 38,
+      "first_frame_decode": "PASS"
+    },
+    {
+      "file": "chapters/06-taxonomy.mp4",
+      "status": "PASS",
+      "duration": 130.7,
+      "caption_cues": 37,
+      "first_frame_decode": "PASS"
+    },
+    {
+      "file": "chapters/07-retrieval.mp4",
+      "status": "PASS",
+      "duration": 133.366667,
+      "caption_cues": 36,
+      "first_frame_decode": "PASS"
+    },
+    {
+      "file": "chapters/08-augmentation.mp4",
+      "status": "PASS",
+      "duration": 130.133333,
+      "caption_cues": 39,
+      "first_frame_decode": "PASS"
+    },
+    {
+      "file": "chapters/09-generation.mp4",
+      "status": "PASS",
+      "duration": 128.833333,
+      "caption_cues": 37,
+      "first_frame_decode": "PASS"
+    },
+    {
+      "file": "chapters/10-counterexamples.mp4",
+      "status": "PASS",
+      "duration": 129.066667,
+      "caption_cues": 33,
+      "first_frame_decode": "PASS"
+    },
+    {
+      "file": "chapters/11-memory.mp4",
+      "status": "PASS",
+      "duration": 129.533333,
+      "caption_cues": 33,
+      "first_frame_decode": "PASS"
+    },
+    {
+      "file": "chapters/12-loops.mp4",
+      "status": "PASS",
+      "duration": 146,
+      "caption_cues": 39,
+      "first_frame_decode": "PASS"
+    },
+    {
+      "file": "chapters/13-harness.mp4",
+      "status": "PASS",
+      "duration": 136.066667,
+      "caption_cues": 38,
+      "first_frame_decode": "PASS"
+    },
+    {
+      "file": "chapters/14-tokenomics.mp4",
+      "status": "PASS",
+      "duration": 134.833333,
+      "caption_cues": 37,
+      "first_frame_decode": "PASS"
+    },
+    {
+      "file": "chapters/15-evaluation.mp4",
+      "status": "PASS",
+      "duration": 200.266667,
+      "caption_cues": 55,
+      "first_frame_decode": "PASS"
+    },
+    {
+      "file": "chapters/16-future-retrieval.mp4",
+      "status": "PASS",
+      "duration": 192.766667,
+      "caption_cues": 55,
+      "first_frame_decode": "PASS"
+    },
+    {
+      "file": "chapters/17-jev.mp4",
+      "status": "PASS",
+      "duration": 134.9,
+      "caption_cues": 39,
+      "first_frame_decode": "PASS"
+    },
+    {
+      "file": "chapters/18-complete-trace.mp4",
+      "status": "PASS",
+      "duration": 130.733333,
+      "caption_cues": 40,
+      "first_frame_decode": "PASS"
+    },
+    {
+      "file": "references/01-actual-system.mp4",
+      "status": "PASS",
+      "duration": 32,
+      "silent_loop": true,
+      "seek_decode": "PASS"
+    },
+    {
+      "file": "references/02-retrieval-and-generation.mp4",
+      "status": "PASS",
+      "duration": 32,
+      "silent_loop": true,
+      "seek_decode": "PASS"
+    },
+    {
+      "file": "references/03-evidence-and-chunking.mp4",
+      "status": "PASS",
+      "duration": 32,
+      "silent_loop": true,
+      "seek_decode": "PASS"
+    },
+    {
+      "file": "references/04-controlled-analysis-loop.mp4",
+      "status": "PASS",
+      "duration": 32,
+      "silent_loop": true,
+      "seek_decode": "PASS"
+    },
+    {
+      "file": "references/05-harness-and-tokenomics.mp4",
+      "status": "PASS",
+      "duration": 32,
+      "silent_loop": true,
+      "seek_decode": "PASS"
+    },
+    {
+      "file": "references/06-evaluation-evidence.mp4",
+      "status": "PASS",
+      "duration": 32,
+      "silent_loop": true,
+      "seek_decode": "PASS"
+    },
+    {
+      "file": "references/07-contextual-retrieval-comparison.mp4",
+      "status": "PASS",
+      "duration": 32,
+      "silent_loop": true,
+      "seek_decode": "PASS"
+    },
+    {
+      "file": "references/08-future-experiment-roadmap.mp4",
+      "status": "PASS",
+      "duration": 32,
+      "silent_loop": true,
+      "seek_decode": "PASS"
+    }
+  ],
+  "errors": [],
+  "external_requests": [],
+  "audio_review": "Automation is muted; naturalness, accent and preferred pace remain listener judgments",
+  "fullscreen_1080p_native_captions": {
+    "status": "PASS",
+    "width": 1920,
+    "height": 1080,
+    "time": 849.908322,
+    "caption_mode": "showing",
+    "active_caption": "not membership probabilities."
+  }
+}

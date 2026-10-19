@@ -16,6 +16,12 @@ GitHub Manager brings owned, collaborated-on, contributed-to, starred, and watch
 
 ▶️ [https://nkaul.github.io/github-manager-demo](https://nkaul.github.io/github-manager-demo)
 
+## Local evaluation workspace
+
+The local app includes **Public - Ground Truth** in the top Workspace selector. It opens the English public-repository corpus, proposed taxonomy, pinned README/supporting evidence and a persistent human review form. Corpus proposals stay separate from personal GitHub organization and from confirmed human labels.
+
+See the [corpus v2 methodology](ai-system-design/evaluation/corpus-600-v2/README.md) and [workspace design and review guide](docs/planning/public-ground-truth-workspace.md), and [completed validation report](docs/validation/corpus-600-v2-review-2026-10-17.md). Dataset files remain in ignored local validation storage; individual review decisions persist in the local app SQLite database. Existing safety fixtures and earlier benchmark releases remain available.
+
 ## GitHub Manager - System Design Overview
 
 ▶️ [https://nkaul.github.io/github-manager-demo/deep-dive/#overview](https://nkaul.github.io/github-manager-demo/deep-dive/#overview)

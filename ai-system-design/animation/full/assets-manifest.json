@@ -1,0 +1,69 @@
+{
+  "assets": [
+    {
+      "source": "ai-system-design/publication/figures/01-evidence-to-decisions.png",
+      "sha256": "f4505859f20d48d4670b047e7177b52540fa42cc78044a251f164225613d04d9",
+      "use": "Read-only original illustration; selected browser composition or reference copy. Some inherited assets are preloaded but not displayed."
+    },
+    {
+      "source": "ai-system-design/publication/v2/figures/01-two-ai-phases.png",
+      "sha256": "d3d57ddb799a3e8a415f19096c73f0f9384fa1702ed620fe35db636abad28cec",
+      "use": "Read-only original illustration; selected browser composition or reference copy. Some inherited assets are preloaded but not displayed."
+    },
+    {
+      "source": "ai-system-design/publication/v2/figures/02-data-through-classification.png",
+      "sha256": "ba81591ed7ed9dbe8ef916bee8cfa48bc287980aba4edcb655f7a6b809aa9fe3",
+      "use": "Read-only original illustration; selected browser composition or reference copy. Some inherited assets are preloaded but not displayed."
+    },
+    {
+      "source": "docs/design/logo-variants-20261013/animated-v2/zen-loop-orbit-poster.png",
+      "sha256": "0263dd0f79e678f81367a5554affeac351ebf9a11c6760a3071a78b5944eabcf",
+      "use": "Read-only original illustration; selected browser composition or reference copy. Some inherited assets are preloaded but not displayed."
+    },
+    {
+      "source": "ai-system-design/illustrated/figures/01-actual-system.png",
+      "sha256": "88cf57eb9a04e1052aa7d5a52921c0c8ba43d456772912d35b845ea3e61d10c1",
+      "use": "Read-only original illustration; selected browser composition or reference copy. Some inherited assets are preloaded but not displayed."
+    },
+    {
+      "source": "ai-system-design/illustrated/figures/02-retrieval-and-generation.png",
+      "sha256": "de48a6a3a331d994b717a8e5915a6aadca465188720e5823f62c3685e27f0ef4",
+      "use": "Read-only original illustration; selected browser composition or reference copy. Some inherited assets are preloaded but not displayed."
+    },
+    {
+      "source": "ai-system-design/illustrated/figures/03-evidence-and-chunking.png",
+      "sha256": "30e26eb19aaccc317e173d82c754240800e5a6a1ca763be1a6f9ceb387e4dc9a",
+      "use": "Read-only original illustration; selected browser composition or reference copy. Some inherited assets are preloaded but not displayed."
+    },
+    {
+      "source": "ai-system-design/illustrated/figures/04-controlled-analysis-loop.png",
+      "sha256": "a0825540689da7ef40e4ee29a2ae3f0fb87e496f3422f2dd7e4a412ebc61d95a",
+      "use": "Read-only original illustration; selected browser composition or reference copy. Some inherited assets are preloaded but not displayed."
+    },
+    {
+      "source": "ai-system-design/illustrated/figures/05-harness-and-tokenomics.png",
+      "sha256": "5770f262ead2e2d238ab4ba0a868d2c59512d72bc4bc990cfbeb77c441130901",
+      "use": "Read-only original illustration; selected browser composition or reference copy. Some inherited assets are preloaded but not displayed."
+    },
+    {
+      "source": "ai-system-design/illustrated/figures/06-evaluation-evidence.png",
+      "sha256": "b8521b379fe85e865cc7af222c91a10fb201f36843a45e19585f7ab2d79ee255",
+      "use": "Read-only original illustration; selected browser composition or reference copy. Some inherited assets are preloaded but not displayed."
+    },
+    {
+      "source": "ai-system-design/illustrated/figures/07-contextual-retrieval-comparison.png",
+      "sha256": "ff684b4f5884b0104cab2260f214594efda90ace7d14f3dfed0dd2c204b2140c",
+      "use": "Read-only original illustration; selected browser composition or reference copy. Some inherited assets are preloaded but not displayed."
+    },
+    {
+      "source": "ai-system-design/illustrated/figures/08-future-experiment-roadmap.png",
+      "sha256": "59eee72d742f088c61026d0c115702069673a8365ce4dff6c5abe9f854d78437",
+      "use": "Read-only original illustration; selected browser composition or reference copy. Some inherited assets are preloaded but not displayed."
+    }
+  ],
+  "reference_copies": "Eight source PNGs copied byte-for-byte",
+  "new_image_generation_requests": 0,
+  "new_video_generation_service_calls": 0,
+  "animation": "Code-native SVG paper cards, illustrations, request tokens, highlights, receipts, metrics and state changes",
+  "font": "Locally installed Chalkboard; font binary not distributed"
+}

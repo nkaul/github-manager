@@ -1,0 +1,147 @@
+1
+00:00:01,530 --> 00:00:02,330
+Section three.
+
+2
+00:00:04,029 --> 00:00:04,708
+Context engineering.
+
+3
+00:00:06,067 --> 00:00:08,927
+Its purpose is to choose what information the model
+
+4
+00:00:08,927 --> 00:00:09,367
+sees,
+
+5
+00:00:10,107 --> 00:00:13,547
+what that information means, and which boundaries remain outside
+
+6
+00:00:13,547 --> 00:00:14,027
+the model.
+
+7
+00:00:15,765 --> 00:00:19,045
+A longer prompt is not automatically a better decision.
+
+8
+00:00:28,067 --> 00:00:30,927
+We separate trusted source facts,
+
+9
+00:00:32,327 --> 00:00:35,767
+untrusted repository prose, user-owned organization,
+
+10
+00:00:36,467 --> 00:00:37,987
+and execution identity.
+
+11
+00:00:39,327 --> 00:00:40,187
+Canonical IDs,
+
+12
+00:00:41,167 --> 00:00:41,487
+rejections,
+
+13
+00:00:42,287 --> 00:00:45,227
+revisions, and evidence hashes constrain the operation.
+
+14
+00:00:46,367 --> 00:00:49,267
+The application does not send every stored record to
+
+15
+00:00:49,267 --> 00:00:49,707
+the model.
+
+16
+00:00:50,687 --> 00:00:51,407
+For example,
+
+17
+00:00:52,067 --> 00:00:55,847
+protected decisions filter candidates before prompting rather than
+
+18
+00:00:55,847 --> 00:00:58,327
+becoming an entire conversation history.
+
+19
+00:01:03,683 --> 00:01:07,543
+Hosted input is restricted to verified public repositories and
+
+20
+00:01:07,543 --> 00:01:09,603
+synthetic fixtures in this implementation.
+
+21
+00:01:12,089 --> 00:01:15,729
+Private or unknown visibility fails closed, including phrases
+
+22
+00:01:15,729 --> 00:01:17,149
+derived from private text.
+
+23
+00:01:18,734 --> 00:01:21,374
+Local rules can still help organization.
+
+24
+00:01:23,179 --> 00:01:24,659
+Narrow cleaning patterns are hygiene,
+
+25
+00:01:25,319 --> 00:01:28,559
+not a complete secret scanner or prompt-injection defense.
+
+26
+00:01:30,404 --> 00:01:32,424
+The model has no tools with which to act
+
+27
+00:01:32,424 --> 00:01:33,604
+on README instructions.
+
+28
+00:01:39,153 --> 00:01:41,333
+The working runtime is local Next.js,
+
+29
+00:01:42,073 --> 00:01:44,213
+FastAPI, and SQLite.
+
+30
+00:01:45,573 --> 00:01:48,733
+LangChain connects structured requests; it does not own the
+
+31
+00:01:48,733 --> 00:01:49,693
+application's memory.
+
+32
+00:01:50,713 --> 00:01:54,213
+During development, user decisions outrank approved design,
+
+33
+00:01:54,913 --> 00:01:56,273
+plans, and historical discussion.
+
+34
+00:01:57,533 --> 00:01:58,813
+Phase zero checked access;
+
+35
+00:01:59,633 --> 00:02:01,693
+phase zero point five checked AI readiness;
+
+36
+00:02:02,633 --> 00:02:05,133
+phase zero point nine delivered the local app.
+
+37
+00:02:06,333 --> 00:02:08,153
+Cloud runtime remains deferred.

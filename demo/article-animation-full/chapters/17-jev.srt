@@ -1,0 +1,155 @@
+1
+00:00:01,470 --> 00:00:02,290
+Section seventeen.
+
+2
+00:00:04,140 --> 00:00:06,360
+Decision models, and the Jev research question.
+
+3
+00:00:08,100 --> 00:00:11,190
+The purpose is to investigate whether a specialized decision
+
+4
+00:00:11,190 --> 00:00:15,210
+interface could improve bounded judgments after the options are
+
+5
+00:00:15,210 --> 00:00:15,330
+known.
+
+6
+00:00:17,040 --> 00:00:20,000
+No Jev integration or live Jev test has been
+
+7
+00:00:20,000 --> 00:00:20,720
+performed here.
+
+8
+00:00:29,233 --> 00:00:31,753
+TypeSafe describes Choice,
+
+9
+00:00:32,493 --> 00:00:34,573
+Score, and Noul primitives for typed judgments.
+
+10
+00:00:34,967 --> 00:00:38,747
+For repository organization, a candidate could be supported,
+
+11
+00:00:39,547 --> 00:00:40,987
+unsupported, or unclear.
+
+12
+00:00:42,341 --> 00:00:45,541
+Ask separately for each candidate when several memberships are
+
+13
+00:00:45,541 --> 00:00:45,981
+possible.
+
+14
+00:00:47,314 --> 00:00:51,374
+Open-ended taxonomy discovery still needs generation to propose
+
+15
+00:00:51,374 --> 00:00:52,654
+new names and definitions.
+
+16
+00:00:53,948 --> 00:00:57,128
+A choice among existing options cannot replace that creative
+
+17
+00:00:57,128 --> 00:00:58,148
+vocabulary step.
+
+18
+00:01:03,740 --> 00:01:07,400
+A probability-derived decision confidence is not the same as
+
+19
+00:01:07,400 --> 00:01:11,320
+today's generated confidence number, and neither proves task
+
+20
+00:01:11,320 --> 00:01:11,940
+calibration.
+
+21
+00:01:13,578 --> 00:01:15,398
+A shadow study should retain the baseline,
+
+22
+00:01:16,138 --> 00:01:17,418
+test negation and option order,
+
+23
+00:01:18,058 --> 00:01:19,578
+and measure high-confidence errors,
+
+24
+00:01:20,238 --> 00:01:20,518
+abstention,
+
+25
+00:01:21,218 --> 00:01:23,698
+fallback, review effort, and total spending.
+
+26
+00:01:25,375 --> 00:01:29,675
+Extra provider credentials, retention terms, retries, and failures
+
+27
+00:01:29,675 --> 00:01:31,155
+require their own controls.
+
+28
+00:01:32,973 --> 00:01:35,813
+Faster decisions do not guarantee better completed workflows.
+
+29
+00:01:41,660 --> 00:01:44,800
+Potential uses include candidate filtering, passage relevance,
+
+30
+00:01:45,580 --> 00:01:47,900
+duplicate-review triage, or bounded assignment.
+
+31
+00:01:49,020 --> 00:01:51,120
+Any filter can discard a correct candidate.
+
+32
+00:01:52,260 --> 00:01:52,720
+Budget arithmetic,
+
+33
+00:01:53,640 --> 00:01:55,600
+privacy policy, stable-ID validity,
+
+34
+00:01:56,380 --> 00:01:59,580
+rejections, and stale-state protection stay deterministic.
+
+35
+00:02:00,940 --> 00:02:04,020
+Adoption should require a measured quality-cost tradeoff on
+
+36
+00:02:04,020 --> 00:02:04,800
+independent data,
+
+37
+00:02:05,420 --> 00:02:06,320
+not a vendor headline.
+
+38
+00:02:07,140 --> 00:02:10,560
+We finish by following the entire current workflow once
+
+39
+00:02:10,560 --> 00:02:10,840
+more.

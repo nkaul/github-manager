@@ -1,0 +1,4 @@
+interface:
+  display_name: "Engaging Technical Writing"
+  short_description: "Clear technical stories with evidence and depth"
+  default_prompt: "Use $engaging-technical-writing to turn this technical material into a clear, engaging article while preserving its insights and evidence."

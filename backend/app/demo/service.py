@@ -3,11 +3,13 @@ import base64
 import time
 
 from app.demo import analysis, cohorts, domain, pricing
+from app.demo.activity import discover_activity_repositories, fetch_activity, merge_activity
 from app.demo.ai import open_provider
 from app.demo.allowance import RequestAllowance
 from app.demo.evidence import build_profile, model_allowed, sample_records
 from app.demo.run_budget import RunBudgets
 from app.demo.store import identifier
+from app.github.client import GitHubError
 from app.pretest.ai.chains import CLASSIFY_SYSTEM, TAXONOMY_SYSTEM
 from app.pretest.ai.evidence import Retriever, compact, tokens
 from app.pretest.ai.schemas import (
@@ -22,6 +24,10 @@ from app.pretest.ai.storage import Ledger, digest
 TERMINAL = {"COMPLETED", "PARTIAL_FAILED", "FAILED", "CANCELLED_STALE", "INTERRUPTED"}
 
 
+class SessionEnded(ValueError):
+    pass
+
+
 class Service:
     def __init__(
         self,
@@ -33,6 +39,7 @@ class Service:
         live_enabled=False,
         ledger_factory=None,
         budget_operators=(),
+        sync_timeout_seconds=300,
     ):
         self.store, self.adapter, self.sessions = store, adapter, sessions
         self.provider_factory = provider_factory
@@ -40,6 +47,7 @@ class Service:
         self.stopping = False
         self.ledger_factory = ledger_factory or self.default_ledger
         self.budget_operators = set(budget_operators)
+        self.sync_timeout_seconds = sync_timeout_seconds
 
     @staticmethod
     def default_ledger():
@@ -328,9 +336,17 @@ class Service:
         self.update_run(workspace, rid, status="RUNNING", message="Preparing inputs")
         try:
             if not self.session_for(workspace):
-                raise ValueError("Reauthenticate before continuing")
+                raise SessionEnded("Your local session ended. Sign in again, then retry explicitly")
             if job["kind"] == "SYNC":
-                count = await self.sync(workspace)
+                self.update_run(
+                    workspace,
+                    rid,
+                    started_at=domain.now(),
+                    timeout_seconds=self.sync_timeout_seconds,
+                )
+                count = await asyncio.wait_for(
+                    self.sync(workspace, rid), timeout=self.sync_timeout_seconds
+                )
                 self.update_run(workspace, rid, total=count, processed=count)
             elif job["kind"] == "RESET":
                 self.cleanup(workspace, rid, job["payload"])
@@ -374,8 +390,43 @@ class Service:
                 if isinstance(exc, ValueError)
                 else "Operation failed; check connection and retry explicitly"
             )
+            error = {}
+            if isinstance(exc, SessionEnded):
+                error = {"error_code": "SESSION_EXPIRED", "reauthentication_required": True}
+            elif job["kind"] == "SYNC" and isinstance(exc, TimeoutError):
+                message = (
+                    "GitHub Sync reached its time limit. Your previous repository data is safe. "
+                    "Check your connection, then retry Sync explicitly"
+                )
+                error = {"error_code": "GITHUB_SYNC_TIMEOUT", "retryable": True}
+            elif isinstance(exc, GitHubError):
+                if exc.status == 401:
+                    message = (
+                        "GitHub authorization ended. Sign in again, then retry Sync explicitly"
+                    )
+                    error = {
+                        "error_code": "GITHUB_REAUTH_REQUIRED",
+                        "reauthentication_required": True,
+                    }
+                elif exc.category == "network_or_timeout":
+                    message = (
+                        "GitHub did not respond in time. Check your connection, then retry Sync"
+                    )
+                    error = {"error_code": "GITHUB_TIMEOUT", "retryable": True}
+                elif exc.category == "rate_limited":
+                    message = (
+                        "GitHub rate limit reached. Wait for the limit to reset, then retry Sync"
+                    )
+                    error = {"error_code": "GITHUB_RATE_LIMITED", "retryable": True}
+                else:
+                    message = (
+                        "GitHub Sync could not complete. Check GitHub access, then retry explicitly"
+                    )
+                    error = {"error_code": "GITHUB_SYNC_FAILED", "retryable": True}
+            if job["kind"] == "SYNC":
+                error = {"retryable": False, "reauthentication_required": False, **error}
             self.update_run(
-                workspace, rid, status=status, message=message, finished_at=domain.now()
+                workspace, rid, status=status, message=message, finished_at=domain.now(), **error
             )
             self.store.finish(job, status)
         finally:
@@ -386,14 +437,34 @@ class Service:
                 if rid in self.store.read(workspace)["organization"]["runs"]:
                     self.update_run(workspace, rid, budget_outcome=budgets.outcome(rid))
 
-    async def sync(self, workspace):
+    async def sync(self, workspace, run_id=None):
         session = self.session_for(workspace)
+        if session is None:
+            raise SessionEnded("Your local session ended. Sign in again, then retry Sync")
+
+        def progress(stage, message):
+            if run_id:
+                self.update_run(workspace, run_id, stage=stage, message=message)
+
         if workspace.endswith(":samples"):
             self.load_samples(workspace)
             return len(self.store.read(workspace)["core"]["repos"])
+        progress("INVENTORY", "Fetching accessible repositories from GitHub")
+        try:
+            return await self._sync_authorized(workspace, session, progress)
+        except GitHubError as exc:
+            if exc.status == 401:
+                self.sessions.discard_token(session.token)
+            raise
+
+    async def _sync_authorized(self, workspace, session, progress):
         snapshot = await self.adapter.inventory(session.token)
         if snapshot["identity"]["id"] != session.user["id"]:
-            raise ValueError("GitHub identity changed; sign in again")
+            self.sessions.discard_token(session.token)
+            raise GitHubError("identity_changed", 401)
+        if not self.sessions.is_active(session):
+            raise SessionEnded("Your local session ended. Sign in again, then retry Sync")
+        progress("ACTIVITY", "Checking your recent contributions and pushes")
         activity, activity_coverage = (
             {},
             [
@@ -405,15 +476,18 @@ class Service:
             ],
         )
         try:
-            from app.demo.activity import fetch_activity
-
             activity, activity_coverage = await fetch_activity(
-                self.adapter, session.token, session.user["id"]
+                self.adapter, session.token, session.user["id"], session.user["login"]
             )
+            await discover_activity_repositories(self.adapter, session.token, snapshot, activity)
+        except GitHubError as exc:
+            if exc.status == 401:
+                raise
         except Exception:
             pass
-        if not self.session_for(workspace):
-            raise ValueError("Sign-in ended; sync cancelled")
+        if not self.sessions.is_active(session):
+            raise SessionEnded("Your local session ended. Sign in again, then retry Sync")
+        progress("COMMIT", "Saving the verified repository inventory")
 
         def commit(state):
             domain.writable(state)
@@ -441,7 +515,9 @@ class Service:
                     "description": old.get("description", ""),
                     "starred": "STAR" in r["sources"],
                     "watched": "WATCH" in r["sources"],
-                    "activities": activity.get(key, old.get("activities", [])),
+                    "activities": merge_activity(
+                        old.get("activities", []), activity.get(key, []), session.user["id"]
+                    ),
                     "decision_version": old.get("decision_version", 0),
                     "unavailable": False,
                     "synced_at": domain.now(),
@@ -455,6 +531,7 @@ class Service:
             )
 
         self.store.mutate(workspace, commit)
+        progress("DONE", "GitHub Sync finished; repository inventory is up to date")
         return len(snapshot["repos"])
 
     async def ensure_profile(self, workspace, key, expected=None):

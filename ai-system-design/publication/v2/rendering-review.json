@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-15",
+  "status": "PASS_LAYOUT",
+  "method": "Offline Markdown rendered with local Chromium; external requests blocked",
+  "viewports": [
+    {
+      "viewport": [
+        1100,
+        1000
+      ],
+      "documentWidth": 1100,
+      "images": [
+        {
+          "loaded": true,
+          "alt": true,
+          "width": 712
+        },
+        {
+          "loaded": true,
+          "alt": true,
+          "width": 712
+        },
+        {
+          "loaded": true,
+          "alt": true,
+          "width": 712
+        },
+        {
+          "loaded": true,
+          "alt": true,
+          "width": 712
+        },
+        {
+          "loaded": true,
+          "alt": true,
+          "width": 712
+        }
+      ],
+      "escapedBlocks": [],
+      "screenshot": "/private/tmp/github-manager-v2-desktop.png"
+    },
+    {
+      "viewport": [
+        430,
+        1000
+      ],
+      "documentWidth": 430,
+      "images": [
+        {
+          "loaded": true,
+          "alt": true,
+          "width": 394
+        },
+        {
+          "loaded": true,
+          "alt": true,
+          "width": 394
+        },
+        {
+          "loaded": true,
+          "alt": true,
+          "width": 394
+        },
+        {
+          "loaded": true,
+          "alt": true,
+          "width": 394
+        },
+        {
+          "loaded": true,
+          "alt": true,
+          "width": 394
+        }
+      ],
+      "escapedBlocks": [],
+      "screenshot": "/private/tmp/github-manager-v2-mobile.png"
+    }
+  ],
+  "limitations": "Phone-sized figures require enlargement for small labels; prose/captions/alt text retain the explanation. This local QA template is not a test of a publishing platform.",
+  "visual_inspection": {
+    "status": "PASS",
+    "inspected": [
+      "desktop opening",
+      "mobile opening",
+      "two-phase figure at article width",
+      "classification data figure at article width"
+    ],
+    "finding": "Text and images fit the local layout. Captions and prose preserve the meaning of small figure labels, which need enlargement on narrow screens."
+  }
+}

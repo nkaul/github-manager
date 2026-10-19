@@ -1,0 +1,60 @@
+{
+  "client_date": "2026-10-18",
+  "status": "PASS",
+  "checked_relative_links": 85,
+  "missing_links": [],
+  "checks": {
+    "relative_links_exist": true,
+    "corpus_inventory_registry_and_splits_recount": true,
+    "frozen_annotation_agreement_and_coverage_recount": true,
+    "dated_qa_counts_match_evidence_report": true,
+    "all_snapshot_evidence_hashes_match": true,
+    "article_human_counts_match_snapshot": true,
+    "article_pilot_queue_counts_match_snapshot": true,
+    "appendix_human_and_pilot_counts_match_snapshot": true,
+    "overview_human_and_pilot_counts_match_snapshot": true,
+    "editorial_human_and_pilot_counts_match_snapshot": true,
+    "article_current_coverage_boundary": true,
+    "article_positive_only_reference_caveat": true,
+    "all_preserved_figure_hashes_and_dimensions_match": true,
+    "active_figures_unchanged_from_prior_revision": true,
+    "prior_package_archive_hash_and_members_intact": true,
+    "worked_example_matches_commit_and_proposals": true,
+    "worked_example_source_bindings_match_packet": true,
+    "worked_example_short_quote_is_exact": true
+  },
+  "actual_article_illustrations": [
+    {
+      "path": "figures/01-evidence-to-human-truth.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "6d61bb917f769cc760c29d9fa48d8eb99f80060c8d8c758472b5eebc5e961b6f"
+    },
+    {
+      "path": "figures/02-two-readings-one-repository.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "4272d3740a7e436d0cb17296c434801ddb3b0e18e375958457fb77b3b854f96b"
+    },
+    {
+      "path": "figures/03-human-review-and-audit-v2.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "c451e85cc6490144f022bbf2b70acb61bb1d6b0acc268f0a4f09d3f640ce1a95"
+    }
+  ],
+  "word_count": 5398,
+  "validation_appendix_word_count": 3193,
+  "live_review_snapshot_checked": false,
+  "statistics_snapshot_captured_at_utc": "2026-10-19T02:09:53.236121+00:00",
+  "verified_document_sha256": {
+    "article.md": "77c896b07948d30bd4882159e90aec09e46d80e8ae887b7b1a8fc0b50aabe117",
+    "validation-evidence.md": "e757a13f87402461fa1fb9c64a1aae6f9cb36655a99db02f297c7ef2b5957d97",
+    "README.md": "ac922cd78d5b50a4986e19abf3f7a4a8cc8094cbb39ddd2171b84db9ce662bb8",
+    "editorial-and-claim-review.md": "553c1f90dd48b5cc533502cd0f7316e3da5f3074757f5e31e6fe8ecbaed87c71",
+    "statistics.json": "41b87b9ca50ddd863de158d271e60767767052f18f8714fb5ee29e9533602266",
+    "worked-example.json": "fafe63d95eb10004414d987d1dfae673ef6c5dd7feabfae8158fd3cf59187581"
+  },
+  "reproduction": "python3 ai-system-design/ground-truth-creation/scripts/verify_package.py",
+  "scope": "Publication static/source/count verification only; existing dated application tests were not rerun. Read-only corpus/pilot/SQLite access, no network/model calls or live state writes. Prior four built-in image-generation calls are preserved history; no images generated for this revision."
+}

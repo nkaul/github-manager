@@ -1,11 +1,14 @@
 .tools/
 **/node_modules/
 **/.next/
+**/.next-corpus/
+**/.next-main-test/
 **/.venv/
 **/__pycache__/
 **/.pytest_cache/
 **/.ruff_cache/
 **/test-results/
+**/test-results-corpus/
 **/playwright-report/
 **/.env
 **/.env.local

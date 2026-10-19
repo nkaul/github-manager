@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1080" viewBox="0 0 1800 1080" role="img" aria-labelledby="title desc">
+<title id="title">Retrieve candidates, augment context, validate decisions</title><desc id="desc">Sparse candidate retrieval is implemented. Dense embeddings and a neural reranker are absent.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#3949ab" stroke-width="1.5"/></marker></defs>
+<style>text {font-family: "Chalkboard SE", "Comic Sans MS", "Trebuchet MS", sans-serif; fill:#20213f} .title {font-size:43px;font-weight:700;fill:#3949ab} .subtitle {font-size:23px} .card-title {font-size:28px;font-weight:700;fill:#673ab7} .body {font-size:23px} .small {font-size:21px} .label {font-size:22px;fill:#3949ab} .metric {font-family:"Trebuchet MS",sans-serif;font-size:28px;font-weight:700}</style>
+<rect width="1800" height="1080" fill="#fff"/>
+<path d="M60 34 Q850 5 1730 34 L1734 112 Q840 98 58 116Z" fill="#e3f2fd" opacity=".55"/>
+<text x="75" y="80" class="title">Retrieve candidates, augment context, validate decisions</text>
+<path d="M76 99 Q700 106 1718 99" fill="none" stroke="#673ab7" stroke-width="4" opacity=".7"/>
+<text x="78" y="142" class="subtitle">Sparse candidate retrieval is implemented. Dense embeddings and a neural reranker are absent.</text>
+<g data-card="1 · Repository evidence"><rect x="75" y="190" width="510" height="230" rx="18" fill="#e3f2fd" stroke="#20213f" stroke-width="2.5"/>
+<path d="M89 194 Q330.0 189 570 194" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="99" y="234" class="card-title" text-anchor="start">1 · Repository evidence</text>
+<text x="100" y="274" class="body" text-anchor="start">Metadata + selected README blocks</text>
+<text x="100" y="306" class="body" text-anchor="start">RAKE phrases preserve source links</text>
+<text x="100" y="338" class="body" text-anchor="start">Retrieval query uses all evidence</text>
+</g>
+<g data-card="2 · Canonical candidate search"><rect x="645" y="190" width="510" height="230" rx="18" fill="#f3e5f5" stroke="#20213f" stroke-width="2.5"/>
+<path d="M659 194 Q900.0 189 1140 194" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="669" y="234" class="card-title" text-anchor="start">2 · Canonical candidate search</text>
+<text x="670" y="274" class="body" text-anchor="start">Name + description + aliases</text>
+<text x="670" y="306" class="body" text-anchor="start">Binary-IDF cosine + alias boost</text>
+<text x="670" y="338" class="body" text-anchor="start">PROJECT 8 · TOPIC 10 · TAG 12</text>
+</g>
+<g data-card="3 · Application policy filters"><rect x="1215" y="190" width="510" height="230" rx="18" fill="#e3f2fd" stroke="#20213f" stroke-width="2.5"/>
+<path d="M1229 194 Q1470.0 189 1710 194" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="1239" y="234" class="card-title" text-anchor="start">3 · Application policy filters</text>
+<text x="1240" y="274" class="body" text-anchor="start">Exclude existing accepted edges</text>
+<text x="1240" y="306" class="body" text-anchor="start">Exclude rejections and rule IDs</text>
+<text x="1240" y="338" class="body" text-anchor="start">Active concepts; Domain is derived</text>
+</g>
+<path d="M585,300 L645,300" fill="none" stroke="#3949ab" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M1155,300 L1215,300" fill="none" stroke="#3949ab" stroke-width="3" marker-end="url(#arrow)"/>
+<g data-card="4 · Prompt augmentation"><rect x="1215" y="545" width="510" height="240" rx="18" fill="#f3e5f5" stroke="#20213f" stroke-width="2.5"/>
+<path d="M1229 549 Q1470.0 544 1710 549" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="1239" y="589" class="card-title" text-anchor="start">4 · Prompt augmentation</text>
+<text x="1240" y="629" class="body" text-anchor="start">Metadata + first 2 purpose blocks</text>
+<text x="1240" y="661" class="body" text-anchor="start">Up to 8 phrases + short ID records</text>
+<text x="1240" y="693" class="body" text-anchor="start">System policy + strict JSON Schema</text>
+<text x="1240" y="725" class="body" text-anchor="start">Exact provider input-token count</text>
+</g>
+<g data-card="5 · Structured generation"><rect x="645" y="545" width="510" height="240" rx="18" fill="#e3f2fd" stroke="#20213f" stroke-width="2.5"/>
+<path d="M659 549 Q900.0 544 1140 549" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="669" y="589" class="card-title" text-anchor="start">5 · Structured generation</text>
+<text x="670" y="629" class="body" text-anchor="start">Classification model / low effort</text>
+<text x="670" y="661" class="body" text-anchor="start">CLASSIFIED or NO_MATCH</text>
+<text x="670" y="693" class="body" text-anchor="start">NEEDS_MORE_CONTEXT supported</text>
+<text x="670" y="725" class="body" text-anchor="start">No tool loop; no automatic retry</text>
+</g>
+<g data-card="6 · Validate and propose"><rect x="75" y="545" width="510" height="240" rx="18" fill="#f3e5f5" stroke="#20213f" stroke-width="2.5"/>
+<path d="M89 549 Q330.0 544 570 549" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="99" y="589" class="card-title" text-anchor="start">6 · Validate and propose</text>
+<text x="100" y="629" class="body" text-anchor="start">IDs, kinds, evidence references</text>
+<text x="100" y="661" class="body" text-anchor="start">Current access / decision / fence</text>
+<text x="100" y="693" class="body" text-anchor="start">Save receipt; user reviews proposal</text>
+<text x="100" y="725" class="body" text-anchor="start">Reference validity ≠ entailment</text>
+</g>
+<path d="M1470,420 L1470,545" fill="none" stroke="#3949ab" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M1215,665 L1155,665" fill="none" stroke="#3949ab" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M645,665 L585,665" fill="none" stroke="#3949ab" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="75" y="875" width="1650" height="104" rx="18" fill="#e3f2fd"/>
+<text x="100" y="912" class="card-title" text-anchor="start">A ranking stage is not automatically a reranker</text>
+<text x="100" y="952" class="small" text-anchor="start">BM25 was an alternative offline candidate retriever. No dense+sparse fusion or cross-encoder was used.</text>
+<text x="75" y="1048" class="small" text-anchor="start">GitHub Manager · AI system design · October 14, 2026</text>
+<text x="1725" y="1048" class="small" text-anchor="end">02</text>
+</svg>

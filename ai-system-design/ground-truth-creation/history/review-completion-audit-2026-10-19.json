@@ -1,0 +1,107 @@
+{
+  "confirmed_records": 30,
+  "unique_repositories": 30,
+  "review_owners": 1,
+  "sampling_domain_counts": {
+    "developer": 1,
+    "science": 2,
+    "finance": 6,
+    "commerce": 3,
+    "ai": 3,
+    "data": 10,
+    "education": 2,
+    "security": 2,
+    "healthcare": 1
+  },
+  "split_counts": {
+    "test_reserved": 15,
+    "development": 15
+  },
+  "leakage_groups": 18,
+  "positive_assignments_by_kind": {
+    "TOPIC": 35,
+    "TAG": 33,
+    "PROJECT": 15
+  },
+  "total_positive_assignments": 83,
+  "empty_dimension_counts": {
+    "PROJECT": 15,
+    "TOPIC": 0,
+    "TAG": 3
+  },
+  "distinct_assigned_domains": 4,
+  "registry_revisions_on_reviews": {
+    "0": 8,
+    "2": 17,
+    "1": 5
+  },
+  "current_owner_registry_revision": {
+    "0": 0,
+    "2": 1
+  },
+  "extension_concepts_by_kind": {
+    "PROJECT": 1,
+    "TOPIC": 1
+  },
+  "added_vs_original": 3,
+  "removed_vs_original": 2,
+  "records_with_label_changes_vs_original": 4,
+  "change_counts_by_kind": {
+    "PROJECT": {
+      "added": 1,
+      "removed": 0
+    },
+    "TOPIC": {
+      "added": 1,
+      "removed": 0
+    },
+    "TAG": {
+      "added": 1,
+      "removed": 2
+    }
+  },
+  "added_label_quotes_checked": 3,
+  "structural_issues": [],
+  "ab_overlap_descriptive": {
+    "a": {
+      "repositories": 6,
+      "exact_set_matches": 0,
+      "shared_positive_pairs": 17,
+      "human_only_pairs": 0,
+      "agent_only_unjudged_pairs": 14
+    },
+    "b": {
+      "repositories": 6,
+      "exact_set_matches": 0,
+      "shared_positive_pairs": 17,
+      "human_only_pairs": 0,
+      "agent_only_unjudged_pairs": 18
+    }
+  },
+  "limits": "Single-reviewer positives; removals and agent-only labels are not explicit negatives; comparison is descriptive, not accuracy.",
+  "purpose_text_changed_vs_original": 0,
+  "confirmation_revisions_over_one": 3,
+  "history_entries": 3,
+  "missing_registry_context_legacy_records": 8,
+  "explicit_unknown_not_negative_records": 30,
+  "queue_RANDOM_FILL": 4,
+  "schema_version": "1.0",
+  "captured_at_utc": "2026-10-19T04:47:11.872163+00:00",
+  "client_date": "2026-10-19",
+  "timezone": "America/New_York",
+  "release_id": "public-corpus-600-english-2026-10-16-v2-PROPOSED",
+  "release_manifest_sha256": "64ddf1ff160eb817a965f88030dbdd68b4651e1557c5f530f2cdf2898092a14f",
+  "scope": "Read-only planning audit; user reports review work complete; evaluation runs not yet performed.",
+  "budget_snapshot": {
+    "cumulative_cap_usd": 5.0,
+    "ledger_estimated_charge_usd": 0.127619,
+    "outstanding_reservations_usd": 0.0,
+    "active_run_holds_usd": 0.0,
+    "remaining_under_original_cap_usd": 4.872381,
+    "generation_ledger_entries": 91,
+    "settled_entries": 87,
+    "rejected_before_generation_entries": 4,
+    "scope": "Local ledger estimate, not an account balance or billing invoice. Recheck before execution."
+  },
+  "snapshot_reference": "history/statistics-2026-10-19-review-completion-audit.json"
+}

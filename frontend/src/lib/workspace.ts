@@ -1,3 +1,5 @@
+import { apiFetch } from "./api";
+
 export type AnalysisStatus = { state: string; status: string; freshness?: string; stale: boolean; ai_analyzed: boolean; error?: string; reason?: string; last_success?: { status: string; model?: string; evidence: string; revision?: number; fingerprint_known?: boolean }; last_local_revision?: number };
 export type ConceptCounts = Record<string, { accepted: number; pending: number }>;
 export type AutoSettings = { auto_enabled: boolean; quiet_seconds: number; cooldown_seconds: number; auto_window_seconds?: number; auto_weight_threshold?: number; auto_entity_threshold?: number; auto_project_threshold?: number; auto_change_types?: string[] };
@@ -8,7 +10,7 @@ export type Proposal = { kind: Kind; name: string; description: string; aliases:
 export type Edge = { concept_id: string; source: "USER" | "RULE" | "AI" };
 export type Repo = { analysis?: AnalysisStatus; label_count?: number; domain_ids?: string[]; key: string; id: number | null; name: string; description: string; owner: string; language: string | null; topics: string[]; html_url: string | null; private: boolean; source: string; synthetic?: boolean; default_branch: string | null; branch_count: number | null; sources: string[]; eligible: boolean; included?: boolean; favorite: boolean; starred: boolean; watched: boolean; organization: Record<string, Edge>; review_count: number; last_user_activity: string | null; activities?: { at: string; kind: string; actor_id: number }[] };
 export type Source = { source: string; status: string; note: string; count?: number | null };
-export type Run = { budget_mode?: string; budget_outcome?: { ceiling_usd: number; http_used: number; generation_used: number; estimated_usd: number; reserved_usd: number }; id: string; kind: string; status: string; created_at: string; processed: number; total: number; failed: number; stale?: number; message?: string; reason?: string; ai_mode?: string; evidence?: string; model?: string; outcomes: Record<string, { status: string; evidence: string; model?: string; seconds?: number; error?: string; usage?: { input_tokens: number; output_tokens: number } }> };
+export type Run = { error_code?: string; retryable?: boolean; reauthentication_required?: boolean; stage?: string; started_at?: string; timeout_seconds?: number; budget_mode?: string; budget_outcome?: { ceiling_usd: number; http_used: number; generation_used: number; estimated_usd: number; reserved_usd: number }; id: string; kind: string; status: string; created_at: string; processed: number; total: number; failed: number; stale?: number; message?: string; reason?: string; ai_mode?: string; evidence?: string; model?: string; outcomes: Record<string, { status: string; evidence: string; model?: string; seconds?: number; error?: string; usage?: { input_tokens: number; output_tokens: number } }> };
 export type Draft = { id: string; proposals: Proposal[]; edited_proposals?: Proposal[]; status: string; notes: string; evidence: string; model?: string; revision: number };
 export type Suggestion = { id: string; concept_id: string; kind: Kind; repo_key: string; reason: string; confidence: number; evidence_ids: string[]; status: string; evidence: string; model?: string };
 export type Rule = { id: string; name: string; field: string; operator: string; value: string; concept_id: string };
@@ -25,13 +27,13 @@ export type ResetPlan = { plan_id: string; counts: Record<string, number>; expir
 
 export async function request<T>(path: string, collection: string, csrf?: string, method = "GET", body?: unknown): Promise<T> {
   const separator = path.includes("?") ? "&" : "?";
-  const response = await fetch(`/api/v1${path}${separator}collection=${collection}`, {
+  const response = await apiFetch(`/api/v1${path}${separator}collection=${collection}`, {
     method, cache: "no-store", credentials: "same-origin",
     headers: { ...(csrf ? { "X-CSRF-Token": csrf } : {}), ...(body === undefined ? {} : { "Content-Type": "application/json" }) },
     ...(body === undefined ? {} : { body: JSON.stringify(body) }),
   });
   const value = await response.json().catch(() => ({ detail: "Local service unavailable" }));
-  if (!response.ok) throw new WorkspaceError(typeof value.detail === "string" ? value.detail : "Request validation failed; check the form fields", response.status, value.code, value.conflicts);
+  if (!response.ok) throw new WorkspaceError(typeof value.detail === "string" ? value.detail : "Request validation failed; check the form fields", response.status, value.code, value.conflicts, value);
   return value as T;
 }
 
@@ -42,6 +44,6 @@ export type RunPlan = { skipped: { key: string; name: string; reason: string }[]
 export type TaxonomyConflict = { id?: string; type: string; field: string; term: string; normalized?: string; incoming_name: string; kind: Kind; message: string; proposal_index?: number; alias_index?: number | null; existing?: Concept; suggested_name?: string; actions?: { kind: string; label: string }[] };
 export type TaxonomyCheck = { valid: boolean; conflicts: TaxonomyConflict[]; reused: { id: string; name: string; kind: Kind; message: string }[] };
 export class WorkspaceError extends Error {
-  constructor(message: string, public status: number, public code?: string, public conflicts?: TaxonomyConflict[]) { super(message); this.name = "WorkspaceError"; }
+  constructor(message: string, public status: number, public code?: string, public conflicts?: TaxonomyConflict[], public payload?: Record<string, unknown>) { super(message); this.name = "WorkspaceError"; }
 }
 export const displayLabel = (value: string) => (({ SYNC: "GitHub Sync", DISCOVER: "Discover Taxonomy", REDISCOVER: "Rediscover Taxonomy", FULL_CLASSIFICATION: "Full Classification", INCREMENTAL: "Incremental Classification", EXTRACT: "Extract Evidence", WAITING_FOR_REAUTH: "Waiting for Sign-in", CANCELLED_STALE: "Cancelled — Workspace Changed", PARTIAL_FAILED: "Partially Failed", LIVE_PROVIDER: "Live AI", REPLAY: "Cached AI", FIXTURE: "Test Fixture", LOCAL_RULES: "Local Rules", LOCAL_MATCH: "Local Suggestion", STORED_ANALYSIS: "Stored Analysis", OFFLINE_RECONCILED: "Reconciled Offline", UNKNOWN: "No Recorded Analysis", NEW: "Not Yet Analyzed", SUCCEEDED: "Analysis Complete", UNCERTAIN: "Outcome Unknown" } as Record<string, string>)[value] || value.toLowerCase().replaceAll("_", " ").replace(/\b\w/g, c => c.toUpperCase()).replace(/\bAi\b/g, "AI").replace(/\bGithub\b/g, "GitHub"));

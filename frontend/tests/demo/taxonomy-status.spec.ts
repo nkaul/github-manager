@@ -1,3 +1,4 @@
+import { chooseOption } from "../helpers/chooseOption";
 import { test, expect, type Page } from "@playwright/test";
 
 test.use({ viewport: { width: 1920, height: 1080 } });
@@ -5,7 +6,7 @@ test.use({ viewport: { width: 1920, height: 1080 } });
 async function seed(page: Page, id: number) {
   await page.request.post("/api/v1/test/login", { data: { id } });
   await page.goto("/");
-  await page.getByLabel("Workspace collection").selectOption("samples");
+  await chooseOption(page.getByLabel("Workspace collection"), "samples");
   await page.getByRole("button", { name: "Load demo samples", exact: true }).first().click();
   await expect(page.getByRole("button", { name: "Details for orion-api", exact: true })).toBeVisible();
 }
@@ -45,7 +46,7 @@ test("browse all facets, alias search, selected-set drops and derived-domain pic
   await sidebar.getByRole("tab", { name: "Projects", exact: true }).click();
   await page.locator("tr", { has: page.getByLabel("Select orion-api", { exact: true }) }).dragTo(sidebar.getByRole("button", { name: "Demo Products", exact: true }));
   await expect(confirm).toBeVisible();
-  await confirm.getByLabel("Project for domain drop").selectOption({ label: "Orion Suite" });
+  await chooseOption(confirm.getByLabel("Project for domain drop"), { label: "Orion Suite" });
   await confirm.getByRole("button", { name: "Confirm membership addition" }).click();
   await expect(page.locator("tr", { has: page.getByLabel("Select orion-api", { exact: true }) })).toContainText("Orion Suite");
   await page.locator(".wm-tree-menu > summary").click();
@@ -56,7 +57,7 @@ test("browse all facets, alias search, selected-set drops and derived-domain pic
   await sidebar.getByRole("tab", { name: "Topics", exact: true }).click();
   await sidebar.getByRole("button", { name: "Web APIs", exact: true }).click();
   await expect(page.getByRole("heading", { name: "Web APIs", exact: true })).toBeVisible();
-  await expect(page.getByLabel("Organization status view")).toHaveValue("all");
+  await expect(page.getByLabel("Organization status view")).toHaveValue("Entire collection");
   await expect(page.locator("tbody tr")).toHaveCount(2);
   await page.screenshot({ path: "test-results/taxonomy-topics-1080p.png" });
   await page.getByRole("button", { name: "Content settings", exact: true }).click();
@@ -68,7 +69,7 @@ test("browse all facets, alias search, selected-set drops and derived-domain pic
 test("no-repeat preview, explicit fresh re-analysis, grouped bulk review and configurable thresholds", async ({ page }) => {
   await seed(page, 9107);
   await page.getByRole("button", { name: "AI Organization", exact: false }).click();
-  await page.getByLabel("Inference mode").selectOption("LIVE");
+  await chooseOption(page.getByLabel("Inference mode"), "LIVE");
   await page.getByRole("button", { name: "Discover taxonomy", exact: true }).click();
   await page.getByRole("button", { name: "Start reviewed run", exact: true }).click();
   await page.getByRole("button", { name: "Review draft", exact: true }).click();
@@ -77,13 +78,13 @@ test("no-repeat preview, explicit fresh re-analysis, grouped bulk review and con
   await page.getByRole("button", { name: "Start reviewed run", exact: true }).click();
   const review = page.getByRole("region", { name: "Assignment review", exact: true });
   await expect(review.getByRole("button", { name: "Accept", exact: true })).toHaveCount(3);
-  await page.getByLabel("Group suggestions by").selectOption("concept");
-  await page.getByLabel("Review taxonomy type").selectOption("PROJECT");
+  await chooseOption(page.getByLabel("Group suggestions by"), "concept");
+  await chooseOption(page.getByLabel("Review taxonomy type"), "PROJECT");
   await page.getByLabel("Select visible suggestions").check();
   await page.getByRole("button", { name: "Review selected acceptance" }).click();
   await expect(page.getByLabel("Selected review summary")).toContainText("Accept 2 selected proposals?");
   await page.getByRole("button", { name: "Confirm selected acceptance" }).click();
-  await page.getByLabel("Review taxonomy type").selectOption("");
+  await chooseOption(page.getByLabel("Review taxonomy type"), "");
   await expect(review.getByRole("button", { name: "Accept", exact: true })).toHaveCount(1);
   await page.getByLabel("Select visible suggestions").check();
   await page.getByRole("button", { name: "Review selected acceptance" }).click();
@@ -113,7 +114,7 @@ test("no-repeat preview, explicit fresh re-analysis, grouped bulk review and con
   await page.locator(".wm-automation").evaluate(el => window.scrollTo(0, el.getBoundingClientRect().top + scrollY - 100));
   await page.screenshot({ path: "test-results/analysis-controls-1080p.png" });
   await page.reload();
-  await page.getByLabel("Workspace collection").selectOption("samples");
+  await chooseOption(page.getByLabel("Workspace collection"), "samples");
   await page.getByRole("button", { name: "AI Organization", exact: false }).click();
   await page.locator(".wm-automation > summary").click();
   await expect(page.getByLabel("Weighted changes", { exact: true })).toHaveValue("8");

@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "date": "2026-10-14",
+  "article_words_whitespace_count": 1932,
+  "estimated_reading_minutes_at_225_wpm": 8.6,
+  "linkedin_characters": 1927,
+  "linkedin_words_whitespace_count": 275,
+  "checks": {
+    "micro_f1": true,
+    "tp_fp_fn": true,
+    "token_totals": true,
+    "round_estimate": true,
+    "regression_qualification": true,
+    "three_inline_figures": true,
+    "prior_editions_unchanged": true,
+    "article_body_no_local_methods_links": true,
+    "three_complete_figures": true,
+    "manual_figure_review": true
+  },
+  "protected_prior_edition_files": 26,
+  "changed_prior_edition_files": [],
+  "figures": [
+    {
+      "file": "01-evidence-to-decisions.png",
+      "dimensions": [
+        1942,
+        809
+      ],
+      "sha256": "f4505859f20d48d4670b047e7177b52540fa42cc78044a251f164225613d04d9"
+    },
+    {
+      "file": "02-remember-the-analysis.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "0c0bec80fa55d4795ff200c1ba7da396217d009cc4d046edf43084bd21291370"
+    },
+    {
+      "file": "03-accountable-model-calls.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "1122fc9f03d948c7a9d80a8d9d30e5ce0a66c97fff9b2f20a657fc067346cb87"
+    }
+  ],
+  "public_url_checks": {
+    "https://nkaul.github.io/github-manager-demo/": 200,
+    "https://nkaul.github.io/github-manager-demo/deep-dive/": 200
+  },
+  "url_check_scope": "HTTP response only, no fresh playback or app test",
+  "application_provider_calls": 0,
+  "illustration_tool_calls": 3,
+  "new_quality_benchmarks": 0
+}

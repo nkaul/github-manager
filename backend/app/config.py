@@ -20,6 +20,8 @@ class Settings(BaseSettings):
     github_scopes: str = "read:user repo read:org notifications"
     github_api_version: str = "2026-03-10"
     session_ttl_seconds: int = Field(default=3600, ge=60, le=28800)
+    session_warning_seconds: int = Field(default=120, ge=10, le=300)
+    github_sync_timeout_seconds: int = Field(default=300, ge=30, le=1800)
     oauth_state_ttl_seconds: int = Field(default=600, ge=30, le=600)
     reports_directory: Path = REPO_ROOT / "docs/validation/private"
     github_fixtures_file: Path | None = None

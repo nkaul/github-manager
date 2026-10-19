@@ -1,0 +1,22 @@
+Two GitHub repositories can both use Python and FastAPI while belonging to completely different initiatives.
+
+A repository list gives you useful metadata. Organizing that collection also means understanding what each repository is for, how it relates to your work, and which decisions you've already made.
+
+That's the problem behind GitHub Manager: discover repositories, review an AI-suggested vocabulary, and organize them through Projects, Domains, Topics and Tags you control.
+
+One saved API test makes the workflow concrete. Our authored Orion fixture describes a patient-intake API using FastAPI and Python.
+
+Retrieval returns six possibilities: Orion, Forge, Web APIs, Package Management, FastAPI and Python. Forge appears because of the word “platform.” Package Management appears because of “python.”
+
+The model then receives purpose evidence, candidate IDs and definitions, a primary-purpose policy and a strict response schema. Its saved answer selects Orion, Web APIs, FastAPI and Python, citing the purpose passage. The retrieved distractions remain unselected.
+
+That distinction matters: a shortlist is a set of possibilities. A supported assignment is a separate decision.
+
+The rest of the application matters too. You review suggestions. Rejections stay protected. A durable receipt remembers completed analysis, including a valid no-match. Changes can trigger local reconciliation without automatically sending the repository through another paid call.
+
+Our expanded case study follows both taxonomy discovery and classification with actual saved data, shows an evidence-packing weakness in the public FastAPI sample, and examines where a decision model such as TypeSafe's Jev might fit next. Jev remains a research proposal, not an implemented optimization.
+
+Product walkthrough and architecture overview:
+https://nkaul.github.io/github-manager-demo/
+
+#AIEngineering #RAG #GitHub #SystemDesign

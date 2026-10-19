@@ -1,0 +1,359 @@
+[
+  {
+    "width": 1920,
+    "height": 1080,
+    "ratio": 0.69921875,
+    "cardHeight": 52,
+    "labelSize": 12,
+    "colors": [
+      {
+        "selector": ".wm-nav.is-active span",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(57, 73, 171)",
+        "ratio": 7.7346821068806415,
+        "size": 13
+      },
+      {
+        "selector": ".wm-project span",
+        "color": "rgb(36, 40, 58)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.587101750618432,
+        "size": 13
+      },
+      {
+        "selector": ".wm-stat>span",
+        "color": "rgb(89, 100, 120)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.967856835500801,
+        "size": 12
+      },
+      {
+        "selector": ".wm-stat-selected strong",
+        "color": "rgb(36, 40, 58)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.587101750618432,
+        "size": 21
+      },
+      {
+        "selector": ".wm-tree-menu>summary",
+        "color": "rgb(89, 100, 120)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.967856835500801,
+        "size": 13
+      },
+      {
+        "selector": ".wm-header-actions>.wm-secondary",
+        "color": "rgb(36, 40, 58)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.587101750618432,
+        "size": 13
+      },
+      {
+        "selector": ".wm-filter-field>span",
+        "color": "rgb(36, 40, 58)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.587101750618432,
+        "size": 14
+      },
+      {
+        "selector": ".wm-table th",
+        "color": "rgb(89, 100, 120)",
+        "background": "rgb(250, 251, 252)",
+        "ratio": 5.760211164301681,
+        "size": 12
+      },
+      {
+        "selector": ".wm-description",
+        "color": "rgb(89, 100, 120)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.967856835500801,
+        "size": 12
+      },
+      {
+        "selector": ".wm-visibility",
+        "color": "rgb(89, 100, 120)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.967856835500801,
+        "size": 12
+      },
+      {
+        "selector": ".wm-activity",
+        "color": "rgb(89, 100, 120)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.967856835500801,
+        "size": 12
+      },
+      {
+        "selector": ".wm-source",
+        "color": "rgb(89, 100, 120)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.967856835500801,
+        "size": 12
+      }
+    ],
+    "controls": [
+      {
+        "selector": ".wm-search",
+        "height": 36,
+        "paddingRight": 10,
+        "border": 1
+      },
+      {
+        "selector": ".wm-filter-field input[aria-label=\"Language filter\"]",
+        "height": 36,
+        "paddingRight": 34,
+        "border": 1
+      },
+      {
+        "selector": ".wm-filter-field input[aria-label=\"Visibility filter\"]",
+        "height": 36,
+        "paddingRight": 34,
+        "border": 1
+      },
+      {
+        "selector": ".wm-header input[aria-label=\"Workspace collection\"]",
+        "height": 36,
+        "paddingRight": 34,
+        "border": 1
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "ratio": 0.6350710900473934,
+    "cardHeight": 52,
+    "labelSize": 12,
+    "colors": [
+      {
+        "selector": ".wm-nav.is-active span",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(57, 73, 171)",
+        "ratio": 7.7346821068806415,
+        "size": 13
+      },
+      {
+        "selector": ".wm-project span",
+        "color": "rgb(36, 40, 58)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.587101750618432,
+        "size": 13
+      },
+      {
+        "selector": ".wm-stat>span",
+        "color": "rgb(89, 100, 120)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.967856835500801,
+        "size": 12
+      },
+      {
+        "selector": ".wm-stat-selected strong",
+        "color": "rgb(36, 40, 58)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.587101750618432,
+        "size": 21
+      },
+      {
+        "selector": ".wm-tree-menu>summary",
+        "color": "rgb(89, 100, 120)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.967856835500801,
+        "size": 13
+      },
+      {
+        "selector": ".wm-header-actions>.wm-secondary",
+        "color": "rgb(36, 40, 58)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.587101750618432,
+        "size": 13
+      },
+      {
+        "selector": ".wm-filter-field>span",
+        "color": "rgb(36, 40, 58)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.587101750618432,
+        "size": 14
+      },
+      {
+        "selector": ".wm-table th",
+        "color": "rgb(89, 100, 120)",
+        "background": "rgb(250, 251, 252)",
+        "ratio": 5.760211164301681,
+        "size": 12
+      },
+      {
+        "selector": ".wm-description",
+        "color": "rgb(89, 100, 120)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.967856835500801,
+        "size": 12
+      },
+      {
+        "selector": ".wm-visibility",
+        "color": "rgb(89, 100, 120)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.967856835500801,
+        "size": 12
+      },
+      {
+        "selector": ".wm-activity",
+        "color": "rgb(89, 100, 120)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.967856835500801,
+        "size": 12
+      },
+      {
+        "selector": ".wm-source",
+        "color": "rgb(89, 100, 120)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.967856835500801,
+        "size": 12
+      }
+    ],
+    "controls": [
+      {
+        "selector": ".wm-search",
+        "height": 36,
+        "paddingRight": 10,
+        "border": 1
+      },
+      {
+        "selector": ".wm-filter-field input[aria-label=\"Language filter\"]",
+        "height": 36,
+        "paddingRight": 34,
+        "border": 1
+      },
+      {
+        "selector": ".wm-filter-field input[aria-label=\"Visibility filter\"]",
+        "height": 36,
+        "paddingRight": 34,
+        "border": 1
+      },
+      {
+        "selector": ".wm-header input[aria-label=\"Workspace collection\"]",
+        "height": 36,
+        "paddingRight": 34,
+        "border": 1
+      }
+    ]
+  },
+  {
+    "width": 1280,
+    "height": 800,
+    "ratio": 0.5860215053763441,
+    "cardHeight": 52,
+    "labelSize": 12,
+    "colors": [
+      {
+        "selector": ".wm-nav.is-active span",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(57, 73, 171)",
+        "ratio": 7.7346821068806415,
+        "size": 13
+      },
+      {
+        "selector": ".wm-project span",
+        "color": "rgb(36, 40, 58)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.587101750618432,
+        "size": 13
+      },
+      {
+        "selector": ".wm-stat>span",
+        "color": "rgb(89, 100, 120)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.967856835500801,
+        "size": 12
+      },
+      {
+        "selector": ".wm-stat-selected strong",
+        "color": "rgb(36, 40, 58)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.587101750618432,
+        "size": 21
+      },
+      {
+        "selector": ".wm-tree-menu>summary",
+        "color": "rgb(89, 100, 120)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.967856835500801,
+        "size": 13
+      },
+      {
+        "selector": ".wm-header-actions>.wm-secondary",
+        "color": "rgb(36, 40, 58)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.587101750618432,
+        "size": 13
+      },
+      {
+        "selector": ".wm-filter-field>span",
+        "color": "rgb(36, 40, 58)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.587101750618432,
+        "size": 14
+      },
+      {
+        "selector": ".wm-table th",
+        "color": "rgb(89, 100, 120)",
+        "background": "rgb(250, 251, 252)",
+        "ratio": 5.760211164301681,
+        "size": 12
+      },
+      {
+        "selector": ".wm-description",
+        "color": "rgb(89, 100, 120)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.967856835500801,
+        "size": 12
+      },
+      {
+        "selector": ".wm-visibility",
+        "color": "rgb(89, 100, 120)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.967856835500801,
+        "size": 12
+      },
+      {
+        "selector": ".wm-activity",
+        "color": "rgb(89, 100, 120)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.967856835500801,
+        "size": 12
+      },
+      {
+        "selector": ".wm-source",
+        "color": "rgb(89, 100, 120)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.967856835500801,
+        "size": 12
+      }
+    ],
+    "controls": [
+      {
+        "selector": ".wm-search",
+        "height": 36,
+        "paddingRight": 10,
+        "border": 1
+      },
+      {
+        "selector": ".wm-filter-field input[aria-label=\"Language filter\"]",
+        "height": 36,
+        "paddingRight": 34,
+        "border": 1
+      },
+      {
+        "selector": ".wm-filter-field input[aria-label=\"Visibility filter\"]",
+        "height": 36,
+        "paddingRight": 34,
+        "border": 1
+      },
+      {
+        "selector": ".wm-header input[aria-label=\"Workspace collection\"]",
+        "height": 36,
+        "paddingRight": 34,
+        "border": 1
+      }
+    ]
+  }
+]

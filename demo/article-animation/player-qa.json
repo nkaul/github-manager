@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "checks": [
+    "120-second 1920x1080 video metadata; eight chapters",
+    "Playback advances and pauses",
+    "Full-screen video opens without resizing or cropping source media",
+    "43 caption cues load; caption toggle works",
+    "Chapter seeks decode evidence, classification and closing frames",
+    "Normal captions appear below the artwork; native captions available in full screen",
+    "Desktop and phone player fit viewport",
+    "HTTP byte ranges support seeking; out-of-package paths denied"
+  ],
+  "metadata": {
+    "duration": 120,
+    "width": 1920,
+    "height": 1080,
+    "captions": 1
+  },
+  "caption_cues": 43,
+  "errors": [],
+  "external_requests": [],
+  "audio_review": "Playback automation is muted; does not establish perceptual naturalness"
+}

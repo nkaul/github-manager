@@ -1,0 +1,100 @@
+WEBVTT
+
+00:00:01.360 --> 00:00:01.960
+Section ten.
+
+00:00:03.510 --> 00:00:05.570
+Counterexamples and failure cases.
+
+00:00:07.340 --> 00:00:09.860
+Their purpose is to show where an apparently sensible
+
+00:00:09.860 --> 00:00:11.480
+pipeline can mislead us.
+
+00:00:12.710 --> 00:00:16.470
+We keep the confusing evidence visible rather than explaining
+
+00:00:16.470 --> 00:00:18.330
+only the clean success case.
+
+00:00:27.687 --> 00:00:30.847
+One fixture explicitly says it is not part of
+
+00:00:30.847 --> 00:00:31.807
+Helios or Orion.
+
+00:00:33.677 --> 00:00:37.177
+Lexical names still retrieve both Projects, but the saved
+
+00:00:37.177 --> 00:00:41.857
+classifier selects HTTP Clients and Python with neither Project.
+
+00:00:43.407 --> 00:00:46.527
+Another audit fixture genuinely supports two initiatives.
+
+00:00:47.757 --> 00:00:49.657
+The task must allow both.
+
+00:00:51.127 --> 00:00:53.807
+A forced single winner would change the meaning of
+
+00:00:53.807 --> 00:00:54.467
+organization.
+
+00:00:59.820 --> 00:01:04.100
+The full FastAPI profile contains its purpose statement, but
+
+00:01:04.100 --> 00:01:08.600
+an uppercase title marker let documentation links occupy compact
+
+00:01:08.600 --> 00:01:08.980
+slots.
+
+00:01:10.495 --> 00:01:13.375
+Retrieval could see evidence the generator did not receive.
+
+00:01:14.631 --> 00:01:18.351
+Metadata still supported the saved answer, Web APIs and
+
+00:01:18.351 --> 00:01:18.751
+Python.
+
+00:01:19.426 --> 00:01:22.706
+An earlier answer added unwanted secondary labels.
+
+00:01:24.002 --> 00:01:28.282
+Primary-only policy clarified the task, but reused cases cannot
+
+00:01:28.282 --> 00:01:30.942
+establish an independent causal improvement.
+
+00:01:36.740 --> 00:01:40.980
+Empty, fork-only, and metadata-only cases need no-match or
+
+00:01:40.980 --> 00:01:41.980
+uncertainty paths.
+
+00:01:43.097 --> 00:01:45.777
+Installation noise can introduce unrelated names.
+
+00:01:47.014 --> 00:01:48.954
+English extraction can miss other languages.
+
+00:01:49.231 --> 00:01:53.811
+Narrow cleaning can miss malicious instructions or secret-like
+
+00:01:53.811 --> 00:01:54.131
+text.
+
+00:01:55.208 --> 00:01:58.628
+These fixtures explore boundaries; they are not a comprehensive
+
+00:01:58.628 --> 00:01:59.768
+security benchmark.
+
+00:02:00.905 --> 00:02:04.105
+Next, we preserve the decisions and uncertainty that follow
+
+00:02:04.105 --> 00:02:05.005
+from these cases.

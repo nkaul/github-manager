@@ -1,0 +1,130 @@
+WEBVTT
+
+00:00:00.600 --> 00:00:02.400
+Your own repositories.
+
+00:00:03.040 --> 00:00:03.840
+Shared projects.
+
+00:00:04.540 --> 00:00:05.820
+Libraries you starred for later.
+
+00:00:06.760 --> 00:00:07.460
+Finding them is easy.
+
+00:00:08.320 --> 00:00:09.940
+Remembering how they fit together is harder.
+
+00:00:10.940 --> 00:00:13.640
+GitHub Manager brings them into one workspace, where you
+
+00:00:13.640 --> 00:00:15.620
+can search, explore, and organize.
+
+00:00:17.162 --> 00:00:18.642
+Projects group an initiative.
+
+00:00:19.682 --> 00:00:20.762
+Domains group those projects.
+
+00:00:21.622 --> 00:00:25.102
+Topics describe capabilities, and tags describe technologies.
+
+00:00:26.042 --> 00:00:29.382
+Two repositories can both use Python without belonging to
+
+00:00:29.382 --> 00:00:30.122
+the same project.
+
+00:00:30.682 --> 00:00:33.022
+There are two separate AI jobs.
+
+00:00:33.862 --> 00:00:36.902
+Taxonomy discovery proposes a vocabulary from a collection
+
+00:00:36.902 --> 00:00:37.702
+of repositories.
+
+00:00:38.402 --> 00:00:39.742
+You review and edit it.
+
+00:00:40.162 --> 00:00:43.182
+Classification then works with approved concepts, rather
+
+00:00:43.182 --> 00:00:44.422
+than inventing new labels.
+
+00:00:46.462 --> 00:00:48.162
+Follow our synthetic Orion example.
+
+00:00:48.802 --> 00:00:52.482
+Its README says: patient intake API for the Orion
+
+00:00:52.482 --> 00:00:53.402
+Clinical Platform.
+
+00:00:53.402 --> 00:00:56.042
+Uses FastAPI and Python.
+
+00:00:56.042 --> 00:00:59.922
+We keep that purpose sentence, its evidence reference, and
+
+00:00:59.922 --> 00:01:00.642
+useful phrases.
+
+00:01:02.194 --> 00:01:04.234
+Local search retrieves six possible concepts.
+
+00:01:04.974 --> 00:01:08.234
+Some are distractions: Forge shares the word platform, but
+
+00:01:08.234 --> 00:01:09.734
+that doesn't establish a relationship.
+
+00:01:10.634 --> 00:01:11.934
+Retrieval finds possibilities.
+
+00:01:12.554 --> 00:01:13.534
+It doesn't assign them.
+
+00:01:14.670 --> 00:01:17.910
+The model receives evidence, candidate definitions, instructions,
+
+00:01:18.010 --> 00:01:19.170
+and a response schema.
+
+00:01:19.730 --> 00:01:23.730
+In the saved test, it selected Orion, Web APIs,
+
+00:01:24.590 --> 00:01:27.710
+FastAPI, and Python, citing the purpose sentence.
+
+00:01:28.270 --> 00:01:30.970
+You review those suggestions before accepting them.
+
+00:01:32.262 --> 00:01:35.002
+The app remembers completed analysis separately from labels.
+
+00:01:36.042 --> 00:01:37.722
+Removing a project doesn't erase that receipt.
+
+00:01:38.702 --> 00:01:40.322
+Later changes can reconcile locally.
+
+00:01:40.942 --> 00:01:43.482
+A fresh AI analysis remains an explicit choice.
+
+00:01:44.890 --> 00:01:49.710
+Every model call has a reviewed budget: count, reserve,
+
+00:01:50.730 --> 00:01:51.710
+generate, record.
+
+00:01:52.850 --> 00:01:54.330
+Find the repository you need.
+
+00:01:55.510 --> 00:01:56.490
+Understand why it belongs.
+
+00:01:57.390 --> 00:01:59.190
+Keep the final decision yours.

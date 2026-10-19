@@ -1,0 +1,108 @@
+{
+  "created_date": "2026-10-15",
+  "scope": "Offline reconstruction and sanitized historical outputs; no provider requests",
+  "source_files": {
+    "offline.local.json": "42656ef9cfbfd5fae2792c505626b8b83ad85fa843e809bb7026655765b8f4a0",
+    "validation-round-2.local.json": "7d19d41bd2c055864a66ce10ad96cacba08f82bb84198405dc18203a6d3b1bce",
+    "limited.local.json": "dc87704acc196d7d6226d2a3680ab67fb92f124f8a271b40930dad7216dbc4c1",
+    "experiment-config.local.json": "1eccd417de6e5fabbe8361b01ceff98532358191d71d55becd5ffca5c2c8ce58",
+    "frozen-corpus.local.json": "ee87470590014156a97ffe13374a36cb6be7f30f142b8e6547f7b5df2bd2ee12",
+    "public-corpus.local.json": "ffbd831ef6faae1a77b38bb5a22a3a48dcf9c27d67bebcf04f10de50fb03ae4d"
+  },
+  "baseline_corpus_hash": "7c9d88ed1a2e31c1b5638e8ad75e0aaf892fe18b16a3d7e5520a0ddf4998693c",
+  "logical_cache_matches": 6,
+  "mock_serializations": 6,
+  "real_network_calls": 0,
+  "versions": {
+    "langchain-openai": "1.7.0",
+    "langchain-core": "1.6.9",
+    "openai": "3.29.0",
+    "rake-nltk": "1.0.6",
+    "rank-bm25": "0.2.2",
+    "markdown-it-py": "4.2.0",
+    "nltk": "3.10.3",
+    "numpy": "2.5.4"
+  },
+  "historical_versions": {
+    "langchain-openai": "1.7.0",
+    "langchain-core": "1.6.9",
+    "openai": "3.29.0",
+    "rake-nltk": "1.0.6",
+    "rank-bm25": "0.2.2",
+    "markdown-it-py": "4.2.0",
+    "nltk": "3.10.3",
+    "numpy": "2.5.4"
+  },
+  "classification_cases": [
+    "synthetic/orion-api",
+    "fastapi/fastapi",
+    "synthetic/negated-api",
+    "synthetic/orion-audit",
+    "synthetic/unknown-empty"
+  ],
+  "taxonomy_repository_count": 30,
+  "public_source_attribution": [
+    {
+      "repository": "fastapi/fastapi",
+      "readme_blob_sha": "3db2f525237857e1ab125615b28533e288d1833a",
+      "license": "MIT"
+    },
+    {
+      "repository": "encode/starlette",
+      "readme_blob_sha": "7f314b0fb02894c44b88bc39d979d42c900c6ee6",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "repository": "encode/httpx",
+      "readme_blob_sha": "2ccecd578c3dfdd4fa1f7fc493309cfc944f7cb3",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "repository": "pydantic/pydantic",
+      "readme_blob_sha": "76725494305186a6ff5d3936ac3dd8b7a45341e7",
+      "license": "MIT"
+    },
+    {
+      "repository": "astral-sh/uv",
+      "readme_blob_sha": "66caaf9ccc62add8c63de8e71184c9b7677377ad",
+      "license": "Apache-2.0"
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "readme_blob_sha": "36f37563e0f3f01284b43884675fbd0e49b2cb37",
+      "license": "MIT"
+    },
+    {
+      "repository": "pallets/flask",
+      "readme_blob_sha": "64f56cac4f9d60020a39b9c2f803b1846796cf6d",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "repository": "pallets/click",
+      "readme_blob_sha": "bb688b25745d24bc7ada2373d5a3ba687bcd6a10",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "repository": "pallets/jinja",
+      "readme_blob_sha": "564d12a2b8ff6b49b7c22929a8b2b5abf07a9267",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "readme_blob_sha": "253db05370e6add96414d95afe2d40483b7dd392",
+      "license": "MIT"
+    }
+  ],
+  "excluded_from_call_exports": [
+    "authorization headers",
+    "API keys",
+    "request_id",
+    "response_id",
+    "reservation IDs"
+  ],
+  "limits": [
+    "The original serialized HTTP bodies were not retained; current-library bodies are reconstructions",
+    "Taxonomy discovery and seeded classification are separate experiments",
+    "In-memory acceptance/removal is a new illustrative replay, not historical user activity"
+  ]
+}

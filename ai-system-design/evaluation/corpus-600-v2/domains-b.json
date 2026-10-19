@@ -1,0 +1,2876 @@
+{
+  "agent": "b",
+  "version": "corpus-600-v2",
+  "domains": [
+    {
+      "id": "data",
+      "name": "Data Engineering",
+      "description": "Ingestion, orchestration, transformation, analytical storage/querying, metadata and data quality systems. Separate this primary purpose from applications that merely consume data.",
+      "target": 60,
+      "staged_candidate_cap": 180,
+      "subdomain_targets": {
+        "orchestration_and_transformation": 15,
+        "ingestion_and_streaming": 15,
+        "metadata_lineage_quality": 15,
+        "analytical_storage_and_querying": 15
+      },
+      "seed_hypotheses": [
+        {
+          "repo": "airbytehq/airbyte",
+          "owner": "airbytehq",
+          "project": "Airbyte",
+          "rationale": "Canonical data integration platform.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "APPROVED_PLAN_PRIMARY",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "project_description": "Data replication/integration platform and explicitly dedicated connectors.",
+          "project_scope": "Data replication/integration platform and explicitly dedicated connectors. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "apache/airflow",
+          "owner": "apache",
+          "project": "Apache Airflow",
+          "rationale": "Canonical Apache Airflow implementation.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "APPROVED_PLAN_PRIMARY",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "project_description": "Workflow scheduling/orchestration platform and explicitly dedicated providers.",
+          "project_scope": "Workflow scheduling/orchestration platform and explicitly dedicated providers. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": [
+            "Airflow"
+          ]
+        },
+        {
+          "repo": "dagster-io/dagster",
+          "owner": "dagster-io",
+          "project": "Dagster",
+          "rationale": "Canonical data orchestration platform.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "APPROVED_PLAN_PRIMARY",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "project_description": "Data-asset orchestration, execution and observability platform.",
+          "project_scope": "Data-asset orchestration, execution and observability platform. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "dbt-labs/dbt-core",
+          "owner": "dbt-labs",
+          "project": "dbt",
+          "rationale": "Canonical dbt core; dedicated adapters may share project when explicitly documented.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "APPROVED_PLAN_PRIMARY",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "project_description": "SQL-first analytical transformation tooling and explicitly dedicated adapters.",
+          "project_scope": "SQL-first analytical transformation tooling and explicitly dedicated adapters. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": [
+            "data build tool"
+          ]
+        },
+        {
+          "repo": "OpenLineage/OpenLineage",
+          "owner": "OpenLineage",
+          "project": "OpenLineage",
+          "rationale": "Canonical lineage standard/integrations.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Open dataset/job/run lineage standard and dedicated integrations.",
+          "project_scope": "Open dataset/job/run lineage standard and dedicated integrations. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "PrefectHQ/prefect",
+          "owner": "PrefectHQ",
+          "project": "Prefect",
+          "rationale": "Canonical orchestration framework.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Python workflow orchestration and operational execution platform.",
+          "project_scope": "Python workflow orchestration and operational execution platform. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "apache/iceberg",
+          "owner": "apache",
+          "project": "Apache Iceberg",
+          "rationale": "Canonical analytical table format.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Open analytical table format and dedicated implementation libraries.",
+          "project_scope": "Open analytical table format and dedicated implementation libraries. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": [
+            "Iceberg"
+          ]
+        },
+        {
+          "repo": "datahub-project/datahub",
+          "owner": "datahub-project",
+          "project": "DataHub",
+          "rationale": "Canonical metadata platform.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Metadata catalog and data discovery/governance platform.",
+          "project_scope": "Metadata catalog and data discovery/governance platform. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "dlt-hub/dlt",
+          "owner": "dlt-hub",
+          "project": "dlt",
+          "rationale": "Canonical ingestion/loading toolkit.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Python data extraction/loading pipelines and schema-aware ingestion tooling.",
+          "project_scope": "Python data extraction/loading pipelines and schema-aware ingestion tooling. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "duckdb/duckdb",
+          "owner": "duckdb",
+          "project": "DuckDB",
+          "rationale": "Canonical embedded analytical database.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Embedded analytical SQL database and directly dedicated bindings/extensions.",
+          "project_scope": "Embedded analytical SQL database and directly dedicated bindings/extensions. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "great-expectations/great_expectations",
+          "owner": "great-expectations",
+          "project": "Great Expectations",
+          "rationale": "Canonical data quality project.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Dataset expectation-based validation and data quality tooling.",
+          "project_scope": "Dataset expectation-based validation and data quality tooling. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": [
+            "GX"
+          ]
+        },
+        {
+          "repo": "open-metadata/OpenMetadata",
+          "owner": "open-metadata",
+          "project": "OpenMetadata",
+          "rationale": "Canonical data catalog/governance platform.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Data asset cataloging, discovery, governance and metadata management platform.",
+          "project_scope": "Data asset cataloging, discovery, governance and metadata management platform. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        }
+      ],
+      "topics": [
+        {
+          "id": "data-orchestration",
+          "name": "Data Orchestration",
+          "description": "Schedule, coordinate and observe dependencies between data workflows.",
+          "aliases": [
+            "workflow orchestration",
+            "data workflows"
+          ]
+        },
+        {
+          "id": "data-transformation",
+          "name": "Data Transformation",
+          "description": "Transform analytical data using batch SQL/Python or declarative transformations.",
+          "aliases": [
+            "ETL",
+            "ELT"
+          ]
+        },
+        {
+          "id": "stream-processing",
+          "name": "Stream Processing",
+          "description": "Continuous transformations, routing or computation on event streams.",
+          "aliases": [
+            "event streaming",
+            "streaming data"
+          ]
+        },
+        {
+          "id": "data-ingestion",
+          "name": "Data Ingestion",
+          "description": "Extract, load, replicate or capture changes from source systems.",
+          "aliases": [
+            "data integration",
+            "CDC",
+            "change data capture"
+          ]
+        },
+        {
+          "id": "data-quality",
+          "name": "Data Quality",
+          "description": "Validate datasets, enforce contracts and monitor data defects.",
+          "aliases": [
+            "data validation",
+            "data contracts"
+          ]
+        },
+        {
+          "id": "data-lineage",
+          "name": "Data Lineage",
+          "description": "Represent provenance and dependencies of datasets and transformations.",
+          "aliases": [
+            "data provenance",
+            "lineage tracking"
+          ]
+        },
+        {
+          "id": "data-cataloging",
+          "name": "Data Cataloging",
+          "description": "Discover, describe, govern and search datasets and data assets.",
+          "aliases": [
+            "metadata management",
+            "data discovery"
+          ]
+        },
+        {
+          "id": "analytical-querying",
+          "name": "Analytical Querying",
+          "description": "Query analytical/OLAP datasets and execute SQL or dataframe analytics.",
+          "aliases": [
+            "OLAP",
+            "analytical SQL"
+          ]
+        },
+        {
+          "id": "distributed-data-processing",
+          "name": "Distributed Data Processing",
+          "description": "Parallel processing of large tabular, batch or analytical datasets.",
+          "aliases": [
+            "distributed analytics",
+            "big data processing"
+          ]
+        },
+        {
+          "id": "lakehouse-storage",
+          "name": "Lakehouse Storage",
+          "description": "Table formats and storage layers for transactional analytical datasets.",
+          "aliases": [
+            "data lakes",
+            "table formats"
+          ]
+        },
+        {
+          "id": "pipeline-observability",
+          "name": "Pipeline Observability",
+          "description": "Monitor execution, freshness and reliability of data pipelines.",
+          "aliases": [
+            "data observability",
+            "pipeline monitoring"
+          ]
+        },
+        {
+          "id": "schema-management",
+          "name": "Schema Management",
+          "description": "Manage, validate and evolve schemas for data exchange or persistence.",
+          "aliases": [
+            "schema evolution",
+            "schema registry"
+          ]
+        },
+        {
+          "id": "data-caching",
+          "name": "Data Caching",
+          "description": "Cache or accelerate access to data between storage and analytics engines.",
+          "aliases": [
+            "distributed caching",
+            "analytics acceleration"
+          ]
+        },
+        {
+          "id": "database-administration",
+          "name": "Database Administration",
+          "description": "Inspect, query, edit and manage database schemas and data through administrative/client tools.",
+          "aliases": [
+            "database management",
+            "database clients"
+          ]
+        },
+        {
+          "id": "repository-analytics",
+          "name": "Repository Analytics",
+          "description": "Analyze repository activity, adoption and ecosystem signals, including suspicious engagement.",
+          "aliases": [
+            "GitHub analytics",
+            "repository activity analysis"
+          ]
+        },
+        {
+          "id": "api-clients",
+          "name": "API Clients",
+          "description": "Provide dedicated SDK/client access to an external or platform API.",
+          "aliases": [
+            "API client libraries",
+            "SDK clients"
+          ]
+        },
+        {
+          "id": "distributed-storage",
+          "name": "Distributed Storage",
+          "description": "Distributed file/object data storage and storage/compute separation.",
+          "aliases": [
+            "distributed file systems",
+            "distributed object storage"
+          ]
+        },
+        {
+          "id": "web-apis",
+          "name": "Web APIs",
+          "description": "Serve application/data operations through HTTP or REST API endpoints.",
+          "aliases": [
+            "HTTP APIs",
+            "REST APIs"
+          ]
+        },
+        {
+          "id": "data-versioning",
+          "name": "Data Versioning",
+          "description": "Version, branch and reproduce data snapshots or atomic data-lake operations.",
+          "aliases": [
+            "data version control",
+            "versioned data lakes"
+          ]
+        },
+        {
+          "id": "education-topic-5",
+          "name": "Learning Content",
+          "aliases": [
+            "course content",
+            "educational resources"
+          ],
+          "description": "Authoring, packaging or management of educational materials; distinguish content-only repositories from platforms.",
+          "status": "PROPOSED_REGISTRY_DEFINITION",
+          "shared_definition_source": "domains-a.json:education-topic-5"
+        },
+        {
+          "id": "cloud-topic-21",
+          "name": "Continuous Integration",
+          "description": "Preparing and running automated build/test workflows.",
+          "aliases": [],
+          "status": "PROPOSED_REGISTRY_DEFINITION",
+          "shared_definition_source": "domains-c.json:cloud-topic-21"
+        }
+      ],
+      "queries": [
+        {
+          "query": "org:dagster-io is:public fork:false archived:false",
+          "stratum": "approved-family-dagster",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "org:airbytehq is:public fork:false archived:false",
+          "stratum": "approved-family-airbyte",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "org:apache airflow in:name,description is:public fork:false archived:false",
+          "stratum": "approved-family-airflow",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "org:dbt-labs is:public fork:false archived:false",
+          "stratum": "approved-family-dbt",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:data-orchestration is:public fork:false archived:false",
+          "stratum": "orchestration",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:data-quality is:public fork:false archived:false",
+          "stratum": "quality",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:data-lineage is:public fork:false archived:false",
+          "stratum": "lineage",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:stream-processing is:public fork:false archived:false",
+          "stratum": "stream",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "\"data ingestion\" in:readme is:public fork:false archived:false",
+          "stratum": "purpose-ingestion",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:data-engineering stars:5..500 language:Python is:public fork:false archived:false",
+          "stratum": "low-star-python",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:etl stars:5..500 is:public fork:false archived:false",
+          "stratum": "low-star-etl",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:data-quality stars:5..500 is:public fork:false archived:false",
+          "stratum": "low-star-quality",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:stream-processing language:Java is:public fork:false archived:false",
+          "stratum": "language-java",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:data-engineering language:Go is:public fork:false archived:false",
+          "stratum": "language-go",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:data-engineering language:Rust is:public fork:false archived:false",
+          "stratum": "language-rust",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "\u6570\u636e\u7ba1\u9053 in:readme stars:5..500 is:public fork:false archived:false",
+          "stratum": "non-english-chinese",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "engenharia dados in:readme stars:5..500 is:public fork:false archived:false",
+          "stratum": "non-english-portuguese-candidate",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "pipeline datos in:readme stars:5..500 is:public fork:false archived:false",
+          "stratum": "non-english-spanish-candidate",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        }
+      ],
+      "selection_policy": {
+        "count_unique_numeric_repository_id": true,
+        "prefer_primary_purpose_evidence": true,
+        "non_english_minimum_target": 6,
+        "low_star_5_to_500_minimum_target": 15,
+        "non_python_or_javascript_minimum_target": 8,
+        "per_owner_soft_cap": 6,
+        "per_project_family_soft_cap": 8,
+        "caveat": "All balance values are goals, not permission to fabricate. Sampling bucket does not establish a Domain label. Query language does not establish README language. Unknown membership is not a negative label.",
+        "composition_targets": {
+          "initiative_relationships": 30,
+          "independent_or_near_neighbor": 24,
+          "natural_challenge": 6
+        }
+      },
+      "projects": [
+        {
+          "id": "airbyte",
+          "name": "Airbyte",
+          "description": "Data replication/integration platform and explicitly dedicated connectors.",
+          "scope": "Data replication/integration platform and explicitly dedicated connectors. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "airbytehq/airbyte",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "apache-airflow",
+          "name": "Apache Airflow",
+          "description": "Workflow scheduling/orchestration platform and explicitly dedicated providers.",
+          "scope": "Workflow scheduling/orchestration platform and explicitly dedicated providers. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [
+            "Airflow"
+          ],
+          "canonical_repo_hypothesis": "apache/airflow",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "dagster",
+          "name": "Dagster",
+          "description": "Data-asset orchestration, execution and observability platform.",
+          "scope": "Data-asset orchestration, execution and observability platform. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "dagster-io/dagster",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "dbt",
+          "name": "dbt",
+          "description": "SQL-first analytical transformation tooling and explicitly dedicated adapters.",
+          "scope": "SQL-first analytical transformation tooling and explicitly dedicated adapters. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [
+            "data build tool"
+          ],
+          "canonical_repo_hypothesis": "dbt-labs/dbt-core",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "openlineage",
+          "name": "OpenLineage",
+          "description": "Open dataset/job/run lineage standard and dedicated integrations.",
+          "scope": "Open dataset/job/run lineage standard and dedicated integrations. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "OpenLineage/OpenLineage",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "prefect",
+          "name": "Prefect",
+          "description": "Python workflow orchestration and operational execution platform.",
+          "scope": "Python workflow orchestration and operational execution platform. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "PrefectHQ/prefect",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "apache-iceberg",
+          "name": "Apache Iceberg",
+          "description": "Open analytical table format and dedicated implementation libraries.",
+          "scope": "Open analytical table format and dedicated implementation libraries. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [
+            "Iceberg"
+          ],
+          "canonical_repo_hypothesis": "apache/iceberg",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "datahub",
+          "name": "DataHub",
+          "description": "Metadata catalog and data discovery/governance platform.",
+          "scope": "Metadata catalog and data discovery/governance platform. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "datahub-project/datahub",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "dlt",
+          "name": "dlt",
+          "description": "Python data extraction/loading pipelines and schema-aware ingestion tooling.",
+          "scope": "Python data extraction/loading pipelines and schema-aware ingestion tooling. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "dlt-hub/dlt",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "duckdb",
+          "name": "DuckDB",
+          "description": "Embedded analytical SQL database and directly dedicated bindings/extensions.",
+          "scope": "Embedded analytical SQL database and directly dedicated bindings/extensions. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "duckdb/duckdb",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "great-expectations",
+          "name": "Great Expectations",
+          "description": "Dataset expectation-based validation and data quality tooling.",
+          "scope": "Dataset expectation-based validation and data quality tooling. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [
+            "GX"
+          ],
+          "canonical_repo_hypothesis": "great-expectations/great_expectations",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "openmetadata",
+          "name": "OpenMetadata",
+          "description": "Data asset cataloging, discovery, governance and metadata management platform.",
+          "scope": "Data asset cataloging, discovery, governance and metadata management platform. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "open-metadata/OpenMetadata",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        }
+      ],
+      "staging_allocation_recommendation": {
+        "approved_family": 70,
+        "broad_topic_or_purpose": 60,
+        "low_star": 25,
+        "language_diversity": 25,
+        "policy": "Round-robin among query strata; deduplicate by numeric ID; redistribute empty strata instead of exhausting cap on first family query."
+      }
+    },
+    {
+      "id": "ai",
+      "name": "AI & Machine Learning",
+      "description": "Model development, inference, retrieval-augmented applications and model evaluation. Distinguish model/application infrastructure from generic web apps with an incidental API call.",
+      "target": 60,
+      "staged_candidate_cap": 180,
+      "subdomain_targets": {
+        "classical_ml_and_training": 15,
+        "nlp_and_vision": 15,
+        "retrieval_llm_applications": 15,
+        "inference_evaluation_experiments": 15
+      },
+      "seed_hypotheses": [
+        {
+          "repo": "huggingface/transformers",
+          "owner": "huggingface",
+          "project": "Transformers",
+          "rationale": "Canonical model architectures and inference/training toolkit.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "APPROVED_PLAN_PRIMARY",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "project_description": "Hugging Face model-architecture, training and inference library.",
+          "project_scope": "Hugging Face model-architecture, training and inference library. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": [
+            "Hugging Face Transformers"
+          ]
+        },
+        {
+          "repo": "langchain-ai/langchain",
+          "owner": "langchain-ai",
+          "project": "LangChain",
+          "rationale": "Canonical LLM application framework.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "APPROVED_PLAN_PRIMARY",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "project_description": "Language-model application orchestration framework and dedicated framework components.",
+          "project_scope": "Language-model application orchestration framework and dedicated framework components. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "mlflow/mlflow",
+          "owner": "mlflow",
+          "project": "MLflow",
+          "rationale": "Canonical experiment/model lifecycle platform.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "APPROVED_PLAN_PRIMARY",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "project_description": "Machine-learning experiment tracking and model/application lifecycle platform.",
+          "project_scope": "Machine-learning experiment tracking and model/application lifecycle platform. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "pytorch/pytorch",
+          "owner": "pytorch",
+          "project": "PyTorch",
+          "rationale": "Canonical deep-learning framework.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "APPROVED_PLAN_PRIMARY",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "project_description": "Tensor computation, automatic differentiation and neural-network framework.",
+          "project_scope": "Tensor computation, automatic differentiation and neural-network framework. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "confident-ai/deepeval",
+          "owner": "confident-ai",
+          "project": "DeepEval",
+          "rationale": "Canonical model/application evaluation framework.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Evaluation and testing framework for language-model applications.",
+          "project_scope": "Evaluation and testing framework for language-model applications. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "explodinggradients/ragas",
+          "owner": "explodinggradients",
+          "project": "Ragas",
+          "rationale": "Canonical evaluation framework.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Evaluation tooling for retrieval-augmented and language-model applications.",
+          "project_scope": "Evaluation tooling for retrieval-augmented and language-model applications. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "huggingface/datasets",
+          "owner": "huggingface",
+          "project": "Datasets",
+          "rationale": "Canonical dataset tooling project.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Hugging Face dataset loading, transformation and interoperability library.",
+          "project_scope": "Hugging Face dataset loading, transformation and interoperability library. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": [
+            "Hugging Face Datasets"
+          ]
+        },
+        {
+          "repo": "qdrant/qdrant",
+          "owner": "qdrant",
+          "project": "Qdrant",
+          "rationale": "Canonical vector search engine.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Vector similarity retrieval engine and directly dedicated clients/integrations.",
+          "project_scope": "Vector similarity retrieval engine and directly dedicated clients/integrations. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "run-llama/llama_index",
+          "owner": "run-llama",
+          "project": "LlamaIndex",
+          "rationale": "Canonical retrieval/context framework.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Retrieval/context ingestion and orchestration framework for language-model applications.",
+          "project_scope": "Retrieval/context ingestion and orchestration framework for language-model applications. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": [
+            "llama_index"
+          ]
+        },
+        {
+          "repo": "scikit-learn/scikit-learn",
+          "owner": "scikit-learn",
+          "project": "scikit-learn",
+          "rationale": "Canonical classical machine-learning library.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Classical machine-learning estimators, preprocessing and model-selection library.",
+          "project_scope": "Classical machine-learning estimators, preprocessing and model-selection library. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": [
+            "sklearn"
+          ]
+        },
+        {
+          "repo": "ultralytics/ultralytics",
+          "owner": "ultralytics",
+          "project": "Ultralytics",
+          "rationale": "Canonical computer-vision model toolkit.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "Computer-vision model training, prediction and deployment toolkit.",
+          "project_scope": "Computer-vision model training, prediction and deployment toolkit. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        },
+        {
+          "repo": "vllm-project/vllm",
+          "owner": "vllm-project",
+          "project": "vLLM",
+          "rationale": "Canonical language-model inference engine.",
+          "status": "HYPOTHESIS_NOT_GOLD",
+          "seed_role": "ALTERNATIVE_DISCOVERY_HYPOTHESIS",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "project_description": "High-throughput language-model inference and serving engine.",
+          "project_scope": "High-throughput language-model inference and serving engine. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "project_aliases": []
+        }
+      ],
+      "topics": [
+        {
+          "id": "machine-learning",
+          "name": "Machine Learning",
+          "description": "Learn predictive patterns from examples; conventional supervised/unsupervised model workflows.",
+          "aliases": [
+            "ML",
+            "predictive modeling"
+          ]
+        },
+        {
+          "id": "deep-learning",
+          "name": "Deep Learning",
+          "description": "Neural-network model training, architectures and optimization.",
+          "aliases": [
+            "neural networks",
+            "DL"
+          ]
+        },
+        {
+          "id": "natural-language-processing",
+          "name": "Natural Language Processing",
+          "description": "Process, represent, generate or analyze human language.",
+          "aliases": [
+            "NLP",
+            "language processing"
+          ]
+        },
+        {
+          "id": "computer-vision",
+          "name": "Computer Vision",
+          "description": "Interpret images/video, detect objects and learn visual representations.",
+          "aliases": [
+            "CV",
+            "image understanding"
+          ]
+        },
+        {
+          "id": "retrieval-augmented-generation",
+          "name": "Retrieval-Augmented Generation",
+          "description": "Retrieve external evidence and supply it to a generative model.",
+          "aliases": [
+            "RAG",
+            "retrieval augmented generation"
+          ]
+        },
+        {
+          "id": "llm-application-orchestration",
+          "name": "LLM Application Orchestration",
+          "description": "Compose language-model calls, tools, context and multi-step application logic.",
+          "aliases": [
+            "LLM workflows",
+            "model orchestration"
+          ]
+        },
+        {
+          "id": "model-serving",
+          "name": "Model Serving",
+          "description": "Expose trained models for inference and optimize runtime delivery.",
+          "aliases": [
+            "inference serving",
+            "inference engine"
+          ]
+        },
+        {
+          "id": "model-evaluation",
+          "name": "Model Evaluation",
+          "description": "Measure model/application quality, robustness and behavioral performance.",
+          "aliases": [
+            "AI evaluation",
+            "LLM evaluation",
+            "evals"
+          ]
+        },
+        {
+          "id": "vector-retrieval",
+          "name": "Vector Retrieval",
+          "description": "Similarity search over embeddings and dense representations.",
+          "aliases": [
+            "semantic search",
+            "embedding search"
+          ]
+        },
+        {
+          "id": "model-training",
+          "name": "Model Training",
+          "description": "Training loops, tuning, datasets and optimization infrastructure.",
+          "aliases": [
+            "fine-tuning",
+            "training infrastructure"
+          ]
+        },
+        {
+          "id": "ml-experiment-management",
+          "name": "ML Experiment Management",
+          "description": "Track, compare and reproduce machine-learning experiments and artifacts.",
+          "aliases": [
+            "experiment tracking",
+            "MLOps experiments"
+          ]
+        },
+        {
+          "id": "dataset-curation",
+          "name": "Dataset Curation",
+          "description": "Prepare, annotate, inspect and maintain datasets for AI/ML.",
+          "aliases": [
+            "data labeling",
+            "ML datasets"
+          ]
+        },
+        {
+          "id": "model-observability",
+          "name": "Model Observability",
+          "description": "Trace, monitor and debug AI model/application execution and behavior.",
+          "aliases": [
+            "LLM observability",
+            "AI tracing"
+          ]
+        },
+        {
+          "id": "conversational-ai",
+          "name": "Conversational AI",
+          "description": "Interactive chat, voice or multimodal conversation interfaces powered by language models.",
+          "aliases": [
+            "AI chat interfaces",
+            "language-model chat"
+          ]
+        },
+        {
+          "id": "reranking",
+          "name": "Reranking",
+          "description": "Rescore candidate results with dedicated relevance/similarity models, including cross-encoders.",
+          "aliases": [
+            "cross-encoder ranking",
+            "candidate rescoring"
+          ]
+        },
+        {
+          "id": "education-topic-5",
+          "name": "Learning Content",
+          "aliases": [
+            "course content",
+            "educational resources"
+          ],
+          "description": "Authoring, packaging or management of educational materials; distinguish content-only repositories from platforms.",
+          "shared_definition_source": "domains-a.json:education-topic-5",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "ai-governance",
+          "name": "AI Governance",
+          "aliases": [
+            "responsible AI management"
+          ],
+          "description": "Manage AI system accountability, risk, compliance and governance policies.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "prompt-engineering",
+          "name": "Prompt Engineering",
+          "aliases": [
+            "prompt libraries"
+          ],
+          "description": "Create, organize, test or reuse instructions and prompt templates for AI systems.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "agent-context-management",
+          "name": "Agent Context Management",
+          "aliases": [
+            "agent memory"
+          ],
+          "description": "Capture, curate, store and supply contextual history or memory for AI agents.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "model-visualization",
+          "name": "Model Visualization",
+          "description": "Inspect or visualize model graphs, layers, architectures and tensor structures; distinct from measured quality evaluation.",
+          "aliases": [
+            "model graph inspection"
+          ],
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        }
+      ],
+      "queries": [
+        {
+          "query": "org:pytorch is:public fork:false archived:false",
+          "stratum": "approved-family-pytorch",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "org:huggingface transformers in:name,description is:public fork:false archived:false",
+          "stratum": "approved-family-transformers",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "org:langchain-ai is:public fork:false archived:false",
+          "stratum": "approved-family-langchain",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "org:mlflow is:public fork:false archived:false",
+          "stratum": "approved-family-mlflow",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:machine-learning is:public fork:false archived:false",
+          "stratum": "classical-ml",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:computer-vision is:public fork:false archived:false",
+          "stratum": "vision",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:rag is:public fork:false archived:false",
+          "stratum": "rag",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:llm-evaluation is:public fork:false archived:false",
+          "stratum": "evaluation",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "\"model serving\" in:readme is:public fork:false archived:false",
+          "stratum": "purpose-model-serving",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:machine-learning stars:5..500 language:Python is:public fork:false archived:false",
+          "stratum": "low-star-python",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:rag stars:5..500 is:public fork:false archived:false",
+          "stratum": "low-star-rag",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:llm-evaluation stars:5..500 is:public fork:false archived:false",
+          "stratum": "low-star-eval",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:machine-learning language:Rust is:public fork:false archived:false",
+          "stratum": "language-rust",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:machine-learning language:JavaScript is:public fork:false archived:false",
+          "stratum": "language-javascript",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "topic:machine-learning language:Julia is:public fork:false archived:false",
+          "stratum": "language-julia",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "\u673a\u5668\u5b66\u4e60 in:readme stars:5..500 is:public fork:false archived:false",
+          "stratum": "non-english-chinese",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "aprendizaje automatico in:readme stars:5..500 is:public fork:false archived:false",
+          "stratum": "non-english-spanish-candidate",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        },
+        {
+          "query": "aprendizado maquina in:readme stars:5..500 is:public fork:false archived:false",
+          "stratum": "non-english-portuguese-candidate",
+          "sort": "best-match",
+          "order": "desc",
+          "per_page": 30
+        }
+      ],
+      "selection_policy": {
+        "count_unique_numeric_repository_id": true,
+        "prefer_primary_purpose_evidence": true,
+        "non_english_minimum_target": 6,
+        "low_star_5_to_500_minimum_target": 15,
+        "non_python_or_javascript_minimum_target": 8,
+        "per_owner_soft_cap": 6,
+        "per_project_family_soft_cap": 8,
+        "caveat": "All balance values are goals, not permission to fabricate. Sampling bucket does not establish a Domain label. Query language does not establish README language. Unknown membership is not a negative label.",
+        "composition_targets": {
+          "initiative_relationships": 30,
+          "independent_or_near_neighbor": 24,
+          "natural_challenge": 6
+        }
+      },
+      "projects": [
+        {
+          "id": "transformers",
+          "name": "Transformers",
+          "description": "Hugging Face model-architecture, training and inference library.",
+          "scope": "Hugging Face model-architecture, training and inference library. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [
+            "Hugging Face Transformers"
+          ],
+          "canonical_repo_hypothesis": "huggingface/transformers",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "langchain",
+          "name": "LangChain",
+          "description": "Language-model application orchestration framework and dedicated framework components.",
+          "scope": "Language-model application orchestration framework and dedicated framework components. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "langchain-ai/langchain",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "mlflow",
+          "name": "MLflow",
+          "description": "Machine-learning experiment tracking and model/application lifecycle platform.",
+          "scope": "Machine-learning experiment tracking and model/application lifecycle platform. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "mlflow/mlflow",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "pytorch",
+          "name": "PyTorch",
+          "description": "Tensor computation, automatic differentiation and neural-network framework.",
+          "scope": "Tensor computation, automatic differentiation and neural-network framework. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "pytorch/pytorch",
+          "provenance": "docs/planning/public-repository-corpus-600.md",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "deepeval",
+          "name": "DeepEval",
+          "description": "Evaluation and testing framework for language-model applications.",
+          "scope": "Evaluation and testing framework for language-model applications. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "confident-ai/deepeval",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "ragas",
+          "name": "Ragas",
+          "description": "Evaluation tooling for retrieval-augmented and language-model applications.",
+          "scope": "Evaluation tooling for retrieval-augmented and language-model applications. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "explodinggradients/ragas",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "datasets",
+          "name": "Datasets",
+          "description": "Hugging Face dataset loading, transformation and interoperability library.",
+          "scope": "Hugging Face dataset loading, transformation and interoperability library. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [
+            "Hugging Face Datasets"
+          ],
+          "canonical_repo_hypothesis": "huggingface/datasets",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "qdrant",
+          "name": "Qdrant",
+          "description": "Vector similarity retrieval engine and directly dedicated clients/integrations.",
+          "scope": "Vector similarity retrieval engine and directly dedicated clients/integrations. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "qdrant/qdrant",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "llamaindex",
+          "name": "LlamaIndex",
+          "description": "Retrieval/context ingestion and orchestration framework for language-model applications.",
+          "scope": "Retrieval/context ingestion and orchestration framework for language-model applications. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [
+            "llama_index"
+          ],
+          "canonical_repo_hypothesis": "run-llama/llama_index",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "scikit-learn",
+          "name": "scikit-learn",
+          "description": "Classical machine-learning estimators, preprocessing and model-selection library.",
+          "scope": "Classical machine-learning estimators, preprocessing and model-selection library. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [
+            "sklearn"
+          ],
+          "canonical_repo_hypothesis": "scikit-learn/scikit-learn",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "ultralytics",
+          "name": "Ultralytics",
+          "description": "Computer-vision model training, prediction and deployment toolkit.",
+          "scope": "Computer-vision model training, prediction and deployment toolkit. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "ultralytics/ultralytics",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        },
+        {
+          "id": "vllm",
+          "name": "vLLM",
+          "description": "High-throughput language-model inference and serving engine.",
+          "scope": "High-throughput language-model inference and serving engine. Membership requires primary implementation or an explicitly dedicated component/integration; excludes incidental dependency use, generic tutorials and unrelated same-owner repositories.",
+          "aliases": [],
+          "canonical_repo_hypothesis": "vllm-project/vllm",
+          "provenance": "Agent B additional search hypothesis, 2026-10-16; must be verified from collected sources before inclusion.",
+          "status": "PROPOSED_REGISTRY_NOT_HUMAN_APPROVED"
+        }
+      ],
+      "staging_allocation_recommendation": {
+        "approved_family": 70,
+        "broad_topic_or_purpose": 60,
+        "low_star": 25,
+        "language_diversity": 25,
+        "policy": "Round-robin among query strata; deduplicate by numeric ID; redistribute empty strata instead of exhausting cap on first family query."
+      }
+    },
+    {
+      "id": "cloud",
+      "name": "Cloud, infrastructure and DevOps",
+      "staged_candidate_cap": 180,
+      "projects": [
+        {
+          "name": "Kubernetes",
+          "owners": [
+            "kubernetes",
+            "kubernetes-sigs"
+          ],
+          "seed_repositories": [
+            "kubernetes/kubernetes",
+            "kubernetes/client-go",
+            "kubernetes/minikube"
+          ],
+          "aliases": [
+            "k8s"
+          ],
+          "membership_criteria": "Kubernetes core, a dedicated Kubernetes client/component or explicitly scoped Kubernetes subproject; a workload merely deployed on Kubernetes is not sufficient.",
+          "exclusion": "Shared owner, keyword mention, dependency or generic compatibility alone is insufficient.",
+          "label_status": "PROPOSED"
+        },
+        {
+          "name": "OpenTofu",
+          "owners": [
+            "opentofu"
+          ],
+          "seed_repositories": [
+            "opentofu/opentofu",
+            "opentofu/registry"
+          ],
+          "aliases": [],
+          "membership_criteria": "Core OpenTofu implementation or a purpose-built component explicitly scoped to the OpenTofu initiative.",
+          "exclusion": "Shared owner, keyword mention, dependency or generic compatibility alone is insufficient.",
+          "label_status": "PROPOSED"
+        },
+        {
+          "name": "Argo",
+          "owners": [
+            "argoproj",
+            "argoproj-labs"
+          ],
+          "seed_repositories": [
+            "argoproj/argo-cd",
+            "argoproj/argo-workflows",
+            "argoproj/argo-events",
+            "argoproj/argo-rollouts"
+          ],
+          "aliases": [
+            "Argo Project"
+          ],
+          "membership_criteria": "Core Argo tooling or a dedicated Argo extension with explicit project relationship; GitOps in general is not membership.",
+          "exclusion": "Shared owner, keyword mention, dependency or generic compatibility alone is insufficient.",
+          "label_status": "PROPOSED"
+        },
+        {
+          "name": "OpenTelemetry",
+          "owners": [
+            "open-telemetry"
+          ],
+          "seed_repositories": [
+            "open-telemetry/opentelemetry-collector",
+            "open-telemetry/opentelemetry-python",
+            "open-telemetry/opentelemetry-js"
+          ],
+          "aliases": [
+            "OTel"
+          ],
+          "membership_criteria": "Explicit implementation, collector component, SDK or specification of OpenTelemetry; emitting telemetry alone is not membership.",
+          "exclusion": "Shared owner, keyword mention, dependency or generic compatibility alone is insufficient.",
+          "label_status": "PROPOSED"
+        }
+      ],
+      "queries": [
+        {
+          "query": "org:kubernetes is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "family"
+        },
+        {
+          "query": "org:kubernetes-sigs is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "family"
+        },
+        {
+          "query": "org:opentofu is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "family"
+        },
+        {
+          "query": "org:argoproj is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "family"
+        },
+        {
+          "query": "org:open-telemetry is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "family"
+        },
+        {
+          "query": "topic:infrastructure-as-code is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "topic"
+        },
+        {
+          "query": "topic:gitops is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "topic"
+        },
+        {
+          "query": "topic:observability is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "topic"
+        },
+        {
+          "query": "topic:container-orchestration is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "topic"
+        },
+        {
+          "query": "\"deployment automation\" in:description,readme stars:5..200 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "purpose"
+        },
+        {
+          "query": "\"infrastructure as code\" in:description,readme stars:5..200 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "purpose"
+        },
+        {
+          "query": "topic:devops language:Go stars:5..200 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "diversity"
+        },
+        {
+          "query": "topic:devops language:Rust stars:5..1000 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "diversity"
+        },
+        {
+          "query": "topic:devops language:Python stars:5..200 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "diversity"
+        },
+        {
+          "query": "\"\u76d1\u63a7\" in:description,readme topic:monitoring stars:10..2000 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "non_english"
+        },
+        {
+          "query": "\"\u90e8\u7f72\" in:description,readme topic:devops stars:10..1000 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "non_english"
+        },
+        {
+          "query": "\"observabilidade\" in:description,readme stars:5..1000 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "non_english"
+        },
+        {
+          "query": "\"Kubernetes\" in:readme topic:kubernetes language:Shell stars:5..200 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "diversity"
+        }
+      ],
+      "target": 60,
+      "description": "Cloud resource provisioning, container orchestration, deployment automation and operational telemetry.",
+      "seed_hypotheses": [
+        {
+          "repo": "kubernetes/kubernetes",
+          "project": "Kubernetes",
+          "owner": "kubernetes",
+          "rationale": "Kubernetes core, a dedicated Kubernetes client/component or explicitly scoped Kubernetes subproject; a workload merely deployed on Kubernetes is not sufficient.",
+          "description": "Kubernetes core, a dedicated Kubernetes client/component or explicitly scoped Kubernetes subproject; a workload merely deployed on Kubernetes is not sufficient.",
+          "aliases": [
+            "k8s"
+          ]
+        },
+        {
+          "repo": "kubernetes/client-go",
+          "project": "Kubernetes",
+          "owner": "kubernetes",
+          "rationale": "Kubernetes core, a dedicated Kubernetes client/component or explicitly scoped Kubernetes subproject; a workload merely deployed on Kubernetes is not sufficient.",
+          "description": "Kubernetes core, a dedicated Kubernetes client/component or explicitly scoped Kubernetes subproject; a workload merely deployed on Kubernetes is not sufficient.",
+          "aliases": [
+            "k8s"
+          ]
+        },
+        {
+          "repo": "kubernetes/minikube",
+          "project": "Kubernetes",
+          "owner": "kubernetes",
+          "rationale": "Kubernetes core, a dedicated Kubernetes client/component or explicitly scoped Kubernetes subproject; a workload merely deployed on Kubernetes is not sufficient.",
+          "description": "Kubernetes core, a dedicated Kubernetes client/component or explicitly scoped Kubernetes subproject; a workload merely deployed on Kubernetes is not sufficient.",
+          "aliases": [
+            "k8s"
+          ]
+        },
+        {
+          "repo": "opentofu/opentofu",
+          "project": "OpenTofu",
+          "owner": "opentofu",
+          "rationale": "Core OpenTofu implementation or a purpose-built component explicitly scoped to the OpenTofu initiative.",
+          "description": "Core OpenTofu implementation or a purpose-built component explicitly scoped to the OpenTofu initiative.",
+          "aliases": []
+        },
+        {
+          "repo": "opentofu/registry",
+          "project": "OpenTofu",
+          "owner": "opentofu",
+          "rationale": "Core OpenTofu implementation or a purpose-built component explicitly scoped to the OpenTofu initiative.",
+          "description": "Core OpenTofu implementation or a purpose-built component explicitly scoped to the OpenTofu initiative.",
+          "aliases": []
+        },
+        {
+          "repo": "argoproj/argo-cd",
+          "project": "Argo",
+          "owner": "argoproj",
+          "rationale": "Core Argo tooling or a dedicated Argo extension with explicit project relationship; GitOps in general is not membership.",
+          "description": "Core Argo tooling or a dedicated Argo extension with explicit project relationship; GitOps in general is not membership.",
+          "aliases": [
+            "Argo Project"
+          ]
+        },
+        {
+          "repo": "argoproj/argo-workflows",
+          "project": "Argo",
+          "owner": "argoproj",
+          "rationale": "Core Argo tooling or a dedicated Argo extension with explicit project relationship; GitOps in general is not membership.",
+          "description": "Core Argo tooling or a dedicated Argo extension with explicit project relationship; GitOps in general is not membership.",
+          "aliases": [
+            "Argo Project"
+          ]
+        },
+        {
+          "repo": "argoproj/argo-events",
+          "project": "Argo",
+          "owner": "argoproj",
+          "rationale": "Core Argo tooling or a dedicated Argo extension with explicit project relationship; GitOps in general is not membership.",
+          "description": "Core Argo tooling or a dedicated Argo extension with explicit project relationship; GitOps in general is not membership.",
+          "aliases": [
+            "Argo Project"
+          ]
+        },
+        {
+          "repo": "argoproj/argo-rollouts",
+          "project": "Argo",
+          "owner": "argoproj",
+          "rationale": "Core Argo tooling or a dedicated Argo extension with explicit project relationship; GitOps in general is not membership.",
+          "description": "Core Argo tooling or a dedicated Argo extension with explicit project relationship; GitOps in general is not membership.",
+          "aliases": [
+            "Argo Project"
+          ]
+        },
+        {
+          "repo": "open-telemetry/opentelemetry-collector",
+          "project": "OpenTelemetry",
+          "owner": "open-telemetry",
+          "rationale": "Explicit implementation, collector component, SDK or specification of OpenTelemetry; emitting telemetry alone is not membership.",
+          "description": "Explicit implementation, collector component, SDK or specification of OpenTelemetry; emitting telemetry alone is not membership.",
+          "aliases": [
+            "OTel"
+          ]
+        },
+        {
+          "repo": "open-telemetry/opentelemetry-python",
+          "project": "OpenTelemetry",
+          "owner": "open-telemetry",
+          "rationale": "Explicit implementation, collector component, SDK or specification of OpenTelemetry; emitting telemetry alone is not membership.",
+          "description": "Explicit implementation, collector component, SDK or specification of OpenTelemetry; emitting telemetry alone is not membership.",
+          "aliases": [
+            "OTel"
+          ]
+        },
+        {
+          "repo": "open-telemetry/opentelemetry-js",
+          "project": "OpenTelemetry",
+          "owner": "open-telemetry",
+          "rationale": "Explicit implementation, collector component, SDK or specification of OpenTelemetry; emitting telemetry alone is not membership.",
+          "description": "Explicit implementation, collector component, SDK or specification of OpenTelemetry; emitting telemetry alone is not membership.",
+          "aliases": [
+            "OTel"
+          ]
+        }
+      ],
+      "topics": [
+        {
+          "name": "Container Orchestration",
+          "description": "Scheduling and operating containers across clusters",
+          "aliases": [
+            "container orchestration"
+          ],
+          "label_status": "PROPOSED",
+          "id": "cloud-topic-01"
+        },
+        {
+          "name": "Infrastructure as Code",
+          "description": "Declarative provisioning and lifecycle management of infrastructure",
+          "aliases": [
+            "IaC"
+          ],
+          "label_status": "PROPOSED",
+          "id": "cloud-topic-02"
+        },
+        {
+          "name": "GitOps",
+          "description": "Git-controlled deployment and reconciliation workflows",
+          "aliases": [
+            "GitOps deployment"
+          ],
+          "label_status": "PROPOSED",
+          "id": "cloud-topic-03"
+        },
+        {
+          "name": "Continuous Delivery",
+          "description": "Automated delivery and rollout of software",
+          "aliases": [
+            "CD"
+          ],
+          "label_status": "PROPOSED",
+          "id": "cloud-topic-04"
+        },
+        {
+          "name": "Workflow Orchestration",
+          "description": "Execution and coordination of operational workflow steps",
+          "aliases": [],
+          "label_status": "PROPOSED",
+          "id": "cloud-topic-05"
+        },
+        {
+          "name": "Observability",
+          "description": "Collecting and analyzing telemetry to understand system behavior",
+          "aliases": [],
+          "label_status": "PROPOSED",
+          "id": "cloud-topic-06"
+        },
+        {
+          "name": "Telemetry Instrumentation",
+          "description": "Producing, exporting or processing traces, metrics and logs",
+          "aliases": [
+            "distributed tracing"
+          ],
+          "label_status": "PROPOSED",
+          "id": "cloud-topic-07"
+        },
+        {
+          "name": "Configuration Management",
+          "description": "Managing system and application configuration",
+          "aliases": [],
+          "label_status": "PROPOSED",
+          "id": "cloud-topic-08"
+        },
+        {
+          "name": "Cloud Provisioning",
+          "description": "Provisioning cloud infrastructure resources",
+          "aliases": [],
+          "label_status": "PROPOSED",
+          "id": "cloud-topic-09"
+        },
+        {
+          "id": "cloud-topic-10",
+          "name": "Serverless Computing",
+          "description": "Deploying and scaling event-driven functions or services without managing individual application servers.",
+          "aliases": [],
+          "label_status": "PROPOSED",
+          "origin": "Semantic source review, not search-only label"
+        },
+        {
+          "id": "cloud-topic-11",
+          "name": "Cloud Cost Management",
+          "description": "Estimating, monitoring or optimizing infrastructure spending.",
+          "aliases": [],
+          "label_status": "PROPOSED",
+          "origin": "Semantic source review, not search-only label"
+        },
+        {
+          "id": "cloud-topic-12",
+          "name": "Infrastructure Learning",
+          "description": "Educational materials focused on operating cloud infrastructure and DevOps systems.",
+          "aliases": [],
+          "label_status": "PROPOSED",
+          "origin": "Semantic source review, not search-only label"
+        },
+        {
+          "id": "cloud-topic-13",
+          "name": "Operational Automation",
+          "description": "Automating administration and operational changes to hosts and infrastructure.",
+          "aliases": [],
+          "label_status": "PROPOSED",
+          "origin": "Semantic source review, not search-only label"
+        },
+        {
+          "id": "cloud-topic-14",
+          "name": "Application Deployment",
+          "description": "Packaging, installing and running applications or application components on infrastructure.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "cloud-topic-15",
+          "name": "User Interface Components",
+          "description": "Reusable visual components that implement application user interfaces.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "cloud-topic-16",
+          "name": "Kubernetes Extension Development",
+          "description": "Building Kubernetes APIs, custom resources, controllers and operators.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "cloud-topic-17",
+          "name": "Container Storage Integration",
+          "description": "Connecting persistent storage systems to container orchestrators through storage interfaces.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "cloud-topic-18",
+          "name": "Cluster Provisioning",
+          "description": "Creating, installing and managing infrastructure clusters.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "cloud-topic-19",
+          "name": "Cluster Administration",
+          "description": "Inspecting and managing cluster resources, workloads and operational state.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "cloud-topic-20",
+          "name": "Technical Resource Discovery",
+          "description": "Indexing and curating software projects, tools and technical resources for discovery.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "cloud-topic-21",
+          "name": "Continuous Integration",
+          "description": "Preparing and running automated build/test workflows.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "cloud-topic-22",
+          "name": "Software Package Registries",
+          "description": "Cataloging and distributing versioned software modules, packages or providers.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "cloud-topic-23",
+          "name": "DNS Management",
+          "description": "Managing and synchronizing DNS records and provider configuration.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "cloud-topic-24",
+          "name": "Language Tooling",
+          "description": "Language servers, parsers and editor language support.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "cloud-topic-25",
+          "name": "Model Context Protocol Integration",
+          "description": "Exposing tools and resources through the Model Context Protocol for AI clients.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        }
+      ],
+      "selection_policy": {
+        "family_target_per_domain": 30,
+        "independent_or_neighbor_target_per_domain": 24,
+        "challenge_target_per_domain": 6,
+        "non_english_target_per_domain": 6,
+        "owner_soft_cap_per_domain": 12,
+        "language_soft_cap_per_domain": 30,
+        "note": "Targets, not permission to invent memberships/challenges. Prefer evidence quality and replace unsuitable candidates; disclose deviations.",
+        "staged_candidate_cap": 180,
+        "per_page": 30,
+        "max_queries": 18,
+        "complete_readme_required": true
+      }
+    },
+    {
+      "id": "security",
+      "name": "Security and identity",
+      "staged_candidate_cap": 180,
+      "projects": [
+        {
+          "name": "Keycloak",
+          "owners": [
+            "keycloak",
+            "keycloakify"
+          ],
+          "seed_repositories": [
+            "keycloak/keycloak",
+            "keycloak/keycloak-client",
+            "keycloak/keycloak-quickstarts"
+          ],
+          "aliases": [],
+          "membership_criteria": "Keycloak core or a dedicated Keycloak client, deployment asset or extension with direct product-specific purpose; a generic application using login is insufficient.",
+          "exclusion": "Shared owner, keyword mention, dependency or generic compatibility alone is insufficient.",
+          "label_status": "PROPOSED"
+        },
+        {
+          "name": "Authentik",
+          "owners": [
+            "goauthentik"
+          ],
+          "seed_repositories": [
+            "goauthentik/authentik",
+            "goauthentik/client-go",
+            "goauthentik/client-python"
+          ],
+          "aliases": [
+            "authentik"
+          ],
+          "membership_criteria": "Authentik identity platform implementation or dedicated client/integration with explicit relationship.",
+          "exclusion": "Shared owner, keyword mention, dependency or generic compatibility alone is insufficient.",
+          "label_status": "PROPOSED"
+        },
+        {
+          "name": "OpenBao",
+          "owners": [
+            "openbao"
+          ],
+          "seed_repositories": [
+            "openbao/openbao",
+            "openbao/openbao-csi-provider"
+          ],
+          "aliases": [],
+          "membership_criteria": "OpenBao secrets platform or component explicitly built to operate or extend OpenBao.",
+          "exclusion": "Shared owner, keyword mention, dependency or generic compatibility alone is insufficient.",
+          "label_status": "PROPOSED"
+        },
+        {
+          "name": "Trivy",
+          "owners": [
+            "aquasecurity"
+          ],
+          "seed_repositories": [
+            "aquasecurity/trivy",
+            "aquasecurity/trivy-operator",
+            "aquasecurity/trivy-action"
+          ],
+          "aliases": [],
+          "membership_criteria": "Trivy scanner or dedicated Trivy integration/component; Aqua ownership or other security purpose is insufficient.",
+          "exclusion": "Shared owner, keyword mention, dependency or generic compatibility alone is insufficient.",
+          "label_status": "PROPOSED"
+        }
+      ],
+      "queries": [
+        {
+          "query": "org:keycloak is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "family"
+        },
+        {
+          "query": "org:goauthentik is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "family"
+        },
+        {
+          "query": "org:openbao is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "family"
+        },
+        {
+          "query": "\"trivy\" in:name,description org:aquasecurity is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "family"
+        },
+        {
+          "query": "topic:identity-management is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "topic"
+        },
+        {
+          "query": "topic:authorization is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "topic"
+        },
+        {
+          "query": "topic:secrets-management is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "topic"
+        },
+        {
+          "query": "topic:vulnerability-scanner is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "topic"
+        },
+        {
+          "query": "\"single sign-on\" in:description,readme stars:5..200 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "purpose"
+        },
+        {
+          "query": "\"secrets management\" in:description,readme stars:5..200 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "purpose"
+        },
+        {
+          "query": "topic:security language:Rust stars:10..1000 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "diversity"
+        },
+        {
+          "query": "topic:security language:Java stars:5..500 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "diversity"
+        },
+        {
+          "query": "topic:security language:Python stars:5..200 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "diversity"
+        },
+        {
+          "query": "topic:security language:C stars:5..500 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "diversity"
+        },
+        {
+          "query": "\"\u6f0f\u6d1e\" in:description,readme topic:security stars:10..2000 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "non_english"
+        },
+        {
+          "query": "\"\u8eab\u4efd\u8ba4\u8bc1\" in:description,readme stars:5..1000 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "non_english"
+        },
+        {
+          "query": "\"seguran\u00e7a\" in:description,readme stars:5..1000 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "non_english"
+        },
+        {
+          "query": "\"Keycloak\" in:description,readme stars:5..200 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "near_neighbor"
+        }
+      ],
+      "target": 60,
+      "description": "Identity, authentication, authorization, secret handling and security assessment or monitoring.",
+      "seed_hypotheses": [
+        {
+          "repo": "keycloak/keycloak",
+          "project": "Keycloak",
+          "owner": "keycloak",
+          "rationale": "Keycloak core or a dedicated Keycloak client, deployment asset or extension with direct product-specific purpose; a generic application using login is insufficient.",
+          "description": "Keycloak core or a dedicated Keycloak client, deployment asset or extension with direct product-specific purpose; a generic application using login is insufficient.",
+          "aliases": []
+        },
+        {
+          "repo": "keycloak/keycloak-client",
+          "project": "Keycloak",
+          "owner": "keycloak",
+          "rationale": "Keycloak core or a dedicated Keycloak client, deployment asset or extension with direct product-specific purpose; a generic application using login is insufficient.",
+          "description": "Keycloak core or a dedicated Keycloak client, deployment asset or extension with direct product-specific purpose; a generic application using login is insufficient.",
+          "aliases": []
+        },
+        {
+          "repo": "keycloak/keycloak-quickstarts",
+          "project": "Keycloak",
+          "owner": "keycloak",
+          "rationale": "Keycloak core or a dedicated Keycloak client, deployment asset or extension with direct product-specific purpose; a generic application using login is insufficient.",
+          "description": "Keycloak core or a dedicated Keycloak client, deployment asset or extension with direct product-specific purpose; a generic application using login is insufficient.",
+          "aliases": []
+        },
+        {
+          "repo": "goauthentik/authentik",
+          "project": "Authentik",
+          "owner": "goauthentik",
+          "rationale": "Authentik identity platform implementation or dedicated client/integration with explicit relationship.",
+          "description": "Authentik identity platform implementation or dedicated client/integration with explicit relationship.",
+          "aliases": [
+            "authentik"
+          ]
+        },
+        {
+          "repo": "goauthentik/client-go",
+          "project": "Authentik",
+          "owner": "goauthentik",
+          "rationale": "Authentik identity platform implementation or dedicated client/integration with explicit relationship.",
+          "description": "Authentik identity platform implementation or dedicated client/integration with explicit relationship.",
+          "aliases": [
+            "authentik"
+          ]
+        },
+        {
+          "repo": "goauthentik/client-python",
+          "project": "Authentik",
+          "owner": "goauthentik",
+          "rationale": "Authentik identity platform implementation or dedicated client/integration with explicit relationship.",
+          "description": "Authentik identity platform implementation or dedicated client/integration with explicit relationship.",
+          "aliases": [
+            "authentik"
+          ]
+        },
+        {
+          "repo": "openbao/openbao",
+          "project": "OpenBao",
+          "owner": "openbao",
+          "rationale": "OpenBao secrets platform or component explicitly built to operate or extend OpenBao.",
+          "description": "OpenBao secrets platform or component explicitly built to operate or extend OpenBao.",
+          "aliases": []
+        },
+        {
+          "repo": "openbao/openbao-csi-provider",
+          "project": "OpenBao",
+          "owner": "openbao",
+          "rationale": "OpenBao secrets platform or component explicitly built to operate or extend OpenBao.",
+          "description": "OpenBao secrets platform or component explicitly built to operate or extend OpenBao.",
+          "aliases": []
+        },
+        {
+          "repo": "aquasecurity/trivy",
+          "project": "Trivy",
+          "owner": "aquasecurity",
+          "rationale": "Trivy scanner or dedicated Trivy integration/component; Aqua ownership or other security purpose is insufficient.",
+          "description": "Trivy scanner or dedicated Trivy integration/component; Aqua ownership or other security purpose is insufficient.",
+          "aliases": []
+        },
+        {
+          "repo": "aquasecurity/trivy-operator",
+          "project": "Trivy",
+          "owner": "aquasecurity",
+          "rationale": "Trivy scanner or dedicated Trivy integration/component; Aqua ownership or other security purpose is insufficient.",
+          "description": "Trivy scanner or dedicated Trivy integration/component; Aqua ownership or other security purpose is insufficient.",
+          "aliases": []
+        },
+        {
+          "repo": "aquasecurity/trivy-action",
+          "project": "Trivy",
+          "owner": "aquasecurity",
+          "rationale": "Trivy scanner or dedicated Trivy integration/component; Aqua ownership or other security purpose is insufficient.",
+          "description": "Trivy scanner or dedicated Trivy integration/component; Aqua ownership or other security purpose is insufficient.",
+          "aliases": []
+        }
+      ],
+      "topics": [
+        {
+          "name": "Identity and Access Management",
+          "description": "Managing identities and access to protected systems",
+          "aliases": [
+            "IAM"
+          ],
+          "label_status": "PROPOSED",
+          "id": "security-topic-01"
+        },
+        {
+          "name": "Authentication",
+          "description": "Verifying identity, including federation and single sign-on",
+          "aliases": [
+            "SSO"
+          ],
+          "label_status": "PROPOSED",
+          "id": "security-topic-02"
+        },
+        {
+          "name": "Authorization",
+          "description": "Evaluating permissions and access policies",
+          "aliases": [
+            "access control"
+          ],
+          "label_status": "PROPOSED",
+          "id": "security-topic-03"
+        },
+        {
+          "name": "Secrets Management",
+          "description": "Secure storage, issuance and lifecycle of credentials and secrets",
+          "aliases": [],
+          "label_status": "PROPOSED",
+          "id": "security-topic-04"
+        },
+        {
+          "name": "Vulnerability Scanning",
+          "description": "Detecting vulnerable software, containers or infrastructure",
+          "aliases": [],
+          "label_status": "PROPOSED",
+          "id": "security-topic-05"
+        },
+        {
+          "name": "Software Supply Chain Security",
+          "description": "Protecting software dependencies and build/distribution integrity",
+          "aliases": [
+            "SCA",
+            "SBOM"
+          ],
+          "label_status": "PROPOSED",
+          "id": "security-topic-06"
+        },
+        {
+          "name": "Application Security Testing",
+          "description": "Finding security weaknesses in applications",
+          "aliases": [
+            "SAST",
+            "DAST"
+          ],
+          "label_status": "PROPOSED",
+          "id": "security-topic-07"
+        },
+        {
+          "name": "Security Monitoring",
+          "description": "Detecting and investigating security-relevant events",
+          "aliases": [],
+          "label_status": "PROPOSED",
+          "id": "security-topic-08"
+        },
+        {
+          "name": "Cryptography",
+          "description": "Implementing cryptographic primitives or protocols",
+          "aliases": [],
+          "label_status": "PROPOSED",
+          "id": "security-topic-09"
+        },
+        {
+          "id": "security-topic-10",
+          "name": "Identity Platform Integration",
+          "description": "Dedicated clients, adapters and configuration integrations for identity platforms.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "security-topic-11",
+          "name": "Threat Intelligence",
+          "description": "Aggregating, assessing and distributing indicators and knowledge of security threats.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "security-topic-12",
+          "name": "Compiler Construction",
+          "description": "Compilers and toolchains for translating programs to executable representations.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "security-topic-13",
+          "name": "Device Attestation",
+          "description": "Verifying and monitoring device identity, integrity and security state.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "security-topic-14",
+          "name": "AI Application Security",
+          "description": "Inspecting and controlling model traffic and AI-agent actions for security.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "security-topic-15",
+          "name": "Data Privacy Protection",
+          "description": "Detecting, masking or limiting exposure of personal and sensitive data.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "security-topic-16",
+          "name": "Trusted Hardware Integration",
+          "description": "Libraries and interfaces for TPMs and hardware-backed security functions.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "security-topic-17",
+          "name": "Identity Protocol Development",
+          "description": "Developing and validating identity, federation and authorization protocols and profiles.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "security-topic-18",
+          "name": "Secret Detection",
+          "description": "Scanning source, files or artifacts for exposed credentials and secrets.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "security-topic-19",
+          "name": "Performance Testing",
+          "description": "Benchmarking system performance and executing load tests.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "security-topic-20",
+          "name": "Fraud Detection",
+          "description": "Detecting and recording potentially fraudulent activity or indicators.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "security-topic-21",
+          "name": "Application Deployment",
+          "description": "Packaging, installing and running applications or application components.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "security-topic-22",
+          "name": "Policy Enforcement",
+          "description": "Evaluating declarative rules to govern system behavior and access.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "security-topic-23",
+          "name": "Facial Recognition",
+          "description": "Registering and recognizing people from facial images.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "security-topic-24",
+          "name": "Key Management",
+          "description": "Managing or integrating cryptographic keys and key-management services.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "security-topic-25",
+          "name": "Development Environments",
+          "description": "Preparing and managing local development and test environments.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        }
+      ],
+      "selection_policy": {
+        "family_target_per_domain": 30,
+        "independent_or_neighbor_target_per_domain": 24,
+        "challenge_target_per_domain": 6,
+        "non_english_target_per_domain": 6,
+        "owner_soft_cap_per_domain": 12,
+        "language_soft_cap_per_domain": 30,
+        "note": "Targets, not permission to invent memberships/challenges. Prefer evidence quality and replace unsuitable candidates; disclose deviations.",
+        "staged_candidate_cap": 180,
+        "per_page": 30,
+        "max_queries": 18,
+        "complete_readme_required": true
+      }
+    },
+    {
+      "id": "developer",
+      "name": "Developer platforms and collaboration",
+      "staged_candidate_cap": 180,
+      "projects": [
+        {
+          "name": "Backstage",
+          "owners": [
+            "backstage",
+            "backstage-community"
+          ],
+          "seed_repositories": [
+            "backstage/backstage",
+            "backstage/community-plugins"
+          ],
+          "aliases": [],
+          "membership_criteria": "Backstage platform implementation or dedicated plugin/component; merely listing a Backstage integration is insufficient.",
+          "exclusion": "Shared owner, keyword mention, dependency or generic compatibility alone is insufficient.",
+          "label_status": "PROPOSED"
+        },
+        {
+          "name": "Gitea",
+          "owners": [
+            "go-gitea",
+            "go-gitea-languages"
+          ],
+          "seed_repositories": [
+            "go-gitea/gitea",
+            "go-gitea/tea",
+            "go-gitea/act_runner"
+          ],
+          "aliases": [],
+          "membership_criteria": "Gitea forge or dedicated client/runner/integration explicitly serving Gitea.",
+          "exclusion": "Shared owner, keyword mention, dependency or generic compatibility alone is insufficient.",
+          "label_status": "PROPOSED"
+        },
+        {
+          "name": "Visual Studio Code",
+          "owners": [
+            "microsoft"
+          ],
+          "seed_repositories": [
+            "microsoft/vscode",
+            "microsoft/vscode-python",
+            "microsoft/vscode-go"
+          ],
+          "aliases": [
+            "VS Code",
+            "VSCode"
+          ],
+          "membership_criteria": "VS Code implementation, dedicated extension or platform-specific component with explicit scope; generic editor support or dependency alone is insufficient.",
+          "exclusion": "Shared owner, keyword mention, dependency or generic compatibility alone is insufficient.",
+          "label_status": "PROPOSED"
+        },
+        {
+          "name": "Eclipse Theia",
+          "owners": [
+            "eclipse-theia"
+          ],
+          "seed_repositories": [
+            "eclipse-theia/theia",
+            "eclipse-theia/theia-ide"
+          ],
+          "aliases": [
+            "Theia"
+          ],
+          "membership_criteria": "Theia platform implementation or dedicated distribution/component explicitly built on the initiative.",
+          "exclusion": "Shared owner, keyword mention, dependency or generic compatibility alone is insufficient.",
+          "label_status": "PROPOSED"
+        }
+      ],
+      "queries": [
+        {
+          "query": "org:backstage is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "family"
+        },
+        {
+          "query": "org:backstage-community is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "family"
+        },
+        {
+          "query": "org:go-gitea is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "family"
+        },
+        {
+          "query": "org:eclipse-theia is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "family"
+        },
+        {
+          "query": "\"vscode\" in:name org:microsoft is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "family"
+        },
+        {
+          "query": "topic:developer-portal is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "topic"
+        },
+        {
+          "query": "topic:ide is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "topic"
+        },
+        {
+          "query": "topic:code-review is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "topic"
+        },
+        {
+          "query": "topic:language-server is:public fork:false archived:false",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "topic"
+        },
+        {
+          "query": "\"developer tools\" in:description,readme stars:5..200 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "purpose"
+        },
+        {
+          "query": "\"code collaboration\" in:description,readme stars:5..1000 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "purpose"
+        },
+        {
+          "query": "topic:developer-tools language:Rust stars:5..1000 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "diversity"
+        },
+        {
+          "query": "topic:developer-tools language:Lua stars:5..1000 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "diversity"
+        },
+        {
+          "query": "topic:developer-tools language:TypeScript stars:5..200 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "diversity"
+        },
+        {
+          "query": "\"\u5f00\u53d1\u5de5\u5177\" in:description,readme stars:10..2000 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "non_english"
+        },
+        {
+          "query": "\"\u7f16\u8f91\u5668\" in:description,readme stars:10..2000 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "non_english"
+        },
+        {
+          "query": "\"desenvolvimento\" in:description,readme topic:developer-tools stars:5..1000 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "non_english"
+        },
+        {
+          "query": "\"Backstage\" in:description,readme stars:5..200 is:public fork:false archived:false",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "rationale": "",
+          "stratum": "near_neighbor"
+        }
+      ],
+      "target": 60,
+      "description": "Developer portals, software forges, editing and language tooling, and engineering collaboration.",
+      "seed_hypotheses": [
+        {
+          "repo": "backstage/backstage",
+          "project": "Backstage",
+          "owner": "backstage",
+          "rationale": "Backstage platform implementation or dedicated plugin/component; merely listing a Backstage integration is insufficient.",
+          "description": "Backstage platform implementation or dedicated plugin/component; merely listing a Backstage integration is insufficient.",
+          "aliases": []
+        },
+        {
+          "repo": "backstage/community-plugins",
+          "project": "Backstage",
+          "owner": "backstage",
+          "rationale": "Backstage platform implementation or dedicated plugin/component; merely listing a Backstage integration is insufficient.",
+          "description": "Backstage platform implementation or dedicated plugin/component; merely listing a Backstage integration is insufficient.",
+          "aliases": []
+        },
+        {
+          "repo": "go-gitea/gitea",
+          "project": "Gitea",
+          "owner": "go-gitea",
+          "rationale": "Gitea forge or dedicated client/runner/integration explicitly serving Gitea.",
+          "description": "Gitea forge or dedicated client/runner/integration explicitly serving Gitea.",
+          "aliases": []
+        },
+        {
+          "repo": "go-gitea/tea",
+          "project": "Gitea",
+          "owner": "go-gitea",
+          "rationale": "Gitea forge or dedicated client/runner/integration explicitly serving Gitea.",
+          "description": "Gitea forge or dedicated client/runner/integration explicitly serving Gitea.",
+          "aliases": []
+        },
+        {
+          "repo": "go-gitea/act_runner",
+          "project": "Gitea",
+          "owner": "go-gitea",
+          "rationale": "Gitea forge or dedicated client/runner/integration explicitly serving Gitea.",
+          "description": "Gitea forge or dedicated client/runner/integration explicitly serving Gitea.",
+          "aliases": []
+        },
+        {
+          "repo": "microsoft/vscode",
+          "project": "Visual Studio Code",
+          "owner": "microsoft",
+          "rationale": "VS Code implementation, dedicated extension or platform-specific component with explicit scope; generic editor support or dependency alone is insufficient.",
+          "description": "VS Code implementation, dedicated extension or platform-specific component with explicit scope; generic editor support or dependency alone is insufficient.",
+          "aliases": [
+            "VS Code",
+            "VSCode"
+          ]
+        },
+        {
+          "repo": "microsoft/vscode-python",
+          "project": "Visual Studio Code",
+          "owner": "microsoft",
+          "rationale": "VS Code implementation, dedicated extension or platform-specific component with explicit scope; generic editor support or dependency alone is insufficient.",
+          "description": "VS Code implementation, dedicated extension or platform-specific component with explicit scope; generic editor support or dependency alone is insufficient.",
+          "aliases": [
+            "VS Code",
+            "VSCode"
+          ]
+        },
+        {
+          "repo": "microsoft/vscode-go",
+          "project": "Visual Studio Code",
+          "owner": "microsoft",
+          "rationale": "VS Code implementation, dedicated extension or platform-specific component with explicit scope; generic editor support or dependency alone is insufficient.",
+          "description": "VS Code implementation, dedicated extension or platform-specific component with explicit scope; generic editor support or dependency alone is insufficient.",
+          "aliases": [
+            "VS Code",
+            "VSCode"
+          ]
+        },
+        {
+          "repo": "eclipse-theia/theia",
+          "project": "Eclipse Theia",
+          "owner": "eclipse-theia",
+          "rationale": "Theia platform implementation or dedicated distribution/component explicitly built on the initiative.",
+          "description": "Theia platform implementation or dedicated distribution/component explicitly built on the initiative.",
+          "aliases": [
+            "Theia"
+          ]
+        },
+        {
+          "repo": "eclipse-theia/theia-ide",
+          "project": "Eclipse Theia",
+          "owner": "eclipse-theia",
+          "rationale": "Theia platform implementation or dedicated distribution/component explicitly built on the initiative.",
+          "description": "Theia platform implementation or dedicated distribution/component explicitly built on the initiative.",
+          "aliases": [
+            "Theia"
+          ]
+        }
+      ],
+      "topics": [
+        {
+          "name": "Internal Developer Portals",
+          "description": "Cataloging and presenting internal software and engineering capabilities",
+          "aliases": [
+            "developer portal"
+          ],
+          "label_status": "PROPOSED",
+          "id": "developer-topic-01"
+        },
+        {
+          "name": "Source Code Collaboration",
+          "description": "Hosting and collaborating on version-controlled source code",
+          "aliases": [
+            "software forge"
+          ],
+          "label_status": "PROPOSED",
+          "id": "developer-topic-02"
+        },
+        {
+          "name": "Integrated Development Environments",
+          "description": "Editing, debugging and developing software in an integrated environment",
+          "aliases": [
+            "IDE"
+          ],
+          "label_status": "PROPOSED",
+          "id": "developer-topic-03"
+        },
+        {
+          "name": "Language Tooling",
+          "description": "Language servers, parsers and other developer-facing language support",
+          "aliases": [
+            "LSP"
+          ],
+          "label_status": "PROPOSED",
+          "id": "developer-topic-04"
+        },
+        {
+          "name": "Developer Experience",
+          "description": "Tools that improve engineering workflows and usability",
+          "aliases": [
+            "DevEx"
+          ],
+          "label_status": "PROPOSED",
+          "id": "developer-topic-05"
+        },
+        {
+          "name": "Code Review",
+          "description": "Reviewing and discussing changes to source code",
+          "aliases": [],
+          "label_status": "PROPOSED",
+          "id": "developer-topic-06"
+        },
+        {
+          "name": "Continuous Integration",
+          "description": "Running automated build and test workflows",
+          "aliases": [
+            "CI"
+          ],
+          "label_status": "PROPOSED",
+          "id": "developer-topic-07"
+        },
+        {
+          "name": "API Development Tools",
+          "description": "Building, inspecting or testing APIs",
+          "aliases": [],
+          "label_status": "PROPOSED",
+          "id": "developer-topic-08"
+        },
+        {
+          "name": "Software Documentation",
+          "description": "Authoring or serving technical documentation",
+          "aliases": [],
+          "label_status": "PROPOSED",
+          "id": "developer-topic-09"
+        },
+        {
+          "id": "developer-topic-10",
+          "name": "Version Control Tooling",
+          "description": "Managing source history, branches, changes and version-control operations.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "developer-topic-11",
+          "name": "IDE Extension Development",
+          "description": "Creating or packaging extensions and custom distributions for development environments.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "developer-topic-12",
+          "name": "AI Coding Workflows",
+          "description": "Configuring and supporting AI-assisted software-development methods and agents.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "developer-topic-13",
+          "name": "Repository Maintenance",
+          "description": "Automating repository issue, pull-request, release and maintenance tasks.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "developer-topic-14",
+          "name": "Documentation Validation",
+          "description": "Checking documentation and developer instructions against implementation evidence.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "developer-topic-15",
+          "name": "UI Asset Libraries",
+          "description": "Reusable icon and visual-asset libraries for application development.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "developer-topic-16",
+          "name": "Static Code Analysis",
+          "description": "Inspecting source code without executing it to find quality or correctness issues.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "developer-topic-17",
+          "name": "Developer Analytics",
+          "description": "Analyzing development activity, contributions and engineering-workflow metrics.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "developer-topic-18",
+          "name": "Technical Resource Discovery",
+          "description": "Indexing and curating software projects, tools and technical resources.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "developer-topic-19",
+          "name": "Editor Customization",
+          "description": "Customizing the appearance or behavior of development editors.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "developer-topic-20",
+          "name": "Software Distribution",
+          "description": "Building, packaging and releasing software artifacts to users.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "developer-topic-21",
+          "name": "Compatibility Testing",
+          "description": "Comparing compatibility across interfaces, platforms or software versions.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "developer-topic-22",
+          "name": "Product Feedback",
+          "description": "Coordinating product issue reports, feature requests and user feedback.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "developer-topic-23",
+          "name": "Debugging",
+          "description": "Inspecting and diagnosing running program behavior and failures.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "developer-topic-24",
+          "name": "Project Scaffolding",
+          "description": "Generating project structures or components from reusable templates.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "developer-topic-25",
+          "name": "Web Templating",
+          "description": "Languages and tools for composing or rendering web markup and interfaces.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "developer-topic-26",
+          "name": "Remote Development",
+          "description": "Operating development workspaces and editors on remote or cloud infrastructure.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "developer-topic-27",
+          "name": "Application Deployment",
+          "description": "Packaging, installing and running applications or application components.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        },
+        {
+          "id": "developer-topic-28",
+          "name": "Developer Platform Integration",
+          "description": "Dedicated clients, providers and plugins that integrate or configure developer platforms.",
+          "aliases": [],
+          "label_status": "PROPOSED"
+        }
+      ],
+      "selection_policy": {
+        "family_target_per_domain": 30,
+        "independent_or_neighbor_target_per_domain": 24,
+        "challenge_target_per_domain": 6,
+        "non_english_target_per_domain": 6,
+        "owner_soft_cap_per_domain": 12,
+        "language_soft_cap_per_domain": 30,
+        "note": "Targets, not permission to invent memberships/challenges. Prefer evidence quality and replace unsuitable candidates; disclose deviations.",
+        "staged_candidate_cap": 180,
+        "per_page": 30,
+        "max_queries": 18,
+        "complete_readme_required": true
+      }
+    }
+  ]
+}

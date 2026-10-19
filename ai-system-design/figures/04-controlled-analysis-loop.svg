@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1080" viewBox="0 0 1800 1080" role="img" aria-labelledby="title desc">
+<title id="title">Loop engineering: spend once, reconcile safely</title><desc id="desc">Analysis completion, label coverage, freshness and human review are independent states.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#3949ab" stroke-width="1.5"/></marker></defs>
+<style>text {font-family: "Chalkboard SE", "Comic Sans MS", "Trebuchet MS", sans-serif; fill:#20213f} .title {font-size:43px;font-weight:700;fill:#3949ab} .subtitle {font-size:23px} .card-title {font-size:28px;font-weight:700;fill:#673ab7} .body {font-size:23px} .small {font-size:21px} .label {font-size:22px;fill:#3949ab} .metric {font-family:"Trebuchet MS",sans-serif;font-size:28px;font-weight:700}</style>
+<rect width="1800" height="1080" fill="#fff"/>
+<path d="M60 34 Q850 5 1730 34 L1734 112 Q840 98 58 116Z" fill="#e3f2fd" opacity=".55"/>
+<text x="75" y="80" class="title">Loop engineering: spend once, reconcile safely</text>
+<path d="M76 99 Q700 106 1718 99" fill="none" stroke="#673ab7" stroke-width="4" opacity=".7"/>
+<text x="78" y="142" class="subtitle">Analysis completion, label coverage, freshness and human review are independent states.</text>
+<g data-card="Exact reviewed plan"><rect x="75" y="190" width="510" height="215" rx="18" fill="#e3f2fd" stroke="#20213f" stroke-width="2.5"/>
+<path d="M89 194 Q330.0 189 570 194" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="99" y="234" class="card-title" text-anchor="start">Exact reviewed plan</text>
+<text x="100" y="274" class="body" text-anchor="start">Operation + cohort + reason</text>
+<text x="100" y="306" class="body" text-anchor="start">State / price / budget versions</text>
+<text x="100" y="338" class="body" text-anchor="start">Finite calls and dollar reservation</text>
+</g>
+<g data-card="Durable admission guard"><rect x="645" y="190" width="510" height="215" rx="18" fill="#f3e5f5" stroke="#20213f" stroke-width="2.5"/>
+<path d="M659 194 Q900.0 189 1140 194" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="669" y="234" class="card-title" text-anchor="start">Durable admission guard</text>
+<text x="670" y="274" class="body" text-anchor="start">NEW → first analysis allowed</text>
+<text x="670" y="306" class="body" text-anchor="start">RUNNING → no second dispatch</text>
+<text x="670" y="338" class="body" text-anchor="start">Success / unknown / failure → local</text>
+</g>
+<g data-card="Explicit re-analysis"><rect x="1215" y="190" width="510" height="215" rx="18" fill="#e3f2fd" stroke="#20213f" stroke-width="2.5"/>
+<path d="M1229 194 Q1470.0 189 1710 194" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="1239" y="234" class="card-title" text-anchor="start">Explicit re-analysis</text>
+<text x="1240" y="274" class="body" text-anchor="start">Live AI + reason + new preview</text>
+<text x="1240" y="306" class="body" text-anchor="start">Taxonomy and classification separate</text>
+<text x="1240" y="338" class="body" text-anchor="start">fresh=True; all safeguards retained</text>
+</g>
+<path d="M585,300 L645,300" fill="none" stroke="#3949ab" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M1215,300 L1155,300" fill="none" stroke="#3949ab" stroke-width="3" marker-end="url(#arrow)"/>
+<g data-card="Admitted inference path"><rect x="75" y="535" width="510" height="245" rx="18" fill="#f3e5f5" stroke="#20213f" stroke-width="2.5"/>
+<path d="M89 539 Q330.0 534 570 539" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="99" y="579" class="card-title" text-anchor="start">Admitted inference path</text>
+<text x="100" y="619" class="body" text-anchor="start">Claim attempt before dispatch</text>
+<text x="100" y="651" class="body" text-anchor="start">Count → reserve → generate</text>
+<text x="100" y="683" class="body" text-anchor="start">Persist validated response receipt</text>
+<text x="100" y="715" class="body" text-anchor="start">Fenced commit → human proposal</text>
+</g>
+<g data-card="Offline reconciliation path"><rect x="645" y="535" width="510" height="245" rx="18" fill="#e3f2fd" stroke="#20213f" stroke-width="2.5"/>
+<path d="M659 539 Q900.0 534 1140 539" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="669" y="579" class="card-title" text-anchor="start">Offline reconciliation path</text>
+<text x="670" y="619" class="body" text-anchor="start">Apply user-approved rules</text>
+<text x="670" y="651" class="body" text-anchor="start">Reuse compatible stored assignments</text>
+<text x="670" y="683" class="body" text-anchor="start">Offer local canonical/alias matches</text>
+<text x="670" y="715" class="body" text-anchor="start">No new AI completion claimed</text>
+</g>
+<g data-card="Change and reset controls"><rect x="1215" y="535" width="510" height="245" rx="18" fill="#f3e5f5" stroke="#20213f" stroke-width="2.5"/>
+<path d="M1229 539 Q1470.0 534 1710 539" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="1239" y="579" class="card-title" text-anchor="start">Change and reset controls</text>
+<text x="1240" y="619" class="body" text-anchor="start">Weight ≥6 AND entities ≥3</text>
+<text x="1240" y="651" class="body" text-anchor="start">OR at least 2 new projects</text>
+<text x="1240" y="683" class="body" text-anchor="start">900s window · 90s quiet · 1800s gap</text>
+<text x="1240" y="715" class="body" text-anchor="start">Reset invalidates old references</text>
+</g>
+<path d="M825,405 L825,465 L330,465 L330,535" fill="none" stroke="#3949ab" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M975,405 L975,535" fill="none" stroke="#3949ab" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M1470,535 L1470,465 L1080,465" fill="none" stroke="#3949ab" stroke-width="3" marker-end="url(#arrow)" stroke-dasharray="9 7"/>
+<rect x="75" y="875" width="1650" height="104" rx="18" fill="#e3f2fd"/>
+<text x="100" y="912" class="card-title" text-anchor="start">A stale result can still be a historical processing fact</text>
+<text x="100" y="952" class="small" text-anchor="start">Keep the receipt and cost; discard unsafe assignment references. Never repeat uncertain calls automatically.</text>
+<text x="75" y="1048" class="small" text-anchor="start">GitHub Manager · AI system design · October 14, 2026</text>
+<text x="1725" y="1048" class="small" text-anchor="end">04</text>
+</svg>

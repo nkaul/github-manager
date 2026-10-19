@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-17",
+  "result": "passed",
+  "checks": [
+    "1920x1080: no horizontal page overflow",
+    "1440x900: no horizontal page overflow",
+    "390x844: no horizontal page overflow",
+    "1024x768: no horizontal page overflow",
+    "confirmation disabled and all reviewed groups unchecked on open",
+    "repository search narrows and restores the example queue",
+    "dirty navigation guard and Keep reviewing preserve edits",
+    "new-label incomplete draft saves separately in memory, restores, and cannot confirm",
+    "searchable proposed multi-facets combine Topic AND Tag",
+    "explicit confirmation increments only the simulated record and advances with next checks clear",
+    "metadata channel stays distinct and source HTML remains plain text",
+    "zero console/page errors; zero HTTP/API requests"
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "scope": "Static illustrative in-memory prototype only; no production app tests or writes"
+}

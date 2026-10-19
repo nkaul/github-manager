@@ -1,0 +1,155 @@
+1
+00:00:01,470 --> 00:00:02,270
+Section twelve.
+
+2
+00:00:04,040 --> 00:00:04,580
+Loop engineering.
+
+3
+00:00:06,090 --> 00:00:08,890
+Its purpose is to control transitions around inference.
+
+4
+00:00:10,140 --> 00:00:12,840
+We need to know when to run, when to
+
+5
+00:00:12,840 --> 00:00:15,520
+skip, and when a result has become unsafe to
+
+6
+00:00:15,520 --> 00:00:15,820
+apply.
+
+7
+00:00:17,790 --> 00:00:19,250
+This is application control,
+
+8
+00:00:20,010 --> 00:00:22,450
+not an autonomous model thought-and-action loop.
+
+9
+00:00:31,913 --> 00:00:34,973
+Preview and worker check admission before constructing the
+
+10
+00:00:34,973 --> 00:00:37,033
+provider or making a count request.
+
+11
+00:00:38,522 --> 00:00:42,442
+Transactions claim running attempts so concurrent starts do not
+
+12
+00:00:42,442 --> 00:00:44,542
+independently process the same operation.
+
+13
+00:00:46,130 --> 00:00:49,270
+Previously attempted or uncertain work requires deliberate review,
+
+14
+00:00:49,850 --> 00:00:50,890
+not a silent retry.
+
+15
+00:00:52,439 --> 00:00:56,139
+Explicit re-analysis can bypass memoization while retaining
+
+16
+00:00:56,139 --> 00:00:56,779
+privacy,
+
+17
+00:00:57,579 --> 00:00:58,959
+schema, and spending checks.
+
+18
+00:01:00,327 --> 00:01:04,147
+Classification cohorts use new-analysis, Project, and recency
+
+19
+00:01:04,147 --> 00:01:06,067
+ordering, not a learned ranker.
+
+20
+00:01:11,142 --> 00:01:15,222
+Automatic organization accumulates eligible changes.
+
+21
+00:01:16,722 --> 00:01:20,262
+Defaults combine weight six and three distinct entities,
+
+22
+00:01:20,922 --> 00:01:22,262
+or two new Projects,
+
+23
+00:01:23,322 --> 00:01:26,582
+followed by a ninety-second quiet period and a thirty-minute
+
+24
+00:01:26,582 --> 00:01:28,302
+cooldown.
+
+25
+00:01:28,302 --> 00:01:30,182
+Types and thresholds are configurable.
+
+26
+00:01:31,482 --> 00:01:34,302
+Consumed event sequences prevent endless rescheduling.
+
+27
+00:01:35,522 --> 00:01:37,842
+Existing analysis still reconciles locally.
+
+28
+00:01:38,622 --> 00:01:42,002
+A change upstream cannot be noticed before its content
+
+29
+00:01:42,002 --> 00:01:42,682
+is fetched.
+
+30
+00:01:48,473 --> 00:01:52,713
+Revision, generation, policy, and epoch fences bind a response
+
+31
+00:01:52,713 --> 00:01:53,633
+to current state.
+
+32
+00:01:54,833 --> 00:01:57,873
+If the user edits or resets during generation,
+
+33
+00:01:58,773 --> 00:02:03,053
+unsafe associations are discarded while historical cost and
+
+34
+00:02:03,053 --> 00:02:03,893
+processing evidence remain.
+
+35
+00:02:05,093 --> 00:02:06,373
+Reset uses a scoped,
+
+36
+00:02:07,433 --> 00:02:10,593
+expiring, one-use preview and exact confirmation.
+
+37
+00:02:11,393 --> 00:02:14,753
+It preserves cost history and readiness reports.
+
+38
+00:02:15,833 --> 00:02:19,673
+These are tested local safeguards, not distributed exactly-once
+
+39
+00:02:19,673 --> 00:02:21,873
+execution or forensic erasure.

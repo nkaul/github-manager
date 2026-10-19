@@ -188,6 +188,8 @@ class OAuthAppAdapter:
                     }
                 )
             except GitHubError as exc:
+                if exc.status == 401:
+                    raise
                 coverage.append(
                     {
                         "source": name,
@@ -197,7 +199,7 @@ class OAuthAppAdapter:
                     }
                 )
 
-        await asyncio.gather(
+        results = await asyncio.gather(
             source("OWNER", self.pages(token, "/user/repos", affiliation="owner")),
             source(
                 "DIRECT",
@@ -220,7 +222,11 @@ class OAuthAppAdapter:
             ),
             source("TEAM_MEMBERSHIP", self.pages(token, "/user/teams")),
             source("ORG_MEMBERSHIP", self.pages(token, "/user/orgs")),
+            return_exceptions=True,
         )
+        for result in results:
+            if isinstance(result, BaseException):
+                raise result
         organizations = collected.pop("ORG_MEMBERSHIP", [])
         org_coverage = next(c for c in coverage if c["source"] == "ORG_GENERAL")
         membership_coverage = next(c for c in coverage if c["source"] == "ORG_MEMBERSHIP")
@@ -241,7 +247,9 @@ class OAuthAppAdapter:
                 rows, capped = await self.pages(token, f"/orgs/{login}/repos", type="all")
                 org_rows.extend(rows)
                 org_partial |= capped
-            except GitHubError:
+            except GitHubError as exc:
+                if exc.status == 401:
+                    raise
                 org_partial = True
         collected["ORG_GENERAL"] = list(
             {row["id"]: row for row in org_rows if isinstance(row.get("id"), int)}.values()
@@ -264,7 +272,9 @@ class OAuthAppAdapter:
                 rows, capped = await self.pages(token, f"/orgs/{org}/teams/{slug}/repos")
                 team_repos.extend(rows)
                 team_partial |= capped
-            except GitHubError:
+            except GitHubError as exc:
+                if exc.status == 401:
+                    raise
                 team_failed = True
         collected["TEAM"] = team_repos
         membership = next(c for c in coverage if c["source"] == "TEAM_MEMBERSHIP")

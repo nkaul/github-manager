@@ -1,0 +1,13 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.5, pytest-9.1.1, pluggy-1.6.0 -- /Users/nkaul/Documents/repos/github-manager/backend/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/nkaul/Documents/repos/github-manager
+plugins: langsmith-0.14.7, anyio-4.15.1
+collecting ... collected 4 items
+
+ai-system-design/evaluation/reviewed-30-v1/test_evaluation.py::test_corpus_and_extension_namespaces_validate_without_changing_canonical_ids PASSED [ 25%]
+ai-system-design/evaluation/reviewed-30-v1/test_evaluation.py::test_unknown_predictions_are_not_false_positives_and_failed_cases_keep_denominator PASSED [ 50%]
+ai-system-design/evaluation/reviewed-30-v1/test_evaluation.py::test_counters_are_durable_and_cannot_bypass_batch_or_total_with_new_process PASSED [ 75%]
+ai-system-design/evaluation/reviewed-30-v1/test_evaluation.py::test_generation_reserves_room_for_its_counter_request_and_rejects_unknown_endpoint PASSED [100%]
+
+============================== 4 passed in 1.79s ===============================

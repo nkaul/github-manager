@@ -1,10 +1,11 @@
+import { chooseOption } from "../helpers/chooseOption";
 import { test, expect } from "@playwright/test";
 
 test("logo choice persists, pauses, respects reduced motion and appears on sign-in; KPI icons stay compact", async ({ page }) => {
   await page.setViewportSize({ width: 1920, height: 1080 });
   await page.request.post("/api/v1/test/login", { data: { id: 9108 } });
   await page.goto("/");
-  await page.getByLabel("Workspace collection").selectOption("samples");
+  await chooseOption(page.getByLabel("Workspace collection"), "samples");
   await page.getByRole("button", { name: "Load demo samples", exact: true }).first().click();
   await expect(page.getByRole("button", { name: "Details for orion-api", exact: true })).toBeVisible();
   const logo = page.locator(".wm-header .wm-logo");

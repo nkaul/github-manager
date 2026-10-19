@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "audit_date": "2026-10-14",
+  "article_words_whitespace_count": 12816,
+  "article_chapters": 20,
+  "markdown_files": 13,
+  "links_checked": 383,
+  "external_https_links_syntax_only": 84,
+  "png_figures": 8,
+  "svg_figures": 8,
+  "png_dimensions": [
+    3600,
+    2160
+  ],
+  "preserved_source_report_files": 40,
+  "preserved_frozen_experiment_files": 2,
+  "headline_numeric_checks": 11,
+  "obvious_secret_scan": "PASS",
+  "tracked_changes_outside_package": [],
+  "application_provider_calls": 0,
+  "illustrated_figures_dimensions": {
+    "01-actual-system.png": [
+      1672,
+      941
+    ],
+    "02-retrieval-and-generation.png": [
+      1672,
+      941
+    ],
+    "03-evidence-and-chunking.png": [
+      1672,
+      941
+    ],
+    "04-controlled-analysis-loop.png": [
+      1672,
+      941
+    ],
+    "05-harness-and-tokenomics.png": [
+      1672,
+      941
+    ],
+    "06-evaluation-evidence.png": [
+      1672,
+      941
+    ],
+    "07-contextual-retrieval-comparison.png": [
+      1672,
+      941
+    ],
+    "08-future-experiment-roadmap.png": [
+      1672,
+      941
+    ]
+  },
+  "preserved_academic_article_and_diagrams": 17,
+  "illustration_generation": "Built-in Image Generation tool; separate from application inference ledger",
+  "errors": [],
+  "limits": "External references manually researched; this check does not test remote link availability, prove absence of every secret, rerun application tests or rerun provider generations."
+}

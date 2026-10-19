@@ -1,0 +1,50 @@
+[
+  {
+    "id": "discover",
+    "title": "Your repositories deserve a map.",
+    "start": 0,
+    "end": 16.602
+  },
+  {
+    "id": "organize",
+    "title": "Same technology. Different purpose.",
+    "start": 16.602,
+    "end": 30.432000000000002
+  },
+  {
+    "id": "taxonomy",
+    "title": "Agree on the vocabulary first.",
+    "start": 30.432000000000002,
+    "end": 45.472
+  },
+  {
+    "id": "evidence",
+    "title": "Keep the sentence that explains why.",
+    "start": 45.472,
+    "end": 61.504000000000005
+  },
+  {
+    "id": "retrieve",
+    "title": "A shortlist is not a decision.",
+    "start": 61.504000000000005,
+    "end": 74.16
+  },
+  {
+    "id": "classify",
+    "title": "Show the model evidence and boundaries.",
+    "start": 74.16,
+    "end": 91.702
+  },
+  {
+    "id": "remember",
+    "title": "Remember the work. Respect your decisions.",
+    "start": 91.702,
+    "end": 104.3
+  },
+  {
+    "id": "close",
+    "title": "Useful organization. Your control.",
+    "start": 104.3,
+    "end": 120
+  }
+]

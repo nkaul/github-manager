@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-15",
+  "user_instruction": "Lets create the 2 min version first to see if we need to align and adjust",
+  "authorized_scope": "Two-minute pilot only",
+  "long_form": "Awaiting user feedback",
+  "voice": "Cedar, calmer delivery",
+  "max_http_requests": 5,
+  "media_reservation_cap_usd": 0.4,
+  "cumulative_ceiling_usd": 5,
+  "new_repository_inference": false,
+  "publication": false
+}
