@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "client_date": "2026-10-19",
-  "verified_at_utc": "2026-10-19T06:16:10.447416+00:00",
+  "verified_at_utc": "2026-10-19T07:03:51.656590+00:00",
   "checks": {
     "all_local_links_and_section_anchors_exist": true,
     "prior_evaluation_result_files_unchanged": true,
@@ -16,16 +16,25 @@
     "nine_png_and_svg_pairs_match_export_manifest": true,
     "four_software_tests_passed_in_saved_execution": true,
     "ragas_no_network_two_call_check_passed": true,
-    "original_grant_remains_finished_at_fifty_generations_and_one_hundred_http": true
+    "original_grant_remains_finished_at_fifty_generations_and_one_hundred_http": true,
+    "collection_source_fingerprints_match": true,
+    "ten_areas_each_sixty_and_489_retained_111_replacements": true,
+    "printed_acquisition_and_split_table_matches_inventory": true,
+    "printed_internal_facet_performance_table_matches_results": true,
+    "printed_internal_split_facet_table_matches_results": true,
+    "eight_named_ragas_checks_match_saved_test_inventory": true,
+    "three_selected_public_illustrations_match_manifest": true,
+    "previous_guide_and_chart_archive_intact": true
   },
-  "checked_local_links": 62,
+  "checked_local_links": 93,
   "missing_links": [],
   "changed_source_result_files": [],
   "changed_frozen_inputs_or_producer_files": [],
-  "article_words": 7771,
-  "article_sha256": "b717d5afb13068ba120a7db0116be6bd44ebafa66e2541401fd1474d650a8745",
+  "article_words": 11059,
+  "article_sha256": "5b7e6c31435952986d1ecda55e0d7551bfa2403e7b1bc50ba4ffc30686815706",
   "observed_evidence_sha256": "3ed246f9ad67a6f73ad06454fff0af2297e394acef0e7821358a5ebddae4153b",
-  "new_model_generations_for_walkthrough": 0,
-  "visual_review": "Nine exported PNG figures inspected by the authoring agent for clipping, labels, legends and readable counts; not an independent reader study.",
+  "new_application_classification_or_judge_api_generations": 0,
+  "builtin_illustration_generation_calls_this_revision": 4,
+  "visual_review": "Nine quantitative PNG figures and three selected illustrated explainers inspected by the authoring agent. One generated draft was corrected to clarify scoring-only use of human labels and additive extras. Not an independent reader study.",
   "scope": "Explanation arithmetic/source/link/image/guard checks. Software tests use temporary data. No new live predictions or semantic quality passes are implied."
 }

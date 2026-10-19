@@ -1,0 +1,11 @@
+sampling_area,repositories,retained_original_ids,replacement_ids,development,validation,test_reserved,human_reviewed_in_evaluation
+ai,60,42,18,18,12,30,3
+cloud,60,51,9,18,12,30,0
+commerce,60,51,9,18,12,30,3
+data,60,48,12,18,12,30,10
+developer,60,54,6,18,12,30,1
+education,60,39,21,18,12,30,2
+finance,60,51,9,18,12,30,6
+healthcare,60,50,10,18,12,30,1
+science,60,53,7,18,12,30,2
+security,60,50,10,18,12,30,2

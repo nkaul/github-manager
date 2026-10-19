@@ -1,0 +1,60 @@
+{
+  "client_date": "2026-10-19",
+  "tool": "built-in image_gen",
+  "builtin_image_generation_calls": 4,
+  "new_application_classification_or_judge_api_calls": 0,
+  "style_reference": "ai-system-design/ground-truth-creation/figures/01-evidence-to-human-truth.png",
+  "style_reference_sha256": "6d61bb917f769cc760c29d9fa48d8eb99f80060c8d8c758472b5eebc5e961b6f",
+  "selected_figures": [
+    {
+      "file": "01-how-we-built-the-corpus.png",
+      "title": "Collection and selected human review",
+      "width": 1672,
+      "height": 941,
+      "sha256": "1e74173d7b75d102ce6b53dcfd1b72ffcf33350c492c47d84f85687dba11d435",
+      "status": "SELECTED_FOR_PUBLIC_REUSE",
+      "review": {
+        "content_numbers_and_units": "PASS",
+        "source_vs_reference_boundary": "PASS",
+        "unknown_labels_not_errors": "PASS",
+        "actual_export_visual_inspection": "PASS"
+      }
+    },
+    {
+      "file": "02-where-confirmed-labels-were-missed-v2.png",
+      "title": "Retrospective label recovery and misses",
+      "width": 1672,
+      "height": 940,
+      "sha256": "bc9ec04f0f611b7c917ea6a9da4d96b050149cd3ce62ef3985b7c24f7a34f1fd",
+      "status": "SELECTED_FOR_PUBLIC_REUSE",
+      "review": {
+        "content_numbers_and_units": "PASS",
+        "source_vs_reference_boundary": "PASS",
+        "unknown_labels_not_errors": "PASS",
+        "actual_export_visual_inspection": "PASS"
+      }
+    },
+    {
+      "file": "03-three-checks-three-meanings.png",
+      "title": "Recall, software validity and semantic support",
+      "width": 1672,
+      "height": 941,
+      "sha256": "fa1dc2afff2de8676d01b59d840d2e37c51dd0fe3d46f30ac0e42f1c04951ffb",
+      "status": "SELECTED_FOR_PUBLIC_REUSE",
+      "review": {
+        "content_numbers_and_units": "PASS",
+        "source_vs_reference_boundary": "PASS",
+        "unknown_labels_not_errors": "PASS",
+        "actual_export_visual_inspection": "PASS"
+      }
+    }
+  ],
+  "superseded_drafts": [
+    {
+      "file": "02-where-confirmed-labels-were-missed.png",
+      "reason": "Arrows could imply reference leakage or transformation of matched labels into extras; selected v2 explicitly corrects both."
+    }
+  ],
+  "source_details": "../walkthrough/evidence/collection-and-validation-details.json",
+  "scope": "Locally prepared public illustration kit; not a new metric run or automatic external publication."
+}

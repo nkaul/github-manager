@@ -2,6 +2,8 @@
 
 **Start here:** [How we evaluated GitHub Manager, in plain language](ground-truth-evaluation-explained.md). It explains every input and split, taxonomy versus classification, the algorithms, metric calculations and framework evidence, with nine figures and a thirty-case results table.
 
+**Revision 2:** now includes the three-agent collection/English-first refresh history, all ten area counts, detailed internal performance tables and eight explicitly named Ragas checks. The separate [public illustration kit](public-illustrations/README.md) provides three hand-drawn explainers for sharing. The [previous complete guide/chart package](history/plain-language-evaluation-v1-2026-10-19.zip) is preserved.
+
 Approved October 19, 2026. Evaluate the actual 30 human confirmations without changing app state, original corpus/proposals, prior benchmark paths or review history. Sources/owner decisions/receipts stay in the ignored `docs/validation/private/corpus-600-v2/evaluation-reviewed-30-v1/` directory.
 
 See the [approved contract and schedule](../../../docs/planning/ground-truth-evaluation-completion-2026-10-19.md) and [completed results](../../../docs/validation/ground-truth-evaluation-2026-10-19.md). The run used all 50 generation/100 HTTP attempts, recorded $0.133941 estimated charges, and its grant is FINISHED. Do not renew it or dispatch additional generations without explicit user approval.

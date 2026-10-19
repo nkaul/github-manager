@@ -1,6 +1,6 @@
 # How we evaluated GitHub Manager, in plain language
 
-**October 19, 2026 · A reader’s guide to the completed evaluation**
+**October 19, 2026 · Revision 2 · A reader’s guide to the completed evaluation**
 
 GitHub Manager tries to organize repositories by what they do, which initiative they belong to, and which technologies matter most. We wanted to check whether its automatic labels agree with labels a person had reviewed.
 
@@ -8,7 +8,7 @@ We had saved information for **600 public repositories**, but only **30 had comp
 
 The main finding is straightforward: the human had confirmed **83 labels across thirty repositories**. The search step found **69** of those labels, and the AI selected **66**. Finding the right possible labels was a bigger problem than selecting among the labels already found.
 
-This guide explains the inputs, the split, every major processing step, the calculations, and the evidence behind the software checks. It uses recorded results; **no new model calls were made to create it**.
+This guide explains the collection history, inputs, split, processing steps, calculations and evidence behind the checks. It uses recorded results; **no new classification or judge API calls were made for this revision**. The separate public illustrations were created with the built-in image-generation tool; they are not additional evaluation runs. The [previous complete guide and chart package](history/plain-language-evaluation-v1-2026-10-19.zip) remain preserved.
 
 ## A route through the explanation
 
@@ -48,6 +48,87 @@ We were measuring **organization of each repository from its evidence**. We were
 
 ## 2. What information went into the experiment?
 
+### How we obtained six hundred repositories
+
+We built the collection rather than downloading a ready-made benchmark. A **corpus** simply means the collection of material we intend to study. Our material was public repositories and their saved documentation.
+
+We first chose ten broad areas and wrote search catalogs containing project families, primary purposes and likely Topics. These were search hypotheses, not already-correct labels. We combined GitHub topic searches, purpose words in READMEs, and searches around named projects or organizations. Searches varied their ordering and included different popularity/language ranges, rather than treating the first popular results as the entire collection.
+
+For example, a search for a named initiative finds possible implementations, plugins, deployment tools and ordinary users of the technology. The agents still had to read purpose/relationship evidence to distinguish those cases. A search hit did not automatically become a Project assignment.
+
+| Collection step | What we actually did | What we retained |
+|---|---|---|
+| Define the scope | Choose ten broad sampling areas and initial project/purpose definitions | Versioned search catalogs and membership rules |
+| Collect the first version | Three collection agents divided the ten areas: A covered four areas, B three and C three | 600 distinct public repositories, sixty per area |
+| Fetch evidence safely | Use the existing authenticated OAuth App through a shared, rate-limited read-only collector; agents did not receive the credential | Metadata, a complete saved README, and up to four relevant supporting files per repository |
+| Keep identities and versions stable | Deduplicate by numeric GitHub repository ID; pin source files to commits and check their contents | Repository IDs, commits, source paths, fingerprints and collection receipts |
+| Inspect eligibility | Check English primary narrative, useful purpose evidence and suitability for the intended sampling area | Explicit retain, exclude, reserve and reassignment decisions |
+| Refresh the collection | Two agents reviewed and replenished separate five-area cohorts | The English-first version used in this evaluation |
+| Prepare reference proposals | Record purpose, proposed labels, supporting passages and uncertainty; perform source/consistency checks | Proposed references that still needed human confirmation |
+
+The initial three-agent division was **240 repositories for A, 180 for B and 180 for C**. In the English-first refresh, A handled healthcare, finance, commerce, education and science; B handled data, AI, cloud, security and developer tooling, **300 each**. These collection roles are different from the later independent annotation readers called Agent A and Agent B.
+
+The first collection used **5,391 upstream GitHub requests, including 181 searches**. The English-first refresh used **902 additional upstream requests, including nine searches**, while reusing successful cached responses and pinned source files. Search requests are included within those totals, not extra requests to add again. A cached response did not cause another GitHub request. These are historical collection counts, not new crawling performed for this document.
+
+The final active collection contains **600 complete README snapshots and 1,223 supporting files**, totaling **18,436,109 source bytes**. Complete retention is different from complete semantic reading: the curation release recorded 88 complete README reads and 512 targeted/partial reads. We do not claim all six hundred received equally deep reading or human verification.
+
+### Why we refreshed the original collection
+
+The original collection was broader in language and sometimes repetitive or weakly matched to its intended area. We preserved it and created a new English-first active version.
+
+| Original active entries removed from the new active set | Count | What the decision means |
+|---|---:|---|
+| Substantive non-English primary narratives | 77 | Outside this English-first evaluation scope; not a judgement that the repository is poor quality |
+| Inadequate or off-domain purpose evidence | 18 | Did not meet this collection’s evidence/applicability requirement |
+| Valid English repositories moved to balancing reserves | 16 | Useful material held aside to improve coverage; not a defective repository or a negative label |
+| **Total removed from the active set** | **111** | Replaced with 111 newly accepted repositories |
+
+The arithmetic is **600 − 111 = 489 retained**, then **489 + 111 replacements = 600**. Two retained repositories moved to more appropriate sampling buckets; those moves are already included in the retained counts. We did not count them as extra repositories or replacements. English screening allowed normal names, code, Unicode and translation links; it was not a ban on every non-English character.
+
+### How the six hundred were spread across areas
+
+Each area received sixty repositories, or **10% of the collection**. Examples below are actual names in the saved active inventory, not a new live availability check. The “human reviewed” column refers to the later thirty-case evaluation.
+
+| Sampling area | Typical purpose | Examples in the saved collection | Saved repositories | Human reviewed later |
+|---|---|---|---:|---:|
+| AI and machine learning | Models, training, inference and AI application frameworks | PyTorch, Transformers, LangChain, MLflow | 60 | 3 |
+| Cloud and DevOps | Infrastructure, deployment and operation | Kubernetes, OpenTofu, Argo CD | 60 | 0 |
+| Commerce | Storefronts, commerce platforms and business systems | Medusa, Saleor, Odoo, ERPNext | 60 | 3 |
+| Data engineering | Ingestion, orchestration and data movement | Dagster, Airbyte, Airflow | 60 | 10 |
+| Developer tools | IDEs, developer platforms and collaboration | Backstage, VS Code, Eclipse Theia | 60 | 1 |
+| Education | Learning platforms and educational tools | Moodle, Open edX, Canvas LMS | 60 | 2 |
+| Finance | Banking, billing and financial-data systems | OpenBB, Apache Fineract, Kill Bill | 60 | 6 |
+| Healthcare | Health information systems and healthcare tools | OpenEMR, Medplum and related components | 60 | 1 |
+| Science | Numerical, astronomical and geospatial software | NumPy, SciPy, Astropy, Rasterio | 60 | 2 |
+| Security and identity | Authentication, secrets and security tooling | Keycloak, authentik, OpenBao | 60 | 2 |
+| **Total** | | | **600** | **30** |
+
+“Sampling area” tells us why a repository was collected. It does not assign its Domain automatically. For example, a repository collected while investigating AI might still have only a Python Tag and an educational Topic, with no supported known Project.
+
+The retention/replacement and split counts are also explicit:
+
+| Area | Retained from v1 | New replacements | Development | Validation | Test-reserved |
+|---|---:|---:|---:|---:|---:|
+| AI | 42 | 18 | 18 | 12 | 30 |
+| Cloud | 51 | 9 | 18 | 12 | 30 |
+| Commerce | 51 | 9 | 18 | 12 | 30 |
+| Data | 48 | 12 | 18 | 12 | 30 |
+| Developer tools | 54 | 6 | 18 | 12 | 30 |
+| Education | 39 | 21 | 18 | 12 | 30 |
+| Finance | 51 | 9 | 18 | 12 | 30 |
+| Healthcare | 50 | 10 | 18 | 12 | 30 |
+| Science | 53 | 7 | 18 | 12 | 30 |
+| Security | 50 | 10 | 18 | 12 | 30 |
+| **Total** | **489** | **111** | **180** | **120** | **300** |
+
+Equal numbers per area help us inspect broad coverage. They do not make the collection a random or representative sample of GitHub. Named project families are unevenly represented, some repositories are neighboring independent tools, and **308/600 had at least one source-supported Project proposal**. That was an agent-proposal count, not 308 human-approved Project assignments.
+
+Sources: [original three-agent collection record](../corpus-600/README.md), [English-first release and per-area counts](../../../docs/validation/corpus-600-v2-review-2026-10-17.md), and [selected collection evidence](walkthrough/evidence/collection-and-validation-details.json). The original [query catalogs](../corpus-600/domains-a.json) retain the initial search criteria; the other catalogs are linked from that collection record.
+
+![Repository evidence passes through curation to a balanced English-first collection of ten areas with sixty repositories each. Thirty selected human-reviewed repositories supply eighty-three positive assignments for evaluation.](public-illustrations/01-how-we-built-the-corpus.png)
+
+*Public illustration A. The English-first refresh and the selected evaluation subset are different stages. Processing diagnostics for the other 570 do not turn their proposed labels into human-approved answers.*
+
 ### The repository evidence and the human answer sheet are separate
 
 The system needs repository information to make a prediction. The evaluator needs the human’s saved decisions to check that prediction. Those are different inputs, kept separate.
@@ -84,6 +165,22 @@ Fifteen reviewed repositories had no retained Project. Three had no retained Tag
 The broader ground-truth process used source collection, AI-authored proposals and a human review interface. An independent two-reader pilot covered thirty development repositories, but it was **not exactly the same thirty the human ultimately confirmed**. Only six overlap. On that six-repository overlap, both readers include all seventeen human-retained assignments; they also propose extra assignments that remain unjudged. We cannot describe all thirty human confirmations as a completed double-reader adjudication study.
 
 The human confirmed positive labels. The review did **not** establish that every unselected label was wrong. We preserve that distinction throughout scoring.
+
+### What the initial annotation approach produced
+
+Before the final classifier evaluation, two LLM-powered readers independently proposed labels for a balanced pilot of thirty development repositories—three from each sampling area. That pilot produced sixty annotations. It was a way to expose disagreements for review, not a second human answer key.
+
+| Earlier check | Observed result | What we can conclude |
+|---|---|---|
+| Curation cross-review | 120 distinct source-bound reviews across the English-first collection | Selected evidence/proposals were peer-inspected; not all six hundred are human gold |
+| Independent readers: exact Project-set agreement | 28/30 repositories | The readers selected the same Project sets on most pilot cases; agreement can include both selecting none |
+| Independent readers: exact Topic-set agreement | 10/30 | Topic selection/granularity produced more disagreements |
+| Independent readers: exact Tag-set agreement | 19/30 | Technology choices still needed inspection |
+| Independent readers: exact complete label-set agreement | 5/30 | Complete agreement was much lower than Project agreement alone |
+| Shared positive label assignments | 148 shared out of 192 in either reader’s combined set | Descriptive overlap, not 77.1% accuracy |
+| Overlap with the later human-confirmed set | Six repositories; seventeen human-retained assignments shared with each reader | Too small to turn pilot agreement into human-validated accuracy |
+
+Both readers can make the same mistake or follow the same overly broad policy. That is why “two agents agreed” and “a human confirmed it” remain different evidence. The later thirty human confirmations, their historical vocabulary versions and the live classifier predictions are the inputs to the recall calculation below.
 
 ## 3. How were the repositories split?
 
@@ -318,14 +415,29 @@ A small selected sample can give a different result if a few repository families
 
 ## 8. What did the results show?
 
+### Internal evaluation scorecard: measured quality versus checks that passed
+
+This table brings the different internal results together. **Measured** means we calculated an outcome, with no automatic pass threshold. **Passed** means a predefined software rule was satisfied. There was no overall “accuracy passed” gate.
+
+| Internal question | Calculation or check | Observed result | Result type | Practical reading |
+|---|---|---|---|---|
+| Can the local pipeline process the saved collection? | 600 completed extractions/candidate searches out of 600 | **100% completed** | Operational check passed | Processing works for these saved inputs; label correctness for 570 is unknown. |
+| Are the final primary answers structurally valid? | 30 valid final responses out of 30 | **100% valid final responses** | Software check passed after adapter repair | Allowed fields/IDs/references, not perfect meaning. Eight earlier rejected attempts remain counted. |
+| Does retrieval supply the known positive labels? | 69 ÷ 83 | **83.1%** | Measured candidate recall | Fourteen confirmed labels never reached the model. |
+| Does the whole workflow recover the known positive labels? | 66 ÷ 83 | **79.5%** | Measured final recall | Seventeen confirmed assignments were missed. |
+| Does the model select supplied positives? | 66 ÷ 69 | **95.7%** | Measured conditional recall | Three supplied positive assignments were not selected. |
+| How many selected labels already have human-positive confirmation? | 66 ÷ 82 | **80.5% confirmed-positive coverage** | Measured judgement coverage, not precision | Sixteen extra selections remain unjudged. |
+| Does the whole selected set exactly match the saved positive set? | 10 ÷ 30 repositories | **33.3% exact set agreement** | Descriptive agreement | Unknown extras also break exact agreement. |
+| Can we report exhaustive accuracy, precision or F1? | Requires sufficiently complete positive/negative judgements | **Not available** | Reference limitation | Unselected/extra labels have not all been adjudicated. |
+
 ### Topics need better retrieval
 
-| Kind | Human-confirmed targets | Reached the shortlist | Selected by the model | Final recovery |
-|---|---:|---:|---:|---:|
-| Project | 15 | 14 | 13 | 86.7% |
-| Topic | 35 | 23 | 23 | 65.7% |
-| Tag | 33 | 32 | 30 | 90.9% |
-| **All** | **83** | **69** | **66** | **79.5%** |
+| Kind | Confirmed targets | Reached shortlist | Selected positives | Candidate recall | Final recall | Extra unjudged selections |
+|---|---:|---:|---:|---:|---:|---:|
+| Project | 15 | 14 | 13 | 93.3% | 86.7% | 0 |
+| Topic | 35 | 23 | 23 | 65.7% | 65.7% | 6 |
+| Tag | 33 | 32 | 30 | 97.0% | 90.9% | 10 |
+| **All** | **83** | **69** | **66** | **83.1%** | **79.5%** | **16** |
 
 ![Project, Topic and Tag bars compare shortlist recovery with final selection. Topics have the largest gap: only 23 of 35 confirmed Topics reach the shortlist.](walkthrough/figures/03-facet-recovery.png)
 
@@ -333,12 +445,33 @@ A small selected sample can give a different result if a few repository families
 
 The three positive labels supplied but not selected were Python for `airbytehq/airbyte`, Docker for `anchore/grype`, and the Apache Fineract Project for `apache/fineract-chat-archive`. We recorded these as misses. We did not invent a cause without inspecting the evidence and policy differences.
 
+| Location of the miss | Projects | Topics | Tags | Total |
+|---|---:|---:|---:|---:|
+| Positive label missing from the shortlist | 1 | 12 | 1 | **14** |
+| Positive label supplied, but not selected | 1 | 0 | 2 | **3** |
+| **All missed confirmed assignments** | **2** | **12** | **3** | **17** |
+
+![A retrospective scoring view tracks eighty-three known positive assignments through sixty-nine shortlisted and sixty-six selected matches, with fourteen missed before generation and three after retrieval. Sixteen extra selections remain unknown.](public-illustrations/02-where-confirmed-labels-were-missed-v2.png)
+
+*Public illustration B. This is a comparison after the run, not the model’s input flow. Human answers were never sent to the model. The separate sixteen extra predictions are not automatically errors.*
+
 ### Development and test-reserved results
 
 | Split | Repositories | Confirmed labels | Retrieved | Selected | Final reviewed-positive recall |
 |---|---:|---:|---:|---:|---:|
 | Development | 15 | 42 | 33 | 32 | 76.2% |
 | Test-reserved | 15 | 41 | 36 | 34 | 82.9% |
+
+The facet-level breakdown makes clear that these percentages have different amounts of evidence behind them:
+
+| Split | Kind | Confirmed targets | Retrieved | Selected positives | Final recall | Extra unjudged |
+|---|---|---:|---:|---:|---:|---:|
+| Development | Project | 7 | 7 | 7 | 100.0% | 0 |
+| Development | Topic | 19 | 11 | 11 | 57.9% | 4 |
+| Development | Tag | 16 | 15 | 14 | 87.5% | 6 |
+| Test-reserved | Project | 8 | 7 | 6 | 75.0% | 0 |
+| Test-reserved | Topic | 16 | 12 | 12 | 75.0% | 2 |
+| Test-reserved | Tag | 17 | 17 | 16 | 94.1% | 4 |
 
 ![Development bars show 33 of 42 labels retrieved and 32 selected; test-reserved bars show 36 of 41 retrieved and 34 selected.](walkthrough/figures/04-split-results.png)
 
@@ -372,9 +505,30 @@ A later local diagnostic used only metadata, only the compact evidence, or only 
 
 *Figure 7. The full collection is balanced at sixty repositories per sampling bucket. The human-reviewed subset is not. There is no measured human-reference cloud result.*
 
+| Sampling area | Reviewed repositories | Confirmed labels | Retrieved | Selected positives | Final recall |
+|---|---:|---:|---:|---:|---:|
+| AI | 3 | 8 | 6 | 6 | 75.0% |
+| Cloud | 0 | 0 | — | — | Not measurable |
+| Commerce | 3 | 8 | 6 | 6 | 75.0% |
+| Data | 10 | 29 | 23 | 22 | 75.9% |
+| Developer tools | 1 | 2 | 2 | 2 | 100.0% |
+| Education | 2 | 3 | 3 | 3 | 100.0% |
+| Finance | 6 | 19 | 15 | 14 | 73.7% |
+| Healthcare | 1 | 4 | 4 | 4 | 100.0% |
+| Science | 2 | 5 | 5 | 5 | 100.0% |
+| Security | 2 | 5 | 5 | 4 | 80.0% |
+| **Total** | **30** | **83** | **69** | **66** | **79.5%** |
+
+We do not average the ten area percentages to claim a representative GitHub-wide score. The small 100% rows are one- or two-repository observations, and Cloud has no denominator.
+
 ### Did a larger model do better?
 
 A small paired comparison used the same inputs and candidates on three development repositories. Luna recovered six of nine confirmed labels; Sol recovered seven of nine. Both were limited by the same seven retrieved positives. Each also proposed two unjudged labels.
+
+| Model / role | Same development repositories | Confirmed targets | Retrieved | Selected positives | Final recall | Extra unjudged |
+|---|---:|---:|---:|---:|---:|---:|
+| `gpt-6-luna`, primary | 3 | 9 | 7 | 6 | 66.7% | 2 |
+| `gpt-6.1-sol`, comparison | 3 | 9 | 7 | 7 | 77.8% | 2 |
 
 This is enough to demonstrate the comparison workflow, but too small to declare a general model winner. It is also separate from taxonomy discovery, which used Sol for a different task.
 
@@ -421,7 +575,30 @@ These tools helped run and check our evaluation. Installing them did not supply 
 | Ragas 0.4.3 ID-based recall | Retrieved category IDs and human-positive category IDs | Independently run the ID-set recall calculation | Scores matching local retrieval recall |
 | Ragas Faithfulness | Statements derived from three saved responses and the evidence actually supplied to those responses | Ask a model to identify statements and judge their support | Three grounding scores: 1.0, 1.0 and 0.75 |
 
+![A human comparison measures known-label recall, Promptfoo checks the validity of thirty saved outputs, and Ragas checks support for claims in three development cases. Their denominators and meanings differ.](public-illustrations/03-three-checks-three-meanings.png)
+
+*Public illustration C. A software contract pass, reviewed-positive recall and an AI judge’s support score measure different things. They do not combine into an overall accuracy percentage.*
+
 DeepEval, TruLens, Phoenix, Langfuse and a hosted LangSmith evaluation deployment were not run as additional benchmark suites in this milestone. Their names in earlier discussions are not evidence of completed tests.
+
+### The Ragas test inventory: exactly what ran
+
+Ragas supplied two metric implementations and a no-network integration check. We did not run every metric available in the library. The IDs below are labels for this report, not extra model calls.
+
+| Test | What we supplied | What Ragas checked | Observed result | What “passed” means here |
+|---|---|---|---|---|
+| R1 · Project candidate recall | Project candidate IDs and positive reference IDs for fifteen repositories with confirmed Projects | How many of fifteen positive Project assignments were retrieved | **14/15 = 93.3%** | Calculation agreed with the local scorer; 93.3% is a measured score, not a quality threshold. |
+| R2 · Topic candidate recall | Topic candidate/reference IDs for thirty repositories | How many of thirty-five positive Topic assignments were retrieved | **23/35 = 65.7%** | Same numerical consistency check; twelve positives were missed. |
+| R3 · Tag candidate recall | Tag candidate/reference IDs for twenty-seven repositories with confirmed Tags | How many of thirty-three positive Tag assignments were retrieved | **32/33 = 97.0%** | Same consistency check; empty-reference facets were not credited with perfect scores. |
+| R4 · All candidate IDs | All candidate/reference IDs for the thirty repositories | Combined candidate recall over eighty-three assignments | **69/83 = 83.1%** | Agreed with the local weighted calculation. |
+| R5 · Airbyte response support | One statement derived from the saved classification and its actual supplied evidence | Is the Airbyte relationship supported? | **1/1 = 100%** | Metric completed; no automatic semantic pass threshold was defined. |
+| R6 · Seldon Core response support | Four derived statements and actual supplied evidence | Are the two capabilities and two technologies supported? | **4/4 = 100%** | Metric completed; this is an AI-judge result. |
+| R7 · Python CDK response support | Four derived statements and actual supplied evidence | Are the initiative, capability and two technology claims supported? | **3/4 = 75%** | Metric completed; the primary-GraphQL claim was not supported by the judge. |
+| R8 · No-network fanout safeguard | A tiny fixed “repository provides testing” example and predetermined judge replies | Does Faithfulness finish in exactly two internal generation steps? | **Score 1.0; exactly two mock steps; zero network calls** | Integration safeguard passed. This is not a fourth real repository-quality judgement. |
+
+R1–R4 reuse overlapping views of the **same thirty repositories**. They are not 102 distinct repository tests, even though the per-facet and all-label calculations together contain 102 metric evaluations. R5–R7 are three development-only semantic samples and use six guarded generations in total. R8 uses controlled fake replies, so it consumes no API generation.
+
+The recorded case counts, input/output descriptions and outcomes are also saved in [collection-and-validation-details.json](walkthrough/evidence/collection-and-validation-details.json). The [original Ragas output](../../../docs/validation/private/corpus-600-v2/evaluation-reviewed-30-v1/ragas-results.json), [cross-check output](../../../docs/validation/private/corpus-600-v2/evaluation-reviewed-30-v1/final-checks.json) and [no-network execution log](walkthrough/evidence/ragas-stub-check.txt) are the underlying evidence.
 
 ### Promptfoo: what “30/30 passed” means
 
@@ -479,6 +656,22 @@ For the Python CDK, the judge supported the Airbyte relationship, API-developmen
 
 This is an AI judgement, not a new human decision. The reference’s GraphQL assignment remains unknown. Faithfulness also does not measure missing claims: the first Airbyte response scored 100% support for its one claim while still missing human-confirmed labels elsewhere in classification scoring.
 
+Here are all nine statement-level verdicts from those three real cases, expressed in readable form:
+
+| Repository | Claim submitted for support checking | Recorded judge verdict |
+|---|---|---|
+| Airbyte platform | Its primary initiative relationship is Airbyte. | Supported |
+| Seldon Core | A primary capability is Application Deployment. | Supported |
+| Seldon Core | A primary capability is Model Serving. | Supported |
+| Seldon Core | A primary technology is Go. | Supported |
+| Seldon Core | A primary technology is Kubernetes. | Supported |
+| Airbyte Python CDK | Its primary initiative relationship is Airbyte. | Supported |
+| Airbyte Python CDK | A primary capability is API Development Tools. | Supported |
+| Airbyte Python CDK | A primary technology is Python. | Supported |
+| Airbyte Python CDK | A primary technology is GraphQL. | **Not supported as a primary technology**; connector support alone did not establish that role. |
+
+“Not supported” is the judge’s verdict about the supplied evidence and the wording of this claim. It is not proof of a contradiction in the whole repository or a human-approved negative label.
+
 We did **not** predefine a semantic pass threshold such as 0.85. The grounding checks ran successfully and produced scores; we cannot say all three passed an automatic quality gate. The judge has not yet been calibrated against a separate human-supported/unsupported set.
 
 Before paid use, a no-network test verified exactly two internal generations per case. The worker blocks direct networking and sends any real judge requests through the original budgeted provider. No embedding calls, synthetic test generation or hidden retries were added. The installed Ragas version uses its current collections API for Faithfulness; its ID metric needed an older export. That compatibility detail is recorded rather than hidden.
@@ -517,6 +710,9 @@ The combined recorded total for this and earlier work, including retained narrat
 
 | Artifact | What a reader will find |
 |---|---|
+| [Public illustration kit](public-illustrations/README.md) | Three standalone hand-drawn explainers, selected PNGs, captions, alt text, exact prompts and source/status notes for sharing. |
+| [Collection and validation details](walkthrough/evidence/collection-and-validation-details.json) | Verified 600-repository distribution, 489/111 retention/replacement accounting, earlier annotation agreement and the eight named Ragas checks. |
+| [Collection counts as CSV](walkthrough/evidence/collection-by-area.csv) | Ten-area acquisition, split and final human-review counts. |
 | [Selected observed results](walkthrough/evidence/observed-results.json) | Actual thirty-case counts/scores, the worked example, nine judge statements/verdicts and fingerprints of original result files. No credentials or human owner identity. |
 | [Thirty-case results table](walkthrough/evidence/repository-results.md) | Every repository’s split, target/retrieved/selected counts, extras, Promptfoo contract result and recall. |
 | [CSV results](walkthrough/evidence/repository-results.csv) | The same table for spreadsheet/chart use. |
@@ -567,6 +763,15 @@ From the repository root:
 ```
 
 This regenerates the selected evidence, CSV/table and nine PNG/SVG figures. The existing benchmark, prompts, models, references, ledger and app are not modified. See [README.md](README.md) for the original evaluation’s reproduction steps and the closed-generation boundary.
+
+Recreate the revision 2 collection distribution and named Ragas-test evidence from saved files with:
+
+```sh
+backend/.venv/bin/python \
+  ai-system-design/evaluation/reviewed-30-v1/walkthrough/extend_evidence.py
+```
+
+The hand-drawn illustrations are versioned assets in [public-illustrations](public-illustrations/README.md). These offline scripts do not regenerate them or make new model calls.
 
 Check the explanation’s arithmetic, links, preserved source fingerprints, chart exports and saved software-test evidence with:
 

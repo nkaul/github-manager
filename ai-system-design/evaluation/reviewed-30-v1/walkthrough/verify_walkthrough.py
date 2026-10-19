@@ -5,6 +5,7 @@ import json
 import re
 import sqlite3
 import struct
+import zipfile
 from datetime import UTC, datetime
 from pathlib import Path
 from urllib.parse import unquote
@@ -28,6 +29,19 @@ def slug(value):
     return re.sub(r"\s", "-", value)
 
 
+def tables(text):
+    found, rows = [], []
+    for line in [*text.splitlines(), ""]:
+        if line.startswith("|"):
+            if re.fullmatch(r"[| :\-]+", line):
+                continue
+            rows.append([cell.strip().replace("**", "") for cell in line.strip("|").split("|")])
+        elif rows:
+            found.append(rows)
+            rows = []
+    return found
+
+
 def main():
     evidence = read(HERE / "evidence/observed-results.json")
     article_path = PACKAGE / "ground-truth-evaluation-explained.md"
@@ -39,6 +53,7 @@ def main():
         HERE / "evidence/repository-results.md",
         PACKAGE / "README.md",
         HERE / "editorial-review.md",
+        PACKAGE / "public-illustrations/README.md",
     ):
         anchors = {slug(h) for h in re.findall(r"^#{1,6} (.+)$", md.read_text(), re.M)}
         for target in re.findall(r"\]\(([^)]+)\)", md.read_text()):
@@ -94,6 +109,85 @@ def main():
         ).fetchone()[0]
     software_log = (HERE / "evidence/software-checks.txt").read_text()
     stub_log = (HERE / "evidence/ragas-stub-check.txt").read_text()
+    details = read(HERE / "evidence/collection-and-validation-details.json")
+    collection_sources_match = all(
+        sha(ROOT / name) == expected for name, expected in details["source_sha256"].items()
+    )
+    collection_rows = details["collection"]["per_area"]
+    source_summary = read(DATA / "evaluation-summary.json")
+    article_tables = tables(article)
+    areas = {r["sampling_area"]: r for r in collection_rows}
+    aliases = {
+        "AI": "ai",
+        "Cloud": "cloud",
+        "Commerce": "commerce",
+        "Data": "data",
+        "Developer tools": "developer",
+        "Education": "education",
+        "Finance": "finance",
+        "Healthcare": "healthcare",
+        "Science": "science",
+        "Security": "security",
+    }
+    acquisition_table = next(t for t in article_tables if t[0][:2] == ["Area", "Retained from v1"])
+    acquisition_matches = len(acquisition_table) == 12 and all(
+        list(map(int, row[1:]))
+        == [
+            areas[aliases[row[0]]][field]
+            for field in (
+                "retained_original_ids",
+                "replacement_ids",
+                "development",
+                "validation",
+                "test_reserved",
+            )
+        ]
+        for row in acquisition_table[1:-1]
+    )
+    facet_table = next(t for t in article_tables if t[0][:2] == ["Kind", "Confirmed targets"])
+    kind_ids = {"Project": "PROJECT", "Topic": "TOPIC", "Tag": "TAG", "All": "ALL"}
+    facet_matches = True
+    for row in facet_table[1:]:
+        metric = source_summary["overall"][kind_ids[row[0]]]
+        expected = [
+            str(metric[k])
+            for k in ("reviewed_positives", "retrieved_positives", "selected_positives")
+        ]
+        expected += [
+            f"{metric['candidate_recall_of_reviewed_positives']:.1%}",
+            f"{metric['prediction_recall_of_reviewed_positives']:.1%}",
+            str(metric["unjudged_predictions"]),
+        ]
+        facet_matches = facet_matches and row[1:] == expected
+    split_table = next(t for t in article_tables if t[0][:2] == ["Split", "Kind"])
+    split_matches = len(split_table) == 7
+    for row in split_table[1:]:
+        metric = source_summary["splits"][
+            "development" if row[0] == "Development" else "test_reserved"
+        ][kind_ids[row[1]]]
+        expected = [
+            str(metric[k])
+            for k in ("reviewed_positives", "retrieved_positives", "selected_positives")
+        ]
+        expected += [
+            f"{metric['prediction_recall_of_reviewed_positives']:.1%}",
+            str(metric["unjudged_predictions"]),
+        ]
+        split_matches = split_matches and row[2:] == expected
+    test_inventory = next(t for t in article_tables if t[0][:2] == ["Test", "What we supplied"])
+    public_manifest = read(PACKAGE / "public-illustrations/manifest.json")
+    public_images_match = len(public_manifest["selected_figures"]) == 3 and all(
+        sha(PACKAGE / "public-illustrations" / r["file"]) == r["sha256"]
+        and struct.unpack(">II", (PACKAGE / "public-illustrations" / r["file"]).read_bytes()[16:24])
+        == (r["width"], r["height"])
+        for r in public_manifest["selected_figures"]
+    )
+    history = read(PACKAGE / "history/plain-language-evaluation-v1-preservation.json")
+    archived = PACKAGE / "history" / history["archive"]
+    with zipfile.ZipFile(archived) as old:
+        history_matches = sha(archived) == history["sha256"] and all(
+            hashlib.sha256(old.read(r["path"])).hexdigest() == r["sha256"] for r in history["files"]
+        )
     checks = {
         "all_local_links_and_section_anchors_exist": not missing,
         "prior_evaluation_result_files_unchanged": not source_changes,
@@ -138,6 +232,19 @@ def main():
         "original_grant_remains_finished_at_fifty_generations_and_one_hundred_http": grant
         == ("FINISHED", 50, 100)
         and (generations, attempts) == (50, 100),
+        "collection_source_fingerprints_match": collection_sources_match,
+        "ten_areas_each_sixty_and_489_retained_111_replacements": len(collection_rows) == 10
+        and all(r["repositories"] == 60 for r in collection_rows)
+        and sum(r["retained_original_ids"] for r in collection_rows) == 489
+        and sum(r["replacement_ids"] for r in collection_rows) == 111,
+        "printed_acquisition_and_split_table_matches_inventory": acquisition_matches,
+        "printed_internal_facet_performance_table_matches_results": facet_matches,
+        "printed_internal_split_facet_table_matches_results": split_matches,
+        "eight_named_ragas_checks_match_saved_test_inventory": len(test_inventory) == 9
+        and [r[0].split(" · ")[0] for r in test_inventory[1:]]
+        == [r["test"] for r in details["ragas_tests"]],
+        "three_selected_public_illustrations_match_manifest": public_images_match,
+        "previous_guide_and_chart_archive_intact": history_matches,
     }
     result = {
         "status": "PASS" if all(checks.values()) else "FAIL",
@@ -151,8 +258,11 @@ def main():
         "article_words": len(article.split()),
         "article_sha256": sha(article_path),
         "observed_evidence_sha256": sha(HERE / "evidence/observed-results.json"),
-        "new_model_generations_for_walkthrough": 0,
-        "visual_review": "Nine exported PNG figures inspected by the authoring agent for clipping, labels, legends and readable counts; not an independent reader study.",
+        "new_application_classification_or_judge_api_generations": 0,
+        "builtin_illustration_generation_calls_this_revision": public_manifest[
+            "builtin_image_generation_calls"
+        ],
+        "visual_review": "Nine quantitative PNG figures and three selected illustrated explainers inspected by the authoring agent. One generated draft was corrected to clarify scoring-only use of human labels and additive extras. Not an independent reader study.",
         "scope": "Explanation arithmetic/source/link/image/guard checks. Software tests use temporary data. No new live predictions or semantic quality passes are implied.",
     }
     (HERE / "evidence/verification.json").write_text(json.dumps(result, indent=2) + "\n")
