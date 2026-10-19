@@ -1,14 +1,17 @@
 """Assemble and verify the 120-second animation; all operations are local."""
 import hashlib
 import json
+import sys
 import re
 import subprocess
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(ROOT / "eval/relocation"))
+from relocation_support import historical_bytes, historical_sha256, repo_path
 OUT=ROOT/"demo/article-animation"
 WORK=ROOT/"demo/work/article-animation"
-DOC=ROOT/"ai-system-design/animation"
+DOC=ROOT/"eval/ai-system-design/animation"
 FF=ROOT/".tools/video-python/imageio_ffmpeg/binaries/ffmpeg-macos-x86_64-v7.1"
 
 def save(p,x):p.write_text(json.dumps(x,indent=2)+"\n")
@@ -62,12 +65,12 @@ silence=ff(["-i",video,"-vn","-af","silencedetect=noise=-45dB:d=1","-f","null","
 silences=[float(x) for x in re.findall(r'silence_duration: ([\d.]+)',silence)]
 
 assets=[]
-for f in ["ai-system-design/publication/figures/01-evidence-to-decisions.png","ai-system-design/publication/v2/figures/01-two-ai-phases.png","ai-system-design/publication/v2/figures/02-data-through-classification.png","docs/design/logo-variants-20261013/animated-v2/zen-loop-orbit-poster.png"]:
+for f in ["eval/ai-system-design/publication/figures/01-evidence-to-decisions.png","eval/ai-system-design/publication/v2/figures/01-two-ai-phases.png","eval/ai-system-design/publication/v2/figures/02-data-through-classification.png","docs/design/logo-variants-20261013/animated-v2/zen-loop-orbit-poster.png"]:
     assets.append({"file":f,"sha256":sha(ROOT/f),"use":"Read-only source; browser viewport composition, no raster modification"})
 save(DOC/"assets-manifest.json",{"assets":assets,"new_raster_generation_requests":0,"additional_layers":"Code-native SVG cards, highlights, arrows, icons and state changes","font":"Locally installed Chalkboard; font binary not distributed"})
 
 baseline=json.loads((DOC/"preservation-baseline.json").read_text())
-changes=[r['file'] for r in baseline['files'] if not (ROOT/r['file']).exists() or sha(ROOT/r['file'])!=r['sha256']]
+changes = [r['file'] for r in baseline['files'] if not repo_path(r['file']).exists() or historical_sha256(repo_path(r['file'])) != r['sha256']]
 preservation={"status":"PASS" if not changes else "CHANGED_REVIEW_REQUIRED","protected_files":len(baseline['files']),"changed":changes}
 save(DOC/"preservation-qa.json",preservation)
 manifest=json.loads((OUT/"speech-requests.json").read_text())

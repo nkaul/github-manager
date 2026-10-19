@@ -6,7 +6,7 @@ Date: October 17, 2026. Status: **30 development repositories independently anno
 
 **Later October 18 update:** independent A/B summaries are now prominent, nonpilot coverage is explicit, and the initial twenty/full thirty-case queue stays selected through **Confirm & next**. See the [visibility and navigation verification](ground-truth-agent-inputs-2026-10-18.md). The real database now contains four human reviews, all outside the pilot; the earlier zero-review count above is a historical snapshot. The independent pilot still awaits human review. No agent annotation or source release changed.
 
-The user authorized the pilot and app visibility, then chose the Codex agents' existing intelligence instead of additional provider API calls. Two independent agents performed the semantic work. A deterministic coordinator selected the sample, checked evidence integrity and compared their outputs. See the [execution record](../planning/agent-annotation-pilot-execution.md) and [methodology/schema guide](../../ai-system-design/evaluation/annotation-pilot/README.md).
+The user authorized the pilot and app visibility, then chose the Codex agents' existing intelligence instead of additional provider API calls. Two independent agents performed the semantic work. A deterministic coordinator selected the sample, checked evidence integrity and compared their outputs. See the [execution record](../planning/agent-annotation-pilot-execution.md) and [methodology/schema guide](../../eval/ai-system-design/evaluation/annotation-pilot/README.md).
 
 ## What was read and saved
 

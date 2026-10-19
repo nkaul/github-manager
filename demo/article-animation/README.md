@@ -13,7 +13,7 @@ backend/.venv/bin/python demo/tools/article-animation/serve.py
 - [Captions](captions.vtt) and [SRT](captions.srt).
 - [Transcript](transcript.md), [chapters](chapters.json) and [measured timing](timing.json).
 - [Media validation](media-qa.json), [player checks](player-qa.json) and [API accounting](speech-requests.json).
-- [Markdown report](../../ai-system-design/animation/validation.md).
+- [Markdown report](../../eval/ai-system-design/animation/validation.md).
 
 The script has 239 words. The assembled speech measures approximately 126 words/minute, with added viewing pauses and no speech stretching. The original take omitted the closing sentence; a targeted same-voice paragraph repair restored it. Spoken word timing defines the transitions and captions. One recognized `save`/scripted `saved` word uses its neighboring timing envelope; the final sentence is explicitly recognized.
 
@@ -21,4 +21,4 @@ Five provider HTTP requests: one model-availability check, two speech takes and 
 
 The video explains public product behavior and an authored synthetic Orion fixture using a saved real API answer. Existing diagrams remain read-only; the new renderer supplies moving cards, text highlights, drawn arrows and state changes. No new raster image generation was required. Previous article editions, illustrations, videos, reports and protected ledgers are preserved.
 
-Sources and intermediate renders are under `demo/tools/article-animation/` and ignored `demo/work/article-animation/`. The [article companion index](../../ai-system-design/animation/README.md) links the source mapping and preservation audit. Long-form production and publication await user feedback.
+Sources and intermediate renders are under `demo/tools/article-animation/` and ignored `demo/work/article-animation/`. The [article companion index](../../eval/ai-system-design/animation/README.md) links the source mapping and preservation audit. Long-form production and publication await user feedback.

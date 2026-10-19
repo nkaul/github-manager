@@ -16,56 +16,56 @@
       "id": "discover",
       "heading": "Your repositories deserve a map.",
       "text": "Your own repositories. Shared projects. Libraries you starred for later. Finding them is easy. Remembering how they fit together is harder. GitHub Manager brings them into one workspace, where you can search, explore, and organize.",
-      "sources": ["README.md", "ai-system-design/publication/v2/article.md#opening"],
+      "sources": ["README.md", "eval/ai-system-design/publication/v2/article.md#opening"],
       "cues": ["Shared projects", "GitHub Manager", "search"]
     },
     {
       "id": "organize",
       "heading": "Same technology. Different purpose.",
       "text": "Projects group an initiative. Domains group those projects. Topics describe capabilities, and tags describe technologies. Two repositories can both use Python without belonging to the same project.",
-      "sources": ["ai-system-design/publication/v2/article.md#give-the-organization-a-vocabulary-people-can-understand"],
+      "sources": ["eval/ai-system-design/publication/v2/article.md#give-the-organization-a-vocabulary-people-can-understand"],
       "cues": ["Domains", "Topics", "Two repositories"]
     },
     {
       "id": "taxonomy",
       "heading": "Agree on the vocabulary first.",
       "text": "There are two separate AI jobs. Taxonomy discovery proposes a vocabulary from a collection of repositories. You review and edit it. Classification then works with approved concepts, rather than inventing new labels.",
-      "sources": ["ai-system-design/publication/v2/article.md#first-ask-the-model-to-propose-a-useful-vocabulary"],
+      "sources": ["eval/ai-system-design/publication/v2/article.md#first-ask-the-model-to-propose-a-useful-vocabulary"],
       "cues": ["proposes", "You review", "Classification"]
     },
     {
       "id": "evidence",
       "heading": "Keep the sentence that explains why.",
       "text": "Follow our synthetic Orion example. Its README says: patient intake API for the Orion Clinical Platform. Uses FastAPI and Python. We keep that purpose sentence, its evidence reference, and useful phrases.",
-      "sources": ["ai-system-design/publication/v2/examples/orion-api.json"],
+      "sources": ["eval/ai-system-design/publication/v2/examples/orion-api.json"],
       "cues": ["patient intake", "Uses FastAPI", "purpose sentence"]
     },
     {
       "id": "retrieve",
       "heading": "A shortlist is not a decision.",
       "text": "Local search retrieves six possible concepts. Some are distractions: Forge shares the word platform, but that doesn't establish a relationship. Retrieval finds possibilities. It doesn't assign them.",
-      "sources": ["ai-system-design/publication/v2/examples/orion-api.json"],
+      "sources": ["eval/ai-system-design/publication/v2/examples/orion-api.json"],
       "cues": ["six", "Forge", "doesn't assign"]
     },
     {
       "id": "classify",
       "heading": "Show the model evidence and boundaries.",
       "text": "The model receives evidence, candidate definitions, instructions, and a response schema. In the saved test, it selected Orion, Web APIs, FastAPI, and Python, citing the purpose sentence. You review those suggestions before accepting them.",
-      "sources": ["ai-system-design/publication/v2/examples/orion-api.json"],
+      "sources": ["eval/ai-system-design/publication/v2/examples/orion-api.json"],
       "cues": ["response schema", "selected Orion", "citing", "You review"]
     },
     {
       "id": "remember",
       "heading": "Remember the work. Respect your decisions.",
       "text": "The app remembers completed analysis separately from labels. Removing a project doesn't erase that receipt. Later changes can reconcile locally. A fresh AI analysis remains an explicit choice.",
-      "sources": ["ai-system-design/publication/v2/article.md#remember-completed-analysis-when-the-organization-changes"],
+      "sources": ["eval/ai-system-design/publication/v2/article.md#remember-completed-analysis-when-the-organization-changes"],
       "cues": ["Removing", "reconcile locally", "explicit choice"]
     },
     {
       "id": "close",
       "heading": "Useful organization. Your control.",
       "text": "Every model call has a reviewed budget: count, reserve, generate, record. Find the repository you need. Understand why it belongs. Keep the final decision yours.",
-      "sources": ["ai-system-design/publication/v2/article.md#make-the-cost-of-a-decision-part-of-its-execution-contract"],
+      "sources": ["eval/ai-system-design/publication/v2/article.md#make-the-cost-of-a-decision-part-of-its-execution-contract"],
       "cues": ["count", "Find the repository", "yours"]
     }
   ]

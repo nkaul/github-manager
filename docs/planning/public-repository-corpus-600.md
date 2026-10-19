@@ -64,7 +64,7 @@ Reuse the existing OAuth App's authorized server-side public-data access, subjec
 
 Use official GitHub read-only API endpoints, verified TLS, conditional requests and a shared rate limiter. Proposed run ceilings: **12,000 GitHub HTTP attempts**, **200 search requests** within that total, and **1 GiB retained source content**. Count failures/retries globally across both agents, obey lower server quotas and `Retry-After`, checkpoint at limits, and never rotate identities to evade throttling. Authentication normally provides a much larger allowance than anonymous requests, but actual response headers govern admission. No paid model API calls, AWS changes, GitHub mutations or app database changes are included.
 
-Put source snapshots and detailed datasets under the already ignored `docs/validation/private/corpus-600/`, with restrictive local file permissions. Store license metadata and source notices, flag unknown licenses, and do not publish complete README copies as part of this work. Keep the query catalog, methodology and aggregate reports under `ai-system-design/evaluation/corpus-600/`. Existing app extraction limits remain unchanged.
+Put source snapshots and detailed datasets under the already ignored `docs/validation/private/corpus-600/`, with restrictive local file permissions. Store license metadata and source notices, flag unknown licenses, and do not publish complete README copies as part of this work. Keep the query catalog, methodology and aggregate reports under `eval/ai-system-design/evaluation/corpus-600/`. Existing app extraction limits remain unchanged.
 
 ## Two-agent confirmation test
 
@@ -81,7 +81,7 @@ The anonymous responses showed a 60/hour core allowance and 10/minute search all
 
 Agent A also found differing Java-version statements between README and manifest, demonstrating why evidence conflicts must be recorded. Agent B found that a topic search spans different product purposes, demonstrating why search hits cannot establish membership.
 
-Reports: [Agent A](../../ai-system-design/evaluation/corpus-600/planning/readiness-agent-a.md), [Agent B](../../ai-system-design/evaluation/corpus-600/planning/readiness-agent-b.md).
+Reports: [Agent A](../../eval/ai-system-design/evaluation/corpus-600/planning/readiness-agent-a.md), [Agent B](../../eval/ai-system-design/evaluation/corpus-600/planning/readiness-agent-b.md).
 
 GitHub documentation: [repository search syntax](https://docs.github.com/en/search-github/searching-on-github/searching-for-repositories), [search limits](https://docs.github.com/en/rest/search/search), [contents API](https://docs.github.com/en/rest/repos/contents), [rate limits and OAuth public-data access](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api).
 

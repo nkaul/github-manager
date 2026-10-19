@@ -1,7 +1,7 @@
 /* Illustrated state changes; no remote assets or autonomous model activity. */
 for(let i=1;i<=8;i++){
  const names=['actual-system','retrieval-and-generation','evidence-and-chunking','controlled-analysis-loop','harness-and-tokenomics','evaluation-evidence','contextual-retrieval-comparison','future-experiment-roadmap'];
- files['detail'+i]=asset(`ai-system-design/illustrated/figures/0${i}-${names[i-1]}.png`);
+ files['detail'+i]=asset(`eval/ai-system-design/illustrated/figures/0${i}-${names[i-1]}.png`);
 }
 const measure=document.createElement('canvas').getContext('2d');
 function wrap(s,size,max){measure.font=`${size}px Ink`;const out=[];let row='';for(const word of String(s).split(/\s+/)){const next=row?row+' '+word:word;if(measure.measureText(next).width>max&&row){out.push(row);row=word}else row=next}if(row)out.push(row);return out}

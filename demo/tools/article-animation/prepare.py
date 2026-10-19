@@ -6,7 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / "demo/article-animation"
 WORK = ROOT / "demo/work/article-animation"
-DOC = ROOT / "ai-system-design/animation"
+DOC = ROOT / "eval/ai-system-design/animation"
 
 def save(path, obj):
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -18,7 +18,7 @@ for d in (OUT, WORK, DOC):
 baseline = DOC / "preservation-baseline.json"
 if not baseline.exists():
     files = set()
-    files.update(p for p in (ROOT / "ai-system-design").rglob("*") if p.is_file() and DOC not in p.parents and "__pycache__" not in p.parts)
+    files.update(p for p in (ROOT / "eval/ai-system-design").rglob("*") if p.is_file() and DOC not in p.parents and "__pycache__" not in p.parts)
     files.update(p for p in (ROOT / "docs/validation").rglob("*") if p.suffix in {".md", ".json"} and p.is_file())
     for folder in ["docs/diagrams", "docs/assets/images", "demo/full-v2", "demo/voice-preview-v2"]:
         files.update(p for p in (ROOT / folder).rglob("*") if p.is_file())

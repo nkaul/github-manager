@@ -38,7 +38,7 @@ Approximately 85.52 seconds of silence were inserted at existing sentence bounda
 
 All seventy-four beat layouts passed font loading and text-bound checks. Cards reveal at staged word positions; request tokens, phrase scoring and receipt transitions provide motion beyond the original diagram images. Four encoded-region comparisons verify visible keyword, request, receipt and reservation changes after encoding; see [motion QA](motion-qa.json). This establishes visible change, not comprehension. The renderer samples active motion intervals at 30 fps and holds a rendered frame during deliberate reading pauses; the final output is constant 30 fps. Original raster illustrations are never rewritten.
 
-See [synchronization QA](sync-qa.json), [media QA](media-qa.json) and the [measured storyboard](../../ai-system-design/animation/full/storyboard.md). Automated alignment, audio meters and muted playback do not establish listener preference, accent consistency or comprehension. Those remain editorial review judgments.
+See [synchronization QA](sync-qa.json), [media QA](media-qa.json) and the [measured storyboard](../../eval/ai-system-design/animation/full/storyboard.md). Automated alignment, audio meters and muted playback do not establish listener preference, accent consistency or comprehension. Those remain editorial review judgments.
 
 ## Player and encoded-media verification
 
@@ -64,6 +64,6 @@ The new revision accounts for $1.68. Its recorded admission snapshot plus these 
 
 ## Preservation and local reproducibility
 
-The pre-production baseline confirms **490 files unchanged**, including prior article editions, original diagrams, pilot/full demo media, readiness reports and protected accounting data. All new work is confined to `demo/article-animation-full/`, `demo/tools/article-animation-full/`, `ai-system-design/animation/full/` and ignored media intermediates. [Preservation audit](../../ai-system-design/animation/full/preservation-qa.json), [asset manifest](../../ai-system-design/animation/full/assets-manifest.json) and [export checksums](checksums.json).
+The pre-production baseline confirms **490 files unchanged**, including prior article editions, original diagrams, pilot/full demo media, readiness reports and protected accounting data. All new work is confined to `demo/article-animation-full/`, `demo/tools/article-animation-full/`, `eval/ai-system-design/animation/full/` and ignored media intermediates. [Preservation audit](../../eval/ai-system-design/animation/full/preservation-qa.json), [asset manifest](../../eval/ai-system-design/animation/full/assets-manifest.json) and [export checksums](checksums.json).
 
 See the [media guide](README.md) for local restart/render commands. Further media generation or public upload is outside this completed local production. The original pilot and its documentation remain historical records, including their earlier statements that a full version was deferred.

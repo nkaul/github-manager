@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-10-19T08:21:04.774613+00:00",
+  "original_package_files_retained": 259,
+  "unchanged_package_files": 200,
+  "edited_originals_preserved_in_archive": 87,
+  "unchanged_files_outside_package": 655,
+  "local_links_checked": 1317,
+  "introduced_broken_links": [],
+  "preexisting_missing_local_targets": [
+    {
+      "file": "demo/article-animation-full/README.md",
+      "target": "complete-1080p.mp4"
+    },
+    {
+      "file": "demo/article-animation-full/README.md",
+      "target": "overview-slower-1080p.mp4"
+    },
+    {
+      "file": "docs/planning/main-app-ux-refinement-research.md",
+      "target": "../../frontend/test-results/refinement-1440.png"
+    },
+    {
+      "file": "docs/validation/github-pages-demo-publication.md",
+      "target": "../README.md"
+    },
+    {
+      "file": "docs/validation/github-pages-demo-publication.md",
+      "target": "../recordings/cedar-v2/recording-notes.html"
+    },
+    {
+      "file": "docs/validation/github-pages-demo-publication.md",
+      "target": "../recordings/cedar-v2/verification.json"
+    },
+    {
+      "file": "docs/validation/github-pages-demo-publication.md",
+      "target": "media-manifest.json"
+    }
+  ],
+  "errors": [],
+  "new_model_calls": 0,
+  "scope": "File hashes, archived original bytes, Python syntax, and local link regressions. Separate receipts verify frozen evaluation and ground-truth evidence."
+}
