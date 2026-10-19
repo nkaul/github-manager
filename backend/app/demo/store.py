@@ -6,6 +6,7 @@ import sqlite3
 import time
 import uuid
 from contextlib import contextmanager
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Protocol
 
@@ -182,6 +183,23 @@ class Store:
                     db.execute("UPDATE jobs SET status='CANCELLED_STALE' WHERE id=?", (row["id"],))
                     continue
                 if row["workspace"] not in authorized_workspaces:
+                    if row["kind"] == "SYNC":
+                        run = org["runs"].get(row["id"])
+                        if run:
+                            run.update(
+                                status="FAILED",
+                                message="Your local session ended. Sign in again, then retry Sync",
+                                error_code="SESSION_EXPIRED",
+                                retryable=False,
+                                reauthentication_required=True,
+                                finished_at=datetime.now(UTC).isoformat(),
+                            )
+                        org["control"]["active_run"] = None
+                        self.save(db, row["workspace"], state)
+                        db.execute(
+                            "UPDATE jobs SET status='FAILED',lease=0 WHERE id=?", (row["id"],)
+                        )
+                        continue
                     db.execute(
                         "UPDATE jobs SET status='WAITING_FOR_REAUTH' WHERE id=?", (row["id"],)
                     )
@@ -209,6 +227,13 @@ class Store:
                         status="INTERRUPTED",
                         message="Backend restarted; review results before retry",
                     )
+                    if row["kind"] == "SYNC":
+                        run.update(
+                            error_code="GITHUB_SYNC_INTERRUPTED",
+                            retryable=True,
+                            reauthentication_required=False,
+                            finished_at=datetime.now(UTC).isoformat(),
+                        )
                 if org["control"]["active_run"] == row["id"]:
                     org["control"]["active_run"] = None
                 if row["kind"] == "RESET":

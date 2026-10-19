@@ -1,0 +1,147 @@
+1
+00:00:01,480 --> 00:00:02,514
+Section six.
+
+2
+00:00:02,514 --> 00:00:04,114
+Taxonomy intelligence.
+
+3
+00:00:05,288 --> 00:00:08,128
+The purpose is to propose a vocabulary for a
+
+4
+00:00:08,128 --> 00:00:08,248
+collection.
+
+5
+00:00:09,482 --> 00:00:12,362
+This is different from assigning labels to one repository.
+
+6
+00:00:13,955 --> 00:00:15,855
+Discovery can suggest new concepts;
+
+7
+00:00:16,755 --> 00:00:19,436
+classification must use concepts already approved.
+
+8
+00:00:28,177 --> 00:00:32,637
+The saved discovery request contained thirty compact profiles:
+
+9
+00:00:33,737 --> 00:00:34,597
+ten public samples
+
+10
+00:00:35,257 --> 00:00:36,797
+and twenty authored fixtures.
+
+11
+00:00:38,177 --> 00:00:38,957
+Orion's API,
+
+12
+00:00:39,677 --> 00:00:40,037
+UI,
+
+13
+00:00:40,777 --> 00:00:44,277
+booking, and audit records supplied related purpose evidence.
+
+14
+00:00:45,217 --> 00:00:49,177
+The model proposed Orion Clinical Platform with a Clinical
+
+15
+00:00:49,177 --> 00:00:52,697
+Operations parent and supporting repository IDs.
+
+16
+00:00:53,597 --> 00:00:56,877
+Its twenty proposals were a draft, not a published
+
+17
+00:00:56,877 --> 00:00:57,577
+organization.
+
+18
+00:01:02,847 --> 00:01:06,667
+The app samples owner and language buckets using a
+
+19
+00:01:06,667 --> 00:01:08,547
+deterministic round-robin approach.
+
+20
+00:01:10,837 --> 00:01:14,517
+Collection packing uses a conservative byte allowance before exact
+
+21
+00:01:14,517 --> 00:01:15,257
+token counting,
+
+22
+00:01:16,277 --> 00:01:18,657
+shortening records and pruning phrases where necessary.
+
+23
+00:01:20,547 --> 00:01:22,667
+This can miss structure outside the cohort.
+
+24
+00:01:24,537 --> 00:01:28,157
+The saved direct collection request used its original packing
+
+25
+00:01:28,157 --> 00:01:31,477
+path, so its token counts cannot be attributed to
+
+26
+00:01:31,477 --> 00:01:32,637
+a later optimization.
+
+27
+00:01:38,167 --> 00:01:40,787
+Publication normalizes names and aliases,
+
+28
+00:01:41,447 --> 00:01:44,487
+including Unicode handling, and checks reservations.
+
+29
+00:01:45,587 --> 00:01:48,127
+A visible name can conflict with an alias or
+
+30
+00:01:48,127 --> 00:01:49,227
+archived concept.
+
+31
+00:01:50,447 --> 00:01:53,987
+The app exposes the conflicting record and offers opt-in
+
+32
+00:01:53,987 --> 00:01:54,527
+reuse,
+
+33
+00:01:55,207 --> 00:01:55,487
+renaming,
+
+34
+00:01:56,307 --> 00:01:57,147
+removal, or exclusion.
+
+35
+00:01:58,167 --> 00:02:01,327
+These deterministic checks protect canonical consistency.
+
+36
+00:02:01,877 --> 00:02:05,987
+Similar language is not permission for an automatic semantic
+
+37
+00:02:05,987 --> 00:02:06,407
+merge.

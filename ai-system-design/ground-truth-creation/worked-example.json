@@ -1,0 +1,165 @@
+{
+  "status": "OBSERVED_AGENT_PROPOSALS_NOT_HUMAN_GOLD",
+  "repository_id": 639807859,
+  "full_name": "backstage/backstage-deploy",
+  "commit": "f9f28b08e9c7df14495c84a773081d8a37446d3b",
+  "release_id": "public-corpus-600-english-2026-10-16-v2-PROPOSED",
+  "manifest_sha256": "64ddf1ff160eb817a965f88030dbdd68b4651e1557c5f530f2cdf2898092a14f",
+  "source_bindings": [
+    {
+      "path": "@github-metadata.json",
+      "role": "GITHUB_METADATA",
+      "sha256": "14296f8a0c151a4466727dc68bd7ab01d01adeb25719b7b93aad80b3e59ca763",
+      "bytes": 889,
+      "source_url": "https://github.com/backstage/backstage-deploy"
+    },
+    {
+      "path": "README.md",
+      "role": "README",
+      "sha256": "5411141ee59466ad6ea5105a38d2c0690bfd6fce6c852809ea598ec49d412d73",
+      "bytes": 609,
+      "source_url": "https://github.com/backstage/backstage-deploy/blob/f9f28b08e9c7df14495c84a773081d8a37446d3b/README.md"
+    },
+    {
+      "path": "package.json",
+      "role": "SUPPORTING",
+      "sha256": "438503ea2df5f5a19956eaccd93c8cb33ded0cb9de4694de875a8ea59ad21f6d",
+      "bytes": 2712,
+      "source_url": "https://github.com/backstage/backstage-deploy/blob/f9f28b08e9c7df14495c84a773081d8a37446d3b/package.json"
+    },
+    {
+      "path": "LICENSE",
+      "role": "SUPPORTING",
+      "sha256": "30322716d30efe6588e48b7bf82520f7d45e51e5419acdcab4c8d66ad13d9f93",
+      "bytes": 10843,
+      "source_url": "https://github.com/backstage/backstage-deploy/blob/f9f28b08e9c7df14495c84a773081d8a37446d3b/LICENSE"
+    }
+  ],
+  "shared_labels": [
+    {
+      "id": "project:backstage-29174255",
+      "name": "Backstage",
+      "kind": "PROJECT"
+    },
+    {
+      "id": "tag:typescript-32104670",
+      "name": "TypeScript",
+      "kind": "TAG"
+    },
+    {
+      "id": "topic:application-deployment-6b78df0c",
+      "name": "Application Deployment",
+      "kind": "TOPIC"
+    },
+    {
+      "id": "topic:cloud-provisioning-2cd6b89b",
+      "name": "Cloud Provisioning",
+      "kind": "TOPIC"
+    }
+  ],
+  "a_only_labels": [],
+  "b_only_labels": [
+    {
+      "id": "tag:node-js-ad019977",
+      "name": "Node.js",
+      "kind": "TAG"
+    },
+    {
+      "id": "topic:developer-platform-integration-4405d323",
+      "name": "Developer Platform Integration",
+      "kind": "TOPIC"
+    },
+    {
+      "id": "topic:infrastructure-as-code-8dfb9c8d",
+      "name": "Infrastructure as Code",
+      "kind": "TOPIC"
+    }
+  ],
+  "derived_domains": [
+    {
+      "id": "domain:developer-platforms-and-collaboration-16d3891e",
+      "name": "Developer platforms and collaboration"
+    }
+  ],
+  "registry_definitions": {
+    "domain:developer-platforms-and-collaboration-16d3891e": {
+      "id": "domain:developer-platforms-and-collaboration-16d3891e",
+      "kind": "DOMAIN",
+      "name": "Developer platforms and collaboration",
+      "description": "Developer portals, software forges, editing and language tooling, and engineering collaboration.",
+      "aliases": [],
+      "domain": null
+    },
+    "project:backstage-29174255": {
+      "id": "project:backstage-29174255",
+      "kind": "PROJECT",
+      "name": "Backstage",
+      "description": "Backstage platform implementation or dedicated plugin/component; merely listing a Backstage integration is insufficient.",
+      "aliases": [],
+      "domain": "domain:developer-platforms-and-collaboration-16d3891e"
+    },
+    "tag:node-js-ad019977": {
+      "id": "tag:node-js-ad019977",
+      "kind": "TAG",
+      "name": "Node.js",
+      "description": "Node.js",
+      "aliases": [],
+      "domain": null
+    },
+    "tag:typescript-32104670": {
+      "id": "tag:typescript-32104670",
+      "kind": "TAG",
+      "name": "TypeScript",
+      "description": "TypeScript",
+      "aliases": [],
+      "domain": null
+    },
+    "topic:application-deployment-6b78df0c": {
+      "id": "topic:application-deployment-6b78df0c",
+      "kind": "TOPIC",
+      "name": "Application Deployment",
+      "description": "Packaging, installing and running applications or application components on infrastructure.",
+      "aliases": [],
+      "domain": null
+    },
+    "topic:cloud-provisioning-2cd6b89b": {
+      "id": "topic:cloud-provisioning-2cd6b89b",
+      "kind": "TOPIC",
+      "name": "Cloud Provisioning",
+      "description": "Provisioning cloud infrastructure resources",
+      "aliases": [],
+      "domain": null
+    },
+    "topic:developer-platform-integration-4405d323": {
+      "id": "topic:developer-platform-integration-4405d323",
+      "kind": "TOPIC",
+      "name": "Developer Platform Integration",
+      "description": "Dedicated clients, providers and plugins that integrate or configure developer platforms.",
+      "aliases": [],
+      "domain": null
+    },
+    "topic:infrastructure-as-code-8dfb9c8d": {
+      "id": "topic:infrastructure-as-code-8dfb9c8d",
+      "kind": "TOPIC",
+      "name": "Infrastructure as Code",
+      "description": "Declarative provisioning and lifecycle management of infrastructure",
+      "aliases": [
+        "IaC"
+      ],
+      "domain": null
+    }
+  },
+  "review_band": "RED",
+  "review_reasons": [
+    "Independent positive label sets differ; omissions remain unknown",
+    "A primary concept may be missing from the known registry",
+    "At least one annotation dimension has incomplete or unknown scope"
+  ],
+  "article_excerpt": {
+    "path": "README.md",
+    "quote": "CLI to help deploy Backstage on a specified cloud provider.",
+    "note": "Short exact substring; rest of article/figure source descriptions are paraphrased."
+  },
+  "human_outcome": "NOT_ASSERTED",
+  "limits": "Agent rationale and real citations do not establish semantic correctness; omissions are unknown, not negative."
+}

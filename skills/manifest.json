@@ -1,0 +1,112 @@
+{
+  "created_at_utc": "2026-10-16T08:26:12.418327+00:00",
+  "checks": {
+    "engaging-technical-writing": {
+      "files": 7,
+      "canonical_copy_identical": true,
+      "entrypoint_words": 402,
+      "validator": "Skill is valid!"
+    },
+    "illustrated-explainers": {
+      "files": 10,
+      "canonical_copy_identical": true,
+      "entrypoint_words": 563,
+      "validator": "Skill is valid!"
+    },
+    "system-design": {
+      "files": 9,
+      "canonical_copy_identical": true,
+      "entrypoint_words": 581,
+      "validator": "Skill is valid!"
+    }
+  },
+  "style_assets": [
+    {
+      "file": "illustrated-explainers/assets/style-overview.png",
+      "original": "docs/diagrams/github_manager_system_overview.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "file": "illustrated-explainers/assets/style-mechanism.png",
+      "original": "ai-system-design/illustrated/figures/02-retrieval-and-generation.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "file": "illustrated-explainers/assets/style-evidence.png",
+      "original": "ai-system-design/illustrated/figures/03-evidence-and-chunking.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    }
+  ],
+  "writing_originals_unchanged": true,
+  "active_local_links_checked": 51,
+  "broken_active_links": [],
+  "known_inherited_link": [
+    {
+      "file": "skills/engaging-technical-writing/references/provenance.md",
+      "href": "../../../../ai-system-design/publication/v2-plan.md"
+    }
+  ],
+  "prior_baseline": {
+    "files_checked": 490,
+    "changed_or_missing": []
+  },
+  "independent_forward_test": {
+    "skill": "system-design",
+    "fixture": "validation/system-design-forward/README.md",
+    "review": "validation/system-design-forward/review.md",
+    "result": "PASS_BOUNDED_PLAN_ONLY_CASE",
+    "limits": "One reduced fixture; not a usability study, engagement result or general success rate."
+  },
+  "files": {
+    "AGENT-INSTRUCTIONS.md": "a93359d5640829ec0f10d17cf891f8f4058d023751b5b459b13eae185ad856a9",
+    "PROVENANCE.md": "db47a9bee2d934b71d28257b8d780d4712e674c213c6ad35384e03bace346dd9",
+    "README.md": "0cf378297cf21353db446d37c3628a59b72db93e46b4b06a45494de8eb9ca5c3",
+    "engaging-technical-writing/LICENSE": "ac01fb25b98609fd4de0b35675021bae8701fe2d9ef5e096047269bc38035292",
+    "engaging-technical-writing/SKILL.md": "53d80825060c8a45ce80a5cf8eadfe933c813955df5dcb5bdc82ebb3a51f1c30",
+    "engaging-technical-writing/agents/openai.yaml": "ba794082169a1146ff0a15ee7a0b6501aec41d1e2ccd7dabcd23e85aad4b80ce",
+    "engaging-technical-writing/references/narrative-and-explanation.md": "4673b2c3b298a32d0e89295d966b06aa01df2e483e4cd75750e2d904874732ee",
+    "engaging-technical-writing/references/platform-adaptations.md": "16b060a937ff7b6b983d5e3d17b08a6c2e3cdd2014eee00272b0fbac59c63764",
+    "engaging-technical-writing/references/provenance.md": "1a2c7eba7bafd7e127c1f1b19ddf983b41e8a1bc143cc5c6aacd7712541f7e62",
+    "engaging-technical-writing/references/review-and-refinement.md": "a6951f6cf31d3a65dc9e4d7416e66e50b7e5875e02f8ec46f14b07eae55f8e69",
+    "illustrated-explainers/SKILL.md": "a5220edcc1e62b44d1cd5c30d5a94d7e30c3881d31226965396c914da8a84130",
+    "illustrated-explainers/agents/openai.yaml": "341a2e2c1c215f1acd42e2b9f4e983be9c4aea81e06dc5820e3076aa6f36d813",
+    "illustrated-explainers/assets/style-evidence.png": "30e26eb19aaccc317e173d82c754240800e5a6a1ca763be1a6f9ceb387e4dc9a",
+    "illustrated-explainers/assets/style-mechanism.png": "de48a6a3a331d994b717a8e5915a6aadca465188720e5823f62c3685e27f0ef4",
+    "illustrated-explainers/assets/style-overview.png": "b7595378eb5eb6a3b28a12ef710e4c88893f1715aa6afb6502863a7128346ca9",
+    "illustrated-explainers/references/content-and-qa.md": "573a77124ded50f388304e1686f621f1c801eb6225c84114f527afb3cf2d807a",
+    "illustrated-explainers/references/motion-and-narration.md": "855bdc99f109e63452d2bbeddabcdf3864c68089271c0d1a5996cd2a4fab3c31",
+    "illustrated-explainers/references/prompt-patterns.md": "9d2a3d1585132d56851c50a745dcf54f7c77cb57b6138e16225903dd2f94ad9d",
+    "illustrated-explainers/references/provenance.md": "6c1beb190924a641ad07293bdec99c2e073cbaf4daa77d06868f84f13f312ac7",
+    "illustrated-explainers/references/style-and-composition.md": "1c5702600a5db4486a169013657a1f25756fa8024708fd5f73aa8a7d67ac275b",
+    "prompts/composed-workflow.md": "b825e8fac1cfae799f10d12f43619aa2ff83a0feeabc042a1107e53dd9710bd2",
+    "prompts/illustration.md": "117972b069c94198e4d85e0397c9fd7b300fbc9b042ceb0380fb521e98975c29",
+    "prompts/system-design.md": "88731c2ebe7824cfd17ce3083abef3c11be8562d8daec8ae90487ea2b4307622",
+    "prompts/writing.md": "f287a032e87e82941eff9106b3909b8387e958473229beae193f1fdd65147a61",
+    "source-preservation.json": "ee770d5675eb41376e2bd07ed1a77d22ec05f1c2538a80ddfc1a82387cd575b0",
+    "system-design/SKILL.md": "8cf9f308b97f1408e4565a9b039619c7dcd332555d41c9061de1848e24c9e92c",
+    "system-design/agents/openai.yaml": "f0b8b154d762efe13d50cb6954eca5a29dc4d02a2092cfc549725212aef6e548",
+    "system-design/references/ai-and-evaluation.md": "2e61f0cd6a1302d6eb682cbf0f034f702f89a1ddb047f07eaccb45a256b73729",
+    "system-design/references/architecture-and-data.md": "f0644626a6aa59bed0a1e2b6eab9cba9e9a617d1cb3f2a7f928919ae9427216e",
+    "system-design/references/design-review.md": "22580912f422698765d2d2cee1f9876655d11f336b4b46591035769ec0d11dc9",
+    "system-design/references/execution-and-operations.md": "ce9e46af6c9f36461d8984e5083aaa761f7afd0b1dc300d57e041d8cb81460bc",
+    "system-design/references/experience-and-communication.md": "e1b7fd50d30da56a2c0169317c87938dbbbadf6e9fe6cd5e843a5c935c7a514c",
+    "system-design/references/github-manager-case-study.md": "551e6e95084938738ad36ac405604997232b05af6fa23b54c6921666f2b697af",
+    "system-design/references/requirements-and-decisions.md": "f674072f17413ac40dd48353f9771e9f63e745e24fbb45792351375d721a9afe",
+    "validation/system-design-forward/README.md": "98190fd2c6de332edb4c80c69a848bee06ada3cca114a764dfd0f8c6402b35d8",
+    "validation/system-design-forward/approved-design.md": "a9bd9429b3fbe65306d3fa53939fd09c576a6fd76dadba63a21f92b76bf70942",
+    "validation/system-design-forward/historical-proposal.md": "1947b13f81dba56b72c0efdb20eba02c5d7976f5f135c6694d59e7937496e319",
+    "validation/system-design-forward/review.md": "ec0d81a40ac79312c71f3ca2349d6e8c116aa4106b0f97b510663104e368c25e",
+    "validation/system-design-forward/review.raw.txt": "26af07301f628feed726fbe98d9a9299b969a64b82085934bbe4020807de6e8f",
+    "validation/system-design-forward/service.py": "bb3afce76ef547a8af082428a849a7946afa9709068ccd7b73d613659c275da1",
+    "validation-report.md": "46205d57a5387b90937265281977a39fb02d8b7be0133cdb14bc58cc300e027b"
+  }
+}

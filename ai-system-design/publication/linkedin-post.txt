@@ -1,0 +1,30 @@
+One of the most useful changes we made to GitHub Manager was giving the AI workflow a receipt.
+
+A repository could have Topics and Tags, a completed analysis, and still have no Project. Treating “no Project” as “not analyzed” blurred the workflow and made repeat inference too easy.
+
+We separated four things: accepted labels, analysis completion, freshness, and pending review.
+
+That led to five lessons I’d carry into another AI product:
+
+• Preserve purpose, not just keywords. “Uses FastAPI” and “belongs to this initiative” are different claims. Negation and relationship evidence matter.
+
+• Retrieve a shortlist before asking for a decision. Our baseline uses sparse canonical-candidate retrieval; dense embeddings and reranking remain experiments to justify with evidence.
+
+• Keep authority outside the model. AI proposes existing concept IDs. The application validates them, and accepted or rejected user decisions stay protected.
+
+• Remember completed work. A valid NO_MATCH is a completed result. Previously analyzed repositories can reconcile locally; fresh re-analysis remains explicit.
+
+• Account for each call. Count the actual request, including schema overhead. Reserve a conservative maximum. Keep uncertain usage reserved. Resetting app data does not refill the budget.
+
+A real 20-case regression round produced 50 correct assignments, no unexpected assignments and two misses: 98.0% micro F1.
+
+That set contained 8 public and 12 synthetic repositories and was reused after policy clarification. Broader independent validation is still needed before generalizing the result.
+
+The next questions are about better evidence selection, stronger evaluation and when another model call adds value.
+
+Demo and walkthrough:
+https://nkaul.github.io/github-manager-demo/
+
+How do you decide when an AI workflow should run again—and when stored evidence and local rules are enough?
+
+#AIEngineering #ContextEngineering #RAG

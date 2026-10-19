@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GitHub Manager · Main workspace design preview</title>
+  <link rel="icon" href="zen-cat.svg" type="image/svg+xml"><link rel="stylesheet" href="preview.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to repositories</a>
+  <header class="app-header">
+    <button class="icon-button mobile-menu" data-action="navigation" aria-label="Open navigation" aria-expanded="false"><i data-icon="menu"></i></button>
+    <a class="brand" href="preview.html"><img src="zen-cat.svg" width="36" height="36" alt=""><span>GitHub Manager</span></a>
+    <span class="header-divider"></span>
+    <button class="workspace-switch" data-action="workspace" aria-label="Preview workspace"><span class="workspace-mark">P</span><span>Public examples</span><i data-icon="chevron-down"></i></button>
+    <nav class="top-nav" aria-label="Workspace sections">
+      <button class="top-link is-active" data-action="repositories">Repositories</button>
+      <button class="top-link" data-action="ai"><i data-icon="sparkles"></i><span>AI Organization</span></button>
+      <button class="top-link" data-action="content"><i data-icon="settings"></i><span>Content settings</span></button>
+    </nav>
+    <span class="preview-badge">Design preview</span><button class="avatar" data-action="account" aria-label="Preview account information">PV</button>
+  </header>
+  <button class="navigation-scrim" data-action="navigation" aria-label="Close navigation"></button>
+  <aside class="sidebar" aria-label="Repository navigation">
+    <div class="sidebar-scroll">
+      <div class="nav-heading"><span>Collections</span></div>
+      <nav aria-label="Collections" class="collection-nav">
+        <button class="nav-row is-active" data-view="all"><i data-icon="repos"></i><span>All repositories</span><small>12</small></button>
+        <button class="nav-row" data-view="favorites"><i data-icon="star"></i><span>Favorites</span><small>4</small></button>
+        <button class="nav-row" data-view="latest"><i data-icon="clock"></i><span>Latest Work</span><small>—</small></button>
+        <button class="nav-row" data-view="uncategorized"><i data-icon="inbox"></i><span>No project</span><small>3</small></button>
+      </nav>
+      <div class="nav-heading taxonomy-heading"><span>Domains &amp; projects</span><button class="icon-button" data-action="new-concept" aria-label="Create a concept"><i data-icon="plus"></i></button></div>
+      <nav aria-label="Domains and projects" class="taxonomy-tree">
+        <section class="tree-group"><div class="tree-parent"><button class="tree-disclosure" aria-expanded="true" aria-label="Collapse Web development"><i data-icon="chevron-down"></i></button><button class="tree-domain" data-concept="Web development"><i data-icon="domain"></i><span>Web development</span><small>4</small></button></div><div class="tree-children"><button class="nav-row" data-concept="React ecosystem"><i data-icon="folder"></i><span>React ecosystem</span><small>2</small></button><button class="nav-row" data-concept="Frontend tooling"><i data-icon="folder"></i><span>Frontend tooling</span><small>2</small></button></div></section>
+        <section class="tree-group"><div class="tree-parent"><button class="tree-disclosure" aria-expanded="true" aria-label="Collapse Backend engineering"><i data-icon="chevron-down"></i></button><button class="tree-domain" data-concept="Backend engineering"><i data-icon="domain"></i><span>Backend engineering</span><small>3</small></button></div><div class="tree-children"><button class="nav-row" data-concept="Python services"><i data-icon="folder"></i><span>Python services</span><small>3</small></button></div></section>
+        <section class="tree-group"><div class="tree-parent"><button class="tree-disclosure" aria-expanded="true" aria-label="Collapse Artificial intelligence"><i data-icon="chevron-down"></i></button><button class="tree-domain" data-concept="Artificial intelligence"><i data-icon="domain"></i><span>Artificial intelligence</span><small>2</small></button></div><div class="tree-children"><button class="nav-row" data-concept="AI applications"><i data-icon="folder"></i><span>AI applications</span><small>2</small></button></div></section>
+        <section class="tree-group"><div class="tree-parent"><button class="tree-disclosure" aria-expanded="false" aria-label="Expand Platform engineering"><i data-icon="chevron-right"></i></button><button class="tree-domain" data-concept="Platform engineering"><i data-icon="domain"></i><span>Platform engineering</span><small>0</small></button></div><div class="tree-children" hidden><p class="tree-empty">No project memberships yet.</p></div></section>
+      </nav>
+      <div class="nav-heading facet-heading"><span>Topics</span><button class="text-button" data-action="topics">View all</button></div>
+      <nav aria-label="Topics"><button class="nav-row" data-topic="Web interfaces"><i data-icon="topic"></i><span>Web interfaces</span><small>2</small></button><button class="nav-row" data-topic="API development"><i data-icon="topic"></i><span>API development</span><small>3</small></button><button class="nav-row" data-topic="Language models"><i data-icon="topic"></i><span>Language models</span><small>3</small></button></nav>
+      <div class="nav-heading facet-heading"><span>Tags</span><button class="text-button" data-action="tags">View all</button></div>
+      <nav aria-label="Tags"><button class="nav-row" data-tag="TypeScript"><i data-icon="tag"></i><span>TypeScript</span><small>3</small></button><button class="nav-row" data-tag="Python"><i data-icon="tag"></i><span>Python</span><small>5</small></button></nav>
+    </div>
+    <div class="sidebar-footer"><i data-icon="shield"></i><div>Local design preview<small>No connected account</small></div><button class="icon-button" data-action="preview-info" aria-label="About this preview"><i data-icon="info"></i></button></div>
+  </aside>
+  <main id="main" class="main-content">
+    <div class="page-heading"><div><p class="breadcrumb">Workspace <i data-icon="chevron-right"></i> <span id="breadcrumb-view">All repositories</span></p><h1 id="page-title">Repositories</h1><p id="page-description">A clear view of your repositories and how they fit together.</p></div><div class="heading-actions"><button class="button" data-action="sync"><i data-icon="sync"></i><span>Sync GitHub</span></button><button class="button primary" data-action="ai"><i data-icon="sparkles"></i><span>Organize with AI</span></button></div></div>
+    <p class="preview-note"><i data-icon="info"></i><span><strong>Illustrative workspace.</strong> Public repository names; example memberships and suggestions. Changes stay in memory.</span><button class="text-button" data-action="preview-info">Details</button></p>
+    <section class="summary-strip" aria-label="Repository summary"><div><span><i data-icon="repos"></i>In this view</span><strong id="stat-total">12</strong></div><div><span><i data-icon="folder"></i>With a project</span><strong id="stat-organized">9</strong></div><div><span><i data-icon="inbox"></i>No project</span><strong id="stat-unorganized">3</strong></div><button data-action="review"><span><i data-icon="review"></i>Needs review</span><strong>3</strong></button><div class="selection-stat"><span><i data-icon="check"></i>Selected</span><strong id="stat-selected">0</strong></div></section>
+    <section class="repo-panel" aria-label="Repository explorer">
+      <div class="explorer-toolbar">
+        <label class="search-field"><i data-icon="search"></i><input id="repo-search" type="search" placeholder="Search repositories…" aria-label="Search repositories"><kbd>/</kbd></label>
+        <select id="language-filter" aria-label="Filter by language"><option value="">All languages</option><option>TypeScript</option><option>JavaScript</option><option>Python</option><option>Go</option><option value="Unknown">Unknown</option></select>
+        <button class="button filter-trigger" data-action="filters" aria-expanded="false"><i data-icon="filter"></i>Filters<span id="filter-count" hidden></span></button>
+        <div class="toolbar-end"><span id="result-count" class="result-count" role="status">12 repositories</span><div class="view-toggle" role="group" aria-label="Repository layout"><button class="icon-button is-active" data-layout="list" aria-label="List view" aria-pressed="true"><i data-icon="list"></i></button><button class="icon-button" data-layout="cards" aria-label="Card view" aria-pressed="false"><i data-icon="grid"></i></button></div></div>
+        <div id="filter-popover" class="filter-popover" hidden><div class="popover-heading"><strong>Filter repositories</strong><button class="icon-button" data-action="close-filters" aria-label="Close filters"><i data-icon="close"></i></button></div><label>Organization status<select id="status-filter"><option value="">Any status</option><option value="organized">With a project</option><option value="uncategorized">No project</option><option value="review">Needs review</option></select></label><label>Topic<select id="topic-filter"><option value="">All topics</option><option>Web interfaces</option><option>API development</option><option>Language models</option><option>Developer tooling</option><option>Infrastructure</option></select></label><label>Tag<select id="tag-filter"><option value="">All tags</option><option>TypeScript</option><option>Python</option><option>Go</option><option>Open source</option></select></label><p class="field-help">Filters combine across fields.</p><div class="popover-footer"><button class="text-button" data-action="clear-filters">Clear filters</button><button class="button primary" data-action="close-filters">Done</button></div></div>
+      </div>
+      <div id="active-filters" class="active-filters" hidden></div>
+      <div id="selection-toolbar" class="selection-toolbar" hidden><span><strong id="selected-count">0</strong> selected</span><button class="button" data-action="assign"><i data-icon="folder-plus"></i>Add membership</button><button class="button" data-action="ai"><i data-icon="sparkles"></i>Organize selected</button><button class="text-button" data-action="clear-selection">Clear selection</button></div>
+      <div id="repo-list" class="repo-list"></div>
+      <div class="list-footer"><span id="footer-count">Showing all 12 example repositories</span><span>GitHub metadata and local organization stay separate.</span></div>
+    </section>
+    <div class="review-nudge"><div class="nudge-icon"><i data-icon="review"></i></div><div><strong>Keep your taxonomy intentional</strong><p>Review proposed concepts and resolve name or alias conflicts before publishing.</p></div><button class="button" data-action="review">Review taxonomy <i data-icon="arrow-right"></i></button></div>
+  </main>
+  <dialog id="app-dialog" class="app-dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <script src="preview.js"></script>
+</body>
+</html>

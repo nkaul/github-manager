@@ -10,6 +10,7 @@
     "lint": "eslint .",
     "test:pretest": "playwright test",
     "test:demo": "playwright test --config playwright.demo.config.ts",
+    "test:corpus": "playwright test --config playwright.corpus.config.ts",
     "test:regression": "playwright test --config playwright.regression.config.ts"
   },
   "dependencies": {

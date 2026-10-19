@@ -1,0 +1,22 @@
+{
+  "scope": "Original academic article and all eight PNG/SVG diagram pairs",
+  "sha256": {
+    "github-manager-ai-system-design.md": "9bfece4ee8795a678247da66013421e02dca6c6d29caf3143d76ee984adf4ae0",
+    "figures/01-actual-system.png": "c3ab06f04a8ae69fe18f1328f581f1a62d4fe9280b7438e2c65c78145c4e097c",
+    "figures/02-retrieval-and-generation.png": "90f0c6364c2ff08b48405b8bfeaea76548efbf3732ef20885b6af5176cf27440",
+    "figures/03-evidence-and-chunking.png": "78f84566f27ae2fcabb887eb0da3632d740f51a75c648150c495f2a31713c4fc",
+    "figures/04-controlled-analysis-loop.png": "246e147e0fab86ef35c7f465e76592a162f77e150548b82dab8d8f0650ff3d87",
+    "figures/05-harness-and-tokenomics.png": "493419e832d7950c29301932c40ae4d5efaeebd28ed10c6eae047edbd26fc2c9",
+    "figures/06-evaluation-evidence.png": "69362f862ba477297a73ec04df571fafd405a7e012222034874e28b2cb635f9a",
+    "figures/07-contextual-retrieval-comparison.png": "af3f23a6a22a200d9b6324f14c18ea1d3e801ad3054f2d0a8aac2ae6f1332969",
+    "figures/08-future-experiment-roadmap.png": "2dafc3f6e657790d20a88b863daf56370309da1685aab589e764e2fa7900ce24",
+    "figures/01-actual-system.svg": "a141d414ea3ef050e6069db7024f3cbba17f0d86a5a5481e392a936d9196da4d",
+    "figures/02-retrieval-and-generation.svg": "ca0c903cc621bc8f8366f58883b3ca840c06fda148eeb26753ad9c4f1d87513e",
+    "figures/03-evidence-and-chunking.svg": "dbb987934a7941fefe5e5d9e56b5757ec5da4e5cdedc585fe16c361d281c12b3",
+    "figures/04-controlled-analysis-loop.svg": "cb9552d9feb3820c9712eb1a869aabf2dbc463a3e6ba025702c120441ac61b61",
+    "figures/05-harness-and-tokenomics.svg": "f4eb092ef1b8badef0c2e2424a59f90a0c5bf07f5335fc972d1e36a1451a533e",
+    "figures/06-evaluation-evidence.svg": "1e2f4be761e934343730eaf5a3de5e3fa9757d8f4a98f13a97499512eb4b5aab",
+    "figures/07-contextual-retrieval-comparison.svg": "104bd2f552367fdb48abe937377d253d87f567b1e0b185bbfbda90cd2347f203",
+    "figures/08-future-experiment-roadmap.svg": "0062d5e3c2a48aa993fb515596632d4c55f2409fbbe5abe64381fa553311d0b7"
+  }
+}

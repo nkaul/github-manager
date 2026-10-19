@@ -1,0 +1,107 @@
+{
+  "cap_usd": 0.4,
+  "max_http_requests": 5,
+  "requests": [
+    {
+      "id": "availability",
+      "endpoint": "models/gpt-4o-mini-tts",
+      "method": "GET",
+      "model": "gpt-4o-mini-tts",
+      "input_sha256": "3ca69267275d11a8aa3c261e37c513ea5c966bae66f95b8cf8335527031726e1",
+      "reserved_usd": 0,
+      "state": "SUCCEEDED",
+      "at": "2026-10-15T06:44:57.488494+00:00",
+      "prior_budget": {
+        "cap_usd": 5,
+        "prior_accounted_usd": 2.213029,
+        "active_holds_usd": 0.0,
+        "prior_generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "4e3bd3e8-816c-4e4d-b359-0bdc75030dc3",
+      "response_sha256": "6b602aee07e730b512d24d18ecbd6139bfe161121c74e541cbc390dd80fcc15e",
+      "bytes": 124,
+      "settled_usd": 0
+    },
+    {
+      "id": "tts-cedar-v1",
+      "endpoint": "audio/speech",
+      "method": "POST",
+      "model": "gpt-4o-mini-tts",
+      "input_sha256": "b1160f739650288d058be888661bb653100064170f345fd7eef88cbe5b2f541d",
+      "reserved_usd": 0.12,
+      "state": "SUCCEEDED",
+      "at": "2026-10-15T06:45:28.809552+00:00",
+      "prior_budget": {
+        "cap_usd": 5,
+        "prior_accounted_usd": 2.213029,
+        "active_holds_usd": 0.0,
+        "prior_generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_c3406dc8dbb945cdac72bf2203fe70c5",
+      "response_sha256": "8a9630c7931a88cb7f187368348ed5abb504e682715095ee2c8ac022e2777039",
+      "bytes": 5240796
+    },
+    {
+      "id": "align-cedar-v1",
+      "endpoint": "audio/transcriptions",
+      "method": "POST",
+      "model": "whisper-1",
+      "input_sha256": "df32d4c81a2becbbae889d25ea561389c79ce36c86d6e05c6c3d18fa15f2d076",
+      "reserved_usd": 0.06,
+      "state": "SUCCEEDED",
+      "at": "2026-10-15T06:48:21.126079+00:00",
+      "prior_budget": {
+        "cap_usd": 5,
+        "prior_accounted_usd": 2.213029,
+        "active_holds_usd": 0.0,
+        "prior_generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_3770d5a1b6c1437dafc5e6fce65c95b2",
+      "response_sha256": "55b227a381e98dc4cfd325e000559c45a4c90b745d88c93ad7142416bfd29f58",
+      "bytes": 17502
+    },
+    {
+      "id": "tts-ending-repair",
+      "endpoint": "audio/speech",
+      "method": "POST",
+      "model": "gpt-4o-mini-tts",
+      "input_sha256": "1c38698eeb3282255b21a7be65d584d65d1c16000f6f4d76f594457d15938bc0",
+      "reserved_usd": 0.08,
+      "state": "SUCCEEDED",
+      "at": "2026-10-15T06:51:47.869306+00:00",
+      "prior_budget": {
+        "cap_usd": 5,
+        "prior_accounted_usd": 2.213029,
+        "active_holds_usd": 0.0,
+        "prior_generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_9299ddb20e404ed1a111996c28f2ba8d",
+      "response_sha256": "8ad16112a8998598329987342101196122a62b2679044eeac10818de8ce99395",
+      "bytes": 719324
+    },
+    {
+      "id": "align-ending-repair",
+      "endpoint": "audio/transcriptions",
+      "method": "POST",
+      "model": "whisper-1",
+      "input_sha256": "e372d0852544f4e002a2c72f960867506c5d0ec488c922087c086f745e1acf75",
+      "reserved_usd": 0.03,
+      "state": "SUCCEEDED",
+      "at": "2026-10-15T06:51:51.906753+00:00",
+      "prior_budget": {
+        "cap_usd": 5,
+        "prior_accounted_usd": 2.213029,
+        "active_holds_usd": 0.0,
+        "prior_generation_rows": 91
+      },
+      "http_status": 200,
+      "request_id": "req_142464f9d1cb45f3b918332e5fed2699",
+      "response_sha256": "5b95d12a6304e2d4499609bba682392b6fa891003220c89ed905c5bcc7911158",
+      "bytes": 1966
+    }
+  ]
+}

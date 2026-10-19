@@ -1,0 +1,1828 @@
+{
+  "duration": 120,
+  "voice": "cedar",
+  "delivery": "Option D \u00b7 calmer delivery",
+  "speed": 0.93,
+  "segments": [
+    {
+      "id": "discover",
+      "heading": "Your repositories deserve a map.",
+      "text": "Your own repositories. Shared projects. Libraries you starred for later. Finding them is easy. Remembering how they fit together is harder. GitHub Manager brings them into one workspace, where you can search, explore, and organize.",
+      "sources": [
+        "README.md",
+        "ai-system-design/publication/v2/article.md#opening"
+      ],
+      "cues": {
+        "Shared projects": 3.040000057220459,
+        "GitHub Manager": 10.94000015258789,
+        "search": 13.94000015258789
+      },
+      "start": 0,
+      "end": 16.602,
+      "audio_start": 0.6,
+      "audio_end": 15.93
+    },
+    {
+      "id": "organize",
+      "heading": "Same technology. Different purpose.",
+      "text": "Projects group an initiative. Domains group those projects. Topics describe capabilities, and tags describe technologies. Two repositories can both use Python without belonging to the same project.",
+      "sources": [
+        "ai-system-design/publication/v2/article.md#give-the-organization-a-vocabulary-people-can-understand"
+      ],
+      "cues": {
+        "Domains": 19.6819994468689,
+        "Topics": 21.621999980926518,
+        "Two repositories": 26.042000057220463
+      },
+      "start": 16.602,
+      "end": 30.432000000000002,
+      "audio_start": 16.852,
+      "audio_end": 30.122
+    },
+    {
+      "id": "taxonomy",
+      "heading": "Agree on the vocabulary first.",
+      "text": "There are two separate AI jobs. Taxonomy discovery proposes a vocabulary from a collection of repositories. You review and edit it. Classification then works with approved concepts, rather than inventing new labels.",
+      "sources": [
+        "ai-system-design/publication/v2/article.md#first-ask-the-model-to-propose-a-useful-vocabulary"
+      ],
+      "cues": {
+        "proposes": 34.68199809265137,
+        "You review": 38.401999313354494,
+        "Classification": 40.16200144958496
+      },
+      "start": 30.432000000000002,
+      "end": 45.472,
+      "audio_start": 30.682000000000002,
+      "audio_end": 45.162000000000006
+    },
+    {
+      "id": "evidence",
+      "heading": "Keep the sentence that explains why.",
+      "text": "Follow our synthetic Orion example. Its README says: patient intake API for the Orion Clinical Platform. Uses FastAPI and Python. We keep that purpose sentence, its evidence reference, and useful phrases.",
+      "sources": [
+        "ai-system-design/publication/v2/examples/orion-api.json"
+      ],
+      "cues": {
+        "patient intake": 50.1820009918213,
+        "Uses FastAPI": 53.40199839782716,
+        "purpose sentence": 57.30199992370606
+      },
+      "start": 45.472,
+      "end": 61.504000000000005,
+      "audio_start": 45.722,
+      "audio_end": 61.082
+    },
+    {
+      "id": "retrieve",
+      "heading": "A shortlist is not a decision.",
+      "text": "Local search retrieves six possible concepts. Some are distractions: Forge shares the word platform, but that doesn't establish a relationship. Retrieval finds possibilities. It doesn't assign them.",
+      "sources": [
+        "ai-system-design/publication/v2/examples/orion-api.json"
+      ],
+      "cues": {
+        "six": 63.03400068664551,
+        "Forge": 66.45399885559083,
+        "doesn't assign": 72.69399671936037
+      },
+      "start": 61.504000000000005,
+      "end": 74.16,
+      "audio_start": 61.754000000000005,
+      "audio_end": 73.79400000000001
+    },
+    {
+      "id": "classify",
+      "heading": "Show the model evidence and boundaries.",
+      "text": "The model receives evidence, candidate definitions, instructions, and a response schema. In the saved test, it selected Orion, Web APIs, FastAPI, and Python, citing the purpose sentence. You review those suggestions before accepting them.",
+      "sources": [
+        "ai-system-design/publication/v2/examples/orion-api.json"
+      ],
+      "cues": {
+        "response schema": 78.6500016784668,
+        "selected Orion": 81.44999710083007,
+        "citing": 86.84999862670898,
+        "You review": 88.2699967956543
+      },
+      "start": 74.16,
+      "end": 91.702,
+      "audio_start": 74.41,
+      "audio_end": 91.28
+    },
+    {
+      "id": "remember",
+      "heading": "Remember the work. Respect your decisions.",
+      "text": "The app remembers completed analysis separately from labels. Removing a project doesn't erase that receipt. Later changes can reconcile locally. A fresh AI analysis remains an explicit choice.",
+      "sources": [
+        "ai-system-design/publication/v2/article.md#remember-completed-analysis-when-the-organization-changes"
+      ],
+      "cues": {
+        "Removing": 96.04200015258789,
+        "reconcile locally": 99.44199404907226,
+        "explicit choice": 102.82199893188476
+      },
+      "start": 91.702,
+      "end": 104.3,
+      "audio_start": 91.952,
+      "audio_end": 103.822
+    },
+    {
+      "id": "close",
+      "heading": "Useful organization. Your control.",
+      "text": "Every model call has a reviewed budget: count, reserve, generate, record. Find the repository you need. Understand why it belongs. Keep the final decision yours.",
+      "sources": [
+        "ai-system-design/publication/v2/article.md#make-the-cost-of-a-decision-part-of-its-execution-contract"
+      ],
+      "cues": {
+        "count": 108.69000025749207,
+        "Find the repository": 112.85000034332276,
+        "yours": 118.51000019073487
+      },
+      "start": 104.3,
+      "end": 120,
+      "audio_start": 104.55,
+      "audio_end": 119.41
+    }
+  ],
+  "words": [
+    {
+      "word": "Your",
+      "scene": "discover",
+      "start": 0.6,
+      "end": 1.2999999880790711,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "own",
+      "scene": "discover",
+      "start": 1.2999999880790711,
+      "end": 1.6800000429153443,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "repositories.",
+      "scene": "discover",
+      "start": 1.6800000429153443,
+      "end": 2.3999999523162843,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Shared",
+      "scene": "discover",
+      "start": 3.040000057220459,
+      "end": 3.300000047683716,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "projects.",
+      "scene": "discover",
+      "start": 3.300000047683716,
+      "end": 3.8400000095367433,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Libraries",
+      "scene": "discover",
+      "start": 4.540000057220459,
+      "end": 4.759999847412109,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "you",
+      "scene": "discover",
+      "start": 4.759999847412109,
+      "end": 5.060000038146972,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "starred",
+      "scene": "discover",
+      "start": 5.060000038146972,
+      "end": 5.31999979019165,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "for",
+      "scene": "discover",
+      "start": 5.31999979019165,
+      "end": 5.580000019073486,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "later.",
+      "scene": "discover",
+      "start": 5.580000019073486,
+      "end": 5.81999979019165,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Finding",
+      "scene": "discover",
+      "start": 6.759999847412109,
+      "end": 6.759999847412109,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "them",
+      "scene": "discover",
+      "start": 6.759999847412109,
+      "end": 6.960000133514404,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "is",
+      "scene": "discover",
+      "start": 6.960000133514404,
+      "end": 7.179999923706054,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "easy.",
+      "scene": "discover",
+      "start": 7.179999923706054,
+      "end": 7.460000133514404,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Remembering",
+      "scene": "discover",
+      "start": 8.31999979019165,
+      "end": 8.560000038146972,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "how",
+      "scene": "discover",
+      "start": 8.560000038146972,
+      "end": 8.660000419616699,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "they",
+      "scene": "discover",
+      "start": 8.660000419616699,
+      "end": 8.839999771118164,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "fit",
+      "scene": "discover",
+      "start": 8.839999771118164,
+      "end": 9.0399995803833,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "together",
+      "scene": "discover",
+      "start": 9.0399995803833,
+      "end": 9.379999732971191,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "is",
+      "scene": "discover",
+      "start": 9.379999732971191,
+      "end": 9.679999923706054,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "harder.",
+      "scene": "discover",
+      "start": 9.679999923706054,
+      "end": 9.94000015258789,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "GitHub",
+      "scene": "discover",
+      "start": 10.94000015258789,
+      "end": 11.120000457763672,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Manager",
+      "scene": "discover",
+      "start": 11.120000457763672,
+      "end": 11.499999618530273,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "brings",
+      "scene": "discover",
+      "start": 11.499999618530273,
+      "end": 11.839999771118164,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "them",
+      "scene": "discover",
+      "start": 11.839999771118164,
+      "end": 12.020000076293945,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "into",
+      "scene": "discover",
+      "start": 12.020000076293945,
+      "end": 12.219999885559082,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "one",
+      "scene": "discover",
+      "start": 12.219999885559082,
+      "end": 12.520000076293945,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "workspace,",
+      "scene": "discover",
+      "start": 12.520000076293945,
+      "end": 12.959999656677246,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "where",
+      "scene": "discover",
+      "start": 13.44000015258789,
+      "end": 13.560000038146972,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "you",
+      "scene": "discover",
+      "start": 13.560000038146972,
+      "end": 13.639999961853027,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "can",
+      "scene": "discover",
+      "start": 13.639999961853027,
+      "end": 13.94000015258789,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "search,",
+      "scene": "discover",
+      "start": 13.94000015258789,
+      "end": 14.160000419616699,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "explore,",
+      "scene": "discover",
+      "start": 14.879999732971191,
+      "end": 14.879999732971191,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "and",
+      "scene": "discover",
+      "start": 14.980000114440918,
+      "end": 15.620000457763672,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "organize.",
+      "scene": "discover",
+      "start": 15.620000457763672,
+      "end": 15.620000457763672,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Projects",
+      "scene": "organize",
+      "start": 17.161999942779545,
+      "end": 17.781999828338627,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "group",
+      "scene": "organize",
+      "start": 17.781999828338627,
+      "end": 17.921999217987064,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "an",
+      "scene": "organize",
+      "start": 17.921999217987064,
+      "end": 18.64200043869019,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "initiative.",
+      "scene": "organize",
+      "start": 18.64200043869019,
+      "end": 18.64200043869019,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Domains",
+      "scene": "organize",
+      "start": 19.6819994468689,
+      "end": 19.6819994468689,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "group",
+      "scene": "organize",
+      "start": 19.6819994468689,
+      "end": 19.981998683929447,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "those",
+      "scene": "organize",
+      "start": 19.981998683929447,
+      "end": 20.761999370574955,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "projects.",
+      "scene": "organize",
+      "start": 20.761999370574955,
+      "end": 20.761999370574955,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Topics",
+      "scene": "organize",
+      "start": 21.621999980926518,
+      "end": 21.821998836517338,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "describe",
+      "scene": "organize",
+      "start": 21.821998836517338,
+      "end": 22.261999370574955,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "capabilities,",
+      "scene": "organize",
+      "start": 22.261999370574955,
+      "end": 22.901998760223393,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "and",
+      "scene": "organize",
+      "start": 23.52199959945679,
+      "end": 23.981998683929447,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "tags",
+      "scene": "organize",
+      "start": 23.981998683929447,
+      "end": 23.981998683929447,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "describe",
+      "scene": "organize",
+      "start": 23.981998683929447,
+      "end": 24.421999217987064,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "technologies.",
+      "scene": "organize",
+      "start": 24.421999217987064,
+      "end": 25.101999523162846,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Two",
+      "scene": "organize",
+      "start": 26.042000057220463,
+      "end": 26.241998912811283,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "repositories",
+      "scene": "organize",
+      "start": 26.241998912811283,
+      "end": 26.84199929428101,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "can",
+      "scene": "organize",
+      "start": 26.84199929428101,
+      "end": 27.14200043869019,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "both",
+      "scene": "organize",
+      "start": 27.14200043869019,
+      "end": 27.462000133514408,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "use",
+      "scene": "organize",
+      "start": 27.462000133514408,
+      "end": 27.66199898910523,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Python",
+      "scene": "organize",
+      "start": 27.66199898910523,
+      "end": 28.062000514984135,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "without",
+      "scene": "organize",
+      "start": 28.601999523162846,
+      "end": 28.84199929428101,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "belonging",
+      "scene": "organize",
+      "start": 28.84199929428101,
+      "end": 29.16199898910523,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "to",
+      "scene": "organize",
+      "start": 29.16199898910523,
+      "end": 29.382000209808353,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "the",
+      "scene": "organize",
+      "start": 29.382000209808353,
+      "end": 29.481998683929447,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "same",
+      "scene": "organize",
+      "start": 29.481998683929447,
+      "end": 29.722000362396244,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "project.",
+      "scene": "organize",
+      "start": 29.722000362396244,
+      "end": 30.121999980926518,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "There",
+      "scene": "taxonomy",
+      "start": 30.682000000000002,
+      "end": 31.461998779296877,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "are",
+      "scene": "taxonomy",
+      "start": 31.461998779296877,
+      "end": 31.66199954223633,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "two",
+      "scene": "taxonomy",
+      "start": 31.66199954223633,
+      "end": 31.98199923706055,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "separate",
+      "scene": "taxonomy",
+      "start": 31.98199923706055,
+      "end": 32.32199938964844,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "AI",
+      "scene": "taxonomy",
+      "start": 32.32199938964844,
+      "end": 32.702000457763674,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "jobs.",
+      "scene": "taxonomy",
+      "start": 32.702000457763674,
+      "end": 33.02200015258789,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Taxonomy",
+      "scene": "taxonomy",
+      "start": 33.86200030517578,
+      "end": 34.16200144958496,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "discovery",
+      "scene": "taxonomy",
+      "start": 34.16200144958496,
+      "end": 34.68199809265137,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "proposes",
+      "scene": "taxonomy",
+      "start": 34.68199809265137,
+      "end": 35.20199855041504,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "a",
+      "scene": "taxonomy",
+      "start": 35.20199855041504,
+      "end": 35.64200099182129,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "vocabulary",
+      "scene": "taxonomy",
+      "start": 35.64200099182129,
+      "end": 35.84199794006348,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "from",
+      "scene": "taxonomy",
+      "start": 35.84199794006348,
+      "end": 36.421999771118166,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "a",
+      "scene": "taxonomy",
+      "start": 36.421999771118166,
+      "end": 36.901999313354494,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "collection",
+      "scene": "taxonomy",
+      "start": 36.901999313354494,
+      "end": 36.901999313354494,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "of",
+      "scene": "taxonomy",
+      "start": 36.901999313354494,
+      "end": 37.16200144958496,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "repositories.",
+      "scene": "taxonomy",
+      "start": 37.16200144958496,
+      "end": 37.70199855041504,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "You",
+      "scene": "taxonomy",
+      "start": 38.401999313354494,
+      "end": 38.561999160766604,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "review",
+      "scene": "taxonomy",
+      "start": 38.561999160766604,
+      "end": 38.84199794006348,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "and",
+      "scene": "taxonomy",
+      "start": 38.84199794006348,
+      "end": 39.14200099182129,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "edit",
+      "scene": "taxonomy",
+      "start": 39.14200099182129,
+      "end": 39.28200038146973,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "it.",
+      "scene": "taxonomy",
+      "start": 39.28200038146973,
+      "end": 39.741999465942385,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Classification",
+      "scene": "taxonomy",
+      "start": 40.16200144958496,
+      "end": 40.741999465942385,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "then",
+      "scene": "taxonomy",
+      "start": 40.741999465942385,
+      "end": 41.16200144958496,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "works",
+      "scene": "taxonomy",
+      "start": 41.16200144958496,
+      "end": 41.32200129699707,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "with",
+      "scene": "taxonomy",
+      "start": 41.32200129699707,
+      "end": 41.60200007629395,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "approved",
+      "scene": "taxonomy",
+      "start": 41.60200007629395,
+      "end": 41.921999771118166,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "concepts,",
+      "scene": "taxonomy",
+      "start": 41.921999771118166,
+      "end": 42.44200022888184,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "rather",
+      "scene": "taxonomy",
+      "start": 43.14200099182129,
+      "end": 43.18199809265137,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "than",
+      "scene": "taxonomy",
+      "start": 43.18199809265137,
+      "end": 43.48200114440918,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "inventing",
+      "scene": "taxonomy",
+      "start": 43.48200114440918,
+      "end": 43.88199885559082,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "new",
+      "scene": "taxonomy",
+      "start": 43.88199885559082,
+      "end": 44.421999771118166,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "labels.",
+      "scene": "taxonomy",
+      "start": 44.421999771118166,
+      "end": 44.421999771118166,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Follow",
+      "scene": "evidence",
+      "start": 46.46199977111817,
+      "end": 46.60199916076661,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "our",
+      "scene": "evidence",
+      "start": 46.60199916076661,
+      "end": 46.92199885559083,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "synthetic",
+      "scene": "evidence",
+      "start": 46.92199885559083,
+      "end": 47.322000381469735,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Orion",
+      "scene": "evidence",
+      "start": 47.322000381469735,
+      "end": 47.642000076293954,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "example.",
+      "scene": "evidence",
+      "start": 47.642000076293954,
+      "end": 48.162000534057626,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Its",
+      "scene": "evidence",
+      "start": 48.80199992370606,
+      "end": 49.061998245239266,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "README",
+      "scene": "evidence",
+      "start": 49.061998245239266,
+      "end": 49.42199885559083,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "says:",
+      "scene": "evidence",
+      "start": 49.42199885559083,
+      "end": 49.80199992370606,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "patient",
+      "scene": "evidence",
+      "start": 50.1820009918213,
+      "end": 50.54200160217286,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "intake",
+      "scene": "evidence",
+      "start": 50.54200160217286,
+      "end": 50.90199839782716,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "API",
+      "scene": "evidence",
+      "start": 50.90199839782716,
+      "end": 51.482000228881844,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "for",
+      "scene": "evidence",
+      "start": 51.482000228881844,
+      "end": 52.02200114440919,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "the",
+      "scene": "evidence",
+      "start": 52.02200114440919,
+      "end": 52.482000228881844,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Orion",
+      "scene": "evidence",
+      "start": 52.482000228881844,
+      "end": 52.482000228881844,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Clinical",
+      "scene": "evidence",
+      "start": 52.482000228881844,
+      "end": 52.88200175476075,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Platform.",
+      "scene": "evidence",
+      "start": 52.88200175476075,
+      "end": 53.40199839782716,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Uses",
+      "scene": "evidence",
+      "start": 53.40199839782716,
+      "end": 54.24199855041505,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "FastAPI",
+      "scene": "evidence",
+      "start": 54.24199855041505,
+      "end": 55.24199855041505,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "and",
+      "scene": "evidence",
+      "start": 55.24199855041505,
+      "end": 55.6820009918213,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Python.",
+      "scene": "evidence",
+      "start": 55.6820009918213,
+      "end": 56.04200160217286,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "We",
+      "scene": "evidence",
+      "start": 56.04200160217286,
+      "end": 56.78199946594239,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "keep",
+      "scene": "evidence",
+      "start": 56.78199946594239,
+      "end": 57.08199870300294,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "that",
+      "scene": "evidence",
+      "start": 57.08199870300294,
+      "end": 57.30199992370606,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "purpose",
+      "scene": "evidence",
+      "start": 57.30199992370606,
+      "end": 57.62199961853028,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "sentence,",
+      "scene": "evidence",
+      "start": 57.62199961853028,
+      "end": 57.96199977111817,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "its",
+      "scene": "evidence",
+      "start": 58.482000228881844,
+      "end": 58.662000534057626,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "evidence",
+      "scene": "evidence",
+      "start": 58.662000534057626,
+      "end": 58.9419993133545,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "reference,",
+      "scene": "evidence",
+      "start": 58.9419993133545,
+      "end": 59.34200083923341,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "and",
+      "scene": "evidence",
+      "start": 59.72200190734864,
+      "end": 59.92199885559083,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "useful",
+      "scene": "evidence",
+      "start": 59.92199885559083,
+      "end": 60.24199855041505,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "phrases.",
+      "scene": "evidence",
+      "start": 60.24199855041505,
+      "end": 60.642000076293954,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Local",
+      "scene": "retrieve",
+      "start": 62.19400053405762,
+      "end": 62.394001296997075,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "search",
+      "scene": "retrieve",
+      "start": 62.394001296997075,
+      "end": 62.63399916076661,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "retrieves",
+      "scene": "retrieve",
+      "start": 62.63399916076661,
+      "end": 63.03400068664551,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "six",
+      "scene": "retrieve",
+      "start": 63.03400068664551,
+      "end": 63.3740008392334,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "possible",
+      "scene": "retrieve",
+      "start": 63.3740008392334,
+      "end": 63.793999008178716,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "concepts.",
+      "scene": "retrieve",
+      "start": 63.793999008178716,
+      "end": 64.2339976348877,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Some",
+      "scene": "retrieve",
+      "start": 64.9739993133545,
+      "end": 65.01400022888184,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "are",
+      "scene": "retrieve",
+      "start": 65.01400022888184,
+      "end": 65.11399870300293,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "distractions:",
+      "scene": "retrieve",
+      "start": 65.11399870300293,
+      "end": 65.6339991607666,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Forge",
+      "scene": "retrieve",
+      "start": 66.45399885559083,
+      "end": 66.65399961853028,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "shares",
+      "scene": "retrieve",
+      "start": 66.65399961853028,
+      "end": 66.91399794006348,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "the",
+      "scene": "retrieve",
+      "start": 66.91399794006348,
+      "end": 67.11399870300293,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "word",
+      "scene": "retrieve",
+      "start": 67.11399870300293,
+      "end": 67.25399809265137,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "platform,",
+      "scene": "retrieve",
+      "start": 67.25399809265137,
+      "end": 67.67400007629395,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "but",
+      "scene": "retrieve",
+      "start": 68.1140025177002,
+      "end": 68.2339976348877,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "that",
+      "scene": "retrieve",
+      "start": 68.2339976348877,
+      "end": 68.43400221252442,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "doesn't",
+      "scene": "retrieve",
+      "start": 68.43400221252442,
+      "end": 68.67400007629395,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "establish",
+      "scene": "retrieve",
+      "start": 68.67400007629395,
+      "end": 69.07400160217286,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "a",
+      "scene": "retrieve",
+      "start": 69.07400160217286,
+      "end": 69.35400038146973,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "relationship.",
+      "scene": "retrieve",
+      "start": 69.35400038146973,
+      "end": 69.73399763488771,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Retrieval",
+      "scene": "retrieve",
+      "start": 70.63399916076662,
+      "end": 70.97400312805178,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "finds",
+      "scene": "retrieve",
+      "start": 70.97400312805178,
+      "end": 71.294002822876,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "possibilities.",
+      "scene": "retrieve",
+      "start": 71.294002822876,
+      "end": 71.93400221252443,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "It",
+      "scene": "retrieve",
+      "start": 72.55399732971193,
+      "end": 72.69399671936037,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "doesn't",
+      "scene": "retrieve",
+      "start": 72.69399671936037,
+      "end": 72.93400221252443,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "assign",
+      "scene": "retrieve",
+      "start": 72.93400221252443,
+      "end": 73.294002822876,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "them.",
+      "scene": "retrieve",
+      "start": 73.294002822876,
+      "end": 73.53400068664553,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "The",
+      "scene": "classify",
+      "start": 74.6699983215332,
+      "end": 74.80999771118164,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "model",
+      "scene": "classify",
+      "start": 74.80999771118164,
+      "end": 75.0699998474121,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "receives",
+      "scene": "classify",
+      "start": 75.0699998474121,
+      "end": 75.44999710083007,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "evidence,",
+      "scene": "classify",
+      "start": 75.44999710083007,
+      "end": 75.93000045776367,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "candidate",
+      "scene": "classify",
+      "start": 76.62999740600586,
+      "end": 76.70999923706054,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "definitions,",
+      "scene": "classify",
+      "start": 76.70999923706054,
+      "end": 77.1699983215332,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "instructions,",
+      "scene": "classify",
+      "start": 77.91000381469726,
+      "end": 77.91000381469726,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "and",
+      "scene": "classify",
+      "start": 78.01000228881836,
+      "end": 78.41000381469726,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "a",
+      "scene": "classify",
+      "start": 78.41000381469726,
+      "end": 78.6500016784668,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "response",
+      "scene": "classify",
+      "start": 78.6500016784668,
+      "end": 78.91000381469726,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "schema.",
+      "scene": "classify",
+      "start": 78.91000381469726,
+      "end": 79.1699983215332,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "In",
+      "scene": "classify",
+      "start": 79.73000350952148,
+      "end": 80.09000411987304,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "the",
+      "scene": "classify",
+      "start": 80.09000411987304,
+      "end": 80.2699967956543,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "saved",
+      "scene": "classify",
+      "start": 80.2699967956543,
+      "end": 80.5500032043457,
+      "timing": "NEIGHBOR_ENVELOPE"
+    },
+    {
+      "word": "test,",
+      "scene": "classify",
+      "start": 80.5500032043457,
+      "end": 80.91000381469726,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "it",
+      "scene": "classify",
+      "start": 81.29000106811523,
+      "end": 81.44999710083007,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "selected",
+      "scene": "classify",
+      "start": 81.44999710083007,
+      "end": 81.79000106811523,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Orion,",
+      "scene": "classify",
+      "start": 81.79000106811523,
+      "end": 82.30999771118164,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Web",
+      "scene": "classify",
+      "start": 83.09000411987304,
+      "end": 83.20999923706054,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "APIs,",
+      "scene": "classify",
+      "start": 83.20999923706054,
+      "end": 83.73000350952148,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "FastAPI,",
+      "scene": "classify",
+      "start": 84.59000411987304,
+      "end": 85.25000015258789,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "and",
+      "scene": "classify",
+      "start": 85.51000228881836,
+      "end": 86.1500016784668,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Python,",
+      "scene": "classify",
+      "start": 86.1500016784668,
+      "end": 86.1500016784668,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "citing",
+      "scene": "classify",
+      "start": 86.84999862670898,
+      "end": 86.84999862670898,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "the",
+      "scene": "classify",
+      "start": 86.84999862670898,
+      "end": 87.0500032043457,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "purpose",
+      "scene": "classify",
+      "start": 87.0500032043457,
+      "end": 87.34999862670898,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "sentence.",
+      "scene": "classify",
+      "start": 87.34999862670898,
+      "end": 87.70999923706054,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "You",
+      "scene": "classify",
+      "start": 88.2699967956543,
+      "end": 88.98999801635742,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "review",
+      "scene": "classify",
+      "start": 88.98999801635742,
+      "end": 89.29000106811523,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "those",
+      "scene": "classify",
+      "start": 89.29000106811523,
+      "end": 89.59000411987304,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "suggestions",
+      "scene": "classify",
+      "start": 89.59000411987304,
+      "end": 90.01000228881836,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "before",
+      "scene": "classify",
+      "start": 90.01000228881836,
+      "end": 90.41000381469726,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "accepting",
+      "scene": "classify",
+      "start": 90.41000381469726,
+      "end": 90.75000015258789,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "them.",
+      "scene": "classify",
+      "start": 90.75000015258789,
+      "end": 90.97000137329101,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "The",
+      "scene": "remember",
+      "start": 92.26200137329101,
+      "end": 92.44199404907226,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "app",
+      "scene": "remember",
+      "start": 92.44199404907226,
+      "end": 92.66199526977539,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "remembers",
+      "scene": "remember",
+      "start": 92.66199526977539,
+      "end": 93.02199588012695,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "completed",
+      "scene": "remember",
+      "start": 93.02199588012695,
+      "end": 93.54200015258789,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "analysis",
+      "scene": "remember",
+      "start": 93.54200015258789,
+      "end": 94.0619967956543,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "separately",
+      "scene": "remember",
+      "start": 94.0619967956543,
+      "end": 94.42199740600586,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "from",
+      "scene": "remember",
+      "start": 94.42199740600586,
+      "end": 94.70199618530273,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "labels.",
+      "scene": "remember",
+      "start": 94.70199618530273,
+      "end": 95.00199923706055,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Removing",
+      "scene": "remember",
+      "start": 96.04200015258789,
+      "end": 96.10199771118164,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "a",
+      "scene": "remember",
+      "start": 96.10199771118164,
+      "end": 96.40200076293945,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "project",
+      "scene": "remember",
+      "start": 96.40200076293945,
+      "end": 96.60199771118164,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "doesn't",
+      "scene": "remember",
+      "start": 96.60199771118164,
+      "end": 96.94199404907226,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "erase",
+      "scene": "remember",
+      "start": 96.94199404907226,
+      "end": 97.20199618530273,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "that",
+      "scene": "remember",
+      "start": 97.20199618530273,
+      "end": 97.58200106811523,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "receipt.",
+      "scene": "remember",
+      "start": 97.58200106811523,
+      "end": 97.72200045776367,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Later",
+      "scene": "remember",
+      "start": 98.70199618530273,
+      "end": 98.76200137329101,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "changes",
+      "scene": "remember",
+      "start": 98.76200137329101,
+      "end": 99.12199435424805,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "can",
+      "scene": "remember",
+      "start": 99.12199435424805,
+      "end": 99.44199404907226,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "reconcile",
+      "scene": "remember",
+      "start": 99.44199404907226,
+      "end": 99.90200076293945,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "locally.",
+      "scene": "remember",
+      "start": 99.90200076293945,
+      "end": 100.32199893188476,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "A",
+      "scene": "remember",
+      "start": 100.94199404907226,
+      "end": 101.20199618530273,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "fresh",
+      "scene": "remember",
+      "start": 101.20199618530273,
+      "end": 101.36199984741211,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "AI",
+      "scene": "remember",
+      "start": 101.36199984741211,
+      "end": 101.70199618530273,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "analysis",
+      "scene": "remember",
+      "start": 101.70199618530273,
+      "end": 102.12199435424805,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "remains",
+      "scene": "remember",
+      "start": 102.12199435424805,
+      "end": 102.52199588012695,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "an",
+      "scene": "remember",
+      "start": 102.52199588012695,
+      "end": 102.82199893188476,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "explicit",
+      "scene": "remember",
+      "start": 102.82199893188476,
+      "end": 103.0619967956543,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "choice.",
+      "scene": "remember",
+      "start": 103.0619967956543,
+      "end": 103.48199496459961,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Every",
+      "scene": "close",
+      "start": 104.89000030517579,
+      "end": 105.4100002861023,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "model",
+      "scene": "close",
+      "start": 105.4100002861023,
+      "end": 105.99000032901765,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "call",
+      "scene": "close",
+      "start": 105.99000032901765,
+      "end": 106.33000036239625,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "has",
+      "scene": "close",
+      "start": 106.33000036239625,
+      "end": 106.95000024795533,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "a",
+      "scene": "close",
+      "start": 106.95000024795533,
+      "end": 107.19000025749207,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "reviewed",
+      "scene": "close",
+      "start": 107.19000025749207,
+      "end": 107.49000020980836,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "budget:",
+      "scene": "close",
+      "start": 107.49000020980836,
+      "end": 107.97000022888184,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "count,",
+      "scene": "close",
+      "start": 108.69000025749207,
+      "end": 108.69000025749207,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "reserve,",
+      "scene": "close",
+      "start": 109.71000047683717,
+      "end": 109.71000047683717,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "generate,",
+      "scene": "close",
+      "start": 110.73000045776368,
+      "end": 110.73000045776368,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "record.",
+      "scene": "close",
+      "start": 111.35000034332276,
+      "end": 111.71000047683717,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Find",
+      "scene": "close",
+      "start": 112.85000034332276,
+      "end": 112.85000034332276,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "the",
+      "scene": "close",
+      "start": 112.85000034332276,
+      "end": 113.13000007629395,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "repository",
+      "scene": "close",
+      "start": 113.13000007629395,
+      "end": 113.47000022888184,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "you",
+      "scene": "close",
+      "start": 113.47000022888184,
+      "end": 113.93000026702882,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "need.",
+      "scene": "close",
+      "start": 113.93000026702882,
+      "end": 114.32999988555909,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Understand",
+      "scene": "close",
+      "start": 115.51000019073487,
+      "end": 115.51000019073487,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "why",
+      "scene": "close",
+      "start": 115.51000019073487,
+      "end": 115.85000034332276,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "it",
+      "scene": "close",
+      "start": 115.85000034332276,
+      "end": 116.49000068664552,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "belongs.",
+      "scene": "close",
+      "start": 116.49000068664552,
+      "end": 116.49000068664552,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "Keep",
+      "scene": "close",
+      "start": 117.39000030517579,
+      "end": 117.43000026702882,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "the",
+      "scene": "close",
+      "start": 117.43000026702882,
+      "end": 117.67000003814698,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "final",
+      "scene": "close",
+      "start": 117.67000003814698,
+      "end": 118.03000064849854,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "decision",
+      "scene": "close",
+      "start": 118.03000064849854,
+      "end": 118.51000019073487,
+      "timing": "ASR_MATCHED"
+    },
+    {
+      "word": "yours.",
+      "scene": "close",
+      "start": 118.51000019073487,
+      "end": 119.19000049591065,
+      "timing": "ASR_MATCHED"
+    }
+  ],
+  "speech_time_stretch": false,
+  "source_take": "cedar-complete",
+  "source_audio_seconds": 114.08,
+  "speech_script_token_agreement": 0.9958847736625515,
+  "neighbor_envelope_words": 1,
+  "measured_spoken_wpm": 125.70126227208976,
+  "source_audio_sha256": "310e659a04460e52dcee6c55dc8aa7d7038a806f9581c25795c2f2c6eb7b5668"
+}

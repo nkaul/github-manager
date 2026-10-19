@@ -1,10 +1,11 @@
+import { chooseOption } from "../helpers/chooseOption";
 import { test, expect, type Page } from "@playwright/test";
 import { writeFileSync } from "node:fs";
 
 async function login(page: Page, id: number) {
   await page.request.post("/api/v1/test/login", { data: { id } });
   await page.goto("/");
-  await page.getByLabel("Workspace collection").selectOption("samples");
+  await chooseOption(page.getByLabel("Workspace collection"), "samples");
 }
 
 async function workspace(page: Page) {
@@ -16,7 +17,7 @@ test("specific taxonomy conflicts, opt-in repair, undo, saved draft and explicit
   await login(page, 9104);
   const seeded = await (await page.request.post("/api/v1/test/review-fixture")).json();
   await page.reload();
-  await page.getByLabel("Workspace collection").selectOption("samples");
+  await chooseOption(page.getByLabel("Workspace collection"), "samples");
   await page.getByRole("button", { name: "AI Organization", exact: false }).click();
   await page.getByRole("button", { name: "Review draft", exact: true }).click();
   const dialog = page.getByRole("dialog");
@@ -82,10 +83,13 @@ test("balanced palette, meditating mascot and title-cased Material sync progress
   } }));
   await expect(page.locator(".wm-progress strong")).toHaveText("GitHub Sync · Running");
   await expect(page.getByRole("progressbar", { name: "GitHub Sync progress", exact: true })).toHaveAttribute("value", "6");
-  await expect(page.locator(".wm-progress")).toHaveCSS("background-color", "rgb(225, 245, 254)");
-  await expect(page.locator(".wm-spinner")).toHaveCSS("border-top-color", "rgb(63, 81, 181)");
+  await expect(page.locator(".wm-progress")).toHaveCSS("background-color", "rgb(240, 245, 251)");
+  await expect(page.locator(".wm-spinner")).toHaveCSS("border-top-color", "rgb(57, 73, 171)");
   const numbers = await page.locator(".wm-stat strong").evaluateAll(els => els.map(el => getComputedStyle(el).color));
-  expect(new Set(numbers).size).toBe(5);
+  expect(new Set(numbers).size).toBe(1);
+  await expect(page.locator(".wm-stat")).toHaveCount(5);
+  await expect(page.locator(".wm-stats")).toHaveCSS("background-color", "rgb(255, 255, 255)");
+  await expect(page.locator(".wm-stats")).toHaveCSS("gap", "0px");
   await page.screenshot({ path: "test-results/feedback-sync-progress-1920.png" });
   await page.emulateMedia({ reducedMotion: "reduce" });
   const logo = page.locator(".wm-header .wm-zen-cat");

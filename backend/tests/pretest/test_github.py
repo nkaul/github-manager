@@ -328,3 +328,36 @@ def test_organization_listing_fills_affiliation_gap_without_my_repos_inclusion()
     coverage = {row["source"]: row for row in value["coverage"]}
     assert coverage["ORG_GENERAL"]["count"] == 1
     assert coverage["ORG_GENERAL"]["status"] == "OBSERVED"
+
+
+@pytest.mark.parametrize("denied", ["/user/repos", "/orgs/org/repos", "/orgs/org/teams/dev/repos"])
+def test_revoked_grant_is_not_misreported_as_a_partial_inventory(denied):
+    def handle(request):
+        path = request.url.path
+        if path == denied:
+            return httpx.Response(401, json={"message": "PRIVATE_PROVIDER_DIAGNOSTIC"})
+        if path == "/user":
+            value = {"id": 42, "login": "fixture"}
+        elif path == "/graphql":
+            value = {
+                "data": {
+                    "viewer": {
+                        "repositoriesContributedTo": {
+                            "nodes": [],
+                            "pageInfo": {"hasNextPage": False},
+                        }
+                    }
+                }
+            }
+        elif path == "/user/orgs":
+            value = [{"login": "org"}]
+        elif path == "/user/teams":
+            value = [{"organization": {"login": "org"}, "slug": "dev"}]
+        else:
+            value = []
+        return httpx.Response(200, json=value)
+
+    adapter = OAuthAppAdapter(Settings(_env_file=None), httpx.MockTransport(handle))
+    with pytest.raises(GitHubError, match="reauthorization_required") as error:
+        asyncio.run(adapter.inventory("fixture"))
+    assert error.value.status == 401 and "PRIVATE_PROVIDER" not in str(error.value)

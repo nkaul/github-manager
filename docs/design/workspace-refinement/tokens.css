@@ -1,0 +1,46 @@
+/* Current preview palette matches the approved October 17 Indigo controls. Structural layouts remain previews. */
+:root {
+  --ui-bg: #f7f9fd;
+  --ui-surface: #ffffff;
+  --ui-surface-subtle: #f3f5f9;
+  --ui-text: #24263c;
+  --ui-text-secondary: #555e70;
+  --ui-border: #dce1e8;
+  --ui-control-border: #8993a5;
+  --ui-primary: #3949ab;
+  --ui-primary-hover: #303f9f;
+  --ui-indigo: #3949ab;
+  --ui-selection: #e8eaf6;
+  --ui-blue: #1565c0;
+  --ui-focus: #0277bd;
+  --ui-success: #176b57;
+  --ui-warning: #88570c;
+  --ui-danger: #b42336;
+  --ui-font: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ui-body: 14px;
+  --ui-body-leading: 20px;
+  --ui-label: 13px;
+  --ui-label-leading: 18px;
+  --ui-meta: 12px;
+  --ui-meta-leading: 16px;
+  --ui-title: 24px;
+  --ui-title-leading: 30px;
+  --ui-header-height: 56px;
+  --ui-rail-width: 280px;
+  --ui-toolbar-height: 32px;
+  --ui-form-height: 36px;
+  --ui-touch-height: 44px;
+  --ui-search-width: 360px;
+  --ui-search-max: 400px;
+  --ui-radius-control: 6px;
+  --ui-radius-panel: 10px;
+  --ui-radius-dialog: 12px;
+  --ui-space-1: 4px;
+  --ui-space-2: 8px;
+  --ui-space-3: 12px;
+  --ui-space-4: 16px;
+  --ui-space-6: 24px;
+  --ui-dialog-confirm: 480px;
+  --ui-dialog-form: 600px;
+  --ui-dialog-complex: 800px;
+}

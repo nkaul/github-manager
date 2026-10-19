@@ -1,0 +1,2727 @@
+1
+00:00:01,000 --> 00:00:02,140
+Section one.
+
+2
+00:00:02,902 --> 00:00:04,442
+The problem and the product.
+
+3
+00:00:05,584 --> 00:00:07,644
+GitHub Manager helps you discover,
+
+4
+00:00:08,784 --> 00:00:10,624
+understand, and organize repositories.
+
+5
+00:00:11,865 --> 00:00:14,825
+The purpose is to turn a scattered collection into
+
+6
+00:00:14,825 --> 00:00:18,806
+a workspace whose relationships you can inspect and change.
+
+7
+00:00:28,807 --> 00:00:30,367
+Imagine starting an API project.
+
+8
+00:00:31,759 --> 00:00:32,959
+You have your own services,
+
+9
+00:00:33,719 --> 00:00:36,619
+shared repositories, and libraries starred for later.
+
+10
+00:00:38,511 --> 00:00:40,511
+Names and programming languages help you search.
+
+11
+00:00:41,424 --> 00:00:44,464
+They do not explain which pieces support the same
+
+12
+00:00:44,464 --> 00:00:44,924
+initiative.
+
+13
+00:00:46,756 --> 00:00:50,456
+Two Python repositories may serve entirely different purposes.
+
+14
+00:00:56,020 --> 00:00:58,620
+GitHub remains the source of repository facts:
+
+15
+00:00:59,660 --> 00:00:59,780
+identity,
+
+16
+00:01:00,460 --> 00:01:00,580
+links,
+
+17
+00:01:01,540 --> 00:01:03,100
+visibility, and available metadata.
+
+18
+00:01:04,369 --> 00:01:07,009
+The application builds selected evidence locally.
+
+19
+00:01:08,157 --> 00:01:11,637
+AI proposes an organization, and the user reviews it.
+
+20
+00:01:12,466 --> 00:01:16,825
+This separation matters because a convenient suggestion must not
+
+21
+00:01:16,825 --> 00:01:19,726
+quietly replace a fact or a deliberate decision.
+
+22
+00:01:24,887 --> 00:01:28,867
+We will follow Orion, an authored synthetic patient-intake
+
+23
+00:01:28,867 --> 00:01:29,467
+application.
+
+24
+00:01:31,097 --> 00:01:35,457
+Its displayed classification comes from a saved real API
+
+25
+00:01:35,457 --> 00:01:35,977
+test.
+
+26
+00:01:37,287 --> 00:01:40,807
+We will also use a public FastAPI library as
+
+27
+00:01:40,807 --> 00:01:41,467
+a contrast.
+
+28
+00:01:42,877 --> 00:01:46,537
+These examples explain the mechanics; they are not a
+
+29
+00:01:46,537 --> 00:01:48,877
+new account recording or a new benchmark.
+
+30
+00:01:54,400 --> 00:01:55,420
+Section two.
+
+31
+00:01:56,633 --> 00:01:57,773
+Organization vocabulary.
+
+32
+00:01:59,167 --> 00:02:02,487
+Before classification, we need to define what a relationship
+
+33
+00:02:02,487 --> 00:02:03,007
+means.
+
+34
+00:02:04,300 --> 00:02:07,060
+The purpose is to keep an initiative, a capability,
+
+35
+00:02:07,060 --> 00:02:11,360
+and a technology from becoming one confusing pile of
+
+36
+00:02:11,360 --> 00:02:11,480
+labels.
+
+37
+00:02:20,940 --> 00:02:24,540
+A Project answers which product or initiative a repository
+
+38
+00:02:24,540 --> 00:02:25,040
+supports.
+
+39
+00:02:25,868 --> 00:02:29,288
+A Domain groups those Projects into a broader area.
+
+40
+00:02:30,316 --> 00:02:33,996
+A Topic describes a primary capability or subject.
+
+41
+00:02:35,124 --> 00:02:38,844
+A Tag describes technology or another useful characteristic.
+
+42
+00:02:40,312 --> 00:02:43,112
+For Orion, the examples are the clinical platform,
+
+43
+00:02:43,832 --> 00:02:46,092
+Healthcare, Web APIs, and Python.
+
+44
+00:02:51,590 --> 00:02:54,110
+A repository may support more than one Project.
+
+45
+00:02:55,760 --> 00:02:58,440
+Its Domains derive through those Project memberships;
+
+46
+00:02:59,140 --> 00:03:01,740
+the classifier does not assign Domains independently.
+
+47
+00:03:04,010 --> 00:03:06,850
+Topics and Tags remain useful when no Project applies.
+
+48
+00:03:08,760 --> 00:03:11,560
+The application's Topics are separate from the native topics
+
+49
+00:03:11,560 --> 00:03:12,500
+supplied by GitHub.
+
+50
+00:03:17,970 --> 00:03:21,530
+The Orion application uses FastAPI and Python.
+
+51
+00:03:23,209 --> 00:03:26,509
+The FastAPI library is itself a reusable framework.
+
+52
+00:03:28,707 --> 00:03:30,827
+Sharing those words does not make the library part
+
+53
+00:03:30,827 --> 00:03:31,367
+of Orion.
+
+54
+00:03:32,646 --> 00:03:36,246
+Under the primary-label policy, incidental capabilities are
+
+55
+00:03:36,246 --> 00:03:39,906
+omitted, and a library's own name is not automatically
+
+56
+00:03:39,906 --> 00:03:41,146
+its dependency Tag.
+
+57
+00:03:42,645 --> 00:03:46,425
+Next, we decide what evidence can support that distinction.
+
+58
+00:03:51,997 --> 00:03:52,797
+Section three.
+
+59
+00:03:54,495 --> 00:03:55,175
+Context engineering.
+
+60
+00:03:56,534 --> 00:03:59,394
+Its purpose is to choose what information the model
+
+61
+00:03:59,394 --> 00:03:59,834
+sees,
+
+62
+00:04:00,574 --> 00:04:04,014
+what that information means, and which boundaries remain outside
+
+63
+00:04:04,014 --> 00:04:04,494
+the model.
+
+64
+00:04:06,232 --> 00:04:09,512
+A longer prompt is not automatically a better decision.
+
+65
+00:04:18,533 --> 00:04:21,393
+We separate trusted source facts,
+
+66
+00:04:22,793 --> 00:04:26,233
+untrusted repository prose, user-owned organization,
+
+67
+00:04:26,933 --> 00:04:28,453
+and execution identity.
+
+68
+00:04:29,793 --> 00:04:30,653
+Canonical IDs,
+
+69
+00:04:31,633 --> 00:04:31,953
+rejections,
+
+70
+00:04:32,753 --> 00:04:35,693
+revisions, and evidence hashes constrain the operation.
+
+71
+00:04:36,833 --> 00:04:39,733
+The application does not send every stored record to
+
+72
+00:04:39,733 --> 00:04:40,173
+the model.
+
+73
+00:04:41,153 --> 00:04:41,873
+For example,
+
+74
+00:04:42,533 --> 00:04:46,313
+protected decisions filter candidates before prompting rather than
+
+75
+00:04:46,313 --> 00:04:48,793
+becoming an entire conversation history.
+
+76
+00:04:54,150 --> 00:04:58,010
+Hosted input is restricted to verified public repositories and
+
+77
+00:04:58,010 --> 00:05:00,070
+synthetic fixtures in this implementation.
+
+78
+00:05:02,555 --> 00:05:06,195
+Private or unknown visibility fails closed, including phrases
+
+79
+00:05:06,195 --> 00:05:07,615
+derived from private text.
+
+80
+00:05:09,200 --> 00:05:11,840
+Local rules can still help organization.
+
+81
+00:05:13,646 --> 00:05:15,126
+Narrow cleaning patterns are hygiene,
+
+82
+00:05:15,786 --> 00:05:19,026
+not a complete secret scanner or prompt-injection defense.
+
+83
+00:05:20,871 --> 00:05:22,891
+The model has no tools with which to act
+
+84
+00:05:22,891 --> 00:05:24,071
+on README instructions.
+
+85
+00:05:29,620 --> 00:05:31,800
+The working runtime is local Next.js,
+
+86
+00:05:32,540 --> 00:05:34,680
+FastAPI, and SQLite.
+
+87
+00:05:36,040 --> 00:05:39,200
+LangChain connects structured requests; it does not own the
+
+88
+00:05:39,200 --> 00:05:40,160
+application's memory.
+
+89
+00:05:41,180 --> 00:05:44,680
+During development, user decisions outrank approved design,
+
+90
+00:05:45,380 --> 00:05:46,740
+plans, and historical discussion.
+
+91
+00:05:48,000 --> 00:05:49,280
+Phase zero checked access;
+
+92
+00:05:50,100 --> 00:05:52,160
+phase zero point five checked AI readiness;
+
+93
+00:05:53,100 --> 00:05:55,600
+phase zero point nine delivered the local app.
+
+94
+00:05:56,800 --> 00:05:58,620
+Cloud runtime remains deferred.
+
+95
+00:06:03,787 --> 00:06:04,667
+Section four.
+
+96
+00:06:06,277 --> 00:06:07,237
+Evidence and chunking.
+
+97
+00:06:08,767 --> 00:06:11,127
+The purpose is to preserve the sentence that explains
+
+98
+00:06:11,127 --> 00:06:14,767
+a repository, while excluding material that is unlikely to
+
+99
+00:06:14,767 --> 00:06:15,567
+help organization.
+
+100
+00:06:16,897 --> 00:06:20,717
+We begin with a README, not an AI-generated summary.
+
+101
+00:06:29,837 --> 00:06:34,617
+The extractor parses Markdown blocks and applies heading-based
+
+102
+00:06:34,617 --> 00:06:35,137
+selection.
+
+103
+00:06:36,257 --> 00:06:38,257
+Metadata becomes evidence zero;
+
+104
+00:06:39,457 --> 00:06:42,057
+selected README text receives additional IDs.
+
+105
+00:06:43,257 --> 00:06:47,777
+For Orion, evidence one says: patient intake API
+
+106
+00:06:47,777 --> 00:06:50,137
+for the Orion Clinical Platform.
+
+107
+00:06:50,917 --> 00:06:53,457
+Uses FastAPI and Python.
+
+108
+00:06:54,257 --> 00:06:56,277
+The language metadata is empty,
+
+109
+00:06:56,917 --> 00:07:00,157
+so Python is supported by prose rather than an
+
+110
+00:07:00,157 --> 00:07:01,577
+invented GitHub value.
+
+111
+00:07:06,847 --> 00:07:09,447
+The input byte ceiling limits the fetched document.
+
+112
+00:07:10,902 --> 00:07:13,942
+Selected blocks and total evidence have character bounds.
+
+113
+00:07:15,217 --> 00:07:19,817
+The compact classification profile then keeps metadata, up to
+
+114
+00:07:19,817 --> 00:07:22,757
+two README records, and up to eight phrase strings.
+
+115
+00:07:24,312 --> 00:07:26,412
+Exact request tokens are counted later.
+
+116
+00:07:27,467 --> 00:07:31,047
+Hashes bind the selected content and configuration.
+
+117
+00:07:32,642 --> 00:07:36,482
+Offsets identify cleaned text, not original README line numbers.
+
+118
+00:07:42,063 --> 00:07:45,603
+Heading rules are inspectable and avoid a hosted summarization
+
+119
+00:07:45,603 --> 00:07:49,543
+pass, but can cut sentences or crowd out better
+
+120
+00:07:49,543 --> 00:07:49,963
+evidence.
+
+121
+00:07:51,789 --> 00:07:56,149
+Format noise, late negation, and multilingual headings need tests.
+
+122
+00:07:57,294 --> 00:08:00,334
+The app received a separately versioned cleanup wrapper;
+
+123
+00:08:01,354 --> 00:08:03,854
+frozen benchmark profiles stayed unchanged.
+
+124
+00:08:06,060 --> 00:08:09,540
+Retrieval can see full selected evidence that compact generation
+
+125
+00:08:09,540 --> 00:08:09,920
+omits,
+
+126
+00:08:10,640 --> 00:08:12,740
+so both stages need their own checks.
+
+127
+00:08:18,130 --> 00:08:18,950
+Section five.
+
+128
+00:08:19,760 --> 00:08:20,620
+Local algorithms.
+
+129
+00:08:21,630 --> 00:08:25,190
+Their purpose is to expose compact signals before an
+
+130
+00:08:25,190 --> 00:08:26,030
+expensive decision.
+
+131
+00:08:27,440 --> 00:08:31,000
+We use phrase extraction and corpus counts, but those
+
+132
+00:08:31,000 --> 00:08:34,620
+numbers do not establish initiative membership or semantic
+
+133
+00:08:34,620 --> 00:08:35,260
+understanding.
+
+134
+00:08:44,640 --> 00:08:47,860
+RAKE splits around stopwords and punctuation.
+
+135
+00:08:48,900 --> 00:08:52,280
+Word frequency and co-occurrence contribute to phrase scores.
+
+136
+00:08:53,060 --> 00:08:55,680
+Our configuration considers one to four words,
+
+137
+00:08:56,560 --> 00:08:57,720
+retains up to twenty candidates,
+
+138
+00:08:58,540 --> 00:09:01,340
+normalizes duplicates, and checks source spans.
+
+139
+00:09:01,600 --> 00:09:02,700
+In Orion,
+
+140
+00:09:03,640 --> 00:09:07,200
+patient intake API and Orion clinical platform each score
+
+141
+00:09:07,200 --> 00:09:07,660
+nine.
+
+142
+00:09:08,520 --> 00:09:10,980
+FastAPI and Python score one.
+
+143
+00:09:11,480 --> 00:09:13,720
+Those are weights, not probabilities.
+
+144
+00:09:19,380 --> 00:09:23,040
+YAKE was compared offline using local document features such
+
+145
+00:09:23,040 --> 00:09:23,800
+as position,
+
+146
+00:09:24,520 --> 00:09:26,060
+capitalization, and frequency.
+
+147
+00:09:27,155 --> 00:09:29,515
+It is not the production extractor.
+
+148
+00:09:30,730 --> 00:09:34,910
+Its measured runtime included repeated process startup, so the
+
+149
+00:09:34,910 --> 00:09:37,190
+ratio is not an intrinsic speed comparison.
+
+150
+00:09:39,365 --> 00:09:42,365
+Corpus document frequency counts a term once per repository.
+
+151
+00:09:43,500 --> 00:09:47,900
+That pretest table is different from the concept-document IDF
+
+152
+00:09:47,900 --> 00:09:49,160
+used in retrieval.
+
+153
+00:09:50,895 --> 00:09:54,435
+The installed YAKE artifact's licensing also remained an adoption
+
+154
+00:09:54,435 --> 00:09:54,915
+concern.
+
+155
+00:10:00,297 --> 00:10:02,577
+A bag of phrases loses relationships,
+
+156
+00:10:03,317 --> 00:10:04,457
+including the word not.
+
+157
+00:10:05,843 --> 00:10:07,263
+Purpose prose must survive.
+
+158
+00:10:08,210 --> 00:10:11,030
+In one historical FastAPI ablation,
+
+159
+00:10:11,910 --> 00:10:15,530
+adding RAKE phrases used more input tokens without changing
+
+160
+00:10:15,530 --> 00:10:17,310
+the unwanted secondary labels.
+
+161
+00:10:18,176 --> 00:10:21,756
+That single case proves neither that phrases always help
+
+162
+00:10:22,296 --> 00:10:23,676
+nor that they are unnecessary.
+
+163
+00:10:25,963 --> 00:10:29,423
+The product also has no learned project-clustering engine or
+
+164
+00:10:29,423 --> 00:10:31,023
+automatically learned rules.
+
+165
+00:10:36,513 --> 00:10:37,547
+Section six.
+
+166
+00:10:37,547 --> 00:10:39,147
+Taxonomy intelligence.
+
+167
+00:10:40,321 --> 00:10:43,161
+The purpose is to propose a vocabulary for a
+
+168
+00:10:43,161 --> 00:10:43,281
+collection.
+
+169
+00:10:44,515 --> 00:10:47,395
+This is different from assigning labels to one repository.
+
+170
+00:10:48,989 --> 00:10:50,889
+Discovery can suggest new concepts;
+
+171
+00:10:51,789 --> 00:10:54,469
+classification must use concepts already approved.
+
+172
+00:11:03,210 --> 00:11:07,670
+The saved discovery request contained thirty compact profiles:
+
+173
+00:11:08,770 --> 00:11:09,630
+ten public samples
+
+174
+00:11:10,290 --> 00:11:11,830
+and twenty authored fixtures.
+
+175
+00:11:13,210 --> 00:11:13,990
+Orion's API,
+
+176
+00:11:14,710 --> 00:11:15,070
+UI,
+
+177
+00:11:15,810 --> 00:11:19,310
+booking, and audit records supplied related purpose evidence.
+
+178
+00:11:20,250 --> 00:11:24,210
+The model proposed Orion Clinical Platform with a Clinical
+
+179
+00:11:24,210 --> 00:11:27,730
+Operations parent and supporting repository IDs.
+
+180
+00:11:28,630 --> 00:11:31,910
+Its twenty proposals were a draft, not a published
+
+181
+00:11:31,910 --> 00:11:32,610
+organization.
+
+182
+00:11:37,880 --> 00:11:41,700
+The app samples owner and language buckets using a
+
+183
+00:11:41,700 --> 00:11:43,580
+deterministic round-robin approach.
+
+184
+00:11:45,870 --> 00:11:49,550
+Collection packing uses a conservative byte allowance before exact
+
+185
+00:11:49,550 --> 00:11:50,290
+token counting,
+
+186
+00:11:51,310 --> 00:11:53,690
+shortening records and pruning phrases where necessary.
+
+187
+00:11:55,580 --> 00:11:57,700
+This can miss structure outside the cohort.
+
+188
+00:11:59,570 --> 00:12:03,190
+The saved direct collection request used its original packing
+
+189
+00:12:03,190 --> 00:12:06,510
+path, so its token counts cannot be attributed to
+
+190
+00:12:06,510 --> 00:12:07,670
+a later optimization.
+
+191
+00:12:13,200 --> 00:12:15,820
+Publication normalizes names and aliases,
+
+192
+00:12:16,480 --> 00:12:19,520
+including Unicode handling, and checks reservations.
+
+193
+00:12:20,620 --> 00:12:23,160
+A visible name can conflict with an alias or
+
+194
+00:12:23,160 --> 00:12:24,260
+archived concept.
+
+195
+00:12:25,480 --> 00:12:29,020
+The app exposes the conflicting record and offers opt-in
+
+196
+00:12:29,020 --> 00:12:29,560
+reuse,
+
+197
+00:12:30,240 --> 00:12:30,520
+renaming,
+
+198
+00:12:31,340 --> 00:12:32,180
+removal, or exclusion.
+
+199
+00:12:33,200 --> 00:12:36,360
+These deterministic checks protect canonical consistency.
+
+200
+00:12:36,910 --> 00:12:41,020
+Similar language is not permission for an automatic semantic
+
+201
+00:12:41,020 --> 00:12:41,440
+merge.
+
+202
+00:12:47,523 --> 00:12:48,083
+Section seven.
+
+203
+00:12:48,763 --> 00:12:49,683
+Retrieval.
+
+204
+00:12:50,183 --> 00:12:53,343
+Its purpose is to find plausible concepts from the
+
+205
+00:12:53,343 --> 00:12:54,423
+approved vocabulary.
+
+206
+00:12:55,703 --> 00:12:59,603
+The repository evidence is the query; concept names,
+
+207
+00:13:00,483 --> 00:13:03,183
+definitions, and aliases are the searchable documents.
+
+208
+00:13:04,063 --> 00:13:06,063
+A shortlist is not a decision.
+
+209
+00:13:15,757 --> 00:13:19,517
+The method called TF-IDF in the code is actually
+
+210
+00:13:19,517 --> 00:13:20,957
+binary-IDF cosine.
+
+211
+00:13:22,311 --> 00:13:26,431
+It weights less common registry terms and normalizes overlap,
+
+212
+00:13:27,211 --> 00:13:29,571
+while repeated terms do not increase frequency.
+
+213
+00:13:30,925 --> 00:13:34,465
+A name or alias whose tokens all appear adds
+
+214
+00:13:34,465 --> 00:13:36,425
+three once.
+
+215
+00:13:36,939 --> 00:13:39,459
+Token order and positive assertion are not required.
+
+216
+00:13:41,253 --> 00:13:44,733
+Positive candidates are ranked by kind, with stable-ID ties
+
+217
+00:13:44,733 --> 00:13:46,153
+and bounded limits.
+
+218
+00:13:51,983 --> 00:13:54,943
+Orion retrieves its own Project, Web APIs,
+
+219
+00:13:55,723 --> 00:13:57,303
+FastAPI, and Python.
+
+220
+00:13:58,743 --> 00:14:01,883
+Forge also surfaces through platform, and Package Management
+
+221
+00:14:01,883 --> 00:14:02,703
+through Python.
+
+222
+00:14:03,503 --> 00:14:06,543
+The strong Orion score includes the alias boost.
+
+223
+00:14:07,583 --> 00:14:08,903
+These are ranking scores,
+
+224
+00:14:09,723 --> 00:14:11,103
+not membership probabilities.
+
+225
+00:14:12,463 --> 00:14:15,823
+The next stage must distinguish actual purpose evidence from
+
+226
+00:14:15,823 --> 00:14:17,223
+distracting shared words.
+
+227
+00:14:22,860 --> 00:14:26,480
+BM25 was compared offline with the same alias boost
+
+228
+00:14:26,480 --> 00:14:27,560
+and candidate caps.
+
+229
+00:14:29,148 --> 00:14:32,608
+It adds saturated term frequency and document-length
+
+230
+00:14:32,608 --> 00:14:33,348
+normalization.
+
+231
+00:14:35,216 --> 00:14:36,576
+On the small reused comparison,
+
+232
+00:14:37,256 --> 00:14:40,196
+both lexical methods covered the expected evaluation labels;
+
+233
+00:14:41,036 --> 00:14:42,476
+alias-only missed four Topics.
+
+234
+00:14:43,625 --> 00:14:45,205
+That supports feasibility,
+
+235
+00:14:45,924 --> 00:14:48,065
+not sparse superiority over dense search.
+
+236
+00:14:49,933 --> 00:14:53,673
+There is no embedding query, neural reranker, or autonomous
+
+237
+00:14:53,673 --> 00:14:55,573
+retrieval agent in the current product.
+
+238
+00:15:00,260 --> 00:15:01,220
+Section eight.
+
+239
+00:15:01,840 --> 00:15:02,140
+Augmentation.
+
+240
+00:15:03,100 --> 00:15:06,520
+The purpose is to assemble a decision-ready request from
+
+241
+00:15:06,520 --> 00:15:09,140
+the evidence and retrieved possibilities.
+
+242
+00:15:10,360 --> 00:15:11,740
+Retrieval supplies options.
+
+243
+00:15:12,980 --> 00:15:16,100
+Augmentation explains those options and the rules for selecting
+
+244
+00:15:16,100 --> 00:15:16,540
+them.
+
+245
+00:15:25,427 --> 00:15:29,107
+For Orion, the payload includes repository identity,
+
+246
+00:15:30,007 --> 00:15:31,467
+public or synthetic source status,
+
+247
+00:15:32,187 --> 00:15:32,407
+revision,
+
+248
+00:15:33,307 --> 00:15:33,687
+evidence hash,
+
+249
+00:15:34,507 --> 00:15:37,567
+selected evidence, phrase strings, and candidate records.
+
+250
+00:15:38,967 --> 00:15:41,787
+Evidence one preserves the patient-intake sentence.
+
+251
+00:15:42,687 --> 00:15:46,807
+Candidate records contain canonical ID, kind, name, and
+
+252
+00:15:46,807 --> 00:15:47,187
+description.
+
+253
+00:15:48,267 --> 00:15:51,547
+Aliases helped retrieval but are not serialized into those
+
+254
+00:15:51,547 --> 00:15:52,387
+candidate objects.
+
+255
+00:15:53,467 --> 00:15:55,927
+Expected evaluation labels are never supplied.
+
+256
+00:16:00,793 --> 00:16:03,893
+The system instructions require supported approved IDs,
+
+257
+00:16:04,873 --> 00:16:05,773
+primary-purpose Topics,
+
+258
+00:16:06,393 --> 00:16:08,113
+and primary implementation Tags.
+
+259
+00:16:09,101 --> 00:16:12,201
+Shared frameworks do not prove initiative membership.
+
+260
+00:16:13,748 --> 00:16:14,568
+Negation matters;
+
+261
+00:16:15,708 --> 00:16:16,788
+multiple Projects are allowed.
+
+262
+00:16:17,955 --> 00:16:20,975
+Unsupported input can produce no match or a request
+
+263
+00:16:20,975 --> 00:16:22,055
+for more context.
+
+264
+00:16:23,643 --> 00:16:27,323
+User decisions remain application constraints rather than an
+
+265
+00:16:27,323 --> 00:16:29,343
+invitation for the model to overrule them.
+
+266
+00:16:34,227 --> 00:16:37,047
+A strict response schema describes assignments,
+
+267
+00:16:37,867 --> 00:16:38,387
+evidence references,
+
+268
+00:16:39,147 --> 00:16:39,447
+reasons,
+
+269
+00:16:40,067 --> 00:16:41,226
+status, and summary.
+
+270
+00:16:41,226 --> 00:16:44,746
+LangChain binds that schema to the hosted request.
+
+271
+00:16:46,165 --> 00:16:49,565
+The harness inspects the assembled messages and schema before
+
+272
+00:16:49,565 --> 00:16:50,745
+counting input tokens.
+
+273
+00:16:51,964 --> 00:16:55,784
+This is retrieval-augmented structured classification, with
+
+274
+00:16:55,784 --> 00:16:57,244
+durable application memory.
+
+275
+00:16:58,103 --> 00:17:02,623
+It is not a conversational document-question-answering agent, and
+
+276
+00:17:02,623 --> 00:17:05,503
+adaptive budgets do not turn it into Adaptive RAG.
+
+277
+00:17:10,733 --> 00:17:11,753
+Section nine.
+
+278
+00:17:13,197 --> 00:17:14,797
+Generation and validation.
+
+279
+00:17:16,580 --> 00:17:19,300
+The purpose is to turn the assembled context into
+
+280
+00:17:19,300 --> 00:17:20,340
+a bounded proposal,
+
+281
+00:17:20,980 --> 00:17:23,260
+then check it before it affects organization.
+
+282
+00:17:25,343 --> 00:17:27,783
+Valid JSON is only the beginning of that check.
+
+283
+00:17:37,183 --> 00:17:40,763
+In the preserved Orion call, the model selected Orion
+
+284
+00:17:40,763 --> 00:17:41,743
+Clinical Platform,
+
+285
+00:17:42,723 --> 00:17:43,363
+Web APIs,
+
+286
+00:17:44,183 --> 00:17:45,863
+FastAPI, and Python.
+
+287
+00:17:46,652 --> 00:17:49,152
+All four assignments cited evidence one.
+
+288
+00:17:50,541 --> 00:17:52,101
+Forge and Package Management were omitted.
+
+289
+00:17:53,569 --> 00:17:57,069
+The request counted seven hundred sixty input tokens and
+
+290
+00:17:57,069 --> 00:17:59,349
+returned one hundred ninety-five output tokens.
+
+291
+00:18:00,578 --> 00:18:04,278
+This visible result does not expose the model's private
+
+292
+00:18:04,278 --> 00:18:05,378
+reasoning process.
+
+293
+00:18:11,510 --> 00:18:13,030
+Validation checks active IDs,
+
+294
+00:18:13,790 --> 00:18:14,010
+kinds,
+
+295
+00:18:14,670 --> 00:18:15,370
+workspace ownership,
+
+296
+00:18:15,970 --> 00:18:16,750
+allowed candidates,
+
+297
+00:18:17,710 --> 00:18:18,990
+duplicates, field limits,
+
+298
+00:18:19,810 --> 00:18:21,270
+status, and evidence references.
+
+299
+00:18:22,190 --> 00:18:24,770
+Dispatch and commit also check access,
+
+300
+00:18:25,650 --> 00:18:26,130
+profile hashes,
+
+301
+00:18:26,990 --> 00:18:28,510
+revisions, and user decisions.
+
+302
+00:18:30,310 --> 00:18:32,230
+Suggestions remain proposals until accepted.
+
+303
+00:18:33,410 --> 00:18:36,910
+A real evidence ID may still cite irrelevant prose,
+
+304
+00:18:36,910 --> 00:18:39,770
+and the model's confidence is not a calibrated accuracy
+
+305
+00:18:39,770 --> 00:18:40,490
+probability.
+
+306
+00:18:45,714 --> 00:18:48,934
+Luna is the task default supported by the limited
+
+307
+00:18:48,934 --> 00:18:50,234
+classification tests;
+
+308
+00:18:50,914 --> 00:18:52,874
+Sol supplied the taxonomy draft.
+
+309
+00:18:54,284 --> 00:18:57,464
+A comprehensive model-winner study was not completed.
+
+310
+00:18:59,354 --> 00:19:03,174
+The audit also found evidence-ID validation broader than the
+
+311
+00:19:03,174 --> 00:19:06,874
+transmitted compact set, and a taxonomy prompt limit of
+
+312
+00:19:06,874 --> 00:19:09,694
+twenty versus a validator limit of fifty.
+
+313
+00:19:11,244 --> 00:19:14,204
+Those are improvement tasks, not shipped guarantees.
+
+314
+00:19:19,427 --> 00:19:20,027
+Section ten.
+
+315
+00:19:21,577 --> 00:19:23,637
+Counterexamples and failure cases.
+
+316
+00:19:25,407 --> 00:19:27,927
+Their purpose is to show where an apparently sensible
+
+317
+00:19:27,927 --> 00:19:29,547
+pipeline can mislead us.
+
+318
+00:19:30,777 --> 00:19:34,537
+We keep the confusing evidence visible rather than explaining
+
+319
+00:19:34,537 --> 00:19:36,397
+only the clean success case.
+
+320
+00:19:45,753 --> 00:19:48,913
+One fixture explicitly says it is not part of
+
+321
+00:19:48,913 --> 00:19:49,873
+Helios or Orion.
+
+322
+00:19:51,743 --> 00:19:55,243
+Lexical names still retrieve both Projects, but the saved
+
+323
+00:19:55,243 --> 00:19:59,923
+classifier selects HTTP Clients and Python with neither Project.
+
+324
+00:20:01,473 --> 00:20:04,593
+Another audit fixture genuinely supports two initiatives.
+
+325
+00:20:05,823 --> 00:20:07,723
+The task must allow both.
+
+326
+00:20:09,193 --> 00:20:11,873
+A forced single winner would change the meaning of
+
+327
+00:20:11,873 --> 00:20:12,533
+organization.
+
+328
+00:20:17,887 --> 00:20:22,167
+The full FastAPI profile contains its purpose statement, but
+
+329
+00:20:22,167 --> 00:20:26,667
+an uppercase title marker let documentation links occupy compact
+
+330
+00:20:26,667 --> 00:20:27,047
+slots.
+
+331
+00:20:28,562 --> 00:20:31,442
+Retrieval could see evidence the generator did not receive.
+
+332
+00:20:32,698 --> 00:20:36,418
+Metadata still supported the saved answer, Web APIs and
+
+333
+00:20:36,418 --> 00:20:36,818
+Python.
+
+334
+00:20:37,493 --> 00:20:40,773
+An earlier answer added unwanted secondary labels.
+
+335
+00:20:42,069 --> 00:20:46,348
+Primary-only policy clarified the task, but reused cases cannot
+
+336
+00:20:46,348 --> 00:20:49,009
+establish an independent causal improvement.
+
+337
+00:20:54,807 --> 00:20:59,047
+Empty, fork-only, and metadata-only cases need no-match or
+
+338
+00:20:59,047 --> 00:21:00,047
+uncertainty paths.
+
+339
+00:21:01,164 --> 00:21:03,844
+Installation noise can introduce unrelated names.
+
+340
+00:21:05,081 --> 00:21:07,021
+English extraction can miss other languages.
+
+341
+00:21:07,297 --> 00:21:11,877
+Narrow cleaning can miss malicious instructions or secret-like
+
+342
+00:21:11,877 --> 00:21:12,197
+text.
+
+343
+00:21:13,274 --> 00:21:16,694
+These fixtures explore boundaries; they are not a comprehensive
+
+344
+00:21:16,694 --> 00:21:17,834
+security benchmark.
+
+345
+00:21:18,971 --> 00:21:22,171
+Next, we preserve the decisions and uncertainty that follow
+
+346
+00:21:22,171 --> 00:21:23,071
+from these cases.
+
+347
+00:21:28,683 --> 00:21:29,183
+Section eleven.
+
+348
+00:21:30,450 --> 00:21:31,610
+Memory and user authority.
+
+349
+00:21:32,856 --> 00:21:35,756
+The purpose is to preserve useful state across changes.
+
+350
+00:21:37,302 --> 00:21:39,262
+Here, memory means application records,
+
+351
+00:21:39,922 --> 00:21:42,922
+not a model remembering a conversation or a LangChain
+
+352
+00:21:42,922 --> 00:21:44,502
+conversation-memory component.
+
+353
+00:21:54,107 --> 00:21:54,547
+Relationships,
+
+354
+00:21:55,347 --> 00:21:55,987
+completed analysis,
+
+355
+00:21:56,707 --> 00:21:59,927
+freshness, and review status answer different questions.
+
+356
+00:22:00,671 --> 00:22:04,091
+A successful no-match is completed analysis.
+
+357
+00:22:05,114 --> 00:22:08,574
+Removing Orion's Project can leave its Topic and Tags
+
+358
+00:22:08,574 --> 00:22:10,554
+useful, while the receipt remains.
+
+359
+00:22:12,118 --> 00:22:15,578
+Provider replay cache and optional run history are different
+
+360
+00:22:15,578 --> 00:22:16,038
+records.
+
+361
+00:22:17,542 --> 00:22:20,542
+Deleting one display or membership does not silently make
+
+362
+00:22:20,542 --> 00:22:23,602
+the repository eligible for another paid decision.
+
+363
+00:22:29,143 --> 00:22:31,723
+Accepting a proposal creates a user decision.
+
+364
+00:22:33,439 --> 00:22:36,779
+Rejecting or removing a relationship leaves a protected tombstone.
+
+365
+00:22:38,115 --> 00:22:41,895
+Approved rules can supply deterministic mappings, subject to those
+
+366
+00:22:41,895 --> 00:22:42,455
+rejections.
+
+367
+00:22:43,951 --> 00:22:47,851
+Ordinary organization cannot recreate a rejected edge behind the
+
+368
+00:22:47,851 --> 00:22:48,511
+user's back.
+
+369
+00:22:49,247 --> 00:22:51,467
+These protections preserve authority;
+
+370
+00:22:52,087 --> 00:22:55,507
+they do not prove every accepted relationship was independently
+
+371
+00:22:55,507 --> 00:22:56,527
+verified truth.
+
+372
+00:23:01,970 --> 00:23:05,490
+Local reconciliation applies approved rules, compatible stored
+
+373
+00:23:05,490 --> 00:23:09,910
+assignments, or contiguous name and alias matches for review.
+
+374
+00:23:11,359 --> 00:23:14,979
+This match is stricter than retrieval's unordered alias tokens.
+
+375
+00:23:16,728 --> 00:23:20,468
+Local suggestions have visible provenance and zero model
+
+376
+00:23:20,468 --> 00:23:20,968
+confidence.
+
+377
+00:23:22,537 --> 00:23:24,617
+They do not manufacture AI completion.
+
+378
+00:23:26,426 --> 00:23:29,986
+Fresh analysis remains available with an explicit reason and
+
+379
+00:23:29,986 --> 00:23:32,666
+reviewed budget when the user wants a new judgment.
+
+380
+00:23:38,137 --> 00:23:38,937
+Section twelve.
+
+381
+00:23:40,707 --> 00:23:41,247
+Loop engineering.
+
+382
+00:23:42,757 --> 00:23:45,557
+Its purpose is to control transitions around inference.
+
+383
+00:23:46,807 --> 00:23:49,507
+We need to know when to run, when to
+
+384
+00:23:49,507 --> 00:23:52,187
+skip, and when a result has become unsafe to
+
+385
+00:23:52,187 --> 00:23:52,487
+apply.
+
+386
+00:23:54,457 --> 00:23:55,917
+This is application control,
+
+387
+00:23:56,677 --> 00:23:59,117
+not an autonomous model thought-and-action loop.
+
+388
+00:24:08,580 --> 00:24:11,640
+Preview and worker check admission before constructing the
+
+389
+00:24:11,640 --> 00:24:13,700
+provider or making a count request.
+
+390
+00:24:15,189 --> 00:24:19,108
+Transactions claim running attempts so concurrent starts do not
+
+391
+00:24:19,108 --> 00:24:21,209
+independently process the same operation.
+
+392
+00:24:22,797 --> 00:24:25,937
+Previously attempted or uncertain work requires deliberate review,
+
+393
+00:24:26,517 --> 00:24:27,557
+not a silent retry.
+
+394
+00:24:29,106 --> 00:24:32,806
+Explicit re-analysis can bypass memoization while retaining
+
+395
+00:24:32,806 --> 00:24:33,446
+privacy,
+
+396
+00:24:34,246 --> 00:24:35,626
+schema, and spending checks.
+
+397
+00:24:36,994 --> 00:24:40,814
+Classification cohorts use new-analysis, Project, and recency
+
+398
+00:24:40,814 --> 00:24:42,734
+ordering, not a learned ranker.
+
+399
+00:24:47,808 --> 00:24:51,888
+Automatic organization accumulates eligible changes.
+
+400
+00:24:53,388 --> 00:24:56,928
+Defaults combine weight six and three distinct entities,
+
+401
+00:24:57,588 --> 00:24:58,928
+or two new Projects,
+
+402
+00:24:59,988 --> 00:25:03,248
+followed by a ninety-second quiet period and a thirty-minute
+
+403
+00:25:03,248 --> 00:25:04,968
+cooldown.
+
+404
+00:25:04,968 --> 00:25:06,848
+Types and thresholds are configurable.
+
+405
+00:25:08,148 --> 00:25:10,968
+Consumed event sequences prevent endless rescheduling.
+
+406
+00:25:12,188 --> 00:25:14,508
+Existing analysis still reconciles locally.
+
+407
+00:25:15,288 --> 00:25:18,668
+A change upstream cannot be noticed before its content
+
+408
+00:25:18,668 --> 00:25:19,348
+is fetched.
+
+409
+00:25:25,140 --> 00:25:29,380
+Revision, generation, policy, and epoch fences bind a response
+
+410
+00:25:29,380 --> 00:25:30,300
+to current state.
+
+411
+00:25:31,500 --> 00:25:34,540
+If the user edits or resets during generation,
+
+412
+00:25:35,440 --> 00:25:39,720
+unsafe associations are discarded while historical cost and
+
+413
+00:25:39,720 --> 00:25:40,560
+processing evidence remain.
+
+414
+00:25:41,760 --> 00:25:43,040
+Reset uses a scoped,
+
+415
+00:25:44,100 --> 00:25:47,260
+expiring, one-use preview and exact confirmation.
+
+416
+00:25:48,060 --> 00:25:51,420
+It preserves cost history and readiness reports.
+
+417
+00:25:52,500 --> 00:25:56,340
+These are tested local safeguards, not distributed exactly-once
+
+418
+00:25:56,340 --> 00:25:58,540
+execution or forensic erasure.
+
+419
+00:26:04,287 --> 00:26:05,147
+Section thirteen.
+
+420
+00:26:06,657 --> 00:26:07,477
+Harness engineering.
+
+421
+00:26:09,067 --> 00:26:11,507
+Its purpose is to make a model request measurable
+
+422
+00:26:11,507 --> 00:26:13,807
+and bounded before it leaves the application.
+
+423
+00:26:15,637 --> 00:26:19,237
+A successful connection alone tells us nothing about decision
+
+424
+00:26:19,237 --> 00:26:19,697
+quality,
+
+425
+00:26:20,397 --> 00:26:22,497
+safe state changes, or total cost.
+
+426
+00:26:31,443 --> 00:26:35,923
+The provider inspects the serialized LangChain request, including
+
+427
+00:26:35,923 --> 00:26:36,603
+destination,
+
+428
+00:26:37,283 --> 00:26:37,603
+model,
+
+429
+00:26:38,663 --> 00:26:38,783
+instructions,
+
+430
+00:26:39,443 --> 00:26:39,563
+schema,
+
+431
+00:26:40,243 --> 00:26:43,263
+output limits, and disabled tool or conversation fields.
+
+432
+00:26:44,423 --> 00:26:48,703
+The HTTP hook checks current session and workspace authorization.
+
+433
+00:26:50,083 --> 00:26:52,123
+Counting consumes an HTTP attempt.
+
+434
+00:26:53,243 --> 00:26:56,883
+Only a successful bounded count permits a monetary reservation
+
+435
+00:26:56,883 --> 00:26:57,843
+and generation.
+
+436
+00:26:57,843 --> 00:27:02,423
+SDK retries are disabled to prevent hidden request
+
+437
+00:27:02,423 --> 00:27:03,503
+multiplication.
+
+438
+00:27:09,063 --> 00:27:11,443
+Known valid usage settles the estimate.
+
+439
+00:27:12,846 --> 00:27:16,286
+Refusal or incomplete output is not a successful replay
+
+440
+00:27:16,286 --> 00:27:18,386
+entry, but can still cost tokens.
+
+441
+00:27:19,948 --> 00:27:20,568
+Missing usage,
+
+442
+00:27:21,188 --> 00:27:24,568
+timeout, and uncertain failures keep the maximum reservation.
+
+443
+00:27:26,011 --> 00:27:28,491
+A bound violation stops later paid admission.
+
+444
+00:27:29,873 --> 00:27:33,313
+Selected provider rejections have a specific local accounting
+
+445
+00:27:33,313 --> 00:27:33,893
+policy;
+
+446
+00:27:34,933 --> 00:27:37,773
+none of these estimates is independent invoice reconciliation.
+
+447
+00:27:43,793 --> 00:27:46,853
+Fixed mode has audited request and generation limits.
+
+448
+00:27:48,184 --> 00:27:51,684
+Selective renewal or override preserves past attempts and
+
+449
+00:27:51,684 --> 00:27:51,804
+spending.
+
+450
+00:27:53,114 --> 00:27:56,294
+Adaptive mode admits a finite reviewed dollar grant under
+
+451
+00:27:56,294 --> 00:27:57,754
+the same cumulative cap.
+
+452
+00:27:58,944 --> 00:28:02,484
+Per-call reservations transfer from a run hold without double
+
+453
+00:28:02,484 --> 00:28:02,895
+counting.
+
+454
+00:28:02,895 --> 00:28:05,795
+Recovery links holds to jobs,
+
+455
+00:28:06,695 --> 00:28:10,175
+releases unused terminal money, and preserves unknown-call holds.
+
+456
+00:28:11,665 --> 00:28:14,625
+Separate local databases still require reconciliation.
+
+457
+00:28:20,323 --> 00:28:21,443
+Section fourteen.
+
+458
+00:28:22,752 --> 00:28:24,032
+Tokenomics and optimization.
+
+459
+00:28:25,461 --> 00:28:28,181
+The purpose is to understand what each decision consumes
+
+460
+00:28:28,181 --> 00:28:30,061
+and which costs can be avoided.
+
+461
+00:28:31,570 --> 00:28:33,330
+We separate historical estimates,
+
+462
+00:28:34,170 --> 00:28:37,050
+conservative admission bounds, and the broader cost of a
+
+463
+00:28:37,050 --> 00:28:38,710
+useful accepted relationship.
+
+464
+00:28:48,560 --> 00:28:51,620
+The harness pins a rate snapshot and counts assembled
+
+465
+00:28:51,620 --> 00:28:52,020
+input.
+
+466
+00:28:53,730 --> 00:28:57,190
+It reserves possible output, a conservative cache-write allowance,
+
+467
+00:28:57,690 --> 00:29:00,030
+and headroom without assuming a cache discount.
+
+468
+00:29:01,980 --> 00:29:04,880
+Known usage later settles in integer microdollars.
+
+469
+00:29:06,730 --> 00:29:09,670
+Reasoning tokens already belong to output and must not
+
+470
+00:29:09,670 --> 00:29:10,570
+be added twice.
+
+471
+00:29:11,780 --> 00:29:15,460
+A maximum-output reservation is not a prediction of the
+
+472
+00:29:15,460 --> 00:29:16,680
+answer's usual length.
+
+473
+00:29:22,327 --> 00:29:26,447
+The twenty-case API round made twenty generation requests and
+
+474
+00:29:26,447 --> 00:29:27,927
+twenty input-count requests:
+
+475
+00:29:28,727 --> 00:29:31,067
+forty provider HTTP operations.
+
+476
+00:29:32,267 --> 00:29:36,367
+It recorded sixteen thousand forty-one input tokens and three
+
+477
+00:29:36,367 --> 00:29:38,927
+thousand four hundred fourteen output tokens.
+
+478
+00:29:39,967 --> 00:29:43,567
+The rounded inference estimate was about three-tenths of a
+
+479
+00:29:43,567 --> 00:29:43,687
+cent.
+
+480
+00:29:44,447 --> 00:29:45,967
+This excludes media,
+
+481
+00:29:46,927 --> 00:29:48,987
+infrastructure, indexing, and human review;
+
+482
+00:29:50,247 --> 00:29:52,187
+it is not a production cost guarantee.
+
+483
+00:29:58,363 --> 00:29:59,043
+Compact evidence,
+
+484
+00:29:59,903 --> 00:30:03,883
+candidate caps, and bounded collection sampling reduce individual
+
+485
+00:30:03,883 --> 00:30:06,683
+requests, but can omit useful context.
+
+486
+00:30:08,223 --> 00:30:10,943
+Receipts and local reconciliation can avoid another request
+
+487
+00:30:10,943 --> 00:30:11,523
+entirely.
+
+488
+00:30:12,923 --> 00:30:16,123
+Provider prompt caching still invokes a model, and no
+
+489
+00:30:16,123 --> 00:30:18,123
+discount benefit appeared in that round.
+
+490
+00:30:19,523 --> 00:30:19,943
+Count latency,
+
+491
+00:30:20,863 --> 00:30:21,383
+evidence refresh,
+
+492
+00:30:22,303 --> 00:30:24,703
+storage, and reviewer corrections also matter.
+
+493
+00:30:25,903 --> 00:30:29,543
+Optimize cost per correct, accepted, current association.
+
+494
+00:30:35,077 --> 00:30:36,037
+Section fifteen.
+
+495
+00:30:37,257 --> 00:30:37,997
+Evaluation and evidence.
+
+496
+00:30:38,677 --> 00:30:41,137
+The purpose is to learn which stage succeeds,
+
+497
+00:30:41,937 --> 00:30:45,317
+which stage fails, and how far the measurements generalize.
+
+498
+00:30:45,867 --> 00:30:50,682
+A single attractive score cannot answer all three
+
+499
+00:30:50,682 --> 00:30:51,122
+questions.
+
+500
+00:31:00,613 --> 00:31:03,233
+The frozen corpus has thirty repositories.
+
+501
+00:31:04,373 --> 00:31:05,733
+Ten were development cases;
+
+502
+00:31:06,773 --> 00:31:10,653
+twenty formed the evaluation partition, with eight public
+
+503
+00:31:10,653 --> 00:31:13,233
+libraries and twelve synthetic cases.
+
+504
+00:31:13,973 --> 00:31:16,433
+The registry has forty-two concepts,
+
+505
+00:31:17,093 --> 00:31:19,433
+including four non-searchable Domains.
+
+506
+00:31:20,273 --> 00:31:23,593
+Public labels were proposed and user-approved.
+
+507
+00:31:24,693 --> 00:31:28,673
+Related initiatives were grouped, but policy clarification reused
+
+508
+00:31:28,673 --> 00:31:29,853
+evaluation cases.
+
+509
+00:31:30,893 --> 00:31:32,813
+The final round is regression validation,
+
+510
+00:31:33,613 --> 00:31:35,873
+not untouched generalization evidence.
+
+511
+00:31:37,073 --> 00:31:39,313
+Project-positive evidence is synthetic;
+
+512
+00:31:40,553 --> 00:31:43,133
+private enterprise performance remains unestablished.
+
+513
+00:31:48,813 --> 00:31:52,793
+Candidate recall asks whether expected IDs reached the shortlist.
+
+514
+00:31:53,674 --> 00:31:58,414
+Both lexical methods covered all expected evaluation labels under
+
+515
+00:31:58,414 --> 00:31:59,354
+generous caps.
+
+516
+00:32:00,915 --> 00:32:03,355
+Classification then produced fifty true positives,
+
+517
+00:32:04,135 --> 00:32:06,515
+zero false positives, and two misses:
+
+518
+00:32:07,555 --> 00:32:10,735
+micro F one of ninety-eight percent.
+
+519
+00:32:10,735 --> 00:32:13,115
+Both missing labels had been retrieved,
+
+520
+00:32:14,155 --> 00:32:17,515
+locating those errors after candidate inclusion, without proving
+
+521
+00:32:17,515 --> 00:32:19,935
+whether packing or model selection caused them.
+
+522
+00:32:25,413 --> 00:32:29,433
+Taxonomy drafts passed structural checks and received qualitative
+
+523
+00:32:29,433 --> 00:32:33,133
+acceptance, but no numeric human rubric was recorded.
+
+524
+00:32:34,313 --> 00:32:36,073
+One repeated classification agreed;
+
+525
+00:32:36,753 --> 00:32:38,553
+that is not long-run stability.
+
+526
+00:32:39,953 --> 00:32:40,373
+Limited timing,
+
+527
+00:32:41,093 --> 00:32:42,213
+contract, race,
+
+528
+00:32:43,133 --> 00:32:46,673
+privacy, and recovery checks establish specific behaviors.
+
+529
+00:32:47,553 --> 00:32:51,393
+They do not measure citation entailment or calibrated confidence.
+
+530
+00:32:52,173 --> 00:32:56,253
+No complete RAGAS-style question-answering evaluation or
+
+531
+00:32:56,253 --> 00:32:58,993
+independent production accuracy study was performed.
+
+532
+00:33:00,553 --> 00:33:03,333
+Historical timings use nearest-rank percentiles from twenty
+
+533
+00:33:03,333 --> 00:33:03,873
+observations,
+
+534
+00:33:04,873 --> 00:33:06,033
+not a production guarantee.
+
+535
+00:33:07,433 --> 00:33:10,393
+Subscription-based Codex checks were supplementary, not
+
+536
+00:33:10,393 --> 00:33:12,793
+replacements for real API validation.
+
+537
+00:33:17,953 --> 00:33:21,113
+A stronger study needs independent annotations,
+
+538
+00:33:21,973 --> 00:33:26,213
+unseen initiatives, harder neighbors, no-match cases, and broader
+
+539
+00:33:26,213 --> 00:33:26,753
+languages.
+
+540
+00:33:28,053 --> 00:33:30,933
+Freeze policy and source snapshots before comparing methods.
+
+541
+00:33:32,173 --> 00:33:35,733
+Group related repositories when splitting, and report per-kind
+
+542
+00:33:35,733 --> 00:33:36,213
+errors,
+
+543
+00:33:37,033 --> 00:33:37,153
+abstention,
+
+544
+00:33:37,893 --> 00:33:38,373
+source support,
+
+545
+00:33:39,173 --> 00:33:41,193
+correction effort, and total cost.
+
+546
+00:33:42,153 --> 00:33:44,913
+Confidence intervals and model-winner claims should follow
+
+547
+00:33:44,913 --> 00:33:49,153
+adequate data rather than being manufactured from this small
+
+548
+00:33:49,153 --> 00:33:50,013
+reused set.
+
+549
+00:33:55,143 --> 00:33:56,323
+Section sixteen.
+
+550
+00:33:57,023 --> 00:34:00,263
+Stronger retrieval and contextual retrieval.
+
+551
+00:34:00,463 --> 00:34:04,023
+The purpose is to investigate specific weaknesses without
+
+552
+00:34:04,023 --> 00:34:07,043
+mistaking architectural complexity for improvement.
+
+553
+00:34:08,143 --> 00:34:11,243
+Everything in the research lane is a proposal or
+
+554
+00:34:11,243 --> 00:34:12,083
+external reference,
+
+555
+00:34:12,903 --> 00:34:14,523
+not a current product capability.
+
+556
+00:34:24,023 --> 00:34:24,603
+First
+
+557
+00:34:25,363 --> 00:34:26,423
+preserve complete sentences,
+
+558
+00:34:27,443 --> 00:34:29,283
+decisive passages, and contradiction.
+
+559
+00:34:30,611 --> 00:34:34,091
+Align evidence validation with exactly what was transmitted.
+
+560
+00:34:35,799 --> 00:34:38,859
+Compare candidate-conditioned passage selection with today's
+
+561
+00:34:38,859 --> 00:34:41,379
+simple packing at the same token ceiling.
+
+562
+00:34:42,967 --> 00:34:44,967
+Sparse experiments can vary term frequency,
+
+563
+00:34:45,627 --> 00:34:46,207
+field weights,
+
+564
+00:34:47,027 --> 00:34:47,427
+alias order,
+
+565
+00:34:48,107 --> 00:34:49,487
+boosts, and smaller caps.
+
+566
+00:34:50,695 --> 00:34:53,915
+These tests ask which error is fixed, rather than
+
+567
+00:34:53,915 --> 00:34:55,615
+assuming the next layer must be better.
+
+568
+00:35:00,333 --> 00:35:05,173
+A public-only bi-encoder trial could embed concept definitions and
+
+569
+00:35:05,173 --> 00:35:07,473
+repository-purpose profiles separately.
+
+570
+00:35:08,192 --> 00:35:12,412
+A small registry can use exact local similarity before
+
+571
+00:35:12,412 --> 00:35:14,052
+an approximate-neighbor service.
+
+572
+00:35:15,450 --> 00:35:17,670
+Cache by content and encoder version;
+
+573
+00:35:18,510 --> 00:35:20,610
+preserve identity and access metadata.
+
+574
+00:35:21,529 --> 00:35:24,249
+If dense search recovers real lexical misses,
+
+575
+00:35:25,169 --> 00:35:28,389
+compare sparse and dense unions with reciprocal-rank fusion.
+
+576
+00:35:29,388 --> 00:35:33,028
+A reranker adds cost and cannot recover a candidate
+
+577
+00:35:33,028 --> 00:35:34,347
+absent from that union.
+
+578
+00:35:35,846 --> 00:35:38,646
+Private embeddings are derived content and need separate
+
+579
+00:35:38,646 --> 00:35:39,126
+permission.
+
+580
+00:35:44,413 --> 00:35:46,733
+Now, contextual retrieval.
+
+581
+00:35:47,593 --> 00:35:50,013
+Its purpose is to make an indexed chunk meaningful
+
+582
+00:35:50,013 --> 00:35:51,673
+beyond its isolated words.
+
+583
+00:35:52,653 --> 00:35:56,433
+Anthropic's approach adds document-conditioned context before
+
+584
+00:35:56,433 --> 00:36:02,233
+indexing chunks with embeddings and BM25, with optional reranking.
+
+585
+00:36:02,233 --> 00:36:05,873
+Our deterministic metadata and purpose excerpts are not that
+
+586
+00:36:05,873 --> 00:36:06,433
+mechanism.
+
+587
+00:36:07,493 --> 00:36:11,133
+A trial could compare cheap metadata prefixes with generated
+
+588
+00:36:11,133 --> 00:36:11,793
+context,
+
+589
+00:36:12,793 --> 00:36:13,713
+accounting for indexing,
+
+590
+00:36:14,493 --> 00:36:14,613
+refresh,
+
+591
+00:36:15,413 --> 00:36:17,133
+privacy, and downstream support.
+
+592
+00:36:18,213 --> 00:36:21,813
+External published results do not become measured GitHub Manager
+
+593
+00:36:21,813 --> 00:36:24,873
+improvements merely by showing the reference diagram.
+
+594
+00:36:29,942 --> 00:36:34,204
+A future controller could allow one extra source-linked evidence
+
+595
+00:36:34,204 --> 00:36:37,144
+pass after an insufficient-context result,
+
+596
+00:36:37,844 --> 00:36:41,044
+under a reviewed budget, then abstain.
+
+597
+00:36:42,484 --> 00:36:45,824
+Adaptive RAG, Self-RAG, and corrective RAG are research
+
+598
+00:36:45,824 --> 00:36:46,304
+references,
+
+599
+00:36:47,064 --> 00:36:48,564
+not adopted implementations.
+
+600
+00:36:49,524 --> 00:36:52,904
+Agentic retrieval would additionally need tool permissions and
+
+601
+00:36:52,904 --> 00:36:54,044
+trajectory evaluation.
+
+602
+00:36:55,104 --> 00:36:59,284
+Domain relationships alone do not create GraphRAG.
+
+603
+00:36:59,284 --> 00:37:02,604
+Application memory does not make the model remember conversations.
+
+604
+00:37:08,070 --> 00:37:08,890
+Section seventeen.
+
+605
+00:37:10,740 --> 00:37:12,960
+Decision models, and the Jev research question.
+
+606
+00:37:14,700 --> 00:37:17,790
+The purpose is to investigate whether a specialized decision
+
+607
+00:37:17,790 --> 00:37:21,810
+interface could improve bounded judgments after the options are
+
+608
+00:37:21,810 --> 00:37:21,930
+known.
+
+609
+00:37:23,640 --> 00:37:26,600
+No Jev integration or live Jev test has been
+
+610
+00:37:26,600 --> 00:37:27,320
+performed here.
+
+611
+00:37:35,833 --> 00:37:38,353
+TypeSafe describes Choice,
+
+612
+00:37:39,093 --> 00:37:41,173
+Score, and Noul primitives for typed judgments.
+
+613
+00:37:41,567 --> 00:37:45,347
+For repository organization, a candidate could be supported,
+
+614
+00:37:46,147 --> 00:37:47,587
+unsupported, or unclear.
+
+615
+00:37:48,941 --> 00:37:52,141
+Ask separately for each candidate when several memberships are
+
+616
+00:37:52,141 --> 00:37:52,581
+possible.
+
+617
+00:37:53,914 --> 00:37:57,974
+Open-ended taxonomy discovery still needs generation to propose
+
+618
+00:37:57,974 --> 00:37:59,254
+new names and definitions.
+
+619
+00:38:00,548 --> 00:38:03,728
+A choice among existing options cannot replace that creative
+
+620
+00:38:03,728 --> 00:38:04,748
+vocabulary step.
+
+621
+00:38:10,340 --> 00:38:14,000
+A probability-derived decision confidence is not the same as
+
+622
+00:38:14,000 --> 00:38:17,920
+today's generated confidence number, and neither proves task
+
+623
+00:38:17,920 --> 00:38:18,540
+calibration.
+
+624
+00:38:20,178 --> 00:38:21,998
+A shadow study should retain the baseline,
+
+625
+00:38:22,738 --> 00:38:24,018
+test negation and option order,
+
+626
+00:38:24,658 --> 00:38:26,178
+and measure high-confidence errors,
+
+627
+00:38:26,838 --> 00:38:27,118
+abstention,
+
+628
+00:38:27,818 --> 00:38:30,298
+fallback, review effort, and total spending.
+
+629
+00:38:31,975 --> 00:38:36,275
+Extra provider credentials, retention terms, retries, and failures
+
+630
+00:38:36,275 --> 00:38:37,755
+require their own controls.
+
+631
+00:38:39,573 --> 00:38:42,413
+Faster decisions do not guarantee better completed workflows.
+
+632
+00:38:48,260 --> 00:38:51,400
+Potential uses include candidate filtering, passage relevance,
+
+633
+00:38:52,180 --> 00:38:54,500
+duplicate-review triage, or bounded assignment.
+
+634
+00:38:55,620 --> 00:38:57,720
+Any filter can discard a correct candidate.
+
+635
+00:38:58,860 --> 00:38:59,320
+Budget arithmetic,
+
+636
+00:39:00,240 --> 00:39:02,200
+privacy policy, stable-ID validity,
+
+637
+00:39:02,980 --> 00:39:06,180
+rejections, and stale-state protection stay deterministic.
+
+638
+00:39:07,540 --> 00:39:10,620
+Adoption should require a measured quality-cost tradeoff on
+
+639
+00:39:10,620 --> 00:39:11,400
+independent data,
+
+640
+00:39:12,020 --> 00:39:12,920
+not a vendor headline.
+
+641
+00:39:13,740 --> 00:39:17,160
+We finish by following the entire current workflow once
+
+642
+00:39:17,160 --> 00:39:17,440
+more.
+
+643
+00:39:23,060 --> 00:39:24,320
+Section eighteen.
+
+644
+00:39:25,750 --> 00:39:27,310
+The complete trace and next steps.
+
+645
+00:39:29,260 --> 00:39:31,580
+The purpose is to reconnect the technical layers to
+
+646
+00:39:31,580 --> 00:39:32,440
+the original need:
+
+647
+00:39:33,320 --> 00:39:34,480
+find useful repositories,
+
+648
+00:39:35,660 --> 00:39:38,920
+understand why they belong together, and keep control as
+
+649
+00:39:38,920 --> 00:39:39,980
+the collection changes.
+
+650
+00:39:49,690 --> 00:39:52,890
+Orion's source sentence explains patient intake, the clinical
+
+651
+00:39:52,890 --> 00:39:53,370
+initiative,
+
+652
+00:39:54,130 --> 00:39:55,670
+FastAPI, and Python.
+
+653
+00:39:56,750 --> 00:39:58,870
+Local extraction retains evidence one.
+
+654
+00:39:59,710 --> 00:40:01,150
+Retrieval finds six possibilities.
+
+655
+00:40:01,950 --> 00:40:03,770
+Augmentation supplies evidence,
+
+656
+00:40:04,690 --> 00:40:04,810
+definitions,
+
+657
+00:40:05,550 --> 00:40:07,230
+policy, and schema.
+
+658
+00:40:07,470 --> 00:40:09,650
+Generation returns four supported IDs.
+
+659
+00:40:11,130 --> 00:40:13,710
+Validation and review establish usable relationships.
+
+660
+00:40:14,610 --> 00:40:17,550
+A receipt preserves completed work even if the user
+
+661
+00:40:17,550 --> 00:40:18,870
+later removes a Project.
+
+662
+00:40:24,610 --> 00:40:29,310
+Readiness phases, frozen corpora, source hashes, lockfiles,
+
+663
+00:40:29,310 --> 00:40:32,590
+reports, and historical ledgers preserve what was actually tested.
+
+664
+00:40:33,710 --> 00:40:37,430
+Reconstructing a request offline is not recovering an original
+
+665
+00:40:37,430 --> 00:40:38,010
+wire log.
+
+666
+00:40:38,590 --> 00:40:42,510
+This animation does not rerun application or model benchmarks.
+
+667
+00:40:43,430 --> 00:40:44,850
+The original academic,
+
+668
+00:40:45,470 --> 00:40:48,730
+illustrated, and publication editions remain available with exact
+
+669
+00:40:48,730 --> 00:40:49,130
+inputs,
+
+670
+00:40:50,090 --> 00:40:50,210
+formulas,
+
+671
+00:40:50,830 --> 00:40:52,350
+qualifications, and references.
+
+672
+00:40:58,383 --> 00:41:00,583
+The next steps are better evidence packing,
+
+673
+00:41:01,303 --> 00:41:02,343
+tighter validation parity,
+
+674
+00:41:03,083 --> 00:41:07,003
+independent evaluation, and only then conditional retrieval or
+
+675
+00:41:07,003 --> 00:41:08,363
+decision-model experiments.
+
+676
+00:41:09,310 --> 00:41:13,010
+Cloud migration needs separate concurrency and recovery
+
+677
+00:41:13,010 --> 00:41:13,630
+validation.
+
+678
+00:41:15,077 --> 00:41:16,837
+The practical habit is simple:
+
+679
+00:41:17,497 --> 00:41:21,817
+put the source, shortlist, request, answer, and resulting state
+
+680
+00:41:21,817 --> 00:41:22,757
+beside one another.
+
+681
+00:41:24,464 --> 00:41:25,424
+Change one user decision,
+
+682
+00:41:26,124 --> 00:41:28,504
+follow the next run, and measure what improved.

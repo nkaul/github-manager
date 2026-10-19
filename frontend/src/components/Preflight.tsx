@@ -77,11 +77,11 @@ export default function Home() {
   return <div className="shell">
     <aside>
       <Link className="brand" href="/"><span className="brand-mark">G</span> GitHub Manager</Link>
-      <div className="workspace"><span className="dot" /> Local workspace <small>PHASE 0</small></div>
+      <div className="workspace"><span className="dot" /> Workspace <small>PHASE 0</small></div>
       <p className="nav-label">REPOSITORIES</p>
       {([["my", "My repositories"], ["favorites", "Favorites"], ["all", "Access candidates"]] as const).map(([key, title]) =>
         <button key={key} className={`nav-item ${view === key ? "active" : ""}`} onClick={() => { setView(key); setData(null); }} aria-pressed={view === key}>{title}</button>)}
-      <div className="sidebar-note"><strong>Access preflight</strong><p>Confirm your GitHub connection before building your organization workspace.</p><span>Local session · Read-only calls</span></div>
+      <div className="sidebar-note"><strong>Access preflight</strong><p>Confirm your GitHub connection before building your organization workspace.</p><span>Read-only calls</span></div>
     </aside>
     <main>
       <header><span className="breadcrumb">Workspace <span>/</span> Access preflight</span><span className={`connection ${identity ? "connected" : ""}`}><span className="dot" />{identity ? "GitHub connected" : "GitHub disconnected"}</span></header>
@@ -106,7 +106,7 @@ export default function Home() {
           {report && <div className="notice" role="status">Private Markdown report saved: <a href="/api/v1/pretest/github/report" download>{report.filename}</a>. Includes your GitHub login and ID for verification; repository names, private content, and tokens are omitted.</div>}
         </section>
       </>}
-      <footer>Phase 0 local preflight <span>·</span> Sessions expire or end when the backend restarts. AWS checks run separately through the local CLI.</footer>
+      <footer>Phase 0 preflight <span>·</span> Sessions expire or end when the backend restarts. AWS checks run separately through the local CLI.</footer>
     </main>
   </div>;
 }

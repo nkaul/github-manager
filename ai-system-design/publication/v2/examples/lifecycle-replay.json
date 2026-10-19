@@ -1,0 +1,50 @@
+{
+  "provenance": "New offline in-memory application replay of a saved provider result; no live workspace writes",
+  "before": {
+    "admission": [
+      true,
+      "New repository"
+    ],
+    "edges": {}
+  },
+  "after_analysis": {
+    "status": "CLASSIFIED",
+    "ai_analyzed": true,
+    "edges": {},
+    "admission": [
+      false,
+      "Already analyzed; reconcile offline"
+    ]
+  },
+  "after_simulated_user_acceptance": {
+    "edges": {
+      "p-orion": "USER",
+      "t-api": "USER",
+      "g-fastapi": "USER",
+      "g-python": "USER"
+    },
+    "derived_domains": [
+      "d-health"
+    ],
+    "admission": [
+      false,
+      "Already analyzed; reconcile offline"
+    ]
+  },
+  "after_simulated_project_removal": {
+    "remaining_ids": [
+      "t-api",
+      "g-fastapi",
+      "g-python"
+    ],
+    "protected_rejection": true,
+    "admission": [
+      false,
+      "Already analyzed; reconcile offline"
+    ],
+    "explicit_force_admission": [
+      true,
+      "Explicit re-analysis"
+    ]
+  }
+}

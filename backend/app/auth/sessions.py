@@ -1,4 +1,5 @@
 import hashlib
+import math
 import secrets
 import time
 from dataclasses import dataclass, field
@@ -27,6 +28,7 @@ class Session:
     snapshot: dict[str, Any] | None = None
     snapshot_at: float = 0
     report: dict[str, Any] | None = None
+    token_expires_at: float | None = field(default=None, repr=False)
 
 
 class SessionStore:
@@ -65,14 +67,58 @@ class SessionStore:
                 return None
             return self.states.pop(digest(state))
 
-    def create(self, user: dict, token: str, scopes: list[str], ttl: int) -> str:
+    def create(
+        self, user: dict, token: str, scopes: list[str], ttl: int, *, token_ttl: int | None = None
+    ) -> str:
         with self.lock:
             self._prune()
             if len(self.sessions) >= self.capacity:
                 raise ValueError("Too many local sessions")
             key = secrets.token_urlsafe(48)
-            self.sessions[digest(key)] = Session(user, token, scopes, self.clock() + ttl)
+            now = self.clock()
+            token_deadline = now + token_ttl if token_ttl is not None else None
+            deadline = min(now + ttl, token_deadline) if token_deadline is not None else now + ttl
+            self.sessions[digest(key)] = Session(
+                user, token, scopes, deadline, token_expires_at=token_deadline
+            )
             return key
+
+    def metadata(self, session: Session, ttl: int, warning: int) -> dict:
+        """Relative browser-safe deadlines; no monotonic epoch or provider secrets."""
+        with self.lock:
+            now = self.clock()
+            return {
+                "expires_in_seconds": max(0, math.ceil(session.expires_at - now)),
+                "warning_seconds": min(warning, max(10, ttl // 4)),
+                "renewable": session.token_expires_at is None
+                or session.token_expires_at > session.expires_at + 1,
+                "extension_seconds": ttl,
+            }
+
+    def extend(self, key: str | None, ttl: int) -> Session | None:
+        """Explicit local renewal never resurrects an expired/revoked provider grant."""
+        with self.lock:
+            self._prune()
+            session = self.sessions.get(digest(key)) if key else None
+            if session is None:
+                return None
+            deadline = self.clock() + ttl
+            if session.token_expires_at is not None:
+                deadline = min(deadline, session.token_expires_at)
+            session.expires_at = max(session.expires_at, deadline)
+            return session
+
+    def is_active(self, session: Session) -> bool:
+        with self.lock:
+            self._prune()
+            return any(value is session for value in self.sessions.values())
+
+    def discard_token(self, token: str):
+        """Invalidate only the failed grant, preserving another device's newer sign-in."""
+        with self.lock:
+            for key, session in list(self.sessions.items()):
+                if secrets.compare_digest(session.token, token):
+                    del self.sessions[key]
 
     def get(self, key: str | None) -> Session | None:
         with self.lock:

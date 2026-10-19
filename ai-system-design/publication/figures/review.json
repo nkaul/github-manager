@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "date": "2026-10-14",
+  "mode": "Built-in Image Generation",
+  "initial_generations": 3,
+  "application_provider_calls": 0,
+  "review_method": "Manual inspection of all final images against the saved prompts and documented implementation; format/hash/dimension checks automated. No OCR completeness or new quality benchmark claim.",
+  "figures": [
+    {
+      "file": "01-evidence-to-decisions.png",
+      "sha256": "f4505859f20d48d4670b047e7177b52540fa42cc78044a251f164225613d04d9",
+      "dimensions": [
+        1942,
+        809
+      ],
+      "content_review": "PASS",
+      "readability_review": "PASS - large labels and simplified visual story",
+      "notes": [
+        "Four-stage source/evidence/canonical/user-review story retained.",
+        "Project, Topic and Tag candidates shown; Domains correctly derive through Projects.",
+        "GitHub facts and user-owned accepted organization distinguished."
+      ]
+    },
+    {
+      "file": "02-remember-the-analysis.png",
+      "sha256": "0c0bec80fa55d4795ff200c1ba7da396217d009cc4d046edf43084bd21291370",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "content_review": "PASS",
+      "readability_review": "PASS - large labels and simplified visual story",
+      "notes": [
+        "Receipt checks separate first bounded analysis from ordinary local reconciliation.",
+        "Explicit re-analysis is user-directed, with a reason and reviewed budget.",
+        "Successful NO_MATCH completion and no automatic paid repeat after taxonomy changes retained."
+      ]
+    },
+    {
+      "file": "03-accountable-model-calls.png",
+      "sha256": "1122fc9f03d948c7a9d80a8d9d30e5ce0a66c97fff9b2f20a657fc067346cb87",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "content_review": "PASS",
+      "readability_review": "PASS - large labels and simplified visual story",
+      "notes": [
+        "Actual-request counting includes schema; reservation precedes generation.",
+        "Finite allowance and known-usage settlement retained.",
+        "Unknown usage remains reserved; reset cannot refill the cumulative budget.",
+        "Fixed/adaptive controls share the cap, without numerical prices or invoice claims."
+      ]
+    }
+  ]
+}

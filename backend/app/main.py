@@ -7,7 +7,8 @@ from contextlib import asynccontextmanager
 from typing import Literal
 
 from fastapi import Depends, FastAPI, HTTPException, Query, Request
-from fastapi.responses import PlainTextResponse, RedirectResponse
+from fastapi.responses import JSONResponse, PlainTextResponse, RedirectResponse
+from starlette.exceptions import HTTPException as StarletteHTTPException
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 
 from app.auth.sessions import Session, SessionStore
@@ -38,6 +39,13 @@ def create_app(settings=None, adapter=None, store=None):
         openapi_url=None,
     )
     app.add_middleware(TrustedHostMiddleware, allowed_hosts=["127.0.0.1", "localhost", "[::1]"])
+
+    @app.exception_handler(StarletteHTTPException)
+    async def http_error(request, error):
+        value = {"detail": error.detail}
+        if error.status_code == 401:
+            value.update(code="SESSION_EXPIRED", reauthentication_required=True)
+        return JSONResponse(value, status_code=error.status_code, headers=error.headers)
 
     @app.middleware("http")
     async def private_response(request, call_next):
@@ -122,13 +130,22 @@ def create_app(settings=None, adapter=None, store=None):
             return response
         try:
             value = await adapter.exchange(code, saved.verifier)
+            issued_at = store.clock()
             user = await adapter.identity(value["access_token"])
-            ttl = min(settings.session_ttl_seconds, max(1, int(value.get("expires_in", 28800))))
+            token_ttl = (
+                int(int(value["expires_in"]) - (store.clock() - issued_at))
+                if "expires_in" in value
+                else None
+            )
+            if token_ttl is not None and token_ttl <= 0:
+                raise ValueError("GitHub grant already expired")
+            ttl = min(settings.session_ttl_seconds, token_ttl or settings.session_ttl_seconds)
             key = store.create(
                 user,
                 value["access_token"],
                 [s.strip() for s in value.get("scope", "").split(",") if s.strip()],
                 ttl,
+                token_ttl=token_ttl,
             )
         except (GitHubError, ValueError, KeyError):
             raise HTTPException(502, "GitHub authorization failed; start sign-in again") from None
@@ -140,14 +157,38 @@ def create_app(settings=None, adapter=None, store=None):
         response.delete_cookie(NONCE_COOKIE, path="/api/v1/auth/github")
         return response
 
-    @app.get("/api/v1/me")
-    def me(session: Session = Depends(authenticated)):
+    def identity_response(session):
         return {
             "user": session.user,
             "scopes": session.scopes,
             "connector": "OAuth App",
             "csrf_token": session.csrf_token,
+            "session": store.metadata(
+                session, settings.session_ttl_seconds, settings.session_warning_seconds
+            ),
         }
+
+    @app.get("/api/v1/me")
+    def me(session: Session = Depends(authenticated)):
+        return identity_response(session)
+
+    @app.post("/api/v1/auth/session/extend")
+    def extend(request: Request, session: Session = Depends(mutation)):
+        key = request.cookies.get(SESSION_COOKIE)
+        renewed = store.extend(key, settings.session_ttl_seconds)
+        if renewed is None:
+            raise HTTPException(401, "Your local session ended. Sign in to GitHub again")
+        value = identity_response(renewed)
+        response = JSONResponse(value)
+        response.set_cookie(
+            SESSION_COOKIE,
+            key,
+            httponly=True,
+            samesite="lax",
+            max_age=value["session"]["expires_in_seconds"],
+            path="/",
+        )
+        return response
 
     @app.get("/api/v1/repos")
     async def repos(

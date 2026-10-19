@@ -1,0 +1,112 @@
+WEBVTT
+
+00:00:01.590 --> 00:00:02.710
+Section fourteen.
+
+00:00:04.019 --> 00:00:05.299
+Tokenomics and optimization.
+
+00:00:06.728 --> 00:00:09.448
+The purpose is to understand what each decision consumes
+
+00:00:09.448 --> 00:00:11.328
+and which costs can be avoided.
+
+00:00:12.836 --> 00:00:14.596
+We separate historical estimates,
+
+00:00:15.436 --> 00:00:18.316
+conservative admission bounds, and the broader cost of a
+
+00:00:18.316 --> 00:00:19.976
+useful accepted relationship.
+
+00:00:29.827 --> 00:00:32.887
+The harness pins a rate snapshot and counts assembled
+
+00:00:32.887 --> 00:00:33.287
+input.
+
+00:00:34.997 --> 00:00:38.457
+It reserves possible output, a conservative cache-write allowance,
+
+00:00:38.957 --> 00:00:41.297
+and headroom without assuming a cache discount.
+
+00:00:43.247 --> 00:00:46.147
+Known usage later settles in integer microdollars.
+
+00:00:47.997 --> 00:00:50.937
+Reasoning tokens already belong to output and must not
+
+00:00:50.937 --> 00:00:51.837
+be added twice.
+
+00:00:53.047 --> 00:00:56.727
+A maximum-output reservation is not a prediction of the
+
+00:00:56.727 --> 00:00:57.947
+answer's usual length.
+
+00:01:03.593 --> 00:01:07.713
+The twenty-case API round made twenty generation requests and
+
+00:01:07.713 --> 00:01:09.193
+twenty input-count requests:
+
+00:01:09.993 --> 00:01:12.333
+forty provider HTTP operations.
+
+00:01:13.533 --> 00:01:17.633
+It recorded sixteen thousand forty-one input tokens and three
+
+00:01:17.633 --> 00:01:20.193
+thousand four hundred fourteen output tokens.
+
+00:01:21.233 --> 00:01:24.833
+The rounded inference estimate was about three-tenths of a
+
+00:01:24.833 --> 00:01:24.953
+cent.
+
+00:01:25.713 --> 00:01:27.233
+This excludes media,
+
+00:01:28.193 --> 00:01:30.253
+infrastructure, indexing, and human review;
+
+00:01:31.513 --> 00:01:33.453
+it is not a production cost guarantee.
+
+00:01:39.630 --> 00:01:40.310
+Compact evidence,
+
+00:01:41.170 --> 00:01:45.150
+candidate caps, and bounded collection sampling reduce individual
+
+00:01:45.150 --> 00:01:47.950
+requests, but can omit useful context.
+
+00:01:49.490 --> 00:01:52.210
+Receipts and local reconciliation can avoid another request
+
+00:01:52.210 --> 00:01:52.790
+entirely.
+
+00:01:54.190 --> 00:01:57.390
+Provider prompt caching still invokes a model, and no
+
+00:01:57.390 --> 00:01:59.390
+discount benefit appeared in that round.
+
+00:02:00.790 --> 00:02:01.210
+Count latency,
+
+00:02:02.130 --> 00:02:02.650
+evidence refresh,
+
+00:02:03.570 --> 00:02:05.970
+storage, and reviewer corrections also matter.
+
+00:02:07.170 --> 00:02:10.810
+Optimize cost per correct, accepted, current association.

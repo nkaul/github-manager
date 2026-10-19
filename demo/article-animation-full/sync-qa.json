@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "script_words": 3760,
+  "caption_order": "Exact authored word order preserved",
+  "word_timing": "Provider transcription alignment with number/acronym normalization",
+  "neighbor_envelope_words": 38,
+  "targeted_repairs": [
+    "03-context-02",
+    "08-augmentation-01",
+    "08-augmentation-02",
+    "08-augmentation-03",
+    "08-augmentation-04"
+  ],
+  "speech_time_stretch": false,
+  "sentence_silence_added_seconds": 85.51899999999999,
+  "result_hold_seconds": 3.5,
+  "introduction_extra_hold_seconds": 4,
+  "limitation": "38 word envelopes use neighboring alignment; automated alignment is not a perceptual listening study."
+}

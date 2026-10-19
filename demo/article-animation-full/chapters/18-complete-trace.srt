@@ -1,0 +1,159 @@
+1
+00:00:01,560 --> 00:00:02,820
+Section eighteen.
+
+2
+00:00:04,250 --> 00:00:05,810
+The complete trace and next steps.
+
+3
+00:00:07,760 --> 00:00:10,080
+The purpose is to reconnect the technical layers to
+
+4
+00:00:10,080 --> 00:00:10,940
+the original need:
+
+5
+00:00:11,820 --> 00:00:12,980
+find useful repositories,
+
+6
+00:00:14,160 --> 00:00:17,420
+understand why they belong together, and keep control as
+
+7
+00:00:17,420 --> 00:00:18,480
+the collection changes.
+
+8
+00:00:28,190 --> 00:00:31,390
+Orion's source sentence explains patient intake, the clinical
+
+9
+00:00:31,390 --> 00:00:31,870
+initiative,
+
+10
+00:00:32,630 --> 00:00:34,170
+FastAPI, and Python.
+
+11
+00:00:35,250 --> 00:00:37,370
+Local extraction retains evidence one.
+
+12
+00:00:38,210 --> 00:00:39,650
+Retrieval finds six possibilities.
+
+13
+00:00:40,450 --> 00:00:42,270
+Augmentation supplies evidence,
+
+14
+00:00:43,190 --> 00:00:43,310
+definitions,
+
+15
+00:00:44,050 --> 00:00:45,730
+policy, and schema.
+
+16
+00:00:45,970 --> 00:00:48,150
+Generation returns four supported IDs.
+
+17
+00:00:49,630 --> 00:00:52,210
+Validation and review establish usable relationships.
+
+18
+00:00:53,110 --> 00:00:56,050
+A receipt preserves completed work even if the user
+
+19
+00:00:56,050 --> 00:00:57,370
+later removes a Project.
+
+20
+00:01:03,110 --> 00:01:07,810
+Readiness phases, frozen corpora, source hashes, lockfiles,
+
+21
+00:01:07,810 --> 00:01:11,090
+reports, and historical ledgers preserve what was actually tested.
+
+22
+00:01:12,210 --> 00:01:15,930
+Reconstructing a request offline is not recovering an original
+
+23
+00:01:15,930 --> 00:01:16,510
+wire log.
+
+24
+00:01:17,090 --> 00:01:21,010
+This animation does not rerun application or model benchmarks.
+
+25
+00:01:21,930 --> 00:01:23,350
+The original academic,
+
+26
+00:01:23,970 --> 00:01:27,230
+illustrated, and publication editions remain available with exact
+
+27
+00:01:27,230 --> 00:01:27,630
+inputs,
+
+28
+00:01:28,590 --> 00:01:28,710
+formulas,
+
+29
+00:01:29,330 --> 00:01:30,850
+qualifications, and references.
+
+30
+00:01:36,883 --> 00:01:39,083
+The next steps are better evidence packing,
+
+31
+00:01:39,803 --> 00:01:40,843
+tighter validation parity,
+
+32
+00:01:41,583 --> 00:01:45,503
+independent evaluation, and only then conditional retrieval or
+
+33
+00:01:45,503 --> 00:01:46,863
+decision-model experiments.
+
+34
+00:01:47,810 --> 00:01:51,510
+Cloud migration needs separate concurrency and recovery
+
+35
+00:01:51,510 --> 00:01:52,130
+validation.
+
+36
+00:01:53,577 --> 00:01:55,337
+The practical habit is simple:
+
+37
+00:01:55,997 --> 00:02:00,317
+put the source, shortlist, request, answer, and resulting state
+
+38
+00:02:00,317 --> 00:02:01,257
+beside one another.
+
+39
+00:02:02,964 --> 00:02:03,924
+Change one user decision,
+
+40
+00:02:04,624 --> 00:02:07,004
+follow the next run, and measure what improved.

@@ -1,0 +1,45 @@
+{
+  "tool": "Built-in image_gen.imagegen (no CLI/API fallback)",
+  "client_date": "2026-10-18",
+  "status": "New generated illustrations; original prior publication figures preserved",
+  "figures": [
+    {
+      "file": "01-evidence-to-human-truth.png",
+      "prompt": "Create a publication-quality friendly hand-drawn technical explainer in the same visual language as the provided style reference. This is a NEW figure, not editing its content. White paper, expressive dark pen, blue/indigo handwriting, restrained purple/lavender/light-blue washes. Recognizable document stacks, TWO small friendly robot readers, a magnifying glass and a human at a review desk. Wide landscape 16:9 with generous margins, short very readable labels. Title exact: \"From repository evidence to human-reviewed truth\".\nMechanism reading left-to-right with four numbered stops, not generic service boxes:\n1 \"Freeze the evidence\" illustrated repository folder and README stack, small label \"600 public repositories\".\n2 \"Read independently\" the SAME source stack visibly branches to Robot A and Robot B; label \"30 repositories \u00d7 2 readers\". Each robot has an annotation clipboard. Small clearly readable note \"LLM-powered Codex agents\".\n3 \"Check and compare\" magnifying glass over matching source quote and two label lists; label \"Integrity \u2260 correctness\".\n4 \"Human adjudication\" person comparing source and proposals, using pen to correct labels, then a stamped review receipt; label \"Accept \u2022 correct \u2022 unresolved\".\nA small bottom ribbon says exact \"Current pilot: proposals + human review in progress\". Beside it a dashed small future notebook labelled \"Later: frozen evaluation set\".\nImportant boundaries: robots propose, human explicitly decides. Do NOT suggest autonomous final approval, probability scores, separate external API calls, deployed RAG evals or a completed gold set. Do NOT add vendor logos. Semantic objects should explain the process, arrows should have clear directions. Preserve style, not factual content, of reference.",
+      "reference": "ai-system-design/publication/figures/01-evidence-to-decisions.png",
+      "sha256": "6d61bb917f769cc760c29d9fa48d8eb99f80060c8d8c758472b5eebc5e961b6f",
+      "width": 1672,
+      "height": 941,
+      "reference_sha256": "f4505859f20d48d4670b047e7177b52540fa42cc78044a251f164225613d04d9"
+    },
+    {
+      "file": "02-two-readings-one-repository.png",
+      "prompt": "New friendly hand-drawn technical explainer, same paper/pen/blue-indigo style as supplied reference, not a block diagram. Wide landscape16:9, large readable handwritten headings, soft blue/lavender washes, expressive source documents, two friendly small robot readers, person with pen. Title exact \"One repository, two defensible readings\". Subtitle \"Saved pilot example: backstage/backstage-deploy\".\nThree broad left-to-right scenes with generous whitespace:\nLEFT source document and terminal window, labelled \"Same saved evidence\". On document exact short phrases \"Purpose: deploy Backstage\", \"Creates cloud resources\", \"Uses Pulumi\". Metadata tag \"TypeScript\". Footer \"README + package + metadata\".\nMIDDLE two robot clipboards A and B. Shared central four label chips: \"Backstage\", \"Application Deployment\", \"Cloud Provisioning\", \"TypeScript\". Above \"Both propose these 4\". Below a small separate B-only note with three chips: \"Infrastructure as Code\", \"Developer Platform Integration\", \"Node.js\"; label \"B also proposes these 3\". These are proposals, not accepted truth. An unambiguous arrow from Backstage chip to a small folder labelled \"Derived Domain: Developer Platforms and Collaboration\". Do not imply Topics or Tags are parents of Domain.\nRIGHT human reviewer holding registry definitions beside source; title \"Human question\". Speech bubble \"Primary purpose, or incidental detail?\" Under it exactly \"Keep, remove, or request evidence\". A small UNSTAMPED review receipt \"Decision pending\". \nBottom clear qualification \"Agreement is useful evidence. It is not accuracy.\" No final correctness checkmarks, no percentage quality metrics, no invented human outcome. Draw mechanism with objects and readable labels, not dense rectangular architecture boxes.",
+      "reference": "ai-system-design/ground-truth-creation/figures/01-evidence-to-human-truth.png",
+      "sha256": "4272d3740a7e436d0cb17296c434801ddb3b0e18e375958457fb77b3b854f96b",
+      "width": 1672,
+      "height": 941,
+      "reference_sha256": "6d61bb917f769cc760c29d9fa48d8eb99f80060c8d8c758472b5eebc5e961b6f"
+    },
+    {
+      "file": "03-human-review-and-audit.png",
+      "prompt": "Create a NEW friendly hand-drawn publication illustration matching style of supplied reference: white paper, expressive dark pen, blue/indigo handwriting, restrained purple accents and soft marker washes, friendly reviewer, evidence documents and magnifier, generous whitespace. Landscape16:9. Title exact \"Spend human attention where it matters\".\nThree stages as illustrated physical review desk, with a clear reading path, not generic blocks:\nLEFT a tray of twenty numbered blank review cards in THREE clearly separated piles. Above \"Initial queue: 20 cases\". Pile labels exact \"10 risk-selected\", \"2 random Green\", \"8 random fill\". Show caution magnifier by risk stack and small dice icon by both random stacks. Do not imply random fill is Green.\nCENTER a human reviewer with two proposal sheets A/B and a README beside a registry notebook. Header \"Review meaning, not just matching words\". Three very readable action tags: \"Purpose\", \"Projects / Topics / Tags\", \"Evidence\". A lower note exact \"Domains derive from Projects\".\nRIGHT a receipt cabinet labelled \"Saved human decisions\" with three drawers \"Confirmed\", \"Needs evidence\", \"Drafts\". Drafts visibly separate, with small note \"Drafts do not count as confirmed\". Dashed arrow to a distant small notebook titled \"Next: evaluate against reviewed references\", with \"Planned\" clearly written.\nBottom ribbon exact \"Check agreement cases too: both readers can share a mistake.\"\nImportant: current process inprogress; no implied completed gold benchmark, no invented accuracy/confidence, no blanket automated acceptance. All essential labels large and legible; under30labels. Consistent characters with reference, actual mechanism conveyed by meaningful objects.",
+      "reference": "ai-system-design/ground-truth-creation/figures/01-evidence-to-human-truth.png",
+      "status": "Preserved first generation; decorative card numbers removed in final v2.",
+      "sha256": "d479caaa6d509ad585a0b95970d52ca2f06015df9c20b2e13df5d95c1ac77e3f",
+      "width": 1672,
+      "height": 941,
+      "reference_sha256": "6d61bb917f769cc760c29d9fa48d8eb99f80060c8d8c758472b5eebc5e961b6f"
+    },
+    {
+      "file": "03-human-review-and-audit-v2.png",
+      "prompt": "Edit this existing illustration with ONE targeted correction. Preserve the entire composition, lettering, title, people, source documents, colors, all actual count labels (\"Initial queue: 20 cases\", \"10 risk-selected\", \"2 random Green\", \"8 random fill\"), arrows, cabinet, future note and bottom qualification.\nChange ONLY the tiny numerals printed ON the foreground paper cards in the three trays on the LEFT. Remove all these decorative tiny numbers and replace each card's numeral row with two or three short gray/blue/purple handwritten horizontal lines, so the cards visibly represent source records without pretending to give repository IDs or exact ordering. Keep the tray labels and counts exactly as stated. Do not change any other region, wording or content. This is factual cleanup, no new layout.",
+      "reference": "ai-system-design/ground-truth-creation/figures/03-human-review-and-audit.png",
+      "status": "Final article figure.",
+      "sha256": "c451e85cc6490144f022bbf2b70acb61bb1d6b0acc268f0a4f09d3f640ce1a95",
+      "width": 1672,
+      "height": 941,
+      "reference_sha256": "d479caaa6d509ad585a0b95970d52ca2f06015df9c20b2e13df5d95c1ac77e3f"
+    }
+  ]
+}

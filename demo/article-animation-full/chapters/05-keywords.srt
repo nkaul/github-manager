@@ -1,0 +1,151 @@
+1
+00:00:01,430 --> 00:00:02,250
+Section five.
+
+2
+00:00:03,060 --> 00:00:03,920
+Local algorithms.
+
+3
+00:00:04,930 --> 00:00:08,490
+Their purpose is to expose compact signals before an
+
+4
+00:00:08,490 --> 00:00:09,330
+expensive decision.
+
+5
+00:00:10,740 --> 00:00:14,300
+We use phrase extraction and corpus counts, but those
+
+6
+00:00:14,300 --> 00:00:17,920
+numbers do not establish initiative membership or semantic
+
+7
+00:00:17,920 --> 00:00:18,560
+understanding.
+
+8
+00:00:27,940 --> 00:00:31,160
+RAKE splits around stopwords and punctuation.
+
+9
+00:00:32,200 --> 00:00:35,580
+Word frequency and co-occurrence contribute to phrase scores.
+
+10
+00:00:36,360 --> 00:00:38,980
+Our configuration considers one to four words,
+
+11
+00:00:39,860 --> 00:00:41,020
+retains up to twenty candidates,
+
+12
+00:00:41,840 --> 00:00:44,640
+normalizes duplicates, and checks source spans.
+
+13
+00:00:44,900 --> 00:00:46,000
+In Orion,
+
+14
+00:00:46,940 --> 00:00:50,500
+patient intake API and Orion clinical platform each score
+
+15
+00:00:50,500 --> 00:00:50,960
+nine.
+
+16
+00:00:51,820 --> 00:00:54,280
+FastAPI and Python score one.
+
+17
+00:00:54,780 --> 00:00:57,020
+Those are weights, not probabilities.
+
+18
+00:01:02,680 --> 00:01:06,340
+YAKE was compared offline using local document features such
+
+19
+00:01:06,340 --> 00:01:07,100
+as position,
+
+20
+00:01:07,820 --> 00:01:09,360
+capitalization, and frequency.
+
+21
+00:01:10,455 --> 00:01:12,815
+It is not the production extractor.
+
+22
+00:01:14,030 --> 00:01:18,210
+Its measured runtime included repeated process startup, so the
+
+23
+00:01:18,210 --> 00:01:20,490
+ratio is not an intrinsic speed comparison.
+
+24
+00:01:22,665 --> 00:01:25,665
+Corpus document frequency counts a term once per repository.
+
+25
+00:01:26,800 --> 00:01:31,200
+That pretest table is different from the concept-document IDF
+
+26
+00:01:31,200 --> 00:01:32,460
+used in retrieval.
+
+27
+00:01:34,195 --> 00:01:37,735
+The installed YAKE artifact's licensing also remained an adoption
+
+28
+00:01:37,735 --> 00:01:38,215
+concern.
+
+29
+00:01:43,597 --> 00:01:45,877
+A bag of phrases loses relationships,
+
+30
+00:01:46,617 --> 00:01:47,757
+including the word not.
+
+31
+00:01:49,143 --> 00:01:50,563
+Purpose prose must survive.
+
+32
+00:01:51,510 --> 00:01:54,330
+In one historical FastAPI ablation,
+
+33
+00:01:55,210 --> 00:01:58,830
+adding RAKE phrases used more input tokens without changing
+
+34
+00:01:58,830 --> 00:02:00,610
+the unwanted secondary labels.
+
+35
+00:02:01,476 --> 00:02:05,056
+That single case proves neither that phrases always help
+
+36
+00:02:05,596 --> 00:02:06,976
+nor that they are unnecessary.
+
+37
+00:02:09,263 --> 00:02:12,723
+The product also has no learned project-clustering engine or
+
+38
+00:02:12,723 --> 00:02:14,323
+automatically learned rules.

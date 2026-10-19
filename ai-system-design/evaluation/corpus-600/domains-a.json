@@ -1,0 +1,2143 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_version": "2026-10-16-agent-a-v1.5",
+  "agent": "A",
+  "status": "APPROVED_COLLECTION_SCOPE_PROPOSED_ANNOTATION_RULES",
+  "plan": "docs/planning/public-repository-corpus-600.md",
+  "scope_override": "Parent reassigned first four applied domains to A (240); third agent handles remaining reassignment. Original two-agent 300/300 split is superseded by explicit user approval for a third agent.",
+  "network_access": "BROKER_ONLY; agent must not access credentials or make direct network calls",
+  "global_caps": {
+    "github_attempts": 12000,
+    "search_attempts": 200,
+    "retained_source_bytes": 1073741824,
+    "total_target": 600,
+    "total_staged_candidates": 1800
+  },
+  "agent_caps": {
+    "target_accepted": 240,
+    "initial_staged_candidates": 720,
+    "planned_search_requests": 72,
+    "per_page_max": 30
+  },
+  "sources": {
+    "complete_readme_required": true,
+    "readme_max_bytes": 262144,
+    "supporting_file_max_bytes": 131072,
+    "supporting_files_max": 4,
+    "pin_to_one_default_branch_commit": true,
+    "execute_content": false,
+    "external_links": false
+  },
+  "annotation_rules": {
+    "status_values": [
+      "PROPOSED",
+      "CROSS_REVIEWED",
+      "HUMAN_APPROVED",
+      "DISPUTED",
+      "UNKNOWN"
+    ],
+    "initial_status": "PROPOSED",
+    "evidence_required": [
+      "source path",
+      "commit SHA",
+      "blob SHA",
+      "line range",
+      "supporting passage",
+      "relationship rationale"
+    ],
+    "domain_semantics": "Repository Domain derives from assigned Project parent; sampling bucket is not an automatic Domain label.",
+    "project_semantics": "Named actual initiative/product family with dedicated primary-purpose evidence; no forced Project for independent repository.",
+    "no_project": "No supported registry Project; may still have supported Topics or Tags. UNKNOWN membership is not a negative label.",
+    "global_no_match": "No supported assignment in any allowed kind under the frozen registry; must be assessed separately, never inferred from noProject.",
+    "primary_topics_and_tags": "Use primary purpose/capability and primary implementation technologies; do not label every dependency or optional deployment tool.",
+    "supplemental_evidence": "Record whether relationship support is in README/app-profile/compact-prompt or only in supporting files; do not silently make classifier input richer than application input.",
+    "contradictions": "Preserve explicit exclusions, stale statements, ambiguity and source disagreements.",
+    "leakage_controls": "Keep annotation/search explanations out of classifier input; group related initiatives/copied source lineages in a single split; registry-source overlap disclosed.",
+    "ground_truth_gate": "Human approval required; machine/agent proposals are not ground truth."
+  },
+  "domains": [
+    {
+      "id": "healthcare",
+      "name": "Healthcare and life sciences",
+      "target_accepted": 60,
+      "initial_candidate_cap": 180,
+      "max_search_queries": 18,
+      "composition_targets": {
+        "source_supported_initiative": 30,
+        "independent_or_near_neighbor": 24,
+        "natural_challenge": 6,
+        "non_english_or_multilingual": 6
+      },
+      "max_repositories_per_owner_target": 12,
+      "families": [
+        {
+          "id": "healthcare-family-1",
+          "name": "OpenMRS",
+          "owner_hypothesis": "openmrs",
+          "seed_repository_hypothesis": "openmrs/openmrs-core",
+          "description": "A patient-centered electronic medical record platform and repositories dedicated to extending or operating that platform.",
+          "aliases": [
+            "Open Medical Record System"
+          ],
+          "membership_criteria": "Explicit OpenMRS core/module/application identity, dedicated OpenMRS API client, or operational tooling whose primary purpose is OpenMRS.",
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED",
+          "exclude_as_sufficient_evidence": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ]
+        },
+        {
+          "id": "healthcare-family-2",
+          "name": "OpenEMR",
+          "owner_hypothesis": "openemr",
+          "seed_repository_hypothesis": "openemr/openemr",
+          "description": "An electronic health record and medical-practice-management application and its dedicated extensions.",
+          "aliases": [
+            "Open EMR"
+          ],
+          "membership_criteria": "Explicit OpenEMR application, dedicated module/integration, or deployment/maintenance tooling with OpenEMR as its primary subject.",
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED",
+          "exclude_as_sufficient_evidence": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ]
+        },
+        {
+          "id": "healthcare-family-3",
+          "name": "DHIS2",
+          "owner_hypothesis": "dhis2",
+          "seed_repository_hypothesis": "dhis2/dhis2-core",
+          "description": "A health-information platform for routine reporting, analysis and program management.",
+          "aliases": [
+            "District Health Information Software 2"
+          ],
+          "membership_criteria": "Explicit DHIS2 core/application, dedicated DHIS2 integration/client, or primary operational support for DHIS2.",
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED",
+          "exclude_as_sufficient_evidence": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ]
+        },
+        {
+          "id": "healthcare-family-4",
+          "name": "Medplum",
+          "owner_hypothesis": "medplum",
+          "seed_repository_hypothesis": "medplum/medplum",
+          "description": "A healthcare developer platform centered on FHIR-based applications and data.",
+          "aliases": [
+            "Medplum platform"
+          ],
+          "membership_criteria": "Explicit Medplum application/platform identity or dedicated extension/integration; generic FHIR support alone does not qualify.",
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED",
+          "exclude_as_sufficient_evidence": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ]
+        }
+      ],
+      "topics": [
+        {
+          "id": "healthcare-topic-1",
+          "name": "Electronic Medical Records",
+          "aliases": [
+            "EMR",
+            "EHR",
+            "electronic health records"
+          ],
+          "description": "Longitudinal patient medical-record capture, maintenance and clinical documentation.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "healthcare-topic-2",
+          "name": "Clinical Workflows",
+          "aliases": [
+            "clinical operations",
+            "patient workflow"
+          ],
+          "description": "Patient intake, care delivery, scheduling or clinician workflow management as a primary capability.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "healthcare-topic-3",
+          "name": "Healthcare Interoperability",
+          "aliases": [
+            "FHIR",
+            "HL7",
+            "health data exchange"
+          ],
+          "description": "Exchange or integration of healthcare data across systems with explicit healthcare-specific evidence.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "healthcare-topic-4",
+          "name": "Public Health Reporting",
+          "aliases": [
+            "health management information systems",
+            "HMIS"
+          ],
+          "description": "Population/program reporting, surveillance or health-system indicators.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "healthcare-topic-5",
+          "name": "Medical Imaging",
+          "aliases": [
+            "DICOM",
+            "radiology"
+          ],
+          "description": "Storage, exchange, processing or viewing of medical images as a primary purpose.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "healthcare-topic-6",
+          "name": "Clinical Quality Measurement",
+          "aliases": [
+            "eCQM",
+            "clinical quality measures"
+          ],
+          "description": "Authoring, preparing, calculating or reporting clinical quality measures and their supporting value sets.",
+          "status": "PROPOSED_REGISTRY_DEFINITION_SOURCE_MOTIVATED"
+        },
+        {
+          "id": "healthcare-topic-7",
+          "name": "Clinical Data Analysis",
+          "aliases": [
+            "EHR analysis",
+            "clinical analytics"
+          ],
+          "description": "Exploratory, statistical or predictive analysis of patient-level clinical data; distinguish analysis from medical-record authoring.",
+          "status": "PROPOSED_REGISTRY_DEFINITION_SOURCE_MOTIVATED"
+        },
+        {
+          "id": "healthcare-topic-8",
+          "name": "Synthetic Health Data",
+          "aliases": [
+            "synthetic patients",
+            "synthetic medical records"
+          ],
+          "description": "Generation of simulated patient histories or healthcare datasets; this is a repository capability, not a claim that its corpus sources are real patient records.",
+          "status": "PROPOSED_REGISTRY_DEFINITION_SOURCE_MOTIVATED"
+        },
+        {
+          "id": "healthcare-topic-9",
+          "name": "Clinical Terminology",
+          "aliases": [
+            "ICD-10",
+            "CID-10",
+            "FHIR ValueSets"
+          ],
+          "description": "Clinical coding systems, terminology lookup or healthcare value-set creation and use.",
+          "status": "PROPOSED_REGISTRY_DEFINITION_SOURCE_MOTIVATED"
+        },
+        {
+          "id": "healthcare-topic-10",
+          "name": "Care Coordination",
+          "aliases": [
+            "health-service coordination",
+            "donor-recipient coordination"
+          ],
+          "description": "Coordinating healthcare participants, referrals or medically governed health-resource access; distinct from a complete medical-record system.",
+          "status": "PROPOSED_REGISTRY_DEFINITION_SOURCE_MOTIVATED"
+        }
+      ],
+      "queries": [
+        {
+          "id": "healthcare-family-1-owner",
+          "q": "org:openmrs is:public fork:false archived:false",
+          "family_hypothesis": "healthcare-family-1",
+          "purpose": "discover likely family components; owner is not a label",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "org:openmrs is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "healthcare-family-1-purpose",
+          "q": "\"OpenMRS\" in:name,description,readme is:public fork:false archived:false",
+          "family_hypothesis": "healthcare-family-1",
+          "purpose": "discover independently owned dedicated integrations and near-neighbors",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"OpenMRS\" in:name,description,readme is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "healthcare-family-2-owner",
+          "q": "org:openemr is:public fork:false archived:false",
+          "family_hypothesis": "healthcare-family-2",
+          "purpose": "discover likely family components; owner is not a label",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "org:openemr is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "healthcare-family-2-purpose",
+          "q": "\"OpenEMR\" in:name,description,readme is:public fork:false archived:false",
+          "family_hypothesis": "healthcare-family-2",
+          "purpose": "discover independently owned dedicated integrations and near-neighbors",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"OpenEMR\" in:name,description,readme is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "healthcare-family-3-owner",
+          "q": "org:dhis2 is:public fork:false archived:false",
+          "family_hypothesis": "healthcare-family-3",
+          "purpose": "discover likely family components; owner is not a label",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "org:dhis2 is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "healthcare-family-3-purpose",
+          "q": "\"DHIS2\" in:name,description,readme is:public fork:false archived:false",
+          "family_hypothesis": "healthcare-family-3",
+          "purpose": "discover independently owned dedicated integrations and near-neighbors",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"DHIS2\" in:name,description,readme is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "healthcare-family-4-owner",
+          "q": "org:medplum is:public fork:false archived:false",
+          "family_hypothesis": "healthcare-family-4",
+          "purpose": "discover likely family components; owner is not a label",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "org:medplum is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "healthcare-family-4-purpose",
+          "q": "\"Medplum\" in:name,description,readme is:public fork:false archived:false",
+          "family_hypothesis": "healthcare-family-4",
+          "purpose": "discover independently owned dedicated integrations and near-neighbors",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"Medplum\" in:name,description,readme is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "healthcare-topic-emr",
+          "q": "topic:electronic-health-record is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "topic:electronic-health-record is:public fork:false archived:false",
+          "stratum": "topic"
+        },
+        {
+          "id": "healthcare-topic-interoperability",
+          "q": "topic:fhir is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "topic:fhir is:public fork:false archived:false",
+          "stratum": "topic"
+        },
+        {
+          "id": "healthcare-topic-healthcare",
+          "q": "topic:healthcare is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "topic:healthcare is:public fork:false archived:false",
+          "stratum": "topic"
+        },
+        {
+          "id": "healthcare-lowstar-health",
+          "q": "healthcare in:description,readme stars:0..30 is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "stars",
+          "order": "asc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "healthcare in:description,readme stars:0..30 is:public fork:false archived:false",
+          "stratum": "lowstar"
+        },
+        {
+          "id": "healthcare-lowstar-emr",
+          "q": "\"medical record\" in:description,readme stars:31..150 is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "updated",
+          "order": "asc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"medical record\" in:description,readme stars:31..150 is:public fork:false archived:false",
+          "stratum": "lowstar"
+        },
+        {
+          "id": "healthcare-language-python",
+          "q": "topic:healthcare language:Python is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "topic:healthcare language:Python is:public fork:false archived:false",
+          "stratum": "language"
+        },
+        {
+          "id": "healthcare-language-typescript",
+          "q": "topic:healthcare language:TypeScript is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "topic:healthcare language:TypeScript is:public fork:false archived:false",
+          "stratum": "language"
+        },
+        {
+          "id": "healthcare-nonenglish-chinese",
+          "q": "医疗 in:readme is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "医疗 in:readme is:public fork:false archived:false",
+          "stratum": "nonenglish"
+        },
+        {
+          "id": "healthcare-nonenglish-spanish",
+          "q": "\"historia clínica\" in:readme is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"historia clínica\" in:readme is:public fork:false archived:false",
+          "stratum": "nonenglish"
+        },
+        {
+          "id": "healthcare-nonenglish-portuguese",
+          "q": "\"prontuário eletrônico\" in:readme is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"prontuário eletrônico\" in:readme is:public fork:false archived:false",
+          "stratum": "nonenglish"
+        }
+      ],
+      "target": 60,
+      "description": "Sampling bucket for healthcare and life sciences. Not an automatic repository Domain assignment.",
+      "seed_hypotheses": [
+        {
+          "repo": "openmrs/openmrs-core",
+          "project": "OpenMRS",
+          "owner": "openmrs",
+          "rationale": "Explicit OpenMRS core/module/application identity, dedicated OpenMRS API client, or operational tooling whose primary purpose is OpenMRS.",
+          "description": "A patient-centered electronic medical record platform and repositories dedicated to extending or operating that platform.",
+          "aliases": [
+            "Open Medical Record System"
+          ]
+        },
+        {
+          "repo": "openemr/openemr",
+          "project": "OpenEMR",
+          "owner": "openemr",
+          "rationale": "Explicit OpenEMR application, dedicated module/integration, or deployment/maintenance tooling with OpenEMR as its primary subject.",
+          "description": "An electronic health record and medical-practice-management application and its dedicated extensions.",
+          "aliases": [
+            "Open EMR"
+          ]
+        },
+        {
+          "repo": "dhis2/dhis2-core",
+          "project": "DHIS2",
+          "owner": "dhis2",
+          "rationale": "Explicit DHIS2 core/application, dedicated DHIS2 integration/client, or primary operational support for DHIS2.",
+          "description": "A health-information platform for routine reporting, analysis and program management.",
+          "aliases": [
+            "District Health Information Software 2"
+          ]
+        },
+        {
+          "repo": "medplum/medplum",
+          "project": "Medplum",
+          "owner": "medplum",
+          "rationale": "Explicit Medplum application/platform identity or dedicated extension/integration; generic FHIR support alone does not qualify.",
+          "description": "A healthcare developer platform centered on FHIR-based applications and data.",
+          "aliases": [
+            "Medplum platform"
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "id": "healthcare-family-1",
+          "name": "OpenMRS",
+          "description": "A patient-centered electronic medical record platform and repositories dedicated to extending or operating that platform.",
+          "aliases": [
+            "Open Medical Record System"
+          ],
+          "membership_criteria": "Explicit OpenMRS core/module/application identity, dedicated OpenMRS API client, or operational tooling whose primary purpose is OpenMRS.",
+          "excluded_shortcuts": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ],
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED"
+        },
+        {
+          "id": "healthcare-family-2",
+          "name": "OpenEMR",
+          "description": "An electronic health record and medical-practice-management application and its dedicated extensions.",
+          "aliases": [
+            "Open EMR"
+          ],
+          "membership_criteria": "Explicit OpenEMR application, dedicated module/integration, or deployment/maintenance tooling with OpenEMR as its primary subject.",
+          "excluded_shortcuts": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ],
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED"
+        },
+        {
+          "id": "healthcare-family-3",
+          "name": "DHIS2",
+          "description": "A health-information platform for routine reporting, analysis and program management.",
+          "aliases": [
+            "District Health Information Software 2"
+          ],
+          "membership_criteria": "Explicit DHIS2 core/application, dedicated DHIS2 integration/client, or primary operational support for DHIS2.",
+          "excluded_shortcuts": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ],
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED"
+        },
+        {
+          "id": "healthcare-family-4",
+          "name": "Medplum",
+          "description": "A healthcare developer platform centered on FHIR-based applications and data.",
+          "aliases": [
+            "Medplum platform"
+          ],
+          "membership_criteria": "Explicit Medplum application/platform identity or dedicated extension/integration; generic FHIR support alone does not qualify.",
+          "excluded_shortcuts": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ],
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED"
+        }
+      ],
+      "selection_policy": {
+        "initial_candidate_cap": 180,
+        "target": 60,
+        "source_supported_initiative_target": 30,
+        "independent_or_neighbor_target": 24,
+        "natural_challenge_target": 6,
+        "non_english_or_multilingual_target": 6,
+        "max_owner_target": 12,
+        "deduplicate_by": "github_numeric_repository_id",
+        "complete_readme_required": true,
+        "labels_require_source_evidence": true,
+        "unknown_is_not_negative": true
+      }
+    },
+    {
+      "id": "finance",
+      "name": "Finance and payments",
+      "target_accepted": 60,
+      "initial_candidate_cap": 180,
+      "max_search_queries": 18,
+      "composition_targets": {
+        "source_supported_initiative": 30,
+        "independent_or_near_neighbor": 24,
+        "natural_challenge": 6,
+        "non_english_or_multilingual": 6
+      },
+      "max_repositories_per_owner_target": 12,
+      "families": [
+        {
+          "id": "finance-family-1",
+          "name": "Apache Fineract",
+          "owner_hypothesis": "apache",
+          "seed_repository_hypothesis": "apache/fineract",
+          "description": "A financial-services platform for managing customer accounts, lending and related operations.",
+          "aliases": [
+            "Fineract"
+          ],
+          "membership_criteria": "Explicit Fineract platform/module/client/deployment purpose, not another Apache project or a generic lending library.",
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED",
+          "exclude_as_sufficient_evidence": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ]
+        },
+        {
+          "id": "finance-family-2",
+          "name": "Mifos",
+          "owner_hypothesis": "openMF",
+          "seed_repository_hypothesis": "openMF/community-app",
+          "description": "An open financial-inclusion ecosystem of client applications and services.",
+          "aliases": [
+            "Mifos X",
+            "Mifos Initiative"
+          ],
+          "membership_criteria": "Explicit Mifos ecosystem application/service/client identity, supported by purpose statements; mention of Fineract alone does not automatically establish Mifos membership.",
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED",
+          "exclude_as_sufficient_evidence": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ]
+        },
+        {
+          "id": "finance-family-3",
+          "name": "OpenBB",
+          "owner_hypothesis": "OpenBB-finance",
+          "seed_repository_hypothesis": "OpenBB-finance/OpenBB",
+          "description": "A financial-data and investment-analysis platform and dedicated connectors or interfaces.",
+          "aliases": [
+            "OpenBB Platform",
+            "OpenBB Terminal"
+          ],
+          "membership_criteria": "Explicit OpenBB platform/extension/provider/application purpose; generic market-data processing is insufficient.",
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED",
+          "exclude_as_sufficient_evidence": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ]
+        },
+        {
+          "id": "finance-family-4",
+          "name": "Kill Bill",
+          "owner_hypothesis": "killbill",
+          "seed_repository_hypothesis": "killbill/killbill",
+          "description": "A subscription billing and payments platform and its dedicated plugins and interfaces.",
+          "aliases": [
+            "KillBill"
+          ],
+          "membership_criteria": "Explicit Kill Bill billing platform/plugin/client/deployment purpose, excluding unrelated uses of the phrase.",
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED",
+          "exclude_as_sufficient_evidence": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ]
+        }
+      ],
+      "topics": [
+        {
+          "id": "finance-topic-1",
+          "name": "Lending",
+          "aliases": [
+            "loan management",
+            "credit servicing"
+          ],
+          "description": "Loan origination, repayment, account servicing or lending operations.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "finance-topic-2",
+          "name": "Payments",
+          "aliases": [
+            "payment processing",
+            "payment gateway"
+          ],
+          "description": "Execution, integration or reconciliation of payments and transactions.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "finance-topic-3",
+          "name": "Financial Analysis",
+          "aliases": [
+            "investment analysis",
+            "market analytics"
+          ],
+          "description": "Financial-market data analysis, portfolio research or investment decision support.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "finance-topic-4",
+          "name": "Subscription Billing",
+          "aliases": [
+            "recurring billing",
+            "invoicing"
+          ],
+          "description": "Recurring plans, invoices, charging and billing lifecycle management.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "finance-topic-5",
+          "name": "Core Banking",
+          "aliases": [
+            "financial accounts",
+            "banking platform"
+          ],
+          "description": "Management of banking accounts, customer balances and financial-service operations.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "finance-topic-6",
+          "name": "Personal Finance Management",
+          "aliases": [
+            "account aggregation",
+            "personal budgeting"
+          ],
+          "description": "Consolidating or managing personal financial accounts, expenses, cards and budgets; distinct from bank-core transaction execution.",
+          "status": "PROPOSED_REGISTRY_DEFINITION_SOURCE_MOTIVATED"
+        },
+        {
+          "id": "finance-topic-7",
+          "name": "Financial Accounting",
+          "aliases": [
+            "ledger accounting",
+            "financial reconciliation"
+          ],
+          "description": "Recording, reconciling or auditing financial ledgers, invoices, receivables and payables.",
+          "status": "PROPOSED_REGISTRY_DEFINITION_SOURCE_MOTIVATED"
+        },
+        {
+          "id": "finance-topic-8",
+          "name": "Financial Risk Management",
+          "aliases": [
+            "risk approval",
+            "financial controls"
+          ],
+          "description": "Assessing or gating financial operations using explicit risk controls, approvals or exception handling.",
+          "status": "PROPOSED_REGISTRY_DEFINITION_SOURCE_MOTIVATED"
+        },
+        {
+          "id": "finance-topic-9",
+          "name": "Software Testing",
+          "aliases": [
+            "integration testing",
+            "end-to-end testing"
+          ],
+          "description": "Verification of software behavior using automated tests and test doubles; distinguish mock schemes from production integrations.",
+          "status": "PROPOSED_REGISTRY_DEFINITION_SOURCE_MOTIVATED"
+        }
+      ],
+      "queries": [
+        {
+          "id": "finance-family-1-owner",
+          "q": "org:apache fineract in:name,description,readme is:public fork:false archived:false",
+          "family_hypothesis": "finance-family-1",
+          "purpose": "discover likely family components; owner is not a label",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "org:apache fineract in:name,description,readme is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "finance-family-1-purpose",
+          "q": "\"Apache Fineract\" in:name,description,readme is:public fork:false archived:false",
+          "family_hypothesis": "finance-family-1",
+          "purpose": "discover independently owned dedicated integrations and near-neighbors",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"Apache Fineract\" in:name,description,readme is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "finance-family-2-owner",
+          "q": "org:openMF is:public fork:false archived:false",
+          "family_hypothesis": "finance-family-2",
+          "purpose": "discover likely family components; owner is not a label",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "org:openMF is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "finance-family-2-purpose",
+          "q": "\"Mifos\" in:name,description,readme is:public fork:false archived:false",
+          "family_hypothesis": "finance-family-2",
+          "purpose": "discover independently owned dedicated integrations and near-neighbors",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"Mifos\" in:name,description,readme is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "finance-family-3-owner",
+          "q": "org:OpenBB-finance is:public fork:false archived:false",
+          "family_hypothesis": "finance-family-3",
+          "purpose": "discover likely family components; owner is not a label",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "org:OpenBB-finance is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "finance-family-3-purpose",
+          "q": "\"OpenBB\" in:name,description,readme is:public fork:false archived:false",
+          "family_hypothesis": "finance-family-3",
+          "purpose": "discover independently owned dedicated integrations and near-neighbors",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"OpenBB\" in:name,description,readme is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "finance-family-4-owner",
+          "q": "org:killbill is:public fork:false archived:false",
+          "family_hypothesis": "finance-family-4",
+          "purpose": "discover likely family components; owner is not a label",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "org:killbill is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "finance-family-4-purpose",
+          "q": "\"Kill Bill\" in:name,description,readme is:public fork:false archived:false",
+          "family_hypothesis": "finance-family-4",
+          "purpose": "discover independently owned dedicated integrations and near-neighbors",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"Kill Bill\" in:name,description,readme is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "finance-topic-payments",
+          "q": "topic:payments is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "topic:payments is:public fork:false archived:false",
+          "stratum": "topic"
+        },
+        {
+          "id": "finance-topic-banking",
+          "q": "topic:banking is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "topic:banking is:public fork:false archived:false",
+          "stratum": "topic"
+        },
+        {
+          "id": "finance-topic-analysis",
+          "q": "topic:financial-analysis is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "topic:financial-analysis is:public fork:false archived:false",
+          "stratum": "topic"
+        },
+        {
+          "id": "finance-lowstar-finance",
+          "q": "finance in:description,readme stars:0..30 is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "stars",
+          "order": "asc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "finance in:description,readme stars:0..30 is:public fork:false archived:false",
+          "stratum": "lowstar"
+        },
+        {
+          "id": "finance-lowstar-billing",
+          "q": "billing in:description,readme stars:31..150 is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "updated",
+          "order": "asc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "billing in:description,readme stars:31..150 is:public fork:false archived:false",
+          "stratum": "lowstar"
+        },
+        {
+          "id": "finance-language-java",
+          "q": "topic:banking language:Java is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "topic:banking language:Java is:public fork:false archived:false",
+          "stratum": "language"
+        },
+        {
+          "id": "finance-language-go",
+          "q": "topic:payments language:Go is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "topic:payments language:Go is:public fork:false archived:false",
+          "stratum": "language"
+        },
+        {
+          "id": "finance-nonenglish-chinese",
+          "q": "金融 in:readme is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "金融 in:readme is:public fork:false archived:false",
+          "stratum": "nonenglish"
+        },
+        {
+          "id": "finance-nonenglish-spanish",
+          "q": "\"gestión financiera\" in:readme is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"gestión financiera\" in:readme is:public fork:false archived:false",
+          "stratum": "nonenglish"
+        },
+        {
+          "id": "finance-nonenglish-portuguese",
+          "q": "\"gestão financeira\" in:readme is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"gestão financeira\" in:readme is:public fork:false archived:false",
+          "stratum": "nonenglish"
+        }
+      ],
+      "target": 60,
+      "description": "Sampling bucket for finance and payments. Not an automatic repository Domain assignment.",
+      "seed_hypotheses": [
+        {
+          "repo": "apache/fineract",
+          "project": "Apache Fineract",
+          "owner": "apache",
+          "rationale": "Explicit Fineract platform/module/client/deployment purpose, not another Apache project or a generic lending library.",
+          "description": "A financial-services platform for managing customer accounts, lending and related operations.",
+          "aliases": [
+            "Fineract"
+          ]
+        },
+        {
+          "repo": "openMF/community-app",
+          "project": "Mifos",
+          "owner": "openMF",
+          "rationale": "Explicit Mifos ecosystem application/service/client identity, supported by purpose statements; mention of Fineract alone does not automatically establish Mifos membership.",
+          "description": "An open financial-inclusion ecosystem of client applications and services.",
+          "aliases": [
+            "Mifos X",
+            "Mifos Initiative"
+          ]
+        },
+        {
+          "repo": "OpenBB-finance/OpenBB",
+          "project": "OpenBB",
+          "owner": "OpenBB-finance",
+          "rationale": "Explicit OpenBB platform/extension/provider/application purpose; generic market-data processing is insufficient.",
+          "description": "A financial-data and investment-analysis platform and dedicated connectors or interfaces.",
+          "aliases": [
+            "OpenBB Platform",
+            "OpenBB Terminal"
+          ]
+        },
+        {
+          "repo": "killbill/killbill",
+          "project": "Kill Bill",
+          "owner": "killbill",
+          "rationale": "Explicit Kill Bill billing platform/plugin/client/deployment purpose, excluding unrelated uses of the phrase.",
+          "description": "A subscription billing and payments platform and its dedicated plugins and interfaces.",
+          "aliases": [
+            "KillBill"
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "id": "finance-family-1",
+          "name": "Apache Fineract",
+          "description": "A financial-services platform for managing customer accounts, lending and related operations.",
+          "aliases": [
+            "Fineract"
+          ],
+          "membership_criteria": "Explicit Fineract platform/module/client/deployment purpose, not another Apache project or a generic lending library.",
+          "excluded_shortcuts": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ],
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED"
+        },
+        {
+          "id": "finance-family-2",
+          "name": "Mifos",
+          "description": "An open financial-inclusion ecosystem of client applications and services.",
+          "aliases": [
+            "Mifos X",
+            "Mifos Initiative"
+          ],
+          "membership_criteria": "Explicit Mifos ecosystem application/service/client identity, supported by purpose statements; mention of Fineract alone does not automatically establish Mifos membership.",
+          "excluded_shortcuts": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ],
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED"
+        },
+        {
+          "id": "finance-family-3",
+          "name": "OpenBB",
+          "description": "A financial-data and investment-analysis platform and dedicated connectors or interfaces.",
+          "aliases": [
+            "OpenBB Platform",
+            "OpenBB Terminal"
+          ],
+          "membership_criteria": "Explicit OpenBB platform/extension/provider/application purpose; generic market-data processing is insufficient.",
+          "excluded_shortcuts": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ],
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED"
+        },
+        {
+          "id": "finance-family-4",
+          "name": "Kill Bill",
+          "description": "A subscription billing and payments platform and its dedicated plugins and interfaces.",
+          "aliases": [
+            "KillBill"
+          ],
+          "membership_criteria": "Explicit Kill Bill billing platform/plugin/client/deployment purpose, excluding unrelated uses of the phrase.",
+          "excluded_shortcuts": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ],
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED"
+        }
+      ],
+      "selection_policy": {
+        "initial_candidate_cap": 180,
+        "target": 60,
+        "source_supported_initiative_target": 30,
+        "independent_or_neighbor_target": 24,
+        "natural_challenge_target": 6,
+        "non_english_or_multilingual_target": 6,
+        "max_owner_target": 12,
+        "deduplicate_by": "github_numeric_repository_id",
+        "complete_readme_required": true,
+        "labels_require_source_evidence": true,
+        "unknown_is_not_negative": true
+      }
+    },
+    {
+      "id": "commerce",
+      "name": "Commerce and business operations",
+      "target_accepted": 60,
+      "initial_candidate_cap": 180,
+      "max_search_queries": 18,
+      "composition_targets": {
+        "source_supported_initiative": 30,
+        "independent_or_near_neighbor": 24,
+        "natural_challenge": 6,
+        "non_english_or_multilingual": 6
+      },
+      "max_repositories_per_owner_target": 12,
+      "families": [
+        {
+          "id": "commerce-family-1",
+          "name": "ERPNext",
+          "owner_hypothesis": "frappe",
+          "seed_repository_hypothesis": "frappe/erpnext",
+          "description": "An enterprise-resource-planning application and dedicated business modules or integrations.",
+          "aliases": [
+            "ERP Next"
+          ],
+          "membership_criteria": "Explicit ERPNext application/add-on/integration purpose. Frappe-framework usage alone does not qualify.",
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED",
+          "exclude_as_sufficient_evidence": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ]
+        },
+        {
+          "id": "commerce-family-2",
+          "name": "Odoo",
+          "owner_hypothesis": "odoo",
+          "seed_repository_hypothesis": "odoo/odoo",
+          "description": "An integrated business-application suite and dedicated Odoo modules or operational tooling.",
+          "aliases": [
+            "OpenERP"
+          ],
+          "membership_criteria": "Explicit Odoo/OpenERP module, application or integration purpose; generic ERP software is not automatically Odoo.",
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED",
+          "exclude_as_sufficient_evidence": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ]
+        },
+        {
+          "id": "commerce-family-3",
+          "name": "Saleor",
+          "owner_hypothesis": "saleor",
+          "seed_repository_hypothesis": "saleor/saleor",
+          "description": "A headless commerce platform and dedicated storefront/dashboard/integration components.",
+          "aliases": [
+            "Saleor Commerce"
+          ],
+          "membership_criteria": "Explicit Saleor platform/storefront/dashboard/plugin/integration purpose; generic GraphQL commerce is insufficient.",
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED",
+          "exclude_as_sufficient_evidence": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ]
+        },
+        {
+          "id": "commerce-family-4",
+          "name": "Medusa",
+          "owner_hypothesis": "medusajs",
+          "seed_repository_hypothesis": "medusajs/medusa",
+          "description": "A modular commerce platform and dedicated storefronts, plugins and integrations.",
+          "aliases": [
+            "MedusaJS",
+            "Medusa.js"
+          ],
+          "membership_criteria": "Explicit MedusaJS commerce purpose. Exclude unrelated Medusa security/science projects and dependency-only mentions.",
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED",
+          "exclude_as_sufficient_evidence": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ]
+        }
+      ],
+      "topics": [
+        {
+          "id": "commerce-topic-1",
+          "name": "Enterprise Resource Planning",
+          "aliases": [
+            "ERP",
+            "business management"
+          ],
+          "description": "Coordinated business applications spanning core enterprise operations.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "commerce-topic-2",
+          "name": "Inventory Management",
+          "aliases": [
+            "stock management",
+            "warehouse inventory"
+          ],
+          "description": "Stock tracking, movements, availability or warehouse inventory workflows.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "commerce-topic-3",
+          "name": "E-commerce",
+          "aliases": [
+            "online commerce",
+            "digital commerce"
+          ],
+          "description": "Online product discovery, checkout, storefront or commerce-platform functionality.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "commerce-topic-4",
+          "name": "Order Management",
+          "aliases": [
+            "order processing",
+            "fulfillment"
+          ],
+          "description": "Order lifecycle, fulfillment, returns or order orchestration.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "commerce-topic-5",
+          "name": "Customer Relationship Management",
+          "aliases": [
+            "CRM",
+            "sales pipeline"
+          ],
+          "description": "Customer/sales relationship management as a primary capability.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "commerce-topic-6",
+          "name": "Asset Management",
+          "aliases": [
+            "hardware inventory",
+            "asset maintenance"
+          ],
+          "description": "Tracking physical or digital assets, their locations, lifecycle or maintenance; distinguish durable assets from merchandise stock and order fulfillment.",
+          "status": "PROPOSED_REGISTRY_DEFINITION_SOURCE_MOTIVATED"
+        },
+        {
+          "id": "commerce-topic-7",
+          "name": "Point of Sale",
+          "aliases": [
+            "POS",
+            "retail checkout"
+          ],
+          "description": "Retail/hospitality sales transaction and checkout workflows at the point of sale.",
+          "status": "PROPOSED_REGISTRY_DEFINITION_SOURCE_MOTIVATED"
+        },
+        {
+          "id": "commerce-topic-8",
+          "name": "Customer Support",
+          "aliases": [
+            "help desk",
+            "support ticketing"
+          ],
+          "description": "Managing customer support requests, tickets, agent workflows and service responses; distinct from sales-pipeline CRM.",
+          "status": "PROPOSED_REGISTRY_DEFINITION_SOURCE_MOTIVATED"
+        }
+      ],
+      "queries": [
+        {
+          "id": "commerce-family-1-owner",
+          "q": "org:frappe is:public fork:false archived:false",
+          "family_hypothesis": "commerce-family-1",
+          "purpose": "discover likely family components; owner is not a label",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "org:frappe is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "commerce-family-1-purpose",
+          "q": "\"ERPNext\" in:name,description,readme is:public fork:false archived:false",
+          "family_hypothesis": "commerce-family-1",
+          "purpose": "discover independently owned dedicated integrations and near-neighbors",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"ERPNext\" in:name,description,readme is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "commerce-family-2-owner",
+          "q": "org:odoo is:public fork:false archived:false",
+          "family_hypothesis": "commerce-family-2",
+          "purpose": "discover likely family components; owner is not a label",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "org:odoo is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "commerce-family-2-purpose",
+          "q": "\"Odoo\" in:name,description,readme is:public fork:false archived:false",
+          "family_hypothesis": "commerce-family-2",
+          "purpose": "discover independently owned dedicated integrations and near-neighbors",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"Odoo\" in:name,description,readme is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "commerce-family-3-owner",
+          "q": "org:saleor is:public fork:false archived:false",
+          "family_hypothesis": "commerce-family-3",
+          "purpose": "discover likely family components; owner is not a label",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "org:saleor is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "commerce-family-3-purpose",
+          "q": "\"Saleor\" in:name,description,readme is:public fork:false archived:false",
+          "family_hypothesis": "commerce-family-3",
+          "purpose": "discover independently owned dedicated integrations and near-neighbors",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"Saleor\" in:name,description,readme is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "commerce-family-4-owner",
+          "q": "org:medusajs is:public fork:false archived:false",
+          "family_hypothesis": "commerce-family-4",
+          "purpose": "discover likely family components; owner is not a label",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "org:medusajs is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "commerce-family-4-purpose",
+          "q": "\"Medusa\" in:name,description,readme is:public fork:false archived:false",
+          "family_hypothesis": "commerce-family-4",
+          "purpose": "discover independently owned dedicated integrations and near-neighbors",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"Medusa\" in:name,description,readme is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "commerce-topic-erp",
+          "q": "topic:erp is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "topic:erp is:public fork:false archived:false",
+          "stratum": "topic"
+        },
+        {
+          "id": "commerce-topic-commerce",
+          "q": "topic:ecommerce is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "topic:ecommerce is:public fork:false archived:false",
+          "stratum": "topic"
+        },
+        {
+          "id": "commerce-topic-inventory",
+          "q": "topic:inventory-management is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "topic:inventory-management is:public fork:false archived:false",
+          "stratum": "topic"
+        },
+        {
+          "id": "commerce-lowstar-commerce",
+          "q": "ecommerce in:description,readme stars:0..30 is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "stars",
+          "order": "asc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "ecommerce in:description,readme stars:0..30 is:public fork:false archived:false",
+          "stratum": "lowstar"
+        },
+        {
+          "id": "commerce-lowstar-inventory",
+          "q": "inventory in:description,readme stars:31..150 is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "updated",
+          "order": "asc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "inventory in:description,readme stars:31..150 is:public fork:false archived:false",
+          "stratum": "lowstar"
+        },
+        {
+          "id": "commerce-language-php",
+          "q": "topic:ecommerce language:PHP is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "topic:ecommerce language:PHP is:public fork:false archived:false",
+          "stratum": "language"
+        },
+        {
+          "id": "commerce-language-ruby",
+          "q": "topic:ecommerce language:Ruby is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "topic:ecommerce language:Ruby is:public fork:false archived:false",
+          "stratum": "language"
+        },
+        {
+          "id": "commerce-nonenglish-chinese",
+          "q": "电商 in:readme is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "电商 in:readme is:public fork:false archived:false",
+          "stratum": "nonenglish"
+        },
+        {
+          "id": "commerce-nonenglish-spanish",
+          "q": "\"comercio electrónico\" in:readme is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"comercio electrónico\" in:readme is:public fork:false archived:false",
+          "stratum": "nonenglish"
+        },
+        {
+          "id": "commerce-nonenglish-portuguese",
+          "q": "\"comércio eletrônico\" in:readme is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"comércio eletrônico\" in:readme is:public fork:false archived:false",
+          "stratum": "nonenglish"
+        }
+      ],
+      "target": 60,
+      "description": "Sampling bucket for commerce and business operations. Not an automatic repository Domain assignment.",
+      "seed_hypotheses": [
+        {
+          "repo": "frappe/erpnext",
+          "project": "ERPNext",
+          "owner": "frappe",
+          "rationale": "Explicit ERPNext application/add-on/integration purpose. Frappe-framework usage alone does not qualify.",
+          "description": "An enterprise-resource-planning application and dedicated business modules or integrations.",
+          "aliases": [
+            "ERP Next"
+          ]
+        },
+        {
+          "repo": "odoo/odoo",
+          "project": "Odoo",
+          "owner": "odoo",
+          "rationale": "Explicit Odoo/OpenERP module, application or integration purpose; generic ERP software is not automatically Odoo.",
+          "description": "An integrated business-application suite and dedicated Odoo modules or operational tooling.",
+          "aliases": [
+            "OpenERP"
+          ]
+        },
+        {
+          "repo": "saleor/saleor",
+          "project": "Saleor",
+          "owner": "saleor",
+          "rationale": "Explicit Saleor platform/storefront/dashboard/plugin/integration purpose; generic GraphQL commerce is insufficient.",
+          "description": "A headless commerce platform and dedicated storefront/dashboard/integration components.",
+          "aliases": [
+            "Saleor Commerce"
+          ]
+        },
+        {
+          "repo": "medusajs/medusa",
+          "project": "Medusa",
+          "owner": "medusajs",
+          "rationale": "Explicit MedusaJS commerce purpose. Exclude unrelated Medusa security/science projects and dependency-only mentions.",
+          "description": "A modular commerce platform and dedicated storefronts, plugins and integrations.",
+          "aliases": [
+            "MedusaJS",
+            "Medusa.js"
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "id": "commerce-family-1",
+          "name": "ERPNext",
+          "description": "An enterprise-resource-planning application and dedicated business modules or integrations.",
+          "aliases": [
+            "ERP Next"
+          ],
+          "membership_criteria": "Explicit ERPNext application/add-on/integration purpose. Frappe-framework usage alone does not qualify.",
+          "excluded_shortcuts": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ],
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED"
+        },
+        {
+          "id": "commerce-family-2",
+          "name": "Odoo",
+          "description": "An integrated business-application suite and dedicated Odoo modules or operational tooling.",
+          "aliases": [
+            "OpenERP"
+          ],
+          "membership_criteria": "Explicit Odoo/OpenERP module, application or integration purpose; generic ERP software is not automatically Odoo.",
+          "excluded_shortcuts": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ],
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED"
+        },
+        {
+          "id": "commerce-family-3",
+          "name": "Saleor",
+          "description": "A headless commerce platform and dedicated storefront/dashboard/integration components.",
+          "aliases": [
+            "Saleor Commerce"
+          ],
+          "membership_criteria": "Explicit Saleor platform/storefront/dashboard/plugin/integration purpose; generic GraphQL commerce is insufficient.",
+          "excluded_shortcuts": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ],
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED"
+        },
+        {
+          "id": "commerce-family-4",
+          "name": "Medusa",
+          "description": "A modular commerce platform and dedicated storefronts, plugins and integrations.",
+          "aliases": [
+            "MedusaJS",
+            "Medusa.js"
+          ],
+          "membership_criteria": "Explicit MedusaJS commerce purpose. Exclude unrelated Medusa security/science projects and dependency-only mentions.",
+          "excluded_shortcuts": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ],
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED"
+        }
+      ],
+      "selection_policy": {
+        "initial_candidate_cap": 180,
+        "target": 60,
+        "source_supported_initiative_target": 30,
+        "independent_or_neighbor_target": 24,
+        "natural_challenge_target": 6,
+        "non_english_or_multilingual_target": 6,
+        "max_owner_target": 12,
+        "deduplicate_by": "github_numeric_repository_id",
+        "complete_readme_required": true,
+        "labels_require_source_evidence": true,
+        "unknown_is_not_negative": true
+      }
+    },
+    {
+      "id": "education",
+      "name": "Education and knowledge management",
+      "target_accepted": 60,
+      "initial_candidate_cap": 180,
+      "max_search_queries": 18,
+      "composition_targets": {
+        "source_supported_initiative": 30,
+        "independent_or_near_neighbor": 24,
+        "natural_challenge": 6,
+        "non_english_or_multilingual": 6
+      },
+      "max_repositories_per_owner_target": 12,
+      "families": [
+        {
+          "id": "education-family-1",
+          "name": "Moodle",
+          "owner_hypothesis": "moodle",
+          "seed_repository_hypothesis": "moodle/moodle",
+          "description": "A learning-management platform and dedicated plugins, clients and operational components.",
+          "aliases": [
+            "Moodle LMS"
+          ],
+          "membership_criteria": "Explicit Moodle LMS plugin/platform/client/deployment purpose, not generic education content mentioning Moodle.",
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED",
+          "exclude_as_sufficient_evidence": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ]
+        },
+        {
+          "id": "education-family-2",
+          "name": "Open edX",
+          "owner_hypothesis": "openedx",
+          "seed_repository_hypothesis": "openedx/edx-platform",
+          "description": "An online-learning platform and dedicated services, plugins and deployment tools.",
+          "aliases": [
+            "OpenEdX",
+            "edX platform"
+          ],
+          "membership_criteria": "Explicit Open edX platform/service/XBlock/integration/deployment purpose. Generic course content hosted on edX does not qualify.",
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED",
+          "exclude_as_sufficient_evidence": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ]
+        },
+        {
+          "id": "education-family-3",
+          "name": "BookStack",
+          "owner_hypothesis": "BookStackApp",
+          "seed_repository_hypothesis": "BookStackApp/BookStack",
+          "description": "A structured documentation and knowledge-base application and dedicated integrations.",
+          "aliases": [
+            "BookStack App"
+          ],
+          "membership_criteria": "Explicit BookStack documentation application/theme/integration/deployment purpose; unrelated uses of book stack do not qualify.",
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED",
+          "exclude_as_sufficient_evidence": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ]
+        },
+        {
+          "id": "education-family-4",
+          "name": "Wiki.js",
+          "owner_hypothesis": "Requarks",
+          "seed_repository_hypothesis": "Requarks/wiki",
+          "description": "A wiki and knowledge-management application and dedicated integrations or deployment components.",
+          "aliases": [
+            "WikiJS",
+            "Wiki js"
+          ],
+          "membership_criteria": "Explicit Wiki.js/Requarks wiki application/integration/deployment purpose; JavaScript plus wiki functionality alone is insufficient.",
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED",
+          "exclude_as_sufficient_evidence": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ]
+        }
+      ],
+      "topics": [
+        {
+          "id": "education-topic-1",
+          "name": "Learning Management",
+          "aliases": [
+            "LMS",
+            "course delivery"
+          ],
+          "description": "Administration and delivery of courses, learners and learning activities.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "education-topic-2",
+          "name": "Assessment",
+          "aliases": [
+            "quizzes",
+            "learning assessment"
+          ],
+          "description": "Learning-related examinations, quizzes, grading or assessment workflows.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "education-topic-3",
+          "name": "Documentation",
+          "aliases": [
+            "technical documentation",
+            "documentation publishing"
+          ],
+          "description": "Creation, organization or publication of documentation.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "education-topic-4",
+          "name": "Knowledge Bases",
+          "aliases": [
+            "knowledge management",
+            "wiki"
+          ],
+          "description": "Shared knowledge organization, discovery, wiki editing or structured knowledge repositories.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        },
+        {
+          "id": "education-topic-5",
+          "name": "Learning Content",
+          "aliases": [
+            "course content",
+            "educational resources"
+          ],
+          "description": "Authoring, packaging or management of educational materials; distinguish content-only repositories from platforms.",
+          "status": "PROPOSED_REGISTRY_DEFINITION"
+        }
+      ],
+      "queries": [
+        {
+          "id": "education-family-1-owner",
+          "q": "org:moodle is:public fork:false archived:false",
+          "family_hypothesis": "education-family-1",
+          "purpose": "discover likely family components; owner is not a label",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "org:moodle is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "education-family-1-purpose",
+          "q": "\"Moodle\" in:name,description,readme is:public fork:false archived:false",
+          "family_hypothesis": "education-family-1",
+          "purpose": "discover independently owned dedicated integrations and near-neighbors",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"Moodle\" in:name,description,readme is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "education-family-2-owner",
+          "q": "org:openedx is:public fork:false archived:false",
+          "family_hypothesis": "education-family-2",
+          "purpose": "discover likely family components; owner is not a label",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "org:openedx is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "education-family-2-purpose",
+          "q": "\"Open edX\" in:name,description,readme is:public fork:false archived:false",
+          "family_hypothesis": "education-family-2",
+          "purpose": "discover independently owned dedicated integrations and near-neighbors",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"Open edX\" in:name,description,readme is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "education-family-3-owner",
+          "q": "org:BookStackApp is:public fork:false archived:false",
+          "family_hypothesis": "education-family-3",
+          "purpose": "discover likely family components; owner is not a label",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "org:BookStackApp is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "education-family-3-purpose",
+          "q": "\"BookStack\" in:name,description,readme is:public fork:false archived:false",
+          "family_hypothesis": "education-family-3",
+          "purpose": "discover independently owned dedicated integrations and near-neighbors",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"BookStack\" in:name,description,readme is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "education-family-4-owner",
+          "q": "org:Requarks is:public fork:false archived:false",
+          "family_hypothesis": "education-family-4",
+          "purpose": "discover likely family components; owner is not a label",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "org:Requarks is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "education-family-4-purpose",
+          "q": "\"Wiki.js\" in:name,description,readme is:public fork:false archived:false",
+          "family_hypothesis": "education-family-4",
+          "purpose": "discover independently owned dedicated integrations and near-neighbors",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"Wiki.js\" in:name,description,readme is:public fork:false archived:false",
+          "stratum": "family"
+        },
+        {
+          "id": "education-topic-learning",
+          "q": "topic:lms is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "topic:lms is:public fork:false archived:false",
+          "stratum": "topic"
+        },
+        {
+          "id": "education-topic-wiki",
+          "q": "topic:wiki is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "topic:wiki is:public fork:false archived:false",
+          "stratum": "topic"
+        },
+        {
+          "id": "education-topic-knowledge",
+          "q": "topic:knowledge-base is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "topic:knowledge-base is:public fork:false archived:false",
+          "stratum": "topic"
+        },
+        {
+          "id": "education-lowstar-learning",
+          "q": "learning-management in:description,readme stars:0..30 is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "stars",
+          "order": "asc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "learning-management in:description,readme stars:0..30 is:public fork:false archived:false",
+          "stratum": "lowstar"
+        },
+        {
+          "id": "education-lowstar-knowledge",
+          "q": "knowledge-base in:description,readme stars:31..150 is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "updated",
+          "order": "asc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "knowledge-base in:description,readme stars:31..150 is:public fork:false archived:false",
+          "stratum": "lowstar"
+        },
+        {
+          "id": "education-language-php",
+          "q": "topic:lms language:PHP is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "topic:lms language:PHP is:public fork:false archived:false",
+          "stratum": "language"
+        },
+        {
+          "id": "education-language-javascript",
+          "q": "topic:wiki language:JavaScript is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "topic:wiki language:JavaScript is:public fork:false archived:false",
+          "stratum": "language"
+        },
+        {
+          "id": "education-nonenglish-chinese",
+          "q": "学习管理 in:readme is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "学习管理 in:readme is:public fork:false archived:false",
+          "stratum": "nonenglish"
+        },
+        {
+          "id": "education-nonenglish-spanish",
+          "q": "\"gestión del aprendizaje\" in:readme is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "updated",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"gestión del aprendizaje\" in:readme is:public fork:false archived:false",
+          "stratum": "nonenglish"
+        },
+        {
+          "id": "education-nonenglish-portuguese",
+          "q": "\"gestão de aprendizagem\" in:readme is:public fork:false archived:false",
+          "purpose": "language/topic/low-star balance; search result is not an annotation",
+          "sort": "stars",
+          "order": "desc",
+          "per_page": 30,
+          "max_pages": 1,
+          "query": "\"gestão de aprendizagem\" in:readme is:public fork:false archived:false",
+          "stratum": "nonenglish"
+        }
+      ],
+      "target": 60,
+      "description": "Sampling bucket for education and knowledge management. Not an automatic repository Domain assignment.",
+      "seed_hypotheses": [
+        {
+          "repo": "moodle/moodle",
+          "project": "Moodle",
+          "owner": "moodle",
+          "rationale": "Explicit Moodle LMS plugin/platform/client/deployment purpose, not generic education content mentioning Moodle.",
+          "description": "A learning-management platform and dedicated plugins, clients and operational components.",
+          "aliases": [
+            "Moodle LMS"
+          ]
+        },
+        {
+          "repo": "openedx/edx-platform",
+          "project": "Open edX",
+          "owner": "openedx",
+          "rationale": "Explicit Open edX platform/service/XBlock/integration/deployment purpose. Generic course content hosted on edX does not qualify.",
+          "description": "An online-learning platform and dedicated services, plugins and deployment tools.",
+          "aliases": [
+            "OpenEdX",
+            "edX platform"
+          ]
+        },
+        {
+          "repo": "BookStackApp/BookStack",
+          "project": "BookStack",
+          "owner": "BookStackApp",
+          "rationale": "Explicit BookStack documentation application/theme/integration/deployment purpose; unrelated uses of book stack do not qualify.",
+          "description": "A structured documentation and knowledge-base application and dedicated integrations.",
+          "aliases": [
+            "BookStack App"
+          ]
+        },
+        {
+          "repo": "Requarks/wiki",
+          "project": "Wiki.js",
+          "owner": "Requarks",
+          "rationale": "Explicit Wiki.js/Requarks wiki application/integration/deployment purpose; JavaScript plus wiki functionality alone is insufficient.",
+          "description": "A wiki and knowledge-management application and dedicated integrations or deployment components.",
+          "aliases": [
+            "WikiJS",
+            "Wiki js"
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "id": "education-family-1",
+          "name": "Moodle",
+          "description": "A learning-management platform and dedicated plugins, clients and operational components.",
+          "aliases": [
+            "Moodle LMS"
+          ],
+          "membership_criteria": "Explicit Moodle LMS plugin/platform/client/deployment purpose, not generic education content mentioning Moodle.",
+          "excluded_shortcuts": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ],
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED"
+        },
+        {
+          "id": "education-family-2",
+          "name": "Open edX",
+          "description": "An online-learning platform and dedicated services, plugins and deployment tools.",
+          "aliases": [
+            "OpenEdX",
+            "edX platform"
+          ],
+          "membership_criteria": "Explicit Open edX platform/service/XBlock/integration/deployment purpose. Generic course content hosted on edX does not qualify.",
+          "excluded_shortcuts": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ],
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED"
+        },
+        {
+          "id": "education-family-3",
+          "name": "BookStack",
+          "description": "A structured documentation and knowledge-base application and dedicated integrations.",
+          "aliases": [
+            "BookStack App"
+          ],
+          "membership_criteria": "Explicit BookStack documentation application/theme/integration/deployment purpose; unrelated uses of book stack do not qualify.",
+          "excluded_shortcuts": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ],
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED"
+        },
+        {
+          "id": "education-family-4",
+          "name": "Wiki.js",
+          "description": "A wiki and knowledge-management application and dedicated integrations or deployment components.",
+          "aliases": [
+            "WikiJS",
+            "Wiki js"
+          ],
+          "membership_criteria": "Explicit Wiki.js/Requarks wiki application/integration/deployment purpose; JavaScript plus wiki functionality alone is insufficient.",
+          "excluded_shortcuts": [
+            "shared owner",
+            "programming language",
+            "incidental README mention",
+            "dependency or lockfile presence",
+            "native GitHub topic alone"
+          ],
+          "status": "SEARCH_HYPOTHESIS_UNVERIFIED"
+        }
+      ],
+      "selection_policy": {
+        "initial_candidate_cap": 180,
+        "target": 60,
+        "source_supported_initiative_target": 30,
+        "independent_or_neighbor_target": 24,
+        "natural_challenge_target": 6,
+        "non_english_or_multilingual_target": 6,
+        "max_owner_target": 12,
+        "deduplicate_by": "github_numeric_repository_id",
+        "complete_readme_required": true,
+        "labels_require_source_evidence": true,
+        "unknown_is_not_negative": true
+      }
+    }
+  ],
+  "version": "2026-10-16-agent-a-v1.5",
+  "membership_policy": {
+    "status_values": [
+      "PROPOSED",
+      "CROSS_REVIEWED",
+      "HUMAN_APPROVED",
+      "DISPUTED",
+      "UNKNOWN"
+    ],
+    "initial_status": "PROPOSED",
+    "evidence_required": [
+      "source path",
+      "commit SHA",
+      "blob SHA",
+      "line range",
+      "supporting passage",
+      "relationship rationale"
+    ],
+    "domain_semantics": "Repository Domain derives from assigned Project parent; sampling bucket is not an automatic Domain label.",
+    "project_semantics": "Named actual initiative/product family with dedicated primary-purpose evidence; no forced Project for independent repository.",
+    "no_project": "No supported registry Project; may still have supported Topics or Tags. UNKNOWN membership is not a negative label.",
+    "global_no_match": "No supported assignment in any allowed kind under the frozen registry; must be assessed separately, never inferred from noProject.",
+    "primary_topics_and_tags": "Use primary purpose/capability and primary implementation technologies; do not label every dependency or optional deployment tool.",
+    "supplemental_evidence": "Record whether relationship support is in README/app-profile/compact-prompt or only in supporting files; do not silently make classifier input richer than application input.",
+    "contradictions": "Preserve explicit exclusions, stale statements, ambiguity and source disagreements.",
+    "leakage_controls": "Keep annotation/search explanations out of classifier input; group related initiatives/copied source lineages in a single split; registry-source overlap disclosed.",
+    "ground_truth_gate": "Human approval required; machine/agent proposals are not ground truth."
+  },
+  "registry_change_note": "Added three source-motivated healthcare capabilities before registry freeze; no query/budget changes."
+}

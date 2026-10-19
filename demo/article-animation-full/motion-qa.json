@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "encoded_samples": [
+    {
+      "beat": "05-keywords-02",
+      "sample_seconds_relative": [
+        20.69000244140625,
+        21.24000244140625
+      ],
+      "region": "Bottom information layer y=805..930",
+      "changed_pixels": 8389
+    },
+    {
+      "beat": "08-augmentation-03",
+      "sample_seconds_relative": [
+        21.07188110351558,
+        21.62188110351558
+      ],
+      "region": "Bottom information layer y=805..930",
+      "changed_pixels": 8830
+    },
+    {
+      "beat": "11-memory-02",
+      "sample_seconds_relative": [
+        13.357776855468728,
+        13.907776855468729
+      ],
+      "region": "Bottom information layer y=805..930",
+      "changed_pixels": 12735
+    },
+    {
+      "beat": "13-harness-02",
+      "sample_seconds_relative": [
+        23.259994506835938,
+        23.809994506835938
+      ],
+      "region": "Bottom information layer y=805..930",
+      "changed_pixels": 9858
+    }
+  ],
+  "scope": "Representative keyword, request, receipt and reservation changes survive encoding; not a comprehension study"
+}

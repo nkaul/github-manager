@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "viewport": [
+    1800,
+    1080
+  ],
+  "png": [
+    3600,
+    2160
+  ],
+  "network": "blocked",
+  "figures": [
+    {
+      "figure": "01-actual-system.svg",
+      "failures": []
+    },
+    {
+      "figure": "02-retrieval-and-generation.svg",
+      "failures": []
+    },
+    {
+      "figure": "03-evidence-and-chunking.svg",
+      "failures": []
+    },
+    {
+      "figure": "04-controlled-analysis-loop.svg",
+      "failures": []
+    },
+    {
+      "figure": "05-harness-and-tokenomics.svg",
+      "failures": []
+    },
+    {
+      "figure": "06-evaluation-evidence.svg",
+      "failures": []
+    },
+    {
+      "figure": "07-contextual-retrieval-comparison.svg",
+      "failures": []
+    },
+    {
+      "figure": "08-future-experiment-roadmap.svg",
+      "failures": []
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "assets": [
+    {
+      "file": "ai-system-design/publication/figures/01-evidence-to-decisions.png",
+      "sha256": "f4505859f20d48d4670b047e7177b52540fa42cc78044a251f164225613d04d9",
+      "use": "Read-only source; browser viewport composition, no raster modification"
+    },
+    {
+      "file": "ai-system-design/publication/v2/figures/01-two-ai-phases.png",
+      "sha256": "d3d57ddb799a3e8a415f19096c73f0f9384fa1702ed620fe35db636abad28cec",
+      "use": "Read-only source; browser viewport composition, no raster modification"
+    },
+    {
+      "file": "ai-system-design/publication/v2/figures/02-data-through-classification.png",
+      "sha256": "ba81591ed7ed9dbe8ef916bee8cfa48bc287980aba4edcb655f7a6b809aa9fe3",
+      "use": "Read-only source; browser viewport composition, no raster modification"
+    },
+    {
+      "file": "docs/design/logo-variants-20261013/animated-v2/zen-loop-orbit-poster.png",
+      "sha256": "0263dd0f79e678f81367a5554affeac351ebf9a11c6760a3071a78b5944eabcf",
+      "use": "Read-only source; browser viewport composition, no raster modification"
+    }
+  ],
+  "new_raster_generation_requests": 0,
+  "additional_layers": "Code-native SVG cards, highlights, arrows, icons and state changes",
+  "font": "Locally installed Chalkboard; font binary not distributed"
+}

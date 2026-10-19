@@ -1,0 +1,554 @@
+{
+  "academic_source": "ai-system-design/github-manager-ai-system-design.md",
+  "mechanisms": [
+    {
+      "mechanism": "CommonMark token parsing + heading substring policy",
+      "role": "Select purpose-related README blocks",
+      "source_status": "Implemented",
+      "chapter": "04-evidence",
+      "animated_beats": [
+        "04-evidence-01",
+        "04-evidence-02",
+        "04-evidence-03",
+        "04-evidence-04"
+      ]
+    },
+    {
+      "mechanism": "Regex cleaning/redaction",
+      "role": "Narrow instruction/secret hygiene",
+      "source_status": "Implemented; incomplete security classifier",
+      "chapter": "04-evidence",
+      "animated_beats": [
+        "04-evidence-01",
+        "04-evidence-02",
+        "04-evidence-03",
+        "04-evidence-04"
+      ]
+    },
+    {
+      "mechanism": "RAKE degree/frequency phrase ranking",
+      "role": "Local model-free phrase extraction",
+      "source_status": "Implemented application baseline",
+      "chapter": "05-keywords",
+      "animated_beats": [
+        "05-keywords-01",
+        "05-keywords-02",
+        "05-keywords-03",
+        "05-keywords-04"
+      ]
+    },
+    {
+      "mechanism": "YAKE local-feature ranking",
+      "role": "Extractor comparison",
+      "source_status": "Evaluated offline; not product baseline",
+      "chapter": "05-keywords",
+      "animated_beats": [
+        "05-keywords-01",
+        "05-keywords-02",
+        "05-keywords-03",
+        "05-keywords-04"
+      ]
+    },
+    {
+      "mechanism": "Distinct-document frequency",
+      "role": "Repository corpus term support",
+      "source_status": "Computed pretest artifact; not product semantic clustering",
+      "chapter": "05-keywords",
+      "animated_beats": [
+        "05-keywords-01",
+        "05-keywords-02",
+        "05-keywords-03",
+        "05-keywords-04"
+      ]
+    },
+    {
+      "mechanism": "Binary-IDF cosine",
+      "role": "Canonical candidate retrieval",
+      "source_status": "Selected app baseline, named `tfidf` in code",
+      "chapter": "07-retrieval",
+      "animated_beats": [
+        "07-retrieval-01",
+        "07-retrieval-02",
+        "07-retrieval-03",
+        "07-retrieval-04"
+      ]
+    },
+    {
+      "mechanism": "BM25Okapi",
+      "role": "Alternative canonical candidate retrieval",
+      "source_status": "Compared offline",
+      "chapter": "07-retrieval",
+      "animated_beats": [
+        "07-retrieval-01",
+        "07-retrieval-02",
+        "07-retrieval-03",
+        "07-retrieval-04"
+      ]
+    },
+    {
+      "mechanism": "Alias token-set subset + additive boost",
+      "role": "Candidate recall for names/aliases",
+      "source_status": "Implemented; not semantic relationship validation",
+      "chapter": "07-retrieval",
+      "animated_beats": [
+        "07-retrieval-01",
+        "07-retrieval-02",
+        "07-retrieval-03",
+        "07-retrieval-04"
+      ]
+    },
+    {
+      "mechanism": "Per-kind top-k and stable-ID tie-break",
+      "role": "Bound candidate context",
+      "source_status": "Implemented",
+      "chapter": "07-retrieval",
+      "animated_beats": [
+        "07-retrieval-01",
+        "07-retrieval-02",
+        "07-retrieval-03",
+        "07-retrieval-04"
+      ]
+    },
+    {
+      "mechanism": "Owner/language round-robin",
+      "role": "Bounded taxonomy cohort",
+      "source_status": "Implemented deterministic coverage heuristic",
+      "chapter": "06-taxonomy",
+      "animated_beats": [
+        "06-taxonomy-01",
+        "06-taxonomy-02",
+        "06-taxonomy-03",
+        "06-taxonomy-04"
+      ]
+    },
+    {
+      "mechanism": "New-analysis / Project / recency ordering",
+      "role": "Classification cohort",
+      "source_status": "Implemented; not a learned ranking model",
+      "chapter": "12-loops",
+      "animated_beats": [
+        "12-loops-01",
+        "12-loops-02",
+        "12-loops-03",
+        "12-loops-04"
+      ]
+    },
+    {
+      "mechanism": "Byte-bounded collection packing",
+      "role": "Fit taxonomy evidence before exact counting",
+      "source_status": "Implemented; no measured broad compaction curve",
+      "chapter": "06-taxonomy",
+      "animated_beats": [
+        "06-taxonomy-01",
+        "06-taxonomy-02",
+        "06-taxonomy-03",
+        "06-taxonomy-04"
+      ]
+    },
+    {
+      "mechanism": "Native JSON Schema + Pydantic/application checks",
+      "role": "Constrain and validate generation",
+      "source_status": "Implemented with documented parity gaps",
+      "chapter": "09-generation",
+      "animated_beats": [
+        "09-generation-01",
+        "09-generation-02",
+        "09-generation-03",
+        "09-generation-04"
+      ]
+    },
+    {
+      "mechanism": "SHA-256 content/configuration hashing",
+      "role": "Freeze inputs, bind replay and provenance",
+      "source_status": "Implemented",
+      "chapter": "04-evidence",
+      "animated_beats": [
+        "04-evidence-01",
+        "04-evidence-02",
+        "04-evidence-03",
+        "04-evidence-04"
+      ]
+    },
+    {
+      "mechanism": "Unicode normalization and term reservation",
+      "role": "Canonical/alias conflict detection",
+      "source_status": "Implemented deterministic deduplication",
+      "chapter": "06-taxonomy",
+      "animated_beats": [
+        "06-taxonomy-01",
+        "06-taxonomy-02",
+        "06-taxonomy-03",
+        "06-taxonomy-04"
+      ]
+    },
+    {
+      "mechanism": "Approved contains/equality-style rules",
+      "role": "Local metadata organization",
+      "source_status": "Implemented; no automatic rule learning",
+      "chapter": "11-memory",
+      "animated_beats": [
+        "11-memory-01",
+        "11-memory-02",
+        "11-memory-03",
+        "11-memory-04"
+      ]
+    },
+    {
+      "mechanism": "Stored-analysis/local alias reconciliation",
+      "role": "Useful updates without repeat inference",
+      "source_status": "Implemented review-first proposals",
+      "chapter": "11-memory",
+      "animated_beats": [
+        "11-memory-01",
+        "11-memory-02",
+        "11-memory-03",
+        "11-memory-04"
+      ]
+    },
+    {
+      "mechanism": "Durable state machine + transactional claims",
+      "role": "Avoid repeated/concurrent/uncertain inference",
+      "source_status": "Implemented local controller",
+      "chapter": "12-loops",
+      "animated_beats": [
+        "12-loops-01",
+        "12-loops-02",
+        "12-loops-03",
+        "12-loops-04"
+      ]
+    },
+    {
+      "mechanism": "Weighted events + debounce/cooldown",
+      "role": "Automatic organization scheduling",
+      "source_status": "Implemented; not learned Adaptive-RAG",
+      "chapter": "12-loops",
+      "animated_beats": [
+        "12-loops-01",
+        "12-loops-02",
+        "12-loops-03",
+        "12-loops-04"
+      ]
+    },
+    {
+      "mechanism": "Generation/epoch/revision fencing",
+      "role": "Reject stale background writes",
+      "source_status": "Implemented locally; cloud equivalent deferred",
+      "chapter": "12-loops",
+      "animated_beats": [
+        "12-loops-01",
+        "12-loops-02",
+        "12-loops-03",
+        "12-loops-04"
+      ]
+    },
+    {
+      "mechanism": "Integer-microdollar reservation/settlement + run holds",
+      "role": "Bound cumulative and per-run spending",
+      "source_status": "Implemented conservative accounting",
+      "chapter": "13-harness",
+      "animated_beats": [
+        "13-harness-01",
+        "13-harness-02",
+        "13-harness-03",
+        "13-harness-04"
+      ]
+    },
+    {
+      "mechanism": "Micro set metrics, recall@k and nearest-rank percentiles",
+      "role": "Evaluate observed retrieval/classification/timing",
+      "source_status": "Implemented and measured on limited corpus",
+      "chapter": "15-evaluation",
+      "animated_beats": [
+        "15-evaluation-01",
+        "15-evaluation-02",
+        "15-evaluation-03",
+        "15-evaluation-04",
+        "15-evaluation-05"
+      ]
+    },
+    {
+      "mechanism": "Dense embeddings, ANN, RRF, cross-encoder reranking",
+      "role": "Possible stronger retrieval",
+      "source_status": "Proposed only",
+      "chapter": "16-future-retrieval",
+      "animated_beats": [
+        "16-future-retrieval-01",
+        "16-future-retrieval-02",
+        "16-future-retrieval-03",
+        "16-future-retrieval-04",
+        "16-future-retrieval-05"
+      ]
+    },
+    {
+      "mechanism": "Contextual embeddings/BM25, Self-RAG, CRAG, agent tool loops",
+      "role": "Research comparison / possible extension",
+      "source_status": "Not implemented",
+      "chapter": "07-retrieval",
+      "animated_beats": [
+        "07-retrieval-01",
+        "07-retrieval-02",
+        "07-retrieval-03",
+        "07-retrieval-04"
+      ]
+    }
+  ],
+  "source_sections": {
+    "1": [
+      "01-purpose",
+      "02-vocabulary"
+    ],
+    "2": [
+      "01-purpose",
+      "03-context"
+    ],
+    "3": [
+      "03-context",
+      "07-retrieval"
+    ],
+    "4": [
+      "03-context",
+      "08-augmentation"
+    ],
+    "5": [
+      "04-evidence"
+    ],
+    "6": [
+      "05-keywords"
+    ],
+    "7": [
+      "07-retrieval"
+    ],
+    "8": [
+      "08-augmentation",
+      "09-generation",
+      "10-counterexamples"
+    ],
+    "9": [
+      "16-future-retrieval"
+    ],
+    "10": [
+      "06-taxonomy"
+    ],
+    "11": [
+      "11-memory"
+    ],
+    "12": [
+      "11-memory",
+      "12-loops"
+    ],
+    "13": [
+      "13-harness"
+    ],
+    "14": [
+      "05-keywords",
+      "14-tokenomics"
+    ],
+    "15": [
+      "09-generation",
+      "15-evaluation"
+    ],
+    "16": [
+      "10-counterexamples",
+      "18-complete-trace"
+    ],
+    "17": [
+      "10-counterexamples",
+      "16-future-retrieval",
+      "18-complete-trace"
+    ],
+    "18": [
+      "16-future-retrieval",
+      "17-jev",
+      "18-complete-trace"
+    ],
+    "19": [
+      "15-evaluation",
+      "18-complete-trace"
+    ],
+    "20": [
+      "18-complete-trace"
+    ]
+  },
+  "chapters": [
+    {
+      "id": "01-purpose",
+      "title": "The problem and the product",
+      "purpose": "Find repositories by their purpose and relationships, then keep your decisions.",
+      "source_sections": [
+        1,
+        2
+      ],
+      "figure": 1
+    },
+    {
+      "id": "02-vocabulary",
+      "title": "Organization vocabulary",
+      "purpose": "Give initiative, subject and technology different meanings.",
+      "source_sections": [
+        1
+      ],
+      "figure": 1
+    },
+    {
+      "id": "03-context",
+      "title": "Context engineering",
+      "purpose": "Select, authorize and structure the information needed for a decision.",
+      "source_sections": [
+        2,
+        3,
+        4
+      ],
+      "figure": 1
+    },
+    {
+      "id": "04-evidence",
+      "title": "Evidence and chunking",
+      "purpose": "Preserve source-linked purpose text while keeping the request bounded.",
+      "source_sections": [
+        5
+      ],
+      "figure": 3
+    },
+    {
+      "id": "05-keywords",
+      "title": "Local algorithms",
+      "purpose": "Extract useful signals without confusing keyword scores with meaning.",
+      "source_sections": [
+        6,
+        14
+      ],
+      "figure": 3
+    },
+    {
+      "id": "06-taxonomy",
+      "title": "Taxonomy intelligence",
+      "purpose": "Propose a useful collection vocabulary, then publish only reviewed concepts.",
+      "source_sections": [
+        10
+      ],
+      "figure": 2
+    },
+    {
+      "id": "07-retrieval",
+      "title": "Retrieval",
+      "purpose": "Find plausible approved concepts before deciding which relationships hold.",
+      "source_sections": [
+        3,
+        7
+      ],
+      "figure": 2
+    },
+    {
+      "id": "08-augmentation",
+      "title": "Augmentation",
+      "purpose": "Assemble evidence, candidate meaning and decision policy into the model request.",
+      "source_sections": [
+        4,
+        8
+      ],
+      "figure": 2
+    },
+    {
+      "id": "09-generation",
+      "title": "Generation and validation",
+      "purpose": "Return supported IDs, then check whether a proposal is safe and useful.",
+      "source_sections": [
+        8,
+        15
+      ],
+      "figure": 2
+    },
+    {
+      "id": "10-counterexamples",
+      "title": "Counterexamples and failure cases",
+      "purpose": "Use awkward inputs to distinguish matching words from supported meaning.",
+      "source_sections": [
+        8,
+        16,
+        17
+      ],
+      "figure": 3
+    },
+    {
+      "id": "11-memory",
+      "title": "Memory and user authority",
+      "purpose": "Preserve completed work and corrections independently of current labels.",
+      "source_sections": [
+        11,
+        12
+      ],
+      "figure": 4
+    },
+    {
+      "id": "12-loops",
+      "title": "Loop engineering",
+      "purpose": "Control when work runs, skips, reconciles, retries or becomes stale.",
+      "source_sections": [
+        12
+      ],
+      "figure": 4
+    },
+    {
+      "id": "13-harness",
+      "title": "Harness engineering",
+      "purpose": "Make every admitted request measurable, authorized and finite.",
+      "source_sections": [
+        13
+      ],
+      "figure": 5
+    },
+    {
+      "id": "14-tokenomics",
+      "title": "Tokenomics and optimization",
+      "purpose": "Measure the total useful outcome, not merely a smaller prompt.",
+      "source_sections": [
+        14
+      ],
+      "figure": 5
+    },
+    {
+      "id": "15-evaluation",
+      "title": "Evaluation and evidence",
+      "purpose": "Evaluate retrieval, decisions and workflow separately, with honest limits.",
+      "source_sections": [
+        15,
+        19
+      ],
+      "figure": 6
+    },
+    {
+      "id": "16-future-retrieval",
+      "title": "Stronger retrieval and contextual retrieval",
+      "purpose": "Add a retrieval layer only when its errors and costs justify the change.",
+      "source_sections": [
+        9,
+        17,
+        18
+      ],
+      "figure": 7
+    },
+    {
+      "id": "17-jev",
+      "title": "Decision models: the Jev research question",
+      "purpose": "Test bounded semantic judgments without changing multi-label meaning or user authority.",
+      "source_sections": [
+        18
+      ],
+      "figure": 8
+    },
+    {
+      "id": "18-complete-trace",
+      "title": "The complete trace and next steps",
+      "purpose": "Reconnect each mechanism to the repository the user wanted to find.",
+      "source_sections": [
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "figure": 8
+    }
+  ],
+  "limitations": "Exact formulas and large payloads also remain in the linked source articles; narrated and animated mechanisms do not imply new tests."
+}

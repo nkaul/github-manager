@@ -1,0 +1,257 @@
+{
+  "date": "2026-10-16",
+  "agent": "B",
+  "scope": "Single-repository public-read readiness test only; full crawl not authorized.",
+  "repository": "dagster-io/dagster",
+  "authentication": "Unauthenticated; no credentials read.",
+  "attempt_limit": 8,
+  "requests": [
+    {
+      "endpoint": "https://api.github.com/rate_limit",
+      "status": null,
+      "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)>"
+    },
+    {
+      "endpoint": "https://api.github.com/search/repositories?q=topic%3Adata-orchestration%20is%3Apublic%20fork%3Afalse%20archived%3Afalse&per_page=5",
+      "status": null,
+      "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)>"
+    },
+    {
+      "endpoint": "https://api.github.com/repos/dagster-io/dagster",
+      "status": null,
+      "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)>"
+    },
+    {
+      "endpoint": "https://api.github.com/search/repositories?q=topic%3Adata-orchestration%20is%3Apublic%20fork%3Afalse%20archived%3Afalse&per_page=5",
+      "transport": "httpx-default-verified-TLS",
+      "status": 200,
+      "headers": {
+        "X-RateLimit-Limit": "10",
+        "X-RateLimit-Remaining": "9",
+        "X-RateLimit-Reset": "1792130463",
+        "X-RateLimit-Resource": "search",
+        "Retry-After": null
+      },
+      "response_bytes": 27322
+    },
+    {
+      "endpoint": "https://api.github.com/repos/dagster-io/dagster",
+      "transport": "httpx-default-verified-TLS",
+      "status": 200,
+      "headers": {
+        "X-RateLimit-Limit": "60",
+        "X-RateLimit-Remaining": "59",
+        "X-RateLimit-Reset": "1792134004",
+        "X-RateLimit-Resource": "core",
+        "Retry-After": null
+      },
+      "response_bytes": 6585
+    },
+    {
+      "endpoint": "https://api.github.com/repos/dagster-io/dagster/commits/master",
+      "transport": "httpx-default-verified-TLS",
+      "status": 200,
+      "headers": {
+        "X-RateLimit-Limit": "60",
+        "X-RateLimit-Remaining": "58",
+        "X-RateLimit-Reset": "1792134004",
+        "X-RateLimit-Resource": "core",
+        "Retry-After": null
+      },
+      "response_bytes": 21439
+    },
+    {
+      "endpoint": "https://api.github.com/repos/dagster-io/dagster/readme?ref=c97898c3e4a8a3cc5e32fcc2ca97aea810342ed9",
+      "transport": "httpx-default-verified-TLS",
+      "status": 200,
+      "headers": {
+        "X-RateLimit-Limit": "60",
+        "X-RateLimit-Remaining": "57",
+        "X-RateLimit-Reset": "1792134004",
+        "X-RateLimit-Resource": "core",
+        "Retry-After": null
+      },
+      "response_bytes": 10360
+    },
+    {
+      "endpoint": "https://api.github.com/repos/dagster-io/dagster/contents/pyproject.toml?ref=c97898c3e4a8a3cc5e32fcc2ca97aea810342ed9",
+      "transport": "httpx-default-verified-TLS",
+      "status": 200,
+      "headers": {
+        "X-RateLimit-Limit": "60",
+        "X-RateLimit-Remaining": "56",
+        "X-RateLimit-Reset": "1792134004",
+        "X-RateLimit-Resource": "core",
+        "Retry-After": null
+      },
+      "response_bytes": 10085
+    }
+  ],
+  "failures": [
+    {
+      "endpoint": "https://api.github.com/rate_limit",
+      "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)>"
+    },
+    {
+      "endpoint": "https://api.github.com/search/repositories?q=topic%3Adata-orchestration%20is%3Apublic%20fork%3Afalse%20archived%3Afalse&per_page=5",
+      "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)>"
+    },
+    {
+      "endpoint": "https://api.github.com/repos/dagster-io/dagster",
+      "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)>"
+    }
+  ],
+  "labels_are_provisional": true,
+  "human_approved_labels": [],
+  "provisional_labels": [
+    {
+      "kind": "DOMAIN",
+      "name": "Data Engineering",
+      "rationale": "Broad inferred analytical domain; requires an agreed definition and human review."
+    },
+    {
+      "kind": "PROJECT",
+      "name": "Dagster",
+      "rationale": "Canonical dagster-io/dagster repository represents the Dagster initiative. Merely using Dagster elsewhere does not establish membership."
+    },
+    {
+      "kind": "TOPIC",
+      "name": "Data Orchestration",
+      "rationale": "README purpose statement and repository topic provide direct supporting evidence."
+    }
+  ],
+  "counting_policy": "One repository ID equals one corpus item. Dagster monorepo packages do not count as additional repositories.",
+  "crawl_scale_note": "Smoke check is public and unauthenticated. Current core/search response headers provide the available quota. A 600-repository corpus with metadata, commit, README and supporting content needs thousands of reads; an authenticated read-only GitHub identity is recommended to avoid the unauthenticated core quota. Search has a separate quota. Full crawl must coordinate rate limits across both agents.",
+  "completed_request_attempts": 8,
+  "stopped_for_rate_limit": false,
+  "transport_correction": "System Python urllib could not verify local CA chain. Existing backend virtualenv httpx uses default verified TLS; verification was never disabled.",
+  "search": {
+    "query": "topic:data-orchestration is:public fork:false archived:false",
+    "total_count": 87,
+    "incomplete_results": false,
+    "items": [
+      {
+        "id": 204164353,
+        "full_name": "kestra-io/kestra",
+        "html_url": "https://github.com/kestra-io/kestra",
+        "description": "Event Driven Orchestration & Scheduling Platform for Mission Critical Applications",
+        "private": false,
+        "fork": false,
+        "archived": false
+      },
+      {
+        "id": 7276954,
+        "full_name": "Alluxio/alluxio",
+        "html_url": "https://github.com/Alluxio/alluxio",
+        "description": "Alluxio, data orchestration for analytics and machine learning in the cloud",
+        "private": false,
+        "fork": false,
+        "archived": false
+      },
+      {
+        "id": 171396748,
+        "full_name": "cubefs/cubefs",
+        "html_url": "https://github.com/cubefs/cubefs",
+        "description": "cloud-native distributed storage",
+        "private": false,
+        "fork": false,
+        "archived": false
+      },
+      {
+        "id": 1245355924,
+        "full_name": "slothflowlabs/duckle",
+        "html_url": "https://github.com/slothflowlabs/duckle",
+        "description": "Open-source ETL/ELT you deploy on your own servers or cloud. Built on DuckDB: no-code/low-code visual pipelines or SQL, 385 components, dbt, CDC, data quality, reverse ETL, lineage, MCP for AI agents. No vendor cloud, no per-row billing.",
+        "private": false,
+        "fork": false,
+        "archived": false
+      },
+      {
+        "id": 540480040,
+        "full_name": "apache/incubator-graphar",
+        "html_url": "https://github.com/apache/incubator-graphar",
+        "description": "An open source, standard data file format for graph data storage and retrieval.",
+        "private": false,
+        "fork": false,
+        "archived": false
+      }
+    ]
+  },
+  "metadata": {
+    "id": 131619646,
+    "node_id": "MDEwOlJlcG9zaXRvcnkxMzE2MTk2NDY=",
+    "full_name": "dagster-io/dagster",
+    "html_url": "https://github.com/dagster-io/dagster",
+    "description": "An orchestration platform for the development, production, and observation of data assets.",
+    "visibility": "public",
+    "private": false,
+    "fork": false,
+    "archived": false,
+    "default_branch": "master",
+    "language": "Python",
+    "topics": [
+      "analytics",
+      "dagster",
+      "data-engineering",
+      "data-integration",
+      "data-orchestrator",
+      "data-pipelines",
+      "data-science",
+      "etl",
+      "metadata",
+      "mlops",
+      "orchestration",
+      "python",
+      "scheduler",
+      "workflow",
+      "workflow-automation"
+    ],
+    "size": 1494875,
+    "stargazers_count": 16282,
+    "pushed_at": "2026-10-12T16:39:43Z",
+    "license": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://api.github.com/licenses/apache-2.0",
+      "node_id": "MDc6TGljZW5zZTI="
+    }
+  },
+  "snapshot": {
+    "commit_sha": "c97898c3e4a8a3cc5e32fcc2ca97aea810342ed9",
+    "commit_url": "https://github.com/dagster-io/dagster/commit/c97898c3e4a8a3cc5e32fcc2ca97aea810342ed9",
+    "commit_date": "2026-10-12T16:39:39Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "git_blob_sha": "93aed1dec84d15801939d969d284f84ccd145143",
+    "sha256": "c67be78a0355a34b38964ba3e64fa615604e175afbc00bef4506afd4bf0a0b34",
+    "bytes": 6831,
+    "line_count": 149,
+    "pinned_url": "https://github.com/dagster-io/dagster/blob/c97898c3e4a8a3cc5e32fcc2ca97aea810342ed9/README.md",
+    "evidence_excerpt": {
+      "text": "Dagster as a robust orchestration engine",
+      "word_count": 6,
+      "line_start": 103,
+      "line_end": 103,
+      "url": "https://github.com/dagster-io/dagster/blob/c97898c3e4a8a3cc5e32fcc2ca97aea810342ed9/README.md#L103"
+    },
+    "complete_content_stored": false
+  },
+  "supporting_manifest": {
+    "path": "pyproject.toml",
+    "git_blob_sha": "d658bf47aef160779292ebff1d8c644446a35b9c",
+    "sha256": "edb9d2914bcb435e5681d1894bb853e7b1454cf6fe611919784cabe76014e6a6",
+    "bytes": 6604,
+    "pinned_url": "https://github.com/dagster-io/dagster/blob/c97898c3e4a8a3cc5e32fcc2ca97aea810342ed9/pyproject.toml",
+    "tables": [
+      "tool.pytest.ini_options",
+      "tool.ruff",
+      "tool.ruff.lint",
+      "tool.ruff.lint.per-file-ignores",
+      "tool.dagster"
+    ],
+    "findings": "Root TOML contains pytest, Ruff and Dagster tool configuration. These tool settings do not establish runtime dependencies, repository language coverage or initiative membership. Static inspection only; nothing executed.",
+    "complete_content_stored": false
+  }
+}

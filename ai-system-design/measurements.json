@@ -1,0 +1,370 @@
+{
+  "audit_date": "2026-10-14",
+  "baseline_commit": "3ffac3f1ed6618b80045c3ffafc050f50d102d10",
+  "scope": "Read-only audit of frozen public/synthetic data; no fresh inference or network calls",
+  "corpus_hash": "7c9d88ed1a2e31c1b5638e8ad75e0aaf892fe18b16a3d7e5520a0ddf4998693c",
+  "prompt_hash": "138ecbb1eb0c9202b26067bad9c7e7808020375b57a97e7830285cade6d49dd3",
+  "schema_hash": "57492877e2aed355f4cac60ed7332b1190e7ffbf6c7bc67d7917a2e543f7f0f9",
+  "sources": {
+    "round2": {
+      "path": "docs/validation/private/ai-pretest/validation-round-2.local.json",
+      "sha256": "7d19d41bd2c055864a66ce10ad96cacba08f82bb84198405dc18203a6d3b1bce"
+    },
+    "offline": {
+      "path": "docs/validation/private/ai-pretest/offline.local.json",
+      "sha256": "42656ef9cfbfd5fae2792c505626b8b83ad85fa843e809bb7026655765b8f4a0"
+    }
+  },
+  "corpus": {
+    "public": 10,
+    "synthetic": 20,
+    "dev": 10,
+    "heldout": 20
+  },
+  "retrieval_choice": "tfidf",
+  "retrieval": {
+    "alias": {
+      "dev": {
+        "PROJECT": {
+          "found": 5,
+          "gold": 5,
+          "recall": 1.0
+        },
+        "TOPIC": {
+          "found": 8,
+          "gold": 12,
+          "recall": 0.6666666666666666
+        },
+        "TAG": {
+          "found": 15,
+          "gold": 15,
+          "recall": 1.0
+        }
+      },
+      "heldout": {
+        "PROJECT": {
+          "found": 10,
+          "gold": 10,
+          "recall": 1.0
+        },
+        "TOPIC": {
+          "found": 15,
+          "gold": 19,
+          "recall": 0.7894736842105263
+        },
+        "TAG": {
+          "found": 23,
+          "gold": 23,
+          "recall": 1.0
+        }
+      },
+      "expanded_heldout": {
+        "PROJECT": {
+          "found": 10,
+          "gold": 10,
+          "recall": 1.0
+        },
+        "TOPIC": {
+          "found": 15,
+          "gold": 19,
+          "recall": 0.7894736842105263
+        },
+        "TAG": {
+          "found": 23,
+          "gold": 23,
+          "recall": 1.0
+        }
+      }
+    },
+    "tfidf": {
+      "dev": {
+        "PROJECT": {
+          "found": 5,
+          "gold": 5,
+          "recall": 1.0
+        },
+        "TOPIC": {
+          "found": 11,
+          "gold": 12,
+          "recall": 0.9166666666666666
+        },
+        "TAG": {
+          "found": 15,
+          "gold": 15,
+          "recall": 1.0
+        }
+      },
+      "heldout": {
+        "PROJECT": {
+          "found": 10,
+          "gold": 10,
+          "recall": 1.0
+        },
+        "TOPIC": {
+          "found": 19,
+          "gold": 19,
+          "recall": 1.0
+        },
+        "TAG": {
+          "found": 23,
+          "gold": 23,
+          "recall": 1.0
+        }
+      },
+      "expanded_heldout": {
+        "PROJECT": {
+          "found": 10,
+          "gold": 10,
+          "recall": 1.0
+        },
+        "TOPIC": {
+          "found": 19,
+          "gold": 19,
+          "recall": 1.0
+        },
+        "TAG": {
+          "found": 23,
+          "gold": 23,
+          "recall": 1.0
+        }
+      }
+    },
+    "bm25": {
+      "dev": {
+        "PROJECT": {
+          "found": 5,
+          "gold": 5,
+          "recall": 1.0
+        },
+        "TOPIC": {
+          "found": 11,
+          "gold": 12,
+          "recall": 0.9166666666666666
+        },
+        "TAG": {
+          "found": 15,
+          "gold": 15,
+          "recall": 1.0
+        }
+      },
+      "heldout": {
+        "PROJECT": {
+          "found": 10,
+          "gold": 10,
+          "recall": 1.0
+        },
+        "TOPIC": {
+          "found": 19,
+          "gold": 19,
+          "recall": 1.0
+        },
+        "TAG": {
+          "found": 23,
+          "gold": 23,
+          "recall": 1.0
+        }
+      },
+      "expanded_heldout": {
+        "PROJECT": {
+          "found": 10,
+          "gold": 10,
+          "recall": 1.0
+        },
+        "TOPIC": {
+          "found": 19,
+          "gold": 19,
+          "recall": 1.0
+        },
+        "TAG": {
+          "found": 23,
+          "gold": 23,
+          "recall": 1.0
+        }
+      }
+    }
+  },
+  "extraction_seconds": {
+    "rake": 0.249,
+    "yake": 12.669
+  },
+  "experiment_versions": {
+    "langchain-openai": "1.7.0",
+    "langchain-core": "1.6.9",
+    "openai": "3.29.0",
+    "rake-nltk": "1.0.6",
+    "rank-bm25": "0.2.2",
+    "markdown-it-py": "4.2.0",
+    "nltk": "3.10.3",
+    "numpy": "2.5.4"
+  },
+  "round2": {
+    "n": 20,
+    "models_returned": [
+      "gpt-6-luna"
+    ],
+    "metrics": {
+      "PROJECT": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "positive_repos": 8,
+        "label_support": 10,
+        "repos": 20
+      },
+      "TOPIC": {
+        "precision": 1.0,
+        "recall": 0.9473684210526315,
+        "f1": 0.972972972972973,
+        "tp": 18,
+        "fp": 0,
+        "fn": 1,
+        "positive_repos": 18,
+        "label_support": 19,
+        "repos": 20
+      },
+      "TAG": {
+        "precision": 1.0,
+        "recall": 0.9565217391304348,
+        "f1": 0.9777777777777777,
+        "tp": 22,
+        "fp": 0,
+        "fn": 1,
+        "positive_repos": 18,
+        "label_support": 23,
+        "repos": 20
+      },
+      "ALL": {
+        "precision": 1.0,
+        "recall": 0.9615384615384616,
+        "f1": 0.9803921568627451,
+        "tp": 50,
+        "fp": 0,
+        "fn": 2,
+        "positive_repos": 18,
+        "label_support": 52,
+        "repos": 20
+      }
+    },
+    "slices": {
+      "PUBLIC_GITHUB": {
+        "PROJECT": {
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "positive_repos": 0,
+          "label_support": 0,
+          "repos": 8
+        },
+        "TOPIC": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 8,
+          "fp": 0,
+          "fn": 0,
+          "positive_repos": 8,
+          "label_support": 8,
+          "repos": 8
+        },
+        "TAG": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 8,
+          "fp": 0,
+          "fn": 0,
+          "positive_repos": 8,
+          "label_support": 8,
+          "repos": 8
+        },
+        "ALL": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 16,
+          "fp": 0,
+          "fn": 0,
+          "positive_repos": 8,
+          "label_support": 16,
+          "repos": 8
+        }
+      },
+      "SYNTHETIC": {
+        "PROJECT": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "positive_repos": 8,
+          "label_support": 10,
+          "repos": 12
+        },
+        "TOPIC": {
+          "precision": 1.0,
+          "recall": 0.9090909090909091,
+          "f1": 0.9523809523809523,
+          "tp": 10,
+          "fp": 0,
+          "fn": 1,
+          "positive_repos": 10,
+          "label_support": 11,
+          "repos": 12
+        },
+        "TAG": {
+          "precision": 1.0,
+          "recall": 0.9333333333333333,
+          "f1": 0.9655172413793104,
+          "tp": 14,
+          "fp": 0,
+          "fn": 1,
+          "positive_repos": 10,
+          "label_support": 15,
+          "repos": 12
+        },
+        "ALL": {
+          "precision": 1.0,
+          "recall": 0.9444444444444444,
+          "f1": 0.9714285714285714,
+          "tp": 34,
+          "fp": 0,
+          "fn": 2,
+          "positive_repos": 10,
+          "label_support": 36,
+          "repos": 12
+        }
+      }
+    },
+    "latency": {
+      "n": 20,
+      "p50": 2.974,
+      "p95": 4.749
+    },
+    "wall_seconds": 17.078,
+    "workers": 4,
+    "input_tokens": 16041,
+    "output_tokens": 3414,
+    "reasoning_tokens_in_output": 702,
+    "cached_input_tokens": 0,
+    "cache_write_tokens": 0,
+    "raw_token_rate_usd": 0.0033111000000000004,
+    "ledger_rounded_usd": 0.003319,
+    "mean_input_tokens": 802.05,
+    "mean_output_tokens": 170.7,
+    "mean_ledger_usd_per_repo": 0.00016595,
+    "input_plus_output_per_true_positive": 389.1,
+    "ledger_usd_per_true_positive": 6.638e-05,
+    "generation_attempts": 20,
+    "count_http_200": 20,
+    "generation_http_200": 20,
+    "experiment_total_after_round_usd": 0.052212
+  },
+  "interpretation": "Reused 20-case regression set, not independent generalization; human rubric unscored"
+}

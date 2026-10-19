@@ -1,0 +1,297 @@
+{
+  "status": "PASS",
+  "date": "2026-10-15",
+  "duration": 2492.23,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "audio": true,
+  "duration_seconds": 2492.2333333333336,
+  "frames": 74767,
+  "codec": "H.264 / AAC",
+  "chapter_count": 18,
+  "reference_summaries": 8,
+  "voice": "AI-generated Cedar",
+  "spoken_wpm": 108.15282195090002,
+  "audio_lufs": -16.15,
+  "audio_true_peak_dbtp": -1.88,
+  "full_master_decode": "PASS; all frames and audio decoded",
+  "standalone_check_scope": "Headers, duration, stream presence and last-second decode; master covers the source chapter video",
+  "standalone_assets": [
+    {
+      "file": "chapters/01-purpose.mp4",
+      "duration": 112.9,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": true,
+      "tail_decode": "PASS",
+      "bytes": 5648094
+    },
+    {
+      "file": "chapters/02-vocabulary.mp4",
+      "duration": 117.57,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": true,
+      "tail_decode": "PASS",
+      "bytes": 5573782
+    },
+    {
+      "file": "chapters/03-context.mp4",
+      "duration": 132.0,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": true,
+      "tail_decode": "PASS",
+      "bytes": 6311373
+    },
+    {
+      "file": "chapters/04-evidence.mp4",
+      "duration": 134.23,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": true,
+      "tail_decode": "PASS",
+      "bytes": 6775700
+    },
+    {
+      "file": "chapters/05-keywords.mp4",
+      "duration": 138.32999999999998,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": true,
+      "tail_decode": "PASS",
+      "bytes": 6823625
+    },
+    {
+      "file": "chapters/06-taxonomy.mp4",
+      "duration": 130.7,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": true,
+      "tail_decode": "PASS",
+      "bytes": 6789374
+    },
+    {
+      "file": "chapters/07-retrieval.mp4",
+      "duration": 133.37,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": true,
+      "tail_decode": "PASS",
+      "bytes": 6455570
+    },
+    {
+      "file": "chapters/08-augmentation.mp4",
+      "duration": 130.13,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": true,
+      "tail_decode": "PASS",
+      "bytes": 6482726
+    },
+    {
+      "file": "chapters/09-generation.mp4",
+      "duration": 128.83,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": true,
+      "tail_decode": "PASS",
+      "bytes": 6559228
+    },
+    {
+      "file": "chapters/10-counterexamples.mp4",
+      "duration": 129.07,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": true,
+      "tail_decode": "PASS",
+      "bytes": 6657970
+    },
+    {
+      "file": "chapters/11-memory.mp4",
+      "duration": 129.53,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": true,
+      "tail_decode": "PASS",
+      "bytes": 6517390
+    },
+    {
+      "file": "chapters/12-loops.mp4",
+      "duration": 146.0,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": true,
+      "tail_decode": "PASS",
+      "bytes": 6994609
+    },
+    {
+      "file": "chapters/13-harness.mp4",
+      "duration": 136.07,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": true,
+      "tail_decode": "PASS",
+      "bytes": 6696486
+    },
+    {
+      "file": "chapters/14-tokenomics.mp4",
+      "duration": 134.83,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": true,
+      "tail_decode": "PASS",
+      "bytes": 6813725
+    },
+    {
+      "file": "chapters/15-evaluation.mp4",
+      "duration": 200.27,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": true,
+      "tail_decode": "PASS",
+      "bytes": 9931924
+    },
+    {
+      "file": "chapters/16-future-retrieval.mp4",
+      "duration": 192.77,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": true,
+      "tail_decode": "PASS",
+      "bytes": 9750406
+    },
+    {
+      "file": "chapters/17-jev.mp4",
+      "duration": 134.9,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": true,
+      "tail_decode": "PASS",
+      "bytes": 7395941
+    },
+    {
+      "file": "chapters/18-complete-trace.mp4",
+      "duration": 130.73,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": true,
+      "tail_decode": "PASS",
+      "bytes": 6926587
+    },
+    {
+      "file": "references/01-actual-system.mp4",
+      "duration": 32.0,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": false,
+      "tail_decode": "PASS",
+      "bytes": 1590063
+    },
+    {
+      "file": "references/02-retrieval-and-generation.mp4",
+      "duration": 32.0,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": false,
+      "tail_decode": "PASS",
+      "bytes": 1617435
+    },
+    {
+      "file": "references/03-evidence-and-chunking.mp4",
+      "duration": 32.0,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": false,
+      "tail_decode": "PASS",
+      "bytes": 1656375
+    },
+    {
+      "file": "references/04-controlled-analysis-loop.mp4",
+      "duration": 32.0,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": false,
+      "tail_decode": "PASS",
+      "bytes": 1746681
+    },
+    {
+      "file": "references/05-harness-and-tokenomics.mp4",
+      "duration": 32.0,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": false,
+      "tail_decode": "PASS",
+      "bytes": 1688808
+    },
+    {
+      "file": "references/06-evaluation-evidence.mp4",
+      "duration": 32.0,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": false,
+      "tail_decode": "PASS",
+      "bytes": 1951680
+    },
+    {
+      "file": "references/07-contextual-retrieval-comparison.mp4",
+      "duration": 32.0,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": false,
+      "tail_decode": "PASS",
+      "bytes": 1948529
+    },
+    {
+      "file": "references/08-future-experiment-roadmap.mp4",
+      "duration": 32.0,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": false,
+      "tail_decode": "PASS",
+      "bytes": 1847813
+    }
+  ],
+  "master_caption_cues": 682,
+  "provider_http_requests_new": 11,
+  "provider_http_requests_including_pilot": 16,
+  "retained_reservations_new_usd": 1.68,
+  "retained_reservations_including_pilot_usd": 1.97,
+  "accounting_note": "Conservative retained reservations, not reconciled invoice charges",
+  "new_repository_inference_calls": 0,
+  "preservation": {
+    "status": "PASS",
+    "protected_files": 490,
+    "changed": []
+  },
+  "master_bytes": 125108234,
+  "master_sha256": "63f6fe5dec4e65c4fa3a765d5ebc6c875a5fca7f47328cfdf7ef0564d05b14a5",
+  "perceptual_review": "Pacing and voice preference remain for the user; muted player automation is not a listening test."
+}

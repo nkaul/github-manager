@@ -1,10 +1,11 @@
+import { chooseOption } from "../helpers/chooseOption";
 import { test, expect, type Page } from "@playwright/test";
 import { writeFileSync } from "node:fs";
 
 async function seed(page: Page, id: number) {
   await page.request.post("/api/v1/test/login", { data: { id } });
   await page.goto("/");
-  await page.getByLabel("Workspace collection").selectOption("samples");
+  await chooseOption(page.getByLabel("Workspace collection"), "samples");
   if (await page.getByRole("button", { name: "Load demo samples", exact: true }).count()) await page.getByRole("button", { name: "Load demo samples", exact: true }).first().click();
   await expect(page.getByRole("button", { name: "Details for orion-api", exact: true })).toBeVisible();
 }
@@ -26,7 +27,7 @@ async function structure(page: Page, prefix: string, count = 1) {
   return { domain, projects };
 }
 
-test("tree-first shell, readable compact cards and responsive/reduced-motion layout", async ({ page }) => {
+test("tree-first shell, compact summary strip and readable list and responsive/reduced-motion layout", async ({ page }) => {
   await seed(page, 9101);
   await structure(page, "Layout", 22);
   const audits = [];
@@ -49,7 +50,7 @@ test("tree-first shell, readable compact cards and responsive/reduced-motion lay
           const values = channels.map(v => { const c = v / 255; return c <= .04045 ? c / 12.92 : ((c + .055) / 1.055) ** 2.4; });
           return .2126 * values[0] + .7152 * values[1] + .0722 * values[2];
         }
-        return [".wm-nav.is-active span", ".wm-project span", ".wm-stat>span", ".wm-stat small", ".wm-stat-selected strong", ".wm-tree-menu>summary", ".wm-header-actions>.wm-secondary", ".wm-filter-field>span", ".wm-table th", ".wm-description", ".wm-visibility", ".wm-activity", ".wm-source"].map(selector => {
+        return [".wm-nav.is-active span", ".wm-project span", ".wm-stat>span", ".wm-stat-selected strong", ".wm-tree-menu>summary", ".wm-header-actions>.wm-secondary", ".wm-filter-field>span", ".wm-table th", ".wm-description", ".wm-visibility", ".wm-activity", ".wm-source"].map(selector => {
           const el = document.querySelector(selector)!;
           const style = getComputedStyle(el);
           let parent: Element | null = el;
@@ -60,15 +61,50 @@ test("tree-first shell, readable compact cards and responsive/reduced-motion lay
         });
       });
       for (const pair of colors) { expect(pair.ratio, JSON.stringify(pair)).toBeGreaterThanOrEqual(4.5); expect(pair.size, pair.selector).toBeGreaterThanOrEqual(12); }
-      audits.push({ width, height, ...geometry, colors });
+      const controls = await page.evaluate(() => {
+        const selectors = [".wm-search", '.wm-filter-field input[aria-label="Language filter"]', '.wm-filter-field input[aria-label="Visibility filter"]', '.wm-header input[aria-label="Workspace collection"]'];
+        return selectors.map(selector => {
+          const el = document.querySelector(selector)!;
+          const style = getComputedStyle(el);
+          return { selector, height: el.getBoundingClientRect().height, paddingRight: parseFloat(style.paddingRight), border: parseFloat(style.borderTopWidth) };
+        });
+      });
+      for (const control of controls) {
+        expect(control.height, JSON.stringify(control)).toBe(36);
+        if (control.selector.includes("input")) expect(control.paddingRight, JSON.stringify(control)).toBeGreaterThanOrEqual(34);
+      }
+      await expect(page.getByLabel("Search taxonomy names or aliases")).toHaveCSS("border-top-width", "0px");
+      await expect(page.locator(".wm-taxonomy-search")).toHaveCSS("border-top-color", "rgb(137, 147, 165)");
+      audits.push({ width, height, ...geometry, colors, controls });
       expect(geometry.ratio).toBeGreaterThanOrEqual(width === 1920 ? 0.65 : 0.55);
-      expect(geometry.cardHeight).toBeLessThanOrEqual(100);
+      expect(geometry.cardHeight).toBe(52);
+      await expect(page.locator(".wm-stats")).toHaveCSS("gap", "0px");
+      await expect(page.locator(".wm-header")).toHaveCSS("height", "56px");
+      const firstRow = await page.locator(".wm-table tbody tr").first().boundingBox();
+      expect(firstRow!.y).toBeLessThanOrEqual(360);
+      expect(await page.locator(".wm-stat-label svg").count()).toBe(5);
+      await expect(page.locator(".wm-stats")).not.toContainText("Repositories in current scope");
+      await expect(page.locator(".wm-nav.is-active")).toHaveCSS("background-color", "rgb(57, 73, 171)");
+      await expect(page.locator(".wm-nav.is-active span")).toHaveCSS("color", "rgb(255, 255, 255)");
+      await expect(page.locator(".wm-sidebar [role=tab][aria-selected=true]")).toHaveCSS("background-color", "rgb(57, 73, 171)");
+      await expect(page.locator(".wm-sidebar [role=tab][aria-selected=true]")).toHaveCSS("color", "rgb(255, 255, 255)");
       expect(geometry.labelSize).toBeGreaterThanOrEqual(12);
     } else {
       await page.getByRole("button", { name: "Open navigation", exact: true }).click();
       await expect(page.locator(".wm-sidebar").getByRole("button", { name: "Layout Domain", exact: true })).toBeVisible();
       await page.getByRole("button", { name: "Close navigation", exact: true }).click();
       await expect(page.locator(".wm-sidebar")).toHaveCSS("transform", "matrix(1, 0, 0, 1, -280, 0)");
+      const descriptions = await page.locator(".wm-description").evaluateAll(nodes => nodes.map(node => ({
+        whiteSpace: getComputedStyle(node).whiteSpace,
+        width: node.getBoundingClientRect().width,
+        parentWidth: node.parentElement!.getBoundingClientRect().width,
+        right: node.getBoundingClientRect().right,
+      })));
+      for (const description of descriptions) {
+        expect(description.whiteSpace).toBe("normal");
+        expect(description.width).toBeLessThanOrEqual(description.parentWidth);
+        expect(description.right).toBeLessThanOrEqual(width);
+      }
     }
     await page.screenshot({ path: `test-results/refinement-${width}.png` });
   }
@@ -103,6 +139,12 @@ test("header tree fetches on node selection and scoped KPIs/selection/filter chi
   await expect(page.locator(".wm-stat").filter({ has: page.locator("span", { hasText: /^In this view$/ }) }).locator("strong")).toHaveText("1");
   await page.getByLabel("Select orion-api", { exact: true }).check();
   await expect(page.locator(".wm-stat-selected strong")).toHaveText("1");
+  await page.mouse.move(0, 0);
+  await expect(page.locator(".wm-stat-selected")).toHaveCSS("background-color", "rgb(57, 73, 171)");
+  await expect(page.locator(".wm-stat-selected strong")).toHaveCSS("color", "rgb(255, 255, 255)");
+  const selectedRow = page.locator(".wm-table tr.is-selected");
+  await expect(selectedRow).toHaveCSS("background-color", "rgb(57, 73, 171)");
+  await expect(selectedRow.locator(".wm-repo-name button")).toHaveCSS("color", "rgb(255, 255, 255)");
   await page.getByLabel("Search repositories").fill("orion");
   await expect(page.locator(".wm-stat-selected strong")).toHaveText("0");
   await expect(page.locator(".wm-active-filters")).toContainText("Search: orion");
@@ -119,10 +161,10 @@ test("header tree fetches on node selection and scoped KPIs/selection/filter chi
 test("automatic counts, adaptive preview, reviewed execution and saved defaults", async ({ page }) => {
   await seed(page, 9103);
   await page.getByRole("button", { name: "AI Organization", exact: false }).click();
-  await page.getByLabel("Inference mode").selectOption("LIVE");
+  await chooseOption(page.getByLabel("Inference mode"), "LIVE");
   await page.getByLabel("Taxonomy sample size", { exact: true }).fill("2");
   await page.getByLabel("Classification batch size", { exact: true }).fill("1");
-  await page.getByLabel("Budget mode", { exact: true }).selectOption("ADAPTIVE");
+  await chooseOption(page.getByLabel("Budget mode", { exact: true }), "ADAPTIVE");
   await page.getByRole("button", { name: "Save defaults", exact: true }).click();
   await expect(page.getByText("Run defaults saved. No work was started.", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: "Discover taxonomy", exact: false }).click();
@@ -140,9 +182,9 @@ test("automatic counts, adaptive preview, reviewed execution and saved defaults"
   await page.getByRole("button", { name: "Start reviewed run", exact: true }).click();
   await expect(page.locator(".wm-run").first()).toContainText("Completed");
   await page.reload();
-  await page.getByLabel("Workspace collection").selectOption("samples");
+  await chooseOption(page.getByLabel("Workspace collection"), "samples");
   await page.getByRole("button", { name: "AI Organization", exact: false }).click();
   await expect(page.getByLabel("Taxonomy sample size", { exact: true })).toHaveValue("2");
   await expect(page.getByLabel("Classification batch size", { exact: true })).toHaveValue("1");
-  await expect(page.getByLabel("Budget mode", { exact: true })).toHaveValue("ADAPTIVE");
+  await expect(page.getByLabel("Budget mode", { exact: true })).toHaveValue("Adaptive cost budget");
 });

@@ -1,0 +1,148 @@
+{
+  "status": "PASS",
+  "date": "2026-10-14",
+  "edition": "Separate illustrated edition; academic files retained unchanged",
+  "method": "Manual visual inspection of all final images against original content requirements and technical article; file/hash/dimension checks are automated. This is not an OCR completeness proof or an AI quality benchmark.",
+  "generation_tool": "Built-in Image Generation tool",
+  "initial_generations": 8,
+  "targeted_corrections": 3,
+  "application_provider_calls": 0,
+  "required_label_fragments_reviewed": 226,
+  "figures": [
+    {
+      "file": "01-actual-system.png",
+      "sha256": "88cf57eb9a04e1052aa7d5a52921c0c8ba43d456772912d35b845ea3e61d10c1",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "required_label_fragments": 29,
+      "content_coverage": "PASS - manually reviewed; wrapped lines may be combined or paraphrased",
+      "style": "PASS - hand-drawn illustrations, semantic icons, numbered steps and marker notes",
+      "notes": [
+        "Local FastAPI/Next.js/OAuth App runtime retained.",
+        "Three logical SQLite areas and server-only credential boundary retained.",
+        "AWS runtime clearly future/deferred, never shown as current persistence."
+      ]
+    },
+    {
+      "file": "02-retrieval-and-generation.png",
+      "sha256": "de48a6a3a331d994b717a8e5915a6aadca465188720e5823f62c3685e27f0ef4",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "required_label_fragments": 30,
+      "content_coverage": "PASS - manually reviewed; wrapped lines may be combined or paraphrased",
+      "style": "PASS - hand-drawn illustrations, semantic icons, numbered steps and marker notes",
+      "notes": [
+        "All six stages, candidate limits 8/10/12, primary compact context and validation facts retained.",
+        "Invented JSON schema and pseudo-evidence IDs removed; E0/E1 and generation/revision fence used.",
+        "Sparse-only retrieval, BM25 comparison, absent dense fusion/reranker and reference-validity limitation retained."
+      ]
+    },
+    {
+      "file": "03-evidence-and-chunking.png",
+      "sha256": "30e26eb19aaccc317e173d82c754240800e5a6a1ca763be1a6f9ceb387e4dc9a",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "required_label_fragments": 28,
+      "content_coverage": "PASS - manually reviewed; wrapped lines may be combined or paraphrased",
+      "style": "PASS - hand-drawn illustrations, semantic icons, numbered steps and marker notes",
+      "notes": [
+        "All byte/character/token/phrase bounds checked visually.",
+        "Original-source line markers replaced with offsets in cleaned evidence; E0 example uses name/description/topics/language.",
+        "Purpose excerpts replace summary language; truncation, omitted negation and frozen v1 / app-v2 cleanup caveats retained."
+      ]
+    },
+    {
+      "file": "04-controlled-analysis-loop.png",
+      "sha256": "a0825540689da7ef40e4ee29a2ae3f0fb87e496f3422f2dd7e4a412ebc61d95a",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "required_label_fragments": 30,
+      "content_coverage": "PASS - manually reviewed; wrapped lines may be combined or paraphrased",
+      "style": "PASS - hand-drawn illustrations, semantic icons, numbered steps and marker notes",
+      "notes": [
+        "Separate NEW, RUNNING and historical/uncertain admission outcomes retained.",
+        "Explicit refresh reason, Live AI, fresh=True and separate taxonomy/classification operations retained.",
+        "Change thresholds 6/3/2, 900s window, 90s quiet, 1800s cooldown and no automatic paid repeat retained.",
+        "NO_MATCH completion, user review, historical receipt/cost and stale-reference discard retained."
+      ]
+    },
+    {
+      "file": "05-harness-and-tokenomics.png",
+      "sha256": "5770f262ead2e2d238ab4ba0a868d2c59512d72bc4bc990cfbeb77c441130901",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "required_label_fragments": 31,
+      "content_coverage": "PASS - manually reviewed; wrapped lines may be combined or paraphrased",
+      "style": "PASS - hand-drawn illustrations, semantic icons, numbered steps and marker notes",
+      "notes": [
+        "Public/input/auth/schema/count/retry/tool safeguards retained.",
+        "Atomic reservation, cache-write allowance, 5% headroom, integer microdollars and pinned rates retained.",
+        "Fixed/adaptive finite grants, two HTTP attempts/generation, uncertainty and non-replenishing reset retained.",
+        "Historical receipt: 16,041 input, 3,414 output including 702 reasoning, $0.003319 estimate, 40 HTTP.",
+        "Article caption clarifies call reservations versus unused run-level holds and cumulative $5 cap across both modes."
+      ]
+    },
+    {
+      "file": "06-evaluation-evidence.png",
+      "sha256": "b8521b379fe85e865cc7af222c91a10fb201f36843a45e19585f7ab2d79ee255",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "required_label_fragments": 26,
+      "content_coverage": "PASS - manually reviewed; wrapped lines may be combined or paraphrased",
+      "style": "PASS - hand-drawn illustrations, semantic icons, numbered steps and marker notes",
+      "notes": [
+        "Corpus 30=10 development+20 evaluation; evaluation 8 public+12 synthetic; registry 42/38 checked.",
+        "Human reference approval, missing numeric rubric and primary-label timing retained.",
+        "TP 50, FP 0, FN 2; precision 100.0%, recall 96.2%, micro F1 98.0% checked.",
+        "Candidate coverage 52 and all reused-set / no independent production or dense/reranker/RAGAS claims retained."
+      ]
+    },
+    {
+      "file": "07-contextual-retrieval-comparison.png",
+      "sha256": "ff684b4f5884b0104cab2260f214594efda90ace7d14f3dfed0dd2c204b2140c",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "required_label_fragments": 25,
+      "content_coverage": "PASS - manually reviewed; wrapped lines may be combined or paraphrased",
+      "style": "PASS - hand-drawn illustrations, semantic icons, numbered steps and marker notes",
+      "notes": [
+        "Implemented deterministic context separated from external Anthropic reference and proposed experiments.",
+        "Prefix before embeddings/BM25, optional reranking and vendor-result qualification retained.",
+        "Cheap metadata versus higher-cost generated-context experiments, privacy/indexing cost and causal research question retained.",
+        "Article caption clarifies that Domains exist in registry memory but only Project/Topic/Tag candidates are searched."
+      ]
+    },
+    {
+      "file": "08-future-experiment-roadmap.png",
+      "sha256": "59eee72d742f088c61026d0c115702069673a8365ce4dff6c5abe9f854d78437",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "required_label_fragments": 27,
+      "content_coverage": "PASS - manually reviewed; wrapped lines may be combined or paraphrased",
+      "style": "PASS - hand-drawn illustrations, semantic icons, numbered steps and marker notes",
+      "notes": [
+        "Evidence repair, independent split and human rubric retained.",
+        "Sparse/count/BM25, alias caps, public dense trial, fusion and before/after ACL filters retained.",
+        "One-pass escalation, source-linked passages, conditional reranking, abstention and held-out evaluation retained.",
+        "Quality/cost/reviewer promotion criteria and separate deferred distributed-runtime gate retained."
+      ]
+    }
+  ],
+  "limits": "Illustrations use explanatory metaphors; the article and academic SVG companions remain authoritative for exact schema and implementation details. Native raster dimensions are preserved; no claim of 4K output or editable raster labels."
+}

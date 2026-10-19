@@ -1,0 +1,270 @@
+{
+  "schema_version": "1.1",
+  "client_date": "2026-10-19",
+  "captured_at_utc": "2026-10-19T04:42:34.285482+00:00",
+  "status": "LIVING_PUBLICATION_DRAFT_HUMAN_REVIEW_IN_PROGRESS",
+  "release_id": "public-corpus-600-english-2026-10-16-v2-PROPOSED",
+  "release_manifest_sha256": "64ddf1ff160eb817a965f88030dbdd68b4651e1557c5f530f2cdf2898092a14f",
+  "selection_sha256": "750dc71e20fdc528e4ea4ca5c309a5bb103aaa89e91fbedf03f1900c2420ce49",
+  "corpus": {
+    "repositories": 600,
+    "sampling_counts": {
+      "commerce": 60,
+      "education": 60,
+      "finance": 60,
+      "healthcare": 60,
+      "science": 60,
+      "ai": 60,
+      "cloud": 60,
+      "data": 60,
+      "developer": 60,
+      "security": 60
+    },
+    "readme_snapshots": 600,
+    "supporting_files": 1223,
+    "registry_by_kind": {
+      "DOMAIN": 10,
+      "PROJECT": 64,
+      "TOPIC": 166,
+      "TAG": 97
+    },
+    "split_actual": {
+      "test_reserved": 300,
+      "development": 180,
+      "validation": 120
+    },
+    "manifest_checks": {
+      "assembly": "PASS",
+      "read_scope": "PASS",
+      "eligibility": "PASS",
+      "v1_preservation": "PASS",
+      "local_links": "PASS",
+      "paid_api_calls": 0
+    },
+    "historical_release_report": {
+      "sampling_domains": 10,
+      "per_domain": 60,
+      "readme_snapshots": 600,
+      "supporting_files": 1223,
+      "source_bytes": 18436109,
+      "retained_original": 489,
+      "replacements": 111,
+      "complete_readme_semantic_reads": 88,
+      "targeted_partial_readme_reads": 512,
+      "curation_peer_audits": 120,
+      "supported_project_repositories": 308
+    }
+  },
+  "frozen_pilot": {
+    "repositories": 30,
+    "independent_passes": 2,
+    "annotations": 60,
+    "review_bands": {
+      "RED": 16,
+      "AMBER": 12,
+      "GREEN": 2
+    },
+    "label_set_agreement_repositories": 5,
+    "human_queue": {
+      "RANDOM_FILL": 8,
+      "RANDOM_AGREEMENT": 2,
+      "RISK_SELECTED": 10
+    },
+    "human_confirmed": 0,
+    "provenance": {
+      "mode": "CODEX_AGENTS_OFFLINE",
+      "external_api_calls": 0,
+      "incremental_api_cost_usd": 0,
+      "agent_allowance": "unmeasured",
+      "evidence_validation": "SOURCE_BYTES_HASHES_IDS_QUOTES_COORDINATES_PASS",
+      "semantic_validation": "INDEPENDENT_AGENT_PROPOSALS_NOT_HUMAN_GOLD",
+      "existing_budget_ledger": "UNTOUCHED"
+    },
+    "positive_decisions_by_kind": {
+      "a": {
+        "TOPIC": 77,
+        "TAG": 59,
+        "PROJECT": 17
+      },
+      "b": {
+        "TOPIC": 100,
+        "TAG": 70,
+        "PROJECT": 17
+      }
+    },
+    "shared_positive_pairs": 148,
+    "a_only_pairs": 5,
+    "b_only_pairs": 39,
+    "exact_set_agreement_by_kind": {
+      "PROJECT": 28,
+      "TOPIC": 10,
+      "TAG": 19
+    },
+    "agreement_details_by_kind": {
+      "PROJECT": {
+        "both_empty": 12,
+        "exact_nonempty": 16,
+        "shared_positive_pairs": 16,
+        "union_positive_pairs": 18
+      },
+      "TOPIC": {
+        "both_empty": 0,
+        "exact_nonempty": 10,
+        "shared_positive_pairs": 74,
+        "union_positive_pairs": 103
+      },
+      "TAG": {
+        "both_empty": 1,
+        "exact_nonempty": 18,
+        "shared_positive_pairs": 58,
+        "union_positive_pairs": 71
+      }
+    },
+    "reading_channels": {
+      "a": {
+        "supplied": 126,
+        "complete": 109
+      },
+      "b": {
+        "supplied": 126,
+        "complete": 126
+      }
+    },
+    "supplied_scope_by_repository": {
+      "a": {
+        "PARTIAL": 16,
+        "COMPLETE_WITHIN_SAVED_SCOPE": 14
+      },
+      "b": {
+        "COMPLETE_WITHIN_SAVED_SCOPE": 30
+      }
+    },
+    "source_channels_by_role": {
+      "GITHUB_METADATA": 30,
+      "README": 30,
+      "SUPPORTING": 66
+    },
+    "source_channel_bytes": 810821,
+    "sampling_counts": {
+      "ai": 3,
+      "cloud": 3,
+      "commerce": 3,
+      "data": 3,
+      "developer": 3,
+      "education": 3,
+      "finance": 3,
+      "healthcare": 3,
+      "science": 3,
+      "security": 3
+    },
+    "limits": "Agreement is not accuracy; frozen human_confirmed is historical, not live progress."
+  },
+  "live_human_review": {
+    "saved_records": 30,
+    "statuses": {
+      "HUMAN_CONFIRMED": 30
+    },
+    "human_confirmed": 30,
+    "pilot_human_confirmed": 6,
+    "initial_queue_human_confirmed": 4,
+    "human_confirmed_with_pilot_binding": 0,
+    "incomplete_drafts": 1,
+    "scope": "Aggregate current owner-scoped records for this release; record count is not a deduplicated multi-reviewer consensus gold count.",
+    "privacy": "Counts only; no actors, identities or review text exported."
+  },
+  "reported_software_validation": {
+    "source": "docs/validation/ground-truth-agent-inputs-2026-10-18.md",
+    "client_date": "2026-10-18",
+    "backend_checks_passed": 57,
+    "isolated_ground_truth_suite_checks_passed": 12,
+    "protected_artifacts_unchanged": 548,
+    "ground_truth_test_ports": [
+      3015,
+      8015
+    ],
+    "scope": "Dated reported run, not rerun by this statistics updater; suite includes a deterministic palette test as well as browser journeys. These checks are not human-label accuracy.",
+    "counts_not_cumulative": true
+  },
+  "evidence_files": [
+    {
+      "path": "docs/validation/corpus-600-v2-review-2026-10-17.md",
+      "sha256": "86cfa4c5c5f07a39429b8a15e65e0273adea95a93ab80c19593e4823a2e1a3f1",
+      "publicly_versioned": true
+    },
+    {
+      "path": "docs/validation/agent-annotation-pilot-2026-10-17.md",
+      "sha256": "413d4c05c16c416a1e7684cb2cbabb66acabae8e63c35e90f1095b66bdf14ed6",
+      "publicly_versioned": true
+    },
+    {
+      "path": "ai-system-design/evaluation/annotation-pilot/README.md",
+      "sha256": "de8d8b851870d6486584c8f55fb3756b1ac0358aafe9a94d4c85633e818cd741",
+      "publicly_versioned": true
+    },
+    {
+      "path": "docs/planning/corpus-review-workflow-api.md",
+      "sha256": "c714df16aa29c065abdd7ddd16ece75fd18f12436f6c8b3cb163c26aa9135e75",
+      "publicly_versioned": true
+    },
+    {
+      "path": "docs/validation/ground-truth-agent-inputs-2026-10-18.md",
+      "sha256": "387b7163a38dd5910c19e45c015545fa148688b5d98e58a0392f41adab242542",
+      "publicly_versioned": true
+    },
+    {
+      "path": "docs/validation/session-sync-recovery-2026-10-18.md",
+      "sha256": "6e1c2b575c1a82fe7bbdf521cd5aec3ce3bb8a706ea85d4546b8463413af3273",
+      "publicly_versioned": true
+    },
+    {
+      "path": "docs/validation/live-workspace-redesign-2026-10-17.md",
+      "sha256": "b76b5cf5ae2ea21e384d6deb40827c246fd7b48ddba0af1adb1a17f832cbae80",
+      "publicly_versioned": true
+    },
+    {
+      "path": "docs/validation/private/corpus-600-v2/release/manifest.local.json",
+      "sha256": "64ddf1ff160eb817a965f88030dbdd68b4651e1557c5f530f2cdf2898092a14f",
+      "publicly_versioned": false
+    },
+    {
+      "path": "docs/validation/private/corpus-600-v2/release/registry.proposed.json",
+      "sha256": "1d010b62f7212b09dafd7bea5ae683db4e7e41e22ffc35d60100d939e8833ce3",
+      "publicly_versioned": false
+    },
+    {
+      "path": "docs/validation/private/corpus-600-v2/release/inventory.jsonl",
+      "sha256": "42a871b725a16cb47374a41cb3ae64236a6843d43d81e4c278c8dcc5b68371ce",
+      "publicly_versioned": false
+    },
+    {
+      "path": "docs/validation/private/corpus-600-v2/release/splits.provisional.json",
+      "sha256": "65398df995ddc0e7163ef53c5b5f9619953d68eceea860b02fcae17a446d33a0",
+      "publicly_versioned": false
+    },
+    {
+      "path": "docs/validation/private/corpus-600-v2/annotation-pilot/selection.json",
+      "sha256": "750dc71e20fdc528e4ea4ca5c309a5bb103aaa89e91fbedf03f1900c2420ce49",
+      "publicly_versioned": false
+    },
+    {
+      "path": "docs/validation/private/corpus-600-v2/annotation-pilot/review.json",
+      "sha256": "da49395e8c45d888d68099778d60a2996b463ae687022325956a16bd1ba2b4c2",
+      "publicly_versioned": false
+    },
+    {
+      "path": "docs/validation/private/corpus-600-v2/annotation-pilot/comparison-report.json",
+      "sha256": "217698e8006f10272ae2b94aef1a8813b8d7c4b765fd6657f80311ece221362c",
+      "publicly_versioned": false
+    },
+    {
+      "path": "docs/validation/private/corpus-600-v2/annotation-pilot/human-review-queue.json",
+      "sha256": "f769d9ef7f5dfd7bf96f62c716643ea41329f56e55c7bc099f9051bebb5e97d9",
+      "publicly_versioned": false
+    },
+    {
+      "path": "docs/validation/private/corpus-600-v2/annotation-pilot/manifest.json",
+      "sha256": "a86c33a214186098f5a870af2391a4851410ef4992c4024c3665003b93b9ddff",
+      "publicly_versioned": false
+    }
+  ]
+}

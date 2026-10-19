@@ -1,0 +1,1467 @@
+[
+  {
+    "id": "take-01",
+    "parts": [
+      {
+        "beat": "01-purpose-01",
+        "text": "Section one."
+      },
+      {
+        "beat": "01-purpose-01",
+        "text": "The problem and the product."
+      },
+      {
+        "beat": "01-purpose-01",
+        "text": "GitHub Manager helps you discover, understand, and organize repositories."
+      },
+      {
+        "beat": "01-purpose-01",
+        "text": "The purpose is to turn a scattered collection into a workspace whose relationships you can inspect and change."
+      },
+      {
+        "beat": "01-purpose-02",
+        "text": "Imagine starting an API project."
+      },
+      {
+        "beat": "01-purpose-02",
+        "text": "You have your own services, shared repositories, and libraries starred for later."
+      },
+      {
+        "beat": "01-purpose-02",
+        "text": "Names and programming languages help you search."
+      },
+      {
+        "beat": "01-purpose-02",
+        "text": "They do not explain which pieces support the same initiative."
+      },
+      {
+        "beat": "01-purpose-02",
+        "text": "Two Python repositories may serve entirely different purposes."
+      },
+      {
+        "beat": "01-purpose-03",
+        "text": "GitHub remains the source of repository facts: identity, links, visibility, and available metadata."
+      },
+      {
+        "beat": "01-purpose-03",
+        "text": "The application builds selected evidence locally."
+      },
+      {
+        "beat": "01-purpose-03",
+        "text": "AI proposes an organization, and the user reviews it."
+      },
+      {
+        "beat": "01-purpose-03",
+        "text": "This separation matters because a convenient suggestion must not quietly replace a fact or a deliberate decision."
+      },
+      {
+        "beat": "01-purpose-04",
+        "text": "We will follow Orion, an authored synthetic patient-intake application."
+      },
+      {
+        "beat": "01-purpose-04",
+        "text": "Its displayed classification comes from a saved real API test."
+      },
+      {
+        "beat": "01-purpose-04",
+        "text": "We will also use a public FastAPI library as a contrast."
+      },
+      {
+        "beat": "01-purpose-04",
+        "text": "These examples explain the mechanics; they are not a new account recording or a new benchmark."
+      },
+      {
+        "beat": "02-vocabulary-01",
+        "text": "Section two."
+      },
+      {
+        "beat": "02-vocabulary-01",
+        "text": "Organization vocabulary."
+      },
+      {
+        "beat": "02-vocabulary-01",
+        "text": "Before classification, we need to define what a relationship means."
+      },
+      {
+        "beat": "02-vocabulary-01",
+        "text": "The purpose is to keep an initiative, a capability, and a technology from becoming one confusing pile of labels."
+      },
+      {
+        "beat": "02-vocabulary-02",
+        "text": "A Project answers which product or initiative a repository supports."
+      },
+      {
+        "beat": "02-vocabulary-02",
+        "text": "A Domain groups those Projects into a broader area."
+      },
+      {
+        "beat": "02-vocabulary-02",
+        "text": "A Topic describes a primary capability or subject."
+      },
+      {
+        "beat": "02-vocabulary-02",
+        "text": "A Tag describes technology or another useful characteristic."
+      },
+      {
+        "beat": "02-vocabulary-02",
+        "text": "For Orion, the examples are the clinical platform, Healthcare, Web APIs, and Python."
+      },
+      {
+        "beat": "02-vocabulary-03",
+        "text": "A repository may support more than one Project."
+      },
+      {
+        "beat": "02-vocabulary-03",
+        "text": "Its Domains derive through those Project memberships; the classifier does not assign Domains independently."
+      },
+      {
+        "beat": "02-vocabulary-03",
+        "text": "Topics and Tags remain useful when no Project applies."
+      },
+      {
+        "beat": "02-vocabulary-03",
+        "text": "The application's Topics are separate from the native topics supplied by GitHub."
+      },
+      {
+        "beat": "02-vocabulary-04",
+        "text": "The Orion application uses FastAPI and Python."
+      },
+      {
+        "beat": "02-vocabulary-04",
+        "text": "The FastAPI library is itself a reusable framework."
+      },
+      {
+        "beat": "02-vocabulary-04",
+        "text": "Sharing those words does not make the library part of Orion."
+      },
+      {
+        "beat": "02-vocabulary-04",
+        "text": "Under the primary-label policy, incidental capabilities are omitted, and a library's own name is not automatically its dependency Tag."
+      },
+      {
+        "beat": "02-vocabulary-04",
+        "text": "Next, we decide what evidence can support that distinction."
+      },
+      {
+        "beat": "03-context-01",
+        "text": "Section three."
+      },
+      {
+        "beat": "03-context-01",
+        "text": "Context engineering."
+      },
+      {
+        "beat": "03-context-01",
+        "text": "Its purpose is to choose what information the model sees, what that information means, and which boundaries remain outside the model."
+      },
+      {
+        "beat": "03-context-01",
+        "text": "A longer prompt is not automatically a better decision."
+      },
+      {
+        "beat": "03-context-02",
+        "text": "We separate trusted source facts, untrusted repository prose, user-owned organization, and execution identity."
+      },
+      {
+        "beat": "03-context-02",
+        "text": "Canonical IDs, rejections, revisions, and evidence hashes constrain the operation."
+      },
+      {
+        "beat": "03-context-02",
+        "text": "The application does not send every stored record to the model."
+      },
+      {
+        "beat": "03-context-02",
+        "text": "For example, protected decisions filter candidates before prompting rather than becoming an entire conversation history."
+      },
+      {
+        "beat": "03-context-03",
+        "text": "Hosted input is restricted to verified public repositories and synthetic fixtures in this implementation."
+      },
+      {
+        "beat": "03-context-03",
+        "text": "Private or unknown visibility fails closed, including phrases derived from private text."
+      },
+      {
+        "beat": "03-context-03",
+        "text": "Local rules can still help organization."
+      },
+      {
+        "beat": "03-context-03",
+        "text": "Narrow cleaning patterns are hygiene, not a complete secret scanner or prompt-injection defense."
+      },
+      {
+        "beat": "03-context-03",
+        "text": "The model has no tools with which to act on README instructions."
+      },
+      {
+        "beat": "03-context-04",
+        "text": "The working runtime is local Next.js, FastAPI, and SQLite."
+      },
+      {
+        "beat": "03-context-04",
+        "text": "LangChain connects structured requests; it does not own the application's memory."
+      },
+      {
+        "beat": "03-context-04",
+        "text": "During development, user decisions outrank approved design, plans, and historical discussion."
+      },
+      {
+        "beat": "03-context-04",
+        "text": "Phase zero checked access; phase zero point five checked AI readiness; phase zero point nine delivered the local app."
+      },
+      {
+        "beat": "03-context-04",
+        "text": "Cloud runtime remains deferred."
+      },
+      {
+        "beat": "04-evidence-01",
+        "text": "Section four."
+      },
+      {
+        "beat": "04-evidence-01",
+        "text": "Evidence and chunking."
+      },
+      {
+        "beat": "04-evidence-01",
+        "text": "The purpose is to preserve the sentence that explains a repository, while excluding material that is unlikely to help organization."
+      },
+      {
+        "beat": "04-evidence-01",
+        "text": "We begin with a README, not an AI-generated summary."
+      }
+    ],
+    "text": "Section one. The problem and the product. GitHub Manager helps you discover, understand, and organize repositories. The purpose is to turn a scattered collection into a workspace whose relationships you can inspect and change. Imagine starting an API project. You have your own services, shared repositories, and libraries starred for later. Names and programming languages help you search. They do not explain which pieces support the same initiative. Two Python repositories may serve entirely different purposes. GitHub remains the source of repository facts: identity, links, visibility, and available metadata. The application builds selected evidence locally. AI proposes an organization, and the user reviews it. This separation matters because a convenient suggestion must not quietly replace a fact or a deliberate decision. We will follow Orion, an authored synthetic patient-intake application. Its displayed classification comes from a saved real API test. We will also use a public FastAPI library as a contrast. These examples explain the mechanics; they are not a new account recording or a new benchmark. Section two. Organization vocabulary. Before classification, we need to define what a relationship means. The purpose is to keep an initiative, a capability, and a technology from becoming one confusing pile of labels. A Project answers which product or initiative a repository supports. A Domain groups those Projects into a broader area. A Topic describes a primary capability or subject. A Tag describes technology or another useful characteristic. For Orion, the examples are the clinical platform, Healthcare, Web APIs, and Python. A repository may support more than one Project. Its Domains derive through those Project memberships; the classifier does not assign Domains independently. Topics and Tags remain useful when no Project applies. The application's Topics are separate from the native topics supplied by GitHub. The Orion application uses FastAPI and Python. The FastAPI library is itself a reusable framework. Sharing those words does not make the library part of Orion. Under the primary-label policy, incidental capabilities are omitted, and a library's own name is not automatically its dependency Tag. Next, we decide what evidence can support that distinction. Section three. Context engineering. Its purpose is to choose what information the model sees, what that information means, and which boundaries remain outside the model. A longer prompt is not automatically a better decision. We separate trusted source facts, untrusted repository prose, user-owned organization, and execution identity. Canonical IDs, rejections, revisions, and evidence hashes constrain the operation. The application does not send every stored record to the model. For example, protected decisions filter candidates before prompting rather than becoming an entire conversation history. Hosted input is restricted to verified public repositories and synthetic fixtures in this implementation. Private or unknown visibility fails closed, including phrases derived from private text. Local rules can still help organization. Narrow cleaning patterns are hygiene, not a complete secret scanner or prompt-injection defense. The model has no tools with which to act on README instructions. The working runtime is local Next.js, FastAPI, and SQLite. LangChain connects structured requests; it does not own the application's memory. During development, user decisions outrank approved design, plans, and historical discussion. Phase zero checked access; phase zero point five checked AI readiness; phase zero point nine delivered the local app. Cloud runtime remains deferred. Section four. Evidence and chunking. The purpose is to preserve the sentence that explains a repository, while excluding material that is unlikely to help organization. We begin with a README, not an AI-generated summary.",
+    "marker": "That completes this part of the explanation."
+  },
+  {
+    "id": "take-02",
+    "parts": [
+      {
+        "beat": "04-evidence-02",
+        "text": "The extractor parses Markdown blocks and applies heading-based selection."
+      },
+      {
+        "beat": "04-evidence-02",
+        "text": "Metadata becomes evidence zero; selected README text receives additional IDs."
+      },
+      {
+        "beat": "04-evidence-02",
+        "text": "For Orion, evidence one says: patient intake API for the Orion Clinical Platform."
+      },
+      {
+        "beat": "04-evidence-02",
+        "text": "Uses FastAPI and Python."
+      },
+      {
+        "beat": "04-evidence-02",
+        "text": "The language metadata is empty, so Python is supported by prose rather than an invented GitHub value."
+      },
+      {
+        "beat": "04-evidence-03",
+        "text": "The input byte ceiling limits the fetched document."
+      },
+      {
+        "beat": "04-evidence-03",
+        "text": "Selected blocks and total evidence have character bounds."
+      },
+      {
+        "beat": "04-evidence-03",
+        "text": "The compact classification profile then keeps metadata, up to two README records, and up to eight phrase strings."
+      },
+      {
+        "beat": "04-evidence-03",
+        "text": "Exact request tokens are counted later."
+      },
+      {
+        "beat": "04-evidence-03",
+        "text": "Hashes bind the selected content and configuration."
+      },
+      {
+        "beat": "04-evidence-03",
+        "text": "Offsets identify cleaned text, not original README line numbers."
+      },
+      {
+        "beat": "04-evidence-04",
+        "text": "Heading rules are inspectable and avoid a hosted summarization pass, but can cut sentences or crowd out better evidence."
+      },
+      {
+        "beat": "04-evidence-04",
+        "text": "Format noise, late negation, and multilingual headings need tests."
+      },
+      {
+        "beat": "04-evidence-04",
+        "text": "The app received a separately versioned cleanup wrapper; frozen benchmark profiles stayed unchanged."
+      },
+      {
+        "beat": "04-evidence-04",
+        "text": "Retrieval can see full selected evidence that compact generation omits, so both stages need their own checks."
+      },
+      {
+        "beat": "05-keywords-01",
+        "text": "Section five."
+      },
+      {
+        "beat": "05-keywords-01",
+        "text": "Local algorithms."
+      },
+      {
+        "beat": "05-keywords-01",
+        "text": "Their purpose is to expose compact signals before an expensive decision."
+      },
+      {
+        "beat": "05-keywords-01",
+        "text": "We use phrase extraction and corpus counts, but those numbers do not establish initiative membership or semantic understanding."
+      },
+      {
+        "beat": "05-keywords-02",
+        "text": "RAKE splits around stopwords and punctuation."
+      },
+      {
+        "beat": "05-keywords-02",
+        "text": "Word frequency and co-occurrence contribute to phrase scores."
+      },
+      {
+        "beat": "05-keywords-02",
+        "text": "Our configuration considers one to four words, retains up to twenty candidates, normalizes duplicates, and checks source spans."
+      },
+      {
+        "beat": "05-keywords-02",
+        "text": "In Orion, patient intake API and Orion clinical platform each score nine."
+      },
+      {
+        "beat": "05-keywords-02",
+        "text": "FastAPI and Python score one."
+      },
+      {
+        "beat": "05-keywords-02",
+        "text": "Those are weights, not probabilities."
+      },
+      {
+        "beat": "05-keywords-03",
+        "text": "YAKE was compared offline using local document features such as position, capitalization, and frequency."
+      },
+      {
+        "beat": "05-keywords-03",
+        "text": "It is not the production extractor."
+      },
+      {
+        "beat": "05-keywords-03",
+        "text": "Its measured runtime included repeated process startup, so the ratio is not an intrinsic speed comparison."
+      },
+      {
+        "beat": "05-keywords-03",
+        "text": "Corpus document frequency counts a term once per repository."
+      },
+      {
+        "beat": "05-keywords-03",
+        "text": "That pretest table is different from the concept-document IDF used in retrieval."
+      },
+      {
+        "beat": "05-keywords-03",
+        "text": "The installed YAKE artifact's licensing also remained an adoption concern."
+      },
+      {
+        "beat": "05-keywords-04",
+        "text": "A bag of phrases loses relationships, including the word not."
+      },
+      {
+        "beat": "05-keywords-04",
+        "text": "Purpose prose must survive."
+      },
+      {
+        "beat": "05-keywords-04",
+        "text": "In one historical FastAPI ablation, adding RAKE phrases used more input tokens without changing the unwanted secondary labels."
+      },
+      {
+        "beat": "05-keywords-04",
+        "text": "That single case proves neither that phrases always help nor that they are unnecessary."
+      },
+      {
+        "beat": "05-keywords-04",
+        "text": "The product also has no learned project-clustering engine or automatically learned rules."
+      },
+      {
+        "beat": "06-taxonomy-01",
+        "text": "Section six."
+      },
+      {
+        "beat": "06-taxonomy-01",
+        "text": "Taxonomy intelligence."
+      },
+      {
+        "beat": "06-taxonomy-01",
+        "text": "The purpose is to propose a vocabulary for a collection."
+      },
+      {
+        "beat": "06-taxonomy-01",
+        "text": "This is different from assigning labels to one repository."
+      },
+      {
+        "beat": "06-taxonomy-01",
+        "text": "Discovery can suggest new concepts; classification must use concepts already approved."
+      },
+      {
+        "beat": "06-taxonomy-02",
+        "text": "The saved discovery request contained thirty compact profiles: ten public samples and twenty authored fixtures."
+      },
+      {
+        "beat": "06-taxonomy-02",
+        "text": "Orion's API, UI, booking, and audit records supplied related purpose evidence."
+      },
+      {
+        "beat": "06-taxonomy-02",
+        "text": "The model proposed Orion Clinical Platform with a Clinical Operations parent and supporting repository IDs."
+      },
+      {
+        "beat": "06-taxonomy-02",
+        "text": "Its twenty proposals were a draft, not a published organization."
+      },
+      {
+        "beat": "06-taxonomy-03",
+        "text": "The app samples owner and language buckets using a deterministic round-robin approach."
+      },
+      {
+        "beat": "06-taxonomy-03",
+        "text": "Collection packing uses a conservative byte allowance before exact token counting, shortening records and pruning phrases where necessary."
+      },
+      {
+        "beat": "06-taxonomy-03",
+        "text": "This can miss structure outside the cohort."
+      },
+      {
+        "beat": "06-taxonomy-03",
+        "text": "The saved direct collection request used its original packing path, so its token counts cannot be attributed to a later optimization."
+      },
+      {
+        "beat": "06-taxonomy-04",
+        "text": "Publication normalizes names and aliases, including Unicode handling, and checks reservations."
+      },
+      {
+        "beat": "06-taxonomy-04",
+        "text": "A visible name can conflict with an alias or archived concept."
+      },
+      {
+        "beat": "06-taxonomy-04",
+        "text": "The app exposes the conflicting record and offers opt-in reuse, renaming, removal, or exclusion."
+      },
+      {
+        "beat": "06-taxonomy-04",
+        "text": "These deterministic checks protect canonical consistency."
+      }
+    ],
+    "text": "The extractor parses Markdown blocks and applies heading-based selection. Metadata becomes evidence zero; selected README text receives additional IDs. For Orion, evidence one says: patient intake API for the Orion Clinical Platform. Uses FastAPI and Python. The language metadata is empty, so Python is supported by prose rather than an invented GitHub value. The input byte ceiling limits the fetched document. Selected blocks and total evidence have character bounds. The compact classification profile then keeps metadata, up to two README records, and up to eight phrase strings. Exact request tokens are counted later. Hashes bind the selected content and configuration. Offsets identify cleaned text, not original README line numbers. Heading rules are inspectable and avoid a hosted summarization pass, but can cut sentences or crowd out better evidence. Format noise, late negation, and multilingual headings need tests. The app received a separately versioned cleanup wrapper; frozen benchmark profiles stayed unchanged. Retrieval can see full selected evidence that compact generation omits, so both stages need their own checks. Section five. Local algorithms. Their purpose is to expose compact signals before an expensive decision. We use phrase extraction and corpus counts, but those numbers do not establish initiative membership or semantic understanding. RAKE splits around stopwords and punctuation. Word frequency and co-occurrence contribute to phrase scores. Our configuration considers one to four words, retains up to twenty candidates, normalizes duplicates, and checks source spans. In Orion, patient intake API and Orion clinical platform each score nine. FastAPI and Python score one. Those are weights, not probabilities. YAKE was compared offline using local document features such as position, capitalization, and frequency. It is not the production extractor. Its measured runtime included repeated process startup, so the ratio is not an intrinsic speed comparison. Corpus document frequency counts a term once per repository. That pretest table is different from the concept-document IDF used in retrieval. The installed YAKE artifact's licensing also remained an adoption concern. A bag of phrases loses relationships, including the word not. Purpose prose must survive. In one historical FastAPI ablation, adding RAKE phrases used more input tokens without changing the unwanted secondary labels. That single case proves neither that phrases always help nor that they are unnecessary. The product also has no learned project-clustering engine or automatically learned rules. Section six. Taxonomy intelligence. The purpose is to propose a vocabulary for a collection. This is different from assigning labels to one repository. Discovery can suggest new concepts; classification must use concepts already approved. The saved discovery request contained thirty compact profiles: ten public samples and twenty authored fixtures. Orion's API, UI, booking, and audit records supplied related purpose evidence. The model proposed Orion Clinical Platform with a Clinical Operations parent and supporting repository IDs. Its twenty proposals were a draft, not a published organization. The app samples owner and language buckets using a deterministic round-robin approach. Collection packing uses a conservative byte allowance before exact token counting, shortening records and pruning phrases where necessary. This can miss structure outside the cohort. The saved direct collection request used its original packing path, so its token counts cannot be attributed to a later optimization. Publication normalizes names and aliases, including Unicode handling, and checks reservations. A visible name can conflict with an alias or archived concept. The app exposes the conflicting record and offers opt-in reuse, renaming, removal, or exclusion. These deterministic checks protect canonical consistency.",
+    "marker": "That completes this part of the explanation."
+  },
+  {
+    "id": "take-03",
+    "parts": [
+      {
+        "beat": "06-taxonomy-04",
+        "text": "Similar language is not permission for an automatic semantic merge."
+      },
+      {
+        "beat": "07-retrieval-01",
+        "text": "Section seven."
+      },
+      {
+        "beat": "07-retrieval-01",
+        "text": "Retrieval."
+      },
+      {
+        "beat": "07-retrieval-01",
+        "text": "Its purpose is to find plausible concepts from the approved vocabulary."
+      },
+      {
+        "beat": "07-retrieval-01",
+        "text": "The repository evidence is the query; concept names, definitions, and aliases are the searchable documents."
+      },
+      {
+        "beat": "07-retrieval-01",
+        "text": "A shortlist is not a decision."
+      },
+      {
+        "beat": "07-retrieval-02",
+        "text": "The method called TF-IDF in the code is actually binary-IDF cosine."
+      },
+      {
+        "beat": "07-retrieval-02",
+        "text": "It weights less common registry terms and normalizes overlap, while repeated terms do not increase frequency."
+      },
+      {
+        "beat": "07-retrieval-02",
+        "text": "A name or alias whose tokens all appear adds three once."
+      },
+      {
+        "beat": "07-retrieval-02",
+        "text": "Token order and positive assertion are not required."
+      },
+      {
+        "beat": "07-retrieval-02",
+        "text": "Positive candidates are ranked by kind, with stable-ID ties and bounded limits."
+      },
+      {
+        "beat": "07-retrieval-03",
+        "text": "Orion retrieves its own Project, Web APIs, FastAPI, and Python."
+      },
+      {
+        "beat": "07-retrieval-03",
+        "text": "Forge also surfaces through platform, and Package Management through Python."
+      },
+      {
+        "beat": "07-retrieval-03",
+        "text": "The strong Orion score includes the alias boost."
+      },
+      {
+        "beat": "07-retrieval-03",
+        "text": "These are ranking scores, not membership probabilities."
+      },
+      {
+        "beat": "07-retrieval-03",
+        "text": "The next stage must distinguish actual purpose evidence from distracting shared words."
+      },
+      {
+        "beat": "07-retrieval-04",
+        "text": "BM25 was compared offline with the same alias boost and candidate caps."
+      },
+      {
+        "beat": "07-retrieval-04",
+        "text": "It adds saturated term frequency and document-length normalization."
+      },
+      {
+        "beat": "07-retrieval-04",
+        "text": "On the small reused comparison, both lexical methods covered the expected evaluation labels; alias-only missed four Topics."
+      },
+      {
+        "beat": "07-retrieval-04",
+        "text": "That supports feasibility, not sparse superiority over dense search."
+      },
+      {
+        "beat": "07-retrieval-04",
+        "text": "There is no embedding query, neural reranker, or autonomous retrieval agent in the current product."
+      },
+      {
+        "beat": "08-augmentation-01",
+        "text": "Section eight."
+      },
+      {
+        "beat": "08-augmentation-01",
+        "text": "Augmentation."
+      },
+      {
+        "beat": "08-augmentation-01",
+        "text": "The purpose is to assemble a decision-ready request from the evidence and retrieved possibilities."
+      },
+      {
+        "beat": "08-augmentation-01",
+        "text": "Retrieval supplies options."
+      },
+      {
+        "beat": "08-augmentation-01",
+        "text": "Augmentation explains those options and the rules for selecting them."
+      },
+      {
+        "beat": "08-augmentation-02",
+        "text": "For Orion, the payload includes repository identity, public or synthetic source status, revision, evidence hash, selected evidence, phrase strings, and candidate records."
+      },
+      {
+        "beat": "08-augmentation-02",
+        "text": "Evidence one preserves the patient-intake sentence."
+      },
+      {
+        "beat": "08-augmentation-02",
+        "text": "Candidate records contain canonical ID, kind, name, and description."
+      },
+      {
+        "beat": "08-augmentation-02",
+        "text": "Aliases helped retrieval but are not serialized into those candidate objects."
+      },
+      {
+        "beat": "08-augmentation-02",
+        "text": "Expected evaluation labels are never supplied."
+      },
+      {
+        "beat": "08-augmentation-03",
+        "text": "The system instructions require supported approved IDs, primary-purpose Topics, and primary implementation Tags."
+      },
+      {
+        "beat": "08-augmentation-03",
+        "text": "Shared frameworks do not prove initiative membership."
+      },
+      {
+        "beat": "08-augmentation-03",
+        "text": "Negation matters; multiple Projects are allowed."
+      },
+      {
+        "beat": "08-augmentation-03",
+        "text": "Unsupported input can produce no match or a request for more context."
+      },
+      {
+        "beat": "08-augmentation-03",
+        "text": "User decisions remain application constraints rather than an invitation for the model to overrule them."
+      },
+      {
+        "beat": "08-augmentation-04",
+        "text": "A strict response schema describes assignments, evidence references, reasons, status, and summary."
+      },
+      {
+        "beat": "08-augmentation-04",
+        "text": "LangChain binds that schema to the hosted request."
+      },
+      {
+        "beat": "08-augmentation-04",
+        "text": "The harness inspects the assembled messages and schema before counting input tokens."
+      },
+      {
+        "beat": "08-augmentation-04",
+        "text": "This is retrieval-augmented structured classification, with durable application memory."
+      },
+      {
+        "beat": "08-augmentation-04",
+        "text": "It is not a conversational document-question-answering agent, and adaptive budgets do not turn it into Adaptive RAG."
+      },
+      {
+        "beat": "09-generation-01",
+        "text": "Section nine."
+      },
+      {
+        "beat": "09-generation-01",
+        "text": "Generation and validation."
+      },
+      {
+        "beat": "09-generation-01",
+        "text": "The purpose is to turn the assembled context into a bounded proposal, then check it before it affects organization."
+      },
+      {
+        "beat": "09-generation-01",
+        "text": "Valid JSON is only the beginning of that check."
+      },
+      {
+        "beat": "09-generation-02",
+        "text": "In the preserved Orion call, the model selected Orion Clinical Platform, Web APIs, FastAPI, and Python."
+      },
+      {
+        "beat": "09-generation-02",
+        "text": "All four assignments cited evidence one."
+      },
+      {
+        "beat": "09-generation-02",
+        "text": "Forge and Package Management were omitted."
+      },
+      {
+        "beat": "09-generation-02",
+        "text": "The request counted seven hundred sixty input tokens and returned one hundred ninety-five output tokens."
+      },
+      {
+        "beat": "09-generation-02",
+        "text": "This visible result does not expose the model's private reasoning process."
+      },
+      {
+        "beat": "09-generation-03",
+        "text": "Validation checks active IDs, kinds, workspace ownership, allowed candidates, duplicates, field limits, status, and evidence references."
+      },
+      {
+        "beat": "09-generation-03",
+        "text": "Dispatch and commit also check access, profile hashes, revisions, and user decisions."
+      },
+      {
+        "beat": "09-generation-03",
+        "text": "Suggestions remain proposals until accepted."
+      },
+      {
+        "beat": "09-generation-03",
+        "text": "A real evidence ID may still cite irrelevant prose, and the model's confidence is not a calibrated accuracy probability."
+      }
+    ],
+    "text": "Similar language is not permission for an automatic semantic merge. Section seven. Retrieval. Its purpose is to find plausible concepts from the approved vocabulary. The repository evidence is the query; concept names, definitions, and aliases are the searchable documents. A shortlist is not a decision. The method called TF-IDF in the code is actually binary-IDF cosine. It weights less common registry terms and normalizes overlap, while repeated terms do not increase frequency. A name or alias whose tokens all appear adds three once. Token order and positive assertion are not required. Positive candidates are ranked by kind, with stable-ID ties and bounded limits. Orion retrieves its own Project, Web APIs, FastAPI, and Python. Forge also surfaces through platform, and Package Management through Python. The strong Orion score includes the alias boost. These are ranking scores, not membership probabilities. The next stage must distinguish actual purpose evidence from distracting shared words. BM25 was compared offline with the same alias boost and candidate caps. It adds saturated term frequency and document-length normalization. On the small reused comparison, both lexical methods covered the expected evaluation labels; alias-only missed four Topics. That supports feasibility, not sparse superiority over dense search. There is no embedding query, neural reranker, or autonomous retrieval agent in the current product. Section eight. Augmentation. The purpose is to assemble a decision-ready request from the evidence and retrieved possibilities. Retrieval supplies options. Augmentation explains those options and the rules for selecting them. For Orion, the payload includes repository identity, public or synthetic source status, revision, evidence hash, selected evidence, phrase strings, and candidate records. Evidence one preserves the patient-intake sentence. Candidate records contain canonical ID, kind, name, and description. Aliases helped retrieval but are not serialized into those candidate objects. Expected evaluation labels are never supplied. The system instructions require supported approved IDs, primary-purpose Topics, and primary implementation Tags. Shared frameworks do not prove initiative membership. Negation matters; multiple Projects are allowed. Unsupported input can produce no match or a request for more context. User decisions remain application constraints rather than an invitation for the model to overrule them. A strict response schema describes assignments, evidence references, reasons, status, and summary. LangChain binds that schema to the hosted request. The harness inspects the assembled messages and schema before counting input tokens. This is retrieval-augmented structured classification, with durable application memory. It is not a conversational document-question-answering agent, and adaptive budgets do not turn it into Adaptive RAG. Section nine. Generation and validation. The purpose is to turn the assembled context into a bounded proposal, then check it before it affects organization. Valid JSON is only the beginning of that check. In the preserved Orion call, the model selected Orion Clinical Platform, Web APIs, FastAPI, and Python. All four assignments cited evidence one. Forge and Package Management were omitted. The request counted seven hundred sixty input tokens and returned one hundred ninety-five output tokens. This visible result does not expose the model's private reasoning process. Validation checks active IDs, kinds, workspace ownership, allowed candidates, duplicates, field limits, status, and evidence references. Dispatch and commit also check access, profile hashes, revisions, and user decisions. Suggestions remain proposals until accepted. A real evidence ID may still cite irrelevant prose, and the model's confidence is not a calibrated accuracy probability.",
+    "marker": "That completes this part of the explanation."
+  },
+  {
+    "id": "take-04",
+    "parts": [
+      {
+        "beat": "09-generation-04",
+        "text": "Luna is the task default supported by the limited classification tests; Sol supplied the taxonomy draft."
+      },
+      {
+        "beat": "09-generation-04",
+        "text": "A comprehensive model-winner study was not completed."
+      },
+      {
+        "beat": "09-generation-04",
+        "text": "The audit also found evidence-ID validation broader than the transmitted compact set, and a taxonomy prompt limit of twenty versus a validator limit of fifty."
+      },
+      {
+        "beat": "09-generation-04",
+        "text": "Those are improvement tasks, not shipped guarantees."
+      },
+      {
+        "beat": "10-counterexamples-01",
+        "text": "Section ten."
+      },
+      {
+        "beat": "10-counterexamples-01",
+        "text": "Counterexamples and failure cases."
+      },
+      {
+        "beat": "10-counterexamples-01",
+        "text": "Their purpose is to show where an apparently sensible pipeline can mislead us."
+      },
+      {
+        "beat": "10-counterexamples-01",
+        "text": "We keep the confusing evidence visible rather than explaining only the clean success case."
+      },
+      {
+        "beat": "10-counterexamples-02",
+        "text": "One fixture explicitly says it is not part of Helios or Orion."
+      },
+      {
+        "beat": "10-counterexamples-02",
+        "text": "Lexical names still retrieve both Projects, but the saved classifier selects HTTP Clients and Python with neither Project."
+      },
+      {
+        "beat": "10-counterexamples-02",
+        "text": "Another audit fixture genuinely supports two initiatives."
+      },
+      {
+        "beat": "10-counterexamples-02",
+        "text": "The task must allow both."
+      },
+      {
+        "beat": "10-counterexamples-02",
+        "text": "A forced single winner would change the meaning of organization."
+      },
+      {
+        "beat": "10-counterexamples-03",
+        "text": "The full FastAPI profile contains its purpose statement, but an uppercase title marker let documentation links occupy compact slots."
+      },
+      {
+        "beat": "10-counterexamples-03",
+        "text": "Retrieval could see evidence the generator did not receive."
+      },
+      {
+        "beat": "10-counterexamples-03",
+        "text": "Metadata still supported the saved answer, Web APIs and Python."
+      },
+      {
+        "beat": "10-counterexamples-03",
+        "text": "An earlier answer added unwanted secondary labels."
+      },
+      {
+        "beat": "10-counterexamples-03",
+        "text": "Primary-only policy clarified the task, but reused cases cannot establish an independent causal improvement."
+      },
+      {
+        "beat": "10-counterexamples-04",
+        "text": "Empty, fork-only, and metadata-only cases need no-match or uncertainty paths."
+      },
+      {
+        "beat": "10-counterexamples-04",
+        "text": "Installation noise can introduce unrelated names."
+      },
+      {
+        "beat": "10-counterexamples-04",
+        "text": "English extraction can miss other languages."
+      },
+      {
+        "beat": "10-counterexamples-04",
+        "text": "Narrow cleaning can miss malicious instructions or secret-like text."
+      },
+      {
+        "beat": "10-counterexamples-04",
+        "text": "These fixtures explore boundaries; they are not a comprehensive security benchmark."
+      },
+      {
+        "beat": "10-counterexamples-04",
+        "text": "Next, we preserve the decisions and uncertainty that follow from these cases."
+      },
+      {
+        "beat": "11-memory-01",
+        "text": "Section eleven."
+      },
+      {
+        "beat": "11-memory-01",
+        "text": "Memory and user authority."
+      },
+      {
+        "beat": "11-memory-01",
+        "text": "The purpose is to preserve useful state across changes."
+      },
+      {
+        "beat": "11-memory-01",
+        "text": "Here, memory means application records, not a model remembering a conversation or a LangChain conversation-memory component."
+      },
+      {
+        "beat": "11-memory-02",
+        "text": "Relationships, completed analysis, freshness, and review status answer different questions."
+      },
+      {
+        "beat": "11-memory-02",
+        "text": "A successful no-match is completed analysis."
+      },
+      {
+        "beat": "11-memory-02",
+        "text": "Removing Orion's Project can leave its Topic and Tags useful, while the receipt remains."
+      },
+      {
+        "beat": "11-memory-02",
+        "text": "Provider replay cache and optional run history are different records."
+      },
+      {
+        "beat": "11-memory-02",
+        "text": "Deleting one display or membership does not silently make the repository eligible for another paid decision."
+      },
+      {
+        "beat": "11-memory-03",
+        "text": "Accepting a proposal creates a user decision."
+      },
+      {
+        "beat": "11-memory-03",
+        "text": "Rejecting or removing a relationship leaves a protected tombstone."
+      },
+      {
+        "beat": "11-memory-03",
+        "text": "Approved rules can supply deterministic mappings, subject to those rejections."
+      },
+      {
+        "beat": "11-memory-03",
+        "text": "Ordinary organization cannot recreate a rejected edge behind the user's back."
+      },
+      {
+        "beat": "11-memory-03",
+        "text": "These protections preserve authority; they do not prove every accepted relationship was independently verified truth."
+      },
+      {
+        "beat": "11-memory-04",
+        "text": "Local reconciliation applies approved rules, compatible stored assignments, or contiguous name and alias matches for review."
+      },
+      {
+        "beat": "11-memory-04",
+        "text": "This match is stricter than retrieval's unordered alias tokens."
+      },
+      {
+        "beat": "11-memory-04",
+        "text": "Local suggestions have visible provenance and zero model confidence."
+      },
+      {
+        "beat": "11-memory-04",
+        "text": "They do not manufacture AI completion."
+      },
+      {
+        "beat": "11-memory-04",
+        "text": "Fresh analysis remains available with an explicit reason and reviewed budget when the user wants a new judgment."
+      },
+      {
+        "beat": "12-loops-01",
+        "text": "Section twelve."
+      },
+      {
+        "beat": "12-loops-01",
+        "text": "Loop engineering."
+      },
+      {
+        "beat": "12-loops-01",
+        "text": "Its purpose is to control transitions around inference."
+      },
+      {
+        "beat": "12-loops-01",
+        "text": "We need to know when to run, when to skip, and when a result has become unsafe to apply."
+      },
+      {
+        "beat": "12-loops-01",
+        "text": "This is application control, not an autonomous model thought-and-action loop."
+      },
+      {
+        "beat": "12-loops-02",
+        "text": "Preview and worker check admission before constructing the provider or making a count request."
+      },
+      {
+        "beat": "12-loops-02",
+        "text": "Transactions claim running attempts so concurrent starts do not independently process the same operation."
+      },
+      {
+        "beat": "12-loops-02",
+        "text": "Previously attempted or uncertain work requires deliberate review, not a silent retry."
+      },
+      {
+        "beat": "12-loops-02",
+        "text": "Explicit re-analysis can bypass memoization while retaining privacy, schema, and spending checks."
+      },
+      {
+        "beat": "12-loops-02",
+        "text": "Classification cohorts use new-analysis, Project, and recency ordering, not a learned ranker."
+      }
+    ],
+    "text": "Luna is the task default supported by the limited classification tests; Sol supplied the taxonomy draft. A comprehensive model-winner study was not completed. The audit also found evidence-ID validation broader than the transmitted compact set, and a taxonomy prompt limit of twenty versus a validator limit of fifty. Those are improvement tasks, not shipped guarantees. Section ten. Counterexamples and failure cases. Their purpose is to show where an apparently sensible pipeline can mislead us. We keep the confusing evidence visible rather than explaining only the clean success case. One fixture explicitly says it is not part of Helios or Orion. Lexical names still retrieve both Projects, but the saved classifier selects HTTP Clients and Python with neither Project. Another audit fixture genuinely supports two initiatives. The task must allow both. A forced single winner would change the meaning of organization. The full FastAPI profile contains its purpose statement, but an uppercase title marker let documentation links occupy compact slots. Retrieval could see evidence the generator did not receive. Metadata still supported the saved answer, Web APIs and Python. An earlier answer added unwanted secondary labels. Primary-only policy clarified the task, but reused cases cannot establish an independent causal improvement. Empty, fork-only, and metadata-only cases need no-match or uncertainty paths. Installation noise can introduce unrelated names. English extraction can miss other languages. Narrow cleaning can miss malicious instructions or secret-like text. These fixtures explore boundaries; they are not a comprehensive security benchmark. Next, we preserve the decisions and uncertainty that follow from these cases. Section eleven. Memory and user authority. The purpose is to preserve useful state across changes. Here, memory means application records, not a model remembering a conversation or a LangChain conversation-memory component. Relationships, completed analysis, freshness, and review status answer different questions. A successful no-match is completed analysis. Removing Orion's Project can leave its Topic and Tags useful, while the receipt remains. Provider replay cache and optional run history are different records. Deleting one display or membership does not silently make the repository eligible for another paid decision. Accepting a proposal creates a user decision. Rejecting or removing a relationship leaves a protected tombstone. Approved rules can supply deterministic mappings, subject to those rejections. Ordinary organization cannot recreate a rejected edge behind the user's back. These protections preserve authority; they do not prove every accepted relationship was independently verified truth. Local reconciliation applies approved rules, compatible stored assignments, or contiguous name and alias matches for review. This match is stricter than retrieval's unordered alias tokens. Local suggestions have visible provenance and zero model confidence. They do not manufacture AI completion. Fresh analysis remains available with an explicit reason and reviewed budget when the user wants a new judgment. Section twelve. Loop engineering. Its purpose is to control transitions around inference. We need to know when to run, when to skip, and when a result has become unsafe to apply. This is application control, not an autonomous model thought-and-action loop. Preview and worker check admission before constructing the provider or making a count request. Transactions claim running attempts so concurrent starts do not independently process the same operation. Previously attempted or uncertain work requires deliberate review, not a silent retry. Explicit re-analysis can bypass memoization while retaining privacy, schema, and spending checks. Classification cohorts use new-analysis, Project, and recency ordering, not a learned ranker.",
+    "marker": "That completes this part of the explanation."
+  },
+  {
+    "id": "take-05",
+    "parts": [
+      {
+        "beat": "12-loops-03",
+        "text": "Automatic organization accumulates eligible changes."
+      },
+      {
+        "beat": "12-loops-03",
+        "text": "Defaults combine weight six and three distinct entities, or two new Projects, followed by a ninety-second quiet period and a thirty-minute cooldown."
+      },
+      {
+        "beat": "12-loops-03",
+        "text": "Types and thresholds are configurable."
+      },
+      {
+        "beat": "12-loops-03",
+        "text": "Consumed event sequences prevent endless rescheduling."
+      },
+      {
+        "beat": "12-loops-03",
+        "text": "Existing analysis still reconciles locally."
+      },
+      {
+        "beat": "12-loops-03",
+        "text": "A change upstream cannot be noticed before its content is fetched."
+      },
+      {
+        "beat": "12-loops-04",
+        "text": "Revision, generation, policy, and epoch fences bind a response to current state."
+      },
+      {
+        "beat": "12-loops-04",
+        "text": "If the user edits or resets during generation, unsafe associations are discarded while historical cost and processing evidence remain."
+      },
+      {
+        "beat": "12-loops-04",
+        "text": "Reset uses a scoped, expiring, one-use preview and exact confirmation."
+      },
+      {
+        "beat": "12-loops-04",
+        "text": "It preserves cost history and readiness reports."
+      },
+      {
+        "beat": "12-loops-04",
+        "text": "These are tested local safeguards, not distributed exactly-once execution or forensic erasure."
+      },
+      {
+        "beat": "13-harness-01",
+        "text": "Section thirteen."
+      },
+      {
+        "beat": "13-harness-01",
+        "text": "Harness engineering."
+      },
+      {
+        "beat": "13-harness-01",
+        "text": "Its purpose is to make a model request measurable and bounded before it leaves the application."
+      },
+      {
+        "beat": "13-harness-01",
+        "text": "A successful connection alone tells us nothing about decision quality, safe state changes, or total cost."
+      },
+      {
+        "beat": "13-harness-02",
+        "text": "The provider inspects the serialized LangChain request, including destination, model, instructions, schema, output limits, and disabled tool or conversation fields."
+      },
+      {
+        "beat": "13-harness-02",
+        "text": "The HTTP hook checks current session and workspace authorization."
+      },
+      {
+        "beat": "13-harness-02",
+        "text": "Counting consumes an HTTP attempt."
+      },
+      {
+        "beat": "13-harness-02",
+        "text": "Only a successful bounded count permits a monetary reservation and generation."
+      },
+      {
+        "beat": "13-harness-02",
+        "text": "SDK retries are disabled to prevent hidden request multiplication."
+      },
+      {
+        "beat": "13-harness-03",
+        "text": "Known valid usage settles the estimate."
+      },
+      {
+        "beat": "13-harness-03",
+        "text": "Refusal or incomplete output is not a successful replay entry, but can still cost tokens."
+      },
+      {
+        "beat": "13-harness-03",
+        "text": "Missing usage, timeout, and uncertain failures keep the maximum reservation."
+      },
+      {
+        "beat": "13-harness-03",
+        "text": "A bound violation stops later paid admission."
+      },
+      {
+        "beat": "13-harness-03",
+        "text": "Selected provider rejections have a specific local accounting policy; none of these estimates is independent invoice reconciliation."
+      },
+      {
+        "beat": "13-harness-04",
+        "text": "Fixed mode has audited request and generation limits."
+      },
+      {
+        "beat": "13-harness-04",
+        "text": "Selective renewal or override preserves past attempts and spending."
+      },
+      {
+        "beat": "13-harness-04",
+        "text": "Adaptive mode admits a finite reviewed dollar grant under the same cumulative cap."
+      },
+      {
+        "beat": "13-harness-04",
+        "text": "Per-call reservations transfer from a run hold without double counting."
+      },
+      {
+        "beat": "13-harness-04",
+        "text": "Recovery links holds to jobs, releases unused terminal money, and preserves unknown-call holds."
+      },
+      {
+        "beat": "13-harness-04",
+        "text": "Separate local databases still require reconciliation."
+      },
+      {
+        "beat": "14-tokenomics-01",
+        "text": "Section fourteen."
+      },
+      {
+        "beat": "14-tokenomics-01",
+        "text": "Tokenomics and optimization."
+      },
+      {
+        "beat": "14-tokenomics-01",
+        "text": "The purpose is to understand what each decision consumes and which costs can be avoided."
+      },
+      {
+        "beat": "14-tokenomics-01",
+        "text": "We separate historical estimates, conservative admission bounds, and the broader cost of a useful accepted relationship."
+      },
+      {
+        "beat": "14-tokenomics-02",
+        "text": "The harness pins a rate snapshot and counts assembled input."
+      },
+      {
+        "beat": "14-tokenomics-02",
+        "text": "It reserves possible output, a conservative cache-write allowance, and headroom without assuming a cache discount."
+      },
+      {
+        "beat": "14-tokenomics-02",
+        "text": "Known usage later settles in integer microdollars."
+      },
+      {
+        "beat": "14-tokenomics-02",
+        "text": "Reasoning tokens already belong to output and must not be added twice."
+      },
+      {
+        "beat": "14-tokenomics-02",
+        "text": "A maximum-output reservation is not a prediction of the answer's usual length."
+      },
+      {
+        "beat": "14-tokenomics-03",
+        "text": "The twenty-case API round made twenty generation requests and twenty input-count requests: forty provider HTTP operations."
+      },
+      {
+        "beat": "14-tokenomics-03",
+        "text": "It recorded sixteen thousand forty-one input tokens and three thousand four hundred fourteen output tokens."
+      },
+      {
+        "beat": "14-tokenomics-03",
+        "text": "The rounded inference estimate was about three-tenths of a cent."
+      },
+      {
+        "beat": "14-tokenomics-03",
+        "text": "This excludes media, infrastructure, indexing, and human review; it is not a production cost guarantee."
+      },
+      {
+        "beat": "14-tokenomics-04",
+        "text": "Compact evidence, candidate caps, and bounded collection sampling reduce individual requests, but can omit useful context."
+      },
+      {
+        "beat": "14-tokenomics-04",
+        "text": "Receipts and local reconciliation can avoid another request entirely."
+      },
+      {
+        "beat": "14-tokenomics-04",
+        "text": "Provider prompt caching still invokes a model, and no discount benefit appeared in that round."
+      },
+      {
+        "beat": "14-tokenomics-04",
+        "text": "Count latency, evidence refresh, storage, and reviewer corrections also matter."
+      },
+      {
+        "beat": "14-tokenomics-04",
+        "text": "Optimize cost per correct, accepted, current association."
+      },
+      {
+        "beat": "15-evaluation-01",
+        "text": "Section fifteen."
+      },
+      {
+        "beat": "15-evaluation-01",
+        "text": "Evaluation and evidence."
+      },
+      {
+        "beat": "15-evaluation-01",
+        "text": "The purpose is to learn which stage succeeds, which stage fails, and how far the measurements generalize."
+      }
+    ],
+    "text": "Automatic organization accumulates eligible changes. Defaults combine weight six and three distinct entities, or two new Projects, followed by a ninety-second quiet period and a thirty-minute cooldown. Types and thresholds are configurable. Consumed event sequences prevent endless rescheduling. Existing analysis still reconciles locally. A change upstream cannot be noticed before its content is fetched. Revision, generation, policy, and epoch fences bind a response to current state. If the user edits or resets during generation, unsafe associations are discarded while historical cost and processing evidence remain. Reset uses a scoped, expiring, one-use preview and exact confirmation. It preserves cost history and readiness reports. These are tested local safeguards, not distributed exactly-once execution or forensic erasure. Section thirteen. Harness engineering. Its purpose is to make a model request measurable and bounded before it leaves the application. A successful connection alone tells us nothing about decision quality, safe state changes, or total cost. The provider inspects the serialized LangChain request, including destination, model, instructions, schema, output limits, and disabled tool or conversation fields. The HTTP hook checks current session and workspace authorization. Counting consumes an HTTP attempt. Only a successful bounded count permits a monetary reservation and generation. SDK retries are disabled to prevent hidden request multiplication. Known valid usage settles the estimate. Refusal or incomplete output is not a successful replay entry, but can still cost tokens. Missing usage, timeout, and uncertain failures keep the maximum reservation. A bound violation stops later paid admission. Selected provider rejections have a specific local accounting policy; none of these estimates is independent invoice reconciliation. Fixed mode has audited request and generation limits. Selective renewal or override preserves past attempts and spending. Adaptive mode admits a finite reviewed dollar grant under the same cumulative cap. Per-call reservations transfer from a run hold without double counting. Recovery links holds to jobs, releases unused terminal money, and preserves unknown-call holds. Separate local databases still require reconciliation. Section fourteen. Tokenomics and optimization. The purpose is to understand what each decision consumes and which costs can be avoided. We separate historical estimates, conservative admission bounds, and the broader cost of a useful accepted relationship. The harness pins a rate snapshot and counts assembled input. It reserves possible output, a conservative cache-write allowance, and headroom without assuming a cache discount. Known usage later settles in integer microdollars. Reasoning tokens already belong to output and must not be added twice. A maximum-output reservation is not a prediction of the answer's usual length. The twenty-case API round made twenty generation requests and twenty input-count requests: forty provider HTTP operations. It recorded sixteen thousand forty-one input tokens and three thousand four hundred fourteen output tokens. The rounded inference estimate was about three-tenths of a cent. This excludes media, infrastructure, indexing, and human review; it is not a production cost guarantee. Compact evidence, candidate caps, and bounded collection sampling reduce individual requests, but can omit useful context. Receipts and local reconciliation can avoid another request entirely. Provider prompt caching still invokes a model, and no discount benefit appeared in that round. Count latency, evidence refresh, storage, and reviewer corrections also matter. Optimize cost per correct, accepted, current association. Section fifteen. Evaluation and evidence. The purpose is to learn which stage succeeds, which stage fails, and how far the measurements generalize.",
+    "marker": "That completes this part of the explanation."
+  },
+  {
+    "id": "take-06",
+    "parts": [
+      {
+        "beat": "15-evaluation-01",
+        "text": "A single attractive score cannot answer all three questions."
+      },
+      {
+        "beat": "15-evaluation-02",
+        "text": "The frozen corpus has thirty repositories."
+      },
+      {
+        "beat": "15-evaluation-02",
+        "text": "Ten were development cases; twenty formed the evaluation partition, with eight public libraries and twelve synthetic cases."
+      },
+      {
+        "beat": "15-evaluation-02",
+        "text": "The registry has forty-two concepts, including four non-searchable Domains."
+      },
+      {
+        "beat": "15-evaluation-02",
+        "text": "Public labels were proposed and user-approved."
+      },
+      {
+        "beat": "15-evaluation-02",
+        "text": "Related initiatives were grouped, but policy clarification reused evaluation cases."
+      },
+      {
+        "beat": "15-evaluation-02",
+        "text": "The final round is regression validation, not untouched generalization evidence."
+      },
+      {
+        "beat": "15-evaluation-02",
+        "text": "Project-positive evidence is synthetic; private enterprise performance remains unestablished."
+      },
+      {
+        "beat": "15-evaluation-03",
+        "text": "Candidate recall asks whether expected IDs reached the shortlist."
+      },
+      {
+        "beat": "15-evaluation-03",
+        "text": "Both lexical methods covered all expected evaluation labels under generous caps."
+      },
+      {
+        "beat": "15-evaluation-03",
+        "text": "Classification then produced fifty true positives, zero false positives, and two misses: micro F one of ninety-eight percent."
+      },
+      {
+        "beat": "15-evaluation-03",
+        "text": "Both missing labels had been retrieved, locating those errors after candidate inclusion, without proving whether packing or model selection caused them."
+      },
+      {
+        "beat": "15-evaluation-04",
+        "text": "Taxonomy drafts passed structural checks and received qualitative acceptance, but no numeric human rubric was recorded."
+      },
+      {
+        "beat": "15-evaluation-04",
+        "text": "One repeated classification agreed; that is not long-run stability."
+      },
+      {
+        "beat": "15-evaluation-04",
+        "text": "Limited timing, contract, race, privacy, and recovery checks establish specific behaviors."
+      },
+      {
+        "beat": "15-evaluation-04",
+        "text": "They do not measure citation entailment or calibrated confidence."
+      },
+      {
+        "beat": "15-evaluation-04",
+        "text": "No complete RAGAS-style question-answering evaluation or independent production accuracy study was performed."
+      },
+      {
+        "beat": "15-evaluation-04",
+        "text": "Historical timings use nearest-rank percentiles from twenty observations, not a production guarantee."
+      },
+      {
+        "beat": "15-evaluation-04",
+        "text": "Subscription-based Codex checks were supplementary, not replacements for real API validation."
+      },
+      {
+        "beat": "15-evaluation-05",
+        "text": "A stronger study needs independent annotations, unseen initiatives, harder neighbors, no-match cases, and broader languages."
+      },
+      {
+        "beat": "15-evaluation-05",
+        "text": "Freeze policy and source snapshots before comparing methods."
+      },
+      {
+        "beat": "15-evaluation-05",
+        "text": "Group related repositories when splitting, and report per-kind errors, abstention, source support, correction effort, and total cost."
+      },
+      {
+        "beat": "15-evaluation-05",
+        "text": "Confidence intervals and model-winner claims should follow adequate data rather than being manufactured from this small reused set."
+      },
+      {
+        "beat": "16-future-retrieval-01",
+        "text": "Section sixteen."
+      },
+      {
+        "beat": "16-future-retrieval-01",
+        "text": "Stronger retrieval and contextual retrieval."
+      },
+      {
+        "beat": "16-future-retrieval-01",
+        "text": "The purpose is to investigate specific weaknesses without mistaking architectural complexity for improvement."
+      },
+      {
+        "beat": "16-future-retrieval-01",
+        "text": "Everything in the research lane is a proposal or external reference, not a current product capability."
+      },
+      {
+        "beat": "16-future-retrieval-02",
+        "text": "First preserve complete sentences, decisive passages, and contradiction."
+      },
+      {
+        "beat": "16-future-retrieval-02",
+        "text": "Align evidence validation with exactly what was transmitted."
+      },
+      {
+        "beat": "16-future-retrieval-02",
+        "text": "Compare candidate-conditioned passage selection with today's simple packing at the same token ceiling."
+      },
+      {
+        "beat": "16-future-retrieval-02",
+        "text": "Sparse experiments can vary term frequency, field weights, alias order, boosts, and smaller caps."
+      },
+      {
+        "beat": "16-future-retrieval-02",
+        "text": "These tests ask which error is fixed, rather than assuming the next layer must be better."
+      },
+      {
+        "beat": "16-future-retrieval-03",
+        "text": "A public-only bi-encoder trial could embed concept definitions and repository-purpose profiles separately."
+      },
+      {
+        "beat": "16-future-retrieval-03",
+        "text": "A small registry can use exact local similarity before an approximate-neighbor service."
+      },
+      {
+        "beat": "16-future-retrieval-03",
+        "text": "Cache by content and encoder version; preserve identity and access metadata."
+      },
+      {
+        "beat": "16-future-retrieval-03",
+        "text": "If dense search recovers real lexical misses, compare sparse and dense unions with reciprocal-rank fusion."
+      },
+      {
+        "beat": "16-future-retrieval-03",
+        "text": "A reranker adds cost and cannot recover a candidate absent from that union."
+      },
+      {
+        "beat": "16-future-retrieval-03",
+        "text": "Private embeddings are derived content and need separate permission."
+      },
+      {
+        "beat": "16-future-retrieval-04",
+        "text": "Now, contextual retrieval."
+      },
+      {
+        "beat": "16-future-retrieval-04",
+        "text": "Its purpose is to make an indexed chunk meaningful beyond its isolated words."
+      },
+      {
+        "beat": "16-future-retrieval-04",
+        "text": "Anthropic's approach adds document-conditioned context before indexing chunks with embeddings and BM25, with optional reranking."
+      },
+      {
+        "beat": "16-future-retrieval-04",
+        "text": "Our deterministic metadata and purpose excerpts are not that mechanism."
+      },
+      {
+        "beat": "16-future-retrieval-04",
+        "text": "A trial could compare cheap metadata prefixes with generated context, accounting for indexing, refresh, privacy, and downstream support."
+      },
+      {
+        "beat": "16-future-retrieval-04",
+        "text": "External published results do not become measured GitHub Manager improvements merely by showing the reference diagram."
+      }
+    ],
+    "text": "A single attractive score cannot answer all three questions. The frozen corpus has thirty repositories. Ten were development cases; twenty formed the evaluation partition, with eight public libraries and twelve synthetic cases. The registry has forty-two concepts, including four non-searchable Domains. Public labels were proposed and user-approved. Related initiatives were grouped, but policy clarification reused evaluation cases. The final round is regression validation, not untouched generalization evidence. Project-positive evidence is synthetic; private enterprise performance remains unestablished. Candidate recall asks whether expected IDs reached the shortlist. Both lexical methods covered all expected evaluation labels under generous caps. Classification then produced fifty true positives, zero false positives, and two misses: micro F one of ninety-eight percent. Both missing labels had been retrieved, locating those errors after candidate inclusion, without proving whether packing or model selection caused them. Taxonomy drafts passed structural checks and received qualitative acceptance, but no numeric human rubric was recorded. One repeated classification agreed; that is not long-run stability. Limited timing, contract, race, privacy, and recovery checks establish specific behaviors. They do not measure citation entailment or calibrated confidence. No complete RAGAS-style question-answering evaluation or independent production accuracy study was performed. Historical timings use nearest-rank percentiles from twenty observations, not a production guarantee. Subscription-based Codex checks were supplementary, not replacements for real API validation. A stronger study needs independent annotations, unseen initiatives, harder neighbors, no-match cases, and broader languages. Freeze policy and source snapshots before comparing methods. Group related repositories when splitting, and report per-kind errors, abstention, source support, correction effort, and total cost. Confidence intervals and model-winner claims should follow adequate data rather than being manufactured from this small reused set. Section sixteen. Stronger retrieval and contextual retrieval. The purpose is to investigate specific weaknesses without mistaking architectural complexity for improvement. Everything in the research lane is a proposal or external reference, not a current product capability. First preserve complete sentences, decisive passages, and contradiction. Align evidence validation with exactly what was transmitted. Compare candidate-conditioned passage selection with today's simple packing at the same token ceiling. Sparse experiments can vary term frequency, field weights, alias order, boosts, and smaller caps. These tests ask which error is fixed, rather than assuming the next layer must be better. A public-only bi-encoder trial could embed concept definitions and repository-purpose profiles separately. A small registry can use exact local similarity before an approximate-neighbor service. Cache by content and encoder version; preserve identity and access metadata. If dense search recovers real lexical misses, compare sparse and dense unions with reciprocal-rank fusion. A reranker adds cost and cannot recover a candidate absent from that union. Private embeddings are derived content and need separate permission. Now, contextual retrieval. Its purpose is to make an indexed chunk meaningful beyond its isolated words. Anthropic's approach adds document-conditioned context before indexing chunks with embeddings and BM25, with optional reranking. Our deterministic metadata and purpose excerpts are not that mechanism. A trial could compare cheap metadata prefixes with generated context, accounting for indexing, refresh, privacy, and downstream support. External published results do not become measured GitHub Manager improvements merely by showing the reference diagram.",
+    "marker": "That completes this part of the explanation."
+  },
+  {
+    "id": "take-07",
+    "parts": [
+      {
+        "beat": "16-future-retrieval-05",
+        "text": "A future controller could allow one extra source-linked evidence pass after an insufficient-context result, under a reviewed budget, then abstain."
+      },
+      {
+        "beat": "16-future-retrieval-05",
+        "text": "Adaptive RAG, Self-RAG, and corrective RAG are research references, not adopted implementations."
+      },
+      {
+        "beat": "16-future-retrieval-05",
+        "text": "Agentic retrieval would additionally need tool permissions and trajectory evaluation."
+      },
+      {
+        "beat": "16-future-retrieval-05",
+        "text": "Domain relationships alone do not create GraphRAG."
+      },
+      {
+        "beat": "16-future-retrieval-05",
+        "text": "Application memory does not make the model remember conversations."
+      },
+      {
+        "beat": "17-jev-01",
+        "text": "Section seventeen."
+      },
+      {
+        "beat": "17-jev-01",
+        "text": "Decision models, and the Jev research question."
+      },
+      {
+        "beat": "17-jev-01",
+        "text": "The purpose is to investigate whether a specialized decision interface could improve bounded judgments after the options are known."
+      },
+      {
+        "beat": "17-jev-01",
+        "text": "No Jev integration or live Jev test has been performed here."
+      },
+      {
+        "beat": "17-jev-02",
+        "text": "TypeSafe describes Choice, Score, and Noul primitives for typed judgments."
+      },
+      {
+        "beat": "17-jev-02",
+        "text": "For repository organization, a candidate could be supported, unsupported, or unclear."
+      },
+      {
+        "beat": "17-jev-02",
+        "text": "Ask separately for each candidate when several memberships are possible."
+      },
+      {
+        "beat": "17-jev-02",
+        "text": "Open-ended taxonomy discovery still needs generation to propose new names and definitions."
+      },
+      {
+        "beat": "17-jev-02",
+        "text": "A choice among existing options cannot replace that creative vocabulary step."
+      },
+      {
+        "beat": "17-jev-03",
+        "text": "A probability-derived decision confidence is not the same as today's generated confidence number, and neither proves task calibration."
+      },
+      {
+        "beat": "17-jev-03",
+        "text": "A shadow study should retain the baseline, test negation and option order, and measure high-confidence errors, abstention, fallback, review effort, and total spending."
+      },
+      {
+        "beat": "17-jev-03",
+        "text": "Extra provider credentials, retention terms, retries, and failures require their own controls."
+      },
+      {
+        "beat": "17-jev-03",
+        "text": "Faster decisions do not guarantee better completed workflows."
+      },
+      {
+        "beat": "17-jev-04",
+        "text": "Potential uses include candidate filtering, passage relevance, duplicate-review triage, or bounded assignment."
+      },
+      {
+        "beat": "17-jev-04",
+        "text": "Any filter can discard a correct candidate."
+      },
+      {
+        "beat": "17-jev-04",
+        "text": "Budget arithmetic, privacy policy, stable-ID validity, rejections, and stale-state protection stay deterministic."
+      },
+      {
+        "beat": "17-jev-04",
+        "text": "Adoption should require a measured quality-cost tradeoff on independent data, not a vendor headline."
+      },
+      {
+        "beat": "17-jev-04",
+        "text": "We finish by following the entire current workflow once more."
+      },
+      {
+        "beat": "18-complete-trace-01",
+        "text": "Section eighteen."
+      },
+      {
+        "beat": "18-complete-trace-01",
+        "text": "The complete trace and next steps."
+      },
+      {
+        "beat": "18-complete-trace-01",
+        "text": "The purpose is to reconnect the technical layers to the original need: find useful repositories, understand why they belong together, and keep control as the collection changes."
+      },
+      {
+        "beat": "18-complete-trace-02",
+        "text": "Orion's source sentence explains patient intake, the clinical initiative, FastAPI, and Python."
+      },
+      {
+        "beat": "18-complete-trace-02",
+        "text": "Local extraction retains evidence one."
+      },
+      {
+        "beat": "18-complete-trace-02",
+        "text": "Retrieval finds six possibilities."
+      },
+      {
+        "beat": "18-complete-trace-02",
+        "text": "Augmentation supplies evidence, definitions, policy, and schema."
+      },
+      {
+        "beat": "18-complete-trace-02",
+        "text": "Generation returns four supported IDs."
+      },
+      {
+        "beat": "18-complete-trace-02",
+        "text": "Validation and review establish usable relationships."
+      },
+      {
+        "beat": "18-complete-trace-02",
+        "text": "A receipt preserves completed work even if the user later removes a Project."
+      },
+      {
+        "beat": "18-complete-trace-03",
+        "text": "Readiness phases, frozen corpora, source hashes, lockfiles, reports, and historical ledgers preserve what was actually tested."
+      },
+      {
+        "beat": "18-complete-trace-03",
+        "text": "Reconstructing a request offline is not recovering an original wire log."
+      },
+      {
+        "beat": "18-complete-trace-03",
+        "text": "This animation does not rerun application or model benchmarks."
+      },
+      {
+        "beat": "18-complete-trace-03",
+        "text": "The original academic, illustrated, and publication editions remain available with exact inputs, formulas, qualifications, and references."
+      },
+      {
+        "beat": "18-complete-trace-04",
+        "text": "The next steps are better evidence packing, tighter validation parity, independent evaluation, and only then conditional retrieval or decision-model experiments."
+      },
+      {
+        "beat": "18-complete-trace-04",
+        "text": "Cloud migration needs separate concurrency and recovery validation."
+      },
+      {
+        "beat": "18-complete-trace-04",
+        "text": "The practical habit is simple: put the source, shortlist, request, answer, and resulting state beside one another."
+      },
+      {
+        "beat": "18-complete-trace-04",
+        "text": "Change one user decision, follow the next run, and measure what improved."
+      }
+    ],
+    "text": "A future controller could allow one extra source-linked evidence pass after an insufficient-context result, under a reviewed budget, then abstain. Adaptive RAG, Self-RAG, and corrective RAG are research references, not adopted implementations. Agentic retrieval would additionally need tool permissions and trajectory evaluation. Domain relationships alone do not create GraphRAG. Application memory does not make the model remember conversations. Section seventeen. Decision models, and the Jev research question. The purpose is to investigate whether a specialized decision interface could improve bounded judgments after the options are known. No Jev integration or live Jev test has been performed here. TypeSafe describes Choice, Score, and Noul primitives for typed judgments. For repository organization, a candidate could be supported, unsupported, or unclear. Ask separately for each candidate when several memberships are possible. Open-ended taxonomy discovery still needs generation to propose new names and definitions. A choice among existing options cannot replace that creative vocabulary step. A probability-derived decision confidence is not the same as today's generated confidence number, and neither proves task calibration. A shadow study should retain the baseline, test negation and option order, and measure high-confidence errors, abstention, fallback, review effort, and total spending. Extra provider credentials, retention terms, retries, and failures require their own controls. Faster decisions do not guarantee better completed workflows. Potential uses include candidate filtering, passage relevance, duplicate-review triage, or bounded assignment. Any filter can discard a correct candidate. Budget arithmetic, privacy policy, stable-ID validity, rejections, and stale-state protection stay deterministic. Adoption should require a measured quality-cost tradeoff on independent data, not a vendor headline. We finish by following the entire current workflow once more. Section eighteen. The complete trace and next steps. The purpose is to reconnect the technical layers to the original need: find useful repositories, understand why they belong together, and keep control as the collection changes. Orion's source sentence explains patient intake, the clinical initiative, FastAPI, and Python. Local extraction retains evidence one. Retrieval finds six possibilities. Augmentation supplies evidence, definitions, policy, and schema. Generation returns four supported IDs. Validation and review establish usable relationships. A receipt preserves completed work even if the user later removes a Project. Readiness phases, frozen corpora, source hashes, lockfiles, reports, and historical ledgers preserve what was actually tested. Reconstructing a request offline is not recovering an original wire log. This animation does not rerun application or model benchmarks. The original academic, illustrated, and publication editions remain available with exact inputs, formulas, qualifications, and references. The next steps are better evidence packing, tighter validation parity, independent evaluation, and only then conditional retrieval or decision-model experiments. Cloud migration needs separate concurrency and recovery validation. The practical habit is simple: put the source, shortlist, request, answer, and resulting state beside one another. Change one user decision, follow the next run, and measure what improved.",
+    "marker": "That completes this part of the explanation."
+  }
+]

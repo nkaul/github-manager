@@ -1,0 +1,115 @@
+WEBVTT
+
+00:00:01.620 --> 00:00:02.480
+Section thirteen.
+
+00:00:03.990 --> 00:00:04.810
+Harness engineering.
+
+00:00:06.400 --> 00:00:08.840
+Its purpose is to make a model request measurable
+
+00:00:08.840 --> 00:00:11.140
+and bounded before it leaves the application.
+
+00:00:12.970 --> 00:00:16.570
+A successful connection alone tells us nothing about decision
+
+00:00:16.570 --> 00:00:17.030
+quality,
+
+00:00:17.730 --> 00:00:19.830
+safe state changes, or total cost.
+
+00:00:28.777 --> 00:00:33.257
+The provider inspects the serialized LangChain request, including
+
+00:00:33.257 --> 00:00:33.937
+destination,
+
+00:00:34.617 --> 00:00:34.937
+model,
+
+00:00:35.997 --> 00:00:36.117
+instructions,
+
+00:00:36.777 --> 00:00:36.897
+schema,
+
+00:00:37.577 --> 00:00:40.597
+output limits, and disabled tool or conversation fields.
+
+00:00:41.757 --> 00:00:46.037
+The HTTP hook checks current session and workspace authorization.
+
+00:00:47.417 --> 00:00:49.457
+Counting consumes an HTTP attempt.
+
+00:00:50.577 --> 00:00:54.217
+Only a successful bounded count permits a monetary reservation
+
+00:00:54.217 --> 00:00:55.177
+and generation.
+
+00:00:55.177 --> 00:00:59.757
+SDK retries are disabled to prevent hidden request
+
+00:00:59.757 --> 00:01:00.837
+multiplication.
+
+00:01:06.397 --> 00:01:08.777
+Known valid usage settles the estimate.
+
+00:01:10.179 --> 00:01:13.619
+Refusal or incomplete output is not a successful replay
+
+00:01:13.619 --> 00:01:15.719
+entry, but can still cost tokens.
+
+00:01:17.282 --> 00:01:17.902
+Missing usage,
+
+00:01:18.522 --> 00:01:21.902
+timeout, and uncertain failures keep the maximum reservation.
+
+00:01:23.344 --> 00:01:25.824
+A bound violation stops later paid admission.
+
+00:01:27.207 --> 00:01:30.647
+Selected provider rejections have a specific local accounting
+
+00:01:30.647 --> 00:01:31.227
+policy;
+
+00:01:32.267 --> 00:01:35.107
+none of these estimates is independent invoice reconciliation.
+
+00:01:41.127 --> 00:01:44.187
+Fixed mode has audited request and generation limits.
+
+00:01:45.517 --> 00:01:49.017
+Selective renewal or override preserves past attempts and
+
+00:01:49.017 --> 00:01:49.137
+spending.
+
+00:01:50.447 --> 00:01:53.627
+Adaptive mode admits a finite reviewed dollar grant under
+
+00:01:53.627 --> 00:01:55.087
+the same cumulative cap.
+
+00:01:56.278 --> 00:01:59.818
+Per-call reservations transfer from a run hold without double
+
+00:01:59.818 --> 00:02:00.228
+counting.
+
+00:02:00.228 --> 00:02:03.128
+Recovery links holds to jobs,
+
+00:02:04.028 --> 00:02:07.508
+releases unused terminal money, and preserves unknown-call holds.
+
+00:02:08.999 --> 00:02:11.959
+Separate local databases still require reconciliation.

@@ -1,0 +1,147 @@
+1
+00:00:01,500 --> 00:00:02,520
+Section nine.
+
+2
+00:00:03,963 --> 00:00:05,563
+Generation and validation.
+
+3
+00:00:07,347 --> 00:00:10,067
+The purpose is to turn the assembled context into
+
+4
+00:00:10,067 --> 00:00:11,107
+a bounded proposal,
+
+5
+00:00:11,747 --> 00:00:14,027
+then check it before it affects organization.
+
+6
+00:00:16,110 --> 00:00:18,550
+Valid JSON is only the beginning of that check.
+
+7
+00:00:27,950 --> 00:00:31,530
+In the preserved Orion call, the model selected Orion
+
+8
+00:00:31,530 --> 00:00:32,510
+Clinical Platform,
+
+9
+00:00:33,490 --> 00:00:34,130
+Web APIs,
+
+10
+00:00:34,950 --> 00:00:36,630
+FastAPI, and Python.
+
+11
+00:00:37,419 --> 00:00:39,919
+All four assignments cited evidence one.
+
+12
+00:00:41,307 --> 00:00:42,867
+Forge and Package Management were omitted.
+
+13
+00:00:44,336 --> 00:00:47,836
+The request counted seven hundred sixty input tokens and
+
+14
+00:00:47,836 --> 00:00:50,116
+returned one hundred ninety-five output tokens.
+
+15
+00:00:51,345 --> 00:00:55,045
+This visible result does not expose the model's private
+
+16
+00:00:55,045 --> 00:00:56,145
+reasoning process.
+
+17
+00:01:02,277 --> 00:01:03,797
+Validation checks active IDs,
+
+18
+00:01:04,557 --> 00:01:04,777
+kinds,
+
+19
+00:01:05,437 --> 00:01:06,137
+workspace ownership,
+
+20
+00:01:06,737 --> 00:01:07,517
+allowed candidates,
+
+21
+00:01:08,477 --> 00:01:09,757
+duplicates, field limits,
+
+22
+00:01:10,577 --> 00:01:12,037
+status, and evidence references.
+
+23
+00:01:12,957 --> 00:01:15,537
+Dispatch and commit also check access,
+
+24
+00:01:16,417 --> 00:01:16,897
+profile hashes,
+
+25
+00:01:17,757 --> 00:01:19,277
+revisions, and user decisions.
+
+26
+00:01:21,077 --> 00:01:22,997
+Suggestions remain proposals until accepted.
+
+27
+00:01:24,177 --> 00:01:27,677
+A real evidence ID may still cite irrelevant prose,
+
+28
+00:01:27,677 --> 00:01:30,537
+and the model's confidence is not a calibrated accuracy
+
+29
+00:01:30,537 --> 00:01:31,257
+probability.
+
+30
+00:01:36,480 --> 00:01:39,700
+Luna is the task default supported by the limited
+
+31
+00:01:39,700 --> 00:01:41,000
+classification tests;
+
+32
+00:01:41,680 --> 00:01:43,640
+Sol supplied the taxonomy draft.
+
+33
+00:01:45,050 --> 00:01:48,230
+A comprehensive model-winner study was not completed.
+
+34
+00:01:50,120 --> 00:01:53,940
+The audit also found evidence-ID validation broader than the
+
+35
+00:01:53,940 --> 00:01:57,640
+transmitted compact set, and a taxonomy prompt limit of
+
+36
+00:01:57,640 --> 00:02:00,460
+twenty versus a validator limit of fifty.
+
+37
+00:02:02,010 --> 00:02:04,970
+Those are improvement tasks, not shipped guarantees.

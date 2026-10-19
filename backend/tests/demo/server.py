@@ -14,6 +14,7 @@ from tests.demo.fixtures import Adapter, Provider
 _directory = tempfile.TemporaryDirectory(prefix="ghm-phase09-browser-")
 app = create_local_app(
     LocalSettings(
+        app_origin="http://127.0.0.1:3016",
         github_client_id="test-fixture",
         github_client_secret="test-fixture",
         demo_live_ai=True,
@@ -26,11 +27,37 @@ app = create_local_app(
 )
 
 
+@app.middleware("http")
+async def reject_reserved_app_ports(request: Request, call_next):
+    # A fixture entrypoint must never impersonate the app on the user's normal ports.
+    if request.scope.get("server", (None, None))[1] in {3000, 8000}:
+        return JSONResponse(
+            {"detail": "Fixture server requires isolated test ports"}, status_code=503
+        )
+    return await call_next(request)
+
+
 @app.post("/api/v1/test/login")
 def isolated_ui_identity(value: dict):
     # Test-only route in this disposable server; never imported by app.local.
     actor = value.get("id")
-    if actor not in {9101, 9102, 9103, 9104, 9105, 9106, 9107, 9108}:
+    if actor not in {
+        9101,
+        9102,
+        9103,
+        9104,
+        9105,
+        9106,
+        9107,
+        9108,
+        9161,
+        9162,
+        9163,
+        9164,
+        9171,
+        9172,
+        9173,
+    }:
         raise HTTPException(400, "Unknown UI test fixture")
     cookie = app.state.sessions.create(
         {"id": actor, "login": f"ui-fixture-{actor}", "name": "UI Test Fixture"},

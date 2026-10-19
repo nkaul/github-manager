@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1080" viewBox="0 0 1800 1080" role="img" aria-labelledby="title desc">
+<title id="title">Chunk for purpose, while keeping the source visible</title><desc id="desc">Implemented heuristic: Markdown blocks and heading filters; no fixed token windows or semantic splitter.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#3949ab" stroke-width="1.5"/></marker></defs>
+<style>text {font-family: "Chalkboard SE", "Comic Sans MS", "Trebuchet MS", sans-serif; fill:#20213f} .title {font-size:43px;font-weight:700;fill:#3949ab} .subtitle {font-size:23px} .card-title {font-size:28px;font-weight:700;fill:#673ab7} .body {font-size:23px} .small {font-size:21px} .label {font-size:22px;fill:#3949ab} .metric {font-family:"Trebuchet MS",sans-serif;font-size:28px;font-weight:700}</style>
+<rect width="1800" height="1080" fill="#fff"/>
+<path d="M60 34 Q850 5 1730 34 L1734 112 Q840 98 58 116Z" fill="#e3f2fd" opacity=".55"/>
+<text x="75" y="80" class="title">Chunk for purpose, while keeping the source visible</text>
+<path d="M76 99 Q700 106 1718 99" fill="none" stroke="#673ab7" stroke-width="4" opacity=".7"/>
+<text x="78" y="142" class="subtitle">Implemented heuristic: Markdown blocks and heading filters; no fixed token windows or semantic splitter.</text>
+<g data-card="Source README + metadata"><rect x="75" y="190" width="510" height="475" rx="18" fill="#e3f2fd" stroke="#20213f" stroke-width="2.5"/>
+<path d="M89 194 Q330.0 189 570 194" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="99" y="234" class="card-title" text-anchor="start">Source README + metadata</text>
+<text x="100" y="274" class="body" text-anchor="start">README ≤262,144 UTF-8 bytes</text>
+<text x="100" y="306" class="body" text-anchor="start">Title / Overview / Features</text>
+<text x="100" y="338" class="body" text-anchor="start">Purpose / Architecture / Use cases</text>
+<text x="100" y="370" class="body" text-anchor="start">Installation / License / Changelog</text>
+<text x="100" y="402" class="body" text-anchor="start">Code fences, image-only markup</text>
+<text x="100" y="434" class="body" text-anchor="start">Untrusted instructions / secrets</text>
+</g>
+<g data-card="Versioned evidence profile"><rect x="645" y="190" width="510" height="475" rx="18" fill="#f3e5f5" stroke="#20213f" stroke-width="2.5"/>
+<path d="M659 194 Q900.0 189 1140 194" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="669" y="234" class="card-title" text-anchor="start">Versioned evidence profile</text>
+<text x="670" y="274" class="body" text-anchor="start">E0 metadata ≤600 characters</text>
+<text x="670" y="306" class="body" text-anchor="start">Each selected block ≤700 chars</text>
+<text x="670" y="338" class="body" text-anchor="start">README evidence ≤8,000 chars</text>
+<text x="670" y="370" class="body" text-anchor="start">Heading + E ID + selected text</text>
+<text x="670" y="402" class="body" text-anchor="start">RAKE: 1–4-word phrases, top 20</text>
+<text x="670" y="434" class="body" text-anchor="start">Keep matching source spans only</text>
+<text x="670" y="466" class="body" text-anchor="start">Profile hash + metadata hash + SHA</text>
+</g>
+<g data-card="Bounded generation context"><rect x="1215" y="190" width="510" height="475" rx="18" fill="#e3f2fd" stroke="#20213f" stroke-width="2.5"/>
+<path d="M1229 194 Q1470.0 189 1710 194" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="1239" y="234" class="card-title" text-anchor="start">Bounded generation context</text>
+<text x="1240" y="274" class="body" text-anchor="start">E0 + first 2 non-title blocks</text>
+<text x="1240" y="306" class="body" text-anchor="start">At most 8 retained phrases</text>
+<text x="1240" y="338" class="body" text-anchor="start">Canonical candidate IDs and text</text>
+<text x="1240" y="370" class="body" text-anchor="start">No raw full README</text>
+<text x="1240" y="402" class="body" text-anchor="start">Classification ceiling: 2,000 input</text>
+<text x="1240" y="434" class="body" text-anchor="start">Taxonomy ceiling: 12,000 input</text>
+<text x="1240" y="466" class="body" text-anchor="start">Counts include schema + instructions</text>
+</g>
+<path d="M585,400 L645,400" fill="none" stroke="#3949ab" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M1155,400 L1215,400" fill="none" stroke="#3949ab" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="75" y="740" width="1650" height="104" rx="18" fill="#e3f2fd"/>
+<text x="100" y="777" class="card-title" text-anchor="start">Tradeoff: predictable context, imperfect selection</text>
+<text x="100" y="817" class="small" text-anchor="start">Character truncation may cut a sentence. Early blocks may omit decisive later evidence or negation.</text>
+<rect x="75" y="875" width="1650" height="104" rx="18" fill="#f3e5f5"/>
+<text x="100" y="912" class="card-title" text-anchor="start">Versioned correction without rewriting history</text>
+<text x="100" y="952" class="small" text-anchor="start">The app&#x27;s v2 wrapper removes selected RST directives; frozen v1 benchmark profiles remain unchanged.</text>
+<text x="75" y="1048" class="small" text-anchor="start">GitHub Manager · AI system design · October 14, 2026</text>
+<text x="1725" y="1048" class="small" text-anchor="end">03</text>
+</svg>

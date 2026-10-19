@@ -3,6 +3,7 @@
 import { useEffect, useState, type DragEvent } from "react";
 import type { Concept, ConceptCounts } from "@/lib/workspace";
 import { Icon } from "./Icons";
+import { LabelChip } from "./LabelChip";
 
 export function TaxonomyBrowser({ concepts, counts = {}, active, choose, assign, storageKey }: {
   concepts: Concept[]; counts?: ConceptCounts; active: string; choose: (id: string) => void;
@@ -26,7 +27,7 @@ export function TaxonomyBrowser({ concepts, counts = {}, active, choose, assign,
     onDragOver: (e: DragEvent) => { e.preventDefault(); setOver(c.id); if (c.kind === "DOMAIN") setCollapsed(old => old.filter(id => id !== c.id)); },
     onDragLeave: () => setOver(""), onDrop: (e: DragEvent) => drop(e, c.id),
   });
-  const leaf = (c: Concept) => <li key={c.id}><button aria-label={c.name} className={`wm-project wm-taxonomy-node ${active === c.id ? "is-active" : ""} ${over === c.id ? "is-drop-target" : ""}`} title={`${c.name}${c.aliases.length ? ` · ${c.aliases.join(", ")}` : ""} · ${counts[c.id]?.accepted ?? 0} accepted repositories · Drop to add membership`} onClick={() => choose(c.id)} {...target(c)}><Icon name={c.kind === "PROJECT" ? "folder" : c.kind === "TOPIC" ? "topic" : "tag"} size={17} /><span>{c.name}</span>{badge(c.id)}</button></li>;
+  const leaf = (c: Concept) => <li key={c.id}><button aria-label={c.name} className={`wm-project wm-taxonomy-node ${active === c.id ? "is-active" : ""} ${over === c.id ? "is-drop-target" : ""}`} title={`${c.name}${c.aliases.length ? ` · ${c.aliases.join(", ")}` : ""} · ${counts[c.id]?.accepted ?? 0} accepted repositories · Drop to add membership`} onClick={() => choose(c.id)} {...target(c)}><Icon name={c.kind === "PROJECT" ? "folder" : c.kind === "TOPIC" ? "topic" : "tag"} size={17} /><LabelChip id={c.id} kind={c.kind}>{c.name}</LabelChip>{badge(c.id)}</button></li>;
   return <div className="wm-taxonomy-browser">
     <div className="wm-taxonomy-modes" role="tablist" aria-label="Taxonomy types">{[["PROJECT", "Projects"], ["TOPIC", "Topics"], ["TAG", "Tags"]].map(([key, label]) => <button key={key} role="tab" aria-selected={mode === key} onClick={() => { setMode(key); setQuery(""); }}>{label}</button>)}</div>
     <label className="wm-taxonomy-search"><Icon name="search" size={16} /><input aria-label="Search taxonomy names or aliases" value={query} onChange={e => setQuery(e.target.value)} placeholder="Names or aliases…" /></label>

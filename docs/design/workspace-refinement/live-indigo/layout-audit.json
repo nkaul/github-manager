@@ -1,0 +1,380 @@
+[
+  {
+    "width": 1920,
+    "height": 1080,
+    "ratio": 0.6762948207171314,
+    "cardHeight": 84,
+    "labelSize": 13,
+    "colors": [
+      {
+        "selector": ".wm-nav.is-active span",
+        "color": "rgb(48, 63, 159)",
+        "background": "rgb(232, 234, 246)",
+        "ratio": 7.500496231629558,
+        "size": 14
+      },
+      {
+        "selector": ".wm-project span",
+        "color": "rgb(36, 38, 60)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.81473370484767,
+        "size": 14
+      },
+      {
+        "selector": ".wm-stat>span",
+        "color": "rgb(83, 90, 115)",
+        "background": "#e3f2fd",
+        "ratio": 5.973501030851315,
+        "size": 13
+      },
+      {
+        "selector": ".wm-stat small",
+        "color": "rgb(83, 90, 115)",
+        "background": "#e3f2fd",
+        "ratio": 5.973501030851315,
+        "size": 12
+      },
+      {
+        "selector": ".wm-stat-selected strong",
+        "color": "rgb(40, 53, 147)",
+        "background": "#e8eaf6",
+        "ratio": 8.675383620986203,
+        "size": 25
+      },
+      {
+        "selector": ".wm-tree-menu>summary",
+        "color": "rgb(48, 63, 159)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 8.984652786112184,
+        "size": 14
+      },
+      {
+        "selector": ".wm-header-actions>.wm-secondary",
+        "color": "rgb(48, 63, 159)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 8.984652786112184,
+        "size": 14
+      },
+      {
+        "selector": ".wm-filter-field>span",
+        "color": "rgb(83, 90, 115)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 6.822996319039729,
+        "size": 13
+      },
+      {
+        "selector": ".wm-table th",
+        "color": "rgb(83, 90, 115)",
+        "background": "rgb(252, 253, 253)",
+        "ratio": 6.695494350474201,
+        "size": 12
+      },
+      {
+        "selector": ".wm-description",
+        "color": "rgb(83, 90, 115)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 6.822996319039729,
+        "size": 12
+      },
+      {
+        "selector": ".wm-visibility",
+        "color": "rgb(83, 90, 115)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 6.822996319039729,
+        "size": 12
+      },
+      {
+        "selector": ".wm-activity",
+        "color": "rgb(83, 90, 115)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 6.822996319039729,
+        "size": 12
+      },
+      {
+        "selector": ".wm-source",
+        "color": "rgb(83, 90, 115)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 6.822996319039729,
+        "size": 12
+      }
+    ],
+    "controls": [
+      {
+        "selector": ".wm-search",
+        "height": 40,
+        "paddingRight": 12,
+        "border": 1
+      },
+      {
+        "selector": ".wm-filter-field input[aria-label=\"Language filter\"]",
+        "height": 40,
+        "paddingRight": 34,
+        "border": 1
+      },
+      {
+        "selector": ".wm-filter-field input[aria-label=\"Visibility filter\"]",
+        "height": 40,
+        "paddingRight": 34,
+        "border": 1
+      },
+      {
+        "selector": ".wm-header input[aria-label=\"Workspace collection\"]",
+        "height": 40,
+        "paddingRight": 34,
+        "border": 1
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "ratio": 0.6055825242718447,
+    "cardHeight": 84,
+    "labelSize": 13,
+    "colors": [
+      {
+        "selector": ".wm-nav.is-active span",
+        "color": "rgb(48, 63, 159)",
+        "background": "rgb(232, 234, 246)",
+        "ratio": 7.500496231629558,
+        "size": 14
+      },
+      {
+        "selector": ".wm-project span",
+        "color": "rgb(36, 38, 60)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.81473370484767,
+        "size": 14
+      },
+      {
+        "selector": ".wm-stat>span",
+        "color": "rgb(83, 90, 115)",
+        "background": "#e3f2fd",
+        "ratio": 5.973501030851315,
+        "size": 13
+      },
+      {
+        "selector": ".wm-stat small",
+        "color": "rgb(83, 90, 115)",
+        "background": "#e3f2fd",
+        "ratio": 5.973501030851315,
+        "size": 12
+      },
+      {
+        "selector": ".wm-stat-selected strong",
+        "color": "rgb(40, 53, 147)",
+        "background": "#e8eaf6",
+        "ratio": 8.675383620986203,
+        "size": 25
+      },
+      {
+        "selector": ".wm-tree-menu>summary",
+        "color": "rgb(48, 63, 159)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 8.984652786112184,
+        "size": 13
+      },
+      {
+        "selector": ".wm-header-actions>.wm-secondary",
+        "color": "rgb(48, 63, 159)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 8.984652786112184,
+        "size": 13
+      },
+      {
+        "selector": ".wm-filter-field>span",
+        "color": "rgb(83, 90, 115)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 6.822996319039729,
+        "size": 13
+      },
+      {
+        "selector": ".wm-table th",
+        "color": "rgb(83, 90, 115)",
+        "background": "rgb(252, 253, 253)",
+        "ratio": 6.695494350474201,
+        "size": 12
+      },
+      {
+        "selector": ".wm-description",
+        "color": "rgb(83, 90, 115)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 6.822996319039729,
+        "size": 12
+      },
+      {
+        "selector": ".wm-visibility",
+        "color": "rgb(83, 90, 115)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 6.822996319039729,
+        "size": 12
+      },
+      {
+        "selector": ".wm-activity",
+        "color": "rgb(83, 90, 115)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 6.822996319039729,
+        "size": 12
+      },
+      {
+        "selector": ".wm-source",
+        "color": "rgb(83, 90, 115)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 6.822996319039729,
+        "size": 12
+      }
+    ],
+    "controls": [
+      {
+        "selector": ".wm-search",
+        "height": 40,
+        "paddingRight": 12,
+        "border": 1
+      },
+      {
+        "selector": ".wm-filter-field input[aria-label=\"Language filter\"]",
+        "height": 40,
+        "paddingRight": 34,
+        "border": 1
+      },
+      {
+        "selector": ".wm-filter-field input[aria-label=\"Visibility filter\"]",
+        "height": 40,
+        "paddingRight": 34,
+        "border": 1
+      },
+      {
+        "selector": ".wm-header input[aria-label=\"Workspace collection\"]",
+        "height": 40,
+        "paddingRight": 34,
+        "border": 1
+      }
+    ]
+  },
+  {
+    "width": 1280,
+    "height": 800,
+    "ratio": 0.5511049723756906,
+    "cardHeight": 90.59375,
+    "labelSize": 13,
+    "colors": [
+      {
+        "selector": ".wm-nav.is-active span",
+        "color": "rgb(48, 63, 159)",
+        "background": "rgb(232, 234, 246)",
+        "ratio": 7.500496231629558,
+        "size": 14
+      },
+      {
+        "selector": ".wm-project span",
+        "color": "rgb(36, 38, 60)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 14.81473370484767,
+        "size": 14
+      },
+      {
+        "selector": ".wm-stat>span",
+        "color": "rgb(83, 90, 115)",
+        "background": "#e3f2fd",
+        "ratio": 5.973501030851315,
+        "size": 13
+      },
+      {
+        "selector": ".wm-stat small",
+        "color": "rgb(83, 90, 115)",
+        "background": "#e3f2fd",
+        "ratio": 5.973501030851315,
+        "size": 12
+      },
+      {
+        "selector": ".wm-stat-selected strong",
+        "color": "rgb(40, 53, 147)",
+        "background": "#e8eaf6",
+        "ratio": 8.675383620986203,
+        "size": 25
+      },
+      {
+        "selector": ".wm-tree-menu>summary",
+        "color": "rgb(48, 63, 159)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 8.984652786112184,
+        "size": 13
+      },
+      {
+        "selector": ".wm-header-actions>.wm-secondary",
+        "color": "rgb(48, 63, 159)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 8.984652786112184,
+        "size": 13
+      },
+      {
+        "selector": ".wm-filter-field>span",
+        "color": "rgb(83, 90, 115)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 6.822996319039729,
+        "size": 13
+      },
+      {
+        "selector": ".wm-table th",
+        "color": "rgb(83, 90, 115)",
+        "background": "rgb(252, 253, 253)",
+        "ratio": 6.695494350474201,
+        "size": 12
+      },
+      {
+        "selector": ".wm-description",
+        "color": "rgb(83, 90, 115)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 6.822996319039729,
+        "size": 12
+      },
+      {
+        "selector": ".wm-visibility",
+        "color": "rgb(83, 90, 115)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 6.822996319039729,
+        "size": 12
+      },
+      {
+        "selector": ".wm-activity",
+        "color": "rgb(83, 90, 115)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 6.822996319039729,
+        "size": 12
+      },
+      {
+        "selector": ".wm-source",
+        "color": "rgb(83, 90, 115)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 6.822996319039729,
+        "size": 12
+      }
+    ],
+    "controls": [
+      {
+        "selector": ".wm-search",
+        "height": 40,
+        "paddingRight": 12,
+        "border": 1
+      },
+      {
+        "selector": ".wm-filter-field input[aria-label=\"Language filter\"]",
+        "height": 40,
+        "paddingRight": 34,
+        "border": 1
+      },
+      {
+        "selector": ".wm-filter-field input[aria-label=\"Visibility filter\"]",
+        "height": 40,
+        "paddingRight": 34,
+        "border": 1
+      },
+      {
+        "selector": ".wm-header input[aria-label=\"Workspace collection\"]",
+        "height": 40,
+        "paddingRight": 34,
+        "border": 1
+      }
+    ]
+  }
+]

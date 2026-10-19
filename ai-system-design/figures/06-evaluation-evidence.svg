@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1080" viewBox="0 0 1800 1080" role="img" aria-labelledby="title desc">
+<title id="title">Evaluate retrieval, generation and the harness separately</title><desc id="desc">Measured Phase 0.5 regression results; small reused corpus limits all generalization claims.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#3949ab" stroke-width="1.5"/></marker></defs>
+<style>text {font-family: "Chalkboard SE", "Comic Sans MS", "Trebuchet MS", sans-serif; fill:#20213f} .title {font-size:43px;font-weight:700;fill:#3949ab} .subtitle {font-size:23px} .card-title {font-size:28px;font-weight:700;fill:#673ab7} .body {font-size:23px} .small {font-size:21px} .label {font-size:22px;fill:#3949ab} .metric {font-family:"Trebuchet MS",sans-serif;font-size:28px;font-weight:700}</style>
+<rect width="1800" height="1080" fill="#fff"/>
+<path d="M60 34 Q850 5 1730 34 L1734 112 Q840 98 58 116Z" fill="#e3f2fd" opacity=".55"/>
+<text x="75" y="80" class="title">Evaluate retrieval, generation and the harness separately</text>
+<path d="M76 99 Q700 106 1718 99" fill="none" stroke="#673ab7" stroke-width="4" opacity=".7"/>
+<text x="78" y="142" class="subtitle">Measured Phase 0.5 regression results; small reused corpus limits all generalization claims.</text>
+<g data-card="Frozen benchmark and human policy"><rect x="75" y="190" width="650" height="300" rx="18" fill="#e3f2fd" stroke="#20213f" stroke-width="2.5"/>
+<path d="M89 194 Q400.0 189 710 194" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="99" y="234" class="card-title" text-anchor="start">Frozen benchmark and human policy</text>
+<text x="100" y="274" class="body" text-anchor="start">30 cases: 10 development + 20 evaluation</text>
+<text x="100" y="306" class="body" text-anchor="start">Evaluation: 8 public + 12 synthetic</text>
+<text x="100" y="338" class="body" text-anchor="start">42 concepts; 38 searchable non-Domains</text>
+<text x="100" y="370" class="body" text-anchor="start">References approved; labels never in prompts</text>
+<text x="100" y="402" class="body" text-anchor="start">Primary-label clarification preceded round 2</text>
+<text x="100" y="434" class="body" text-anchor="start">Numeric taxonomy rubric remains missing</text>
+</g>
+<g data-card="What was actually measured"><rect x="75" y="545" width="650" height="265" rx="18" fill="#f3e5f5" stroke="#20213f" stroke-width="2.5"/>
+<path d="M89 549 Q400.0 544 710 549" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="99" y="589" class="card-title" text-anchor="start">What was actually measured</text>
+<text x="100" y="629" class="body" text-anchor="start">Candidate recall@8 / @10 / @12</text>
+<text x="100" y="661" class="body" text-anchor="start">Multi-label micro precision / recall / F1</text>
+<text x="100" y="693" class="body" text-anchor="start">Contract validity, tokens and latency</text>
+<text x="100" y="725" class="body" text-anchor="start">One small representation ablation + repeat</text>
+<text x="100" y="757" class="body" text-anchor="start">Fault/concurrency tests use mock transport</text>
+</g>
+<text x="810" y="220" class="card-title" text-anchor="start">20-case model round · TP 50 / FP 0 / FN 2</text>
+<text x="810" y="270" class="body" text-anchor="start">Precision</text>
+<rect x="810" y="286" width="790" height="40" rx="10" fill="#e3f2fd"/><rect x="810" y="286" width="790.0" height="40" rx="10" fill="#1976d2"/>
+<text x="1630" y="318" class="metric" text-anchor="start">100.0%</text>
+<text x="810" y="395" class="body" text-anchor="start">Recall</text>
+<rect x="810" y="411" width="790" height="40" rx="10" fill="#e3f2fd"/><rect x="810" y="411" width="759.6" height="40" rx="10" fill="#3949ab"/>
+<text x="1630" y="443" class="metric" text-anchor="start">96.2%</text>
+<text x="810" y="520" class="body" text-anchor="start">Micro F1</text>
+<rect x="810" y="536" width="790" height="40" rx="10" fill="#e3f2fd"/><rect x="810" y="536" width="774.5" height="40" rx="10" fill="#673ab7"/>
+<text x="1630" y="568" class="metric" text-anchor="start">98.0%</text>
+<g data-card="Retrieval ceiling on this set"><rect x="810" y="680" width="915" height="155" rx="18" fill="#e3f2fd" stroke="#20213f" stroke-width="2.5"/>
+<path d="M824 684 Q1267.5 679 1710 684" fill="none" stroke="#673ab7" stroke-width="1" opacity=".35"/>
+<text x="834" y="724" class="card-title" text-anchor="start">Retrieval ceiling on this set</text>
+<text x="835" y="764" class="body" text-anchor="start">TF-IDF and BM25 each retrieve all 52 expected labels.</text>
+<text x="835" y="796" class="body" text-anchor="start">This is shortlist coverage, not evidence of semantic correctness.</text>
+</g>
+<rect x="75" y="875" width="1650" height="104" rx="18" fill="#f3e5f5"/>
+<text x="100" y="912" class="card-title" text-anchor="start">Research limit: regression success is not an independent test</text>
+<text x="100" y="952" class="small" text-anchor="start">No dense / reranker / contextual-retrieval trial, RAGAS score, calibrated confidence or production benchmark.</text>
+<text x="75" y="1048" class="small" text-anchor="start">GitHub Manager · AI system design · October 14, 2026</text>
+<text x="1725" y="1048" class="small" text-anchor="end">06</text>
+</svg>
