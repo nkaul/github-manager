@@ -1,4 +1,0 @@
-interface:
-  display_name: "System Design"
-  short_description: "Evidence-led architecture and phased implementation"
-  default_prompt: "Use $system-design to review the requirements and repository evidence, resolve material tradeoffs, and produce a phased, testable design."
