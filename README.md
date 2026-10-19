@@ -12,23 +12,21 @@ GitHub Manager brings owned, collaborated-on, contributed-to, starred, and watch
 - The authoritative technical specification is [docs/system-design.md](docs/system-design.md)
 - The Codex review and execution guide is [docs/system-design-execution.md](docs/system-design-execution.md).
 
-## GitHub Manager - Detailed Features Demo
+## GitHub Manager - Detailed Features Demo, Deep Dive, System Design
 
-▶️ [https://nkaul.github.io/github-manager-demo](https://nkaul.github.io/github-manager-demo)
+[![Explore the app walkthrough, architecture deep dive, and illustrated system design.](docs/assets/readme-illustrations/demo-overview.png)](https://nkaul.github.io/github-manager-demo)
 
-## Local evaluation workspace
+▶️ [Explore the GitHub Manager demo](https://nkaul.github.io/github-manager-demo) — feature walkthroughs, architecture video and podcast, and illustrated system design.
 
-The local app includes **Public - Ground Truth** in the top Workspace selector. It opens the English public-repository corpus, proposed taxonomy, pinned README/supporting evidence and a persistent human review form. Corpus proposals stay separate from personal GitHub organization and from confirmed human labels.
 
-See the [corpus v2 methodology](ai-system-design/evaluation/corpus-600-v2/README.md) and [workspace design and review guide](docs/planning/public-ground-truth-workspace.md), and [completed validation report](docs/validation/corpus-600-v2-review-2026-10-17.md). Dataset files remain in ignored local validation storage; individual review decisions persist in the local app SQLite database. Existing safety fixtures and earlier benchmark releases remain available.
+## Evaluation
 
-## GitHub Manager - System Design Overview
+[![From a corpus of 600 public repositories to 30 human-reviewed repositories and measured evaluation.](docs/assets/readme-illustrations/evaluation-overview.png)](eval/ai-system-design/evaluation/reviewed-30-v1/ground-truth-evaluation-explained.md)
 
-▶️ [https://nkaul.github.io/github-manager-demo/deep-dive/#overview](https://nkaul.github.io/github-manager-demo/deep-dive/#overview)
+[Read the ground-truth evaluation, explained in plain language](eval/ai-system-design/evaluation/reviewed-30-v1/ground-truth-evaluation-explained.md): how we collected the corpus, confirmed human reference labels, and checked retrieval, classification, and results with Ragas and Promptfoo. Includes charts, tables, and the limits of the thirty-repository evaluation.
 
-## GitHub Manager Architecture Deep Dive - Podcast Style Audio
 
-🎧 [https://nkaul.github.io/github-manager-demo/deep-dive/#podcast](https://nkaul.github.io/github-manager-demo/deep-dive/#podcast)
+
 
 ---
 

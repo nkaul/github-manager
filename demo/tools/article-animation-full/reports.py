@@ -6,7 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / 'demo/article-animation-full'
 WORK = ROOT / 'demo/work/article-animation-full'
-DOC = ROOT / 'ai-system-design/animation/full'
+DOC = ROOT / 'eval/ai-system-design/animation/full'
 HERE = Path(__file__).parent
 
 
@@ -63,9 +63,9 @@ guide += '''
 ## Read alongside the videos
 
 - [Full narration](transcript.md), [validation](validation.md), [measured timeline](timing.json), [player checks](player-qa.json), [media checks](media-qa.json), and [synchronization checks](sync-qa.json).
-- [V2 article](../../ai-system-design/publication/v2/article.md) and [exact worked examples](../../ai-system-design/publication/v2/workflow-examples.md).
-- [Academic edition](../../ai-system-design/github-manager-ai-system-design.md) and [illustrated detailed edition](../../ai-system-design/illustrated/github-manager-ai-system-design-illustrated.md).
-- [Source coverage](../../ai-system-design/animation/full/coverage.json), [storyboard](../../ai-system-design/animation/full/storyboard.md), [asset provenance](../../ai-system-design/animation/full/assets-manifest.json) and [preservation audit](../../ai-system-design/animation/full/preservation-qa.json).
+- [V2 article](../../eval/ai-system-design/publication/v2/article.md) and [exact worked examples](../../eval/ai-system-design/publication/v2/workflow-examples.md).
+- [Academic edition](../../eval/ai-system-design/github-manager-ai-system-design.md) and [illustrated detailed edition](../../eval/ai-system-design/illustrated/github-manager-ai-system-design-illustrated.md).
+- [Source coverage](../../eval/ai-system-design/animation/full/coverage.json), [storyboard](../../eval/ai-system-design/animation/full/storyboard.md), [asset provenance](../../eval/ai-system-design/animation/full/assets-manifest.json) and [preservation audit](../../eval/ai-system-design/animation/full/preservation-qa.json).
 
 Repository links above open as local files from this Markdown document. The HTTP preview deliberately serves only the media package, so it cannot expose application files, environment variables or intermediate work.
 
@@ -99,7 +99,7 @@ The silent references summarize a few animated states; they are not complete ani
 '''
 (OUT / 'README.md').write_text(guide)
 
-chapter_rows = '\n'.join(f"| {c['number']} | [{c['title']}](../../../demo/article-animation-full/{c['file']}) | {c['duration_label']} |" for c in package['chapters'])
+chapter_rows = '\n'.join(f"| {c['number']} | [{c['title']}](../../../../demo/article-animation-full/{c['file']}) | {c['duration_label']} |" for c in package['chapters'])
 (DOC / 'README.md').write_text(f'''# Full illustrated AI system design companion
 
 The [complete local player](http://127.0.0.1:8125) is ready: **{package['duration_label']}**, eighteen narrated chapters and eight silent animated reference summaries. Cedar now averages **{timing['measured_spoken_wpm']:.1f} spoken words/minute**, with explicit spoken section names, purposes and longer reading holds.
@@ -110,7 +110,7 @@ This is the new edition authorized after the user's pilot pacing feedback. The e
 |---|---|---|
 {chapter_rows}
 
-See the [media guide](../../../demo/article-animation-full/README.md), [validation](validation.md), [transcript](transcript.md), [storyboard](storyboard.md), [source coverage](coverage.json), [production brief](production-brief.md), [asset manifest](assets-manifest.json) and [preservation audit](preservation-qa.json).
+See the [media guide](../../../../demo/article-animation-full/README.md), [validation](validation.md), [transcript](transcript.md), [storyboard](storyboard.md), [source coverage](coverage.json), [production brief](production-brief.md), [asset manifest](assets-manifest.json) and [preservation audit](preservation-qa.json).
 
 All earlier source articles, raster illustrations, app source, protected ledgers and readiness reports remain unchanged. This is a local media package, not a public upload or a fresh application benchmark.
 ''')
@@ -128,17 +128,17 @@ storyboard += ['', 'Each silent summary uses four eight-second excerpts. They ar
 (DOC / 'storyboard.md').write_text('\n'.join(storyboard) + '\n')
 
 assets = []
-source_paths = ['ai-system-design/publication/figures/01-evidence-to-decisions.png',
-                'ai-system-design/publication/v2/figures/01-two-ai-phases.png',
-                'ai-system-design/publication/v2/figures/02-data-through-classification.png',
+source_paths = ['eval/ai-system-design/publication/figures/01-evidence-to-decisions.png',
+                'eval/ai-system-design/publication/v2/figures/01-two-ai-phases.png',
+                'eval/ai-system-design/publication/v2/figures/02-data-through-classification.png',
                 'docs/design/logo-variants-20261013/animated-v2/zen-loop-orbit-poster.png']
-source_paths += [str(p.relative_to(ROOT)) for p in sorted((ROOT / 'ai-system-design/illustrated/figures').glob('*.png'))]
+source_paths += [str(p.relative_to(ROOT)) for p in sorted((ROOT / 'eval/ai-system-design/illustrated/figures').glob('*.png'))]
 for p in source_paths:
     assets.append({'source': p, 'sha256': sha(ROOT / p),
                    'use': 'Read-only original illustration; selected browser composition or reference copy. Some inherited assets are preloaded but not displayed.'})
 for r in package['references']:
     copy = OUT / r['figure']
-    original = ROOT / 'ai-system-design/illustrated/figures' / copy.name
+    original = ROOT / 'eval/ai-system-design/illustrated/figures' / copy.name
     assert sha(copy) == sha(original)
 save(DOC / 'assets-manifest.json', {'assets': assets, 'reference_copies': 'Eight source PNGs copied byte-for-byte',
                                    'new_image_generation_requests': 0, 'new_video_generation_service_calls': 0,
@@ -185,9 +185,9 @@ The final 3,760 caption words exactly preserve the authored script order. Thirty
 
 Approximately {sum(b['sentence_pause_seconds_added'] for b in timing['beats']):.2f} seconds of silence were inserted at existing sentence boundaries. Every voiced PCM sample in the selected passages is preserved; pitch and speech speed were not digitally stretched. One-second visual leads, result holds and longer introduction holds are added outside the narration. Loudness normalization applies a common measured gain strategy before AAC encoding.
 
-All seventy-four beat layouts passed font loading and text-bound checks. Cards reveal at staged word positions; request tokens, phrase scoring and receipt transitions provide motion beyond the original diagram images. Four encoded-region comparisons verify visible keyword, request, receipt and reservation changes after encoding; see [motion QA](../../../demo/article-animation-full/motion-qa.json). This establishes visible change, not comprehension. The renderer samples active motion intervals at 30 fps and holds a rendered frame during deliberate reading pauses; the final output is constant 30 fps. Original raster illustrations are never rewritten.
+All seventy-four beat layouts passed font loading and text-bound checks. Cards reveal at staged word positions; request tokens, phrase scoring and receipt transitions provide motion beyond the original diagram images. Four encoded-region comparisons verify visible keyword, request, receipt and reservation changes after encoding; see [motion QA](../../../../demo/article-animation-full/motion-qa.json). This establishes visible change, not comprehension. The renderer samples active motion intervals at 30 fps and holds a rendered frame during deliberate reading pauses; the final output is constant 30 fps. Original raster illustrations are never rewritten.
 
-See [synchronization QA](../../../demo/article-animation-full/sync-qa.json), [media QA](../../../demo/article-animation-full/media-qa.json) and the [measured storyboard](storyboard.md). Automated alignment, audio meters and muted playback do not establish listener preference, accent consistency or comprehension. Those remain editorial review judgments.
+See [synchronization QA](../../../../demo/article-animation-full/sync-qa.json), [media QA](../../../../demo/article-animation-full/media-qa.json) and the [measured storyboard](storyboard.md). Automated alignment, audio meters and muted playback do not establish listener preference, accent consistency or comprehension. Those remain editorial review judgments.
 
 ## Player and encoded-media verification
 
@@ -213,13 +213,13 @@ The new revision accounts for ${media['retained_reservations_new_usd']:.2f}. Its
 
 ## Preservation and local reproducibility
 
-The pre-production baseline confirms **{media['preservation']['protected_files']} files unchanged**, including prior article editions, original diagrams, pilot/full demo media, readiness reports and protected accounting data. All new work is confined to `demo/article-animation-full/`, `demo/tools/article-animation-full/`, `ai-system-design/animation/full/` and ignored media intermediates. [Preservation audit](preservation-qa.json), [asset manifest](assets-manifest.json) and [export checksums](../../../demo/article-animation-full/checksums.json).
+The pre-production baseline confirms **{media['preservation']['protected_files']} files unchanged**, including prior article editions, original diagrams, pilot/full demo media, readiness reports and protected accounting data. All new work is confined to `demo/article-animation-full/`, `demo/tools/article-animation-full/`, `eval/ai-system-design/animation/full/` and ignored media intermediates. [Preservation audit](preservation-qa.json), [asset manifest](assets-manifest.json) and [export checksums](../../../../demo/article-animation-full/checksums.json).
 
-See the [media guide](../../../demo/article-animation-full/README.md) for local restart/render commands. Further media generation or public upload is outside this completed local production. The original pilot and its documentation remain historical records, including their earlier statements that a full version was deferred.
+See the [media guide](../../../../demo/article-animation-full/README.md) for local restart/render commands. Further media generation or public upload is outside this completed local production. The original pilot and its documentation remain historical records, including their earlier statements that a full version was deferred.
 '''
 (DOC / 'validation.md').write_text(validation)
 # The package copy uses links valid from the package rather than the documentation tree.
-copy_validation = validation.replace('../../../demo/article-animation-full/', '').replace('(storyboard.md)', '(../../ai-system-design/animation/full/storyboard.md)').replace('(preservation-qa.json)', '(../../ai-system-design/animation/full/preservation-qa.json)').replace('(assets-manifest.json)', '(../../ai-system-design/animation/full/assets-manifest.json)')
+copy_validation = validation.replace('../../../../demo/article-animation-full/', '').replace('(storyboard.md)', '(../../eval/ai-system-design/animation/full/storyboard.md)').replace('(preservation-qa.json)', '(../../eval/ai-system-design/animation/full/preservation-qa.json)').replace('(assets-manifest.json)', '(../../eval/ai-system-design/animation/full/assets-manifest.json)')
 (OUT / 'validation.md').write_text(copy_validation)
 media['status'] = 'PASS' if player['status'] == 'PASS' else 'PASS_MEDIA_PENDING_PLAYER'
 save(OUT / 'media-qa.json', media)

@@ -10,7 +10,7 @@ This plan covers the implemented local GitHub Manager: deterministic README evid
 
 ## 1. Evidence we already have, and gaps to close
 
-The [completed corpus report](../../ai-system-design/evaluation/corpus-600/validation-2026-10-16.md) records 600 public repositories, 600 complete READMEs, 1,162 supporting files and 120 independent **agent** cross-reviews. There are zero human-approved references. Only 78 READMEs were semantically read in full; the other 522 received recorded targeted reading. All original source bytes remain available.
+The [completed corpus report](../../eval/ai-system-design/evaluation/corpus-600/validation-2026-10-16.md) records 600 public repositories, 600 complete READMEs, 1,162 supporting files and 120 independent **agent** cross-reviews. There are zero human-approved references. Only 78 READMEs were semantically read in full; the other 522 received recorded targeted reading. All original source bytes remain available.
 
 The baseline retrieved 249/252 proposed Project positives, 436/689 Topic positives and 606/634 Tag positives. These are provisional positive recalls of 98.81%, 63.28% and 95.58%. They identify Topic retrieval as a priority; they do not measure model classification accuracy. Of 1,575 proposed supported labels, lexical evidence-quote containment occurs for 1,293 in the profile and 1,035 in the compact request. That is an omission diagnostic, not semantic entailment.
 
@@ -224,8 +224,8 @@ Initial approval should cover **Steps 1–3**: offline preparation, concept/anno
 
 Proposed files, keeping original releases unchanged:
 
-- `ai-system-design/evaluation/corpus-600/annotation-handbook.md` and concept-card index.
-- `ai-system-design/evaluation/corpus-600/tools/prepare_review.py` for source-first packets and independent decisions.
+- `eval/ai-system-design/evaluation/corpus-600/annotation-handbook.md` and concept-card index.
+- `eval/ai-system-design/evaluation/corpus-600/tools/prepare_review.py` for source-first packets and independent decisions.
 - Private `docs/validation/private/corpus-600/evaluation-v1/` for review packets, real reviewer decisions, split proposals and adjudication; do not overwrite `release/`.
 - Later corpus-specific `evaluate.py`/tests for partial-label masks, visibility and grouped reporting, importing existing app logic.
 - Dated Markdown reports for human calibration, reference-quality audit, offline stages, live pilot, taxonomy review, ablations and final test.

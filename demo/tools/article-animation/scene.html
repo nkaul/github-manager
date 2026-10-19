@@ -8,7 +8,7 @@
 <script>
 const ROOT=new URL('../../../',location.href);
 const asset=p=>new URL(p,ROOT).href;
-const files={overview:asset('ai-system-design/publication/figures/01-evidence-to-decisions.png'),phases:asset('ai-system-design/publication/v2/figures/01-two-ai-phases.png'),data:asset('ai-system-design/publication/v2/figures/02-data-through-classification.png'),zen:asset('docs/design/logo-variants-20261013/animated-v2/zen-loop-orbit-poster.png')};
+const files={overview:asset('eval/ai-system-design/publication/figures/01-evidence-to-decisions.png'),phases:asset('eval/ai-system-design/publication/v2/figures/01-two-ai-phases.png'),data:asset('eval/ai-system-design/publication/v2/figures/02-data-through-classification.png'),zen:asset('docs/design/logo-variants-20261013/animated-v2/zen-loop-orbit-poster.png')};
 const C={ink:'#182544',blue:'#1e69d6',indigo:'#3949ab',purple:'#7e57c2',light:'#e3f2fd',lav:'#eee9ff',green:'#166d5b',mint:'#e2f3ed',gray:'#edf0f7',muted:'#5f6b85'};
 let timeline,now=0,scene,local=0,uid=0;
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

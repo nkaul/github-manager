@@ -34,9 +34,9 @@ Narration uses the selected **AI-generated Cedar voice**. English VTT/SRT captio
 ## Read alongside the videos
 
 - [Full narration](transcript.md), [validation](validation.md), [measured timeline](timing.json), [player checks](player-qa.json), [media checks](media-qa.json), and [synchronization checks](sync-qa.json).
-- [V2 article](../../ai-system-design/publication/v2/article.md) and [exact worked examples](../../ai-system-design/publication/v2/workflow-examples.md).
-- [Academic edition](../../ai-system-design/github-manager-ai-system-design.md) and [illustrated detailed edition](../../ai-system-design/illustrated/github-manager-ai-system-design-illustrated.md).
-- [Source coverage](../../ai-system-design/animation/full/coverage.json), [storyboard](../../ai-system-design/animation/full/storyboard.md), [asset provenance](../../ai-system-design/animation/full/assets-manifest.json) and [preservation audit](../../ai-system-design/animation/full/preservation-qa.json).
+- [V2 article](../../eval/ai-system-design/publication/v2/article.md) and [exact worked examples](../../eval/ai-system-design/publication/v2/workflow-examples.md).
+- [Academic edition](../../eval/ai-system-design/github-manager-ai-system-design.md) and [illustrated detailed edition](../../eval/ai-system-design/illustrated/github-manager-ai-system-design-illustrated.md).
+- [Source coverage](../../eval/ai-system-design/animation/full/coverage.json), [storyboard](../../eval/ai-system-design/animation/full/storyboard.md), [asset provenance](../../eval/ai-system-design/animation/full/assets-manifest.json) and [preservation audit](../../eval/ai-system-design/animation/full/preservation-qa.json).
 
 Repository links above open as local files from this Markdown document. The HTTP preview deliberately serves only the media package, so it cannot expose application files, environment variables or intermediate work.
 

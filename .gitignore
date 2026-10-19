@@ -32,3 +32,8 @@ demo/voice-preview-v2/*.wav
 demo/full-v2/*.mp4
 demo/full-v2/*.m4a
 demo/full-v2/*.wav
+
+
+# skills
+skills
+.agents

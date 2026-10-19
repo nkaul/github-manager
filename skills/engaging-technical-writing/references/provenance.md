@@ -12,4 +12,4 @@ The adaptation retains concrete examples, gradual introduction of complexity, co
 
 Original additions include the reader brief, insight coverage map, input/operation/output trace, artifact provenance distinctions, bounded refinement passes, evidence-backed editorial rubric, platform handoff and explicit limits on engagement claims. GitHub Manager facts stay outside this reusable skill.
 
-The candidate investigation is recorded in the approved [publication plan](../../../../ai-system-design/publication/v2-plan.md). Other researched skills were not bundled. Public availability does not establish editorial effectiveness.
+The candidate investigation is recorded in the approved [publication plan](../../../eval/ai-system-design/publication/v2-plan.md). Other researched skills were not bundled. Public availability does not establish editorial effectiveness.

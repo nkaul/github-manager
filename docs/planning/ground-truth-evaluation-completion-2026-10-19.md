@@ -16,7 +16,7 @@ Continue the implemented local app: RAKE profiles, alias-boosted sparse TF-IDF r
 
 ## Current evidence and dependencies
 
-See the [read-only completion audit](../validation/ground-truth-review-completion-2026-10-19.md) and [aggregate JSON](../../ai-system-design/ground-truth-creation/history/review-completion-audit-2026-10-19.json).
+See the [read-only completion audit](../validation/ground-truth-review-completion-2026-10-19.md) and [aggregate JSON](../../eval/ai-system-design/ground-truth-creation/history/review-completion-audit-2026-10-19.json).
 
 | Observed fact | Evaluation consequence |
 |---|---|
@@ -145,10 +145,10 @@ OpenAI's [evaluation guidance](https://developers.openai.com/api/docs/guides/eva
 
 | Proposed location | Contents |
 |---|---|
-| `ai-system-design/evaluation/reviewed-30-v1/` | README, contract, reproducible runner/adapters, pinned config/environment and tests; created after approval |
+| `eval/ai-system-design/evaluation/reviewed-30-v1/` | README, contract, reproducible runner/adapters, pinned config/environment and tests; created after approval |
 | `docs/validation/private/corpus-600-v2/evaluation-reviewed-30-v1/` | Frozen owner reference, registry history, stage traces, call receipts, predictions and exception decisions |
 | `docs/validation/ground-truth-evaluation-<run-date>.md` | Results, per-stage/slice tables, usage, exclusions, failures and limitations |
-| `ai-system-design/ground-truth-creation/` | Preserve prior revision; refresh article/statistics/evidence with measured results and current links |
+| `eval/ai-system-design/ground-truth-creation/` | Preserve prior revision; refresh article/statistics/evidence with measured results and current links |
 
 The reference remains viewable in **Public - Ground Truth**. Evaluation is file-driven and needs no app login. This milestone adds no evaluation dashboard or automatic write of predictions into reference assignments. The exceptions sheet can link repository/source/label identities; an in-app negative/completeness editor would be a separate UX change.
 

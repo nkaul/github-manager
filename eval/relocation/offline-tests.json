@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-19",
+  "status": "PASS",
+  "total_tests": 30,
+  "suites": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 backend/.venv/bin/python -m pytest eval/ai-system-design/evaluation/reviewed-30-v1/test_evaluation.py -q -p no:cacheprovider",
+      "passed": 4
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 backend/.venv/bin/python -m unittest discover -s eval/ai-system-design/evaluation/corpus-600/tools -p 'test_*.py' -v",
+      "passed": 12
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 backend/.venv/bin/python -m unittest discover -s eval/ai-system-design/evaluation/corpus-600-v2/tools -p 'test_*.py' -v",
+      "passed": 14
+    }
+  ],
+  "figure_renderer_syntax": "PASS",
+  "frozen_reference_verification": "Existing immutable reference verified; no resnapshot.",
+  "new_framework_config": "Separate private promptfoo-config-relocated.json generated; original retained.",
+  "model_calls": 0
+}

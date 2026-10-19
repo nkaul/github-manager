@@ -45,7 +45,7 @@ No working file was deleted by this repair. No checkout, reset, clean, stash, st
 | Rehearse the push | Explicit `develop`-only normal push dry-run passed: `3ffac3f..3366671`. No backup refs or tags selected. |
 | Publish and verify | Normal push exited 0: `3ffac3f..3366671`, `Done`. A separate `git ls-remote --heads origin` reported remote `develop` as `3366671984cedf5180a2eddd0c26dc967977b639`; remote `main` remained `44ddb8c`. An explicit post-push fetch of `develop` returned that exact commit and the unchanged final tree `b43081c`. The blocking blob is absent from `git rev-list --objects origin/develop`. |
 
-The separate documentation task was actively adding/editing `ai-system-design/evaluation/reviewed-30-v1/`. Those changes were neither staged nor committed nor included in this push. Their presence after the push is expected.
+The separate documentation task was actively adding/editing `eval/ai-system-design/evaluation/reviewed-30-v1/`. Those changes were neither staged nor committed nor included in this push. Their presence after the push is expected.
 
 After the remote verification, `git status --short --branch` reported `develop...origin/develop` with no ahead/behind count. The original index hash was still unchanged. Every original file outside the active evaluation subtree still matched its baseline. The only additional file outside that subtree was this intentionally created audit report. This report is saved locally for review and was not bundled into the already approved two-commit push.
 

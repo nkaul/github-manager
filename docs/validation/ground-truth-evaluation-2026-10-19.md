@@ -4,7 +4,7 @@
 
 The new evaluation cost is **$0.133941 in estimated recorded API charges**. All **50 generation attempts and 100 HTTP attempts** were consumed; the run grant is **FINISHED**, with no outstanding call reservations or unused active hold. Further generations require another approval. Combined historical accounting, including retained narration reservations, is **$4.316970 under the original $5 cap**. This is local accounting, not an invoice or account-balance claim.
 
-[Approved plan](../planning/ground-truth-evaluation-completion-2026-10-19.md) · [reference audit](ground-truth-review-completion-2026-10-19.md) · [reproduction guide](../../ai-system-design/evaluation/reviewed-30-v1/README.md) · [publication update](../../ai-system-design/ground-truth-creation/evaluation-results-2026-10-19.md).
+[Approved plan](../planning/ground-truth-evaluation-completion-2026-10-19.md) · [reference audit](ground-truth-review-completion-2026-10-19.md) · [reproduction guide](../../eval/ai-system-design/evaluation/reviewed-30-v1/README.md) · [publication update](../../eval/ai-system-design/ground-truth-creation/evaluation-results-2026-10-19.md).
 
 ## What the reference permits us to claim
 

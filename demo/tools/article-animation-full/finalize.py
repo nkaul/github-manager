@@ -5,6 +5,7 @@ No provider calls. Source illustrations, earlier media and application state are
 import argparse
 import hashlib
 import json
+import sys
 import re
 import shutil
 import subprocess
@@ -12,9 +13,11 @@ from pathlib import Path
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(ROOT / "eval/relocation"))
+from relocation_support import historical_bytes, historical_sha256, repo_path
 OUT = ROOT / 'demo/article-animation-full'
 WORK = ROOT / 'demo/work/article-animation-full'
-DOC = ROOT / 'ai-system-design/animation/full'
+DOC = ROOT / 'eval/ai-system-design/animation/full'
 FF = ROOT / '.tools/video-python/imageio_ffmpeg/binaries/ffmpeg-macos-x86_64-v7.1'
 TIMING = json.loads((OUT / 'timing.json').read_text())
 STORY = json.loads((Path(__file__).parent / 'story.json').read_text())
@@ -178,7 +181,7 @@ def assemble():
                 '-an', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '20', '-pix_fmt', 'yuv420p',
                 '-threads', '2', '-r', '30', '-frames:v', '960', '-movflags', '+faststart', file])
             done(name)
-        figure = ROOT / 'ai-system-design/illustrated/figures' / (slug + '.png')
+        figure = ROOT / 'eval/ai-system-design/illustrated/figures' / (slug + '.png')
         shutil.copyfile(figure, OUT / 'figures' / figure.name)
         package['references'].append({'id': slug, 'title': title, 'file': name + '.mp4',
                                       'figure': 'figures/' + figure.name, 'duration': 32, 'duration_label': '0:32',
@@ -260,7 +263,7 @@ def verify():
                               'result_hold_seconds': 3.5, 'introduction_extra_hold_seconds': 4,
                               'limitation': '38 word envelopes use neighboring alignment; automated alignment is not a perceptual listening study.'})
     baseline = json.loads((DOC / 'preservation-baseline.json').read_text())
-    changes = [r['file'] for r in baseline['files'] if not (ROOT / r['file']).exists() or sha(ROOT / r['file']) != r['sha256']]
+    changes = [r['file'] for r in baseline['files'] if not repo_path(r['file']).exists() or historical_sha256(repo_path(r['file'])) != r['sha256']]
     preservation = {'status': 'PASS' if not changes else 'CHANGED_REVIEW_REQUIRED', 'protected_files': len(baseline['files']), 'changed': changes}
     save(DOC / 'preservation-qa.json', preservation)
     assert not changes, changes

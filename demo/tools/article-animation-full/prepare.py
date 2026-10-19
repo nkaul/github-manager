@@ -1,8 +1,11 @@
 """Preserve prior work and prepare the authorized full series without provider calls."""
 import hashlib,json,re
+import sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[3];HERE=Path(__file__).parent
-OUT=ROOT/'demo/article-animation-full';WORK=ROOT/'demo/work/article-animation-full';DOC=ROOT/'ai-system-design/animation/full'
+sys.path.insert(0, str(ROOT / "eval/relocation"))
+from relocation_support import historical_bytes, historical_sha256, repo_path
+OUT=ROOT/'demo/article-animation-full';WORK=ROOT/'demo/work/article-animation-full';DOC=ROOT/'eval/ai-system-design/animation/full'
 for p in (OUT,WORK,DOC):p.mkdir(parents=True,exist_ok=True)
 story=json.loads((HERE/'story.json').read_text())
 def save(p,x):p.write_text(json.dumps(x,indent=2)+'\n')
@@ -13,9 +16,9 @@ def sha(p):
  return h.hexdigest()
 baseline=DOC/'preservation-baseline.json'
 if not baseline.exists():
- prior=json.loads((ROOT/'ai-system-design/animation/preservation-baseline.json').read_text())['files']
- paths={ROOT/r['file'] for r in prior}
- for folder in ['ai-system-design/animation','demo/article-animation','demo/tools/article-animation']:
+ prior=json.loads((ROOT/'eval/ai-system-design/animation/preservation-baseline.json').read_text())['files']
+ paths={repo_path(r['file']) for r in prior}
+ for folder in ['eval/ai-system-design/animation','demo/article-animation','demo/tools/article-animation']:
   paths.update(p for p in (ROOT/folder).rglob('*') if p.is_file() and DOC not in p.parents and '__pycache__' not in p.parts)
  save(baseline,{'date':'2026-10-15','files':[{'file':str(p.relative_to(ROOT)),'bytes':p.stat().st_size,'sha256':sha(p)} for p in sorted(paths)]})
  print('Protected files:',len(paths))
@@ -44,7 +47,7 @@ for c in story['chapters']:
 (DOC/'transcript.md').write_text('\n'.join(transcript))
 (OUT/'transcript.md').write_text('\n'.join(transcript))
 save(WORK/'rehearsal-timing.json',{'duration':cursor,'beats':beats,'chapters':story['chapters'],'words':[],'status':'OFFLINE_REHEARSAL_ONLY'})
-academic=(ROOT/'ai-system-design/github-manager-ai-system-design.md').read_text()
+academic=(ROOT/'eval/ai-system-design/github-manager-ai-system-design.md').read_text()
 rows=[]
 for line in academic.split('### 20.2 Algorithm and mechanism inventory')[1].split('### 20.3')[0].splitlines():
  if not line.startswith('|') or '---' in line or 'Algorithm / mechanism' in line:continue
@@ -52,6 +55,6 @@ for line in academic.split('### 20.2 Algorithm and mechanism inventory')[1].spli
  match=[(r'CommonMark|Regex|SHA',4),(r'RAKE|YAKE|Distinct',5),(r'Binary|BM25|Alias token|Per-kind',7),(r'Owner|Byte-bounded|Unicode',6),(r'New-analysis|Durable|Weighted|Generation/epoch',12),(r'Native',9),(r'Approved|Stored-analysis',11),(r'Integer',13),(r'Micro set',15),(r'Dense|Contextual',16)]
  n=next((i for pattern,i in match if re.search(pattern,name)),None);assert n,(name,'unmapped')
  ch=story['chapters'][n-1];rows.append({'mechanism':name,'role':fields[1],'source_status':fields[2],'chapter':ch['id'],'animated_beats':[b['id'] for b in ch['beats']]})
-save(DOC/'coverage.json',{'academic_source':'ai-system-design/github-manager-ai-system-design.md','mechanisms':rows,'source_sections':{str(n):[c['id'] for c in story['chapters'] if n in c['source_sections']] for n in range(1,21)},'chapters':[{k:c[k] for k in ['id','title','purpose','source_sections','figure']} for c in story['chapters']],'limitations':'Exact formulas and large payloads also remain in the linked source articles; narrated and animated mechanisms do not imply new tests.'})
+save(DOC/'coverage.json',{'academic_source':'eval/ai-system-design/github-manager-ai-system-design.md','mechanisms':rows,'source_sections':{str(n):[c['id'] for c in story['chapters'] if n in c['source_sections']] for n in range(1,21)},'chapters':[{k:c[k] for k in ['id','title','purpose','source_sections','figure']} for c in story['chapters']],'limitations':'Exact formulas and large payloads also remain in the linked source articles; narrated and animated mechanisms do not imply new tests.'})
 assert all(any(n in c['source_sections'] for c in story['chapters']) for n in range(1,21))
 print('Rehearsal runtime minutes:',round(cursor/60,2));print('Mechanisms mapped:',len(rows))

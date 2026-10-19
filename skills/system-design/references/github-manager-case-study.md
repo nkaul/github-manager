@@ -38,7 +38,7 @@ There is no basis here to claim deployed dense embeddings, vector search, learne
 
 The article work preserved academic and illustrated editions, then created a clearer narrative with source-backed workflow examples. Reconstructed payloads are labeled as reconstructions, not provider wire captures. Corrected figures distinguish excerpts from summaries and cleaned-text coordinates from original-source lines.
 
-Sources: `ai-system-design/{github-manager-ai-system-design,evidence-index}.md`, `ai-system-design/publication/v2/{article,workflow-examples}.md`, `ai-system-design/illustrated/figures/{content-requirements,review}.json`, `backend/app/pretest/ai/`, `backend/app/demo/{ai,evidence}.py`.
+Sources: `eval/ai-system-design/{github-manager-ai-system-design,evidence-index}.md`, `eval/ai-system-design/publication/v2/{article,workflow-examples}.md`, `eval/ai-system-design/illustrated/figures/{content-requirements,review}.json`, `backend/app/pretest/ai/`, `backend/app/demo/{ai,evidence}.py`.
 
 ## 4. Organization, analysis and concurrency
 
@@ -62,7 +62,7 @@ The reused 20-case validation round contained 8 public/12 synthetic cases; 50 TP
 
 The new 600-repository public corpus has completed collection, source review and 120 independent cross-reviews at this snapshot. Its references remain proposed, not human-approved gold. Source-backed proposed annotations, cross-review and human approval must remain distinct. Families/lineages need grouped splits; upstream topics used as inputs cannot simultaneously be treated as independent truth without qualification. Controlled synthetic fixtures stay available for edge-case tests.
 
-Sources: `docs/development/ai-allowance.md`, `docs/validation/{phase-0-9-allowance-controls,phase-0-9-reset-replay,phase-0-5-reference-review,phase-0-5-round-2-results}.md`, `docs/planning/public-repository-corpus-600.md`, `ai-system-design/evaluation/corpus-600/{README,validation-2026-10-16}.md`, `backend/app/demo/run_budget.py`.
+Sources: `docs/development/ai-allowance.md`, `docs/validation/{phase-0-9-allowance-controls,phase-0-9-reset-replay,phase-0-5-reference-review,phase-0-5-round-2-results}.md`, `docs/planning/public-repository-corpus-600.md`, `eval/ai-system-design/evaluation/corpus-600/{README,validation-2026-10-16}.md`, `backend/app/demo/run_budget.py`.
 
 ## 6. Interface, identity and explanation
 
@@ -72,7 +72,7 @@ The user requested a complete walkthrough because the workflow was difficult to 
 
 The non-block diagram style uses white paper, dark ink, readable handwritten headings, semantic objects and blue/purple accents. User requests preserved academic/block diagrams while adding illustrated and publication editions. Better storytelling retained technical depth and showed concrete retrieval, augmentation and model input instead of only abstract terminology.
 
-Sources: `docs/planning/phase-0-9-ui-and-ai-controls.md`, `docs/validation/{phase-0-9-ui-and-ai-controls,phase-0-9-theme-feedback,phase-0-9-logo-and-kpi-icons,demo-full-v2}.md`, `ai-system-design/animation/full/{production-brief,validation}.md`, `ai-system-design/publication/v2/`.
+Sources: `docs/planning/phase-0-9-ui-and-ai-controls.md`, `docs/validation/{phase-0-9-ui-and-ai-controls,phase-0-9-theme-feedback,phase-0-9-logo-and-kpi-icons,demo-full-v2}.md`, `eval/ai-system-design/animation/full/{production-brief,validation}.md`, `eval/ai-system-design/publication/v2/`.
 
 ## 7. Publication boundary
 
