@@ -1,0 +1,141 @@
+{
+  "date": "2026-10-20",
+  "status": "PASS",
+  "approval": "User approved README and main-document integration of both final wide illustrations.",
+  "checks": {
+    "all_171_protected_sources_examples_and_images_preserved": true,
+    "all_original_application_source_hashes_preserved": true,
+    "all_existing_exact_fenced_prompts_payloads_preserved": true,
+    "original_main_document_content_preserved_outside_approved_additions_and_metadata": true,
+    "readme_outside_ai_pipeline_section_preserved": true,
+    "readme_order_demo_pipeline_evaluation": true,
+    "readme_links_both_final_images": true,
+    "main_document_embeds_both_final_images": true,
+    "main_document_has_rag_types_and_all_three_stages": true,
+    "approval_and_integration_recorded_in_companion": true,
+    "all_local_links_exist": true,
+    "all_local_heading_anchors_resolve": true,
+    "all_companion_json_parses": true,
+    "browser_images_and_layouts_pass": true
+  },
+  "protected_file_count": 171,
+  "changed_protected_files": [],
+  "changed_source_files": [],
+  "fenced_examples_preserved": 13,
+  "local_links_checked": 120,
+  "missing_local_links": [],
+  "invalid_local_anchors": [],
+  "documents": {
+    "README.md": "06772c721fd4d59d38be5d68e328a84127d0d577924fa41671804a09dc225649",
+    "docs/github-manager-ai-pipeline.md": "565a2ba6c60f607469bcae83a604d9351bc7d49e76a15f5f475d3d2c238386a4",
+    "docs/assets/ai-input-flows/rag-approach-review.md": "7ddc2fb519892658b5f57d150b355c0c5dd4713b9d0308581a25e3351a0f056b",
+    "docs/assets/ai-input-flows/README.md": "3ea6a2d791d527d7f13c82fb4679de197d5e297ac96fc991318141efc6f775fc",
+    "docs/assets/readme-illustrations/README.md": "7e12591157bca4a21d9b1624ed6d44f750f51a51807c84563b9db77268779ba4"
+  },
+  "final_figures": [
+    {
+      "file": "rag-full-picture-wide-v1.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "1efcbc64b9e7e624995d49ab16ed51a13da89337beda9e08669a9ea5e88709c7"
+    },
+    {
+      "file": "rag-classification-wide-v1.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "766b035d49dcdce1a5c089d3ab4dad18fce068e6ae6744aeb96661b28e0b3f68"
+    }
+  ],
+  "placements": {
+    "rag_only": "docs/github-manager-ai-pipeline.md#rag-overview",
+    "full_picture": "docs/github-manager-ai-pipeline.md#from-published-taxonomy-to-rag-classification",
+    "readme": "AI Pipeline Overview, second after Demo and before Evaluation; direct links to both image files."
+  },
+  "browser_preview": {
+    "status": "PASS",
+    "externalRequests": 0,
+    "previews": [
+      {
+        "key": "readme",
+        "images": [
+          {
+            "loaded": true,
+            "native": [
+              2172,
+              724
+            ],
+            "display": [
+              1200,
+              400
+            ]
+          },
+          {
+            "loaded": true,
+            "native": [
+              2172,
+              724
+            ],
+            "display": [
+              1200,
+              400
+            ]
+          },
+          {
+            "loaded": true,
+            "native": [
+              2172,
+              724
+            ],
+            "display": [
+              1200,
+              400
+            ]
+          }
+        ],
+        "horizontalOverflow": false,
+        "screenshot": "/tmp/github-manager-final-readme.png"
+      },
+      {
+        "key": "rag",
+        "images": [
+          {
+            "loaded": true,
+            "native": [
+              1672,
+              941
+            ],
+            "display": [
+              1200,
+              675
+            ]
+          }
+        ],
+        "horizontalOverflow": false,
+        "screenshot": "/tmp/github-manager-final-rag.png"
+      },
+      {
+        "key": "registry",
+        "images": [
+          {
+            "loaded": true,
+            "native": [
+              1672,
+              941
+            ],
+            "display": [
+              1200,
+              675
+            ]
+          }
+        ],
+        "horizontalOverflow": false,
+        "screenshot": "/tmp/github-manager-final-registry.png"
+      }
+    ]
+  },
+  "visual_review": "Integrated RAG overview and full-picture sections inspected in local rendered Markdown. Images display proportionally at 1200x675 with readable main labels and clear margins. Tables fit the content width; no horizontal overflow. README preview also loads all three existing banners and preserves section order.",
+  "builtin_image_generation_or_edit_calls_this_revision": 0,
+  "application_github_openai_evaluation_api_calls": 0,
+  "app_code_or_state_writes": 0,
+  "publication_status": "Local documentation updated; no commit or push requested or performed. Historical review/verification receipts and all prior artwork retained."
+}

@@ -1,0 +1,26 @@
+Edit the supplied illustration as a new v2. It is the EDIT TARGET and style reference. Preserve the original's approachable developer identity, laptop, recognizable repository documents, indigo-blue pen-and-marker character, white paper, and soft light-blue/lavender washes. Preserve the meaning of overlapping repository source categories. You may rearrange and simplify the entire composition to make breathing room; do not merely cram extra elements into the existing wide banner.
+
+Purpose: Clearly illustrate THE PROBLEM and three practical challenges it causes. This is a conceptual problem illustration for the GitHub Manager README, not an implementation or solution diagram.
+
+Canvas/composition: Recompose on a slightly taller landscape canvas, approximately 16:9. Generous white margins. At the top, a prominent, clear handwritten title/tag reading exactly "The Problem" with a small indigo marker underline. Beneath it, the top half contains the existing four repository source stacks, smaller and simpler, on the left and the thoughtful developer at a laptop on the right. Put the developer's exact question "How do these fit together?" beside the person at a SUBORDINATE size, not competing with the main title. Use only a few incomplete dotted connections between source stacks; not a tangled web. Omit the original notebook if it makes this scene crowded.
+
+In the bottom third, show three generously separated small semantic vignettes, without enclosing cards or dense panels:
+1. Clock and magnifying glass searching a few repo documents; exact concise label "Time lost searching".
+2. Two or three repository cards separated by a broken/dotted link with a question mark; exact concise label "Unclear project links".
+3. A human hand physically arranging repo/label cards, conveying repetitive upkeep; exact concise label "Manual sorting".
+The vignettes are practical consequences, not numbered process steps. One very subtle downward visual cue from the upper scene to the consequences is acceptable; do not add many arrows. Keep ample whitespace between the two layers and between vignettes.
+
+Text: ONLY the following nine exact text elements, all essential and readable at 850px-wide display:
+"The Problem"
+"Owned"
+"Teams & orgs"
+"Collaborations"
+"Starred & watched"
+"How do these fit together?"
+"Time lost searching"
+"Unclear project links"
+"Manual sorting"
+
+Keep labels large, dark navy/indigo, clear friendly handwriting. Mostly white with restrained blue and lavender marker shading. The main title must be visibly prominent. The source groups can overlap conceptually; don't suggest mutually exclusive partitions or permissions boundaries.
+
+Avoid: crowded panels, extra prose, numbered steps, architecture, metrics, robot, AI/automation solution, outcome dashboard, branding headline, new feature claims, mini-pain-point list, fake repo names, extra tiny text, heavy purple fills. The three challenges must each be illustrated by a meaningful little drawing, not just listed as text. Preserve the original PNG by returning a new edited image.

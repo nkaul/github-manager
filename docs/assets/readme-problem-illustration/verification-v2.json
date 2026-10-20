@@ -1,0 +1,47 @@
+{
+  "created_date": "2026-10-20",
+  "tool": "Built-in image_gen edit; no application API/model calls",
+  "revision_generation_count": 1,
+  "current_version": "v2",
+  "source_readme": "README.md",
+  "source_section": "Why \u2014 The problem we are solving",
+  "source_readme_sha256": "b0958479135f6e75dca1c85d89b297fa5d8a8409190e3ef76437a1a48b5f295e",
+  "asset": "repository-discovery-problem-v2.png",
+  "width": 1672,
+  "height": 941,
+  "bytes": 1577861,
+  "sha256": "0578c6b0967fb13147abdb1f455ddafbc922e9def84fbf9f2d2e1a604ae838ae",
+  "prompt": "prompt-v2.txt",
+  "edit_target": {
+    "path": "docs/assets/readme-problem-illustration/repository-discovery-problem.png",
+    "sha256": "a8c25d50e901ada3ecd58ccf7741dfac8894f140b62b91519156f7cafa27493b"
+  },
+  "v1_preserved": true,
+  "required_exact_labels": [
+    "The Problem",
+    "Owned",
+    "Teams & orgs",
+    "Collaborations",
+    "Starred & watched",
+    "How do these fit together?",
+    "Time lost searching",
+    "Unclear project links",
+    "Manual sorting"
+  ],
+  "qa": {
+    "full_export": "Passed visual inspection: prominent problem title, subordinate developer question, three semantic consequence illustrations, accurate labels, no clipped content",
+    "readme_850px_preview": "Passed: all nine labels readable, distinct source stacks and consequence vignettes, no tiny prose",
+    "cause_and_consequences": "Upper scattered-repository scene has a subtle downward cue into consequence row; no numbered process or solution claims",
+    "source_categories": "Potentially overlapping sources, not disjoint repository or permissions sets"
+  },
+  "source_mapping": {
+    "Time lost searching": "Fragmented discovery and high cognitive overhead",
+    "Unclear project links": "No unified personal project structure",
+    "Manual sorting": "Manual upkeep and growing label inconsistency"
+  },
+  "limitations": [
+    "Illustrates selected central problems, not every README pain point.",
+    "Generated repository marks are illustrative symbols, not supplied canonical brand artwork.",
+    "No deployment, metric, performance, permissions or implementation claim."
+  ]
+}

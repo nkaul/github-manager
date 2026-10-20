@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-20",
+  "revision": "Evidence Parser and Canonical Retriever; approved title Inside the GitHub Manager AI Pipeline",
+  "status": "PASS",
+  "document": "docs/github-manager-ai-pipeline.md",
+  "document_sha256": "293f95a9642d22d1a263ef79dbf5c3b36fe0365687260bb59bfc9893f3d7a03e",
+  "checks": {
+    "evidence_records_are_id_section_text_only": true,
+    "e0_metadata_first": true,
+    "sequential_ids_for_retained_records": true,
+    "initial_intro_section_is_uppercase_TITLE": true,
+    "retained_heading_can_receive_id": true,
+    "multiple_overview_fragments_keep_document_order": true,
+    "excluded_heading_content_not_retained": true,
+    "short_fragments_omitted": true,
+    "single_fragment_max_700": true,
+    "retained_readme_budget_8000": true,
+    "metadata_budget_600": true,
+    "raw_readme_over_262144_bytes_rejected": true,
+    "compact_does_not_choose_semantic_purpose": true,
+    "retriever_reads_evidence_beyond_compact_excerpt_subset": true,
+    "retriever_returns_ordered_ids_with_project_cap_8": true,
+    "all_141_protected_inputs_source_skills_unchanged": true,
+    "all_exact_fenced_prompts_payloads_examples_preserved": true,
+    "original_selected_images_preserved": true,
+    "approved_title_and_filename": true,
+    "parser_component_definition_and_organization_documented": true,
+    "retriever_role_and_non_discovery_documented": true,
+    "new_alias_clarification_remains_separate_draft": true,
+    "taxonomy_exact_system_prompt_preserved": true,
+    "taxonomy_payload_and_serialized_user_message_match": true,
+    "taxonomy_stateless_strict_request_preserved": true,
+    "taxonomy_complete_payload_printed": true,
+    "classification_exact_system_prompt_preserved": true,
+    "classification_payload_and_serialized_user_message_match": true,
+    "classification_stateless_strict_request_preserved": true,
+    "classification_complete_payload_printed": true,
+    "latest_illustrations_selected_in_document": true,
+    "all_document_and_companion_local_links_exist": true,
+    "all_companion_json_parses": true,
+    "no_network_or_env_access": true
+  },
+  "checked_local_links": 61,
+  "protected_file_count": 141,
+  "selected_figures": [
+    {
+      "file": "taxonomy-flow-v3.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "18519e63aec2e5de4e282de6768c651e1a11802d2c69340b5d61bfe30e0996c8",
+      "selected": true
+    },
+    {
+      "file": "classification-flow-v3.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "ac57fb7bea70dd72cc98827face580a8fb66f86c74038b445636984d2859e29a",
+      "selected": true
+    }
+  ],
+  "preserved_v2_figures": [
+    {
+      "file": "taxonomy-flow-v2.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "f611fa2292b319868c86b91d82642667556bc61b5b79f2852e6417bdc1aedecb",
+      "selected": false
+    },
+    {
+      "file": "classification-flow-v2.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "240adaef48b3dce31d3f371a5bb89e4e26a8a8dd2730a04e07e7015b3c9b8b1d",
+      "selected": false
+    }
+  ],
+  "reading_size_review": {
+    "display_width": 850,
+    "actual_review": "Both latest exports and temporary 850px inspection thumbnails viewed. Essential parser/retriever labels and section/ID records readable; no clipped or overlapping text; classification record stack and neighboring compact-selection caption remain separate.",
+    "method": "sips temporary downscaled inspection copies; final PNGs untouched. Browser preview could not run in sandbox; no browser download.",
+    "schematic_ids": "E1 Overview/E2 Features illustrate possible ordering, not fixed assignments. A heading may itself receive an ID; multiple fragments may share a section."
+  },
+  "live_model_or_github_calls": 0,
+  "builtin_image_edit_calls_this_revision": 4,
+  "application_state_writes": 0,
+  "alias_clarification_status": "Separate draft awaiting user review, not incorporated into main document.",
+  "historical_preservation": "Original verification.json, prompt/edit manifests, source hashes, serialized requests and original/v2 images preserved. Previous walkthrough archived before revision.",
+  "details": {
+    "changed_protected_files": [],
+    "missing_links": []
+  },
+  "limits": "Documentation/source/payload/behavior/image checks only; not new production accuracy testing or implementation changes."
+}

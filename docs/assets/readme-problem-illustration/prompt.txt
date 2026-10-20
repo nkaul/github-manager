@@ -1,0 +1,21 @@
+Use case: infographic-diagram
+Asset type: clean README illustration, a wide horizontal banner.
+
+Create ONE original, friendly hand-drawn illustration of the developer's problem that GitHub Manager addresses. Use the two supplied images as STYLE REFERENCES ONLY, especially the clean, spacious blue pen-and-marker objects in the second image. Do not copy their content, panel layout, or text.
+
+Viewer question: With relevant repositories spread across personal ownership, teams, organizations, collaboration, stars and watches, how can a developer remember what belongs together and find the right work?
+
+Composition: One coherent scene on pure white paper, wide approximately 2.6:1 aspect ratio, generous outer margins and whitespace. In the left half, four modest, separated stacks of repository document cards arranged loosely in a gentle arc, each with a small meaningful icon: a person, a two-person team, a collaboration handshake, a star/bookmark. Four short handwritten labels identify the source stacks. Use the same simple repository document symbol across all stacks; the stacks represent places where relevant repositories are encountered, not disjoint sets. In the right half, one approachable developer at a small laptop, looking thoughtfully toward the source cards. A small open notebook beside the developer has only a few disconnected dots and a question mark, to convey that the mental map is unfinished. A handful of light dotted incomplete connections between repo cards suggest unclear relationships, without a dense web or circuit schematic. Give a single large, highly readable question above the developer. Draw a few subtle thinking strokes, no busy speech balloons.
+
+Text, verbatim, and ONLY these five text elements:
+"Owned"
+"Teams & orgs"
+"Collaborations"
+"Starred & watched"
+"How do these fit together?"
+
+Style: Carefully explained sketchbook, slightly irregular charcoal/navy pen outlines, soft blue and light lavender marker washes, indigo/blue readable handwritten labels. Friendly human and recognizable repository documents. Restrained purple accents; mostly white. Match the line and color character of the supplied existing GitHub Manager illustrations while simplifying significantly. Well-balanced, warm, professional, uncluttered. Essential text large enough to read at 850px display width.
+
+Meaning/status: This is a conceptual illustration of an organization and discovery problem, not an implementation diagram. Source categories can overlap. It does not claim that GitHub lacks all organization features.
+
+Avoid: generic block diagrams, rectangular panels enclosing the whole scene, algorithms, robots, a solution workspace, architecture components, cloud services, AI claims, statistics, code snippets, extra tiny text, logos, watermarks, decorative filler, tangled arrows, or an overloaded scene. Use no fake repo names. Keep the problem immediately understandable.

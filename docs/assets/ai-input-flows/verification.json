@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-20",
+  "status": "PASS",
+  "checks": {
+    "taxonomy_prompt_matches_code_and_document": true,
+    "taxonomy_complete_user_json_printed": true,
+    "taxonomy_mock_serialization_matches_payload": true,
+    "taxonomy_mock_serialization_matches_system": true,
+    "taxonomy_strict_schema_matches": true,
+    "taxonomy_stateless_no_tools": true,
+    "taxonomy_only_system_and_user_messages": true,
+    "classification_prompt_matches_code_and_document": true,
+    "classification_complete_user_json_printed": true,
+    "classification_mock_serialization_matches_payload": true,
+    "classification_mock_serialization_matches_system": true,
+    "classification_strict_schema_matches": true,
+    "classification_stateless_no_tools": true,
+    "classification_only_system_and_user_messages": true,
+    "server_context_printed": true,
+    "all_source_hashes_still_match": true,
+    "all_exported_examples_synthetic": true,
+    "no_alias_or_score_fields_in_model_candidates": true,
+    "all_local_links_exist": true,
+    "all_json_files_parse": true,
+    "no_template_placeholders_remain": true,
+    "code_example_syntax": true,
+    "both_selected_figures_present": true,
+    "root_readme_and_critical_skills_preserved": true
+  },
+  "checked_local_links": 50,
+  "missing_links": [],
+  "document_words": 5016,
+  "document_sha256": "317977e6ea3d8de39d5784d34af5c81201774baee9fc2c469609fe04e5bcec8c",
+  "selected_figures": [
+    {
+      "file": "taxonomy-flow.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "ab4c6d815fd6185585f9ef239e9572f724b85d30a20ab8d9b5b594bd4566718a"
+    },
+    {
+      "file": "classification-flow.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "0e10d88f824b0f61c6f4a958616fbb11dd1cc11c5147b47f844a781c91508a0a"
+    }
+  ],
+  "browser_preview": {
+    "display_width": 850,
+    "display_height_each": 478,
+    "both_images_loaded": true,
+    "remote_requests_blocked": true,
+    "visual_review": "Selected exports and 850px browser preview inspected; exact E0/README distinction, local algorithm separation, request composition, review/output authority and margins checked. Classification rerouted to a simple four-stop path after ambiguous draft arrows."
+  },
+  "mock_request_serializations": 2,
+  "real_network_requests_in_example_builder": 0,
+  "live_classification_or_judge_generations": 0,
+  "builtin_image_generation_calls": 4,
+  "application_state_writes": 0,
+  "limits": "Documentation/source/payload/image checks, not a new model quality evaluation or a claim that identified implementation gaps were fixed."
+}

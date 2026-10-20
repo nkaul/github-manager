@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-20",
+  "status": "PASS",
+  "scope": "Full-picture and RAG-only wide illustration siblings, original and main article preserved",
+  "checks": {
+    "all_169_preexisting_protected_files_preserved": true,
+    "both_selected_variants_exist": true,
+    "both_variants_wide_16_9": true,
+    "review_embeds_both_variants": true,
+    "original_full_picture_preserved": true,
+    "all_review_local_links_exist": true,
+    "all_companion_json_parses": true,
+    "main_article_still_awaits_integration": true,
+    "both_browser_previews_fill_1200px_and_keep_proportions": true,
+    "no_external_preview_requests": true
+  },
+  "protected_file_count": 169,
+  "changed_protected_files": [],
+  "local_links_checked": 22,
+  "missing_links": [],
+  "figures": [
+    {
+      "file": "rag-full-picture-wide-v1.png",
+      "width": 1672,
+      "height": 941,
+      "aspect_ratio": 1.77683,
+      "sha256": "1efcbc64b9e7e624995d49ab16ed51a13da89337beda9e08669a9ea5e88709c7"
+    },
+    {
+      "file": "rag-classification-wide-v1.png",
+      "width": 1672,
+      "height": 941,
+      "aspect_ratio": 1.77683,
+      "sha256": "766b035d49dcdce1a5c089d3ab4dad18fce068e6ae6744aeb96661b28e0b3f68"
+    }
+  ],
+  "review_document_sha256": "1ef843e9f77e51623fe086f11f0bfa4a8c213862b4b29befa7356218e48c80f3",
+  "prompt_file": "illustration-rag-wide-variants.json",
+  "browser_preview": {
+    "status": "PASS",
+    "externalRequests": 0,
+    "figures": [
+      {
+        "key": "full",
+        "loaded": true,
+        "native": [
+          1672,
+          941
+        ],
+        "display": [
+          1200,
+          675
+        ]
+      },
+      {
+        "key": "focused",
+        "loaded": true,
+        "native": [
+          1672,
+          941
+        ],
+        "display": [
+          1200,
+          675
+        ]
+      }
+    ]
+  },
+  "visual_review": {
+    "full_picture": "Both earlier registry-building and main classification bands retained. Taxonomy draft and human publication remain distinct; parser, retained-evidence query, candidate lookup, three augmentation inputs and structured output/review visible.",
+    "focused": "Earlier registry-building band omitted. Main RAG stages enlarged using available space; approved-earlier registry present; parser, evidence query, compact evidence, phrases and candidates retained.",
+    "layout": "Both actual exports 1672x941 versus original 1536x1024. Objects/lettering reflowed with natural proportions; no bitmap stretching. More horizontal spacing and consistent side margins. Actual 1200px-wide previews inspected; headings and main routes readable, no clipped text.",
+    "limitations": "Fine-grained schemas and full code boundaries remain in Markdown companions; these illustrations do not report new model results."
+  },
+  "builtin_image_edit_calls_this_revision": 2,
+  "application_github_openai_evaluation_api_calls": 0,
+  "app_code_or_state_writes": 0,
+  "approval_status": "Both illustrations provided in separate review note; pending user review before main article integration."
+}
