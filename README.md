@@ -19,14 +19,17 @@ GitHub Manager brings owned, collaborated-on, contributed-to, starred, and watch
 ▶️ [Explore the GitHub Manager demo](https://nkaul.github.io/github-manager-demo) — feature walkthroughs, architecture video and podcast, and illustrated system design.
 
 
+## AI Pipeline Overview
+
+[![Explore the Evidence Parser, Canonical Retriever, and taxonomy and classification requests.](docs/assets/readme-illustrations/ai-pipeline-overview.png)](docs/github-manager-ai-pipeline.md)
+
+[Inside the GitHub Manager AI Pipeline](docs/github-manager-ai-pipeline.md) is an illustrated guide to how repository content becomes a reviewed taxonomy and AI classification suggestions.
+
 ## Evaluation
 
 [![From a corpus of 600 public repositories to 30 human-reviewed repositories and measured evaluation.](docs/assets/readme-illustrations/evaluation-overview.png)](eval/ai-system-design/evaluation/reviewed-30-v1/ground-truth-evaluation-explained.md)
 
 [Read the ground-truth evaluation, explained in plain language](eval/ai-system-design/evaluation/reviewed-30-v1/ground-truth-evaluation-explained.md): how we collected the corpus, confirmed human reference labels, and checked retrieval, classification, and results with Ragas and Promptfoo. Includes charts, tables, and the limits of the thirty-repository evaluation.
-
-
-
 
 ---
 

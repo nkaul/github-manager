@@ -1,0 +1,137 @@
+{
+  "date": "2026-10-20",
+  "status": "PASS",
+  "scope": "Approved alias clarification, README pipeline link/banner/order, separate RAG-types and three-stage illustration review",
+  "checks": {
+    "only_expected_protected_file_changed": true,
+    "all_original_code_source_hashes_preserved": true,
+    "all_exact_fenced_prompts_payloads_preserved": true,
+    "alias_example_and_limitations_incorporated": true,
+    "readme_demo_then_pipeline_then_evaluation": true,
+    "readme_linked_image_and_document": true,
+    "readme_existing_demo_content_preserved": true,
+    "readme_existing_evaluation_content_preserved": true,
+    "readme_problem_and_all_later_content_preserved": true,
+    "rag_review_not_embedded_in_main_document": true,
+    "rag_review_not_embedded_in_root_readme": true,
+    "rag_latest_selected_in_review": true,
+    "all_local_links_exist": true,
+    "all_companion_json_parses": true,
+    "browser_local_previews_pass": true
+  },
+  "protected_file_count": 155,
+  "unchanged_protected_files": 154,
+  "intentional_existing_metadata_changes": [
+    "docs/assets/readme-illustrations/README.md"
+  ],
+  "unexpected_changes": [],
+  "source_mismatches": [],
+  "checked_local_links": 102,
+  "missing_local_links": [],
+  "documents": {
+    "README.md": "d974752ff76f38fc89e6a95407794895eec0d2640b00b777478ac30e6f15df02",
+    "docs/github-manager-ai-pipeline.md": "ad447eab9cdfdb338b4fa6526d8e96637f63fb66c3c09603c20e4460b8bc1602",
+    "docs/assets/ai-input-flows/README.md": "4f524af58354a3b0266544b75d77a313eb46720a1ce1c0e8a3728ce0da3fb4ae",
+    "docs/assets/ai-input-flows/rag-approach-review.md": "83288d0410702b9cf5e2b3336ddb0a6d8d70ef587dbce9ead2e394d2e4202d90",
+    "docs/assets/ai-input-flows/alias-boost-review-draft.md": "a2de63b04b651499fb04ff6c2329809c9c82c116fd0dbb00e3f89226a506505e",
+    "docs/assets/readme-illustrations/README.md": "e60b99c2a71ec5d9c7af006f583eb38c546053fa3ed6600eb96bd2887188e13b"
+  },
+  "figures": [
+    {
+      "file": "docs/assets/readme-illustrations/ai-pipeline-overview.png",
+      "width": 2172,
+      "height": 724,
+      "sha256": "e26fdd08db59755ada017e0828ac2e706ce843b5f5d1142737578e205bfa56e6",
+      "selected": true
+    },
+    {
+      "file": "docs/assets/ai-input-flows/rag-approach-review.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "5a63eff6a5c03d4f6073708d56df6d7fe3546459cd4d37646307e450660c0728",
+      "selected": false
+    },
+    {
+      "file": "docs/assets/ai-input-flows/rag-approach-review-v2.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "989f6a81f2e1aa9b5b08ce3f799257394618a8499ba3e458107dc9653957b21f",
+      "selected": false
+    },
+    {
+      "file": "docs/assets/ai-input-flows/rag-approach-review-v3.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "fb8a12266e6c08735f4d0a788ea27236b90e866aaa5c70ed92df56c4b85467d0",
+      "selected": true
+    }
+  ],
+  "browser_preview": {
+    "status": "PASS",
+    "networkRequestsBlocked": 0,
+    "previews": [
+      {
+        "name": "readme",
+        "images": [
+          {
+            "loaded": true,
+            "native": [
+              2172,
+              724
+            ],
+            "display": [
+              860,
+              287
+            ]
+          },
+          {
+            "loaded": true,
+            "native": [
+              2172,
+              724
+            ],
+            "display": [
+              860,
+              287
+            ]
+          },
+          {
+            "loaded": true,
+            "native": [
+              2172,
+              724
+            ],
+            "display": [
+              860,
+              287
+            ]
+          }
+        ],
+        "screenshot": "/tmp/github-manager-readme-navigation.png"
+      },
+      {
+        "name": "rag",
+        "images": [
+          {
+            "loaded": true,
+            "native": [
+              1672,
+              941
+            ],
+            "display": [
+              1000,
+              563
+            ]
+          }
+        ],
+        "screenshot": "/tmp/github-manager-rag-review-1000.png"
+      }
+    ]
+  },
+  "visual_review": "Latest RAG export inspected at native and 1000px width; README three banners inspected at 860px width. Labels and main flow readable, margins clear. RAG v3 removes furniture/plant and foregrounds Retrieval, Augment, Generate. All schema/ID cards schematic, with exact companions and limitations retained in review note.",
+  "builtin_image_generation_calls": 2,
+  "builtin_image_edit_calls": 2,
+  "application_github_openai_evaluation_api_calls": 0,
+  "app_code_or_state_writes": 0,
+  "approval_gate": "RAG figure and new RAG treatment remain separate pending user approval; main document contains only the approved alias addition."
+}

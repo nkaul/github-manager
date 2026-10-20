@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-20",
+  "revision": "Evidence Parser documentation clarification",
+  "tool": "Built-in image editing",
+  "style_skill": "skills/illustrated-explainers/SKILL.md",
+  "source_status": "Documentation-only names existing local MarkdownIt and Python selection code; no application changes.",
+  "content_contract": {
+    "parser": "Evidence Parser, local Markdown + heading rules",
+    "organization": "E0 metadata separately from E1+ README fragments in document order, each having id/section/text",
+    "schematic_warning": "E1: Overview / E2: Features are illustrative ordering examples, not fixed section-to-ID assignments. Multiple retained fragments can share a section; a heading itself may receive an evidence ID.",
+    "separation": "Parser precedes RAKE; TF-IDF searches all selected evidence and registry; compact() separately chooses model excerpts; LLM follows request assembly.",
+    "preserve": "Original exports, exact prompts, sample payloads, schemas, serialized requests, app source code, ignored skills and earlier verification."
+  },
+  "edits": [
+    {
+      "input": "taxonomy-flow.png",
+      "output": "taxonomy-flow-v2.png",
+      "prompt": "Use case: precise-object-edit / infographic-diagram.\nInput image 1 is the EDIT TARGET, the existing \"Building the taxonomy\" illustration. Preserve the original paper-and-marker art style, navy ink, blue/indigo/lavender palette, five-stop journey and arrows, exact title, metadata labels, RAKE phrases, bounded-request limits, model draft, human review and canonical IDs. Keep all of the lower row and stop 3 unchanged except any minimal spacing needed. The request stays system prompt + collection JSON + output schema. Do not redesign the entire figure.\nChange only stop 2, the local extraction scene, to explicitly name and explain the local parser:\n- Change its heading from \"Build evidence locally\" to \"Evidence Parser\".\n- Beneath the heading include the short subtitle \"Local Markdown + heading rules\".\n- The source funnel represents deterministic local parsing and cleaning, NOT an LLM.\n- Keep the blue E0 card exactly \"E0: metadata\".\n- Change the lavender output stack to three readable short rows \"E1: Overview\", \"E2: Features\", \"E3: …\". These are schematic evidence records with their section labels, not a claim these exact three records occur in the Orion example.\n- Immediately below this output stack add \"README excerpts in document order\". Use generous space and readable labels. Slightly shift nearby items only if needed.\n- Keep RAKE separate on the right as \"RAKE extracts phrases\". Make it clear the source evidence is built first and RAKE finds phrases afterward. Preserve the two existing phrase slips \"patient intake api\" and \"orion clinical platform\".\n- Keep the existing stop 3 per-repository compact bound \"Each repo: E0 + up to 2 excerpts + up to 8 phrases\" and the footer \"RAKE finds phrases. The LLM proposes concepts.\"\nDo not add a new service, class, AI purpose generator, TF-IDF discovery stage, dense paragraphs, metrics, source offsets, tiny footnotes or raw JSON. Do not imply E1 always means the purpose. Preserve clean whitespace and readability around 850px display width. Landscape 16:9. Export a new version."
+    },
+    {
+      "input": "classification-flow.png",
+      "output": "classification-flow-v2.png",
+      "prompt": "Use case: precise-object-edit / infographic-diagram.\nInput image 1 is the EDIT TARGET, the existing four-stop \"Classifying a repository\" illustration. Preserve the entire composition and its clear four-stop left-to-right reading path, title/subtitle, paper-and-marker style, navy outlines, blue/indigo/lavender accents, three main flow arrows, all of stops 2, 3 and 4, and the bottom takeaway. Do not alter the three parallel local preparations in stop 2: full selected evidence + registry for TF-IDF + alias boost; RAKE for phrases; separate compact excerpt selector. Do not add connecting arrows among those preparations or a bypass around the LLM.\nChange only stop 1 to explicitly identify local passage extraction:\n- Keep the step heading \"1. Build evidence\", its repository metadata card with \"Name\", \"Description\", \"Topics\", \"Language\", and the README source page.\n- Name the README extraction mechanism with an essential large label \"Evidence Parser\", and a short smaller label \"Local Markdown + heading rules\". It should sit between/alongside the README and evidence-record stack, visibly tied to README selection. Adjust spacing only within stop 1 to make it fit, without adding clutter.\n- Keep the metadata output as \"E0: metadata\".\n- Show the README output stack with three clear short rows \"E1: Overview\", \"E2: Features\", \"E3: …\", plus one readable line \"README document order\". These are schematic evidence records/section labels, not actual Orion output. Keep E0 and README evidence visually distinct.\n- Represent selection with a small highlighter/funnel or marked source passage, NOT another robot or an AI summary. All extraction is deterministic and local.\nPreserve stop 3's exact core request contents \"E0 + up to 2 excerpts\", \"Up to 8 phrases\", \"Candidate IDs + kinds + names + descriptions\", and the System prompt/User JSON/Output schema labels. Preserve \"Domains follow Projects\", \"IDs + cited evidence\", \"Validate → suggestions\" and footer \"RAKE supplies phrases. TF-IDF searches evidence text.\"\nDo not add algorithm details beyond these short labels, extra graph branches, purpose claims, model calls before classification, dense text or new components. Favor readable labels over decorative details. Landscape 16:9. Export a new version."
+    }
+  ],
+  "built_in_image_edit_calls": 2,
+  "application_classification_or_judge_calls": 0,
+  "qa": {
+    "export_inspection": "Both full-size exports visually inspected.",
+    "reading_size_inspection": "Both separately downscaled to 850px width in temporary inspection copies and viewed; main labels readable, no clipped text or overlapping text. Classification first-column evidence stack is near its neighboring compact-selector caption but remains separate.",
+    "preview_method": "sips inspection thumbnails only; originals and selected exports untouched. Browser preview attempts failed because bundled Chromium is absent and installed Chrome aborts in sandbox; no download or browser escalation performed.",
+    "semantic_check": "Four-stop classification path and five-stop taxonomy path retained; no new RAKE-to-TF-IDF arrow or inference stage before final LLM."
+  },
+  "alias_boost_clarification": "New plain-language wording staged separately in alias-boost-review-draft.md awaiting user review; existing main-doc technical text preserved.",
+  "export_manifest": [
+    {
+      "file": "taxonomy-flow-v2.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "f611fa2292b319868c86b91d82642667556bc61b5b79f2852e6417bdc1aedecb",
+      "selected": false
+    },
+    {
+      "file": "classification-flow-v2.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "240adaef48b3dce31d3f371a5bb89e4e26a8a8dd2730a04e07e7015b3c9b8b1d",
+      "selected": false
+    }
+  ]
+}

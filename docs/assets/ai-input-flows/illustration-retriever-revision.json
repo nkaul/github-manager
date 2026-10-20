@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-20",
+  "revision": "Explicit Canonical Retriever role after Evidence Parser clarification",
+  "document": "docs/github-manager-ai-pipeline.md",
+  "document_title": "Inside the GitHub Manager AI Pipeline",
+  "tool": "Built-in image editing",
+  "style_skill": "skills/illustrated-explainers/SKILL.md",
+  "content_contract": {
+    "existing_component": "Canonical Retriever is descriptive documentation label for existing Python class Retriever, configured with method=tfidf by DemoService.",
+    "retrieval_input": "All retained repository evidence + active canonical concept documents, represented by name, description, aliases.",
+    "retrieval_output": "Ordered canonical Project/Topic/Tag IDs. These are possible label choices, not repositories, source passages, final assignments or probabilities.",
+    "application_filtering": "After per-kind caps, application removes protected/rejected/existing choices; model gets surviving id/kind/name/description objects without local scores/aliases.",
+    "taxonomy": "Taxonomy discovery does not use the Canonical Retriever; it proposes vocabulary from compact repository evidence.",
+    "retained_parser": "Evidence Parser builds E0 separately and E1+ README records in document order. Illustrative E1/Overview and E2/Features are not fixed section-to-ID assignments; several records may share a section and a retained heading itself may receive an ID.",
+    "authority": "Parsing, phrase extraction, label retrieval and compact selection are local; the LLM acts only after request preparation.",
+    "composition": "Five-stop taxonomy flow; four-stop classification flow with no RAKE-to-TF-IDF or request-to-answer bypass."
+  },
+  "edits": [
+    {
+      "input": "taxonomy-flow-v2.png",
+      "output": "taxonomy-flow-v3.png",
+      "prompt": "Use case: precise-object-edit / infographic-diagram.\nInput image 1 is the EDIT TARGET, \"Building the taxonomy\" with the Evidence Parser. Preserve the whole existing five-stop composition, paper-and-marker artwork, readable navy/indigo/blue text, every existing label and technical distinction, all arrows, the Evidence Parser subtitle and E0/E1+ record organization, RAKE phrases, request booklet, compact limits, LLM draft, human review and footer.\nMake ONLY ONE small factual addition near stop 3's request notebook: a clean readable note \"Discovery: no Canonical Retriever\".\nThis means taxonomy discovery proposes the vocabulary; it does NOT search an existing canonical label registry. Do NOT draw a new retriever component or a new algorithm stage. The existing \"LLM proposes a draft\" and footer already state who proposes concepts, so no additional explanatory paragraph is needed.\nPlace the note in whitespace near the request, or extend the canvas slightly if essential for clear margins. Keep it readable around 850px display width. Avoid crowding the per-repo E0/up-to-2-excerpts/up-to-8-phrases line, the blue transition arrow and the footer. Do not shrink existing text. No other changes. Export as a new sibling version."
+    },
+    {
+      "input": "classification-flow-v2.png",
+      "output": "classification-flow-v3.png",
+      "prompt": "Use case: precise-object-edit / infographic-diagram.\nInput image 1 is the EDIT TARGET, \"Classifying a repository\" with Evidence Parser. Preserve its clear four-stop left-to-right path, white-paper pen-and-marker style, navy/indigo/blue/lavender palette, title/subtitle, stop 1 Evidence Parser and E0/E1+ cards, stop 3 request and exact contents, stop 4 model/output/validation and Domain note, and footer. Preserve original and export a new version.\nChange ONLY the upper mini-scene in stop 2 \"Prepare locally\" to make the existing local Retriever explicit:\n- Put the prominent short label \"Canonical Retriever\" above the magnifying glass.\n- Under it, keep the input meaning with a readable smaller line \"All selected evidence + registry\".\n- Keep \"TF-IDF + alias boost\" inside the magnifying glass.\n- Make the approved vocabulary book recognizable with the concise label \"Canonical registry\".\n- Preserve its output stack \"Candidate shortlist\".\n- Arrange these within the upper part of stop 2; modestly shorten/reposition book labels if needed. Keep generous separation from the RAKE mini-scene underneath. The Canonical Retriever retrieves existing taxonomy LABELS, not repositories or source passages; do not draw it fetching README files.\n- Do NOT add arrows among the three local preparations or reconnect RAKE phrases to TF-IDF. Keep all three main stop-to-stop arrows, the request content and the LLM sequence unchanged.\nThis is the existing Python Retriever class, not an agent, a semantic embedding engine, or a new service. No new inference stage, extra paragraph, score table, metrics or busy graph branches. All important labels remain readable at about 850px width."
+    }
+  ],
+  "built_in_image_edit_calls_this_revision": 2,
+  "built_in_image_edit_calls_parser_and_retriever": 4,
+  "application_classification_or_judge_calls": 0,
+  "qa": {
+    "full_size": "Both v3 exports visually inspected for wording, routes, facts, title, margins and technical separation.",
+    "reading_size": "Both inspected as 850px-wide temporary thumbnails. Canonical Retriever and Evidence Parser labels readable; no clipped/overlapping text. First-column record stack is close to neighboring compact selector but stays distinct.",
+    "inspection_method": "sips temporary inspection thumbnails; selected source PNGs unchanged. Browser preview unavailable (bundled Chromium missing; installed Chrome aborts in sandbox). No browser download or escalation was needed.",
+    "limits": "The images are schematic reading aids. Exact prompts, IDs, fields, limits and sample payloads remain in the technical companion; no claim of user-comprehension testing or new evaluation."
+  },
+  "preserved": [
+    "taxonomy-flow.png",
+    "classification-flow.png",
+    "classification-flow-v1.png",
+    "taxonomy-flow-v2.png",
+    "classification-flow-v2.png",
+    "illustration-prompts.json",
+    "illustration-edits.json",
+    "verification.json"
+  ],
+  "alias_review_status": "New plain-language clarification remains in separate alias-boost-review-draft.md awaiting user review; no main-document incorporation.",
+  "export_manifest": [
+    {
+      "file": "taxonomy-flow-v3.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "18519e63aec2e5de4e282de6768c651e1a11802d2c69340b5d61bfe30e0996c8",
+      "selected": true
+    },
+    {
+      "file": "classification-flow-v3.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "ac57fb7bea70dd72cc98827face580a8fb66f86c74038b445636984d2859e29a",
+      "selected": true
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-20",
+  "scope": "Evidence Parser retrieval, taxonomy-to-registry provenance, direct augmentation inputs; restored original subtitle",
+  "status": "PASS",
+  "checks": {
+    "all_163_preexisting_protected_files_unchanged": true,
+    "all_original_application_source_hashes_unchanged": true,
+    "review_links_exist": true,
+    "all_companion_json_parses": true,
+    "original_subtitle_documented": true,
+    "evidence_selection_and_label_lookup_distinguished": true,
+    "upstream_registry_creation_and_human_publication_documented": true,
+    "three_augmentation_inputs_documented": true,
+    "query_is_all_retained_evidence_documented": true,
+    "latest_figure_selected": true,
+    "rag_not_added_to_main_document": true,
+    "local_browser_preview_pass": true
+  },
+  "checked_local_links": 18,
+  "missing_links": [],
+  "changed_protected_files": [],
+  "changed_source_files": [],
+  "review_document_sha256": "b66f9d945c9a11720c2082b0927d645121df963598b47324d0421a6fd54cc8da",
+  "figures": [
+    {
+      "file": "rag-approach-review-v4.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "35ffb265905eba1221e5d56bf16231fd4cdda882ec0be3ed662e893b265f2738",
+      "selected": false
+    },
+    {
+      "file": "rag-approach-review-v5.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "b65baccc95dd6e632c73ae0cc2f1a4b0c51ab62bdf6b1627aa16cf2a8e84be94",
+      "selected": true
+    }
+  ],
+  "browser_preview": {
+    "status": "PASS",
+    "externalRequests": 0,
+    "figure": {
+      "loaded": true,
+      "native": [
+        1536,
+        1024
+      ],
+      "display": [
+        1200,
+        800
+      ]
+    },
+    "screenshot": "/tmp/github-manager-rag-expanded-1200.png"
+  },
+  "visual_coverage_review": {
+    "original_subtitle_and_memory_descriptor": "Present, inspected at native size and 1200px width.",
+    "earlier_registry_build": "Collection metadata/README -> Evidence Parser and RAKE -> compact collection -> Taxonomy LLM -> draft -> human review/publish -> registry. Same saved registry explicitly marked reused below.",
+    "source_evidence_in_retrieval": "Local Evidence Parser shown inside broader Retrieval stage; E0 metadata and ordered E1+ README records visible.",
+    "two_retriever_inputs": "Approved registry and explicit all-retained-evidence query route into Canonical Retriever.",
+    "three_augmentation_inputs": "Distinct compact evidence, RAKE phrases and canonical candidate definitions routes enter the request booklet; system prompt/output schema separate.",
+    "generation_and_review": "Structured selections shown schematically, followed by schema/ID checks and human review; no fabricated outputs or guarantees of semantic support.",
+    "style_and_readability": "No furniture or plant; white-paper illustrated objects, navy ink and blue/indigo accents preserved. Essential relationships/headings and route labels readable at 1200px; fine-grained field lists remain in Markdown companions."
+  },
+  "builtin_image_edit_calls_this_revision": 2,
+  "application_github_openai_evaluation_api_calls": 0,
+  "app_code_or_state_writes": 0,
+  "approval_status": "Pending user review before RAG figure/new treatment are integrated into main article. README and main article unchanged this revision."
+}

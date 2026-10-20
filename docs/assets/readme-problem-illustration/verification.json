@@ -1,0 +1,35 @@
+{
+  "created_date": "2026-10-20",
+  "tool": "Built-in image_gen; no application API/model calls",
+  "generation_count": 1,
+  "source_readme": "README.md",
+  "source_section": "Why \u2014 The problem we are solving",
+  "source_readme_sha256": "b0958479135f6e75dca1c85d89b297fa5d8a8409190e3ef76437a1a48b5f295e",
+  "asset": "repository-discovery-problem.png",
+  "width": 2020,
+  "height": 778,
+  "sha256": "a8c25d50e901ada3ecd58ccf7741dfac8894f140b62b91519156f7cafa27493b",
+  "prompt": "prompt.txt",
+  "style_references": [
+    {
+      "path": "skills/illustrated-explainers/assets/style-overview.png",
+      "sha256": "b7595378eb5eb6a3b28a12ef710e4c88893f1715aa6afb6502863a7128346ca9"
+    },
+    {
+      "path": "docs/assets/readme-illustrations/demo-overview.png",
+      "sha256": "44c30ac97c180335314404b026dda718dcb1c0cd0e6464bd9ba8ed6669e641ee"
+    }
+  ],
+  "status": "Conceptual illustration of the problem; not architecture or implementation evidence",
+  "qa": {
+    "exact_labels": "Owned; Teams & orgs; Collaborations; Starred & watched; How do these fit together?",
+    "visual_inspection": "Passed full export: readable labels, source cards and developer clearly separated, no clipped content, soft palette with generous white space",
+    "readme_size_inspection": "Passed visual inspection at 850 px width: all source labels and the central question readable; objects distinct; no clipping.",
+    "source_category_overlap": "Stacks are illustrative sources that may overlap, not mutually exclusive repository sets"
+  },
+  "limitations": [
+    "Selective illustration of the central problem; intentionally omits the other detailed pain points in the prose.",
+    "GitHub marks are generated illustrative symbols, not supplied canonical brand artwork.",
+    "Not an exact UI screenshot or a claim of deployed features."
+  ]
+}
